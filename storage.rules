@@ -1,0 +1,63 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    function isValidImageFile() {
+      return request.resource.contentType.matches('image/.*') &&
+        request.resource.size < 5 * 1024 * 1024; // 5MB max
+    }
+    
+    function isValidFileName(name) {
+      return name.size() > 0 && name.size() < 200;
+    }
+    
+    // Recipe images - organized by user
+    match /recipes/{userId}/{recipeId}/{fileName} {
+      allow read: if true; // Public recipes images are accessible to all
+      allow write: if isOwner(userId) && 
+        isValidImageFile() && 
+        isValidFileName(fileName);
+      allow delete: if isOwner(userId);
+    }
+    
+    // User profile images
+    match /users/{userId}/profile/{fileName} {
+      allow read: if isAuthenticated();
+      allow write: if isOwner(userId) && 
+        isValidImageFile() && 
+        isValidFileName(fileName);
+      allow delete: if isOwner(userId);
+    }
+    
+    // Meal plan images
+    match /mealPlans/{userId}/{planId}/{fileName} {
+      allow read: if isOwner(userId);
+      allow write: if isOwner(userId) && 
+        isValidImageFile() && 
+        isValidFileName(fileName);
+      allow delete: if isOwner(userId);
+    }
+    
+    // Temporary upload directory for image processing
+    match /temp/{userId}/{sessionId}/{fileName} {
+      allow read: if isOwner(userId);
+      allow write: if isOwner(userId) && 
+        isValidImageFile() && 
+        isValidFileName(fileName);
+      allow delete: if isOwner(userId);
+    }
+    
+    // Deny all other access
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "agent_name": "UI Component Library Agent",
+  "status": "Failed \u274c",
+  "start_time": "2025-07-01T18:25:30.039991",
+  "end_time": "2025-07-01T18:25:34.339953",
+  "duration": 4.299962,
+  "files_created": [
+    ".env.example",
+    ".env.local.example",
+    ".eslintrc.json",
+    ".firebaserc",
+    ".gitignore",
+    ".prettierrc.json",
+    "CLAUDE.md",
+    "FIREBASE_CONSOLE_SETUP.md",
+    "FIREBASE_SETUP.md",
+    "app/",
+    "components/",
+    "firebase.json",
+    "firestore.indexes.json",
+    "firestore.rules",
+    "functions/",
+    "lib/",
+    "logs/",
+    "next.config.js",
+    "package-lock.json",
+    "package.json",
+    "postcss.config.js",
+    "public/",
+    "scripts/",
+    "src/",
+    "storage.rules",
+    "styles/",
+    "tailwind.config.ts",
+    "tsconfig.json"
+  ],
+  "files_modified": [
+    "EADME.md"
+  ],
+  "validation_results": [
+    {
+      "check_name": "ui_components",
+      "status": "Passed",
+      "message": "All required UI components are present",
+      "details": null
+    },
+    {
+      "check_name": "accessibility",
+      "status": "Skipped",
+      "message": "Unknown validation check",
+      "details": null
+    },
+    {
+      "check_name": "responsive_design",
+      "status": "Skipped",
+      "message": "Unknown validation check",
+      "details": null
+    }
+  ],
+  "git_commits": [],
+  "issues": [
+    "Dependencies not satisfied"
+  ],
+  "recommendations": [],
+  "dependencies_checked": false,
+  "tests_passed": false
+}

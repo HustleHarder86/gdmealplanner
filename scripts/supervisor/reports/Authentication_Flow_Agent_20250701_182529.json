@@ -1,0 +1,67 @@
+{
+  "agent_name": "Authentication Flow Agent",
+  "status": "Failed \u274c",
+  "start_time": "2025-07-01T18:25:15.678705",
+  "end_time": "2025-07-01T18:25:29.959046",
+  "duration": 14.280341,
+  "files_created": [
+    ".env.example",
+    ".env.local.example",
+    ".eslintrc.json",
+    ".firebaserc",
+    ".gitignore",
+    ".prettierrc.json",
+    "CLAUDE.md",
+    "FIREBASE_CONSOLE_SETUP.md",
+    "FIREBASE_SETUP.md",
+    "app/",
+    "components/",
+    "firebase.json",
+    "firestore.indexes.json",
+    "firestore.rules",
+    "functions/",
+    "lib/",
+    "logs/",
+    "next.config.js",
+    "package-lock.json",
+    "package.json",
+    "postcss.config.js",
+    "public/",
+    "scripts/",
+    "src/",
+    "storage.rules",
+    "styles/",
+    "tailwind.config.ts",
+    "tsconfig.json"
+  ],
+  "files_modified": [
+    "EADME.md"
+  ],
+  "validation_results": [
+    {
+      "check_name": "auth_context",
+      "status": "Warning",
+      "message": "Missing auth functions: login, logout, signup, resetPassword",
+      "details": null
+    },
+    {
+      "check_name": "protected_routes",
+      "status": "Skipped",
+      "message": "Unknown validation check",
+      "details": null
+    },
+    {
+      "check_name": "auth_pages",
+      "status": "Skipped",
+      "message": "Unknown validation check",
+      "details": null
+    }
+  ],
+  "git_commits": [],
+  "issues": [
+    "Dependencies not satisfied"
+  ],
+  "recommendations": [],
+  "dependencies_checked": false,
+  "tests_passed": false
+}

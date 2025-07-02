@@ -1,0 +1,367 @@
+[
+  {
+    "title": "Quinoa Breakfast Bowl with Berries",
+    "description": "A nutritious and GD-friendly breakfast bowl packed with protein and fiber to help maintain stable blood sugar levels throughout the morning.",
+    "ingredients": [
+      {
+        "name": "cooked quinoa",
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      {
+        "name": "Greek yogurt",
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      {
+        "name": "mixed berries (blueberries, raspberries)",
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      {
+        "name": "chopped almonds",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "chia seeds",
+        "amount": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "cinnamon",
+        "amount": 0.25,
+        "unit": "tsp"
+      }
+    ],
+    "instructions": [
+      "Heat the cooked quinoa in a microwave-safe bowl for 30-45 seconds.",
+      "Top with Greek yogurt and mix gently.",
+      "Add the fresh berries on top.",
+      "Sprinkle with chopped almonds and chia seeds.",
+      "Dust with cinnamon and serve immediately."
+    ],
+    "prepTime": 5,
+    "cookTime": 1,
+    "servings": 1,
+    "nutrition": {
+      "calories": 280,
+      "carbs": 28,
+      "protein": 15,
+      "fat": 12,
+      "fiber": 7,
+      "sugar": 10,
+      "sodium": 45,
+      "cholesterol": 5,
+      "saturatedFat": 2,
+      "transFat": 0
+    },
+    "tags": ["breakfast", "vegetarian", "gd-friendly", "high-protein", "high-fiber"],
+    "imageUrl": null,
+    "sourceUrl": "sample",
+    "sourceSite": "Sample Data",
+    "estimatedGlycemicIndex": "low",
+    "isGDFriendly": true,
+    "scrapedAt": "2024-01-15T10:00:00"
+  },
+  {
+    "title": "Grilled Chicken and Vegetable Wrap",
+    "description": "A balanced lunch option with lean protein and plenty of vegetables, perfect for managing blood sugar during pregnancy.",
+    "ingredients": [
+      {
+        "name": "whole wheat tortilla",
+        "amount": 1,
+        "unit": ""
+      },
+      {
+        "name": "grilled chicken breast, sliced",
+        "amount": 3,
+        "unit": "oz"
+      },
+      {
+        "name": "spinach leaves",
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      {
+        "name": "sliced bell peppers",
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      {
+        "name": "sliced cucumber",
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      {
+        "name": "hummus",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "feta cheese, crumbled",
+        "amount": 1,
+        "unit": "tbsp"
+      }
+    ],
+    "instructions": [
+      "Warm the tortilla in a dry skillet or microwave for 10-15 seconds.",
+      "Spread hummus evenly over the tortilla.",
+      "Layer spinach leaves down the center of the tortilla.",
+      "Add grilled chicken slices on top of the spinach.",
+      "Add bell peppers and cucumber slices.",
+      "Sprinkle with feta cheese.",
+      "Roll the tortilla tightly, tucking in the sides as you go.",
+      "Cut in half diagonally and serve."
+    ],
+    "prepTime": 10,
+    "cookTime": 0,
+    "servings": 1,
+    "nutrition": {
+      "calories": 320,
+      "carbs": 26,
+      "protein": 28,
+      "fat": 11,
+      "fiber": 5,
+      "sugar": 4,
+      "sodium": 480,
+      "cholesterol": 75,
+      "saturatedFat": 3,
+      "transFat": 0
+    },
+    "tags": ["lunch", "gd-friendly", "high-protein", "quick"],
+    "imageUrl": null,
+    "sourceUrl": "sample",
+    "sourceSite": "Sample Data",
+    "estimatedGlycemicIndex": "low",
+    "isGDFriendly": true,
+    "scrapedAt": "2024-01-15T10:00:00"
+  },
+  {
+    "title": "Baked Salmon with Roasted Vegetables",
+    "description": "A heart-healthy dinner option rich in omega-3 fatty acids and fiber, ideal for gestational diabetes management.",
+    "ingredients": [
+      {
+        "name": "salmon fillet",
+        "amount": 4,
+        "unit": "oz"
+      },
+      {
+        "name": "broccoli florets",
+        "amount": 1,
+        "unit": "cup"
+      },
+      {
+        "name": "cauliflower florets",
+        "amount": 1,
+        "unit": "cup"
+      },
+      {
+        "name": "cherry tomatoes",
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      {
+        "name": "olive oil",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "lemon juice",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "garlic, minced",
+        "amount": 2,
+        "unit": "cloves"
+      },
+      {
+        "name": "dried herbs (oregano, thyme)",
+        "amount": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "salt and pepper",
+        "amount": 1,
+        "unit": "pinch"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 400°F (200°C).",
+      "Line a baking sheet with parchment paper.",
+      "Place salmon fillet on one side of the baking sheet.",
+      "In a bowl, toss vegetables with half the olive oil, salt, and pepper.",
+      "Arrange vegetables on the other side of the baking sheet.",
+      "Drizzle salmon with remaining olive oil and lemon juice.",
+      "Sprinkle garlic and herbs over salmon and vegetables.",
+      "Bake for 15-20 minutes until salmon flakes easily and vegetables are tender.",
+      "Serve immediately."
+    ],
+    "prepTime": 10,
+    "cookTime": 20,
+    "servings": 1,
+    "nutrition": {
+      "calories": 340,
+      "carbs": 18,
+      "protein": 32,
+      "fat": 16,
+      "fiber": 6,
+      "sugar": 6,
+      "sodium": 320,
+      "cholesterol": 70,
+      "saturatedFat": 3,
+      "transFat": 0
+    },
+    "tags": ["dinner", "gd-friendly", "high-protein", "low-carb", "heart-healthy"],
+    "imageUrl": null,
+    "sourceUrl": "sample",
+    "sourceSite": "Sample Data",
+    "estimatedGlycemicIndex": "low",
+    "isGDFriendly": true,
+    "scrapedAt": "2024-01-15T10:00:00"
+  },
+  {
+    "title": "Apple Slices with Almond Butter",
+    "description": "A simple and satisfying snack that combines fiber from apples with protein and healthy fats from almond butter.",
+    "ingredients": [
+      {
+        "name": "medium apple, sliced",
+        "amount": 1,
+        "unit": ""
+      },
+      {
+        "name": "natural almond butter",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "cinnamon (optional)",
+        "amount": 1,
+        "unit": "pinch"
+      }
+    ],
+    "instructions": [
+      "Wash and core the apple.",
+      "Cut the apple into 8-10 slices.",
+      "Arrange apple slices on a plate.",
+      "Serve with almond butter for dipping.",
+      "Optionally, sprinkle cinnamon on apple slices."
+    ],
+    "prepTime": 5,
+    "cookTime": 0,
+    "servings": 1,
+    "nutrition": {
+      "calories": 240,
+      "carbs": 25,
+      "protein": 7,
+      "fat": 16,
+      "fiber": 6,
+      "sugar": 16,
+      "sodium": 140,
+      "cholesterol": 0,
+      "saturatedFat": 2,
+      "transFat": 0
+    },
+    "tags": ["snack", "vegetarian", "vegan", "gd-friendly", "quick"],
+    "imageUrl": null,
+    "sourceUrl": "sample",
+    "sourceSite": "Sample Data",
+    "estimatedGlycemicIndex": "medium",
+    "isGDFriendly": true,
+    "scrapedAt": "2024-01-15T10:00:00"
+  },
+  {
+    "title": "Lentil and Vegetable Soup",
+    "description": "A hearty, fiber-rich soup that provides sustained energy and helps maintain stable blood sugar levels.",
+    "ingredients": [
+      {
+        "name": "dried red lentils",
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      {
+        "name": "vegetable broth",
+        "amount": 2,
+        "unit": "cups"
+      },
+      {
+        "name": "diced tomatoes",
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      {
+        "name": "chopped carrots",
+        "amount": 0.5,
+        "unit": "cup"
+      },
+      {
+        "name": "chopped celery",
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      {
+        "name": "chopped onion",
+        "amount": 0.25,
+        "unit": "cup"
+      },
+      {
+        "name": "minced garlic",
+        "amount": 2,
+        "unit": "cloves"
+      },
+      {
+        "name": "olive oil",
+        "amount": 1,
+        "unit": "tsp"
+      },
+      {
+        "name": "cumin",
+        "amount": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "name": "turmeric",
+        "amount": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "name": "salt and pepper",
+        "amount": 1,
+        "unit": "pinch"
+      }
+    ],
+    "instructions": [
+      "Heat olive oil in a pot over medium heat.",
+      "Sauté onion, carrots, and celery for 5 minutes until softened.",
+      "Add garlic, cumin, and turmeric, cook for 1 minute.",
+      "Add lentils, diced tomatoes, and vegetable broth.",
+      "Bring to a boil, then reduce heat and simmer for 20-25 minutes.",
+      "Stir occasionally until lentils are tender.",
+      "Season with salt and pepper to taste.",
+      "Serve hot, optionally with a squeeze of lemon juice."
+    ],
+    "prepTime": 10,
+    "cookTime": 30,
+    "servings": 2,
+    "nutrition": {
+      "calories": 210,
+      "carbs": 30,
+      "protein": 12,
+      "fat": 4,
+      "fiber": 10,
+      "sugar": 6,
+      "sodium": 380,
+      "cholesterol": 0,
+      "saturatedFat": 0.5,
+      "transFat": 0
+    },
+    "tags": ["lunch", "dinner", "vegetarian", "vegan", "gd-friendly", "high-fiber", "meal-prep"],
+    "imageUrl": null,
+    "sourceUrl": "sample",
+    "sourceSite": "Sample Data",
+    "estimatedGlycemicIndex": "low",
+    "isGDFriendly": true,
+    "scrapedAt": "2024-01-15T10:00:00"
+  }
+]

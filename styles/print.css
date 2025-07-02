@@ -1,0 +1,311 @@
+/* Print-specific styles for GD Meal Planner */
+
+@media print {
+  /* Global print styles */
+  * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+  }
+  
+  /* Hide elements not needed for print */
+  .no-print,
+  nav,
+  button,
+  .navigation,
+  .mobile-menu,
+  .toast-container,
+  .notification-bell,
+  .modal,
+  .drawer,
+  .loading-spinner,
+  .skeleton,
+  [role="button"],
+  [aria-label*="Close"],
+  [aria-label*="Delete"],
+  [aria-label*="Remove"] {
+    display: none !important;
+  }
+  
+  /* Page breaks */
+  .page-break {
+    page-break-after: always;
+    break-after: always;
+  }
+  
+  .avoid-break {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  
+  /* Headers and titles */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    break-after: avoid;
+    color: #000;
+  }
+  
+  h1 {
+    font-size: 24pt;
+    margin-bottom: 12pt;
+  }
+  
+  h2 {
+    font-size: 18pt;
+    margin-bottom: 10pt;
+  }
+  
+  h3 {
+    font-size: 14pt;
+    margin-bottom: 8pt;
+  }
+  
+  /* Links */
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+  
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: #666;
+  }
+  
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    page-break-inside: avoid;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8pt;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+  }
+  
+  /* Recipe Cards - Print Layout */
+  .recipe-card-print {
+    page-break-inside: avoid;
+    border: 1px solid #ddd;
+    padding: 12pt;
+    margin-bottom: 12pt;
+  }
+  
+  .recipe-card-print h3 {
+    font-size: 14pt;
+    margin-bottom: 6pt;
+  }
+  
+  .recipe-nutrition-print {
+    display: flex;
+    gap: 12pt;
+    margin-top: 8pt;
+    font-size: 10pt;
+  }
+  
+  /* Meal Plan - Print Layout */
+  .meal-plan-print {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  .meal-plan-week {
+    display: table-row;
+  }
+  
+  .meal-plan-day {
+    display: table-cell;
+    width: 14.28%;
+    padding: 8pt;
+    vertical-align: top;
+    border: 1px solid #ddd;
+  }
+  
+  .meal-plan-day h4 {
+    font-size: 12pt;
+    margin-bottom: 6pt;
+    text-align: center;
+  }
+  
+  .meal-entry-print {
+    margin-bottom: 8pt;
+    padding: 4pt;
+    border-bottom: 1px dotted #ccc;
+  }
+  
+  .meal-entry-print:last-child {
+    border-bottom: none;
+  }
+  
+  /* Shopping List - Print Layout */
+  .shopping-list-print {
+    columns: 2;
+    column-gap: 20pt;
+  }
+  
+  .shopping-list-category {
+    break-inside: avoid;
+    margin-bottom: 12pt;
+  }
+  
+  .shopping-list-category h4 {
+    font-size: 12pt;
+    margin-bottom: 6pt;
+    border-bottom: 1px solid #000;
+  }
+  
+  .shopping-list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4pt;
+  }
+  
+  .shopping-list-checkbox {
+    width: 12pt;
+    height: 12pt;
+    border: 1px solid #000;
+    margin-right: 8pt;
+    flex-shrink: 0;
+  }
+  
+  /* Glucose Chart - Print Layout */
+  .glucose-chart-print {
+    page-break-inside: avoid;
+  }
+  
+  .glucose-chart-print svg {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Nutrition Summary - Print Layout */
+  .nutrition-summary-print {
+    display: table;
+    width: 100%;
+    margin-top: 12pt;
+  }
+  
+  .nutrition-row-print {
+    display: table-row;
+  }
+  
+  .nutrition-label-print,
+  .nutrition-value-print {
+    display: table-cell;
+    padding: 4pt 8pt;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .nutrition-label-print {
+    font-weight: bold;
+    width: 60%;
+  }
+  
+  /* Print header with date */
+  .print-header {
+    display: block !important;
+    text-align: center;
+    margin-bottom: 20pt;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10pt;
+  }
+  
+  .print-header h1 {
+    margin-bottom: 6pt;
+  }
+  
+  .print-header .print-date {
+    font-size: 10pt;
+    color: #666;
+  }
+  
+  /* Print footer */
+  .print-footer {
+    display: block !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 10pt;
+    color: #666;
+    padding: 10pt;
+    border-top: 1px solid #ddd;
+  }
+  
+  /* Forms - Print Layout */
+  .form-print {
+    margin-bottom: 12pt;
+  }
+  
+  .form-field-print {
+    margin-bottom: 8pt;
+  }
+  
+  .form-label-print {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 2pt;
+  }
+  
+  .form-value-print {
+    padding: 4pt;
+    border: 1px solid #ddd;
+    min-height: 20pt;
+  }
+  
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(0%);
+  }
+  
+  /* Recipe images specifically */
+  .recipe-image-print {
+    width: 100%;
+    max-height: 150pt;
+    object-fit: cover;
+    margin-bottom: 8pt;
+  }
+  
+  /* Utilities */
+  .print-only {
+    display: block !important;
+  }
+  
+  .screen-only {
+    display: none !important;
+  }
+  
+  /* Color adjustments for better print contrast */
+  .text-primary-600 {
+    color: #000 !important;
+  }
+  
+  .bg-primary-50,
+  .bg-secondary-50,
+  .bg-accent-50 {
+    background-color: #f5f5f5 !important;
+  }
+  
+  .border-primary-300,
+  .border-secondary-300,
+  .border-accent-300 {
+    border-color: #ccc !important;
+  }
+}

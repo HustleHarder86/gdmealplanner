@@ -12,6 +12,7 @@ export default function Navigation() {
     { href: '/meal-planner', label: 'Meal Planner' },
     { href: '/tracking', label: 'Tracking' },
     { href: '/education', label: 'Learn' },
+    { href: '/components', label: 'UI Demo' },
   ]
 
   return (

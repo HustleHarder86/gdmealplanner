@@ -11,7 +11,7 @@ import {
   onAuthStateChanged,
   Unsubscribe,
 } from 'firebase/auth';
-import { auth } from './firebase';
+import { auth, isFirebaseInitialized } from './firebase';
 import { createUser } from './firebase-helpers';
 import { User } from '@/types/firebase';
 
@@ -54,9 +54,12 @@ export const signUpWithEmail = async (
   email: string,
   password: string,
   displayName?: string,
-  pregnancyProfile?: Omit<User['pregnancyProfile'], 'weekOfPregnancy'>,
+  pregnancyProfile?: Omit<NonNullable<User['pregnancyProfile']>, 'weekOfPregnancy'>,
   gdprConsent?: User['gdprConsent']
 ): Promise<FirebaseUser> => {
+  if (!auth) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     const { user } = userCredential;
@@ -99,6 +102,9 @@ export const signInWithEmail = async (
   email: string,
   password: string
 ): Promise<FirebaseUser> => {
+  if (!auth) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     return userCredential.user;
@@ -108,6 +114,9 @@ export const signInWithEmail = async (
 };
 
 export const signOutUser = async (): Promise<void> => {
+  if (!auth) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     await signOut(auth);
   } catch (error) {
@@ -116,6 +125,9 @@ export const signOutUser = async (): Promise<void> => {
 };
 
 export const resetPassword = async (email: string): Promise<void> => {
+  if (!auth) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     await sendPasswordResetEmail(auth, email);
   } catch (error) {
@@ -124,6 +136,9 @@ export const resetPassword = async (email: string): Promise<void> => {
 };
 
 export const changePassword = async (newPassword: string): Promise<void> => {
+  if (!auth) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     const user = auth.currentUser;
     if (!user) {
@@ -136,6 +151,9 @@ export const changePassword = async (newPassword: string): Promise<void> => {
 };
 
 export const changeEmail = async (newEmail: string): Promise<void> => {
+  if (!auth) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     const user = auth.currentUser;
     if (!user) {
@@ -151,6 +169,9 @@ export const updateUserProfile = async (updates: {
   displayName?: string;
   photoURL?: string;
 }): Promise<void> => {
+  if (!auth) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     const user = auth.currentUser;
     if (!user) {
@@ -164,15 +185,25 @@ export const updateUserProfile = async (updates: {
 
 // Auth state observer
 export const onAuthStateChange = (callback: (user: FirebaseUser | null) => void): Unsubscribe => {
+  if (!auth) {
+    // Return a no-op unsubscribe function if auth is not initialized
+    return () => {};
+  }
   return onAuthStateChanged(auth, callback);
 };
 
 // Get current user
 export const getCurrentUser = (): FirebaseUser | null => {
+  if (!auth) {
+    return null;
+  }
   return auth.currentUser;
 };
 
 // Check if user is authenticated
 export const isAuthenticated = (): boolean => {
+  if (!auth) {
+    return false;
+  }
   return auth.currentUser !== null;
 };

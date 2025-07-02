@@ -16,7 +16,7 @@ import {
   serverTimestamp,
   Timestamp,
 } from 'firebase/firestore';
-import { db } from './firebase';
+import { db, isFirebaseInitialized } from './firebase';
 import { User, Recipe, MealPlan, GlucoseReading, NutritionLog } from '@/types/firebase';
 
 // Generic error handler
@@ -62,6 +62,9 @@ export const convertDoc = <T>(doc: DocumentData): T => {
 
 // User helpers
 export const createUser = async (userId: string, userData: Omit<User, 'id' | 'createdAt' | 'updatedAt'>): Promise<void> => {
+  if (!db) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     await setDoc(doc(db, collections.users, userId), {
       ...userData,
@@ -74,6 +77,9 @@ export const createUser = async (userId: string, userData: Omit<User, 'id' | 'cr
 };
 
 export const getUser = async (userId: string): Promise<User | null> => {
+  if (!db) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     const userDoc = await getDoc(doc(db, collections.users, userId));
     if (!userDoc.exists()) {
@@ -86,6 +92,9 @@ export const getUser = async (userId: string): Promise<User | null> => {
 };
 
 export const updateUser = async (userId: string, updates: Partial<User>): Promise<void> => {
+  if (!db) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     await updateDoc(doc(db, collections.users, userId), {
       ...updates,

@@ -63,6 +63,9 @@ export const uploadRecipeImage = async (
   recipeId: string,
   file: File
 ): Promise<string> => {
+  if (!storage) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     // Validate file type
     if (!file.type.startsWith('image/')) {
@@ -97,6 +100,9 @@ export const uploadProfileImage = async (
   userId: string,
   file: File
 ): Promise<string> => {
+  if (!storage) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     // Validate file type
     if (!file.type.startsWith('image/')) {
@@ -131,6 +137,9 @@ export const uploadProfileImage = async (
 
 // Delete recipe image
 export const deleteRecipeImage = async (imageUrl: string): Promise<void> => {
+  if (!storage) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     const storageRef = ref(storage, imageUrl);
     await deleteObject(storageRef);
@@ -148,6 +157,9 @@ export const deleteRecipeImages = async (
   userId: string,
   recipeId: string
 ): Promise<void> => {
+  if (!storage) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     const folderRef = ref(storage, `recipes/${userId}/${recipeId}`);
     const fileList = await listAll(folderRef);
@@ -165,6 +177,9 @@ export const deleteRecipeImages = async (
 
 // Delete user profile images
 const deleteUserProfileImages = async (userId: string): Promise<void> => {
+  if (!storage) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     const folderRef = ref(storage, `users/${userId}/profile`);
     const fileList = await listAll(folderRef);
@@ -185,6 +200,9 @@ export const uploadTempImage = async (
   userId: string,
   file: File
 ): Promise<{ url: string; path: string }> => {
+  if (!storage) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     // Validate file type
     if (!file.type.startsWith('image/')) {
@@ -219,6 +237,9 @@ export const uploadTempImage = async (
 
 // Delete temporary image
 export const deleteTempImage = async (path: string): Promise<void> => {
+  if (!storage) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     const storageRef = ref(storage, path);
     await deleteObject(storageRef);

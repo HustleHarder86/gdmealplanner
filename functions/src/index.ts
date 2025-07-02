@@ -66,7 +66,7 @@ export const cleanupTempStorage = functions.pubsub
     
     const deletePromises = files
       .filter((file) => {
-        const createdTime = new Date(file.metadata.timeCreated).getTime();
+        const createdTime = file.metadata.timeCreated ? new Date(file.metadata.timeCreated).getTime() : 0;
         return createdTime < twentyFourHoursAgo;
       })
       .map((file) => file.delete());

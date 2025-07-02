@@ -7,7 +7,8 @@ import {
   RecipeScore,
   NutritionTargets,
   MealPlanPreferences,
-  RecipeWithCategory
+  RecipeWithCategory,
+  ShoppingListItem
 } from './types';
 
 // Define meal slots with carb targets for gestational diabetes
@@ -182,7 +183,7 @@ export class MealPlanningAlgorithm {
     const currentNutrition = this.calculateDayNutrition(currentDay);
     const remainingCarbs = this.nutritionTargets.dailyCarbs - currentNutrition.carbs;
     const remainingProtein = this.nutritionTargets.dailyProtein - currentNutrition.protein;
-    const remainingFiber = this.nutritionTargets.dailyFiber - currentNutrition.fiber;
+    const remainingFiber = this.nutritionTargets.dailyFiber - (currentNutrition.fiber || 0);
 
     // Adjust slot targets based on what's needed
     const adjustedSlot: MealSlot = {
@@ -504,12 +505,12 @@ export class MealPlanningAlgorithm {
       carbs: total.carbs + meal.nutrition.carbs,
       protein: total.protein + meal.nutrition.protein,
       fat: total.fat + meal.nutrition.fat,
-      fiber: total.fiber + (meal.nutrition.fiber || 0),
-      sugar: total.sugar + (meal.nutrition.sugar || 0),
-      sodium: total.sodium + (meal.nutrition.sodium || 0),
-      cholesterol: total.cholesterol + (meal.nutrition.cholesterol || 0),
-      saturatedFat: total.saturatedFat + (meal.nutrition.saturatedFat || 0),
-      transFat: total.transFat + (meal.nutrition.transFat || 0)
+      fiber: (total.fiber || 0) + (meal.nutrition.fiber || 0),
+      sugar: (total.sugar || 0) + (meal.nutrition.sugar || 0),
+      sodium: (total.sodium || 0) + (meal.nutrition.sodium || 0),
+      cholesterol: (total.cholesterol || 0) + (meal.nutrition.cholesterol || 0),
+      saturatedFat: (total.saturatedFat || 0) + (meal.nutrition.saturatedFat || 0),
+      transFat: (total.transFat || 0) + (meal.nutrition.transFat || 0)
     }), this.createEmptyNutrition());
   }
 

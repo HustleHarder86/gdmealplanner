@@ -209,7 +209,7 @@ export class MealSwapService {
     }
 
     // Check fiber minimum
-    if (newTotals.fiber < dailyTargets.minFiber) {
+    if ((newTotals.fiber || 0) < dailyTargets.minFiber) {
       warnings.push(`This swap would bring daily fiber below the recommended ${dailyTargets.minFiber}g`);
     }
 

@@ -45,6 +45,9 @@ export class MealPlanService {
    * Save meal plan to Firestore
    */
   static async saveMealPlan(mealPlan: WeeklyMealPlan): Promise<string> {
+    if (!db) {
+      throw new Error('Firebase is not initialized. Please check your configuration.');
+    }
     const mealPlanData: MealPlan = {
       userId: mealPlan.userId,
       weekStartDate: Timestamp.fromDate(mealPlan.startDate),
@@ -71,6 +74,9 @@ export class MealPlanService {
    * Load meal plan from Firestore
    */
   static async loadMealPlan(mealPlanId: string, recipes: Recipe[]): Promise<WeeklyMealPlan | null> {
+    if (!db) {
+      throw new Error('Firebase is not initialized. Please check your configuration.');
+    }
     const docRef = doc(db, this.COLLECTION_NAME, mealPlanId);
     const docSnap = await getDoc(docRef);
 
@@ -98,6 +104,9 @@ export class MealPlanService {
    * Get recent meal plans for variety tracking
    */
   static async getRecentMealPlans(userId: string, weeks: number): Promise<WeeklyMealPlan[]> {
+    if (!db) {
+      throw new Error('Firebase is not initialized. Please check your configuration.');
+    }
     const q = query(
       collection(db, this.COLLECTION_NAME),
       where('userId', '==', userId),
@@ -132,6 +141,9 @@ export class MealPlanService {
    * Save user meal plan preferences
    */
   static async savePreferences(userId: string, preferences: MealPlanPreferences): Promise<void> {
+    if (!db) {
+      throw new Error('Firebase is not initialized. Please check your configuration.');
+    }
     const docRef = doc(db, this.PREFERENCES_COLLECTION, userId);
     await setDoc(docRef, {
       ...preferences,
@@ -143,6 +155,9 @@ export class MealPlanService {
    * Load user meal plan preferences
    */
   static async loadPreferences(userId: string): Promise<MealPlanPreferences | null> {
+    if (!db) {
+      throw new Error('Firebase is not initialized. Please check your configuration.');
+    }
     const docRef = doc(db, this.PREFERENCES_COLLECTION, userId);
     const docSnap = await getDoc(docRef);
 
@@ -174,6 +189,9 @@ export class MealPlanService {
     startDate: Date,
     endDate: Date
   ): Promise<MealPlan[]> {
+    if (!db) {
+      throw new Error('Firebase is not initialized. Please check your configuration.');
+    }
     const q = query(
       collection(db, this.COLLECTION_NAME),
       where('userId', '==', userId),
@@ -199,6 +217,9 @@ export class MealPlanService {
    * Delete a meal plan
    */
   static async deleteMealPlan(mealPlanId: string): Promise<void> {
+    if (!db) {
+      throw new Error('Firebase is not initialized. Please check your configuration.');
+    }
     await deleteDoc(doc(db, this.COLLECTION_NAME, mealPlanId));
   }
 

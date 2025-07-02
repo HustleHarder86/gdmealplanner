@@ -107,6 +107,9 @@ export const updateUser = async (userId: string, updates: Partial<User>): Promis
 
 // Recipe helpers
 export const createRecipe = async (recipeData: Omit<Recipe, 'id' | 'createdAt' | 'updatedAt'>): Promise<string> => {
+  if (!db) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     const recipeRef = doc(collection(db, collections.recipes));
     await setDoc(recipeRef, {
@@ -121,6 +124,9 @@ export const createRecipe = async (recipeData: Omit<Recipe, 'id' | 'createdAt' |
 };
 
 export const getRecipe = async (recipeId: string): Promise<Recipe | null> => {
+  if (!db) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     const recipeDoc = await getDoc(doc(db, collections.recipes, recipeId));
     if (!recipeDoc.exists()) {
@@ -133,6 +139,9 @@ export const getRecipe = async (recipeId: string): Promise<Recipe | null> => {
 };
 
 export const getUserRecipes = async (userId: string, limitCount = 20): Promise<Recipe[]> => {
+  if (!db) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     const q = query(
       collection(db, collections.recipes),
@@ -151,6 +160,9 @@ export const getPublicRecipes = async (filters?: {
   tags?: string[];
   limitCount?: number;
 }): Promise<Recipe[]> => {
+  if (!db) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     const constraints: QueryConstraint[] = [
       where('isPublic', '==', true),
@@ -175,6 +187,9 @@ export const getPublicRecipes = async (filters?: {
 
 // Meal Plan helpers
 export const createMealPlan = async (mealPlanData: Omit<MealPlan, 'id' | 'createdAt' | 'updatedAt'>): Promise<string> => {
+  if (!db) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     const mealPlanRef = doc(collection(db, collections.mealPlans));
     await setDoc(mealPlanRef, {
@@ -189,6 +204,9 @@ export const createMealPlan = async (mealPlanData: Omit<MealPlan, 'id' | 'create
 };
 
 export const getUserMealPlans = async (userId: string, limitCount = 10): Promise<MealPlan[]> => {
+  if (!db) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     const q = query(
       collection(db, collections.mealPlans),
@@ -205,6 +223,9 @@ export const getUserMealPlans = async (userId: string, limitCount = 10): Promise
 
 // Glucose Reading helpers
 export const createGlucoseReading = async (readingData: Omit<GlucoseReading, 'id' | 'createdAt'>): Promise<string> => {
+  if (!db) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     const readingRef = doc(collection(db, collections.glucoseReadings));
     await setDoc(readingRef, {
@@ -222,6 +243,9 @@ export const getUserGlucoseReadings = async (
   startDate?: Date,
   endDate?: Date
 ): Promise<GlucoseReading[]> => {
+  if (!db) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     const constraints: QueryConstraint[] = [
       where('userId', '==', userId),
@@ -248,6 +272,9 @@ export const getUserGlucoseReadings = async (
 export const createOrUpdateNutritionLog = async (
   logData: Omit<NutritionLog, 'id' | 'createdAt' | 'updatedAt'>
 ): Promise<string> => {
+  if (!db) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     const logId = `${logData.userId}_${logData.date}`;
     const existingDoc = await getDoc(doc(db, collections.nutritionLogs, logId));
@@ -276,6 +303,9 @@ export const getUserNutritionLogs = async (
   startDate: string,
   endDate: string
 ): Promise<NutritionLog[]> => {
+  if (!db) {
+    throw new Error('Firebase is not initialized. Please check your configuration.');
+  }
   try {
     const q = query(
       collection(db, collections.nutritionLogs),

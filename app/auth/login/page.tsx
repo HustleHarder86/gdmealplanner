@@ -42,10 +42,12 @@ export default function LoginPage() {
 
     try {
       // Set persistence based on remember me checkbox
-      await setPersistence(
-        auth,
-        formData.rememberMe ? browserLocalPersistence : browserSessionPersistence
-      );
+      if (auth) {
+        await setPersistence(
+          auth,
+          formData.rememberMe ? browserLocalPersistence : browserSessionPersistence
+        );
+      }
       
       await signInWithEmail(formData.email, formData.password);
       router.push('/dashboard');

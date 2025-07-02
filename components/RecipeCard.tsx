@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Recipe } from '@/lib/mock-data'
+import { Recipe } from '@/lib/types'
 
 interface RecipeCardProps {
   recipe: Recipe
@@ -14,7 +14,7 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
           {recipe.category === 'breakfast' && '🍳'}
           {recipe.category === 'lunch' && '🥗'}
           {recipe.category === 'dinner' && '🍽️'}
-          {recipe.category === 'snack' && '🥜'}
+          {recipe.category === 'snacks' && '🥜'}
         </span>
       </div>
 

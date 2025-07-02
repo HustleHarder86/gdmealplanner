@@ -1,0 +1,1165 @@
+[
+  {
+    "title": "Baked Cod with Roasted Vegetables",
+    "description": "Light and healthy dinner with lean protein",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/baked-cod-vegetables",
+    "prepTime": 10,
+    "cookTime": 25,
+    "totalTime": 35,
+    "servings": 2,
+    "category": "dinner",
+    "image": "images/baked-cod.jpg",
+    "ingredients": [
+      {
+        "amount": "8",
+        "unit": "oz",
+        "item": "cod fillets"
+      },
+      {
+        "amount": "2",
+        "unit": "cups",
+        "item": "broccoli florets"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "bell peppers, sliced"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "zucchini, sliced"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "olive oil"
+      },
+      {
+        "amount": "2",
+        "unit": "cloves",
+        "item": "garlic, minced"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "lemon juice"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "dried herbs"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "brown rice, cooked"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 400°F.",
+      "Toss vegetables with 1 tbsp olive oil, salt, and pepper.",
+      "Spread on baking sheet and roast for 15 minutes.",
+      "Season cod with herbs, garlic, salt, and pepper.",
+      "Push vegetables to sides and place cod in center.",
+      "Drizzle with remaining oil and lemon juice.",
+      "Bake for 10-12 minutes until fish flakes easily.",
+      "Serve with brown rice."
+    ],
+    "nutrition": {
+      "calories": 340,
+      "carbs": 35,
+      "fiber": 6,
+      "sugar": 8,
+      "protein": 30,
+      "fat": 10,
+      "saturatedFat": 2,
+      "sodium": 280
+    },
+    "tags": [
+      "low-calorie",
+      "high-protein",
+      "gluten-free",
+      "heart-healthy"
+    ],
+    "id": "baked-cod-with-roasted-vegetables"
+  },
+  {
+    "title": "Turkey Chili with Beans",
+    "description": "Hearty and warming chili packed with protein",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/turkey-chili",
+    "prepTime": 15,
+    "cookTime": 30,
+    "totalTime": 45,
+    "servings": 4,
+    "category": "dinner",
+    "image": "images/turkey-chili.jpg",
+    "ingredients": [
+      {
+        "amount": "1",
+        "unit": "lb",
+        "item": "ground turkey (93% lean)"
+      },
+      {
+        "amount": "1",
+        "unit": "can",
+        "item": "kidney beans (15 oz)"
+      },
+      {
+        "amount": "1",
+        "unit": "can",
+        "item": "black beans (15 oz)"
+      },
+      {
+        "amount": "1",
+        "unit": "can",
+        "item": "diced tomatoes (28 oz)"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "onion, diced"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "bell pepper, diced"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "chili powder"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "cumin"
+      },
+      {
+        "amount": "2",
+        "unit": "cups",
+        "item": "low-sodium chicken broth"
+      }
+    ],
+    "instructions": [
+      "Brown ground turkey in a large pot over medium heat.",
+      "Add onion and bell pepper, cook 5 minutes.",
+      "Stir in chili powder and cumin, cook 1 minute.",
+      "Add tomatoes, beans, and broth.",
+      "Bring to boil, then reduce heat and simmer 20 minutes.",
+      "Season with salt and pepper to taste.",
+      "Serve hot with optional toppings."
+    ],
+    "nutrition": {
+      "calories": 360,
+      "carbs": 38,
+      "fiber": 12,
+      "sugar": 10,
+      "protein": 32,
+      "fat": 8,
+      "saturatedFat": 2,
+      "sodium": 580
+    },
+    "tags": [
+      "high-protein",
+      "high-fiber",
+      "comfort-food",
+      "meal-prep-friendly"
+    ],
+    "id": "turkey-chili-with-beans"
+  },
+  {
+    "title": "Grilled Chicken with Sweet Potato",
+    "description": "Balanced meal with lean protein and complex carbs",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/grilled-chicken-sweet-potato",
+    "prepTime": 10,
+    "cookTime": 25,
+    "totalTime": 35,
+    "servings": 2,
+    "category": "dinner",
+    "image": "images/grilled-chicken-sweet-potato.jpg",
+    "ingredients": [
+      {
+        "amount": "8",
+        "unit": "oz",
+        "item": "chicken breast"
+      },
+      {
+        "amount": "1",
+        "unit": "large",
+        "item": "sweet potato"
+      },
+      {
+        "amount": "2",
+        "unit": "cups",
+        "item": "green beans"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "olive oil"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "paprika"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "garlic powder"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "fresh herbs"
+      }
+    ],
+    "instructions": [
+      "Preheat grill or grill pan to medium-high.",
+      "Cut sweet potato into 1/2-inch rounds.",
+      "Brush potato and chicken with olive oil.",
+      "Season chicken with paprika, garlic powder, salt, and pepper.",
+      "Grill chicken 6-7 minutes per side until cooked.",
+      "Grill sweet potato slices 4-5 minutes per side.",
+      "Steam green beans for 5 minutes until tender.",
+      "Serve chicken with sweet potato and green beans."
+    ],
+    "nutrition": {
+      "calories": 380,
+      "carbs": 35,
+      "fiber": 6,
+      "sugar": 10,
+      "protein": 35,
+      "fat": 12,
+      "saturatedFat": 2,
+      "sodium": 320
+    },
+    "tags": [
+      "balanced",
+      "high-protein",
+      "gluten-free",
+      "colorful"
+    ],
+    "id": "grilled-chicken-with-sweet-potato"
+  },
+  {
+    "title": "Vegetarian Stuffed Bell Peppers",
+    "description": "Colorful peppers filled with quinoa and vegetables",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/stuffed-bell-peppers",
+    "prepTime": 15,
+    "cookTime": 30,
+    "totalTime": 45,
+    "servings": 2,
+    "category": "dinner",
+    "image": "images/stuffed-peppers.jpg",
+    "ingredients": [
+      {
+        "amount": "2",
+        "unit": "large",
+        "item": "bell peppers"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "cooked quinoa"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "black beans"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "corn"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "tomatoes, diced"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "onion, diced"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "reduced-fat cheese"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "cumin"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "olive oil"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 375°F.",
+      "Cut tops off peppers and remove seeds.",
+      "Heat olive oil and sauté onion for 3 minutes.",
+      "Mix quinoa, beans, corn, tomatoes, onion, and cumin.",
+      "Stuff peppers with quinoa mixture.",
+      "Place in baking dish with 1/4 cup water.",
+      "Cover and bake for 25 minutes.",
+      "Top with cheese and bake 5 more minutes uncovered."
+    ],
+    "nutrition": {
+      "calories": 320,
+      "carbs": 42,
+      "fiber": 10,
+      "sugar": 12,
+      "protein": 16,
+      "fat": 10,
+      "saturatedFat": 3,
+      "sodium": 380
+    },
+    "tags": [
+      "vegetarian",
+      "colorful",
+      "high-fiber",
+      "gluten-free"
+    ],
+    "id": "vegetarian-stuffed-bell-peppers"
+  },
+  {
+    "title": "Baked Salmon with Asparagus",
+    "description": "Omega-3 rich dinner with roasted vegetables",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/baked-salmon-asparagus",
+    "prepTime": 10,
+    "cookTime": 20,
+    "totalTime": 30,
+    "servings": 2,
+    "category": "dinner",
+    "image": "images/baked-salmon-asparagus.jpg",
+    "ingredients": [
+      {
+        "amount": "8",
+        "unit": "oz",
+        "item": "salmon fillet"
+      },
+      {
+        "amount": "1",
+        "unit": "lb",
+        "item": "asparagus spears"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "cherry tomatoes"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "olive oil"
+      },
+      {
+        "amount": "2",
+        "unit": "cloves",
+        "item": "garlic, minced"
+      },
+      {
+        "amount": "1",
+        "unit": "",
+        "item": "lemon, sliced"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "dried dill"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "wild rice, cooked"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 400°F.",
+      "Line baking sheet with parchment paper.",
+      "Arrange asparagus and tomatoes on sheet.",
+      "Drizzle with 1 tbsp oil, salt, and pepper.",
+      "Place salmon on top of vegetables.",
+      "Brush salmon with remaining oil, garlic, and dill.",
+      "Top with lemon slices.",
+      "Bake for 15-18 minutes until salmon flakes.",
+      "Serve with wild rice."
+    ],
+    "nutrition": {
+      "calories": 380,
+      "carbs": 32,
+      "fiber": 5,
+      "sugar": 6,
+      "protein": 32,
+      "fat": 16,
+      "saturatedFat": 3,
+      "sodium": 280
+    },
+    "tags": [
+      "omega-3",
+      "heart-healthy",
+      "quick",
+      "gluten-free"
+    ],
+    "id": "baked-salmon-with-asparagus"
+  },
+  {
+    "title": "Lean Beef Stir-Fry",
+    "description": "Quick Asian-inspired stir-fry with vegetables",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/beef-stir-fry",
+    "prepTime": 15,
+    "cookTime": 15,
+    "totalTime": 30,
+    "servings": 2,
+    "category": "dinner",
+    "image": "images/beef-stir-fry.jpg",
+    "ingredients": [
+      {
+        "amount": "8",
+        "unit": "oz",
+        "item": "lean beef sirloin, sliced thin"
+      },
+      {
+        "amount": "2",
+        "unit": "cups",
+        "item": "mixed stir-fry vegetables"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "snow peas"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "low-sodium soy sauce"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "sesame oil"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "fresh ginger, minced"
+      },
+      {
+        "amount": "2",
+        "unit": "cloves",
+        "item": "garlic, minced"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "brown rice, cooked"
+      }
+    ],
+    "instructions": [
+      "Heat sesame oil in wok or large skillet over high heat.",
+      "Add beef and stir-fry for 2-3 minutes until browned.",
+      "Remove beef and set aside.",
+      "Add vegetables, ginger, and garlic to pan.",
+      "Stir-fry for 3-4 minutes until crisp-tender.",
+      "Return beef to pan with soy sauce.",
+      "Toss everything together for 1 minute.",
+      "Serve over brown rice."
+    ],
+    "nutrition": {
+      "calories": 360,
+      "carbs": 32,
+      "fiber": 5,
+      "sugar": 8,
+      "protein": 30,
+      "fat": 14,
+      "saturatedFat": 4,
+      "sodium": 480
+    },
+    "tags": [
+      "quick",
+      "asian-inspired",
+      "high-protein",
+      "colorful"
+    ],
+    "id": "lean-beef-stir-fry"
+  },
+  {
+    "title": "Mediterranean Chickpea Stew",
+    "description": "Hearty vegetarian stew with Mediterranean flavors",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/mediterranean-chickpea-stew",
+    "prepTime": 10,
+    "cookTime": 25,
+    "totalTime": 35,
+    "servings": 3,
+    "category": "dinner",
+    "image": "images/chickpea-stew.jpg",
+    "ingredients": [
+      {
+        "amount": "1",
+        "unit": "can",
+        "item": "chickpeas (15 oz)"
+      },
+      {
+        "amount": "1",
+        "unit": "can",
+        "item": "diced tomatoes (14.5 oz)"
+      },
+      {
+        "amount": "2",
+        "unit": "cups",
+        "item": "vegetable broth"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "eggplant, cubed"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "zucchini, cubed"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "onion, diced"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "tomato paste"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "oregano"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "olive oil"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "fresh basil"
+      }
+    ],
+    "instructions": [
+      "Heat olive oil in large pot over medium heat.",
+      "Sauté onion for 3 minutes until softened.",
+      "Add eggplant and zucchini, cook 5 minutes.",
+      "Stir in tomato paste and oregano.",
+      "Add tomatoes, chickpeas, and broth.",
+      "Bring to boil, then simmer 15 minutes.",
+      "Season with salt and pepper.",
+      "Garnish with fresh basil before serving."
+    ],
+    "nutrition": {
+      "calories": 310,
+      "carbs": 40,
+      "fiber": 12,
+      "sugar": 12,
+      "protein": 15,
+      "fat": 10,
+      "saturatedFat": 1,
+      "sodium": 480
+    },
+    "tags": [
+      "vegetarian",
+      "mediterranean",
+      "high-fiber",
+      "vegan"
+    ],
+    "id": "mediterranean-chickpea-stew"
+  },
+  {
+    "title": "Herb-Crusted Pork Tenderloin",
+    "description": "Lean pork with flavorful herb crust",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/herb-crusted-pork",
+    "prepTime": 10,
+    "cookTime": 25,
+    "totalTime": 35,
+    "servings": 3,
+    "category": "dinner",
+    "image": "images/herb-pork.jpg",
+    "ingredients": [
+      {
+        "amount": "12",
+        "unit": "oz",
+        "item": "pork tenderloin"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "fresh herbs, mixed"
+      },
+      {
+        "amount": "2",
+        "unit": "cloves",
+        "item": "garlic, minced"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "olive oil"
+      },
+      {
+        "amount": "2",
+        "unit": "cups",
+        "item": "Brussels sprouts, halved"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "baby potatoes, halved"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "Dijon mustard"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 425°F.",
+      "Mix herbs, garlic, mustard, and olive oil.",
+      "Rub mixture all over pork tenderloin.",
+      "Toss vegetables with oil, salt, and pepper.",
+      "Place pork on baking sheet with vegetables.",
+      "Roast for 20-25 minutes until pork reaches 145°F.",
+      "Let pork rest 5 minutes before slicing.",
+      "Serve with roasted vegetables."
+    ],
+    "nutrition": {
+      "calories": 340,
+      "carbs": 30,
+      "fiber": 6,
+      "sugar": 6,
+      "protein": 32,
+      "fat": 12,
+      "saturatedFat": 3,
+      "sodium": 320
+    },
+    "tags": [
+      "lean-protein",
+      "herb-crusted",
+      "elegant",
+      "gluten-free"
+    ],
+    "id": "herb-crusted-pork-tenderloin"
+  },
+  {
+    "title": "Tofu Buddha Bowl with Peanut Sauce",
+    "description": "Colorful vegan bowl with crispy tofu",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/tofu-buddha-bowl",
+    "prepTime": 15,
+    "cookTime": 20,
+    "totalTime": 35,
+    "servings": 2,
+    "category": "dinner",
+    "image": "images/tofu-buddha-bowl.jpg",
+    "ingredients": [
+      {
+        "amount": "8",
+        "unit": "oz",
+        "item": "firm tofu, cubed"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "cooked brown rice"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "shredded red cabbage"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "edamame, shelled"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "carrots, julienned"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "peanut butter"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "lime juice"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "low-sodium soy sauce"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "sesame oil"
+      }
+    ],
+    "instructions": [
+      "Press tofu to remove excess water.",
+      "Heat sesame oil in skillet over medium-high heat.",
+      "Cook tofu cubes until golden on all sides, about 10 minutes.",
+      "Steam edamame for 5 minutes.",
+      "Mix peanut butter, lime juice, soy sauce, and water for sauce.",
+      "Divide rice between bowls.",
+      "Arrange tofu, cabbage, edamame, and carrots on top.",
+      "Drizzle with peanut sauce."
+    ],
+    "nutrition": {
+      "calories": 380,
+      "carbs": 38,
+      "fiber": 10,
+      "sugar": 10,
+      "protein": 22,
+      "fat": 16,
+      "saturatedFat": 3,
+      "sodium": 420
+    },
+    "tags": [
+      "vegan",
+      "plant-based",
+      "colorful",
+      "high-protein"
+    ],
+    "id": "tofu-buddha-bowl-with-peanut-sauce"
+  },
+  {
+    "title": "Turkey Meatloaf with Green Beans",
+    "description": "Comfort food made healthier with lean turkey",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/turkey-meatloaf",
+    "prepTime": 15,
+    "cookTime": 45,
+    "totalTime": 60,
+    "servings": 4,
+    "category": "dinner",
+    "image": "images/turkey-meatloaf.jpg",
+    "ingredients": [
+      {
+        "amount": "1",
+        "unit": "lb",
+        "item": "ground turkey (93% lean)"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "oats"
+      },
+      {
+        "amount": "1",
+        "unit": "",
+        "item": "egg"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "onion, diced"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "milk"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "ketchup"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "Worcestershire sauce"
+      },
+      {
+        "amount": "1",
+        "unit": "lb",
+        "item": "green beans"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 350°F.",
+      "Mix turkey, oats, egg, onion, milk, and Worcestershire.",
+      "Form into loaf shape in baking dish.",
+      "Spread ketchup on top.",
+      "Bake for 40-45 minutes until cooked through.",
+      "Steam green beans for 5 minutes.",
+      "Let meatloaf rest 5 minutes before slicing.",
+      "Serve with green beans."
+    ],
+    "nutrition": {
+      "calories": 320,
+      "carbs": 30,
+      "fiber": 6,
+      "sugar": 8,
+      "protein": 28,
+      "fat": 10,
+      "saturatedFat": 3,
+      "sodium": 480
+    },
+    "tags": [
+      "comfort-food",
+      "meal-prep-friendly",
+      "family-friendly"
+    ],
+    "id": "turkey-meatloaf-with-green-beans"
+  },
+  {
+    "title": "Shrimp and Zucchini Noodles",
+    "description": "Low-carb dinner with spiralized vegetables",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/shrimp-zucchini-noodles",
+    "prepTime": 15,
+    "cookTime": 10,
+    "totalTime": 25,
+    "servings": 2,
+    "category": "dinner",
+    "image": "images/shrimp-zoodles.jpg",
+    "ingredients": [
+      {
+        "amount": "8",
+        "unit": "oz",
+        "item": "large shrimp, peeled"
+      },
+      {
+        "amount": "3",
+        "unit": "medium",
+        "item": "zucchini, spiralized"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "cherry tomatoes"
+      },
+      {
+        "amount": "2",
+        "unit": "cloves",
+        "item": "garlic, minced"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "olive oil"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "white wine or broth"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "lemon juice"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "fresh basil"
+      }
+    ],
+    "instructions": [
+      "Heat 1 tbsp olive oil in large skillet.",
+      "Cook shrimp 2 minutes per side until pink.",
+      "Remove shrimp and set aside.",
+      "Add remaining oil and garlic, cook 30 seconds.",
+      "Add zucchini noodles and tomatoes.",
+      "Cook 3-4 minutes until noodles are tender.",
+      "Add wine and lemon juice.",
+      "Return shrimp to pan and toss.",
+      "Garnish with fresh basil."
+    ],
+    "nutrition": {
+      "calories": 280,
+      "carbs": 30,
+      "fiber": 6,
+      "sugar": 12,
+      "protein": 24,
+      "fat": 12,
+      "saturatedFat": 2,
+      "sodium": 320
+    },
+    "tags": [
+      "low-carb-option",
+      "quick",
+      "light",
+      "gluten-free"
+    ],
+    "id": "shrimp-and-zucchini-noodles"
+  },
+  {
+    "title": "Chicken Fajita Bowl",
+    "description": "Mexican-inspired bowl with seasoned chicken",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/chicken-fajita-bowl",
+    "prepTime": 10,
+    "cookTime": 20,
+    "totalTime": 30,
+    "servings": 2,
+    "category": "dinner",
+    "image": "images/fajita-bowl.jpg",
+    "ingredients": [
+      {
+        "amount": "8",
+        "unit": "oz",
+        "item": "chicken breast, sliced"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "bell peppers, sliced"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "onion, sliced"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "black beans"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "brown rice, cooked"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "fajita seasoning"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "olive oil"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "Greek yogurt"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "salsa"
+      }
+    ],
+    "instructions": [
+      "Season chicken with fajita seasoning.",
+      "Heat olive oil in large skillet over medium-high.",
+      "Cook chicken 5-6 minutes until done.",
+      "Remove chicken and set aside.",
+      "Add peppers and onions to pan.",
+      "Cook 5 minutes until softened.",
+      "Divide rice between bowls.",
+      "Top with chicken, vegetables, beans, yogurt, and salsa."
+    ],
+    "nutrition": {
+      "calories": 360,
+      "carbs": 38,
+      "fiber": 8,
+      "sugar": 8,
+      "protein": 32,
+      "fat": 10,
+      "saturatedFat": 2,
+      "sodium": 580
+    },
+    "tags": [
+      "mexican-inspired",
+      "colorful",
+      "high-protein",
+      "customizable"
+    ],
+    "id": "chicken-fajita-bowl"
+  },
+  {
+    "title": "Baked Eggplant Parmesan",
+    "description": "Lighter version of Italian classic",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/baked-eggplant-parmesan",
+    "prepTime": 20,
+    "cookTime": 35,
+    "totalTime": 55,
+    "servings": 3,
+    "category": "dinner",
+    "image": "images/eggplant-parmesan.jpg",
+    "ingredients": [
+      {
+        "amount": "1",
+        "unit": "large",
+        "item": "eggplant, sliced"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "marinara sauce"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "part-skim mozzarella"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "Parmesan cheese"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "whole wheat breadcrumbs"
+      },
+      {
+        "amount": "1",
+        "unit": "",
+        "item": "egg, beaten"
+      },
+      {
+        "amount": "2",
+        "unit": "cups",
+        "item": "arugula"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "olive oil"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 375°F.",
+      "Dip eggplant slices in egg, then breadcrumbs.",
+      "Place on baking sheet and spray with cooking spray.",
+      "Bake 20 minutes, flipping once.",
+      "In baking dish, layer sauce, eggplant, and cheeses.",
+      "Repeat layers.",
+      "Bake 15 minutes until cheese melts.",
+      "Serve over arugula tossed with olive oil."
+    ],
+    "nutrition": {
+      "calories": 320,
+      "carbs": 38,
+      "fiber": 10,
+      "sugar": 14,
+      "protein": 18,
+      "fat": 12,
+      "saturatedFat": 5,
+      "sodium": 620
+    },
+    "tags": [
+      "italian",
+      "vegetarian",
+      "comfort-food",
+      "high-fiber"
+    ],
+    "id": "baked-eggplant-parmesan"
+  },
+  {
+    "title": "Asian Glazed Meatballs with Broccoli",
+    "description": "Flavorful meatballs with sweet and savory glaze",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/asian-glazed-meatballs",
+    "prepTime": 15,
+    "cookTime": 20,
+    "totalTime": 35,
+    "servings": 3,
+    "category": "dinner",
+    "image": "images/asian-meatballs.jpg",
+    "ingredients": [
+      {
+        "amount": "12",
+        "unit": "oz",
+        "item": "lean ground beef"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "breadcrumbs"
+      },
+      {
+        "amount": "1",
+        "unit": "",
+        "item": "egg"
+      },
+      {
+        "amount": "3",
+        "unit": "cups",
+        "item": "broccoli florets"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "low-sodium soy sauce"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "honey"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "sesame oil"
+      },
+      {
+        "amount": "2",
+        "unit": "cloves",
+        "item": "garlic, minced"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "brown rice, cooked"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 400°F.",
+      "Mix beef, breadcrumbs, egg, and half the garlic.",
+      "Form into 12 meatballs.",
+      "Bake meatballs for 15 minutes.",
+      "Steam broccoli for 5 minutes.",
+      "Mix soy sauce, honey, sesame oil, and remaining garlic.",
+      "Toss cooked meatballs in glaze.",
+      "Serve over rice with broccoli."
+    ],
+    "nutrition": {
+      "calories": 360,
+      "carbs": 34,
+      "fiber": 5,
+      "sugar": 10,
+      "protein": 28,
+      "fat": 14,
+      "saturatedFat": 5,
+      "sodium": 520
+    },
+    "tags": [
+      "asian-inspired",
+      "kid-friendly",
+      "balanced"
+    ],
+    "id": "asian-glazed-meatballs-with-broccoli"
+  }
+]

@@ -1,6 +1,10 @@
 import Link from 'next/link'
+import { RecipeCard } from '@/components/ui'
+import { recipeService } from '@/lib/recipe-service'
 
 export default function HomePage() {
+  // Get featured recipes (quick recipes for busy moms)
+  const featuredRecipes = recipeService.getQuickRecipes(20).slice(0, 3)
   return (
     <div className="container py-12">
       {/* Hero Section */}
@@ -82,14 +86,32 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Featured Recipes */}
+      <section className="mb-16">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold mb-2">Quick & Healthy Recipes</h2>
+          <p className="text-neutral-600">Perfect for busy moms - ready in 20 minutes or less</p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
+          {featuredRecipes.map((recipe) => (
+            <RecipeCard key={recipe.id} recipe={recipe} />
+          ))}
+        </div>
+        <div className="text-center">
+          <Link href="/recipes" className="btn-secondary">
+            View All {recipeService.getAllRecipes().length} Recipes →
+          </Link>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="text-center bg-primary-50 rounded-xl p-8">
         <h2 className="text-3xl font-bold mb-4">Ready to Take Control?</h2>
         <p className="text-lg text-neutral-700 mb-6">
           Join thousands of moms managing gestational diabetes successfully.
         </p>
-        <Link href="/recipes" className="btn-primary text-lg px-6 py-3">
-          Browse GD-Friendly Recipes
+        <Link href="/meal-planner" className="btn-primary text-lg px-6 py-3">
+          Start Your Meal Plan
         </Link>
       </section>
     </div>

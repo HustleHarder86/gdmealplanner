@@ -94,7 +94,11 @@ export class MealPlanService {
       shoppingList: (data.shoppingList || []).map(item => ({
         ...item,
         category: item.category || 'Other',
-        recipeReferences: []
+        recipeReferences: [] as Array<{
+          recipeName: string;
+          day: string;
+          mealType: string;
+        }>
       })),
       userId: data.userId
     };
@@ -128,7 +132,11 @@ export class MealPlanService {
         shoppingList: (data.shoppingList || []).map(item => ({
         ...item,
         category: item.category || 'Other',
-        recipeReferences: []
+        recipeReferences: [] as Array<{
+          recipeName: string;
+          day: string;
+          mealType: string;
+        }>
       })),
         userId: data.userId
       });

@@ -158,7 +158,11 @@ export default function RecipeDetailPage({ params }: { params: { id: string } })
 // Generate static params for all recipes
 export async function generateStaticParams() {
   const recipes = recipeService.getAllRecipes()
+  // Generate static params for all recipes
   return recipes.map((recipe) => ({
     id: recipe.id,
   }))
 }
+
+// Enable dynamic rendering for recipes not pre-rendered
+export const dynamicParams = true

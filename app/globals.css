@@ -54,10 +54,10 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-neutral-200;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-white text-neutral-900;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
@@ -125,28 +125,31 @@
 @layer components {
   /* Cards in dark mode */
   .dark .bg-white {
-    @apply bg-neutral-900 border-neutral-800;
+    background-color: rgb(23 23 23);
+    border-color: rgb(38 38 38);
   }
   
   /* Buttons in dark mode */
   .dark .bg-primary-600 {
-    @apply bg-primary-500;
+    background-color: rgb(232 91 60);
   }
   
   .dark .hover\:bg-primary-700:hover {
-    @apply hover:bg-primary-600;
+    background-color: rgb(212 65 42);
   }
   
   /* Input fields in dark mode */
   .dark input,
   .dark textarea,
   .dark select {
-    @apply bg-neutral-800 border-neutral-700 text-neutral-100;
+    background-color: rgb(38 38 38);
+    border-color: rgb(64 64 64);
+    color: rgb(245 245 245);
   }
   
   .dark input::placeholder,
   .dark textarea::placeholder {
-    @apply text-neutral-500;
+    color: rgb(115 115 115);
   }
   
   /* Shadows in dark mode */
@@ -164,16 +167,17 @@
   
   /* Charts in dark mode */
   .dark svg text {
-    @apply fill-neutral-300;
+    fill: rgb(212 212 212);
   }
   
   .dark svg line,
   .dark svg path {
-    @apply stroke-neutral-700;
+    stroke: rgb(64 64 64);
   }
   
   /* Modals in dark mode */
   .dark [role="dialog"] {
-    @apply bg-neutral-900 border-neutral-800;
+    background-color: rgb(23 23 23);
+    border-color: rgb(38 38 38);
   }
 }

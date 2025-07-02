@@ -11,8 +11,8 @@ import {
   Timestamp,
   deleteDoc
 } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
-import { MealPlan, Recipe, User } from '@/types/firebase';
+import { db } from '../firebase';
+import { MealPlan, Recipe, User } from '../../types/firebase';
 import { WeeklyMealPlan, DailyMealPlan, MealPlanPreferences } from './types';
 import { MealPlanningAlgorithm } from './algorithm';
 
@@ -85,7 +85,11 @@ export class MealPlanService {
       startDate: data.weekStartDate.toDate(),
       endDate: data.weekEndDate.toDate(),
       days: this.convertFirestoreToDailyPlans(data.meals, recipeMap),
-      shoppingList: data.shoppingList || [],
+      shoppingList: (data.shoppingList || []).map(item => ({
+        ...item,
+        category: item.category || 'Other',
+        recipeReferences: []
+      })),
       userId: data.userId
     };
   }
@@ -112,7 +116,11 @@ export class MealPlanService {
         startDate: data.weekStartDate.toDate(),
         endDate: data.weekEndDate.toDate(),
         days: this.convertFirestoreToDailyPlans(data.meals, new Map()),
-        shoppingList: data.shoppingList || [],
+        shoppingList: (data.shoppingList || []).map(item => ({
+        ...item,
+        category: item.category || 'Other',
+        recipeReferences: []
+      })),
         userId: data.userId
       });
     });

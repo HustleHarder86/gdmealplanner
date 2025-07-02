@@ -3,9 +3,9 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { signInWithEmail } from '@/lib/firebase-auth';
-import { useAuth } from '@/contexts/AuthContext';
-import { auth } from '@/lib/firebase';
+import { signInWithEmail } from '@/src/lib/firebase-auth';
+import { useAuth } from '@/src/contexts/AuthContext';
+import { auth } from '@/src/lib/firebase';
 import { setPersistence, browserLocalPersistence, browserSessionPersistence } from 'firebase/auth';
 
 export default function LoginPage() {

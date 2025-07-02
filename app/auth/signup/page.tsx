@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { signUpWithEmail } from '@/lib/firebase-auth';
-import { useAuth } from '@/contexts/AuthContext';
+import { signUpWithEmail } from '@/src/lib/firebase-auth';
+import { useAuth } from '@/src/contexts/AuthContext';
 import { Timestamp } from 'firebase/firestore';
 
 export default function SignupPage() {

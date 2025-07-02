@@ -3,8 +3,8 @@
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useState } from 'react'
-import { signOutUser } from '@/lib/firebase-auth'
-import { useAuth } from '@/contexts/AuthContext'
+import { signOutUser } from '@/src/lib/firebase-auth'
+import { useAuth } from '@/src/contexts/AuthContext'
 
 export default function Navigation() {
   const pathname = usePathname()

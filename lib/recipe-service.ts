@@ -1,9 +1,9 @@
 import { Recipe } from './types'
-import recipesData from '@/data/recipes/recipes.json'
-import breakfastData from '@/data/recipes/breakfast.json'
-import lunchData from '@/data/recipes/lunch.json'
-import dinnerData from '@/data/recipes/dinner.json'
-import snacksData from '@/data/recipes/snacks.json'
+import recipesData from '@/scripts/recipe-scraper/data/recipes/recipes.json'
+import breakfastData from '@/scripts/recipe-scraper/data/recipes/breakfast.json'
+import lunchData from '@/scripts/recipe-scraper/data/recipes/lunch.json'
+import dinnerData from '@/scripts/recipe-scraper/data/recipes/dinner.json'
+import snacksData from '@/scripts/recipe-scraper/data/recipes/snacks.json'
 
 // Type the imported data
 const allRecipes = recipesData as Recipe[]

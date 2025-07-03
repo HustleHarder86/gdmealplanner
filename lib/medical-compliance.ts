@@ -6,7 +6,7 @@ export const MEDICAL_GUIDELINES = {
     breakfast: { min: 25, target: 30, max: 35 },
     lunch: { min: 40, target: 45, max: 50 },
     dinner: { min: 40, target: 45, max: 50 },
-    snack: { min: 15, target: 20, max: 30 },
+    snacks: { min: 15, target: 20, max: 30 },
     bedtimeSnack: { min: 15, target: 15, max: 15, requiresProtein: true }
   },
   glucose: {
@@ -28,7 +28,7 @@ export const MEDICAL_GUIDELINES = {
 export class MedicalComplianceService {
   // Check if a recipe meets medical guidelines
   static isRecipeCompliant(recipe: Recipe): boolean {
-    const guidelines = MEDICAL_GUIDELINES.carbs[recipe.category] || MEDICAL_GUIDELINES.carbs.snack
+    const guidelines = MEDICAL_GUIDELINES.carbs[recipe.category] || MEDICAL_GUIDELINES.carbs.snacks
     return recipe.nutrition.carbs >= guidelines.min && recipe.nutrition.carbs <= guidelines.max
   }
 

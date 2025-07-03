@@ -490,6 +490,17 @@ Aim for 80% code coverage on critical paths.
 - Default carb recommendations should align with ADA guidelines for GD
 - Include warnings about ketone testing if carbs are too low
 
+## Medical Guidelines Reference
+
+**IMPORTANT**: Always refer to `/home/amy/dev/gdmealplanner/MEDICAL_GUIDELINES.md` when implementing any medical-related features, including:
+- Carbohydrate counting and meal planning
+- Blood glucose target ranges
+- Portion sizes and food choices
+- Daily nutrition requirements
+- Glucose monitoring schedules
+
+The MEDICAL_GUIDELINES.md file contains official Halton Healthcare guidelines that must be followed exactly for all medical aspects of the application.
+
 ## Git Workflow
 
 1. Create feature branches: `feature/agent-name-task`

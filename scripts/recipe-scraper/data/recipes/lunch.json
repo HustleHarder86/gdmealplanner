@@ -142,14 +142,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 437,
-      "carbs": 30,
-      "fiber": 14,
-      "sugar": 9,
+      "calories": 656,
+      "carbs": 45,
+      "fiber": 21,
+      "sugar": 13.5,
       "protein": 27,
       "fat": 10,
       "saturatedFat": 4,
-      "sodium": 333
+      "sodium": 333,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -157,7 +158,9 @@
       "high-fiber",
       "gluten-free",
       "buddha bowl"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "buddha-bowl-grilled-chicken-with-whole-wheat-wrap-and-black-beans",
@@ -381,14 +384,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 426,
-      "carbs": 30,
-      "fiber": 12,
-      "sugar": 9,
+      "calories": 639,
+      "carbs": 45,
+      "fiber": 18,
+      "sugar": 13.5,
       "protein": 27,
       "fat": 11,
       "saturatedFat": 1,
-      "sodium": 376
+      "sodium": 376,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -396,7 +400,9 @@
       "high-fiber",
       "gluten-free",
       "salad"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "salad-grilled-chicken-with-whole-wheat-wrap-and-black-beans",
@@ -619,14 +625,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 464,
-      "carbs": 30,
-      "fiber": 14,
-      "sugar": 9,
+      "calories": 696,
+      "carbs": 45,
+      "fiber": 21,
+      "sugar": 13.5,
       "protein": 27,
       "fat": 14,
       "saturatedFat": 2,
-      "sodium": 323
+      "sodium": 323,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -634,7 +641,9 @@
       "high-fiber",
       "gluten-free",
       "wrap"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "wrap-grilled-chicken-with-whole-wheat-wrap-and-black-beans",
@@ -857,21 +866,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 389,
-      "carbs": 30,
-      "fiber": 13,
-      "sugar": 9,
+      "calories": 584,
+      "carbs": 45,
+      "fiber": 19.5,
+      "sugar": 13.5,
       "protein": 27,
       "fat": 9,
       "saturatedFat": 4,
-      "sodium": 522
+      "sodium": 522,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "soup"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "soup-grilled-chicken-with-whole-wheat-wrap-and-black-beans",
@@ -1093,14 +1105,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 456,
-      "carbs": 30,
-      "fiber": 13,
-      "sugar": 9,
+      "calories": 684,
+      "carbs": 45,
+      "fiber": 19.5,
+      "sugar": 13.5,
       "protein": 28,
       "fat": 7,
       "saturatedFat": 2,
-      "sodium": 361
+      "sodium": 361,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -1108,7 +1121,9 @@
       "high-fiber",
       "gluten-free",
       "sandwich"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "sandwich-grilled-chicken-with-whole-wheat-wrap-and-black-beans",
@@ -1332,14 +1347,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 404,
-      "carbs": 30,
-      "fiber": 14,
-      "sugar": 9,
+      "calories": 606,
+      "carbs": 45,
+      "fiber": 21,
+      "sugar": 13.5,
       "protein": 26,
       "fat": 9,
       "saturatedFat": 4,
-      "sodium": 505
+      "sodium": 505,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -1347,7 +1363,9 @@
       "high-fiber",
       "gluten-free",
       "grain bowl"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "grain-bowl-grilled-chicken-with-whole-wheat-wrap-and-black-beans",
@@ -1570,14 +1588,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 431,
-      "carbs": 30,
-      "fiber": 14,
-      "sugar": 9,
+      "calories": 647,
+      "carbs": 45,
+      "fiber": 21,
+      "sugar": 13.5,
       "protein": 25,
       "fat": 8,
       "saturatedFat": 3,
-      "sodium": 440
+      "sodium": 440,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -1585,7 +1604,9 @@
       "high-fiber",
       "gluten-free",
       "lettuce cups"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "lettuce-cups-grilled-chicken-with-whole-wheat-wrap-and-black-beans",
@@ -1808,21 +1829,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 378,
-      "carbs": 30,
-      "fiber": 14,
-      "sugar": 9,
+      "calories": 567,
+      "carbs": 45,
+      "fiber": 21,
+      "sugar": 13.5,
       "protein": 26,
       "fat": 5,
       "saturatedFat": 1,
-      "sodium": 526
+      "sodium": 526,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "stuffed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stuffed-grilled-chicken-with-whole-wheat-wrap-and-black-beans",
@@ -2045,14 +2069,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 462,
-      "carbs": 30,
-      "fiber": 14,
-      "sugar": 9,
+      "calories": 693,
+      "carbs": 45,
+      "fiber": 21,
+      "sugar": 13.5,
       "protein": 25,
       "fat": 7,
       "saturatedFat": 3,
-      "sodium": 331
+      "sodium": 331,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -2060,7 +2085,9 @@
       "high-fiber",
       "gluten-free",
       "skillet"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "skillet-grilled-chicken-with-whole-wheat-wrap-and-black-beans",
@@ -2283,14 +2310,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 418,
-      "carbs": 30,
-      "fiber": 14,
-      "sugar": 9,
+      "calories": 627,
+      "carbs": 45,
+      "fiber": 21,
+      "sugar": 13.5,
       "protein": 29,
       "fat": 10,
       "saturatedFat": 4,
-      "sodium": 234
+      "sodium": 234,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -2298,7 +2326,9 @@
       "high-fiber",
       "gluten-free",
       "baked"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "baked-grilled-chicken-with-whole-wheat-wrap-and-black-beans",
@@ -2511,21 +2541,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 365,
-      "carbs": 32,
-      "fiber": 4,
-      "sugar": 9,
+      "calories": 513,
+      "carbs": 45,
+      "fiber": 5.6,
+      "sugar": 12.7,
       "protein": 20,
       "fat": 10,
       "saturatedFat": 4,
-      "sodium": 365
+      "sodium": 365,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
       "high-protein",
       "gluten-free",
       "buddha bowl"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "salad-turkey-sandwich-with-mixed-vegetables",
@@ -2659,14 +2692,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 407,
-      "carbs": 32,
-      "fiber": 6,
-      "sugar": 9,
+      "calories": 572,
+      "carbs": 45,
+      "fiber": 8.4,
+      "sugar": 12.7,
       "protein": 23,
       "fat": 11,
       "saturatedFat": 2,
-      "sodium": 340
+      "sodium": 340,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -2674,7 +2708,9 @@
       "high-fiber",
       "gluten-free",
       "salad"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "wrap-turkey-sandwich-with-mixed-vegetables",
@@ -2807,14 +2843,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 447,
-      "carbs": 32,
-      "fiber": 5,
-      "sugar": 9,
+      "calories": 629,
+      "carbs": 45,
+      "fiber": 7,
+      "sugar": 12.7,
       "protein": 22,
       "fat": 12,
       "saturatedFat": 2,
-      "sodium": 561
+      "sodium": 561,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -2822,7 +2859,9 @@
       "high-fiber",
       "gluten-free",
       "wrap"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "soup-turkey-sandwich-with-mixed-vegetables",
@@ -2956,14 +2995,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 460,
-      "carbs": 32,
-      "fiber": 6,
-      "sugar": 9,
+      "calories": 647,
+      "carbs": 45,
+      "fiber": 8.4,
+      "sugar": 12.7,
       "protein": 22,
       "fat": 14,
       "saturatedFat": 2,
-      "sodium": 402
+      "sodium": 402,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -2971,7 +3011,9 @@
       "high-fiber",
       "gluten-free",
       "soup"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "sandwich-turkey-sandwich-with-mixed-vegetables",
@@ -3105,14 +3147,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 386,
-      "carbs": 32,
-      "fiber": 4,
-      "sugar": 9,
+      "calories": 543,
+      "carbs": 45,
+      "fiber": 5.6,
+      "sugar": 12.7,
       "protein": 23,
       "fat": 6,
       "saturatedFat": 2,
-      "sodium": 520
+      "sodium": 520,
+      "carbChoices": 3
     },
     "tags": [
       "quick",
@@ -3120,7 +3163,9 @@
       "high-protein",
       "gluten-free",
       "sandwich"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "grain-bowl-turkey-sandwich-with-mixed-vegetables",
@@ -3254,14 +3299,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 393,
-      "carbs": 32,
-      "fiber": 6,
-      "sugar": 9,
+      "calories": 553,
+      "carbs": 45,
+      "fiber": 8.4,
+      "sugar": 12.7,
       "protein": 20,
       "fat": 10,
       "saturatedFat": 3,
-      "sodium": 388
+      "sodium": 388,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -3269,7 +3315,9 @@
       "high-fiber",
       "gluten-free",
       "grain bowl"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "lettuce-cups-turkey-sandwich-with-mixed-vegetables",
@@ -3402,14 +3450,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 370,
-      "carbs": 32,
-      "fiber": 6,
-      "sugar": 9,
+      "calories": 520,
+      "carbs": 45,
+      "fiber": 8.4,
+      "sugar": 12.7,
       "protein": 23,
       "fat": 6,
       "saturatedFat": 3,
-      "sodium": 580
+      "sodium": 580,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -3417,7 +3466,9 @@
       "high-fiber",
       "gluten-free",
       "lettuce cups"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stuffed-turkey-sandwich-with-mixed-vegetables",
@@ -3550,14 +3601,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 395,
-      "carbs": 32,
-      "fiber": 6,
-      "sugar": 9,
+      "calories": 555,
+      "carbs": 45,
+      "fiber": 8.4,
+      "sugar": 12.7,
       "protein": 20,
       "fat": 8,
       "saturatedFat": 4,
-      "sodium": 510
+      "sodium": 510,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -3565,7 +3617,9 @@
       "high-fiber",
       "gluten-free",
       "stuffed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "skillet-turkey-sandwich-with-mixed-vegetables",
@@ -3698,14 +3752,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 427,
-      "carbs": 32,
-      "fiber": 6,
-      "sugar": 9,
+      "calories": 600,
+      "carbs": 45,
+      "fiber": 8.4,
+      "sugar": 12.7,
       "protein": 24,
       "fat": 11,
       "saturatedFat": 1,
-      "sodium": 490
+      "sodium": 490,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -3713,7 +3768,9 @@
       "high-fiber",
       "gluten-free",
       "skillet"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "baked-turkey-sandwich-with-mixed-vegetables",
@@ -3846,14 +3903,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 455,
-      "carbs": 32,
-      "fiber": 5,
-      "sugar": 9,
+      "calories": 640,
+      "carbs": 45,
+      "fiber": 7,
+      "sugar": 12.7,
       "protein": 24,
       "fat": 6,
       "saturatedFat": 4,
-      "sodium": 473
+      "sodium": 473,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -3861,7 +3919,9 @@
       "high-fiber",
       "gluten-free",
       "baked"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "buddha-bowl-tuna-salad-with-chickpeas-and-mixed-vegetables",
@@ -3925,14 +3985,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 469,
-      "carbs": 35,
-      "fiber": 13,
-      "sugar": 10,
+      "calories": 603,
+      "carbs": 45,
+      "fiber": 16.7,
+      "sugar": 12.9,
       "protein": 24,
       "fat": 14,
       "saturatedFat": 2,
-      "sodium": 487
+      "sodium": 487,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -3940,7 +4001,9 @@
       "high-fiber",
       "gluten-free",
       "buddha bowl"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "buddha-bowl-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -4083,14 +4146,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 452,
-      "carbs": 35,
-      "fiber": 12,
-      "sugar": 10,
+      "calories": 581,
+      "carbs": 45,
+      "fiber": 15.4,
+      "sugar": 12.9,
       "protein": 24,
       "fat": 14,
       "saturatedFat": 3,
-      "sodium": 441
+      "sodium": 441,
+      "carbChoices": 3
     },
     "tags": [
       "quick",
@@ -4099,7 +4163,9 @@
       "high-fiber",
       "gluten-free",
       "salad"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "salad-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -4241,14 +4307,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 467,
-      "carbs": 35,
-      "fiber": 14,
-      "sugar": 10,
+      "calories": 600,
+      "carbs": 45,
+      "fiber": 18,
+      "sugar": 12.9,
       "protein": 26,
       "fat": 7,
       "saturatedFat": 1,
-      "sodium": 321
+      "sodium": 321,
+      "carbChoices": 3
     },
     "tags": [
       "quick",
@@ -4257,7 +4324,9 @@
       "high-fiber",
       "gluten-free",
       "wrap"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "wrap-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -4399,14 +4468,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 444,
-      "carbs": 35,
-      "fiber": 13,
-      "sugar": 10,
+      "calories": 571,
+      "carbs": 45,
+      "fiber": 16.7,
+      "sugar": 12.9,
       "protein": 26,
       "fat": 8,
       "saturatedFat": 3,
-      "sodium": 374
+      "sodium": 374,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -4414,7 +4484,9 @@
       "high-fiber",
       "gluten-free",
       "soup"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "soup-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -4557,14 +4629,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 434,
-      "carbs": 35,
-      "fiber": 12,
-      "sugar": 10,
+      "calories": 558,
+      "carbs": 45,
+      "fiber": 15.4,
+      "sugar": 12.9,
       "protein": 23,
       "fat": 9,
       "saturatedFat": 2,
-      "sodium": 496
+      "sodium": 496,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -4572,7 +4645,9 @@
       "high-fiber",
       "gluten-free",
       "sandwich"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "sandwich-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -4715,14 +4790,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 452,
-      "carbs": 35,
-      "fiber": 13,
-      "sugar": 10,
+      "calories": 581,
+      "carbs": 45,
+      "fiber": 16.7,
+      "sugar": 12.9,
       "protein": 25,
       "fat": 7,
       "saturatedFat": 4,
-      "sodium": 265
+      "sodium": 265,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -4730,7 +4806,9 @@
       "high-fiber",
       "gluten-free",
       "grain bowl"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "grain-bowl-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -4873,14 +4951,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 417,
-      "carbs": 35,
-      "fiber": 12,
-      "sugar": 10,
+      "calories": 536,
+      "carbs": 45,
+      "fiber": 15.4,
+      "sugar": 12.9,
       "protein": 22,
       "fat": 9,
       "saturatedFat": 3,
-      "sodium": 527
+      "sodium": 527,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -4888,7 +4967,9 @@
       "high-fiber",
       "gluten-free",
       "lettuce cups"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "lettuce-cups-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -5030,14 +5111,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 390,
-      "carbs": 35,
-      "fiber": 12,
-      "sugar": 10,
+      "calories": 501,
+      "carbs": 45,
+      "fiber": 15.4,
+      "sugar": 12.9,
       "protein": 25,
       "fat": 9,
       "saturatedFat": 4,
-      "sodium": 597
+      "sodium": 597,
+      "carbChoices": 3
     },
     "tags": [
       "quick",
@@ -5046,7 +5128,9 @@
       "high-fiber",
       "gluten-free",
       "stuffed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stuffed-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -5189,14 +5273,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 454,
-      "carbs": 35,
-      "fiber": 13,
-      "sugar": 10,
+      "calories": 584,
+      "carbs": 45,
+      "fiber": 16.7,
+      "sugar": 12.9,
       "protein": 25,
       "fat": 6,
       "saturatedFat": 3,
-      "sodium": 449
+      "sodium": 449,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -5204,7 +5289,9 @@
       "high-fiber",
       "gluten-free",
       "skillet"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "skillet-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -5346,14 +5433,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 486,
-      "carbs": 35,
-      "fiber": 13,
-      "sugar": 10,
+      "calories": 625,
+      "carbs": 45,
+      "fiber": 16.7,
+      "sugar": 12.9,
       "protein": 26,
       "fat": 14,
       "saturatedFat": 1,
-      "sodium": 520
+      "sodium": 520,
+      "carbChoices": 3
     },
     "tags": [
       "quick",
@@ -5362,7 +5450,9 @@
       "high-fiber",
       "gluten-free",
       "baked"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "baked-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -5573,14 +5663,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 428,
-      "carbs": 32,
-      "fiber": 6,
-      "sugar": 9,
+      "calories": 602,
+      "carbs": 45,
+      "fiber": 8.4,
+      "sugar": 12.7,
       "protein": 16,
       "fat": 6,
       "saturatedFat": 3,
-      "sodium": 457
+      "sodium": 457,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -5588,7 +5679,9 @@
       "vegan",
       "gluten-free",
       "wrap"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "soup-lentil-salad-with-mixed-vegetables",
@@ -5721,14 +5814,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 436,
-      "carbs": 32,
-      "fiber": 6,
-      "sugar": 9,
+      "calories": 613,
+      "carbs": 45,
+      "fiber": 8.4,
+      "sugar": 12.7,
       "protein": 16,
       "fat": 10,
       "saturatedFat": 2,
-      "sodium": 415
+      "sodium": 415,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -5736,7 +5830,9 @@
       "vegan",
       "gluten-free",
       "soup"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stuffed-lentil-salad-with-mixed-vegetables",
@@ -6017,14 +6113,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 464,
-      "carbs": 35,
-      "fiber": 8,
-      "sugar": 10,
+      "calories": 597,
+      "carbs": 45,
+      "fiber": 10.3,
+      "sugar": 12.9,
       "protein": 24,
       "fat": 6,
       "saturatedFat": 1,
-      "sodium": 583
+      "sodium": 583,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -6032,7 +6129,9 @@
       "high-fiber",
       "gluten-free",
       "buddha bowl"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "buddha-bowl-chicken-wrap-with-black-beans",
@@ -6386,14 +6485,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 376,
-      "carbs": 35,
-      "fiber": 8,
-      "sugar": 10,
+      "calories": 483,
+      "carbs": 45,
+      "fiber": 10.3,
+      "sugar": 12.9,
       "protein": 20,
       "fat": 9,
       "saturatedFat": 1,
-      "sodium": 527
+      "sodium": 527,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -6401,7 +6501,9 @@
       "high-fiber",
       "gluten-free",
       "salad"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "salad-chicken-wrap-with-black-beans",
@@ -6757,21 +6859,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 402,
-      "carbs": 35,
-      "fiber": 6,
-      "sugar": 10,
+      "calories": 517,
+      "carbs": 45,
+      "fiber": 7.7,
+      "sugar": 12.9,
       "protein": 24,
       "fat": 5,
       "saturatedFat": 3,
-      "sodium": 522
+      "sodium": 522,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "wrap"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "wrap-chicken-wrap-with-black-beans",

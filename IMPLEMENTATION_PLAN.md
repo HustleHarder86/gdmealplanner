@@ -1,150 +1,163 @@
-# Implementation Plan for Medical Accuracy
+# Implementation Plan - Medical Guidelines Integration
 
-## Current Status Review
+## Overview
+This document outlines how we will integrate the comprehensive medical guidelines from Halton Healthcare into the Pregnancy Plate Planner application.
 
-### ✅ Recipe Data (360 recipes) - Needs Minor Adjustments
-**Current Implementation**:
-- Carb ranges: Breakfast (25-45g), Lunch/Dinner (30-45g), Snacks (10-20g)
-- Minimum fiber requirements
-- All recipes under 45 minutes
+## Immediate Actions
 
-**Adjustments Needed**:
-1. Tighten breakfast carb range to 15-30g (currently 25-45g)
-2. Ensure snacks are consistently 15-20g (currently 10-20g)
-3. Add "bedtime snack" tag to appropriate snacks
+### 1. Recipe Validation Update
+- Update recipe validation to match exact medical guidelines:
+  - Breakfast: 30g carbs (2 choices)
+  - Lunch/Dinner: 45g carbs (3 choices)
+  - Snacks: 15-30g carbs (1-2 choices)
+  - Bedtime snack: Must include 15g carbs + protein
+- Add portion size information based on 15g carb portions
+- Validate all 360 recipes against these standards
 
-### 📋 Meal Planning Agent - To Implement
+### 2. Meal Planning Algorithm Enhancement
+- Implement daily carb distribution:
+  - Total: ~180g carbs/day minimum
+  - 3 meals + 3 snacks pattern
+  - Never skip meals rule
+  - 4-6 hour spacing between meals
+- Add plate method visualization:
+  - 1/2 plate: non-starchy vegetables
+  - 1/4 plate: protein
+  - 1/4 plate: grains/starches
+- Morning sensitivity adjustment option
 
-**Core Requirements**:
-1. **7-Day Meal Structure**:
-   - 3 meals + 2-3 snacks daily (including bedtime snack)
-   - No meal skipping allowed
-   - Consistent timing
+### 3. Glucose Tracking Features
+- Implement official tracking format:
+  - Fasting (before breakfast)
+  - 2 hours after breakfast
+  - 2 hours after lunch
+  - 2 hours after dinner
+  - Comments section for context
+- Add target ranges:
+  - Fasting: <5.3 mmol/L
+  - 1 hour post-meal: <7.8 mmol/L
+  - 2 hours post-meal: <6.7 mmol/L
+- Create daily record sheets matching medical format
 
-2. **Smart Meal Selection Algorithm**:
-   ```
-   - No recipe repeats within 7 days
-   - Vary protein sources daily
-   - Mix cooking methods
-   - Consider prep time (mix quick and longer meals)
-   - Group recipes using similar ingredients
-   ```
+### 4. Smart Grocery List Enhancement
+- Group by food categories from guidelines
+- Include portion size references
+- Add carb counting helpers
+- Highlight protein sources for bedtime snacks
 
-3. **Smart Grocery List**:
-   ```
-   - Combine duplicate ingredients with quantities
-   - Group by store sections:
-     * Produce
-     * Meat & Seafood
-     * Dairy
-     * Pantry/Dry Goods
-     * Frozen
-   - Show recipe source for each ingredient
-   - Export/print functionality
-   ```
+### 5. Education Content Creation
+- Understanding GD section with medical accuracy
+- Carbohydrate portion visual guide
+- Nutrition label reading tutorial
+- Restaurant meal navigation guide
+- Morning glucose management tips
 
-### 📊 Glucose Tracking Agent - To Implement
+## Technical Implementation
 
-**Daily Record Structure** (based on standard GD tracking):
+### Database Schema Updates
+```typescript
+// Update Recipe type
+interface Recipe {
+  // existing fields...
+  carbChoices: number; // carbs / 15
+  mealType: 'breakfast' | 'lunch' | 'dinner' | 'snack' | 'bedtime-snack';
+  plateProportion?: {
+    vegetables: number; // percentage
+    protein: number;
+    starch: number;
+  };
+}
+
+// New GlucoseReading type
+interface GlucoseReading {
+  userId: string;
+  timestamp: Date;
+  value: number;
+  unit: 'mmol/L' | 'mg/dL';
+  readingType: 'fasting' | '1hr-post-breakfast' | '2hr-post-breakfast' | '2hr-post-lunch' | '2hr-post-dinner' | 'other';
+  mealAssociation?: string; // meal ID if applicable
+  comments?: string;
+  withinTarget: boolean;
+}
 ```
-For each day:
-- Date
-- Glucose Readings:
-  * Fasting
-  * After Breakfast (1hr and/or 2hr)
-  * After Lunch (1hr and/or 2hr)
-  * After Dinner (1hr and/or 2hr)
-  * Bedtime
-- For each meal:
-  * Time
-  * Food consumed
-  * Carb count
-  * Notes
-- Insulin (if applicable):
-  * Type
-  * Units
-  * Time
-- Physical Activity
-- General Notes/Comments
+
+### UI Components Needed
+1. **Carb Choice Calculator**: Visual portion guide
+2. **Plate Builder**: Interactive meal composition tool
+3. **Daily Record Sheet**: Printable glucose log format
+4. **Target Range Indicator**: Visual feedback for readings
+5. **Meal Timing Reminder**: Notification system
+
+### Validation Rules
+```typescript
+const mealValidation = {
+  breakfast: { 
+    minCarbs: 25, 
+    maxCarbs: 35, 
+    targetCarbs: 30 
+  },
+  lunch: { 
+    minCarbs: 40, 
+    maxCarbs: 50, 
+    targetCarbs: 45 
+  },
+  dinner: { 
+    minCarbs: 40, 
+    maxCarbs: 50, 
+    targetCarbs: 45 
+  },
+  snack: { 
+    minCarbs: 15, 
+    maxCarbs: 30, 
+    targetCarbs: 15 
+  },
+  bedtimeSnack: { 
+    minCarbs: 15, 
+    maxCarbs: 15, 
+    requiresProtein: true 
+  }
+};
 ```
 
-**Features**:
-- Visual indicators for in/out of range
-- Weekly summary statistics
-- Pattern detection (highs after certain meals)
-- Export for healthcare provider
+## Priority Order
 
-### 📚 Education Content Agent - To Implement
+1. **Phase 1** (Immediate):
+   - Update recipe validation
+   - Create carb choice calculator
+   - Add medical disclaimers
 
-**Sections** (based on standard GD education):
-1. **Understanding Gestational Diabetes**
-   - What is GD?
-   - Why it matters
-   - Risk factors
+2. **Phase 2** (Next Sprint):
+   - Build glucose tracking with targets
+   - Implement daily record format
+   - Create meal timing system
 
-2. **Blood Glucose Monitoring**
-   - Target ranges
-   - When to test
-   - Technique tips
-
-3. **Carbohydrate Counting**
-   - What are carbs?
-   - Reading labels
-   - Portion sizes
-   - Carb choices list
-
-4. **Meal Planning**
-   - Meal timing
-   - Balanced plates
-   - Sample meal plans
-
-5. **Physical Activity**
-   - Safe exercises
-   - Benefits
-   - Precautions
-
-6. **When to Contact Your Provider**
-   - Warning signs
-   - Questions to ask
-
-## Implementation Order
-
-1. **First: Update Recipe Validation**
-   - Adjust carb ranges to match medical guidelines
-   - Re-validate all 360 recipes
-   - Update any that don't meet new criteria
-
-2. **Second: Meal Planning Agent**
-   - Build with medical guidelines in mind
-   - Include all required meals/snacks
-   - Smart variety algorithm
-   - Grocery list generator
-
-3. **Third: Glucose Tracking Agent**
-   - Match standard daily record format
-   - Include all tracking fields
-   - Visual feedback for ranges
-   - Export functionality
-
-4. **Fourth: Education Content**
-   - Write content based on standard GD education
-   - Include proper medical disclaimers
-   - Make interactive where possible
-
-## Medical Disclaimer Template
-
-```
-This app is designed for meal planning and glucose tracking purposes only. 
-It is not a substitute for professional medical advice, diagnosis, or treatment. 
-Always consult with your healthcare provider about your specific medical needs 
-and before making any changes to your diabetes management plan.
-```
+3. **Phase 3** (Following Sprint):
+   - Complete education content
+   - Add plate method visualizer
+   - Implement smart notifications
 
 ## Testing Requirements
 
-Before each deployment:
-1. Verify all carb ranges match guidelines
-2. Ensure glucose targets are correct
-3. Check that meal timing recommendations are followed
-4. Confirm medical disclaimers are visible
-5. Test export functions for healthcare provider sharing
+- Validate all recipes meet guidelines
+- Test glucose tracking accuracy
+- Verify carb calculations
+- Check accessibility of visual guides
+- Ensure medical disclaimer visibility
+
+## Compliance Checklist
+
+- [ ] All carb recommendations match guidelines exactly
+- [ ] Blood glucose targets clearly displayed
+- [ ] Portion sizes use 15g = 1 choice system
+- [ ] Bedtime snack protein requirement enforced
+- [ ] Morning sensitivity options available
+- [ ] Medical disclaimer on all pages
+- [ ] Healthcare provider consultation reminders
+- [ ] Printable formats match medical sheets
+
+## Next Steps
+
+1. Update recipe validation logic immediately
+2. Create visual mockups for new components
+3. Plan user testing with target audience
+4. Coordinate with medical advisors for review

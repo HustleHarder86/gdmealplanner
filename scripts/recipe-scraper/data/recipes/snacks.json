@@ -108,14 +108,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 277,
-      "carbs": 14,
-      "fiber": 5,
-      "sugar": 4,
+      "calories": 396,
+      "carbs": 20,
+      "fiber": 7.1,
+      "sugar": 5.7,
       "protein": 13,
       "fat": 8,
       "saturatedFat": 3,
-      "sodium": 557
+      "sodium": 557,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -123,7 +124,9 @@
       "high-fiber",
       "gluten-free",
       "quick"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "quick-greek-yogurt-with-whole-grain-crackers",
@@ -365,21 +368,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 311,
-      "carbs": 14,
-      "fiber": 4,
-      "sugar": 4,
+      "calories": 444,
+      "carbs": 20,
+      "fiber": 5.7,
+      "sugar": 5.7,
       "protein": 16,
       "fat": 13,
       "saturatedFat": 2,
-      "sodium": 484
+      "sodium": 484,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "quick"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "quick-greek-yogurt-with-cherry-tomatoes",
@@ -427,21 +433,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 313,
-      "carbs": 13,
-      "fiber": 4,
-      "sugar": 3,
+      "calories": 482,
+      "carbs": 20,
+      "fiber": 6.2,
+      "sugar": 4.6,
       "protein": 15,
       "fat": 5,
       "saturatedFat": 2,
-      "sodium": 232
+      "sodium": 232,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "quick"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "quick-greek-yogurt-with-celery-and-almond-butter",
@@ -620,14 +629,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 329,
-      "carbs": 14,
-      "fiber": 6,
-      "sugar": 4,
+      "calories": 470,
+      "carbs": 20,
+      "fiber": 8.6,
+      "sugar": 5.7,
       "protein": 16,
       "fat": 9,
       "saturatedFat": 1,
-      "sodium": 213
+      "sodium": 213,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -635,7 +645,9 @@
       "high-fiber",
       "gluten-free",
       "portable"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "portable-greek-yogurt-with-whole-grain-crackers",
@@ -877,14 +889,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 311,
-      "carbs": 14,
-      "fiber": 6,
-      "sugar": 4,
+      "calories": 444,
+      "carbs": 20,
+      "fiber": 8.6,
+      "sugar": 5.7,
       "protein": 16,
       "fat": 14,
       "saturatedFat": 3,
-      "sodium": 393
+      "sodium": 393,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -892,7 +905,9 @@
       "high-fiber",
       "gluten-free",
       "portable"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "portable-greek-yogurt-with-cherry-tomatoes",
@@ -940,14 +955,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 302,
-      "carbs": 13,
-      "fiber": 5,
-      "sugar": 3,
+      "calories": 465,
+      "carbs": 20,
+      "fiber": 7.7,
+      "sugar": 4.6,
       "protein": 12,
       "fat": 7,
       "saturatedFat": 2,
-      "sodium": 520
+      "sodium": 520,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -955,7 +971,9 @@
       "high-fiber",
       "gluten-free",
       "portable"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "portable-greek-yogurt-with-celery-and-almond-butter",
@@ -1134,14 +1152,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 273,
-      "carbs": 14,
-      "fiber": 6,
-      "sugar": 4,
+      "calories": 390,
+      "carbs": 20,
+      "fiber": 8.6,
+      "sugar": 5.7,
       "protein": 13,
       "fat": 5,
       "saturatedFat": 3,
-      "sodium": 384
+      "sodium": 384,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -1149,7 +1168,9 @@
       "high-fiber",
       "gluten-free",
       "make-ahead"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "make-ahead-greek-yogurt-with-whole-grain-crackers",
@@ -1390,14 +1411,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 361,
-      "carbs": 14,
-      "fiber": 5,
-      "sugar": 4,
+      "calories": 516,
+      "carbs": 20,
+      "fiber": 7.1,
+      "sugar": 5.7,
       "protein": 14,
       "fat": 7,
       "saturatedFat": 1,
-      "sodium": 383
+      "sodium": 383,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -1405,7 +1427,9 @@
       "high-fiber",
       "gluten-free",
       "make-ahead"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "make-ahead-greek-yogurt-with-cherry-tomatoes",
@@ -1453,21 +1477,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 276,
-      "carbs": 13,
-      "fiber": 3,
-      "sugar": 3,
+      "calories": 425,
+      "carbs": 20,
+      "fiber": 4.6,
+      "sugar": 4.6,
       "protein": 14,
       "fat": 14,
       "saturatedFat": 1,
-      "sodium": 541
+      "sodium": 541,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "make-ahead"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "make-ahead-greek-yogurt-with-celery-and-almond-butter",
@@ -1646,14 +1673,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 279,
-      "carbs": 14,
-      "fiber": 6,
-      "sugar": 4,
+      "calories": 399,
+      "carbs": 20,
+      "fiber": 8.6,
+      "sugar": 5.7,
       "protein": 15,
       "fat": 7,
       "saturatedFat": 3,
-      "sodium": 454
+      "sodium": 454,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -1661,7 +1689,9 @@
       "high-fiber",
       "gluten-free",
       "no-cook"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "no-cook-greek-yogurt-with-whole-grain-crackers",
@@ -1903,14 +1933,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 310,
-      "carbs": 14,
-      "fiber": 5,
-      "sugar": 4,
+      "calories": 443,
+      "carbs": 20,
+      "fiber": 7.1,
+      "sugar": 5.7,
       "protein": 15,
       "fat": 14,
       "saturatedFat": 2,
-      "sodium": 517
+      "sodium": 517,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -1918,7 +1949,9 @@
       "high-fiber",
       "gluten-free",
       "no-cook"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "no-cook-greek-yogurt-with-cherry-tomatoes",
@@ -1966,21 +1999,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 343,
-      "carbs": 13,
-      "fiber": 3,
-      "sugar": 3,
+      "calories": 528,
+      "carbs": 20,
+      "fiber": 4.6,
+      "sugar": 4.6,
       "protein": 13,
       "fat": 7,
       "saturatedFat": 4,
-      "sodium": 484
+      "sodium": 484,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "no-cook"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "no-cook-greek-yogurt-with-celery-and-almond-butter",
@@ -2159,21 +2195,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 319,
-      "carbs": 14,
-      "fiber": 4,
-      "sugar": 4,
+      "calories": 456,
+      "carbs": 20,
+      "fiber": 5.7,
+      "sugar": 5.7,
       "protein": 16,
       "fat": 13,
       "saturatedFat": 4,
-      "sodium": 281
+      "sodium": 281,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "crunchy"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "crunchy-greek-yogurt-with-whole-grain-crackers",
@@ -2415,14 +2454,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 318,
-      "carbs": 14,
-      "fiber": 6,
-      "sugar": 4,
+      "calories": 454,
+      "carbs": 20,
+      "fiber": 8.6,
+      "sugar": 5.7,
       "protein": 13,
       "fat": 10,
       "saturatedFat": 3,
-      "sodium": 471
+      "sodium": 471,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -2430,7 +2470,9 @@
       "high-fiber",
       "gluten-free",
       "crunchy"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "crunchy-greek-yogurt-with-cherry-tomatoes",
@@ -2478,14 +2520,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 312,
-      "carbs": 13,
-      "fiber": 5,
-      "sugar": 3,
+      "calories": 480,
+      "carbs": 20,
+      "fiber": 7.7,
+      "sugar": 4.6,
       "protein": 15,
       "fat": 14,
       "saturatedFat": 2,
-      "sodium": 225
+      "sodium": 225,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -2493,7 +2536,9 @@
       "high-fiber",
       "gluten-free",
       "crunchy"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "crunchy-greek-yogurt-with-celery-and-almond-butter",
@@ -2672,14 +2717,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 309,
-      "carbs": 14,
-      "fiber": 5,
-      "sugar": 4,
+      "calories": 441,
+      "carbs": 20,
+      "fiber": 7.1,
+      "sugar": 5.7,
       "protein": 13,
       "fat": 13,
       "saturatedFat": 2,
-      "sodium": 307
+      "sodium": 307,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -2687,7 +2733,9 @@
       "high-fiber",
       "gluten-free",
       "creamy"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "creamy-greek-yogurt-with-whole-grain-crackers",
@@ -2929,14 +2977,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 355,
-      "carbs": 14,
-      "fiber": 6,
-      "sugar": 4,
+      "calories": 507,
+      "carbs": 20,
+      "fiber": 8.6,
+      "sugar": 5.7,
       "protein": 16,
       "fat": 5,
       "saturatedFat": 3,
-      "sodium": 356
+      "sodium": 356,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -2944,7 +2993,9 @@
       "high-fiber",
       "gluten-free",
       "creamy"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "creamy-greek-yogurt-with-cherry-tomatoes",
@@ -2992,21 +3043,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 255,
-      "carbs": 13,
-      "fiber": 3,
-      "sugar": 3,
+      "calories": 392,
+      "carbs": 20,
+      "fiber": 4.6,
+      "sugar": 4.6,
       "protein": 13,
       "fat": 9,
       "saturatedFat": 4,
-      "sodium": 430
+      "sodium": 430,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "creamy"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "creamy-greek-yogurt-with-celery-and-almond-butter",
@@ -3185,21 +3239,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 341,
-      "carbs": 14,
-      "fiber": 4,
-      "sugar": 4,
+      "calories": 487,
+      "carbs": 20,
+      "fiber": 5.7,
+      "sugar": 5.7,
       "protein": 16,
       "fat": 13,
       "saturatedFat": 1,
-      "sodium": 247
+      "sodium": 247,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "sweet"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "sweet-greek-yogurt-with-whole-grain-crackers",
@@ -3441,21 +3498,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 341,
-      "carbs": 14,
-      "fiber": 4,
-      "sugar": 4,
+      "calories": 487,
+      "carbs": 20,
+      "fiber": 5.7,
+      "sugar": 5.7,
       "protein": 12,
       "fat": 14,
       "saturatedFat": 1,
-      "sodium": 498
+      "sodium": 498,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "sweet"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "sweet-greek-yogurt-with-cherry-tomatoes",
@@ -3503,14 +3563,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 293,
-      "carbs": 13,
-      "fiber": 5,
-      "sugar": 3,
+      "calories": 451,
+      "carbs": 20,
+      "fiber": 7.7,
+      "sugar": 4.6,
       "protein": 16,
       "fat": 6,
       "saturatedFat": 2,
-      "sodium": 469
+      "sodium": 469,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -3518,7 +3579,9 @@
       "high-fiber",
       "gluten-free",
       "sweet"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "sweet-greek-yogurt-with-celery-and-almond-butter",
@@ -3697,21 +3760,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 276,
-      "carbs": 14,
-      "fiber": 4,
-      "sugar": 4,
+      "calories": 394,
+      "carbs": 20,
+      "fiber": 5.7,
+      "sugar": 5.7,
       "protein": 15,
       "fat": 8,
       "saturatedFat": 4,
-      "sodium": 418
+      "sodium": 418,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "savory"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "savory-greek-yogurt-with-whole-grain-crackers",
@@ -3953,14 +4019,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 344,
-      "carbs": 14,
-      "fiber": 5,
-      "sugar": 4,
+      "calories": 491,
+      "carbs": 20,
+      "fiber": 7.1,
+      "sugar": 5.7,
       "protein": 14,
       "fat": 7,
       "saturatedFat": 1,
-      "sodium": 530
+      "sodium": 530,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -3968,7 +4035,9 @@
       "high-fiber",
       "gluten-free",
       "savory"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "savory-greek-yogurt-with-cherry-tomatoes",
@@ -4016,21 +4085,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 311,
-      "carbs": 13,
-      "fiber": 3,
-      "sugar": 3,
+      "calories": 478,
+      "carbs": 20,
+      "fiber": 4.6,
+      "sugar": 4.6,
       "protein": 12,
       "fat": 5,
       "saturatedFat": 3,
-      "sodium": 204
+      "sodium": 204,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "savory"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "savory-greek-yogurt-with-celery-and-almond-butter",
@@ -4209,14 +4281,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 324,
-      "carbs": 14,
-      "fiber": 6,
-      "sugar": 4,
+      "calories": 463,
+      "carbs": 20,
+      "fiber": 8.6,
+      "sugar": 5.7,
       "protein": 15,
       "fat": 11,
       "saturatedFat": 2,
-      "sodium": 467
+      "sodium": 467,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -4224,7 +4297,9 @@
       "high-fiber",
       "gluten-free",
       "protein-packed"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "protein-packed-greek-yogurt-with-whole-grain-crackers",
@@ -4466,21 +4541,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 266,
-      "carbs": 14,
-      "fiber": 4,
-      "sugar": 4,
+      "calories": 380,
+      "carbs": 20,
+      "fiber": 5.7,
+      "sugar": 5.7,
       "protein": 15,
       "fat": 14,
       "saturatedFat": 2,
-      "sodium": 554
+      "sodium": 554,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "protein-packed"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "protein-packed-greek-yogurt-with-cherry-tomatoes",
@@ -4528,21 +4606,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 302,
-      "carbs": 13,
-      "fiber": 4,
-      "sugar": 3,
+      "calories": 465,
+      "carbs": 20,
+      "fiber": 6.2,
+      "sugar": 4.6,
       "protein": 14,
       "fat": 14,
       "saturatedFat": 1,
-      "sodium": 320
+      "sodium": 320,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "protein-packed"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "protein-packed-greek-yogurt-with-celery-and-almond-butter",
@@ -4721,14 +4802,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 307,
-      "carbs": 14,
-      "fiber": 5,
-      "sugar": 4,
+      "calories": 439,
+      "carbs": 20,
+      "fiber": 7.1,
+      "sugar": 5.7,
       "protein": 15,
       "fat": 13,
       "saturatedFat": 4,
-      "sodium": 496
+      "sodium": 496,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -4736,7 +4818,9 @@
       "high-fiber",
       "gluten-free",
       "fiber-rich"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "fiber-rich-greek-yogurt-with-whole-grain-crackers",
@@ -4978,14 +5062,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 334,
-      "carbs": 14,
-      "fiber": 6,
-      "sugar": 4,
+      "calories": 477,
+      "carbs": 20,
+      "fiber": 8.6,
+      "sugar": 5.7,
       "protein": 16,
       "fat": 11,
       "saturatedFat": 2,
-      "sodium": 368
+      "sodium": 368,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -4993,7 +5078,9 @@
       "high-fiber",
       "gluten-free",
       "fiber-rich"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "fiber-rich-greek-yogurt-with-cherry-tomatoes",
@@ -5041,21 +5128,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 286,
-      "carbs": 13,
-      "fiber": 3,
-      "sugar": 3,
+      "calories": 440,
+      "carbs": 20,
+      "fiber": 4.6,
+      "sugar": 4.6,
       "protein": 13,
       "fat": 5,
       "saturatedFat": 1,
-      "sodium": 415
+      "sodium": 415,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "fiber-rich"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "fiber-rich-greek-yogurt-with-celery-and-almond-butter",
@@ -5212,9 +5302,10 @@
         "item": "cottage cheese"
       },
       {
-        "amount": "1/4",
+        "amount": "1.4",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -5239,14 +5330,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 312,
-      "carbs": 14,
-      "fiber": 5,
-      "sugar": 4,
+      "calories": 446,
+      "carbs": 20,
+      "fiber": 7.1,
+      "sugar": 5.7,
       "protein": 14,
       "fat": 12,
       "saturatedFat": 4,
-      "sodium": 599
+      "sodium": 599,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -5254,7 +5346,9 @@
       "high-fiber",
       "gluten-free",
       "quick"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "quick-cottage-cheese-with-nuts",
@@ -5302,14 +5396,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 314,
-      "carbs": 10,
-      "fiber": 5,
-      "sugar": 3,
+      "calories": 628,
+      "carbs": 20,
+      "fiber": 10,
+      "sugar": 6,
       "protein": 15,
       "fat": 6,
       "saturatedFat": 2,
-      "sodium": 236
+      "sodium": 236,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -5317,7 +5412,9 @@
       "high-fiber",
       "gluten-free",
       "quick"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "quick-cottage-cheese-with-whole-grain-crackers",
@@ -5427,14 +5524,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 361,
-      "carbs": 11,
-      "fiber": 7,
-      "sugar": 3,
+      "calories": 656,
+      "carbs": 20,
+      "fiber": 12.7,
+      "sugar": 5.5,
       "protein": 17,
       "fat": 5,
       "saturatedFat": 3,
-      "sodium": 227
+      "sodium": 227,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -5442,7 +5540,9 @@
       "high-fiber",
       "gluten-free",
       "quick"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "quick-cottage-cheese-with-cucumber-and-bell-peppers",
@@ -5495,14 +5595,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 353,
-      "carbs": 12,
-      "fiber": 7,
-      "sugar": 3,
+      "calories": 588,
+      "carbs": 20,
+      "fiber": 11.7,
+      "sugar": 5,
       "protein": 14,
       "fat": 14,
       "saturatedFat": 4,
-      "sodium": 581
+      "sodium": 581,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -5510,7 +5611,9 @@
       "high-fiber",
       "gluten-free",
       "quick"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "quick-cottage-cheese-with-bell-peppers",
@@ -5558,14 +5661,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 281,
-      "carbs": 10,
-      "fiber": 6,
-      "sugar": 3,
+      "calories": 562,
+      "carbs": 20,
+      "fiber": 12,
+      "sugar": 6,
       "protein": 16,
       "fat": 14,
       "saturatedFat": 3,
-      "sodium": 228
+      "sodium": 228,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -5573,7 +5677,9 @@
       "high-fiber",
       "gluten-free",
       "quick"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "quick-cottage-cheese-with-celery-and-almond-butter",
@@ -5626,14 +5732,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 291,
-      "carbs": 11,
-      "fiber": 7,
-      "sugar": 3,
+      "calories": 529,
+      "carbs": 20,
+      "fiber": 12.7,
+      "sugar": 5.5,
       "protein": 17,
       "fat": 8,
       "saturatedFat": 2,
-      "sodium": 562
+      "sodium": 562,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -5641,7 +5748,9 @@
       "high-fiber",
       "gluten-free",
       "quick"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "portable-cottage-cheese-with-almond-butter-and-berries",
@@ -5730,9 +5839,10 @@
         "item": "cottage cheese"
       },
       {
-        "amount": "1/4",
+        "amount": "1.4",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -5757,14 +5867,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 304,
-      "carbs": 14,
-      "fiber": 6,
-      "sugar": 4,
+      "calories": 434,
+      "carbs": 20,
+      "fiber": 8.6,
+      "sugar": 5.7,
       "protein": 17,
       "fat": 14,
       "saturatedFat": 2,
-      "sodium": 536
+      "sodium": 536,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -5772,6 +5883,8 @@
       "high-fiber",
       "gluten-free",
       "portable"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   }
 ]

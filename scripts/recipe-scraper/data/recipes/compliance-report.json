@@ -1,0 +1,51 @@
+{
+  "timestamp": "2025-07-03T14:17:18.887Z",
+  "guidelines": {
+    "breakfast": {
+      "min": 25,
+      "target": 30,
+      "max": 35
+    },
+    "lunch": {
+      "min": 40,
+      "target": 45,
+      "max": 50
+    },
+    "dinner": {
+      "min": 40,
+      "target": 45,
+      "max": 50
+    },
+    "snacks": {
+      "min": 15,
+      "target": 20,
+      "max": 30
+    }
+  },
+  "compliance": {
+    "breakfast": {
+      "total": 90,
+      "compliant": 90,
+      "percentage": 100,
+      "averageCarbs": 30
+    },
+    "lunch": {
+      "total": 90,
+      "compliant": 90,
+      "percentage": 100,
+      "averageCarbs": 43
+    },
+    "dinner": {
+      "total": 90,
+      "compliant": 90,
+      "percentage": 100,
+      "averageCarbs": 45
+    },
+    "snacks": {
+      "total": 90,
+      "compliant": 90,
+      "percentage": 100,
+      "averageCarbs": 18
+    }
+  }
+}

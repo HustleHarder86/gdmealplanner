@@ -1598,9 +1598,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -1636,21 +1637,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 416,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 624,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 27,
       "fat": 13,
       "saturatedFat": 4,
-      "sodium": 337
+      "sodium": 337,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "roasted"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "roasted-turkey-meatballs-with-wild-rice",
@@ -1671,9 +1675,10 @@
         "item": "turkey meatballs"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -1709,21 +1714,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 486,
-      "carbs": 35,
-      "fiber": 6,
-      "sugar": 10,
+      "calories": 625,
+      "carbs": 45,
+      "fiber": 7.7,
+      "sugar": 12.9,
       "protein": 28,
       "fat": 10,
       "saturatedFat": 2,
-      "sodium": 439
+      "sodium": 439,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "roasted"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "grilled-turkey-meatballs-with-roasted-vegetables-and-cauliflower-rice",
@@ -1749,9 +1757,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -1787,21 +1796,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 466,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 699,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 29,
       "fat": 8,
       "saturatedFat": 1,
-      "sodium": 550
+      "sodium": 550,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "grilled"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "grilled-turkey-meatballs-with-wild-rice",
@@ -1822,9 +1834,10 @@
         "item": "turkey meatballs"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -1860,21 +1873,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 412,
-      "carbs": 35,
-      "fiber": 5,
-      "sugar": 10,
+      "calories": 530,
+      "carbs": 45,
+      "fiber": 6.4,
+      "sugar": 12.9,
       "protein": 29,
       "fat": 14,
       "saturatedFat": 4,
-      "sodium": 372
+      "sodium": 372,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "grilled"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "grilled-turkey-meatballs-with-mixed-salad-and-roasted-vegetables",
@@ -1938,21 +1954,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 389,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 584,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 27,
       "fat": 11,
       "saturatedFat": 2,
-      "sodium": 405
+      "sodium": 405,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "grilled"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "baked-turkey-meatballs-with-wild-rice",
@@ -1973,9 +1992,10 @@
         "item": "turkey meatballs"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -2011,21 +2031,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 432,
-      "carbs": 35,
-      "fiber": 7,
-      "sugar": 10,
+      "calories": 555,
+      "carbs": 45,
+      "fiber": 9,
+      "sugar": 12.9,
       "protein": 26,
       "fat": 8,
       "saturatedFat": 1,
-      "sodium": 362
+      "sodium": 362,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "baked"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "baked-turkey-meatballs-with-mixed-salad-and-roasted-vegetables",
@@ -2089,21 +2112,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 397,
-      "carbs": 30,
-      "fiber": 9,
-      "sugar": 9,
+      "calories": 596,
+      "carbs": 45,
+      "fiber": 13.5,
+      "sugar": 13.5,
       "protein": 26,
       "fat": 5,
       "saturatedFat": 4,
-      "sodium": 494
+      "sodium": 494,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "baked"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stir-fried-turkey-meatballs-with-roasted-vegetables-and-cauliflower-rice",
@@ -2129,9 +2155,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -2167,21 +2194,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 418,
-      "carbs": 30,
-      "fiber": 12,
-      "sugar": 9,
+      "calories": 627,
+      "carbs": 45,
+      "fiber": 18,
+      "sugar": 13.5,
       "protein": 29,
       "fat": 12,
       "saturatedFat": 2,
-      "sodium": 290
+      "sodium": 290,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "stir-fried"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stir-fried-turkey-meatballs-with-wild-rice",
@@ -2202,9 +2232,10 @@
         "item": "turkey meatballs"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -2240,21 +2271,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 436,
-      "carbs": 35,
-      "fiber": 6,
-      "sugar": 10,
+      "calories": 561,
+      "carbs": 45,
+      "fiber": 7.7,
+      "sugar": 12.9,
       "protein": 26,
       "fat": 13,
       "saturatedFat": 1,
-      "sodium": 262
+      "sodium": 262,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "stir-fried"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stir-fried-turkey-meatballs-with-mixed-salad-and-roasted-vegetables",
@@ -2318,21 +2352,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 451,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 677,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 28,
       "fat": 11,
       "saturatedFat": 3,
-      "sodium": 440
+      "sodium": 440,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "stir-fried"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "braised-turkey-meatballs-with-roasted-vegetables-and-cauliflower-rice",
@@ -2358,9 +2395,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -2396,21 +2434,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 471,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 707,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 28,
       "fat": 12,
       "saturatedFat": 2,
-      "sodium": 565
+      "sodium": 565,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "braised"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "braised-turkey-meatballs-with-wild-rice",
@@ -2431,9 +2472,10 @@
         "item": "turkey meatballs"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -2469,21 +2511,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 457,
-      "carbs": 35,
-      "fiber": 6,
-      "sugar": 10,
+      "calories": 588,
+      "carbs": 45,
+      "fiber": 7.7,
+      "sugar": 12.9,
       "protein": 29,
       "fat": 13,
       "saturatedFat": 4,
-      "sodium": 384
+      "sodium": 384,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "braised"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "braised-turkey-meatballs-with-mixed-salad-and-roasted-vegetables",
@@ -2547,21 +2592,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 467,
-      "carbs": 30,
-      "fiber": 9,
-      "sugar": 9,
+      "calories": 701,
+      "carbs": 45,
+      "fiber": 13.5,
+      "sugar": 13.5,
       "protein": 28,
       "fat": 8,
       "saturatedFat": 1,
-      "sodium": 218
+      "sodium": 218,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "braised"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "sheet-pan-turkey-meatballs-with-wild-rice",
@@ -2582,9 +2630,10 @@
         "item": "turkey meatballs"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -2620,21 +2669,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 464,
-      "carbs": 35,
-      "fiber": 6,
-      "sugar": 10,
+      "calories": 597,
+      "carbs": 45,
+      "fiber": 7.7,
+      "sugar": 12.9,
       "protein": 27,
       "fat": 14,
       "saturatedFat": 2,
-      "sodium": 368
+      "sodium": 368,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "sheet pan"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "slow-cooker-turkey-meatballs-with-roasted-vegetables-and-cauliflower-rice",
@@ -2660,9 +2712,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -2698,21 +2751,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 451,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 677,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 27,
       "fat": 6,
       "saturatedFat": 4,
-      "sodium": 251
+      "sodium": 251,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "slow cooker"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "slow-cooker-turkey-meatballs-with-wild-rice",
@@ -2733,9 +2789,10 @@
         "item": "turkey meatballs"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -2771,21 +2828,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 462,
-      "carbs": 35,
-      "fiber": 6,
-      "sugar": 10,
+      "calories": 594,
+      "carbs": 45,
+      "fiber": 7.7,
+      "sugar": 12.9,
       "protein": 25,
       "fat": 7,
       "saturatedFat": 1,
-      "sodium": 356
+      "sodium": 356,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "slow cooker"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "slow-cooker-turkey-meatballs-with-mixed-salad-and-roasted-vegetables",
@@ -2849,21 +2909,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 388,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 582,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 27,
       "fat": 9,
       "saturatedFat": 1,
-      "sodium": 252
+      "sodium": 252,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "slow cooker"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "one-pot-turkey-meatballs-with-wild-rice",
@@ -2884,9 +2947,10 @@
         "item": "turkey meatballs"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -2922,21 +2986,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 456,
-      "carbs": 35,
-      "fiber": 7,
-      "sugar": 10,
+      "calories": 586,
+      "carbs": 45,
+      "fiber": 9,
+      "sugar": 12.9,
       "protein": 28,
       "fat": 9,
       "saturatedFat": 2,
-      "sodium": 352
+      "sodium": 352,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "one-pot"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stuffed-turkey-meatballs-with-wild-rice",
@@ -2957,9 +3024,10 @@
         "item": "turkey meatballs"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -2995,21 +3063,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 472,
-      "carbs": 35,
-      "fiber": 6,
-      "sugar": 10,
+      "calories": 607,
+      "carbs": 45,
+      "fiber": 7.7,
+      "sugar": 12.9,
       "protein": 27,
       "fat": 8,
       "saturatedFat": 1,
-      "sodium": 476
+      "sodium": 476,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "stuffed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "glazed-turkey-meatballs-with-wild-rice",
@@ -3030,9 +3101,10 @@
         "item": "turkey meatballs"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -3068,21 +3140,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 492,
-      "carbs": 35,
-      "fiber": 5,
-      "sugar": 10,
+      "calories": 633,
+      "carbs": 45,
+      "fiber": 6.4,
+      "sugar": 12.9,
       "protein": 28,
       "fat": 14,
       "saturatedFat": 4,
-      "sodium": 416
+      "sodium": 416,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "glazed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "glazed-turkey-meatballs-with-mixed-salad-and-roasted-vegetables",
@@ -3146,21 +3221,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 450,
-      "carbs": 30,
-      "fiber": 9,
-      "sugar": 9,
+      "calories": 675,
+      "carbs": 45,
+      "fiber": 13.5,
+      "sugar": 13.5,
       "protein": 25,
       "fat": 11,
       "saturatedFat": 4,
-      "sodium": 518
+      "sodium": 518,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "glazed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "roasted-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
@@ -3186,9 +3264,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -3224,14 +3303,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 357,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 536,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 19,
       "fat": 7,
       "saturatedFat": 1,
-      "sodium": 345
+      "sodium": 345,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -3239,7 +3319,9 @@
       "vegan",
       "gluten-free",
       "roasted"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "roasted-tofu-stir-fry-with-wild-rice",
@@ -3260,9 +3342,10 @@
         "item": "firm tofu"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -3298,14 +3381,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 408,
-      "carbs": 35,
-      "fiber": 6,
-      "sugar": 10,
+      "calories": 525,
+      "carbs": 45,
+      "fiber": 7.7,
+      "sugar": 12.9,
       "protein": 19,
       "fat": 8,
       "saturatedFat": 2,
-      "sodium": 401
+      "sodium": 401,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -3313,7 +3397,9 @@
       "vegan",
       "gluten-free",
       "roasted"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "roasted-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -3377,14 +3463,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 347,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 521,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 18,
       "fat": 6,
       "saturatedFat": 2,
-      "sodium": 580
+      "sodium": 580,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -3392,7 +3479,9 @@
       "vegan",
       "gluten-free",
       "roasted"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "grilled-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
@@ -3418,9 +3507,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -3456,14 +3546,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 403,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 605,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 15,
       "fat": 12,
       "saturatedFat": 3,
-      "sodium": 317
+      "sodium": 317,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -3472,7 +3563,9 @@
       "vegan",
       "gluten-free",
       "grilled"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "grilled-tofu-stir-fry-with-wild-rice",
@@ -3493,9 +3586,10 @@
         "item": "firm tofu"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -3531,14 +3625,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 437,
-      "carbs": 35,
-      "fiber": 6,
-      "sugar": 10,
+      "calories": 562,
+      "carbs": 45,
+      "fiber": 7.7,
+      "sugar": 12.9,
       "protein": 17,
       "fat": 6,
       "saturatedFat": 3,
-      "sodium": 411
+      "sodium": 411,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -3546,7 +3641,9 @@
       "vegan",
       "gluten-free",
       "grilled"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "grilled-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -3610,14 +3707,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 353,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 530,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 16,
       "fat": 14,
       "saturatedFat": 4,
-      "sodium": 414
+      "sodium": 414,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -3626,7 +3724,9 @@
       "vegan",
       "gluten-free",
       "grilled"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "baked-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
@@ -3652,9 +3752,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -3690,14 +3791,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 412,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 618,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 18,
       "fat": 5,
       "saturatedFat": 2,
-      "sodium": 409
+      "sodium": 409,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -3705,7 +3807,9 @@
       "vegan",
       "gluten-free",
       "baked"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "baked-tofu-stir-fry-with-wild-rice",
@@ -3726,9 +3830,10 @@
         "item": "firm tofu"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -3764,14 +3869,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 358,
-      "carbs": 35,
-      "fiber": 5,
-      "sugar": 10,
+      "calories": 460,
+      "carbs": 45,
+      "fiber": 6.4,
+      "sugar": 12.9,
       "protein": 15,
       "fat": 5,
       "saturatedFat": 3,
-      "sodium": 463
+      "sodium": 463,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -3779,7 +3885,9 @@
       "vegan",
       "gluten-free",
       "baked"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "baked-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -3843,14 +3951,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 396,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 594,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 16,
       "fat": 12,
       "saturatedFat": 3,
-      "sodium": 263
+      "sodium": 263,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -3859,7 +3968,9 @@
       "vegan",
       "gluten-free",
       "baked"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stir-fried-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
@@ -3885,9 +3996,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -3923,14 +4035,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 437,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 656,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 19,
       "fat": 12,
       "saturatedFat": 2,
-      "sodium": 436
+      "sodium": 436,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -3938,7 +4051,9 @@
       "vegan",
       "gluten-free",
       "stir-fried"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stir-fried-tofu-stir-fry-with-wild-rice",
@@ -3959,9 +4074,10 @@
         "item": "firm tofu"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -3997,14 +4113,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 440,
-      "carbs": 35,
-      "fiber": 5,
-      "sugar": 10,
+      "calories": 566,
+      "carbs": 45,
+      "fiber": 6.4,
+      "sugar": 12.9,
       "protein": 18,
       "fat": 14,
       "saturatedFat": 2,
-      "sodium": 299
+      "sodium": 299,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -4013,7 +4130,9 @@
       "vegan",
       "gluten-free",
       "stir-fried"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stir-fried-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -4077,14 +4196,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 429,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 644,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 16,
       "fat": 10,
       "saturatedFat": 3,
-      "sodium": 223
+      "sodium": 223,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -4093,7 +4213,9 @@
       "vegan",
       "gluten-free",
       "stir-fried"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "braised-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
@@ -4119,9 +4241,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -4157,14 +4280,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 348,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 522,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 17,
       "fat": 8,
       "saturatedFat": 3,
-      "sodium": 224
+      "sodium": 224,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -4173,7 +4297,9 @@
       "vegan",
       "gluten-free",
       "braised"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "braised-tofu-stir-fry-with-wild-rice",
@@ -4194,9 +4320,10 @@
         "item": "firm tofu"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -4232,14 +4359,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 408,
-      "carbs": 35,
-      "fiber": 6,
-      "sugar": 10,
+      "calories": 525,
+      "carbs": 45,
+      "fiber": 7.7,
+      "sugar": 12.9,
       "protein": 15,
       "fat": 12,
       "saturatedFat": 4,
-      "sodium": 499
+      "sodium": 499,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -4248,7 +4376,9 @@
       "vegan",
       "gluten-free",
       "braised"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "braised-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -4312,14 +4442,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 353,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 530,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 15,
       "fat": 14,
       "saturatedFat": 3,
-      "sodium": 445
+      "sodium": 445,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -4328,7 +4459,9 @@
       "vegan",
       "gluten-free",
       "braised"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "sheet-pan-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
@@ -4354,9 +4487,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -4392,14 +4526,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 378,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 567,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 19,
       "fat": 10,
       "saturatedFat": 2,
-      "sodium": 313
+      "sodium": 313,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -4408,7 +4543,9 @@
       "vegan",
       "gluten-free",
       "sheet pan"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "sheet-pan-tofu-stir-fry-with-wild-rice",
@@ -4429,9 +4566,10 @@
         "item": "firm tofu"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -4467,14 +4605,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 368,
-      "carbs": 35,
-      "fiber": 7,
-      "sugar": 10,
+      "calories": 473,
+      "carbs": 45,
+      "fiber": 9,
+      "sugar": 12.9,
       "protein": 15,
       "fat": 12,
       "saturatedFat": 4,
-      "sodium": 245
+      "sodium": 245,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -4482,7 +4621,9 @@
       "vegan",
       "gluten-free",
       "sheet pan"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "sheet-pan-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -4546,14 +4687,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 400,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 600,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 19,
       "fat": 12,
       "saturatedFat": 2,
-      "sodium": 580
+      "sodium": 580,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -4562,7 +4704,9 @@
       "vegan",
       "gluten-free",
       "sheet pan"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "slow-cooker-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
@@ -4588,9 +4732,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -4626,14 +4771,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 364,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 546,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 16,
       "fat": 12,
       "saturatedFat": 2,
-      "sodium": 203
+      "sodium": 203,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -4641,7 +4787,9 @@
       "vegan",
       "gluten-free",
       "slow cooker"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "slow-cooker-tofu-stir-fry-with-wild-rice",
@@ -4662,9 +4810,10 @@
         "item": "firm tofu"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -4700,14 +4849,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 419,
-      "carbs": 35,
-      "fiber": 5,
-      "sugar": 10,
+      "calories": 539,
+      "carbs": 45,
+      "fiber": 6.4,
+      "sugar": 12.9,
       "protein": 19,
       "fat": 10,
       "saturatedFat": 4,
-      "sodium": 517
+      "sodium": 517,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -4716,7 +4866,9 @@
       "vegan",
       "gluten-free",
       "slow cooker"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "slow-cooker-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -4780,14 +4932,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 352,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 528,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 19,
       "fat": 12,
       "saturatedFat": 2,
-      "sodium": 545
+      "sodium": 545,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -4796,7 +4949,9 @@
       "vegan",
       "gluten-free",
       "slow cooker"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "one-pot-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
@@ -4822,9 +4977,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -4860,14 +5016,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 392,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 588,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 15,
       "fat": 13,
       "saturatedFat": 3,
-      "sodium": 469
+      "sodium": 469,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -4875,7 +5032,9 @@
       "vegan",
       "gluten-free",
       "one-pot"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "one-pot-tofu-stir-fry-with-wild-rice",
@@ -4896,9 +5055,10 @@
         "item": "firm tofu"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -4934,14 +5094,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 375,
-      "carbs": 35,
-      "fiber": 7,
-      "sugar": 10,
+      "calories": 482,
+      "carbs": 45,
+      "fiber": 9,
+      "sugar": 12.9,
       "protein": 16,
       "fat": 12,
       "saturatedFat": 2,
-      "sodium": 438
+      "sodium": 438,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -4949,7 +5110,9 @@
       "vegan",
       "gluten-free",
       "one-pot"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "one-pot-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -5013,14 +5176,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 425,
-      "carbs": 30,
-      "fiber": 9,
-      "sugar": 9,
+      "calories": 638,
+      "carbs": 45,
+      "fiber": 13.5,
+      "sugar": 13.5,
       "protein": 19,
       "fat": 13,
       "saturatedFat": 2,
-      "sodium": 299
+      "sodium": 299,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -5029,7 +5193,9 @@
       "vegan",
       "gluten-free",
       "one-pot"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stuffed-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
@@ -5055,9 +5221,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -5093,14 +5260,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 363,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 545,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 15,
       "fat": 13,
       "saturatedFat": 2,
-      "sodium": 213
+      "sodium": 213,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -5108,7 +5276,9 @@
       "vegan",
       "gluten-free",
       "stuffed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stuffed-tofu-stir-fry-with-wild-rice",
@@ -5129,9 +5299,10 @@
         "item": "firm tofu"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -5167,14 +5338,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 439,
-      "carbs": 35,
-      "fiber": 5,
-      "sugar": 10,
+      "calories": 564,
+      "carbs": 45,
+      "fiber": 6.4,
+      "sugar": 12.9,
       "protein": 15,
       "fat": 13,
       "saturatedFat": 3,
-      "sodium": 209
+      "sodium": 209,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -5182,7 +5354,9 @@
       "vegan",
       "gluten-free",
       "stuffed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stuffed-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -5246,14 +5420,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 433,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 650,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 19,
       "fat": 11,
       "saturatedFat": 4,
-      "sodium": 476
+      "sodium": 476,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -5262,7 +5437,9 @@
       "vegan",
       "gluten-free",
       "stuffed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "glazed-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
@@ -5288,9 +5465,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -5326,14 +5504,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 366,
-      "carbs": 30,
-      "fiber": 12,
-      "sugar": 9,
+      "calories": 549,
+      "carbs": 45,
+      "fiber": 18,
+      "sugar": 13.5,
       "protein": 17,
       "fat": 14,
       "saturatedFat": 1,
-      "sodium": 281
+      "sodium": 281,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -5341,7 +5520,9 @@
       "vegan",
       "gluten-free",
       "glazed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "glazed-tofu-stir-fry-with-wild-rice",
@@ -5362,9 +5543,10 @@
         "item": "firm tofu"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -5400,14 +5582,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 369,
-      "carbs": 35,
-      "fiber": 6,
-      "sugar": 10,
+      "calories": 474,
+      "carbs": 45,
+      "fiber": 7.7,
+      "sugar": 12.9,
       "protein": 16,
       "fat": 11,
       "saturatedFat": 3,
-      "sodium": 565
+      "sodium": 565,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -5416,7 +5599,9 @@
       "vegan",
       "gluten-free",
       "glazed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "glazed-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -5480,14 +5665,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 436,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 654,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 19,
       "fat": 10,
       "saturatedFat": 4,
-      "sodium": 286
+      "sodium": 286,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -5496,7 +5682,9 @@
       "vegan",
       "gluten-free",
       "glazed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "roasted-lean-beef-with-quinoa-and-wild-rice",

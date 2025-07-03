@@ -1,4 +1,5 @@
 import { Recipe } from './types'
+import { MedicalComplianceService } from './medical-compliance'
 import recipesData from '@/scripts/recipe-scraper/data/recipes/recipes.json'
 import breakfastData from '@/scripts/recipe-scraper/data/recipes/breakfast.json'
 import lunchData from '@/scripts/recipe-scraper/data/recipes/lunch.json'
@@ -92,8 +93,24 @@ export class RecipeService {
       ),
       quickRecipes: allRecipes.filter(r => r.totalTime <= 30).length,
       highProtein: allRecipes.filter(r => r.nutrition.protein >= 20).length,
-      highFiber: allRecipes.filter(r => r.nutrition.fiber >= 5).length
+      highFiber: allRecipes.filter(r => r.nutrition.fiber >= 5).length,
+      medicallyCompliant: allRecipes.filter(r => MedicalComplianceService.isRecipeCompliant(r)).length
     }
+  }
+
+  // Get only medically compliant recipes
+  static getCompliantRecipes(category?: string): Recipe[] {
+    const recipes = category ? this.getRecipesByCategory(category) : allRecipes
+    return recipes.filter(r => MedicalComplianceService.isRecipeCompliant(r))
+  }
+
+  // Get bedtime snack recipes (15g carbs + protein)
+  static getBedtimeSnacks(): Recipe[] {
+    return snackRecipes.filter(r => 
+      r.nutrition.carbs >= 14 && 
+      r.nutrition.carbs <= 16 && 
+      r.nutrition.protein >= 5
+    )
   }
 }
 

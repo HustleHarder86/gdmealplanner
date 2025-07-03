@@ -885,14 +885,16 @@
         "item": "plain Greek yogurt"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "whole grain bread"
+        "item": "whole grain bread",
+        "adjusted": true
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -922,14 +924,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 397,
-      "carbs": 40,
-      "fiber": 11,
-      "sugar": 12,
+      "calories": 298,
+      "carbs": 30,
+      "fiber": 8.3,
+      "sugar": 9,
       "protein": 18,
       "fat": 12,
       "saturatedFat": 4,
-      "sodium": 385
+      "sodium": 385,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -937,7 +940,9 @@
       "high-fiber",
       "gluten-free",
       "mediterranean"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "american-greek-yogurt-bowl-with-berries-and-nuts",
@@ -1030,14 +1035,16 @@
         "item": "plain Greek yogurt"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "whole grain bread"
+        "item": "whole grain bread",
+        "adjusted": true
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -1067,21 +1074,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 419,
-      "carbs": 40,
-      "fiber": 9,
-      "sugar": 12,
+      "calories": 314,
+      "carbs": 30,
+      "fiber": 6.8,
+      "sugar": 9,
       "protein": 18,
       "fat": 6,
       "saturatedFat": 1,
-      "sodium": 498
+      "sodium": 498,
+      "carbChoices": 2
     },
     "tags": [
       "30-minutes-or-less",
       "high-fiber",
       "gluten-free",
       "american"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "mexican-greek-yogurt-bowl-with-berries-and-nuts",
@@ -1175,14 +1185,16 @@
         "item": "plain Greek yogurt"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "whole grain bread"
+        "item": "whole grain bread",
+        "adjusted": true
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -1212,14 +1224,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 407,
-      "carbs": 40,
-      "fiber": 10,
-      "sugar": 12,
+      "calories": 305,
+      "carbs": 30,
+      "fiber": 7.5,
+      "sugar": 9,
       "protein": 16,
       "fat": 8,
       "saturatedFat": 2,
-      "sodium": 501
+      "sodium": 501,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -1227,7 +1240,9 @@
       "high-fiber",
       "gluten-free",
       "mexican"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "asian-inspired-greek-yogurt-bowl-with-berries-and-nuts",
@@ -1321,14 +1336,16 @@
         "item": "plain Greek yogurt"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "whole grain bread"
+        "item": "whole grain bread",
+        "adjusted": true
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -1358,21 +1375,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 449,
-      "carbs": 40,
-      "fiber": 10,
-      "sugar": 12,
+      "calories": 337,
+      "carbs": 30,
+      "fiber": 7.5,
+      "sugar": 9,
       "protein": 17,
       "fat": 8,
       "saturatedFat": 1,
-      "sodium": 402
+      "sodium": 402,
+      "carbChoices": 2
     },
     "tags": [
       "30-minutes-or-less",
       "high-fiber",
       "gluten-free",
       "asian-inspired"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "nordic-greek-yogurt-bowl-with-berries-and-nuts",
@@ -1466,14 +1486,16 @@
         "item": "plain Greek yogurt"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "whole grain bread"
+        "item": "whole grain bread",
+        "adjusted": true
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -1503,14 +1525,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 474,
-      "carbs": 40,
-      "fiber": 10,
-      "sugar": 12,
+      "calories": 356,
+      "carbs": 30,
+      "fiber": 7.5,
+      "sugar": 9,
       "protein": 18,
       "fat": 10,
       "saturatedFat": 3,
-      "sodium": 315
+      "sodium": 315,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -1518,7 +1541,9 @@
       "high-fiber",
       "gluten-free",
       "nordic"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "french-greek-yogurt-bowl-with-berries-and-nuts",
@@ -1612,14 +1637,16 @@
         "item": "plain Greek yogurt"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "whole grain bread"
+        "item": "whole grain bread",
+        "adjusted": true
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -1649,14 +1676,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 446,
-      "carbs": 40,
-      "fiber": 11,
-      "sugar": 12,
+      "calories": 335,
+      "carbs": 30,
+      "fiber": 8.3,
+      "sugar": 9,
       "protein": 15,
       "fat": 7,
       "saturatedFat": 2,
-      "sodium": 304
+      "sodium": 304,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -1664,7 +1692,9 @@
       "high-fiber",
       "gluten-free",
       "french"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "italian-greek-yogurt-bowl-with-berries-and-nuts",
@@ -1758,14 +1788,16 @@
         "item": "plain Greek yogurt"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "whole grain bread"
+        "item": "whole grain bread",
+        "adjusted": true
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -1795,14 +1827,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 443,
-      "carbs": 40,
-      "fiber": 9,
-      "sugar": 12,
+      "calories": 332,
+      "carbs": 30,
+      "fiber": 6.8,
+      "sugar": 9,
       "protein": 16,
       "fat": 9,
       "saturatedFat": 4,
-      "sodium": 518
+      "sodium": 518,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -1810,7 +1843,9 @@
       "high-fiber",
       "gluten-free",
       "italian"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "middle-eastern-greek-yogurt-bowl-with-berries-and-nuts",
@@ -1904,14 +1939,16 @@
         "item": "plain Greek yogurt"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "whole grain bread"
+        "item": "whole grain bread",
+        "adjusted": true
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -1941,14 +1978,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 468,
-      "carbs": 40,
-      "fiber": 9,
-      "sugar": 12,
+      "calories": 351,
+      "carbs": 30,
+      "fiber": 6.8,
+      "sugar": 9,
       "protein": 17,
       "fat": 7,
       "saturatedFat": 1,
-      "sodium": 523
+      "sodium": 523,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -1956,7 +1994,9 @@
       "high-fiber",
       "gluten-free",
       "middle eastern"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "indian-spiced-greek-yogurt-bowl-with-berries-and-nuts",
@@ -2050,14 +2090,16 @@
         "item": "plain Greek yogurt"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "whole grain bread"
+        "item": "whole grain bread",
+        "adjusted": true
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -2087,21 +2129,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 380,
-      "carbs": 40,
-      "fiber": 11,
-      "sugar": 12,
+      "calories": 285,
+      "carbs": 30,
+      "fiber": 8.3,
+      "sugar": 9,
       "protein": 16,
       "fat": 14,
       "saturatedFat": 3,
-      "sodium": 244
+      "sodium": 244,
+      "carbChoices": 2
     },
     "tags": [
       "30-minutes-or-less",
       "high-fiber",
       "gluten-free",
       "indian-spiced"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "southwest-greek-yogurt-bowl-with-berries-and-nuts",
@@ -2194,14 +2239,16 @@
         "item": "plain Greek yogurt"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "whole grain bread"
+        "item": "whole grain bread",
+        "adjusted": true
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -2231,14 +2278,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 444,
-      "carbs": 40,
-      "fiber": 11,
-      "sugar": 12,
+      "calories": 333,
+      "carbs": 30,
+      "fiber": 8.3,
+      "sugar": 9,
       "protein": 15,
       "fat": 13,
       "saturatedFat": 2,
-      "sodium": 265
+      "sodium": 265,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -2246,7 +2294,9 @@
       "high-fiber",
       "gluten-free",
       "southwest"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "mediterranean-smoothie-with-berries-and-nuts",
@@ -2267,9 +2317,10 @@
         "item": "smoothie"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1/2",
@@ -2304,14 +2355,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 391,
-      "carbs": 39,
-      "fiber": 8,
-      "sugar": 11,
+      "calories": 301,
+      "carbs": 30,
+      "fiber": 6.2,
+      "sugar": 8.5,
       "protein": 12,
       "fat": 8,
       "saturatedFat": 2,
-      "sodium": 245
+      "sodium": 245,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -2319,7 +2371,9 @@
       "high-fiber",
       "gluten-free",
       "mediterranean"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "mediterranean-smoothie-with-nuts",
@@ -2963,9 +3017,10 @@
         "item": "smoothie"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1/2",
@@ -3000,14 +3055,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 397,
-      "carbs": 39,
-      "fiber": 8,
-      "sugar": 11,
+      "calories": 305,
+      "carbs": 30,
+      "fiber": 6.2,
+      "sugar": 8.5,
       "protein": 10,
       "fat": 7,
       "saturatedFat": 4,
-      "sodium": 280
+      "sodium": 280,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -3015,7 +3071,9 @@
       "high-fiber",
       "gluten-free",
       "mexican"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "mexican-smoothie-with-avocado-and-chia-seeds",
@@ -3244,9 +3302,10 @@
         "item": "smoothie"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1/2",
@@ -3281,14 +3340,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 410,
-      "carbs": 39,
-      "fiber": 9,
-      "sugar": 11,
+      "calories": 315,
+      "carbs": 30,
+      "fiber": 6.9,
+      "sugar": 8.5,
       "protein": 10,
       "fat": 8,
       "saturatedFat": 1,
-      "sodium": 282
+      "sodium": 282,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -3296,7 +3356,9 @@
       "high-fiber",
       "gluten-free",
       "asian-inspired"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "asian-inspired-smoothie-with-nuts",
@@ -3524,9 +3586,10 @@
         "item": "smoothie"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1/2",
@@ -3561,14 +3624,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 442,
-      "carbs": 39,
-      "fiber": 9,
-      "sugar": 11,
+      "calories": 340,
+      "carbs": 30,
+      "fiber": 6.9,
+      "sugar": 8.5,
       "protein": 10,
       "fat": 6,
       "saturatedFat": 4,
-      "sodium": 399
+      "sodium": 399,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -3576,7 +3640,9 @@
       "high-fiber",
       "gluten-free",
       "nordic"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "nordic-smoothie-with-nuts",
@@ -4001,9 +4067,10 @@
         "item": "smoothie"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1/2",
@@ -4038,14 +4105,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 441,
-      "carbs": 39,
-      "fiber": 8,
-      "sugar": 11,
+      "calories": 339,
+      "carbs": 30,
+      "fiber": 6.2,
+      "sugar": 8.5,
       "protein": 11,
       "fat": 12,
       "saturatedFat": 4,
-      "sodium": 475
+      "sodium": 475,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -4053,7 +4121,9 @@
       "high-fiber",
       "gluten-free",
       "french"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "french-smoothie-with-nuts",
@@ -5045,9 +5115,10 @@
         "item": "smoothie"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1/2",
@@ -5082,14 +5153,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 403,
-      "carbs": 39,
-      "fiber": 10,
-      "sugar": 11,
+      "calories": 310,
+      "carbs": 30,
+      "fiber": 7.7,
+      "sugar": 8.5,
       "protein": 11,
       "fat": 11,
       "saturatedFat": 1,
-      "sodium": 465
+      "sodium": 465,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -5097,7 +5169,9 @@
       "high-fiber",
       "gluten-free",
       "indian-spiced"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "indian-spiced-smoothie-with-nuts",
@@ -5532,9 +5606,10 @@
         "item": "smoothie"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1/2",
@@ -5569,14 +5644,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 402,
-      "carbs": 39,
-      "fiber": 8,
-      "sugar": 11,
+      "calories": 309,
+      "carbs": 30,
+      "fiber": 6.2,
+      "sugar": 8.5,
       "protein": 11,
       "fat": 9,
       "saturatedFat": 2,
-      "sodium": 585
+      "sodium": 585,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -5584,7 +5660,9 @@
       "high-fiber",
       "gluten-free",
       "southwest"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "southwest-smoothie-with-chia-seeds",
@@ -6603,14 +6681,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 437,
-      "carbs": 30,
-      "fiber": 14,
-      "sugar": 9,
+      "calories": 656,
+      "carbs": 45,
+      "fiber": 21,
+      "sugar": 13.5,
       "protein": 27,
       "fat": 10,
       "saturatedFat": 4,
-      "sodium": 333
+      "sodium": 333,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -6618,7 +6697,9 @@
       "high-fiber",
       "gluten-free",
       "buddha bowl"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "buddha-bowl-grilled-chicken-with-whole-wheat-wrap-and-black-beans",
@@ -6842,14 +6923,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 426,
-      "carbs": 30,
-      "fiber": 12,
-      "sugar": 9,
+      "calories": 639,
+      "carbs": 45,
+      "fiber": 18,
+      "sugar": 13.5,
       "protein": 27,
       "fat": 11,
       "saturatedFat": 1,
-      "sodium": 376
+      "sodium": 376,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -6857,7 +6939,9 @@
       "high-fiber",
       "gluten-free",
       "salad"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "salad-grilled-chicken-with-whole-wheat-wrap-and-black-beans",
@@ -7080,14 +7164,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 464,
-      "carbs": 30,
-      "fiber": 14,
-      "sugar": 9,
+      "calories": 696,
+      "carbs": 45,
+      "fiber": 21,
+      "sugar": 13.5,
       "protein": 27,
       "fat": 14,
       "saturatedFat": 2,
-      "sodium": 323
+      "sodium": 323,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -7095,7 +7180,9 @@
       "high-fiber",
       "gluten-free",
       "wrap"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "wrap-grilled-chicken-with-whole-wheat-wrap-and-black-beans",
@@ -7318,21 +7405,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 389,
-      "carbs": 30,
-      "fiber": 13,
-      "sugar": 9,
+      "calories": 584,
+      "carbs": 45,
+      "fiber": 19.5,
+      "sugar": 13.5,
       "protein": 27,
       "fat": 9,
       "saturatedFat": 4,
-      "sodium": 522
+      "sodium": 522,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "soup"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "soup-grilled-chicken-with-whole-wheat-wrap-and-black-beans",
@@ -7554,14 +7644,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 456,
-      "carbs": 30,
-      "fiber": 13,
-      "sugar": 9,
+      "calories": 684,
+      "carbs": 45,
+      "fiber": 19.5,
+      "sugar": 13.5,
       "protein": 28,
       "fat": 7,
       "saturatedFat": 2,
-      "sodium": 361
+      "sodium": 361,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -7569,7 +7660,9 @@
       "high-fiber",
       "gluten-free",
       "sandwich"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "sandwich-grilled-chicken-with-whole-wheat-wrap-and-black-beans",
@@ -7793,14 +7886,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 404,
-      "carbs": 30,
-      "fiber": 14,
-      "sugar": 9,
+      "calories": 606,
+      "carbs": 45,
+      "fiber": 21,
+      "sugar": 13.5,
       "protein": 26,
       "fat": 9,
       "saturatedFat": 4,
-      "sodium": 505
+      "sodium": 505,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -7808,7 +7902,9 @@
       "high-fiber",
       "gluten-free",
       "grain bowl"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "grain-bowl-grilled-chicken-with-whole-wheat-wrap-and-black-beans",
@@ -8031,14 +8127,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 431,
-      "carbs": 30,
-      "fiber": 14,
-      "sugar": 9,
+      "calories": 647,
+      "carbs": 45,
+      "fiber": 21,
+      "sugar": 13.5,
       "protein": 25,
       "fat": 8,
       "saturatedFat": 3,
-      "sodium": 440
+      "sodium": 440,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -8046,7 +8143,9 @@
       "high-fiber",
       "gluten-free",
       "lettuce cups"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "lettuce-cups-grilled-chicken-with-whole-wheat-wrap-and-black-beans",
@@ -8269,21 +8368,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 378,
-      "carbs": 30,
-      "fiber": 14,
-      "sugar": 9,
+      "calories": 567,
+      "carbs": 45,
+      "fiber": 21,
+      "sugar": 13.5,
       "protein": 26,
       "fat": 5,
       "saturatedFat": 1,
-      "sodium": 526
+      "sodium": 526,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "stuffed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stuffed-grilled-chicken-with-whole-wheat-wrap-and-black-beans",
@@ -8506,14 +8608,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 462,
-      "carbs": 30,
-      "fiber": 14,
-      "sugar": 9,
+      "calories": 693,
+      "carbs": 45,
+      "fiber": 21,
+      "sugar": 13.5,
       "protein": 25,
       "fat": 7,
       "saturatedFat": 3,
-      "sodium": 331
+      "sodium": 331,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -8521,7 +8624,9 @@
       "high-fiber",
       "gluten-free",
       "skillet"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "skillet-grilled-chicken-with-whole-wheat-wrap-and-black-beans",
@@ -8744,14 +8849,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 418,
-      "carbs": 30,
-      "fiber": 14,
-      "sugar": 9,
+      "calories": 627,
+      "carbs": 45,
+      "fiber": 21,
+      "sugar": 13.5,
       "protein": 29,
       "fat": 10,
       "saturatedFat": 4,
-      "sodium": 234
+      "sodium": 234,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -8759,7 +8865,9 @@
       "high-fiber",
       "gluten-free",
       "baked"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "baked-grilled-chicken-with-whole-wheat-wrap-and-black-beans",
@@ -8972,21 +9080,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 365,
-      "carbs": 32,
-      "fiber": 4,
-      "sugar": 9,
+      "calories": 513,
+      "carbs": 45,
+      "fiber": 5.6,
+      "sugar": 12.7,
       "protein": 20,
       "fat": 10,
       "saturatedFat": 4,
-      "sodium": 365
+      "sodium": 365,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
       "high-protein",
       "gluten-free",
       "buddha bowl"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "salad-turkey-sandwich-with-mixed-vegetables",
@@ -9120,14 +9231,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 407,
-      "carbs": 32,
-      "fiber": 6,
-      "sugar": 9,
+      "calories": 572,
+      "carbs": 45,
+      "fiber": 8.4,
+      "sugar": 12.7,
       "protein": 23,
       "fat": 11,
       "saturatedFat": 2,
-      "sodium": 340
+      "sodium": 340,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -9135,7 +9247,9 @@
       "high-fiber",
       "gluten-free",
       "salad"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "wrap-turkey-sandwich-with-mixed-vegetables",
@@ -9268,14 +9382,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 447,
-      "carbs": 32,
-      "fiber": 5,
-      "sugar": 9,
+      "calories": 629,
+      "carbs": 45,
+      "fiber": 7,
+      "sugar": 12.7,
       "protein": 22,
       "fat": 12,
       "saturatedFat": 2,
-      "sodium": 561
+      "sodium": 561,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -9283,7 +9398,9 @@
       "high-fiber",
       "gluten-free",
       "wrap"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "soup-turkey-sandwich-with-mixed-vegetables",
@@ -9417,14 +9534,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 460,
-      "carbs": 32,
-      "fiber": 6,
-      "sugar": 9,
+      "calories": 647,
+      "carbs": 45,
+      "fiber": 8.4,
+      "sugar": 12.7,
       "protein": 22,
       "fat": 14,
       "saturatedFat": 2,
-      "sodium": 402
+      "sodium": 402,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -9432,7 +9550,9 @@
       "high-fiber",
       "gluten-free",
       "soup"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "sandwich-turkey-sandwich-with-mixed-vegetables",
@@ -9566,14 +9686,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 386,
-      "carbs": 32,
-      "fiber": 4,
-      "sugar": 9,
+      "calories": 543,
+      "carbs": 45,
+      "fiber": 5.6,
+      "sugar": 12.7,
       "protein": 23,
       "fat": 6,
       "saturatedFat": 2,
-      "sodium": 520
+      "sodium": 520,
+      "carbChoices": 3
     },
     "tags": [
       "quick",
@@ -9581,7 +9702,9 @@
       "high-protein",
       "gluten-free",
       "sandwich"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "grain-bowl-turkey-sandwich-with-mixed-vegetables",
@@ -9715,14 +9838,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 393,
-      "carbs": 32,
-      "fiber": 6,
-      "sugar": 9,
+      "calories": 553,
+      "carbs": 45,
+      "fiber": 8.4,
+      "sugar": 12.7,
       "protein": 20,
       "fat": 10,
       "saturatedFat": 3,
-      "sodium": 388
+      "sodium": 388,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -9730,7 +9854,9 @@
       "high-fiber",
       "gluten-free",
       "grain bowl"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "lettuce-cups-turkey-sandwich-with-mixed-vegetables",
@@ -9863,14 +9989,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 370,
-      "carbs": 32,
-      "fiber": 6,
-      "sugar": 9,
+      "calories": 520,
+      "carbs": 45,
+      "fiber": 8.4,
+      "sugar": 12.7,
       "protein": 23,
       "fat": 6,
       "saturatedFat": 3,
-      "sodium": 580
+      "sodium": 580,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -9878,7 +10005,9 @@
       "high-fiber",
       "gluten-free",
       "lettuce cups"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stuffed-turkey-sandwich-with-mixed-vegetables",
@@ -10011,14 +10140,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 395,
-      "carbs": 32,
-      "fiber": 6,
-      "sugar": 9,
+      "calories": 555,
+      "carbs": 45,
+      "fiber": 8.4,
+      "sugar": 12.7,
       "protein": 20,
       "fat": 8,
       "saturatedFat": 4,
-      "sodium": 510
+      "sodium": 510,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -10026,7 +10156,9 @@
       "high-fiber",
       "gluten-free",
       "stuffed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "skillet-turkey-sandwich-with-mixed-vegetables",
@@ -10159,14 +10291,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 427,
-      "carbs": 32,
-      "fiber": 6,
-      "sugar": 9,
+      "calories": 600,
+      "carbs": 45,
+      "fiber": 8.4,
+      "sugar": 12.7,
       "protein": 24,
       "fat": 11,
       "saturatedFat": 1,
-      "sodium": 490
+      "sodium": 490,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -10174,7 +10307,9 @@
       "high-fiber",
       "gluten-free",
       "skillet"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "baked-turkey-sandwich-with-mixed-vegetables",
@@ -10307,14 +10442,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 455,
-      "carbs": 32,
-      "fiber": 5,
-      "sugar": 9,
+      "calories": 640,
+      "carbs": 45,
+      "fiber": 7,
+      "sugar": 12.7,
       "protein": 24,
       "fat": 6,
       "saturatedFat": 4,
-      "sodium": 473
+      "sodium": 473,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -10322,7 +10458,9 @@
       "high-fiber",
       "gluten-free",
       "baked"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "buddha-bowl-tuna-salad-with-chickpeas-and-mixed-vegetables",
@@ -10386,14 +10524,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 469,
-      "carbs": 35,
-      "fiber": 13,
-      "sugar": 10,
+      "calories": 603,
+      "carbs": 45,
+      "fiber": 16.7,
+      "sugar": 12.9,
       "protein": 24,
       "fat": 14,
       "saturatedFat": 2,
-      "sodium": 487
+      "sodium": 487,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -10401,7 +10540,9 @@
       "high-fiber",
       "gluten-free",
       "buddha bowl"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "buddha-bowl-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -10544,14 +10685,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 452,
-      "carbs": 35,
-      "fiber": 12,
-      "sugar": 10,
+      "calories": 581,
+      "carbs": 45,
+      "fiber": 15.4,
+      "sugar": 12.9,
       "protein": 24,
       "fat": 14,
       "saturatedFat": 3,
-      "sodium": 441
+      "sodium": 441,
+      "carbChoices": 3
     },
     "tags": [
       "quick",
@@ -10560,7 +10702,9 @@
       "high-fiber",
       "gluten-free",
       "salad"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "salad-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -10702,14 +10846,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 467,
-      "carbs": 35,
-      "fiber": 14,
-      "sugar": 10,
+      "calories": 600,
+      "carbs": 45,
+      "fiber": 18,
+      "sugar": 12.9,
       "protein": 26,
       "fat": 7,
       "saturatedFat": 1,
-      "sodium": 321
+      "sodium": 321,
+      "carbChoices": 3
     },
     "tags": [
       "quick",
@@ -10718,7 +10863,9 @@
       "high-fiber",
       "gluten-free",
       "wrap"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "wrap-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -10860,14 +11007,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 444,
-      "carbs": 35,
-      "fiber": 13,
-      "sugar": 10,
+      "calories": 571,
+      "carbs": 45,
+      "fiber": 16.7,
+      "sugar": 12.9,
       "protein": 26,
       "fat": 8,
       "saturatedFat": 3,
-      "sodium": 374
+      "sodium": 374,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -10875,7 +11023,9 @@
       "high-fiber",
       "gluten-free",
       "soup"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "soup-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -11018,14 +11168,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 434,
-      "carbs": 35,
-      "fiber": 12,
-      "sugar": 10,
+      "calories": 558,
+      "carbs": 45,
+      "fiber": 15.4,
+      "sugar": 12.9,
       "protein": 23,
       "fat": 9,
       "saturatedFat": 2,
-      "sodium": 496
+      "sodium": 496,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -11033,7 +11184,9 @@
       "high-fiber",
       "gluten-free",
       "sandwich"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "sandwich-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -11176,14 +11329,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 452,
-      "carbs": 35,
-      "fiber": 13,
-      "sugar": 10,
+      "calories": 581,
+      "carbs": 45,
+      "fiber": 16.7,
+      "sugar": 12.9,
       "protein": 25,
       "fat": 7,
       "saturatedFat": 4,
-      "sodium": 265
+      "sodium": 265,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -11191,7 +11345,9 @@
       "high-fiber",
       "gluten-free",
       "grain bowl"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "grain-bowl-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -11334,14 +11490,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 417,
-      "carbs": 35,
-      "fiber": 12,
-      "sugar": 10,
+      "calories": 536,
+      "carbs": 45,
+      "fiber": 15.4,
+      "sugar": 12.9,
       "protein": 22,
       "fat": 9,
       "saturatedFat": 3,
-      "sodium": 527
+      "sodium": 527,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -11349,7 +11506,9 @@
       "high-fiber",
       "gluten-free",
       "lettuce cups"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "lettuce-cups-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -11491,14 +11650,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 390,
-      "carbs": 35,
-      "fiber": 12,
-      "sugar": 10,
+      "calories": 501,
+      "carbs": 45,
+      "fiber": 15.4,
+      "sugar": 12.9,
       "protein": 25,
       "fat": 9,
       "saturatedFat": 4,
-      "sodium": 597
+      "sodium": 597,
+      "carbChoices": 3
     },
     "tags": [
       "quick",
@@ -11507,7 +11667,9 @@
       "high-fiber",
       "gluten-free",
       "stuffed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stuffed-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -11650,14 +11812,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 454,
-      "carbs": 35,
-      "fiber": 13,
-      "sugar": 10,
+      "calories": 584,
+      "carbs": 45,
+      "fiber": 16.7,
+      "sugar": 12.9,
       "protein": 25,
       "fat": 6,
       "saturatedFat": 3,
-      "sodium": 449
+      "sodium": 449,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -11665,7 +11828,9 @@
       "high-fiber",
       "gluten-free",
       "skillet"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "skillet-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -11807,14 +11972,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 486,
-      "carbs": 35,
-      "fiber": 13,
-      "sugar": 10,
+      "calories": 625,
+      "carbs": 45,
+      "fiber": 16.7,
+      "sugar": 12.9,
       "protein": 26,
       "fat": 14,
       "saturatedFat": 1,
-      "sodium": 520
+      "sodium": 520,
+      "carbChoices": 3
     },
     "tags": [
       "quick",
@@ -11823,7 +11989,9 @@
       "high-fiber",
       "gluten-free",
       "baked"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "baked-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -12034,14 +12202,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 428,
-      "carbs": 32,
-      "fiber": 6,
-      "sugar": 9,
+      "calories": 602,
+      "carbs": 45,
+      "fiber": 8.4,
+      "sugar": 12.7,
       "protein": 16,
       "fat": 6,
       "saturatedFat": 3,
-      "sodium": 457
+      "sodium": 457,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -12049,7 +12218,9 @@
       "vegan",
       "gluten-free",
       "wrap"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "soup-lentil-salad-with-mixed-vegetables",
@@ -12182,14 +12353,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 436,
-      "carbs": 32,
-      "fiber": 6,
-      "sugar": 9,
+      "calories": 613,
+      "carbs": 45,
+      "fiber": 8.4,
+      "sugar": 12.7,
       "protein": 16,
       "fat": 10,
       "saturatedFat": 2,
-      "sodium": 415
+      "sodium": 415,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -12197,7 +12369,9 @@
       "vegan",
       "gluten-free",
       "soup"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stuffed-lentil-salad-with-mixed-vegetables",
@@ -12478,14 +12652,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 464,
-      "carbs": 35,
-      "fiber": 8,
-      "sugar": 10,
+      "calories": 597,
+      "carbs": 45,
+      "fiber": 10.3,
+      "sugar": 12.9,
       "protein": 24,
       "fat": 6,
       "saturatedFat": 1,
-      "sodium": 583
+      "sodium": 583,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -12493,7 +12668,9 @@
       "high-fiber",
       "gluten-free",
       "buddha bowl"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "buddha-bowl-chicken-wrap-with-black-beans",
@@ -12847,14 +13024,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 376,
-      "carbs": 35,
-      "fiber": 8,
-      "sugar": 10,
+      "calories": 483,
+      "carbs": 45,
+      "fiber": 10.3,
+      "sugar": 12.9,
       "protein": 20,
       "fat": 9,
       "saturatedFat": 1,
-      "sodium": 527
+      "sodium": 527,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -12862,7 +13040,9 @@
       "high-fiber",
       "gluten-free",
       "salad"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "salad-chicken-wrap-with-black-beans",
@@ -13218,21 +13398,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 402,
-      "carbs": 35,
-      "fiber": 6,
-      "sugar": 10,
+      "calories": 517,
+      "carbs": 45,
+      "fiber": 7.7,
+      "sugar": 12.9,
       "protein": 24,
       "fat": 5,
       "saturatedFat": 3,
-      "sodium": 522
+      "sodium": 522,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "wrap"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "wrap-chicken-wrap-with-black-beans",
@@ -14980,9 +15163,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -15018,21 +15202,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 416,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 624,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 27,
       "fat": 13,
       "saturatedFat": 4,
-      "sodium": 337
+      "sodium": 337,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "roasted"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "roasted-turkey-meatballs-with-wild-rice",
@@ -15053,9 +15240,10 @@
         "item": "turkey meatballs"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -15091,21 +15279,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 486,
-      "carbs": 35,
-      "fiber": 6,
-      "sugar": 10,
+      "calories": 625,
+      "carbs": 45,
+      "fiber": 7.7,
+      "sugar": 12.9,
       "protein": 28,
       "fat": 10,
       "saturatedFat": 2,
-      "sodium": 439
+      "sodium": 439,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "roasted"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "grilled-turkey-meatballs-with-roasted-vegetables-and-cauliflower-rice",
@@ -15131,9 +15322,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -15169,21 +15361,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 466,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 699,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 29,
       "fat": 8,
       "saturatedFat": 1,
-      "sodium": 550
+      "sodium": 550,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "grilled"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "grilled-turkey-meatballs-with-wild-rice",
@@ -15204,9 +15399,10 @@
         "item": "turkey meatballs"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -15242,21 +15438,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 412,
-      "carbs": 35,
-      "fiber": 5,
-      "sugar": 10,
+      "calories": 530,
+      "carbs": 45,
+      "fiber": 6.4,
+      "sugar": 12.9,
       "protein": 29,
       "fat": 14,
       "saturatedFat": 4,
-      "sodium": 372
+      "sodium": 372,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "grilled"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "grilled-turkey-meatballs-with-mixed-salad-and-roasted-vegetables",
@@ -15320,21 +15519,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 389,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 584,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 27,
       "fat": 11,
       "saturatedFat": 2,
-      "sodium": 405
+      "sodium": 405,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "grilled"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "baked-turkey-meatballs-with-wild-rice",
@@ -15355,9 +15557,10 @@
         "item": "turkey meatballs"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -15393,21 +15596,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 432,
-      "carbs": 35,
-      "fiber": 7,
-      "sugar": 10,
+      "calories": 555,
+      "carbs": 45,
+      "fiber": 9,
+      "sugar": 12.9,
       "protein": 26,
       "fat": 8,
       "saturatedFat": 1,
-      "sodium": 362
+      "sodium": 362,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "baked"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "baked-turkey-meatballs-with-mixed-salad-and-roasted-vegetables",
@@ -15471,21 +15677,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 397,
-      "carbs": 30,
-      "fiber": 9,
-      "sugar": 9,
+      "calories": 596,
+      "carbs": 45,
+      "fiber": 13.5,
+      "sugar": 13.5,
       "protein": 26,
       "fat": 5,
       "saturatedFat": 4,
-      "sodium": 494
+      "sodium": 494,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "baked"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stir-fried-turkey-meatballs-with-roasted-vegetables-and-cauliflower-rice",
@@ -15511,9 +15720,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -15549,21 +15759,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 418,
-      "carbs": 30,
-      "fiber": 12,
-      "sugar": 9,
+      "calories": 627,
+      "carbs": 45,
+      "fiber": 18,
+      "sugar": 13.5,
       "protein": 29,
       "fat": 12,
       "saturatedFat": 2,
-      "sodium": 290
+      "sodium": 290,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "stir-fried"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stir-fried-turkey-meatballs-with-wild-rice",
@@ -15584,9 +15797,10 @@
         "item": "turkey meatballs"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -15622,21 +15836,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 436,
-      "carbs": 35,
-      "fiber": 6,
-      "sugar": 10,
+      "calories": 561,
+      "carbs": 45,
+      "fiber": 7.7,
+      "sugar": 12.9,
       "protein": 26,
       "fat": 13,
       "saturatedFat": 1,
-      "sodium": 262
+      "sodium": 262,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "stir-fried"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stir-fried-turkey-meatballs-with-mixed-salad-and-roasted-vegetables",
@@ -15700,21 +15917,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 451,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 677,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 28,
       "fat": 11,
       "saturatedFat": 3,
-      "sodium": 440
+      "sodium": 440,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "stir-fried"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "braised-turkey-meatballs-with-roasted-vegetables-and-cauliflower-rice",
@@ -15740,9 +15960,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -15778,21 +15999,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 471,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 707,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 28,
       "fat": 12,
       "saturatedFat": 2,
-      "sodium": 565
+      "sodium": 565,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "braised"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "braised-turkey-meatballs-with-wild-rice",
@@ -15813,9 +16037,10 @@
         "item": "turkey meatballs"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -15851,21 +16076,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 457,
-      "carbs": 35,
-      "fiber": 6,
-      "sugar": 10,
+      "calories": 588,
+      "carbs": 45,
+      "fiber": 7.7,
+      "sugar": 12.9,
       "protein": 29,
       "fat": 13,
       "saturatedFat": 4,
-      "sodium": 384
+      "sodium": 384,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "braised"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "braised-turkey-meatballs-with-mixed-salad-and-roasted-vegetables",
@@ -15929,21 +16157,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 467,
-      "carbs": 30,
-      "fiber": 9,
-      "sugar": 9,
+      "calories": 701,
+      "carbs": 45,
+      "fiber": 13.5,
+      "sugar": 13.5,
       "protein": 28,
       "fat": 8,
       "saturatedFat": 1,
-      "sodium": 218
+      "sodium": 218,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "braised"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "sheet-pan-turkey-meatballs-with-wild-rice",
@@ -15964,9 +16195,10 @@
         "item": "turkey meatballs"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -16002,21 +16234,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 464,
-      "carbs": 35,
-      "fiber": 6,
-      "sugar": 10,
+      "calories": 597,
+      "carbs": 45,
+      "fiber": 7.7,
+      "sugar": 12.9,
       "protein": 27,
       "fat": 14,
       "saturatedFat": 2,
-      "sodium": 368
+      "sodium": 368,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "sheet pan"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "slow-cooker-turkey-meatballs-with-roasted-vegetables-and-cauliflower-rice",
@@ -16042,9 +16277,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -16080,21 +16316,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 451,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 677,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 27,
       "fat": 6,
       "saturatedFat": 4,
-      "sodium": 251
+      "sodium": 251,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "slow cooker"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "slow-cooker-turkey-meatballs-with-wild-rice",
@@ -16115,9 +16354,10 @@
         "item": "turkey meatballs"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -16153,21 +16393,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 462,
-      "carbs": 35,
-      "fiber": 6,
-      "sugar": 10,
+      "calories": 594,
+      "carbs": 45,
+      "fiber": 7.7,
+      "sugar": 12.9,
       "protein": 25,
       "fat": 7,
       "saturatedFat": 1,
-      "sodium": 356
+      "sodium": 356,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "slow cooker"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "slow-cooker-turkey-meatballs-with-mixed-salad-and-roasted-vegetables",
@@ -16231,21 +16474,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 388,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 582,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 27,
       "fat": 9,
       "saturatedFat": 1,
-      "sodium": 252
+      "sodium": 252,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "slow cooker"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "one-pot-turkey-meatballs-with-wild-rice",
@@ -16266,9 +16512,10 @@
         "item": "turkey meatballs"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -16304,21 +16551,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 456,
-      "carbs": 35,
-      "fiber": 7,
-      "sugar": 10,
+      "calories": 586,
+      "carbs": 45,
+      "fiber": 9,
+      "sugar": 12.9,
       "protein": 28,
       "fat": 9,
       "saturatedFat": 2,
-      "sodium": 352
+      "sodium": 352,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "one-pot"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stuffed-turkey-meatballs-with-wild-rice",
@@ -16339,9 +16589,10 @@
         "item": "turkey meatballs"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -16377,21 +16628,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 472,
-      "carbs": 35,
-      "fiber": 6,
-      "sugar": 10,
+      "calories": 607,
+      "carbs": 45,
+      "fiber": 7.7,
+      "sugar": 12.9,
       "protein": 27,
       "fat": 8,
       "saturatedFat": 1,
-      "sodium": 476
+      "sodium": 476,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "stuffed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "glazed-turkey-meatballs-with-wild-rice",
@@ -16412,9 +16666,10 @@
         "item": "turkey meatballs"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -16450,21 +16705,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 492,
-      "carbs": 35,
-      "fiber": 5,
-      "sugar": 10,
+      "calories": 633,
+      "carbs": 45,
+      "fiber": 6.4,
+      "sugar": 12.9,
       "protein": 28,
       "fat": 14,
       "saturatedFat": 4,
-      "sodium": 416
+      "sodium": 416,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "glazed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "glazed-turkey-meatballs-with-mixed-salad-and-roasted-vegetables",
@@ -16528,21 +16786,24 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 450,
-      "carbs": 30,
-      "fiber": 9,
-      "sugar": 9,
+      "calories": 675,
+      "carbs": 45,
+      "fiber": 13.5,
+      "sugar": 13.5,
       "protein": 25,
       "fat": 11,
       "saturatedFat": 4,
-      "sodium": 518
+      "sodium": 518,
+      "carbChoices": 3
     },
     "tags": [
       "high-protein",
       "high-fiber",
       "gluten-free",
       "glazed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "roasted-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
@@ -16568,9 +16829,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -16606,14 +16868,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 357,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 536,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 19,
       "fat": 7,
       "saturatedFat": 1,
-      "sodium": 345
+      "sodium": 345,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -16621,7 +16884,9 @@
       "vegan",
       "gluten-free",
       "roasted"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "roasted-tofu-stir-fry-with-wild-rice",
@@ -16642,9 +16907,10 @@
         "item": "firm tofu"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -16680,14 +16946,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 408,
-      "carbs": 35,
-      "fiber": 6,
-      "sugar": 10,
+      "calories": 525,
+      "carbs": 45,
+      "fiber": 7.7,
+      "sugar": 12.9,
       "protein": 19,
       "fat": 8,
       "saturatedFat": 2,
-      "sodium": 401
+      "sodium": 401,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -16695,7 +16962,9 @@
       "vegan",
       "gluten-free",
       "roasted"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "roasted-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -16759,14 +17028,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 347,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 521,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 18,
       "fat": 6,
       "saturatedFat": 2,
-      "sodium": 580
+      "sodium": 580,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -16774,7 +17044,9 @@
       "vegan",
       "gluten-free",
       "roasted"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "grilled-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
@@ -16800,9 +17072,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -16838,14 +17111,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 403,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 605,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 15,
       "fat": 12,
       "saturatedFat": 3,
-      "sodium": 317
+      "sodium": 317,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -16854,7 +17128,9 @@
       "vegan",
       "gluten-free",
       "grilled"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "grilled-tofu-stir-fry-with-wild-rice",
@@ -16875,9 +17151,10 @@
         "item": "firm tofu"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -16913,14 +17190,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 437,
-      "carbs": 35,
-      "fiber": 6,
-      "sugar": 10,
+      "calories": 562,
+      "carbs": 45,
+      "fiber": 7.7,
+      "sugar": 12.9,
       "protein": 17,
       "fat": 6,
       "saturatedFat": 3,
-      "sodium": 411
+      "sodium": 411,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -16928,7 +17206,9 @@
       "vegan",
       "gluten-free",
       "grilled"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "grilled-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -16992,14 +17272,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 353,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 530,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 16,
       "fat": 14,
       "saturatedFat": 4,
-      "sodium": 414
+      "sodium": 414,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -17008,7 +17289,9 @@
       "vegan",
       "gluten-free",
       "grilled"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "baked-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
@@ -17034,9 +17317,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -17072,14 +17356,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 412,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 618,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 18,
       "fat": 5,
       "saturatedFat": 2,
-      "sodium": 409
+      "sodium": 409,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -17087,7 +17372,9 @@
       "vegan",
       "gluten-free",
       "baked"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "baked-tofu-stir-fry-with-wild-rice",
@@ -17108,9 +17395,10 @@
         "item": "firm tofu"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -17146,14 +17434,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 358,
-      "carbs": 35,
-      "fiber": 5,
-      "sugar": 10,
+      "calories": 460,
+      "carbs": 45,
+      "fiber": 6.4,
+      "sugar": 12.9,
       "protein": 15,
       "fat": 5,
       "saturatedFat": 3,
-      "sodium": 463
+      "sodium": 463,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -17161,7 +17450,9 @@
       "vegan",
       "gluten-free",
       "baked"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "baked-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -17225,14 +17516,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 396,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 594,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 16,
       "fat": 12,
       "saturatedFat": 3,
-      "sodium": 263
+      "sodium": 263,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -17241,7 +17533,9 @@
       "vegan",
       "gluten-free",
       "baked"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stir-fried-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
@@ -17267,9 +17561,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -17305,14 +17600,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 437,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 656,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 19,
       "fat": 12,
       "saturatedFat": 2,
-      "sodium": 436
+      "sodium": 436,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -17320,7 +17616,9 @@
       "vegan",
       "gluten-free",
       "stir-fried"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stir-fried-tofu-stir-fry-with-wild-rice",
@@ -17341,9 +17639,10 @@
         "item": "firm tofu"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -17379,14 +17678,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 440,
-      "carbs": 35,
-      "fiber": 5,
-      "sugar": 10,
+      "calories": 566,
+      "carbs": 45,
+      "fiber": 6.4,
+      "sugar": 12.9,
       "protein": 18,
       "fat": 14,
       "saturatedFat": 2,
-      "sodium": 299
+      "sodium": 299,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -17395,7 +17695,9 @@
       "vegan",
       "gluten-free",
       "stir-fried"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stir-fried-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -17459,14 +17761,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 429,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 644,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 16,
       "fat": 10,
       "saturatedFat": 3,
-      "sodium": 223
+      "sodium": 223,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -17475,7 +17778,9 @@
       "vegan",
       "gluten-free",
       "stir-fried"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "braised-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
@@ -17501,9 +17806,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -17539,14 +17845,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 348,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 522,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 17,
       "fat": 8,
       "saturatedFat": 3,
-      "sodium": 224
+      "sodium": 224,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -17555,7 +17862,9 @@
       "vegan",
       "gluten-free",
       "braised"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "braised-tofu-stir-fry-with-wild-rice",
@@ -17576,9 +17885,10 @@
         "item": "firm tofu"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -17614,14 +17924,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 408,
-      "carbs": 35,
-      "fiber": 6,
-      "sugar": 10,
+      "calories": 525,
+      "carbs": 45,
+      "fiber": 7.7,
+      "sugar": 12.9,
       "protein": 15,
       "fat": 12,
       "saturatedFat": 4,
-      "sodium": 499
+      "sodium": 499,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -17630,7 +17941,9 @@
       "vegan",
       "gluten-free",
       "braised"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "braised-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -17694,14 +18007,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 353,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 530,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 15,
       "fat": 14,
       "saturatedFat": 3,
-      "sodium": 445
+      "sodium": 445,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -17710,7 +18024,9 @@
       "vegan",
       "gluten-free",
       "braised"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "sheet-pan-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
@@ -17736,9 +18052,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -17774,14 +18091,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 378,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 567,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 19,
       "fat": 10,
       "saturatedFat": 2,
-      "sodium": 313
+      "sodium": 313,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -17790,7 +18108,9 @@
       "vegan",
       "gluten-free",
       "sheet pan"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "sheet-pan-tofu-stir-fry-with-wild-rice",
@@ -17811,9 +18131,10 @@
         "item": "firm tofu"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -17849,14 +18170,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 368,
-      "carbs": 35,
-      "fiber": 7,
-      "sugar": 10,
+      "calories": 473,
+      "carbs": 45,
+      "fiber": 9,
+      "sugar": 12.9,
       "protein": 15,
       "fat": 12,
       "saturatedFat": 4,
-      "sodium": 245
+      "sodium": 245,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -17864,7 +18186,9 @@
       "vegan",
       "gluten-free",
       "sheet pan"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "sheet-pan-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -17928,14 +18252,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 400,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 600,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 19,
       "fat": 12,
       "saturatedFat": 2,
-      "sodium": 580
+      "sodium": 580,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -17944,7 +18269,9 @@
       "vegan",
       "gluten-free",
       "sheet pan"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "slow-cooker-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
@@ -17970,9 +18297,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -18008,14 +18336,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 364,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 546,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 16,
       "fat": 12,
       "saturatedFat": 2,
-      "sodium": 203
+      "sodium": 203,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -18023,7 +18352,9 @@
       "vegan",
       "gluten-free",
       "slow cooker"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "slow-cooker-tofu-stir-fry-with-wild-rice",
@@ -18044,9 +18375,10 @@
         "item": "firm tofu"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -18082,14 +18414,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 419,
-      "carbs": 35,
-      "fiber": 5,
-      "sugar": 10,
+      "calories": 539,
+      "carbs": 45,
+      "fiber": 6.4,
+      "sugar": 12.9,
       "protein": 19,
       "fat": 10,
       "saturatedFat": 4,
-      "sodium": 517
+      "sodium": 517,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -18098,7 +18431,9 @@
       "vegan",
       "gluten-free",
       "slow cooker"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "slow-cooker-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -18162,14 +18497,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 352,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 528,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 19,
       "fat": 12,
       "saturatedFat": 2,
-      "sodium": 545
+      "sodium": 545,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -18178,7 +18514,9 @@
       "vegan",
       "gluten-free",
       "slow cooker"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "one-pot-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
@@ -18204,9 +18542,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -18242,14 +18581,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 392,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 588,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 15,
       "fat": 13,
       "saturatedFat": 3,
-      "sodium": 469
+      "sodium": 469,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -18257,7 +18597,9 @@
       "vegan",
       "gluten-free",
       "one-pot"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "one-pot-tofu-stir-fry-with-wild-rice",
@@ -18278,9 +18620,10 @@
         "item": "firm tofu"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -18316,14 +18659,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 375,
-      "carbs": 35,
-      "fiber": 7,
-      "sugar": 10,
+      "calories": 482,
+      "carbs": 45,
+      "fiber": 9,
+      "sugar": 12.9,
       "protein": 16,
       "fat": 12,
       "saturatedFat": 2,
-      "sodium": 438
+      "sodium": 438,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -18331,7 +18675,9 @@
       "vegan",
       "gluten-free",
       "one-pot"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "one-pot-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -18395,14 +18741,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 425,
-      "carbs": 30,
-      "fiber": 9,
-      "sugar": 9,
+      "calories": 638,
+      "carbs": 45,
+      "fiber": 13.5,
+      "sugar": 13.5,
       "protein": 19,
       "fat": 13,
       "saturatedFat": 2,
-      "sodium": 299
+      "sodium": 299,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -18411,7 +18758,9 @@
       "vegan",
       "gluten-free",
       "one-pot"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stuffed-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
@@ -18437,9 +18786,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -18475,14 +18825,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 363,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 545,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 15,
       "fat": 13,
       "saturatedFat": 2,
-      "sodium": 213
+      "sodium": 213,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -18490,7 +18841,9 @@
       "vegan",
       "gluten-free",
       "stuffed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stuffed-tofu-stir-fry-with-wild-rice",
@@ -18511,9 +18864,10 @@
         "item": "firm tofu"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -18549,14 +18903,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 439,
-      "carbs": 35,
-      "fiber": 5,
-      "sugar": 10,
+      "calories": 564,
+      "carbs": 45,
+      "fiber": 6.4,
+      "sugar": 12.9,
       "protein": 15,
       "fat": 13,
       "saturatedFat": 3,
-      "sodium": 209
+      "sodium": 209,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -18564,7 +18919,9 @@
       "vegan",
       "gluten-free",
       "stuffed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "stuffed-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -18628,14 +18985,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 433,
-      "carbs": 30,
-      "fiber": 11,
-      "sugar": 9,
+      "calories": 650,
+      "carbs": 45,
+      "fiber": 16.5,
+      "sugar": 13.5,
       "protein": 19,
       "fat": 11,
       "saturatedFat": 4,
-      "sodium": 476
+      "sodium": 476,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -18644,7 +19002,9 @@
       "vegan",
       "gluten-free",
       "stuffed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "glazed-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
@@ -18670,9 +19030,10 @@
         "item": "roasted vegetables"
       },
       {
-        "amount": "1/2",
+        "amount": "1.5",
         "unit": "cup",
-        "item": "cauliflower rice"
+        "item": "cauliflower rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -18708,14 +19069,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 366,
-      "carbs": 30,
-      "fiber": 12,
-      "sugar": 9,
+      "calories": 549,
+      "carbs": 45,
+      "fiber": 18,
+      "sugar": 13.5,
       "protein": 17,
       "fat": 14,
       "saturatedFat": 1,
-      "sodium": 281
+      "sodium": 281,
+      "carbChoices": 3
     },
     "tags": [
       "high-fiber",
@@ -18723,7 +19085,9 @@
       "vegan",
       "gluten-free",
       "glazed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "glazed-tofu-stir-fry-with-wild-rice",
@@ -18744,9 +19108,10 @@
         "item": "firm tofu"
       },
       {
-        "amount": "1/2",
+        "amount": "1.3",
         "unit": "cup",
-        "item": "wild rice"
+        "item": "wild rice",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -18782,14 +19147,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 369,
-      "carbs": 35,
-      "fiber": 6,
-      "sugar": 10,
+      "calories": 474,
+      "carbs": 45,
+      "fiber": 7.7,
+      "sugar": 12.9,
       "protein": 16,
       "fat": 11,
       "saturatedFat": 3,
-      "sodium": 565
+      "sodium": 565,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -18798,7 +19164,9 @@
       "vegan",
       "gluten-free",
       "glazed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "glazed-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -18862,14 +19230,15 @@
       "Garnish as desired and serve hot."
     ],
     "nutrition": {
-      "calories": 436,
-      "carbs": 30,
-      "fiber": 10,
-      "sugar": 9,
+      "calories": 654,
+      "carbs": 45,
+      "fiber": 15,
+      "sugar": 13.5,
       "protein": 19,
       "fat": 10,
       "saturatedFat": 4,
-      "sodium": 286
+      "sodium": 286,
+      "carbChoices": 3
     },
     "tags": [
       "30-minutes-or-less",
@@ -18878,7 +19247,9 @@
       "vegan",
       "gluten-free",
       "glazed"
-    ]
+    ],
+    "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
+    "medicallyCompliant": true
   },
   {
     "id": "roasted-lean-beef-with-quinoa-and-wild-rice",
@@ -20479,14 +20850,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 277,
-      "carbs": 14,
-      "fiber": 5,
-      "sugar": 4,
+      "calories": 396,
+      "carbs": 20,
+      "fiber": 7.1,
+      "sugar": 5.7,
       "protein": 13,
       "fat": 8,
       "saturatedFat": 3,
-      "sodium": 557
+      "sodium": 557,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -20494,7 +20866,9 @@
       "high-fiber",
       "gluten-free",
       "quick"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "quick-greek-yogurt-with-whole-grain-crackers",
@@ -20736,21 +21110,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 311,
-      "carbs": 14,
-      "fiber": 4,
-      "sugar": 4,
+      "calories": 444,
+      "carbs": 20,
+      "fiber": 5.7,
+      "sugar": 5.7,
       "protein": 16,
       "fat": 13,
       "saturatedFat": 2,
-      "sodium": 484
+      "sodium": 484,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "quick"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "quick-greek-yogurt-with-cherry-tomatoes",
@@ -20798,21 +21175,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 313,
-      "carbs": 13,
-      "fiber": 4,
-      "sugar": 3,
+      "calories": 482,
+      "carbs": 20,
+      "fiber": 6.2,
+      "sugar": 4.6,
       "protein": 15,
       "fat": 5,
       "saturatedFat": 2,
-      "sodium": 232
+      "sodium": 232,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "quick"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "quick-greek-yogurt-with-celery-and-almond-butter",
@@ -20991,14 +21371,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 329,
-      "carbs": 14,
-      "fiber": 6,
-      "sugar": 4,
+      "calories": 470,
+      "carbs": 20,
+      "fiber": 8.6,
+      "sugar": 5.7,
       "protein": 16,
       "fat": 9,
       "saturatedFat": 1,
-      "sodium": 213
+      "sodium": 213,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -21006,7 +21387,9 @@
       "high-fiber",
       "gluten-free",
       "portable"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "portable-greek-yogurt-with-whole-grain-crackers",
@@ -21248,14 +21631,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 311,
-      "carbs": 14,
-      "fiber": 6,
-      "sugar": 4,
+      "calories": 444,
+      "carbs": 20,
+      "fiber": 8.6,
+      "sugar": 5.7,
       "protein": 16,
       "fat": 14,
       "saturatedFat": 3,
-      "sodium": 393
+      "sodium": 393,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -21263,7 +21647,9 @@
       "high-fiber",
       "gluten-free",
       "portable"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "portable-greek-yogurt-with-cherry-tomatoes",
@@ -21311,14 +21697,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 302,
-      "carbs": 13,
-      "fiber": 5,
-      "sugar": 3,
+      "calories": 465,
+      "carbs": 20,
+      "fiber": 7.7,
+      "sugar": 4.6,
       "protein": 12,
       "fat": 7,
       "saturatedFat": 2,
-      "sodium": 520
+      "sodium": 520,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -21326,7 +21713,9 @@
       "high-fiber",
       "gluten-free",
       "portable"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "portable-greek-yogurt-with-celery-and-almond-butter",
@@ -21505,14 +21894,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 273,
-      "carbs": 14,
-      "fiber": 6,
-      "sugar": 4,
+      "calories": 390,
+      "carbs": 20,
+      "fiber": 8.6,
+      "sugar": 5.7,
       "protein": 13,
       "fat": 5,
       "saturatedFat": 3,
-      "sodium": 384
+      "sodium": 384,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -21520,7 +21910,9 @@
       "high-fiber",
       "gluten-free",
       "make-ahead"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "make-ahead-greek-yogurt-with-whole-grain-crackers",
@@ -21761,14 +22153,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 361,
-      "carbs": 14,
-      "fiber": 5,
-      "sugar": 4,
+      "calories": 516,
+      "carbs": 20,
+      "fiber": 7.1,
+      "sugar": 5.7,
       "protein": 14,
       "fat": 7,
       "saturatedFat": 1,
-      "sodium": 383
+      "sodium": 383,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -21776,7 +22169,9 @@
       "high-fiber",
       "gluten-free",
       "make-ahead"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "make-ahead-greek-yogurt-with-cherry-tomatoes",
@@ -21824,21 +22219,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 276,
-      "carbs": 13,
-      "fiber": 3,
-      "sugar": 3,
+      "calories": 425,
+      "carbs": 20,
+      "fiber": 4.6,
+      "sugar": 4.6,
       "protein": 14,
       "fat": 14,
       "saturatedFat": 1,
-      "sodium": 541
+      "sodium": 541,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "make-ahead"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "make-ahead-greek-yogurt-with-celery-and-almond-butter",
@@ -22017,14 +22415,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 279,
-      "carbs": 14,
-      "fiber": 6,
-      "sugar": 4,
+      "calories": 399,
+      "carbs": 20,
+      "fiber": 8.6,
+      "sugar": 5.7,
       "protein": 15,
       "fat": 7,
       "saturatedFat": 3,
-      "sodium": 454
+      "sodium": 454,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -22032,7 +22431,9 @@
       "high-fiber",
       "gluten-free",
       "no-cook"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "no-cook-greek-yogurt-with-whole-grain-crackers",
@@ -22274,14 +22675,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 310,
-      "carbs": 14,
-      "fiber": 5,
-      "sugar": 4,
+      "calories": 443,
+      "carbs": 20,
+      "fiber": 7.1,
+      "sugar": 5.7,
       "protein": 15,
       "fat": 14,
       "saturatedFat": 2,
-      "sodium": 517
+      "sodium": 517,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -22289,7 +22691,9 @@
       "high-fiber",
       "gluten-free",
       "no-cook"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "no-cook-greek-yogurt-with-cherry-tomatoes",
@@ -22337,21 +22741,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 343,
-      "carbs": 13,
-      "fiber": 3,
-      "sugar": 3,
+      "calories": 528,
+      "carbs": 20,
+      "fiber": 4.6,
+      "sugar": 4.6,
       "protein": 13,
       "fat": 7,
       "saturatedFat": 4,
-      "sodium": 484
+      "sodium": 484,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "no-cook"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "no-cook-greek-yogurt-with-celery-and-almond-butter",
@@ -22530,21 +22937,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 319,
-      "carbs": 14,
-      "fiber": 4,
-      "sugar": 4,
+      "calories": 456,
+      "carbs": 20,
+      "fiber": 5.7,
+      "sugar": 5.7,
       "protein": 16,
       "fat": 13,
       "saturatedFat": 4,
-      "sodium": 281
+      "sodium": 281,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "crunchy"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "crunchy-greek-yogurt-with-whole-grain-crackers",
@@ -22786,14 +23196,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 318,
-      "carbs": 14,
-      "fiber": 6,
-      "sugar": 4,
+      "calories": 454,
+      "carbs": 20,
+      "fiber": 8.6,
+      "sugar": 5.7,
       "protein": 13,
       "fat": 10,
       "saturatedFat": 3,
-      "sodium": 471
+      "sodium": 471,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -22801,7 +23212,9 @@
       "high-fiber",
       "gluten-free",
       "crunchy"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "crunchy-greek-yogurt-with-cherry-tomatoes",
@@ -22849,14 +23262,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 312,
-      "carbs": 13,
-      "fiber": 5,
-      "sugar": 3,
+      "calories": 480,
+      "carbs": 20,
+      "fiber": 7.7,
+      "sugar": 4.6,
       "protein": 15,
       "fat": 14,
       "saturatedFat": 2,
-      "sodium": 225
+      "sodium": 225,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -22864,7 +23278,9 @@
       "high-fiber",
       "gluten-free",
       "crunchy"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "crunchy-greek-yogurt-with-celery-and-almond-butter",
@@ -23043,14 +23459,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 309,
-      "carbs": 14,
-      "fiber": 5,
-      "sugar": 4,
+      "calories": 441,
+      "carbs": 20,
+      "fiber": 7.1,
+      "sugar": 5.7,
       "protein": 13,
       "fat": 13,
       "saturatedFat": 2,
-      "sodium": 307
+      "sodium": 307,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -23058,7 +23475,9 @@
       "high-fiber",
       "gluten-free",
       "creamy"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "creamy-greek-yogurt-with-whole-grain-crackers",
@@ -23300,14 +23719,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 355,
-      "carbs": 14,
-      "fiber": 6,
-      "sugar": 4,
+      "calories": 507,
+      "carbs": 20,
+      "fiber": 8.6,
+      "sugar": 5.7,
       "protein": 16,
       "fat": 5,
       "saturatedFat": 3,
-      "sodium": 356
+      "sodium": 356,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -23315,7 +23735,9 @@
       "high-fiber",
       "gluten-free",
       "creamy"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "creamy-greek-yogurt-with-cherry-tomatoes",
@@ -23363,21 +23785,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 255,
-      "carbs": 13,
-      "fiber": 3,
-      "sugar": 3,
+      "calories": 392,
+      "carbs": 20,
+      "fiber": 4.6,
+      "sugar": 4.6,
       "protein": 13,
       "fat": 9,
       "saturatedFat": 4,
-      "sodium": 430
+      "sodium": 430,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "creamy"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "creamy-greek-yogurt-with-celery-and-almond-butter",
@@ -23556,21 +23981,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 341,
-      "carbs": 14,
-      "fiber": 4,
-      "sugar": 4,
+      "calories": 487,
+      "carbs": 20,
+      "fiber": 5.7,
+      "sugar": 5.7,
       "protein": 16,
       "fat": 13,
       "saturatedFat": 1,
-      "sodium": 247
+      "sodium": 247,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "sweet"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "sweet-greek-yogurt-with-whole-grain-crackers",
@@ -23812,21 +24240,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 341,
-      "carbs": 14,
-      "fiber": 4,
-      "sugar": 4,
+      "calories": 487,
+      "carbs": 20,
+      "fiber": 5.7,
+      "sugar": 5.7,
       "protein": 12,
       "fat": 14,
       "saturatedFat": 1,
-      "sodium": 498
+      "sodium": 498,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "sweet"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "sweet-greek-yogurt-with-cherry-tomatoes",
@@ -23874,14 +24305,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 293,
-      "carbs": 13,
-      "fiber": 5,
-      "sugar": 3,
+      "calories": 451,
+      "carbs": 20,
+      "fiber": 7.7,
+      "sugar": 4.6,
       "protein": 16,
       "fat": 6,
       "saturatedFat": 2,
-      "sodium": 469
+      "sodium": 469,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -23889,7 +24321,9 @@
       "high-fiber",
       "gluten-free",
       "sweet"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "sweet-greek-yogurt-with-celery-and-almond-butter",
@@ -24068,21 +24502,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 276,
-      "carbs": 14,
-      "fiber": 4,
-      "sugar": 4,
+      "calories": 394,
+      "carbs": 20,
+      "fiber": 5.7,
+      "sugar": 5.7,
       "protein": 15,
       "fat": 8,
       "saturatedFat": 4,
-      "sodium": 418
+      "sodium": 418,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "savory"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "savory-greek-yogurt-with-whole-grain-crackers",
@@ -24324,14 +24761,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 344,
-      "carbs": 14,
-      "fiber": 5,
-      "sugar": 4,
+      "calories": 491,
+      "carbs": 20,
+      "fiber": 7.1,
+      "sugar": 5.7,
       "protein": 14,
       "fat": 7,
       "saturatedFat": 1,
-      "sodium": 530
+      "sodium": 530,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -24339,7 +24777,9 @@
       "high-fiber",
       "gluten-free",
       "savory"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "savory-greek-yogurt-with-cherry-tomatoes",
@@ -24387,21 +24827,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 311,
-      "carbs": 13,
-      "fiber": 3,
-      "sugar": 3,
+      "calories": 478,
+      "carbs": 20,
+      "fiber": 4.6,
+      "sugar": 4.6,
       "protein": 12,
       "fat": 5,
       "saturatedFat": 3,
-      "sodium": 204
+      "sodium": 204,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "savory"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "savory-greek-yogurt-with-celery-and-almond-butter",
@@ -24580,14 +25023,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 324,
-      "carbs": 14,
-      "fiber": 6,
-      "sugar": 4,
+      "calories": 463,
+      "carbs": 20,
+      "fiber": 8.6,
+      "sugar": 5.7,
       "protein": 15,
       "fat": 11,
       "saturatedFat": 2,
-      "sodium": 467
+      "sodium": 467,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -24595,7 +25039,9 @@
       "high-fiber",
       "gluten-free",
       "protein-packed"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "protein-packed-greek-yogurt-with-whole-grain-crackers",
@@ -24837,21 +25283,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 266,
-      "carbs": 14,
-      "fiber": 4,
-      "sugar": 4,
+      "calories": 380,
+      "carbs": 20,
+      "fiber": 5.7,
+      "sugar": 5.7,
       "protein": 15,
       "fat": 14,
       "saturatedFat": 2,
-      "sodium": 554
+      "sodium": 554,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "protein-packed"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "protein-packed-greek-yogurt-with-cherry-tomatoes",
@@ -24899,21 +25348,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 302,
-      "carbs": 13,
-      "fiber": 4,
-      "sugar": 3,
+      "calories": 465,
+      "carbs": 20,
+      "fiber": 6.2,
+      "sugar": 4.6,
       "protein": 14,
       "fat": 14,
       "saturatedFat": 1,
-      "sodium": 320
+      "sodium": 320,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "protein-packed"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "protein-packed-greek-yogurt-with-celery-and-almond-butter",
@@ -25092,14 +25544,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 307,
-      "carbs": 14,
-      "fiber": 5,
-      "sugar": 4,
+      "calories": 439,
+      "carbs": 20,
+      "fiber": 7.1,
+      "sugar": 5.7,
       "protein": 15,
       "fat": 13,
       "saturatedFat": 4,
-      "sodium": 496
+      "sodium": 496,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -25107,7 +25560,9 @@
       "high-fiber",
       "gluten-free",
       "fiber-rich"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "fiber-rich-greek-yogurt-with-whole-grain-crackers",
@@ -25349,14 +25804,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 334,
-      "carbs": 14,
-      "fiber": 6,
-      "sugar": 4,
+      "calories": 477,
+      "carbs": 20,
+      "fiber": 8.6,
+      "sugar": 5.7,
       "protein": 16,
       "fat": 11,
       "saturatedFat": 2,
-      "sodium": 368
+      "sodium": 368,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -25364,7 +25820,9 @@
       "high-fiber",
       "gluten-free",
       "fiber-rich"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "fiber-rich-greek-yogurt-with-cherry-tomatoes",
@@ -25412,21 +25870,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 286,
-      "carbs": 13,
-      "fiber": 3,
-      "sugar": 3,
+      "calories": 440,
+      "carbs": 20,
+      "fiber": 4.6,
+      "sugar": 4.6,
       "protein": 13,
       "fat": 5,
       "saturatedFat": 1,
-      "sodium": 415
+      "sodium": 415,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
       "30-minutes-or-less",
       "gluten-free",
       "fiber-rich"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "fiber-rich-greek-yogurt-with-celery-and-almond-butter",
@@ -25583,9 +26044,10 @@
         "item": "cottage cheese"
       },
       {
-        "amount": "1/4",
+        "amount": "1.4",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -25610,14 +26072,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 312,
-      "carbs": 14,
-      "fiber": 5,
-      "sugar": 4,
+      "calories": 446,
+      "carbs": 20,
+      "fiber": 7.1,
+      "sugar": 5.7,
       "protein": 14,
       "fat": 12,
       "saturatedFat": 4,
-      "sodium": 599
+      "sodium": 599,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -25625,7 +26088,9 @@
       "high-fiber",
       "gluten-free",
       "quick"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "quick-cottage-cheese-with-nuts",
@@ -25673,14 +26138,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 314,
-      "carbs": 10,
-      "fiber": 5,
-      "sugar": 3,
+      "calories": 628,
+      "carbs": 20,
+      "fiber": 10,
+      "sugar": 6,
       "protein": 15,
       "fat": 6,
       "saturatedFat": 2,
-      "sodium": 236
+      "sodium": 236,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -25688,7 +26154,9 @@
       "high-fiber",
       "gluten-free",
       "quick"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "quick-cottage-cheese-with-whole-grain-crackers",
@@ -25798,14 +26266,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 361,
-      "carbs": 11,
-      "fiber": 7,
-      "sugar": 3,
+      "calories": 656,
+      "carbs": 20,
+      "fiber": 12.7,
+      "sugar": 5.5,
       "protein": 17,
       "fat": 5,
       "saturatedFat": 3,
-      "sodium": 227
+      "sodium": 227,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -25813,7 +26282,9 @@
       "high-fiber",
       "gluten-free",
       "quick"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "quick-cottage-cheese-with-cucumber-and-bell-peppers",
@@ -25866,14 +26337,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 353,
-      "carbs": 12,
-      "fiber": 7,
-      "sugar": 3,
+      "calories": 588,
+      "carbs": 20,
+      "fiber": 11.7,
+      "sugar": 5,
       "protein": 14,
       "fat": 14,
       "saturatedFat": 4,
-      "sodium": 581
+      "sodium": 581,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -25881,7 +26353,9 @@
       "high-fiber",
       "gluten-free",
       "quick"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "quick-cottage-cheese-with-bell-peppers",
@@ -25929,14 +26403,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 281,
-      "carbs": 10,
-      "fiber": 6,
-      "sugar": 3,
+      "calories": 562,
+      "carbs": 20,
+      "fiber": 12,
+      "sugar": 6,
       "protein": 16,
       "fat": 14,
       "saturatedFat": 3,
-      "sodium": 228
+      "sodium": 228,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -25944,7 +26419,9 @@
       "high-fiber",
       "gluten-free",
       "quick"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "quick-cottage-cheese-with-celery-and-almond-butter",
@@ -25997,14 +26474,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 291,
-      "carbs": 11,
-      "fiber": 7,
-      "sugar": 3,
+      "calories": 529,
+      "carbs": 20,
+      "fiber": 12.7,
+      "sugar": 5.5,
       "protein": 17,
       "fat": 8,
       "saturatedFat": 2,
-      "sodium": 562
+      "sodium": 562,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -26012,7 +26490,9 @@
       "high-fiber",
       "gluten-free",
       "quick"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   },
   {
     "id": "portable-cottage-cheese-with-almond-butter-and-berries",
@@ -26101,9 +26581,10 @@
         "item": "cottage cheese"
       },
       {
-        "amount": "1/4",
+        "amount": "1.4",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -26128,14 +26609,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 304,
-      "carbs": 14,
-      "fiber": 6,
-      "sugar": 4,
+      "calories": 434,
+      "carbs": 20,
+      "fiber": 8.6,
+      "sugar": 5.7,
       "protein": 17,
       "fat": 14,
       "saturatedFat": 2,
-      "sodium": 536
+      "sodium": 536,
+      "carbChoices": 1
     },
     "tags": [
       "quick",
@@ -26143,6 +26625,8 @@
       "high-fiber",
       "gluten-free",
       "portable"
-    ]
+    ],
+    "adjustmentNote": "Added fruit or crackers to meet 15g carb minimum",
+    "medicallyCompliant": true
   }
 ]

@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Badge } from '@/components/ui'
 import { recipeService } from '@/lib/recipe-service'
+import { MedicalComplianceService } from '@/lib/medical-compliance'
 
 export default function RecipeDetailPage({ params }: { params: { id: string } }) {
   const recipe = recipeService.getRecipeById(params.id)
@@ -9,6 +10,9 @@ export default function RecipeDetailPage({ params }: { params: { id: string } })
   if (!recipe) {
     notFound()
   }
+
+  const isCompliant = MedicalComplianceService.isRecipeCompliant(recipe)
+  const carbChoices = MedicalComplianceService.getCarbChoices(recipe.nutrition.carbs)
 
   return (
     <div className="container py-8">
@@ -44,6 +48,9 @@ export default function RecipeDetailPage({ params }: { params: { id: string } })
               <span className="text-sm">Serves {recipe.servings}</span>
             </div>
             <Badge variant="primary">{recipe.category}</Badge>
+            {isCompliant && (
+              <Badge variant="success">✓ Medically Compliant</Badge>
+            )}
           </div>
 
           {/* Tags */}
@@ -81,6 +88,12 @@ export default function RecipeDetailPage({ params }: { params: { id: string } })
           {/* Nutrition Card */}
           <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
             <h3 className="font-semibold mb-4">Nutrition per Serving</h3>
+            {recipe.category === 'snacks' && recipe.nutrition.carbs >= 14 && recipe.nutrition.carbs <= 16 && recipe.nutrition.protein >= 5 && (
+              <div className="bg-green-50 border border-green-200 rounded-md p-3 mb-4">
+                <p className="text-sm text-green-800 font-medium">✓ Suitable for bedtime snack</p>
+                <p className="text-xs text-green-600 mt-1">15g carbs + adequate protein</p>
+              </div>
+            )}
             <div className="space-y-2">
               <div className="flex justify-between">
                 <span>Calories</span>
@@ -89,6 +102,10 @@ export default function RecipeDetailPage({ params }: { params: { id: string } })
               <div className="flex justify-between">
                 <span>Carbohydrates</span>
                 <span className="font-medium">{recipe.nutrition.carbs}g</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Carb Choices</span>
+                <span className="font-medium">{carbChoices} choices</span>
               </div>
               <div className="flex justify-between">
                 <span>Fiber</span>

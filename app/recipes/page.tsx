@@ -9,8 +9,12 @@ export default function RecipesPage() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [selectedTime, setSelectedTime] = useState('all')
   const [selectedCarbs, setSelectedCarbs] = useState('all')
+  const [onlyCompliant, setOnlyCompliant] = useState(true)
 
-  const allRecipes = useMemo(() => recipeService.getAllRecipes(), [])
+  const allRecipes = useMemo(() => 
+    onlyCompliant ? recipeService.getCompliantRecipes() : recipeService.getAllRecipes(), 
+    [onlyCompliant]
+  )
 
   const filteredRecipes = useMemo(() => {
     let recipes = allRecipes
@@ -46,17 +50,21 @@ export default function RecipesPage() {
       })
     }
     
-    // Filter by carbs
+    // Filter by carbs - updated to match medical guidelines
     if (selectedCarbs !== 'all') {
       recipes = recipes.filter(recipe => {
         const carbs = recipe.nutrition.carbs
+        const category = recipe.category
+        
         switch (selectedCarbs) {
-          case 'low':
-            return carbs >= 10 && carbs <= 20
-          case 'medium':
-            return carbs > 20 && carbs <= 30
-          case 'high':
-            return carbs > 30 && carbs <= 45
+          case 'breakfast':
+            return carbs >= 25 && carbs <= 35 // Medical guideline for breakfast
+          case 'main':
+            return carbs >= 40 && carbs <= 50 // Medical guideline for lunch/dinner
+          case 'snack':
+            return carbs >= 15 && carbs <= 30 // Medical guideline for snacks
+          case 'bedtime':
+            return carbs >= 14 && carbs <= 16 && recipe.nutrition.protein >= 5 // Bedtime snack
           default:
             return true
         }
@@ -71,7 +79,10 @@ export default function RecipesPage() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">GD-Friendly Recipes</h1>
         <p className="text-neutral-600">
-          Browse our collection of {allRecipes.length} gestational diabetes-friendly recipes
+          Browse our collection of {allRecipes.length} medically-compliant gestational diabetes recipes
+        </p>
+        <p className="text-sm text-neutral-500 mt-1">
+          All recipes follow Halton Healthcare guidelines for carbohydrate management
         </p>
       </div>
       
@@ -106,9 +117,10 @@ export default function RecipesPage() {
             onChange={(e) => setSelectedCarbs(e.target.value)}
           >
             <option value="all">All Carb Ranges</option>
-            <option value="low">10-20g carbs</option>
-            <option value="medium">20-30g carbs</option>
-            <option value="high">30-45g carbs</option>
+            <option value="breakfast">Breakfast (25-35g)</option>
+            <option value="main">Lunch/Dinner (40-50g)</option>
+            <option value="snack">Snacks (15-30g)</option>
+            <option value="bedtime">Bedtime Snack (15g + protein)</option>
           </select>
           
           <select 
@@ -121,6 +133,18 @@ export default function RecipesPage() {
             <option value="medium">15-30 min</option>
             <option value="long">30-60 min</option>
           </select>
+          
+          <label className="flex items-center gap-2">
+            <input
+              type="checkbox"
+              checked={onlyCompliant}
+              onChange={(e) => setOnlyCompliant(e.target.checked)}
+              className="w-4 h-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
+            />
+            <span className="text-sm font-medium text-gray-700">
+              Show only medically compliant recipes
+            </span>
+          </label>
         </div>
       </div>
 

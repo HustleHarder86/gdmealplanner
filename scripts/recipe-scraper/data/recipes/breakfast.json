@@ -885,14 +885,16 @@
         "item": "plain Greek yogurt"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "whole grain bread"
+        "item": "whole grain bread",
+        "adjusted": true
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -922,14 +924,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 397,
-      "carbs": 40,
-      "fiber": 11,
-      "sugar": 12,
+      "calories": 298,
+      "carbs": 30,
+      "fiber": 8.3,
+      "sugar": 9,
       "protein": 18,
       "fat": 12,
       "saturatedFat": 4,
-      "sodium": 385
+      "sodium": 385,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -937,7 +940,9 @@
       "high-fiber",
       "gluten-free",
       "mediterranean"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "american-greek-yogurt-bowl-with-berries-and-nuts",
@@ -1030,14 +1035,16 @@
         "item": "plain Greek yogurt"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "whole grain bread"
+        "item": "whole grain bread",
+        "adjusted": true
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -1067,21 +1074,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 419,
-      "carbs": 40,
-      "fiber": 9,
-      "sugar": 12,
+      "calories": 314,
+      "carbs": 30,
+      "fiber": 6.8,
+      "sugar": 9,
       "protein": 18,
       "fat": 6,
       "saturatedFat": 1,
-      "sodium": 498
+      "sodium": 498,
+      "carbChoices": 2
     },
     "tags": [
       "30-minutes-or-less",
       "high-fiber",
       "gluten-free",
       "american"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "mexican-greek-yogurt-bowl-with-berries-and-nuts",
@@ -1175,14 +1185,16 @@
         "item": "plain Greek yogurt"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "whole grain bread"
+        "item": "whole grain bread",
+        "adjusted": true
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -1212,14 +1224,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 407,
-      "carbs": 40,
-      "fiber": 10,
-      "sugar": 12,
+      "calories": 305,
+      "carbs": 30,
+      "fiber": 7.5,
+      "sugar": 9,
       "protein": 16,
       "fat": 8,
       "saturatedFat": 2,
-      "sodium": 501
+      "sodium": 501,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -1227,7 +1240,9 @@
       "high-fiber",
       "gluten-free",
       "mexican"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "asian-inspired-greek-yogurt-bowl-with-berries-and-nuts",
@@ -1321,14 +1336,16 @@
         "item": "plain Greek yogurt"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "whole grain bread"
+        "item": "whole grain bread",
+        "adjusted": true
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -1358,21 +1375,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 449,
-      "carbs": 40,
-      "fiber": 10,
-      "sugar": 12,
+      "calories": 337,
+      "carbs": 30,
+      "fiber": 7.5,
+      "sugar": 9,
       "protein": 17,
       "fat": 8,
       "saturatedFat": 1,
-      "sodium": 402
+      "sodium": 402,
+      "carbChoices": 2
     },
     "tags": [
       "30-minutes-or-less",
       "high-fiber",
       "gluten-free",
       "asian-inspired"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "nordic-greek-yogurt-bowl-with-berries-and-nuts",
@@ -1466,14 +1486,16 @@
         "item": "plain Greek yogurt"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "whole grain bread"
+        "item": "whole grain bread",
+        "adjusted": true
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -1503,14 +1525,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 474,
-      "carbs": 40,
-      "fiber": 10,
-      "sugar": 12,
+      "calories": 356,
+      "carbs": 30,
+      "fiber": 7.5,
+      "sugar": 9,
       "protein": 18,
       "fat": 10,
       "saturatedFat": 3,
-      "sodium": 315
+      "sodium": 315,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -1518,7 +1541,9 @@
       "high-fiber",
       "gluten-free",
       "nordic"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "french-greek-yogurt-bowl-with-berries-and-nuts",
@@ -1612,14 +1637,16 @@
         "item": "plain Greek yogurt"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "whole grain bread"
+        "item": "whole grain bread",
+        "adjusted": true
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -1649,14 +1676,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 446,
-      "carbs": 40,
-      "fiber": 11,
-      "sugar": 12,
+      "calories": 335,
+      "carbs": 30,
+      "fiber": 8.3,
+      "sugar": 9,
       "protein": 15,
       "fat": 7,
       "saturatedFat": 2,
-      "sodium": 304
+      "sodium": 304,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -1664,7 +1692,9 @@
       "high-fiber",
       "gluten-free",
       "french"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "italian-greek-yogurt-bowl-with-berries-and-nuts",
@@ -1758,14 +1788,16 @@
         "item": "plain Greek yogurt"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "whole grain bread"
+        "item": "whole grain bread",
+        "adjusted": true
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -1795,14 +1827,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 443,
-      "carbs": 40,
-      "fiber": 9,
-      "sugar": 12,
+      "calories": 332,
+      "carbs": 30,
+      "fiber": 6.8,
+      "sugar": 9,
       "protein": 16,
       "fat": 9,
       "saturatedFat": 4,
-      "sodium": 518
+      "sodium": 518,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -1810,7 +1843,9 @@
       "high-fiber",
       "gluten-free",
       "italian"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "middle-eastern-greek-yogurt-bowl-with-berries-and-nuts",
@@ -1904,14 +1939,16 @@
         "item": "plain Greek yogurt"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "whole grain bread"
+        "item": "whole grain bread",
+        "adjusted": true
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -1941,14 +1978,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 468,
-      "carbs": 40,
-      "fiber": 9,
-      "sugar": 12,
+      "calories": 351,
+      "carbs": 30,
+      "fiber": 6.8,
+      "sugar": 9,
       "protein": 17,
       "fat": 7,
       "saturatedFat": 1,
-      "sodium": 523
+      "sodium": 523,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -1956,7 +1994,9 @@
       "high-fiber",
       "gluten-free",
       "middle eastern"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "indian-spiced-greek-yogurt-bowl-with-berries-and-nuts",
@@ -2050,14 +2090,16 @@
         "item": "plain Greek yogurt"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "whole grain bread"
+        "item": "whole grain bread",
+        "adjusted": true
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -2087,21 +2129,24 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 380,
-      "carbs": 40,
-      "fiber": 11,
-      "sugar": 12,
+      "calories": 285,
+      "carbs": 30,
+      "fiber": 8.3,
+      "sugar": 9,
       "protein": 16,
       "fat": 14,
       "saturatedFat": 3,
-      "sodium": 244
+      "sodium": 244,
+      "carbChoices": 2
     },
     "tags": [
       "30-minutes-or-less",
       "high-fiber",
       "gluten-free",
       "indian-spiced"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "southwest-greek-yogurt-bowl-with-berries-and-nuts",
@@ -2194,14 +2239,16 @@
         "item": "plain Greek yogurt"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "whole grain bread"
+        "item": "whole grain bread",
+        "adjusted": true
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1",
@@ -2231,14 +2278,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 444,
-      "carbs": 40,
-      "fiber": 11,
-      "sugar": 12,
+      "calories": 333,
+      "carbs": 30,
+      "fiber": 8.3,
+      "sugar": 9,
       "protein": 15,
       "fat": 13,
       "saturatedFat": 2,
-      "sodium": 265
+      "sodium": 265,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -2246,7 +2294,9 @@
       "high-fiber",
       "gluten-free",
       "southwest"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "mediterranean-smoothie-with-berries-and-nuts",
@@ -2267,9 +2317,10 @@
         "item": "smoothie"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1/2",
@@ -2304,14 +2355,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 391,
-      "carbs": 39,
-      "fiber": 8,
-      "sugar": 11,
+      "calories": 301,
+      "carbs": 30,
+      "fiber": 6.2,
+      "sugar": 8.5,
       "protein": 12,
       "fat": 8,
       "saturatedFat": 2,
-      "sodium": 245
+      "sodium": 245,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -2319,7 +2371,9 @@
       "high-fiber",
       "gluten-free",
       "mediterranean"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "mediterranean-smoothie-with-nuts",
@@ -2963,9 +3017,10 @@
         "item": "smoothie"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1/2",
@@ -3000,14 +3055,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 397,
-      "carbs": 39,
-      "fiber": 8,
-      "sugar": 11,
+      "calories": 305,
+      "carbs": 30,
+      "fiber": 6.2,
+      "sugar": 8.5,
       "protein": 10,
       "fat": 7,
       "saturatedFat": 4,
-      "sodium": 280
+      "sodium": 280,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -3015,7 +3071,9 @@
       "high-fiber",
       "gluten-free",
       "mexican"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "mexican-smoothie-with-avocado-and-chia-seeds",
@@ -3244,9 +3302,10 @@
         "item": "smoothie"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1/2",
@@ -3281,14 +3340,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 410,
-      "carbs": 39,
-      "fiber": 9,
-      "sugar": 11,
+      "calories": 315,
+      "carbs": 30,
+      "fiber": 6.9,
+      "sugar": 8.5,
       "protein": 10,
       "fat": 8,
       "saturatedFat": 1,
-      "sodium": 282
+      "sodium": 282,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -3296,7 +3356,9 @@
       "high-fiber",
       "gluten-free",
       "asian-inspired"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "asian-inspired-smoothie-with-nuts",
@@ -3524,9 +3586,10 @@
         "item": "smoothie"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1/2",
@@ -3561,14 +3624,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 442,
-      "carbs": 39,
-      "fiber": 9,
-      "sugar": 11,
+      "calories": 340,
+      "carbs": 30,
+      "fiber": 6.9,
+      "sugar": 8.5,
       "protein": 10,
       "fat": 6,
       "saturatedFat": 4,
-      "sodium": 399
+      "sodium": 399,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -3576,7 +3640,9 @@
       "high-fiber",
       "gluten-free",
       "nordic"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "nordic-smoothie-with-nuts",
@@ -4001,9 +4067,10 @@
         "item": "smoothie"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1/2",
@@ -4038,14 +4105,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 441,
-      "carbs": 39,
-      "fiber": 8,
-      "sugar": 11,
+      "calories": 339,
+      "carbs": 30,
+      "fiber": 6.2,
+      "sugar": 8.5,
       "protein": 11,
       "fat": 12,
       "saturatedFat": 4,
-      "sodium": 475
+      "sodium": 475,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -4053,7 +4121,9 @@
       "high-fiber",
       "gluten-free",
       "french"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "french-smoothie-with-nuts",
@@ -5045,9 +5115,10 @@
         "item": "smoothie"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1/2",
@@ -5082,14 +5153,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 403,
-      "carbs": 39,
-      "fiber": 10,
-      "sugar": 11,
+      "calories": 310,
+      "carbs": 30,
+      "fiber": 7.7,
+      "sugar": 8.5,
       "protein": 11,
       "fat": 11,
       "saturatedFat": 1,
-      "sodium": 465
+      "sodium": 465,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -5097,7 +5169,9 @@
       "high-fiber",
       "gluten-free",
       "indian-spiced"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "indian-spiced-smoothie-with-nuts",
@@ -5532,9 +5606,10 @@
         "item": "smoothie"
       },
       {
-        "amount": "1/2",
+        "amount": "0.8",
         "unit": "cup",
-        "item": "berries"
+        "item": "berries",
+        "adjusted": true
       },
       {
         "amount": "1/2",
@@ -5569,14 +5644,15 @@
       "Combine all components and serve immediately."
     ],
     "nutrition": {
-      "calories": 402,
-      "carbs": 39,
-      "fiber": 8,
-      "sugar": 11,
+      "calories": 309,
+      "carbs": 30,
+      "fiber": 6.2,
+      "sugar": 8.5,
       "protein": 11,
       "fat": 9,
       "saturatedFat": 2,
-      "sodium": 585
+      "sodium": 585,
+      "carbChoices": 2
     },
     "tags": [
       "quick",
@@ -5584,7 +5660,9 @@
       "high-fiber",
       "gluten-free",
       "southwest"
-    ]
+    ],
+    "adjustmentNote": "Reduced bread/grain portion to stay within 35g carb limit",
+    "medicallyCompliant": true
   },
   {
     "id": "southwest-smoothie-with-chia-seeds",

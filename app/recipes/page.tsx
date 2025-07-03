@@ -9,12 +9,8 @@ export default function RecipesPage() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [selectedTime, setSelectedTime] = useState('all')
   const [selectedCarbs, setSelectedCarbs] = useState('all')
-  const [onlyCompliant, setOnlyCompliant] = useState(true)
 
-  const allRecipes = useMemo(() => 
-    onlyCompliant ? recipeService.getCompliantRecipes() : recipeService.getAllRecipes(), 
-    [onlyCompliant]
-  )
+  const allRecipes = useMemo(() => recipeService.getAllRecipes(), [])
 
   const filteredRecipes = useMemo(() => {
     let recipes = allRecipes
@@ -79,10 +75,7 @@ export default function RecipesPage() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">GD-Friendly Recipes</h1>
         <p className="text-neutral-600">
-          Browse our collection of {allRecipes.length} medically-compliant gestational diabetes recipes
-        </p>
-        <p className="text-sm text-neutral-500 mt-1">
-          All recipes follow Halton Healthcare guidelines for carbohydrate management
+          Browse our collection of {allRecipes.length} gestational diabetes-friendly recipes
         </p>
       </div>
       
@@ -133,18 +126,6 @@ export default function RecipesPage() {
             <option value="medium">15-30 min</option>
             <option value="long">30-60 min</option>
           </select>
-          
-          <label className="flex items-center gap-2">
-            <input
-              type="checkbox"
-              checked={onlyCompliant}
-              onChange={(e) => setOnlyCompliant(e.target.checked)}
-              className="w-4 h-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
-            />
-            <span className="text-sm font-medium text-gray-700">
-              Show only medically compliant recipes
-            </span>
-          </label>
         </div>
       </div>
 

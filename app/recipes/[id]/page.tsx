@@ -48,9 +48,6 @@ export default function RecipeDetailPage({ params }: { params: { id: string } })
               <span className="text-sm">Serves {recipe.servings}</span>
             </div>
             <Badge variant="primary">{recipe.category}</Badge>
-            {isCompliant && (
-              <Badge variant="success">✓ Medically Compliant</Badge>
-            )}
           </div>
 
           {/* Tags */}

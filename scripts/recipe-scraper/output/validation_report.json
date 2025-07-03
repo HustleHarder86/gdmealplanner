@@ -1,0 +1,75 @@
+{
+  "total": 48,
+  "valid": 41,
+  "invalid": 7,
+  "by_category": {
+    "breakfast": {
+      "valid": 13,
+      "invalid": 2
+    },
+    "lunch": {
+      "valid": 14,
+      "invalid": 0
+    },
+    "dinner": {
+      "valid": 10,
+      "invalid": 4
+    },
+    "snacks": {
+      "valid": 4,
+      "invalid": 1
+    }
+  },
+  "issues": [
+    {
+      "recipe": "Chia Pudding with Mango",
+      "category": "breakfast",
+      "issues": [
+        "Protein too low: 8g (min: 10g)"
+      ]
+    },
+    {
+      "recipe": "Zucchini Bread Oatmeal",
+      "category": "breakfast",
+      "issues": [
+        "Protein too low: 8g (min: 10g)"
+      ]
+    },
+    {
+      "recipe": "Vegetarian Stuffed Bell Peppers",
+      "category": "dinner",
+      "issues": [
+        "Protein too low: 16g (min: 20g)"
+      ]
+    },
+    {
+      "recipe": "Mediterranean Chickpea Stew",
+      "category": "dinner",
+      "issues": [
+        "Protein too low: 15g (min: 20g)"
+      ]
+    },
+    {
+      "recipe": "Turkey Meatloaf with Green Beans",
+      "category": "dinner",
+      "issues": [
+        "Total time too long: 60 minutes (max: 45)"
+      ]
+    },
+    {
+      "recipe": "Baked Eggplant Parmesan",
+      "category": "dinner",
+      "issues": [
+        "Protein too low: 18g (min: 20g)",
+        "Total time too long: 55 minutes (max: 45)"
+      ]
+    },
+    {
+      "recipe": "Apple Slices with Almond Butter",
+      "category": "snacks",
+      "issues": [
+        "Protein too low: 4g (min: 5g)"
+      ]
+    }
+  ]
+}

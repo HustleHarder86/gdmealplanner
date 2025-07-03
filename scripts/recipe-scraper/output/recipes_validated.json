@@ -1,0 +1,3200 @@
+[
+  {
+    "title": "Veggie Egg Scramble with Whole Wheat Toast",
+    "description": "Protein-rich breakfast with fiber from vegetables and whole grains",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/veggie-egg-scramble",
+    "prepTime": 10,
+    "cookTime": 15,
+    "totalTime": 25,
+    "servings": 2,
+    "category": "breakfast",
+    "image": "images/veggie-egg-scramble.jpg",
+    "ingredients": [
+      {
+        "amount": "4",
+        "unit": "",
+        "item": "large eggs"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "low-fat milk"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "baby spinach"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "bell peppers, diced"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "onion, diced"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "whole wheat bread"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "olive oil"
+      },
+      {
+        "amount": "1/4",
+        "unit": "tsp",
+        "item": "salt"
+      },
+      {
+        "amount": "1/4",
+        "unit": "tsp",
+        "item": "black pepper"
+      }
+    ],
+    "instructions": [
+      "Heat olive oil in a non-stick pan over medium heat.",
+      "Add onions and bell peppers, sauté for 3-4 minutes until softened.",
+      "Add spinach and cook until wilted, about 1 minute.",
+      "Whisk eggs with milk, salt, and pepper.",
+      "Pour egg mixture into pan with vegetables.",
+      "Gently scramble eggs until just set, about 3-4 minutes.",
+      "Toast whole wheat bread and serve alongside scrambled eggs."
+    ],
+    "nutrition": {
+      "calories": 285,
+      "carbs": 32,
+      "fiber": 5,
+      "sugar": 6,
+      "protein": 18,
+      "fat": 10,
+      "saturatedFat": 3,
+      "sodium": 420
+    },
+    "tags": [
+      "high-protein",
+      "vegetarian",
+      "30-minutes-or-less",
+      "high-fiber"
+    ],
+    "id": "veggie-egg-scramble-with-whole-wheat-toast"
+  },
+  {
+    "title": "Greek Yogurt Parfait with Berries",
+    "description": "Quick and easy breakfast with balanced carbs and protein",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/greek-yogurt-parfait",
+    "prepTime": 5,
+    "cookTime": 0,
+    "totalTime": 5,
+    "servings": 1,
+    "category": "breakfast",
+    "image": "images/greek-yogurt-parfait.jpg",
+    "ingredients": [
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "plain Greek yogurt (non-fat)"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "mixed berries (blueberries, strawberries)"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "granola (low-sugar)"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "chia seeds"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "honey"
+      }
+    ],
+    "instructions": [
+      "In a glass or bowl, layer half of the Greek yogurt.",
+      "Add half of the berries and half of the granola.",
+      "Repeat layers with remaining yogurt, berries, and granola.",
+      "Top with chia seeds and drizzle with honey.",
+      "Serve immediately."
+    ],
+    "nutrition": {
+      "calories": 245,
+      "carbs": 35,
+      "fiber": 6,
+      "sugar": 18,
+      "protein": 20,
+      "fat": 4,
+      "saturatedFat": 1,
+      "sodium": 85
+    },
+    "tags": [
+      "quick",
+      "no-cook",
+      "high-protein",
+      "vegetarian"
+    ],
+    "id": "greek-yogurt-parfait-with-berries"
+  },
+  {
+    "title": "Spinach and Cheese Omelet",
+    "description": "Fluffy omelet packed with nutrients and protein",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/spinach-cheese-omelet",
+    "prepTime": 5,
+    "cookTime": 10,
+    "totalTime": 15,
+    "servings": 1,
+    "category": "breakfast",
+    "image": "images/spinach-cheese-omelet.jpg",
+    "ingredients": [
+      {
+        "amount": "2",
+        "unit": "",
+        "item": "large eggs"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "water"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "fresh spinach"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "reduced-fat cheddar cheese"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "olive oil"
+      },
+      {
+        "amount": "1/8",
+        "unit": "tsp",
+        "item": "salt"
+      },
+      {
+        "amount": "1/8",
+        "unit": "tsp",
+        "item": "black pepper"
+      }
+    ],
+    "instructions": [
+      "Beat eggs with water, salt, and pepper in a bowl.",
+      "Heat olive oil in a non-stick pan over medium heat.",
+      "Add spinach and cook until wilted, about 1 minute. Remove and set aside.",
+      "Pour egg mixture into the pan, tilting to spread evenly.",
+      "Cook until edges set, about 2 minutes.",
+      "Add spinach and cheese to one half of the omelet.",
+      "Fold omelet in half and cook 1 more minute.",
+      "Slide onto plate and serve immediately."
+    ],
+    "nutrition": {
+      "calories": 210,
+      "carbs": 28,
+      "fiber": 4,
+      "sugar": 2,
+      "protein": 16,
+      "fat": 12,
+      "saturatedFat": 4,
+      "sodium": 380
+    },
+    "tags": [
+      "quick",
+      "low-carb-option",
+      "high-protein",
+      "vegetarian"
+    ],
+    "id": "spinach-and-cheese-omelet"
+  },
+  {
+    "title": "Overnight Oats with Almonds",
+    "description": "Make-ahead breakfast with slow-releasing carbs",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/overnight-oats-almonds",
+    "prepTime": 5,
+    "cookTime": 0,
+    "totalTime": 5,
+    "servings": 1,
+    "category": "breakfast",
+    "image": "images/overnight-oats.jpg",
+    "ingredients": [
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "rolled oats"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "unsweetened almond milk"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "almond butter"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "ground flaxseed"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "blueberries"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "sliced almonds"
+      },
+      {
+        "amount": "1/2",
+        "unit": "tsp",
+        "item": "cinnamon"
+      }
+    ],
+    "instructions": [
+      "In a jar or container, combine oats, almond milk, almond butter, flaxseed, and cinnamon.",
+      "Stir well to combine all ingredients.",
+      "Cover and refrigerate overnight or at least 4 hours.",
+      "In the morning, top with blueberries and sliced almonds.",
+      "Enjoy cold or warmed up in the microwave."
+    ],
+    "nutrition": {
+      "calories": 320,
+      "carbs": 38,
+      "fiber": 8,
+      "sugar": 8,
+      "protein": 12,
+      "fat": 14,
+      "saturatedFat": 1,
+      "sodium": 95
+    },
+    "tags": [
+      "make-ahead",
+      "no-cook",
+      "high-fiber",
+      "vegan"
+    ],
+    "id": "overnight-oats-with-almonds"
+  },
+  {
+    "title": "Whole Wheat Pancakes with Berry Compote",
+    "description": "Weekend breakfast with controlled portions and fiber",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/whole-wheat-pancakes",
+    "prepTime": 10,
+    "cookTime": 15,
+    "totalTime": 25,
+    "servings": 2,
+    "category": "breakfast",
+    "image": "images/whole-wheat-pancakes.jpg",
+    "ingredients": [
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "whole wheat flour"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "baking powder"
+      },
+      {
+        "amount": "1/4",
+        "unit": "tsp",
+        "item": "salt"
+      },
+      {
+        "amount": "1",
+        "unit": "",
+        "item": "egg"
+      },
+      {
+        "amount": "3/4",
+        "unit": "cup",
+        "item": "low-fat milk"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "olive oil"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "mixed berries"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "water"
+      }
+    ],
+    "instructions": [
+      "Mix flour, baking powder, and salt in a bowl.",
+      "In another bowl, whisk egg, milk, and oil.",
+      "Add wet ingredients to dry ingredients, stir until just combined.",
+      "Heat a non-stick pan over medium heat.",
+      "Pour 1/4 cup batter for each pancake.",
+      "Cook until bubbles form and edges set, flip and cook 1-2 minutes more.",
+      "For compote, heat berries with water in a small pan until softened.",
+      "Serve pancakes topped with warm berry compote."
+    ],
+    "nutrition": {
+      "calories": 290,
+      "carbs": 42,
+      "fiber": 6,
+      "sugar": 10,
+      "protein": 12,
+      "fat": 8,
+      "saturatedFat": 2,
+      "sodium": 320
+    },
+    "tags": [
+      "weekend-breakfast",
+      "vegetarian",
+      "high-fiber"
+    ],
+    "id": "whole-wheat-pancakes-with-berry-compote"
+  },
+  {
+    "title": "Avocado Toast with Poached Egg",
+    "description": "Trendy breakfast with healthy fats and protein",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/avocado-toast-poached-egg",
+    "prepTime": 5,
+    "cookTime": 10,
+    "totalTime": 15,
+    "servings": 1,
+    "category": "breakfast",
+    "image": "images/avocado-toast.jpg",
+    "ingredients": [
+      {
+        "amount": "1",
+        "unit": "slice",
+        "item": "whole grain bread"
+      },
+      {
+        "amount": "1/2",
+        "unit": "",
+        "item": "avocado"
+      },
+      {
+        "amount": "1",
+        "unit": "",
+        "item": "large egg"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "lemon juice"
+      },
+      {
+        "amount": "1/8",
+        "unit": "tsp",
+        "item": "red pepper flakes"
+      },
+      {
+        "amount": "1/8",
+        "unit": "tsp",
+        "item": "salt"
+      },
+      {
+        "amount": "1/8",
+        "unit": "tsp",
+        "item": "black pepper"
+      }
+    ],
+    "instructions": [
+      "Toast the bread until golden brown.",
+      "While bread toasts, bring a pot of water to gentle simmer.",
+      "Create a whirlpool in water and drop egg into center.",
+      "Poach egg for 3-4 minutes until white is set but yolk is runny.",
+      "Mash avocado with lemon juice, salt, and pepper.",
+      "Spread avocado mixture on toast.",
+      "Top with poached egg and sprinkle with red pepper flakes."
+    ],
+    "nutrition": {
+      "calories": 265,
+      "carbs": 30,
+      "fiber": 8,
+      "sugar": 3,
+      "protein": 12,
+      "fat": 13,
+      "saturatedFat": 3,
+      "sodium": 340
+    },
+    "tags": [
+      "quick",
+      "trendy",
+      "high-fiber",
+      "vegetarian"
+    ],
+    "id": "avocado-toast-with-poached-egg"
+  },
+  {
+    "title": "Cottage Cheese Bowl with Fruit",
+    "description": "High-protein breakfast with fresh fruit",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/cottage-cheese-bowl",
+    "prepTime": 5,
+    "cookTime": 0,
+    "totalTime": 5,
+    "servings": 1,
+    "category": "breakfast",
+    "image": "images/cottage-cheese-bowl.jpg",
+    "ingredients": [
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "low-fat cottage cheese"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "sliced peaches"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "blueberries"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "chopped walnuts"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "honey"
+      },
+      {
+        "amount": "1/4",
+        "unit": "tsp",
+        "item": "cinnamon"
+      }
+    ],
+    "instructions": [
+      "Place cottage cheese in a bowl.",
+      "Arrange peaches and blueberries on top.",
+      "Sprinkle with walnuts and cinnamon.",
+      "Drizzle with honey.",
+      "Serve immediately."
+    ],
+    "nutrition": {
+      "calories": 275,
+      "carbs": 32,
+      "fiber": 4,
+      "sugar": 20,
+      "protein": 24,
+      "fat": 8,
+      "saturatedFat": 2,
+      "sodium": 460
+    },
+    "tags": [
+      "quick",
+      "no-cook",
+      "high-protein",
+      "vegetarian"
+    ],
+    "id": "cottage-cheese-bowl-with-fruit"
+  },
+  {
+    "title": "Breakfast Quinoa with Berries",
+    "description": "Protein-packed alternative to oatmeal",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/breakfast-quinoa",
+    "prepTime": 5,
+    "cookTime": 20,
+    "totalTime": 25,
+    "servings": 2,
+    "category": "breakfast",
+    "image": "images/breakfast-quinoa.jpg",
+    "ingredients": [
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "quinoa"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "unsweetened almond milk"
+      },
+      {
+        "amount": "1/2",
+        "unit": "tsp",
+        "item": "vanilla extract"
+      },
+      {
+        "amount": "1/2",
+        "unit": "tsp",
+        "item": "cinnamon"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "mixed berries"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "chopped almonds"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "maple syrup"
+      }
+    ],
+    "instructions": [
+      "Rinse quinoa under cold water.",
+      "In a saucepan, combine quinoa, almond milk, vanilla, and cinnamon.",
+      "Bring to a boil, then reduce heat and simmer for 15 minutes.",
+      "Remove from heat and let stand 5 minutes.",
+      "Fluff with a fork and divide into bowls.",
+      "Top with berries, almonds, and maple syrup."
+    ],
+    "nutrition": {
+      "calories": 260,
+      "carbs": 40,
+      "fiber": 6,
+      "sugar": 12,
+      "protein": 10,
+      "fat": 7,
+      "saturatedFat": 1,
+      "sodium": 85
+    },
+    "tags": [
+      "gluten-free",
+      "vegan",
+      "high-fiber",
+      "30-minutes-or-less"
+    ],
+    "id": "breakfast-quinoa-with-berries"
+  },
+  {
+    "title": "Turkey Sausage Breakfast Wrap",
+    "description": "Portable breakfast with lean protein",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/turkey-sausage-wrap",
+    "prepTime": 10,
+    "cookTime": 15,
+    "totalTime": 25,
+    "servings": 2,
+    "category": "breakfast",
+    "image": "images/turkey-sausage-wrap.jpg",
+    "ingredients": [
+      {
+        "amount": "4",
+        "unit": "oz",
+        "item": "lean turkey sausage"
+      },
+      {
+        "amount": "2",
+        "unit": "",
+        "item": "large eggs"
+      },
+      {
+        "amount": "2",
+        "unit": "",
+        "item": "whole wheat tortillas (8-inch)"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "reduced-fat cheddar cheese"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "baby spinach"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "salsa"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "olive oil"
+      }
+    ],
+    "instructions": [
+      "Cook turkey sausage in a skillet until browned, breaking into crumbles.",
+      "Remove sausage and set aside.",
+      "Scramble eggs in the same skillet with olive oil.",
+      "Warm tortillas in microwave for 20 seconds.",
+      "Divide sausage, eggs, cheese, and spinach between tortillas.",
+      "Top with salsa and roll up tightly.",
+      "Cut in half and serve warm."
+    ],
+    "nutrition": {
+      "calories": 295,
+      "carbs": 28,
+      "fiber": 4,
+      "sugar": 3,
+      "protein": 22,
+      "fat": 11,
+      "saturatedFat": 4,
+      "sodium": 580
+    },
+    "tags": [
+      "portable",
+      "high-protein",
+      "meal-prep-friendly"
+    ],
+    "id": "turkey-sausage-breakfast-wrap"
+  },
+  {
+    "title": "Baked Egg Cups with Vegetables",
+    "description": "Make-ahead individual egg portions",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/baked-egg-cups",
+    "prepTime": 10,
+    "cookTime": 20,
+    "totalTime": 30,
+    "servings": 6,
+    "category": "breakfast",
+    "image": "images/baked-egg-cups.jpg",
+    "ingredients": [
+      {
+        "amount": "6",
+        "unit": "",
+        "item": "large eggs"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "low-fat milk"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "diced bell peppers"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "diced tomatoes"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "diced onion"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "chopped spinach"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "reduced-fat cheese"
+      },
+      {
+        "amount": "1/2",
+        "unit": "tsp",
+        "item": "salt"
+      },
+      {
+        "amount": "1/4",
+        "unit": "tsp",
+        "item": "black pepper"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 350°F and spray muffin tin with cooking spray.",
+      "Whisk eggs with milk, salt, and pepper.",
+      "Divide vegetables evenly among 6 muffin cups.",
+      "Pour egg mixture over vegetables.",
+      "Sprinkle cheese on top.",
+      "Bake for 18-20 minutes until eggs are set.",
+      "Cool slightly before removing from tin."
+    ],
+    "nutrition": {
+      "calories": 225,
+      "carbs": 26,
+      "fiber": 4,
+      "sugar": 3,
+      "protein": 14,
+      "fat": 8,
+      "saturatedFat": 3,
+      "sodium": 340
+    },
+    "tags": [
+      "make-ahead",
+      "meal-prep",
+      "portable",
+      "vegetarian"
+    ],
+    "id": "baked-egg-cups-with-vegetables"
+  },
+  {
+    "title": "Smoked Salmon Bagel Thin",
+    "description": "Light version of classic breakfast with omega-3s",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/smoked-salmon-bagel",
+    "prepTime": 5,
+    "cookTime": 0,
+    "totalTime": 5,
+    "servings": 1,
+    "category": "breakfast",
+    "image": "images/salmon-bagel.jpg",
+    "ingredients": [
+      {
+        "amount": "1",
+        "unit": "",
+        "item": "whole wheat bagel thin"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "light cream cheese"
+      },
+      {
+        "amount": "2",
+        "unit": "oz",
+        "item": "smoked salmon"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "tomato"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "red onion"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "capers"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "fresh dill"
+      }
+    ],
+    "instructions": [
+      "Toast bagel thin until golden.",
+      "Spread cream cheese on both halves.",
+      "Layer salmon, tomato, and onion on bottom half.",
+      "Sprinkle with capers and dill.",
+      "Top with other bagel half or serve open-faced."
+    ],
+    "nutrition": {
+      "calories": 255,
+      "carbs": 28,
+      "fiber": 5,
+      "sugar": 4,
+      "protein": 18,
+      "fat": 8,
+      "saturatedFat": 3,
+      "sodium": 680
+    },
+    "tags": [
+      "quick",
+      "no-cook",
+      "high-protein",
+      "omega-3"
+    ],
+    "id": "smoked-salmon-bagel-thin"
+  },
+  {
+    "title": "Sweet Potato Hash with Eggs",
+    "description": "Colorful breakfast skillet with complex carbs",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/sweet-potato-hash",
+    "prepTime": 10,
+    "cookTime": 20,
+    "totalTime": 30,
+    "servings": 2,
+    "category": "breakfast",
+    "image": "images/sweet-potato-hash.jpg",
+    "ingredients": [
+      {
+        "amount": "1",
+        "unit": "medium",
+        "item": "sweet potato, diced"
+      },
+      {
+        "amount": "1/2",
+        "unit": "",
+        "item": "bell pepper, diced"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "onion, diced"
+      },
+      {
+        "amount": "2",
+        "unit": "",
+        "item": "eggs"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "olive oil"
+      },
+      {
+        "amount": "1/2",
+        "unit": "tsp",
+        "item": "paprika"
+      },
+      {
+        "amount": "1/4",
+        "unit": "tsp",
+        "item": "garlic powder"
+      },
+      {
+        "amount": "Salt and pepper to taste",
+        "unit": "",
+        "item": ""
+      }
+    ],
+    "instructions": [
+      "Heat olive oil in a large skillet over medium heat.",
+      "Add sweet potato and cook for 10 minutes, stirring occasionally.",
+      "Add bell pepper and onion, cook 5 more minutes.",
+      "Season with paprika, garlic powder, salt, and pepper.",
+      "Make two wells in the hash and crack eggs into them.",
+      "Cover and cook until eggs are set to desired doneness.",
+      "Serve hot from the skillet."
+    ],
+    "nutrition": {
+      "calories": 270,
+      "carbs": 32,
+      "fiber": 5,
+      "sugar": 8,
+      "protein": 12,
+      "fat": 10,
+      "saturatedFat": 2,
+      "sodium": 280
+    },
+    "tags": [
+      "weekend-breakfast",
+      "vegetarian",
+      "colorful",
+      "high-fiber"
+    ],
+    "id": "sweet-potato-hash-with-eggs"
+  },
+  {
+    "title": "Protein Power Smoothie",
+    "description": "Quick breakfast drink with hidden vegetables",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/protein-power-smoothie",
+    "prepTime": 5,
+    "cookTime": 0,
+    "totalTime": 5,
+    "servings": 1,
+    "category": "breakfast",
+    "image": "images/protein-smoothie.jpg",
+    "ingredients": [
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "unsweetened almond milk"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "plain Greek yogurt"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "frozen cauliflower rice"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "frozen berries"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "almond butter"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "ground flaxseed"
+      },
+      {
+        "amount": "1/2",
+        "unit": "tsp",
+        "item": "vanilla extract"
+      }
+    ],
+    "instructions": [
+      "Add all ingredients to a blender.",
+      "Blend until smooth and creamy.",
+      "Add more almond milk if needed for desired consistency.",
+      "Pour into a glass and enjoy immediately."
+    ],
+    "nutrition": {
+      "calories": 265,
+      "carbs": 30,
+      "fiber": 8,
+      "sugar": 12,
+      "protein": 18,
+      "fat": 10,
+      "saturatedFat": 1,
+      "sodium": 180
+    },
+    "tags": [
+      "quick",
+      "no-cook",
+      "hidden-veggies",
+      "high-protein"
+    ],
+    "id": "protein-power-smoothie"
+  },
+  {
+    "title": "Grilled Chicken Salad with Quinoa",
+    "description": "Protein-packed salad with whole grains",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/grilled-chicken-quinoa-salad",
+    "prepTime": 15,
+    "cookTime": 20,
+    "totalTime": 35,
+    "servings": 2,
+    "category": "lunch",
+    "image": "images/chicken-quinoa-salad.jpg",
+    "ingredients": [
+      {
+        "amount": "8",
+        "unit": "oz",
+        "item": "chicken breast"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "quinoa, uncooked"
+      },
+      {
+        "amount": "4",
+        "unit": "cups",
+        "item": "mixed greens"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "cherry tomatoes, halved"
+      },
+      {
+        "amount": "1/2",
+        "unit": "",
+        "item": "cucumber, diced"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "red onion, sliced"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "olive oil"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "lemon juice"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "dried oregano"
+      }
+    ],
+    "instructions": [
+      "Cook quinoa according to package directions and let cool.",
+      "Season chicken with salt, pepper, and oregano.",
+      "Grill chicken for 6-7 minutes per side until cooked through.",
+      "Let chicken rest, then slice.",
+      "In a large bowl, combine greens, tomatoes, cucumber, and onion.",
+      "Add cooled quinoa and toss.",
+      "Whisk olive oil and lemon juice for dressing.",
+      "Top salad with sliced chicken and drizzle with dressing."
+    ],
+    "nutrition": {
+      "calories": 340,
+      "carbs": 35,
+      "fiber": 6,
+      "sugar": 6,
+      "protein": 28,
+      "fat": 10,
+      "saturatedFat": 2,
+      "sodium": 320
+    },
+    "tags": [
+      "high-protein",
+      "meal-prep-friendly",
+      "gluten-free"
+    ],
+    "id": "grilled-chicken-salad-with-quinoa"
+  },
+  {
+    "title": "Turkey and Avocado Wrap",
+    "description": "Quick and satisfying lunch wrap",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/turkey-avocado-wrap",
+    "prepTime": 10,
+    "cookTime": 0,
+    "totalTime": 10,
+    "servings": 1,
+    "category": "lunch",
+    "image": "images/turkey-avocado-wrap.jpg",
+    "ingredients": [
+      {
+        "amount": "1",
+        "unit": "",
+        "item": "whole wheat tortilla (10-inch)"
+      },
+      {
+        "amount": "4",
+        "unit": "oz",
+        "item": "sliced turkey breast"
+      },
+      {
+        "amount": "1/4",
+        "unit": "",
+        "item": "avocado, sliced"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "shredded lettuce"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "tomato"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "hummus"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "mustard"
+      }
+    ],
+    "instructions": [
+      "Lay tortilla flat and spread hummus and mustard.",
+      "Layer turkey slices in the center.",
+      "Add avocado, lettuce, and tomato.",
+      "Roll tightly, tucking in sides as you go.",
+      "Cut in half diagonally and serve."
+    ],
+    "nutrition": {
+      "calories": 310,
+      "carbs": 32,
+      "fiber": 8,
+      "sugar": 4,
+      "protein": 25,
+      "fat": 10,
+      "saturatedFat": 2,
+      "sodium": 680
+    },
+    "tags": [
+      "quick",
+      "no-cook",
+      "portable",
+      "high-protein"
+    ],
+    "id": "turkey-and-avocado-wrap"
+  },
+  {
+    "title": "Lentil Vegetable Soup",
+    "description": "Hearty soup packed with fiber and protein",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/lentil-vegetable-soup",
+    "prepTime": 10,
+    "cookTime": 30,
+    "totalTime": 40,
+    "servings": 4,
+    "category": "lunch",
+    "image": "images/lentil-soup.jpg",
+    "ingredients": [
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "dry lentils"
+      },
+      {
+        "amount": "4",
+        "unit": "cups",
+        "item": "low-sodium vegetable broth"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "diced tomatoes"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "carrots, diced"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "celery, diced"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "onion, diced"
+      },
+      {
+        "amount": "2",
+        "unit": "cloves",
+        "item": "garlic, minced"
+      },
+      {
+        "amount": "2",
+        "unit": "cups",
+        "item": "spinach"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "cumin"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "olive oil"
+      }
+    ],
+    "instructions": [
+      "Heat olive oil in a large pot over medium heat.",
+      "Sauté onion, carrots, and celery for 5 minutes.",
+      "Add garlic and cumin, cook 1 minute more.",
+      "Add lentils, broth, and tomatoes.",
+      "Bring to boil, then simmer for 20-25 minutes until lentils are tender.",
+      "Stir in spinach during last 2 minutes.",
+      "Season with salt and pepper to taste."
+    ],
+    "nutrition": {
+      "calories": 285,
+      "carbs": 42,
+      "fiber": 12,
+      "sugar": 8,
+      "protein": 16,
+      "fat": 4,
+      "saturatedFat": 1,
+      "sodium": 420
+    },
+    "tags": [
+      "vegetarian",
+      "high-fiber",
+      "meal-prep-friendly",
+      "vegan"
+    ],
+    "id": "lentil-vegetable-soup"
+  },
+  {
+    "title": "Tuna Salad on Whole Grain Crackers",
+    "description": "Light lunch with omega-3 fatty acids",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/tuna-salad-crackers",
+    "prepTime": 10,
+    "cookTime": 0,
+    "totalTime": 10,
+    "servings": 2,
+    "category": "lunch",
+    "image": "images/tuna-salad-crackers.jpg",
+    "ingredients": [
+      {
+        "amount": "2",
+        "unit": "cans",
+        "item": "tuna in water (5 oz each)"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "Greek yogurt"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "light mayo"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "celery, diced"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "red onion, diced"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "pickle relish"
+      },
+      {
+        "amount": "16",
+        "unit": "",
+        "item": "whole grain crackers"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "baby carrots"
+      }
+    ],
+    "instructions": [
+      "Drain tuna and place in a bowl.",
+      "Mix in Greek yogurt, mayo, celery, onion, and relish.",
+      "Season with salt and pepper to taste.",
+      "Serve tuna salad with crackers and baby carrots.",
+      "Can be stored in refrigerator for up to 3 days."
+    ],
+    "nutrition": {
+      "calories": 295,
+      "carbs": 32,
+      "fiber": 5,
+      "sugar": 6,
+      "protein": 26,
+      "fat": 8,
+      "saturatedFat": 2,
+      "sodium": 580
+    },
+    "tags": [
+      "no-cook",
+      "high-protein",
+      "omega-3",
+      "meal-prep-friendly"
+    ],
+    "id": "tuna-salad-on-whole-grain-crackers"
+  },
+  {
+    "title": "Chickpea Buddha Bowl",
+    "description": "Colorful plant-based bowl with roasted chickpeas",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/chickpea-buddha-bowl",
+    "prepTime": 10,
+    "cookTime": 25,
+    "totalTime": 35,
+    "servings": 2,
+    "category": "lunch",
+    "image": "images/chickpea-buddha-bowl.jpg",
+    "ingredients": [
+      {
+        "amount": "1",
+        "unit": "can",
+        "item": "chickpeas (15 oz), drained"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "cooked brown rice"
+      },
+      {
+        "amount": "2",
+        "unit": "cups",
+        "item": "kale, chopped"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "roasted sweet potato cubes"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "shredded red cabbage"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "tahini"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "lemon juice"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "olive oil"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "cumin"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 400°F.",
+      "Toss chickpeas with olive oil, cumin, salt, and pepper.",
+      "Roast chickpeas for 20-25 minutes until crispy.",
+      "Massage kale with a pinch of salt until softened.",
+      "Divide rice between bowls.",
+      "Top with kale, roasted chickpeas, sweet potato, and cabbage.",
+      "Mix tahini with lemon juice and water for dressing.",
+      "Drizzle dressing over bowls."
+    ],
+    "nutrition": {
+      "calories": 360,
+      "carbs": 45,
+      "fiber": 12,
+      "sugar": 8,
+      "protein": 15,
+      "fat": 14,
+      "saturatedFat": 2,
+      "sodium": 380
+    },
+    "tags": [
+      "vegan",
+      "high-fiber",
+      "colorful",
+      "plant-based"
+    ],
+    "id": "chickpea-buddha-bowl"
+  },
+  {
+    "title": "Egg Salad Sandwich",
+    "description": "Classic lunch with a healthy twist",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/healthy-egg-salad",
+    "prepTime": 15,
+    "cookTime": 10,
+    "totalTime": 25,
+    "servings": 2,
+    "category": "lunch",
+    "image": "images/egg-salad-sandwich.jpg",
+    "ingredients": [
+      {
+        "amount": "4",
+        "unit": "",
+        "item": "hard-boiled eggs"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "Greek yogurt"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "light mayo"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "mustard"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "celery, diced"
+      },
+      {
+        "amount": "4",
+        "unit": "slices",
+        "item": "whole grain bread"
+      },
+      {
+        "amount": "4",
+        "unit": "leaves",
+        "item": "lettuce"
+      },
+      {
+        "amount": "1",
+        "unit": "",
+        "item": "tomato, sliced"
+      }
+    ],
+    "instructions": [
+      "Peel and chop hard-boiled eggs.",
+      "Mix eggs with Greek yogurt, mayo, and mustard.",
+      "Stir in celery and season with salt and pepper.",
+      "Toast bread if desired.",
+      "Spread egg salad on two slices of bread.",
+      "Top with lettuce and tomato.",
+      "Close sandwiches and cut in half."
+    ],
+    "nutrition": {
+      "calories": 310,
+      "carbs": 30,
+      "fiber": 5,
+      "sugar": 6,
+      "protein": 20,
+      "fat": 12,
+      "saturatedFat": 3,
+      "sodium": 480
+    },
+    "tags": [
+      "vegetarian",
+      "high-protein",
+      "classic",
+      "meal-prep-friendly"
+    ],
+    "id": "egg-salad-sandwich"
+  },
+  {
+    "title": "Mediterranean Chicken Pita",
+    "description": "Flavorful pita with Mediterranean ingredients",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/mediterranean-chicken-pita",
+    "prepTime": 10,
+    "cookTime": 15,
+    "totalTime": 25,
+    "servings": 2,
+    "category": "lunch",
+    "image": "images/mediterranean-pita.jpg",
+    "ingredients": [
+      {
+        "amount": "8",
+        "unit": "oz",
+        "item": "chicken breast, cubed"
+      },
+      {
+        "amount": "2",
+        "unit": "",
+        "item": "whole wheat pita breads"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "cucumber, diced"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "tomatoes, diced"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "red onion, diced"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "feta cheese"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "tzatziki sauce"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "olive oil"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "oregano"
+      }
+    ],
+    "instructions": [
+      "Season chicken with oregano, salt, and pepper.",
+      "Heat olive oil in a skillet over medium heat.",
+      "Cook chicken for 8-10 minutes until done.",
+      "Warm pita breads in microwave or on stovetop.",
+      "Cut pitas in half to form pockets.",
+      "Fill with chicken, cucumber, tomatoes, and onion.",
+      "Top with feta and tzatziki sauce."
+    ],
+    "nutrition": {
+      "calories": 330,
+      "carbs": 36,
+      "fiber": 6,
+      "sugar": 6,
+      "protein": 28,
+      "fat": 10,
+      "saturatedFat": 3,
+      "sodium": 520
+    },
+    "tags": [
+      "mediterranean",
+      "high-protein",
+      "flavorful"
+    ],
+    "id": "mediterranean-chicken-pita"
+  },
+  {
+    "title": "Black Bean and Rice Bowl",
+    "description": "Simple and satisfying plant-based meal",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/black-bean-rice-bowl",
+    "prepTime": 10,
+    "cookTime": 15,
+    "totalTime": 25,
+    "servings": 2,
+    "category": "lunch",
+    "image": "images/black-bean-bowl.jpg",
+    "ingredients": [
+      {
+        "amount": "1",
+        "unit": "can",
+        "item": "black beans (15 oz), drained"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "cooked brown rice"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "corn kernels"
+      },
+      {
+        "amount": "1",
+        "unit": "",
+        "item": "bell pepper, diced"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "red onion, diced"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "cilantro, chopped"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "lime juice"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "olive oil"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "cumin"
+      },
+      {
+        "amount": "1/4",
+        "unit": "",
+        "item": "avocado, sliced"
+      }
+    ],
+    "instructions": [
+      "Heat black beans with cumin in a small pot.",
+      "In a skillet, sauté bell pepper and corn in olive oil for 5 minutes.",
+      "Divide rice between bowls.",
+      "Top with black beans, sautéed vegetables, and onion.",
+      "Drizzle with lime juice and garnish with cilantro and avocado."
+    ],
+    "nutrition": {
+      "calories": 340,
+      "carbs": 45,
+      "fiber": 12,
+      "sugar": 8,
+      "protein": 15,
+      "fat": 10,
+      "saturatedFat": 2,
+      "sodium": 320
+    },
+    "tags": [
+      "vegan",
+      "high-fiber",
+      "budget-friendly",
+      "gluten-free"
+    ],
+    "id": "black-bean-and-rice-bowl"
+  },
+  {
+    "title": "Salmon and Spinach Salad",
+    "description": "Omega-3 rich salad with baked salmon",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/salmon-spinach-salad",
+    "prepTime": 10,
+    "cookTime": 15,
+    "totalTime": 25,
+    "servings": 2,
+    "category": "lunch",
+    "image": "images/salmon-salad.jpg",
+    "ingredients": [
+      {
+        "amount": "8",
+        "unit": "oz",
+        "item": "salmon fillet"
+      },
+      {
+        "amount": "4",
+        "unit": "cups",
+        "item": "baby spinach"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "strawberries, sliced"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "pecans, chopped"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "goat cheese"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "balsamic vinegar"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "olive oil"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "honey"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 400°F.",
+      "Season salmon with salt and pepper.",
+      "Bake salmon for 12-15 minutes until flaky.",
+      "Mix spinach, strawberries, and pecans in a bowl.",
+      "Whisk together balsamic vinegar, olive oil, and honey.",
+      "Flake salmon over salad.",
+      "Crumble goat cheese on top and drizzle with dressing."
+    ],
+    "nutrition": {
+      "calories": 360,
+      "carbs": 32,
+      "fiber": 5,
+      "sugar": 12,
+      "protein": 28,
+      "fat": 16,
+      "saturatedFat": 4,
+      "sodium": 280
+    },
+    "tags": [
+      "omega-3",
+      "high-protein",
+      "gluten-free",
+      "heart-healthy"
+    ],
+    "id": "salmon-and-spinach-salad"
+  },
+  {
+    "title": "Veggie Quesadilla",
+    "description": "Cheesy vegetarian quesadilla with whole wheat tortilla",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/veggie-quesadilla",
+    "prepTime": 10,
+    "cookTime": 10,
+    "totalTime": 20,
+    "servings": 1,
+    "category": "lunch",
+    "image": "images/veggie-quesadilla.jpg",
+    "ingredients": [
+      {
+        "amount": "1",
+        "unit": "",
+        "item": "whole wheat tortilla (10-inch)"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "reduced-fat cheddar cheese"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "black beans, mashed"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "bell peppers, diced"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "onion, diced"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "spinach"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "salsa"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "olive oil"
+      }
+    ],
+    "instructions": [
+      "Heat olive oil in a skillet over medium heat.",
+      "Sauté peppers and onions for 3-4 minutes.",
+      "Spread mashed black beans on half of tortilla.",
+      "Top with sautéed vegetables, spinach, and cheese.",
+      "Fold tortilla in half.",
+      "Cook in skillet for 2-3 minutes per side until golden.",
+      "Cut into wedges and serve with salsa."
+    ],
+    "nutrition": {
+      "calories": 310,
+      "carbs": 38,
+      "fiber": 10,
+      "sugar": 6,
+      "protein": 16,
+      "fat": 10,
+      "saturatedFat": 4,
+      "sodium": 580
+    },
+    "tags": [
+      "vegetarian",
+      "quick",
+      "high-fiber",
+      "kid-friendly"
+    ],
+    "id": "veggie-quesadilla"
+  },
+  {
+    "title": "Asian Chicken Lettuce Wraps",
+    "description": "Light and crunchy wraps with Asian flavors",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/asian-lettuce-wraps",
+    "prepTime": 15,
+    "cookTime": 10,
+    "totalTime": 25,
+    "servings": 2,
+    "category": "lunch",
+    "image": "images/lettuce-wraps.jpg",
+    "ingredients": [
+      {
+        "amount": "8",
+        "unit": "oz",
+        "item": "ground chicken"
+      },
+      {
+        "amount": "8",
+        "unit": "",
+        "item": "large lettuce leaves"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "water chestnuts, diced"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "green onions, sliced"
+      },
+      {
+        "amount": "2",
+        "unit": "cloves",
+        "item": "garlic, minced"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "fresh ginger, minced"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "low-sodium soy sauce"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "sesame oil"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "rice vinegar"
+      }
+    ],
+    "instructions": [
+      "Heat sesame oil in a large skillet over medium-high heat.",
+      "Cook ground chicken, breaking it up, for 5 minutes.",
+      "Add garlic and ginger, cook 1 minute.",
+      "Stir in water chestnuts, soy sauce, and rice vinegar.",
+      "Cook 2-3 more minutes until heated through.",
+      "Remove from heat and stir in green onions.",
+      "Spoon mixture into lettuce leaves and serve."
+    ],
+    "nutrition": {
+      "calories": 290,
+      "carbs": 30,
+      "fiber": 4,
+      "sugar": 8,
+      "protein": 24,
+      "fat": 10,
+      "saturatedFat": 3,
+      "sodium": 480
+    },
+    "tags": [
+      "low-carb-option",
+      "gluten-free",
+      "asian-inspired",
+      "light"
+    ],
+    "id": "asian-chicken-lettuce-wraps"
+  },
+  {
+    "title": "Minestrone Soup",
+    "description": "Italian vegetable soup with beans and pasta",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/minestrone-soup",
+    "prepTime": 15,
+    "cookTime": 25,
+    "totalTime": 40,
+    "servings": 4,
+    "category": "lunch",
+    "image": "images/minestrone-soup.jpg",
+    "ingredients": [
+      {
+        "amount": "1",
+        "unit": "can",
+        "item": "kidney beans (15 oz)"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "whole wheat pasta shells"
+      },
+      {
+        "amount": "4",
+        "unit": "cups",
+        "item": "low-sodium vegetable broth"
+      },
+      {
+        "amount": "1",
+        "unit": "can",
+        "item": "diced tomatoes (14.5 oz)"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "zucchini, diced"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "carrots, diced"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "celery, diced"
+      },
+      {
+        "amount": "2",
+        "unit": "cups",
+        "item": "spinach"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "Italian seasoning"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "olive oil"
+      }
+    ],
+    "instructions": [
+      "Heat olive oil in a large pot over medium heat.",
+      "Sauté carrots, celery, and zucchini for 5 minutes.",
+      "Add broth, tomatoes, beans, and Italian seasoning.",
+      "Bring to boil, then add pasta.",
+      "Simmer for 10-12 minutes until pasta is tender.",
+      "Stir in spinach during last 2 minutes.",
+      "Season with salt and pepper to taste."
+    ],
+    "nutrition": {
+      "calories": 295,
+      "carbs": 42,
+      "fiber": 10,
+      "sugar": 10,
+      "protein": 15,
+      "fat": 8,
+      "saturatedFat": 1,
+      "sodium": 480
+    },
+    "tags": [
+      "vegetarian",
+      "italian",
+      "high-fiber",
+      "comfort-food"
+    ],
+    "id": "minestrone-soup"
+  },
+  {
+    "title": "Turkey Meatball Sub",
+    "description": "Healthier version of classic meatball sub",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/turkey-meatball-sub",
+    "prepTime": 15,
+    "cookTime": 20,
+    "totalTime": 35,
+    "servings": 2,
+    "category": "lunch",
+    "image": "images/turkey-meatball-sub.jpg",
+    "ingredients": [
+      {
+        "amount": "8",
+        "unit": "oz",
+        "item": "ground turkey (93% lean)"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "whole wheat breadcrumbs"
+      },
+      {
+        "amount": "1",
+        "unit": "",
+        "item": "egg"
+      },
+      {
+        "amount": "2",
+        "unit": "",
+        "item": "whole wheat sub rolls"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "marinara sauce"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "part-skim mozzarella"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "Italian seasoning"
+      },
+      {
+        "amount": "2",
+        "unit": "cloves",
+        "item": "garlic, minced"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 400°F.",
+      "Mix turkey, breadcrumbs, egg, garlic, and Italian seasoning.",
+      "Form into 8 small meatballs.",
+      "Place on baking sheet and bake for 15-18 minutes.",
+      "Heat marinara sauce in a pot.",
+      "Add cooked meatballs to sauce.",
+      "Split sub rolls and fill with meatballs and sauce.",
+      "Top with mozzarella and broil for 2 minutes until melted."
+    ],
+    "nutrition": {
+      "calories": 360,
+      "carbs": 40,
+      "fiber": 6,
+      "sugar": 10,
+      "protein": 28,
+      "fat": 12,
+      "saturatedFat": 4,
+      "sodium": 680
+    },
+    "tags": [
+      "comfort-food",
+      "high-protein",
+      "italian-inspired"
+    ],
+    "id": "turkey-meatball-sub"
+  },
+  {
+    "title": "Shrimp and Avocado Salad",
+    "description": "Light and refreshing salad with protein",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/shrimp-avocado-salad",
+    "prepTime": 15,
+    "cookTime": 5,
+    "totalTime": 20,
+    "servings": 2,
+    "category": "lunch",
+    "image": "images/shrimp-avocado-salad.jpg",
+    "ingredients": [
+      {
+        "amount": "8",
+        "unit": "oz",
+        "item": "large shrimp, peeled"
+      },
+      {
+        "amount": "4",
+        "unit": "cups",
+        "item": "mixed greens"
+      },
+      {
+        "amount": "1/2",
+        "unit": "",
+        "item": "avocado, sliced"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "cherry tomatoes"
+      },
+      {
+        "amount": "1/2",
+        "unit": "",
+        "item": "cucumber, sliced"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "lime juice"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "olive oil"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "chili powder"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "cilantro"
+      }
+    ],
+    "instructions": [
+      "Season shrimp with chili powder, salt, and pepper.",
+      "Heat olive oil in a skillet over medium-high heat.",
+      "Cook shrimp for 2-3 minutes per side until pink.",
+      "In a large bowl, combine greens, tomatoes, and cucumber.",
+      "Top with cooked shrimp and avocado slices.",
+      "Drizzle with lime juice and garnish with cilantro."
+    ],
+    "nutrition": {
+      "calories": 280,
+      "carbs": 30,
+      "fiber": 8,
+      "sugar": 6,
+      "protein": 24,
+      "fat": 12,
+      "saturatedFat": 2,
+      "sodium": 320
+    },
+    "tags": [
+      "low-calorie",
+      "high-protein",
+      "gluten-free",
+      "refreshing"
+    ],
+    "id": "shrimp-and-avocado-salad"
+  },
+  {
+    "title": "Baked Cod with Roasted Vegetables",
+    "description": "Light and healthy dinner with lean protein",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/baked-cod-vegetables",
+    "prepTime": 10,
+    "cookTime": 25,
+    "totalTime": 35,
+    "servings": 2,
+    "category": "dinner",
+    "image": "images/baked-cod.jpg",
+    "ingredients": [
+      {
+        "amount": "8",
+        "unit": "oz",
+        "item": "cod fillets"
+      },
+      {
+        "amount": "2",
+        "unit": "cups",
+        "item": "broccoli florets"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "bell peppers, sliced"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "zucchini, sliced"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "olive oil"
+      },
+      {
+        "amount": "2",
+        "unit": "cloves",
+        "item": "garlic, minced"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "lemon juice"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "dried herbs"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "brown rice, cooked"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 400°F.",
+      "Toss vegetables with 1 tbsp olive oil, salt, and pepper.",
+      "Spread on baking sheet and roast for 15 minutes.",
+      "Season cod with herbs, garlic, salt, and pepper.",
+      "Push vegetables to sides and place cod in center.",
+      "Drizzle with remaining oil and lemon juice.",
+      "Bake for 10-12 minutes until fish flakes easily.",
+      "Serve with brown rice."
+    ],
+    "nutrition": {
+      "calories": 340,
+      "carbs": 35,
+      "fiber": 6,
+      "sugar": 8,
+      "protein": 30,
+      "fat": 10,
+      "saturatedFat": 2,
+      "sodium": 280
+    },
+    "tags": [
+      "low-calorie",
+      "high-protein",
+      "gluten-free",
+      "heart-healthy"
+    ],
+    "id": "baked-cod-with-roasted-vegetables"
+  },
+  {
+    "title": "Turkey Chili with Beans",
+    "description": "Hearty and warming chili packed with protein",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/turkey-chili",
+    "prepTime": 15,
+    "cookTime": 30,
+    "totalTime": 45,
+    "servings": 4,
+    "category": "dinner",
+    "image": "images/turkey-chili.jpg",
+    "ingredients": [
+      {
+        "amount": "1",
+        "unit": "lb",
+        "item": "ground turkey (93% lean)"
+      },
+      {
+        "amount": "1",
+        "unit": "can",
+        "item": "kidney beans (15 oz)"
+      },
+      {
+        "amount": "1",
+        "unit": "can",
+        "item": "black beans (15 oz)"
+      },
+      {
+        "amount": "1",
+        "unit": "can",
+        "item": "diced tomatoes (28 oz)"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "onion, diced"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "bell pepper, diced"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "chili powder"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "cumin"
+      },
+      {
+        "amount": "2",
+        "unit": "cups",
+        "item": "low-sodium chicken broth"
+      }
+    ],
+    "instructions": [
+      "Brown ground turkey in a large pot over medium heat.",
+      "Add onion and bell pepper, cook 5 minutes.",
+      "Stir in chili powder and cumin, cook 1 minute.",
+      "Add tomatoes, beans, and broth.",
+      "Bring to boil, then reduce heat and simmer 20 minutes.",
+      "Season with salt and pepper to taste.",
+      "Serve hot with optional toppings."
+    ],
+    "nutrition": {
+      "calories": 360,
+      "carbs": 38,
+      "fiber": 12,
+      "sugar": 10,
+      "protein": 32,
+      "fat": 8,
+      "saturatedFat": 2,
+      "sodium": 580
+    },
+    "tags": [
+      "high-protein",
+      "high-fiber",
+      "comfort-food",
+      "meal-prep-friendly"
+    ],
+    "id": "turkey-chili-with-beans"
+  },
+  {
+    "title": "Grilled Chicken with Sweet Potato",
+    "description": "Balanced meal with lean protein and complex carbs",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/grilled-chicken-sweet-potato",
+    "prepTime": 10,
+    "cookTime": 25,
+    "totalTime": 35,
+    "servings": 2,
+    "category": "dinner",
+    "image": "images/grilled-chicken-sweet-potato.jpg",
+    "ingredients": [
+      {
+        "amount": "8",
+        "unit": "oz",
+        "item": "chicken breast"
+      },
+      {
+        "amount": "1",
+        "unit": "large",
+        "item": "sweet potato"
+      },
+      {
+        "amount": "2",
+        "unit": "cups",
+        "item": "green beans"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "olive oil"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "paprika"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "garlic powder"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "fresh herbs"
+      }
+    ],
+    "instructions": [
+      "Preheat grill or grill pan to medium-high.",
+      "Cut sweet potato into 1/2-inch rounds.",
+      "Brush potato and chicken with olive oil.",
+      "Season chicken with paprika, garlic powder, salt, and pepper.",
+      "Grill chicken 6-7 minutes per side until cooked.",
+      "Grill sweet potato slices 4-5 minutes per side.",
+      "Steam green beans for 5 minutes until tender.",
+      "Serve chicken with sweet potato and green beans."
+    ],
+    "nutrition": {
+      "calories": 380,
+      "carbs": 35,
+      "fiber": 6,
+      "sugar": 10,
+      "protein": 35,
+      "fat": 12,
+      "saturatedFat": 2,
+      "sodium": 320
+    },
+    "tags": [
+      "balanced",
+      "high-protein",
+      "gluten-free",
+      "colorful"
+    ],
+    "id": "grilled-chicken-with-sweet-potato"
+  },
+  {
+    "title": "Baked Salmon with Asparagus",
+    "description": "Omega-3 rich dinner with roasted vegetables",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/baked-salmon-asparagus",
+    "prepTime": 10,
+    "cookTime": 20,
+    "totalTime": 30,
+    "servings": 2,
+    "category": "dinner",
+    "image": "images/baked-salmon-asparagus.jpg",
+    "ingredients": [
+      {
+        "amount": "8",
+        "unit": "oz",
+        "item": "salmon fillet"
+      },
+      {
+        "amount": "1",
+        "unit": "lb",
+        "item": "asparagus spears"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "cherry tomatoes"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "olive oil"
+      },
+      {
+        "amount": "2",
+        "unit": "cloves",
+        "item": "garlic, minced"
+      },
+      {
+        "amount": "1",
+        "unit": "",
+        "item": "lemon, sliced"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "dried dill"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "wild rice, cooked"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 400°F.",
+      "Line baking sheet with parchment paper.",
+      "Arrange asparagus and tomatoes on sheet.",
+      "Drizzle with 1 tbsp oil, salt, and pepper.",
+      "Place salmon on top of vegetables.",
+      "Brush salmon with remaining oil, garlic, and dill.",
+      "Top with lemon slices.",
+      "Bake for 15-18 minutes until salmon flakes.",
+      "Serve with wild rice."
+    ],
+    "nutrition": {
+      "calories": 380,
+      "carbs": 32,
+      "fiber": 5,
+      "sugar": 6,
+      "protein": 32,
+      "fat": 16,
+      "saturatedFat": 3,
+      "sodium": 280
+    },
+    "tags": [
+      "omega-3",
+      "heart-healthy",
+      "quick",
+      "gluten-free"
+    ],
+    "id": "baked-salmon-with-asparagus"
+  },
+  {
+    "title": "Lean Beef Stir-Fry",
+    "description": "Quick Asian-inspired stir-fry with vegetables",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/beef-stir-fry",
+    "prepTime": 15,
+    "cookTime": 15,
+    "totalTime": 30,
+    "servings": 2,
+    "category": "dinner",
+    "image": "images/beef-stir-fry.jpg",
+    "ingredients": [
+      {
+        "amount": "8",
+        "unit": "oz",
+        "item": "lean beef sirloin, sliced thin"
+      },
+      {
+        "amount": "2",
+        "unit": "cups",
+        "item": "mixed stir-fry vegetables"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "snow peas"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "low-sodium soy sauce"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "sesame oil"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "fresh ginger, minced"
+      },
+      {
+        "amount": "2",
+        "unit": "cloves",
+        "item": "garlic, minced"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "brown rice, cooked"
+      }
+    ],
+    "instructions": [
+      "Heat sesame oil in wok or large skillet over high heat.",
+      "Add beef and stir-fry for 2-3 minutes until browned.",
+      "Remove beef and set aside.",
+      "Add vegetables, ginger, and garlic to pan.",
+      "Stir-fry for 3-4 minutes until crisp-tender.",
+      "Return beef to pan with soy sauce.",
+      "Toss everything together for 1 minute.",
+      "Serve over brown rice."
+    ],
+    "nutrition": {
+      "calories": 360,
+      "carbs": 32,
+      "fiber": 5,
+      "sugar": 8,
+      "protein": 30,
+      "fat": 14,
+      "saturatedFat": 4,
+      "sodium": 480
+    },
+    "tags": [
+      "quick",
+      "asian-inspired",
+      "high-protein",
+      "colorful"
+    ],
+    "id": "lean-beef-stir-fry"
+  },
+  {
+    "title": "Herb-Crusted Pork Tenderloin",
+    "description": "Lean pork with flavorful herb crust",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/herb-crusted-pork",
+    "prepTime": 10,
+    "cookTime": 25,
+    "totalTime": 35,
+    "servings": 3,
+    "category": "dinner",
+    "image": "images/herb-pork.jpg",
+    "ingredients": [
+      {
+        "amount": "12",
+        "unit": "oz",
+        "item": "pork tenderloin"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "fresh herbs, mixed"
+      },
+      {
+        "amount": "2",
+        "unit": "cloves",
+        "item": "garlic, minced"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "olive oil"
+      },
+      {
+        "amount": "2",
+        "unit": "cups",
+        "item": "Brussels sprouts, halved"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "baby potatoes, halved"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "Dijon mustard"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 425°F.",
+      "Mix herbs, garlic, mustard, and olive oil.",
+      "Rub mixture all over pork tenderloin.",
+      "Toss vegetables with oil, salt, and pepper.",
+      "Place pork on baking sheet with vegetables.",
+      "Roast for 20-25 minutes until pork reaches 145°F.",
+      "Let pork rest 5 minutes before slicing.",
+      "Serve with roasted vegetables."
+    ],
+    "nutrition": {
+      "calories": 340,
+      "carbs": 30,
+      "fiber": 6,
+      "sugar": 6,
+      "protein": 32,
+      "fat": 12,
+      "saturatedFat": 3,
+      "sodium": 320
+    },
+    "tags": [
+      "lean-protein",
+      "herb-crusted",
+      "elegant",
+      "gluten-free"
+    ],
+    "id": "herb-crusted-pork-tenderloin"
+  },
+  {
+    "title": "Tofu Buddha Bowl with Peanut Sauce",
+    "description": "Colorful vegan bowl with crispy tofu",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/tofu-buddha-bowl",
+    "prepTime": 15,
+    "cookTime": 20,
+    "totalTime": 35,
+    "servings": 2,
+    "category": "dinner",
+    "image": "images/tofu-buddha-bowl.jpg",
+    "ingredients": [
+      {
+        "amount": "8",
+        "unit": "oz",
+        "item": "firm tofu, cubed"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "cooked brown rice"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "shredded red cabbage"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "edamame, shelled"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "carrots, julienned"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "peanut butter"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "lime juice"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "low-sodium soy sauce"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "sesame oil"
+      }
+    ],
+    "instructions": [
+      "Press tofu to remove excess water.",
+      "Heat sesame oil in skillet over medium-high heat.",
+      "Cook tofu cubes until golden on all sides, about 10 minutes.",
+      "Steam edamame for 5 minutes.",
+      "Mix peanut butter, lime juice, soy sauce, and water for sauce.",
+      "Divide rice between bowls.",
+      "Arrange tofu, cabbage, edamame, and carrots on top.",
+      "Drizzle with peanut sauce."
+    ],
+    "nutrition": {
+      "calories": 380,
+      "carbs": 38,
+      "fiber": 10,
+      "sugar": 10,
+      "protein": 22,
+      "fat": 16,
+      "saturatedFat": 3,
+      "sodium": 420
+    },
+    "tags": [
+      "vegan",
+      "plant-based",
+      "colorful",
+      "high-protein"
+    ],
+    "id": "tofu-buddha-bowl-with-peanut-sauce"
+  },
+  {
+    "title": "Shrimp and Zucchini Noodles",
+    "description": "Low-carb dinner with spiralized vegetables",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/shrimp-zucchini-noodles",
+    "prepTime": 15,
+    "cookTime": 10,
+    "totalTime": 25,
+    "servings": 2,
+    "category": "dinner",
+    "image": "images/shrimp-zoodles.jpg",
+    "ingredients": [
+      {
+        "amount": "8",
+        "unit": "oz",
+        "item": "large shrimp, peeled"
+      },
+      {
+        "amount": "3",
+        "unit": "medium",
+        "item": "zucchini, spiralized"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "cherry tomatoes"
+      },
+      {
+        "amount": "2",
+        "unit": "cloves",
+        "item": "garlic, minced"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "olive oil"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "white wine or broth"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "lemon juice"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "fresh basil"
+      }
+    ],
+    "instructions": [
+      "Heat 1 tbsp olive oil in large skillet.",
+      "Cook shrimp 2 minutes per side until pink.",
+      "Remove shrimp and set aside.",
+      "Add remaining oil and garlic, cook 30 seconds.",
+      "Add zucchini noodles and tomatoes.",
+      "Cook 3-4 minutes until noodles are tender.",
+      "Add wine and lemon juice.",
+      "Return shrimp to pan and toss.",
+      "Garnish with fresh basil."
+    ],
+    "nutrition": {
+      "calories": 280,
+      "carbs": 30,
+      "fiber": 6,
+      "sugar": 12,
+      "protein": 24,
+      "fat": 12,
+      "saturatedFat": 2,
+      "sodium": 320
+    },
+    "tags": [
+      "low-carb-option",
+      "quick",
+      "light",
+      "gluten-free"
+    ],
+    "id": "shrimp-and-zucchini-noodles"
+  },
+  {
+    "title": "Chicken Fajita Bowl",
+    "description": "Mexican-inspired bowl with seasoned chicken",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/chicken-fajita-bowl",
+    "prepTime": 10,
+    "cookTime": 20,
+    "totalTime": 30,
+    "servings": 2,
+    "category": "dinner",
+    "image": "images/fajita-bowl.jpg",
+    "ingredients": [
+      {
+        "amount": "8",
+        "unit": "oz",
+        "item": "chicken breast, sliced"
+      },
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "bell peppers, sliced"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "onion, sliced"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "black beans"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "brown rice, cooked"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "fajita seasoning"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "olive oil"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "Greek yogurt"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "salsa"
+      }
+    ],
+    "instructions": [
+      "Season chicken with fajita seasoning.",
+      "Heat olive oil in large skillet over medium-high.",
+      "Cook chicken 5-6 minutes until done.",
+      "Remove chicken and set aside.",
+      "Add peppers and onions to pan.",
+      "Cook 5 minutes until softened.",
+      "Divide rice between bowls.",
+      "Top with chicken, vegetables, beans, yogurt, and salsa."
+    ],
+    "nutrition": {
+      "calories": 360,
+      "carbs": 38,
+      "fiber": 8,
+      "sugar": 8,
+      "protein": 32,
+      "fat": 10,
+      "saturatedFat": 2,
+      "sodium": 580
+    },
+    "tags": [
+      "mexican-inspired",
+      "colorful",
+      "high-protein",
+      "customizable"
+    ],
+    "id": "chicken-fajita-bowl"
+  },
+  {
+    "title": "Asian Glazed Meatballs with Broccoli",
+    "description": "Flavorful meatballs with sweet and savory glaze",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/asian-glazed-meatballs",
+    "prepTime": 15,
+    "cookTime": 20,
+    "totalTime": 35,
+    "servings": 3,
+    "category": "dinner",
+    "image": "images/asian-meatballs.jpg",
+    "ingredients": [
+      {
+        "amount": "12",
+        "unit": "oz",
+        "item": "lean ground beef"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "breadcrumbs"
+      },
+      {
+        "amount": "1",
+        "unit": "",
+        "item": "egg"
+      },
+      {
+        "amount": "3",
+        "unit": "cups",
+        "item": "broccoli florets"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "low-sodium soy sauce"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "honey"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "sesame oil"
+      },
+      {
+        "amount": "2",
+        "unit": "cloves",
+        "item": "garlic, minced"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "brown rice, cooked"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 400°F.",
+      "Mix beef, breadcrumbs, egg, and half the garlic.",
+      "Form into 12 meatballs.",
+      "Bake meatballs for 15 minutes.",
+      "Steam broccoli for 5 minutes.",
+      "Mix soy sauce, honey, sesame oil, and remaining garlic.",
+      "Toss cooked meatballs in glaze.",
+      "Serve over rice with broccoli."
+    ],
+    "nutrition": {
+      "calories": 360,
+      "carbs": 34,
+      "fiber": 5,
+      "sugar": 10,
+      "protein": 28,
+      "fat": 14,
+      "saturatedFat": 5,
+      "sodium": 520
+    },
+    "tags": [
+      "asian-inspired",
+      "kid-friendly",
+      "balanced"
+    ],
+    "id": "asian-glazed-meatballs-with-broccoli"
+  },
+  {
+    "title": "Greek Yogurt with Berries",
+    "description": "Protein-rich snack with antioxidants",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/yogurt-berries-snack",
+    "prepTime": 2,
+    "cookTime": 0,
+    "totalTime": 2,
+    "servings": 1,
+    "category": "snacks",
+    "image": "images/yogurt-berries-snack.jpg",
+    "ingredients": [
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "plain Greek yogurt"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "mixed berries"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "chia seeds"
+      }
+    ],
+    "instructions": [
+      "Place yogurt in a small bowl.",
+      "Top with berries and chia seeds.",
+      "Enjoy immediately."
+    ],
+    "nutrition": {
+      "calories": 120,
+      "carbs": 15,
+      "fiber": 3,
+      "sugar": 10,
+      "protein": 12,
+      "fat": 3,
+      "saturatedFat": 1,
+      "sodium": 40
+    },
+    "tags": [
+      "quick",
+      "high-protein",
+      "no-cook",
+      "probiotic"
+    ],
+    "id": "greek-yogurt-with-berries"
+  },
+  {
+    "title": "Hummus with Veggie Sticks",
+    "description": "Crunchy vegetables with protein-packed dip",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/hummus-veggie-sticks",
+    "prepTime": 5,
+    "cookTime": 0,
+    "totalTime": 5,
+    "servings": 1,
+    "category": "snacks",
+    "image": "images/hummus-veggies.jpg",
+    "ingredients": [
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "hummus"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "carrot sticks"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "cucumber slices"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "bell pepper strips"
+      }
+    ],
+    "instructions": [
+      "Place hummus in center of plate.",
+      "Arrange vegetables around hummus.",
+      "Use vegetables for dipping."
+    ],
+    "nutrition": {
+      "calories": 140,
+      "carbs": 18,
+      "fiber": 6,
+      "sugar": 6,
+      "protein": 6,
+      "fat": 5,
+      "saturatedFat": 1,
+      "sodium": 240
+    },
+    "tags": [
+      "vegan",
+      "high-fiber",
+      "colorful",
+      "no-cook"
+    ],
+    "id": "hummus-with-veggie-sticks"
+  },
+  {
+    "title": "Cottage Cheese with Cucumber",
+    "description": "Light and refreshing high-protein snack",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/cottage-cheese-cucumber",
+    "prepTime": 3,
+    "cookTime": 0,
+    "totalTime": 3,
+    "servings": 1,
+    "category": "snacks",
+    "image": "images/cottage-cheese-cucumber.jpg",
+    "ingredients": [
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "low-fat cottage cheese"
+      },
+      {
+        "amount": "1/2",
+        "unit": "cup",
+        "item": "cucumber, diced"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "fresh dill"
+      },
+      {
+        "amount": "1/8",
+        "unit": "tsp",
+        "item": "black pepper"
+      }
+    ],
+    "instructions": [
+      "Place cottage cheese in bowl.",
+      "Top with cucumber.",
+      "Sprinkle with dill and pepper.",
+      "Mix gently and enjoy."
+    ],
+    "nutrition": {
+      "calories": 100,
+      "carbs": 10,
+      "fiber": 2,
+      "sugar": 6,
+      "protein": 13,
+      "fat": 2,
+      "saturatedFat": 1,
+      "sodium": 320
+    },
+    "tags": [
+      "high-protein",
+      "low-calorie",
+      "refreshing",
+      "quick"
+    ],
+    "id": "cottage-cheese-with-cucumber"
+  },
+  {
+    "title": "Trail Mix Energy Bites",
+    "description": "No-bake energy balls with nuts and dried fruit",
+    "source": "diabetesfoodhub.org",
+    "url": "https://diabetesfoodhub.org/recipes/trail-mix-bites",
+    "prepTime": 10,
+    "cookTime": 0,
+    "totalTime": 10,
+    "servings": 12,
+    "category": "snacks",
+    "image": "images/energy-bites.jpg",
+    "ingredients": [
+      {
+        "amount": "1",
+        "unit": "cup",
+        "item": "old-fashioned oats"
+      },
+      {
+        "amount": "1/3",
+        "unit": "cup",
+        "item": "almond butter"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "ground flaxseed"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "mini chocolate chips"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "dried cranberries"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "honey"
+      }
+    ],
+    "instructions": [
+      "Mix all ingredients in a bowl.",
+      "Chill mixture for 30 minutes.",
+      "Roll into 12 small balls.",
+      "Store in refrigerator.",
+      "Each serving is 2 balls."
+    ],
+    "nutrition": {
+      "calories": 180,
+      "carbs": 20,
+      "fiber": 3,
+      "sugar": 10,
+      "protein": 6,
+      "fat": 9,
+      "saturatedFat": 2,
+      "sodium": 30
+    },
+    "tags": [
+      "make-ahead",
+      "portable",
+      "no-bake",
+      "kid-friendly"
+    ],
+    "id": "trail-mix-energy-bites"
+  }
+]

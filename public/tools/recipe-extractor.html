@@ -406,8 +406,19 @@
                     if (result.debug) {
                         showDebug(`Debug info:`);
                         showDebug(`- Page title: ${result.debug.pageTitle}`);
+                        showDebug(`- HTML length: ${result.debug.htmlLength} chars`);
                         showDebug(`- Has JSON-LD: ${result.debug.hasJsonLd}`);
+                        showDebug(`- JSON-LD scripts found: ${result.debug.jsonLdScriptCount}`);
+                        
+                        if (result.debug.jsonLdScripts && result.debug.jsonLdScripts.length > 0) {
+                            result.debug.jsonLdScripts.forEach((script, i) => {
+                                showDebug(`  Script ${i + 1}: ${script.length} chars`);
+                                showDebug(`  Preview: ${script.preview}`);
+                            });
+                        }
+                        
                         showDebug(`- Has microdata: ${result.debug.hasMicrodata}`);
+                        showDebug(`- Microdata elements: ${result.debug.microdataCount}`);
                     }
                 }
             } catch (error) {

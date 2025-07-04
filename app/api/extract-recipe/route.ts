@@ -102,14 +102,25 @@ export async function POST(request: NextRequest) {
     const recipeData = extractRecipeFromHtml(html, url);
     
     if (!recipeData) {
+      // Enhanced debug information
+      const jsonLdScripts = extractJsonLdScripts(html);
+      const microdataElements = extractMicrodataElements(html);
+      
       return NextResponse.json(
         { 
           error: 'No recipe data found on this page',
           debug: {
             hasJsonLd: html.includes('application/ld+json'),
+            jsonLdScriptCount: jsonLdScripts.length,
+            jsonLdScripts: jsonLdScripts.map(script => ({
+              preview: script.substring(0, 300) + '...',
+              length: script.length
+            })),
             hasMicrodata: html.includes('itemtype') && html.includes('Recipe'),
+            microdataCount: microdataElements.length,
             pageTitle: extractPageTitle(html),
-            url: url
+            url: url,
+            htmlLength: html.length
           }
         },
         { status: 404 }
@@ -209,24 +220,54 @@ function extractJsonLdFromHtml(html: string): any {
   
   console.log(`Found ${matches.length} JSON-LD scripts`);
   
-  for (const match of matches) {
+  for (let i = 0; i < matches.length; i++) {
+    const scriptContent = matches[i][1];
+    console.log(`Processing JSON-LD script ${i + 1}:`, scriptContent.substring(0, 200) + '...');
+    
     try {
-      const data = JSON.parse(match[1]);
+      const data = JSON.parse(scriptContent);
+      console.log(`Script ${i + 1} parsed successfully. Type:`, typeof data, 'IsArray:', Array.isArray(data));
+      
       if (Array.isArray(data)) {
-        const recipe = data.find(item => item['@type'] === 'Recipe');
-        if (recipe) {
-          console.log('Found Recipe in JSON-LD array');
-          return recipe;
+        console.log(`Array contains ${data.length} items`);
+        for (let j = 0; j < data.length; j++) {
+          const item = data[j];
+          console.log(`Item ${j}: @type = ${item['@type']}, keys:`, Object.keys(item));
+          if (item['@type'] === 'Recipe') {
+            console.log('✅ Found Recipe in JSON-LD array at index', j);
+            return item;
+          }
         }
-      } else if (data['@type'] === 'Recipe') {
-        console.log('Found Recipe in JSON-LD object');
-        return data;
+      } else if (data && typeof data === 'object') {
+        console.log(`Object @type: ${data['@type']}, keys:`, Object.keys(data));
+        if (data['@type'] === 'Recipe') {
+          console.log('✅ Found Recipe in JSON-LD object');
+          return data;
+        }
+        
+        // Check for nested recipes in @graph
+        if (data['@graph'] && Array.isArray(data['@graph'])) {
+          console.log('Checking @graph array with', data['@graph'].length, 'items');
+          for (const graphItem of data['@graph']) {
+            if (graphItem['@type'] === 'Recipe') {
+              console.log('✅ Found Recipe in @graph');
+              return graphItem;
+            }
+          }
+        }
+        
+        // Check for mainEntity
+        if (data.mainEntity && data.mainEntity['@type'] === 'Recipe') {
+          console.log('✅ Found Recipe in mainEntity');
+          return data.mainEntity;
+        }
       }
     } catch (e) {
-      console.log('Failed to parse JSON-LD:', e);
+      console.log(`❌ Failed to parse JSON-LD script ${i + 1}:`, e);
     }
   }
   
+  console.log('❌ No Recipe found in any JSON-LD scripts');
   return null;
 }
 
@@ -266,6 +307,30 @@ function extractMicrodataFromHtml(html: string): any {
 function extractPageTitle(html: string): string {
   const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i);
   return titleMatch ? titleMatch[1].trim() : '';
+}
+
+function extractJsonLdScripts(html: string): string[] {
+  const jsonLdRegex = /<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gi;
+  const scripts: string[] = [];
+  let match;
+  
+  while ((match = jsonLdRegex.exec(html)) !== null) {
+    scripts.push(match[1]);
+  }
+  
+  return scripts;
+}
+
+function extractMicrodataElements(html: string): string[] {
+  const microdataRegex = /<[^>]+itemtype="[^"]*schema\.org\/Recipe[^"]*"[^>]*>/gi;
+  const elements: string[] = [];
+  let match;
+  
+  while ((match = microdataRegex.exec(html)) !== null) {
+    elements.push(match[0]);
+  }
+  
+  return elements;
 }
 
 function parseDuration(duration: any): number {

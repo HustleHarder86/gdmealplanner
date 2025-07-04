@@ -175,7 +175,7 @@ function extractRecipeFromHtml(html: string, url: string): RecipeData | null {
 
   // Parse ingredients
   if (Array.isArray(recipeData.recipeIngredient)) {
-    recipe.ingredients = recipeData.recipeIngredient.map(ing => ({
+    recipe.ingredients = recipeData.recipeIngredient.map((ing: string) => ({
       text: ing,
       parsed: parseIngredient(ing)
     }));
@@ -187,10 +187,10 @@ function extractRecipeFromHtml(html: string, url: string): RecipeData | null {
       ? recipeData.recipeInstructions 
       : [recipeData.recipeInstructions];
     
-    recipe.instructions = instructions.map(inst => {
+    recipe.instructions = instructions.map((inst: any) => {
       if (typeof inst === 'string') return inst;
       return inst.text || inst.name || '';
-    }).filter(text => text.length > 5);
+    }).filter((text: string) => text.length > 5);
   }
 
   return recipe;

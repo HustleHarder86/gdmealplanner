@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Recipe Extractor - GD Meal Planner</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+        
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c5530;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        .bookmarklet-section {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .bookmarklet-link {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 15px 0;
+            transition: background 0.3s;
+        }
+        
+        .bookmarklet-link:hover {
+            background: #218838;
+            color: white;
+        }
+        
+        .instructions {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .step {
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 6px;
+            border-left: 4px solid #28a745;
+        }
+        
+        .copy-section {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .copy-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        
+        .copy-btn:hover {
+            background: #0056b3;
+        }
+        
+        .code-display {
+            background: #f1f3f4;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            font-family: monospace;
+            font-size: 12px;
+            word-break: break-all;
+            max-height: 150px;
+            overflow-y: auto;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Simple Recipe Extractor</h1>
+        <p class="subtitle">Extract recipes directly from your browser - no server needed!</p>
+        
+        <div class="bookmarklet-section">
+            <h3>📥 Recipe Extractor Bookmarklet</h3>
+            <p><strong>Drag this link to your bookmarks bar:</strong></p>
+            <a href='javascript:(function(){function extractRecipe(){var scripts=document.querySelectorAll("script[type=\"application/ld+json\"]");for(var i=0;i<scripts.length;i++){try{var data=JSON.parse(scripts[i].textContent);if(data["@type"]==="Recipe"||(Array.isArray(data)&&data.find(item=>item["@type"]==="Recipe"))){var recipe=data["@type"]==="Recipe"?data:data.find(item=>item["@type"]==="Recipe");var nutrition=recipe.nutrition||{};var carbs=nutrition.carbohydrateContent?parseInt(nutrition.carbohydrateContent):0;var protein=nutrition.proteinContent?parseInt(nutrition.proteinContent):0;var fiber=nutrition.fiberContent?parseInt(nutrition.fiberContent):0;var valid=carbs>=10&&carbs<=50&&protein>=5&&fiber>=2;alert("Recipe: "+recipe.name+"\nCarbs: "+carbs+"g\nProtein: "+protein+"g\nFiber: "+fiber+"g\nGD Valid: "+(valid?"YES":"NO"));return;}}catch(e){}}alert("No recipe data found on this page");}extractRecipe();})();' class="bookmarklet-link">📥 Extract Recipe</a>
+        </div>
+        
+        <div class="instructions">
+            <h3>📋 How to Use:</h3>
+            <div class="step">
+                <strong>Step 1:</strong> Drag the green "Extract Recipe" link above to your browser's bookmarks bar
+            </div>
+            <div class="step">
+                <strong>Step 2:</strong> Visit any recipe website (AllRecipes, Food.com, etc.)
+            </div>
+            <div class="step">
+                <strong>Step 3:</strong> Click the bookmarklet while viewing a recipe page
+            </div>
+            <div class="step">
+                <strong>Step 4:</strong> A popup will show the recipe nutrition and GD validation
+            </div>
+        </div>
+        
+        <div class="copy-section">
+            <h3>🖥️ Alternative: Copy and Paste Method</h3>
+            <p>If you can't drag the bookmarklet, copy this code and create a bookmark manually:</p>
+            <button class="copy-btn" onclick="copyCode()">📋 Copy Code</button>
+            <div class="code-display" id="bookmarklet-code">
+javascript:(function(){function extractRecipe(){var scripts=document.querySelectorAll("script[type=\"application/ld+json\"]");for(var i=0;i<scripts.length;i++){try{var data=JSON.parse(scripts[i].textContent);if(data["@type"]==="Recipe"||(Array.isArray(data)&&data.find(item=>item["@type"]==="Recipe"))){var recipe=data["@type"]==="Recipe"?data:data.find(item=>item["@type"]==="Recipe");var nutrition=recipe.nutrition||{};var carbs=nutrition.carbohydrateContent?parseInt(nutrition.carbohydrateContent):0;var protein=nutrition.proteinContent?parseInt(nutrition.proteinContent):0;var fiber=nutrition.fiberContent?parseInt(nutrition.fiberContent):0;var valid=carbs>=10&&carbs<=50&&protein>=5&&fiber>=2;alert("Recipe: "+recipe.name+"\nCarbs: "+carbs+"g\nProtein: "+protein+"g\nFiber: "+fiber+"g\nGD Valid: "+(valid?"YES":"NO"));return;}}catch(e){}}alert("No recipe data found on this page");}extractRecipe();})();
+            </div>
+        </div>
+
+        <div class="instructions" style="background: #e8f5e8; border-color: #4caf50;">
+            <h3>✅ Why This Works:</h3>
+            <ul>
+                <li><strong>Browser-based:</strong> Runs where JavaScript has already loaded recipe data</li>
+                <li><strong>No CORS issues:</strong> Same-origin execution</li>
+                <li><strong>No server needed:</strong> Works entirely in your browser</li>
+                <li><strong>GD validation:</strong> Checks carbs (10-50g), protein (5g+), fiber (2g+)</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function copyCode() {
+            const code = document.getElementById('bookmarklet-code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('✅ Bookmarklet code copied to clipboard!');
+            }).catch(() => {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = code;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                alert('✅ Bookmarklet code copied to clipboard!');
+            });
+        }
+    </script>
+</body>
+</html>

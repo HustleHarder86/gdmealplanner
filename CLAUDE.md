@@ -9,12 +9,27 @@ This document provides guidance for Claude Code agents working on the Pregnancy 
 ## Development Commands
 
 Always run these commands after making changes:
+
 ```bash
 npm run lint
 npm run format
 npm run typecheck
 npm run test
 ```
+
+## Development Workflow Process
+
+When working on any feature or task, follow this structured workflow:
+
+1. **Planning Phase**: First think through the problem, read the codebase for relevant files, and write a plan to `tasks/todo.md`.
+2. **Task Breakdown**: The plan should have a list of todo items that you can check off as you complete them.
+3. **Verification**: Before you begin working, check in with me and I will verify the plan.
+4. **Execution**: Then, begin working on the todo items, marking them as complete as you go.
+5. **Progress Updates**: Please every step of the way just give me a high level explanation of what changes you made.
+6. **Simplicity First**: Make every task and code change you do as simple as possible. We want to avoid making any massive or complex changes. Every change should impact as little code as possible. Everything is about simplicity.
+7. **Review**: Finally, add a review section to the `todo.md` file with a summary of the changes you made and any other relevant information.
+
+This workflow ensures organized, transparent, and manageable development with clear communication at every step.
 
 ## WordPress Integration Context
 
@@ -30,7 +45,6 @@ See `INTEGRATION_STRATEGY.md` for detailed implementation plans.
 
 ## Claude Code Agents
 
-
 Last Supervisor Update: 2025-07-01 18:25:40
 The following agents are designed to build different parts of the application. Deploy them as needed based on current development priorities.
 
@@ -41,6 +55,7 @@ The following agents are designed to build different parts of the application. D
 **Dependencies**: None - monitors all other agents
 
 **Prompt**:
+
 ```
 Create a Supervisor agent that monitors and validates the work of other Claude Code agents.
 
@@ -81,8 +96,9 @@ The Supervisor should update agent statuses in this file automatically.
 **Dependencies**: None
 
 **Prompt**:
+
 ```
-Set up a complete Firebase project for a gestational diabetes meal planner app. 
+Set up a complete Firebase project for a gestational diabetes meal planner app.
 
 Tasks:
 1. Create Firebase configuration files (firebase.json, .firebaserc)
@@ -109,6 +125,7 @@ Ensure all Firebase SDK imports use modular syntax (v9+).
 **Dependencies**: Firebase must be configured first
 
 **Prompt**:
+
 ```
 Build a Python-based recipe scraper for gestational diabetes-friendly recipes.
 
@@ -141,6 +158,7 @@ Output format should match the Recipe TypeScript interface.
 **Dependencies**: None
 
 **Prompt**:
+
 ```
 Create a Next.js 14 application with TypeScript and Tailwind CSS for the Pregnancy Plate Planner.
 
@@ -175,6 +193,7 @@ Use modern React patterns (Server Components where appropriate).
 **Dependencies**: Firebase Setup Agent, Next.js Foundation Agent
 
 **Prompt**:
+
 ```
 Implement complete authentication flow with Firebase Auth in Next.js.
 
@@ -205,6 +224,7 @@ Ensure GDPR compliance with clear data usage disclosure.
 **Dependencies**: Recipe data must exist in Firestore
 
 **Prompt**:
+
 ```
 Build the core meal planning algorithm for gestational diabetes management.
 
@@ -239,6 +259,7 @@ Focus on variety and practicality for pregnant users.
 **Dependencies**: Firebase and authentication must be working
 
 **Prompt**:
+
 ```
 Implement comprehensive blood glucose tracking system.
 
@@ -277,6 +298,7 @@ Use Chart.js or Recharts for visualizations.
 **Dependencies**: Next.js Foundation must exist
 
 **Prompt**:
+
 ```
 Build a comprehensive UI component library for the meal planner app.
 
@@ -309,6 +331,7 @@ Ensure all components are accessible (WCAG 2.1 AA).
 **Dependencies**: Meal planning system must exist
 
 **Prompt**:
+
 ```
 Build nutrition tracking features integrated with meal plans.
 
@@ -342,6 +365,7 @@ Focus on pregnancy-specific nutrients: folate, iron, calcium, DHA.
 **Dependencies**: Recipes must exist in database
 
 **Prompt**:
+
 ```
 Create an intuitive recipe browsing and management system.
 
@@ -377,6 +401,7 @@ Include batch cooking and meal prep indicators.
 **Dependencies**: Basic app structure must exist
 
 **Prompt**:
+
 ```
 Create educational content system for gestational diabetes.
 
@@ -413,6 +438,7 @@ Content should be medically accurate but accessible.
 **Dependencies**: Complete app functionality
 
 **Prompt**:
+
 ```
 Implement Stripe subscription system for premium features.
 
@@ -444,6 +470,7 @@ Handle edge cases like payment failures gracefully.
 **Dependencies**: Core features must be implemented
 
 **Prompt**:
+
 ```
 Create comprehensive testing suite for the application.
 
@@ -493,6 +520,7 @@ Aim for 80% code coverage on critical paths.
 ## Medical Guidelines Reference
 
 **IMPORTANT**: Always refer to `/home/amy/dev/gdmealplanner/MEDICAL_GUIDELINES.md` when implementing any medical-related features, including:
+
 - Carbohydrate counting and meal planning
 - Blood glucose target ranges
 - Portion sizes and food choices
@@ -521,6 +549,7 @@ The MEDICAL_GUIDELINES.md file contains official Halton Healthcare guidelines th
 ## Next Steps After Agent Deployment
 
 When agents complete their tasks:
+
 1. Update agent status in this file
 2. Run integration tests
 3. Update documentation

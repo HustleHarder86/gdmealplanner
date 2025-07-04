@@ -199,8 +199,13 @@ function extractRecipeFromHtml(html: string, url: string): RecipeData | null {
 function extractJsonLdFromHtml(html: string): any {
   console.log('Extracting JSON-LD...');
   
-  const jsonLdRegex = /<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs;
-  const matches = [...html.matchAll(jsonLdRegex)];
+  const jsonLdRegex = /<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gi;
+  const matches: RegExpMatchArray[] = [];
+  let match;
+  
+  while ((match = jsonLdRegex.exec(html)) !== null) {
+    matches.push(match);
+  }
   
   console.log(`Found ${matches.length} JSON-LD scripts`);
   

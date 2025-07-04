@@ -6,6 +6,7 @@ import { recipeService } from "@/lib/recipe-service";
 import { WeeklyMasterPlan } from "@/lib/meal-plan-types";
 import { Recipe } from "@/lib/types";
 import { Badge, Button } from "@/components/ui";
+import { pluralizeUnit, groupGroceryItems } from "@/lib/grocery-utils";
 
 export default function MealPlannerPage() {
   const [currentWeek, setCurrentWeek] = useState(1);
@@ -278,45 +279,65 @@ export default function MealPlannerPage() {
           </div>
           
           <div className="divide-y">
-            {mealPlan.groceryList.categories.map((category) => (
-              <div key={category.name}>
-                <div className="px-4 py-2 bg-gray-50 flex items-center gap-2">
-                  <span className="text-lg">
-                    {category.name === "produce" && "🥬"}
-                    {category.name === "grains" && "🌾"}
-                    {category.name === "proteins" && "🥩"}
-                    {category.name === "dairy" && "🥛"}
-                    {category.name === "pantry" && "🥫"}
-                    {category.name === "other" && "📦"}
-                  </span>
-                  <h4 className="font-medium text-gray-700 capitalize">
-                    {category.name}
-                  </h4>
-                  <span className="text-sm text-gray-500 ml-auto">
-                    {category.items.length} items
-                  </span>
+            {mealPlan.groceryList.categories.map((category) => {
+              // Group items within each category
+              const groupedItems = groupGroceryItems(category.items);
+              
+              return (
+                <div key={category.name}>
+                  <div className="px-4 py-2 bg-gray-50 flex items-center gap-2">
+                    <span className="text-lg">
+                      {category.name === "produce" && "🥬"}
+                      {category.name === "grains" && "🌾"}
+                      {category.name === "proteins" && "🥩"}
+                      {category.name === "dairy" && "🥛"}
+                      {category.name === "pantry" && "🥫"}
+                      {category.name === "other" && "📦"}
+                    </span>
+                    <h4 className="font-medium text-gray-700 capitalize">
+                      {category.name}
+                    </h4>
+                    <span className="text-sm text-gray-500 ml-auto">
+                      {groupedItems.length} items
+                    </span>
+                  </div>
+                  <div className="px-4 py-2">
+                    <ul className="space-y-2">
+                      {groupedItems.map((item, index) => {
+                        const displayUnit = pluralizeUnit(item.totalAmount, item.unit);
+                        return (
+                          <li key={index} className="border-b border-gray-100 last:border-0 pb-2 last:pb-0">
+                            <div className="flex items-start gap-3">
+                              <input
+                                type="checkbox"
+                                className="w-4 h-4 mt-0.5 rounded border-gray-300 text-green-600 focus:ring-green-500"
+                                id={`${category.name}-${index}`}
+                              />
+                              <div className="flex-1">
+                                <label
+                                  htmlFor={`${category.name}-${index}`}
+                                  className="text-sm cursor-pointer block hover:bg-gray-50 p-2 -m-2 rounded"
+                                >
+                                  <span className="font-medium">
+                                    {item.totalAmount} {displayUnit} {item.displayName}
+                                  </span>
+                                </label>
+                                {item.recipes.length > 0 && (
+                                  <div className="text-xs text-gray-500 mt-1 ml-2">
+                                    Used in: {item.recipes.slice(0, 2).join(", ")}
+                                    {item.recipes.length > 2 && ` +${item.recipes.length - 2} more`}
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
                 </div>
-                <div className="px-4 py-2">
-                  <ul className="space-y-1">
-                    {category.items.map((item, index) => (
-                      <li key={index} className="flex items-center gap-3">
-                        <input
-                          type="checkbox"
-                          className="w-4 h-4 rounded border-gray-300 text-green-600 focus:ring-green-500"
-                          id={`${category.name}-${index}`}
-                        />
-                        <label
-                          htmlFor={`${category.name}-${index}`}
-                          className="flex-1 text-sm cursor-pointer hover:bg-gray-50 p-2 -m-2 rounded"
-                        >
-                          {(item as any).amount} {(item as any).unit} {item.name}
-                        </label>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       )}

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client-Side Recipe Extractor - GD Meal Planner</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+        
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c5530;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        .method-section {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .method-option {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .method-option:hover {
+            border-color: #2196f3;
+            box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);
+        }
+        
+        .method-option.selected {
+            border-color: #2196f3;
+            background: #f3f9ff;
+        }
+        
+        .method-title {
+            font-weight: bold;
+            color: #2196f3;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .method-description {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .method-steps {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            display: none;
+        }
+        
+        .method-option.selected .method-steps {
+            display: block;
+        }
+        
+        .step {
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+            border-left: 4px solid #28a745;
+        }
+        
+        .bookmarklet-code {
+            background: #f1f3f4;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 15px;
+            font-family: monospace;
+            font-size: 12px;
+            word-break: break-all;
+            max-height: 150px;
+            overflow-y: auto;
+            margin: 10px 0;
+        }
+        
+        .copy-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        
+        .copy-btn:hover {
+            background: #0056b3;
+        }
+        
+        .drag-instructions {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+        .bookmarklet-link {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin: 10px 0;
+            transition: background 0.3s;
+        }
+        
+        .bookmarklet-link:hover {
+            background: #218838;
+            color: white;
+        }
+        
+        .test-section {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .url-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        
+        .extract-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .extract-btn:hover {
+            background: #218838;
+        }
+        
+        .results {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+            display: none;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Client-Side Recipe Extractor</h1>
+        <p class="subtitle">Extract recipes directly in your browser where JavaScript has already loaded the data</p>
+        
+        <div class="warning">
+            <strong>🎯 Why This Works Better:</strong> Server-side extraction fails because modern recipe sites load data via JavaScript. This client-side approach runs in your browser where the recipe data is already loaded and accessible.
+        </div>
+        
+        <div class="method-section">
+            <h3>📋 Choose Your Extraction Method:</h3>
+            
+            <div class="method-option" onclick="selectMethod('bookmarklet')">
+                <div class="method-title">🔖 Browser Bookmarklet (Recommended)</div>
+                <div class="method-description">One-click extraction while viewing any recipe page</div>
+                <div class="method-steps">
+                    <div class="step">
+                        <strong>Step 1:</strong> Drag this link to your bookmarks bar:
+                        <div class="drag-instructions">
+                            <a href="javascript:(function(){function extractRecipeData(){const jsonLdScripts=document.querySelectorAll('script[type=\"application/ld+json\"]');let recipeData=null;for(const script of jsonLdScripts){try{const data=JSON.parse(script.textContent);if(Array.isArray(data)){const recipe=data.find(item=>item['@type']==='Recipe');if(recipe){recipeData=recipe;break;}}else if(data['@type']==='Recipe'){recipeData=data;break;}else if(data['@graph']){const recipe=data['@graph'].find(item=>item['@type']==='Recipe');if(recipe){recipeData=recipe;break;}}else if(data.mainEntity&&data.mainEntity['@type']==='Recipe'){recipeData=data.mainEntity;break;}}catch(e){continue;}}if(!recipeData){const recipeElement=document.querySelector('[itemtype*=\"schema.org/Recipe\"]');if(recipeElement){const extract=prop=>{const elem=recipeElement.querySelector(`[itemprop=\"${prop}\"]`);return elem?(elem.textContent||elem.getAttribute('content')||'').trim():'';};const extractList=prop=>{const elems=recipeElement.querySelectorAll(`[itemprop=\"${prop}\"]`);return Array.from(elems).map(elem=>(elem.textContent||elem.getAttribute('content')||'').trim()).filter(text=>text.length>0);};recipeData={'@type':'Recipe',name:extract('name'),description:extract('description'),prepTime:extract('prepTime'),cookTime:extract('cookTime'),totalTime:extract('totalTime'),recipeYield:extract('recipeYield'),recipeIngredient:extractList('recipeIngredient'),recipeInstructions:extractList('recipeInstructions'),nutrition:{calories:extract('calories'),carbohydrateContent:extract('carbohydrateContent'),proteinContent:extract('proteinContent'),fiberContent:extract('fiberContent'),fatContent:extract('fatContent')}};}}return recipeData;}function parseNutrition(nutritionData){const nutrition={calories:0,carbs:0,protein:0,fiber:0,fat:0,sugar:0};if(!nutritionData)return nutrition;const extract=value=>{if(typeof value==='number')return value;const match=String(value).match(/(\\d+)/);return match?parseInt(match[1]):0;};nutrition.calories=extract(nutritionData.calories);nutrition.carbs=extract(nutritionData.carbohydrateContent);nutrition.protein=extract(nutritionData.proteinContent);nutrition.fiber=extract(nutritionData.fiberContent);nutrition.fat=extract(nutritionData.fatContent);nutrition.sugar=extract(nutritionData.sugarContent);return nutrition;}function validateGDNutrition(nutrition){const{carbs,protein,fiber}=nutrition;if(carbs===0)return{valid:false,reason:'No carbohydrate data'};if(carbs<10||carbs>50)return{valid:false,reason:`Carbs out of range: ${carbs}g (need 10-50g)`};if(protein<5)return{valid:false,reason:`Low protein: ${protein}g (need 5g+)`};if(fiber<2)return{valid:false,reason:`Low fiber: ${fiber}g (need 2g+)`};return{valid:true,reason:'Meets GD requirements'};}const recipeData=extractRecipeData();if(recipeData&&recipeData.name){const nutrition=parseNutrition(recipeData.nutrition);const validation=validateGDNutrition(nutrition);const resultWindow=window.open('','recipeResult','width=700,height=600,scrollbars=yes');resultWindow.document.write(`<html><head><title>Recipe Extraction Result</title><style>body{font-family:Arial,sans-serif;padding:20px;max-width:600px;margin:0 auto;}.success{color:#28a745;}.error{color:#dc3545;}.nutrition{background:#f8f9fa;padding:15px;border-radius:6px;margin:15px 0;}.validation{padding:10px;border-radius:6px;margin:15px 0;}.validation.valid{background:#d4edda;border:1px solid #c3e6cb;color:#155724;}.validation.invalid{background:#f8d7da;border:1px solid #f5c6cb;color:#721c24;}</style></head><body><h2>🍳 Recipe: ${recipeData.name}</h2><p><strong>Source:</strong> ${window.location.href}</p><div class=\"nutrition\"><h3>📊 Nutrition (per serving)</h3><p><strong>Calories:</strong> ${nutrition.calories}</p><p><strong>Carbs:</strong> ${nutrition.carbs}g</p><p><strong>Protein:</strong> ${nutrition.protein}g</p><p><strong>Fiber:</strong> ${nutrition.fiber}g</p><p><strong>Fat:</strong> ${nutrition.fat}g</p></div><div class=\"validation ${validation.valid?'valid':'invalid'}\"><h3>${validation.valid?'✅':'❌'} GD Validation</h3><p>${validation.reason}</p></div><h3>📋 Ingredients (${recipeData.recipeIngredient?recipeData.recipeIngredient.length:0})</h3><ul>${recipeData.recipeIngredient?recipeData.recipeIngredient.map(ing=>`<li>${ing}</li>`).join(''):'<li>No ingredients found</li>'}</ul><h3>👩‍🍳 Instructions</h3><ol>${recipeData.recipeInstructions?recipeData.recipeInstructions.map(inst=>{if(typeof inst==='string')return `<li>${inst}</li>`;return `<li>${inst.text||inst.name||''}</li>`;}).join(''):'<li>No instructions found</li>'}</ol><div style=\"text-align:center;margin-top:30px;\"><button onclick=\"window.close()\" style=\"background:#007bff;color:white;border:none;padding:10px 20px;border-radius:4px;cursor:pointer;\">Close</button></div></body></html>`);}else{alert('❌ No recipe data found on this page. Make sure you\\'re on a recipe page with structured data.');}})();" class="bookmarklet-link">📥 Extract Recipe</a>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <strong>Step 2:</strong> Visit any recipe website (AllRecipes, Food.com, etc.)
+                    </div>
+                    <div class="step">
+                        <strong>Step 3:</strong> Click the bookmarklet while viewing a recipe page
+                    </div>
+                    <div class="step">
+                        <strong>Step 4:</strong> A popup will show the extracted recipe data with GD validation
+                    </div>
+                </div>
+            </div>
+            
+            <div class="method-option" onclick="selectMethod('console')">
+                <div class="method-title">🖥️ Browser Console Method</div>
+                <div class="method-description">Run JavaScript code directly in the browser's developer console</div>
+                <div class="method-steps">
+                    <div class="step">
+                        <strong>Step 1:</strong> Visit any recipe website
+                    </div>
+                    <div class="step">
+                        <strong>Step 2:</strong> Press F12 to open Developer Tools
+                    </div>
+                    <div class="step">
+                        <strong>Step 3:</strong> Go to the "Console" tab
+                    </div>
+                    <div class="step">
+                        <strong>Step 4:</strong> Copy and paste this code:
+                        <button class="copy-btn" onclick="copyConsoleCode()">📋 Copy Console Code</button>
+                        <div class="bookmarklet-code" id="console-code">
+// Recipe Extractor Console Script
+function extractRecipeData() {
+    // Try JSON-LD first
+    const jsonLdScripts = document.querySelectorAll('script[type="application/ld+json"]');
+    console.log(`Found ${jsonLdScripts.length} JSON-LD scripts`);
+    
+    for (const script of jsonLdScripts) {
+        try {
+            const data = JSON.parse(script.textContent);
+            console.log('Parsing JSON-LD:', data);
+            
+            if (Array.isArray(data)) {
+                const recipe = data.find(item => item['@type'] === 'Recipe');
+                if (recipe) return recipe;
+            } else if (data['@type'] === 'Recipe') {
+                return data;
+            } else if (data['@graph']) {
+                const recipe = data['@graph'].find(item => item['@type'] === 'Recipe');
+                if (recipe) return recipe;
+            } else if (data.mainEntity && data.mainEntity['@type'] === 'Recipe') {
+                return data.mainEntity;
+            }
+        } catch (e) {
+            console.log('Error parsing JSON-LD:', e);
+        }
+    }
+    
+    // Fallback to microdata
+    const recipeElement = document.querySelector('[itemtype*="schema.org/Recipe"]');
+    if (recipeElement) {
+        console.log('Found microdata recipe element');
+        // Extract microdata here...
+    }
+    
+    return null;
+}
+
+// Extract and display recipe
+const recipe = extractRecipeData();
+if (recipe) {
+    console.log('✅ Recipe found:', recipe);
+    console.log('📊 Nutrition:', recipe.nutrition);
+    console.log('📋 Ingredients:', recipe.recipeIngredient);
+} else {
+    console.log('❌ No recipe data found');
+}
+                        </div>
+                    </div>
+                    <div class="step">
+                        <strong>Step 5:</strong> Press Enter to run the code and see results in the console
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h3>🧪 Test the Bookmarklet Here</h3>
+            <p>Try the bookmarklet on this sample recipe data:</p>
+            
+            <!-- Sample JSON-LD for testing -->
+            <script type="application/ld+json">
+            {
+                "@context": "https://schema.org/",
+                "@type": "Recipe",
+                "name": "Test GD-Friendly Quinoa Bowl",
+                "description": "A healthy quinoa bowl perfect for gestational diabetes management",
+                "prepTime": "PT15M",
+                "cookTime": "PT20M",
+                "totalTime": "PT35M",
+                "recipeYield": "4",
+                "recipeIngredient": [
+                    "1 cup quinoa",
+                    "2 cups baby spinach",
+                    "1/2 cup cherry tomatoes",
+                    "1/4 cup feta cheese",
+                    "2 tbsp olive oil",
+                    "1 tbsp lemon juice"
+                ],
+                "recipeInstructions": [
+                    "Cook quinoa according to package directions",
+                    "Mix cooked quinoa with spinach",
+                    "Add tomatoes and feta cheese",
+                    "Drizzle with olive oil and lemon juice"
+                ],
+                "nutrition": {
+                    "calories": "280",
+                    "carbohydrateContent": "32g",
+                    "proteinContent": "12g",
+                    "fiberContent": "4g",
+                    "fatContent": "8g"
+                }
+            }
+            </script>
+            
+            <p><strong>Recipe Title:</strong> Test GD-Friendly Quinoa Bowl</p>
+            <p><strong>Expected Results:</strong> 32g carbs, 12g protein, 4g fiber - Should meet GD requirements ✅</p>
+            
+            <button class="extract-btn" onclick="testBookmarklet()">🧪 Test Bookmarklet on This Page</button>
+        </div>
+        
+        <div class="warning">
+            <strong>💡 Why This Works:</strong>
+            <ul>
+                <li>✅ <strong>Runs in browser</strong> - JavaScript has already loaded recipe data</li>
+                <li>✅ <strong>No CORS issues</strong> - Same-origin execution</li>
+                <li>✅ <strong>No CSP restrictions</strong> - Browser allows bookmarklets</li>
+                <li>✅ <strong>Real-time data</strong> - Sees the fully rendered page</li>
+                <li>✅ <strong>Works offline</strong> - No server required</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function selectMethod(method) {
+            // Remove selected class from all options
+            document.querySelectorAll('.method-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked option
+            event.currentTarget.classList.add('selected');
+        }
+        
+        function copyConsoleCode() {
+            const code = document.getElementById('console-code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('✅ Console code copied to clipboard!');
+            }).catch(() => {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = code;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                alert('✅ Console code copied to clipboard!');
+            });
+        }
+        
+        function testBookmarklet() {
+            // This simulates what the bookmarklet does
+            const jsonLdScripts = document.querySelectorAll('script[type="application/ld+json"]');
+            let recipeData = null;
+            
+            for (const script of jsonLdScripts) {
+                try {
+                    const data = JSON.parse(script.textContent);
+                    if (data['@type'] === 'Recipe') {
+                        recipeData = data;
+                        break;
+                    }
+                } catch (e) {
+                    continue;
+                }
+            }
+            
+            if (recipeData) {
+                alert(`✅ Success! Found recipe: "${recipeData.name}"\nCarbs: ${recipeData.nutrition.carbohydrateContent}\nProtein: ${recipeData.nutrition.proteinContent}\nFiber: ${recipeData.nutrition.fiberContent}`);
+            } else {
+                alert('❌ No recipe data found');
+            }
+        }
+    </script>
+</body>
+</html>

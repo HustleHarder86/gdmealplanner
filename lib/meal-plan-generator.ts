@@ -185,8 +185,8 @@ export class MealPlanGenerator {
     const allIngredients = new Set<string>()
 
     Object.values(weekMeals).forEach(day => {
-      Object.values(day).forEach(recipeId => {
-        const recipe = recipeService.getRecipeById(recipeId)
+      Object.values(day).forEach((recipeId) => {
+        const recipe = recipeService.getRecipeById(recipeId as string)
         if (recipe) {
           totalCarbs += recipe.nutrition.carbs
           totalCalories += recipe.nutrition.calories
@@ -213,7 +213,7 @@ export class MealPlanGenerator {
     // Aggregate all ingredients from all recipes
     Object.values(weekMeals).forEach(day => {
       Object.entries(day).forEach(([mealType, recipeId]) => {
-        const recipe = recipeService.getRecipeById(recipeId)
+        const recipe = recipeService.getRecipeById(recipeId as string)
         if (recipe) {
           recipe.ingredients.forEach(ing => {
             const key = this.normalizeIngredient(ing.item)
@@ -226,7 +226,7 @@ export class MealPlanGenerator {
                 ing.amount,
                 ing.unit
               )
-              existing.fromRecipes.push(recipeId)
+              existing.fromRecipes.push(recipeId as string)
             } else {
               // New ingredient
               ingredientMap.set(key, {
@@ -234,7 +234,7 @@ export class MealPlanGenerator {
                 quantity: ing.amount,
                 unit: ing.unit,
                 category: this.categorizeIngredient(ing.item),
-                fromRecipes: [recipeId]
+                fromRecipes: [recipeId as string]
               })
             }
           })

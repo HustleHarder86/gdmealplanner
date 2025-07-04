@@ -2,7 +2,7 @@ import { WeeklyMasterPlan, UserMealPlan, MealCustomization } from './meal-plan-t
 import masterPlansData from '@/data/meal-plans/master-plans.json'
 
 export class MealPlanService {
-  private static masterPlans: WeeklyMasterPlan[] = masterPlansData as WeeklyMasterPlan[]
+  private static masterPlans: WeeklyMasterPlan[] = masterPlansData as any
 
   // Get current week's meal plan (cycles through 12 weeks)
   static getCurrentWeekPlan(): WeeklyMasterPlan {

@@ -43,12 +43,7 @@
       "saturatedFat": 1,
       "sodium": 35
     },
-    "tags": [
-      "quick",
-      "no-cook",
-      "portable",
-      "kid-friendly"
-    ],
+    "tags": ["quick", "no-cook", "portable", "kid-friendly"],
     "id": "apple-slices-with-almond-butter"
   },
   {
@@ -94,12 +89,7 @@
       "saturatedFat": 1,
       "sodium": 40
     },
-    "tags": [
-      "quick",
-      "high-protein",
-      "no-cook",
-      "probiotic"
-    ],
+    "tags": ["quick", "high-protein", "no-cook", "probiotic"],
     "id": "greek-yogurt-with-berries"
   },
   {
@@ -150,12 +140,7 @@
       "saturatedFat": 1,
       "sodium": 240
     },
-    "tags": [
-      "vegan",
-      "high-fiber",
-      "colorful",
-      "no-cook"
-    ],
+    "tags": ["vegan", "high-fiber", "colorful", "no-cook"],
     "id": "hummus-with-veggie-sticks"
   },
   {
@@ -207,12 +192,7 @@
       "saturatedFat": 1,
       "sodium": 320
     },
-    "tags": [
-      "high-protein",
-      "low-calorie",
-      "refreshing",
-      "quick"
-    ],
+    "tags": ["high-protein", "low-calorie", "refreshing", "quick"],
     "id": "cottage-cheese-with-cucumber"
   },
   {
@@ -275,12 +255,7 @@
       "saturatedFat": 2,
       "sodium": 30
     },
-    "tags": [
-      "make-ahead",
-      "portable",
-      "no-bake",
-      "kid-friendly"
-    ],
+    "tags": ["make-ahead", "portable", "no-bake", "kid-friendly"],
     "id": "trail-mix-energy-bites"
   }
 ]

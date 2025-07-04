@@ -151,12 +151,7 @@
       "saturatedFat": 4,
       "sodium": 419
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "grilled"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "grilled"]
   },
   {
     "id": "baked-baked-salmon-with-quinoa-and-wild-rice",
@@ -230,12 +225,7 @@
       "saturatedFat": 4,
       "sodium": 454
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "baked"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "baked"]
   },
   {
     "id": "stir-fried-baked-salmon-with-quinoa-and-wild-rice",
@@ -309,12 +299,7 @@
       "saturatedFat": 4,
       "sodium": 520
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "stir-fried"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "stir-fried"]
   },
   {
     "id": "braised-baked-salmon-with-quinoa-and-wild-rice",
@@ -468,12 +453,7 @@
       "saturatedFat": 3,
       "sodium": 425
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "sheet pan"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "sheet pan"]
   },
   {
     "id": "slow-cooker-baked-salmon-with-quinoa-and-wild-rice",
@@ -707,12 +687,7 @@
       "saturatedFat": 2,
       "sodium": 265
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "stuffed"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "stuffed"]
   },
   {
     "id": "glazed-baked-salmon-with-quinoa-and-wild-rice",
@@ -786,12 +761,7 @@
       "saturatedFat": 1,
       "sodium": 422
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "glazed"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "glazed"]
   },
   {
     "id": "roasted-grilled-chicken-breast-with-quinoa-and-wild-rice",
@@ -864,12 +834,7 @@
       "saturatedFat": 2,
       "sodium": 310
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "roasted"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "roasted"]
   },
   {
     "id": "grilled-grilled-chicken-breast-with-quinoa-and-wild-rice",
@@ -942,12 +907,7 @@
       "saturatedFat": 2,
       "sodium": 527
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "grilled"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "grilled"]
   },
   {
     "id": "baked-grilled-chicken-breast-with-quinoa-and-wild-rice",
@@ -1020,12 +980,7 @@
       "saturatedFat": 1,
       "sodium": 225
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "baked"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "baked"]
   },
   {
     "id": "stir-fried-grilled-chicken-breast-with-quinoa-and-wild-rice",
@@ -1098,12 +1053,7 @@
       "saturatedFat": 4,
       "sodium": 279
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "stir-fried"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "stir-fried"]
   },
   {
     "id": "braised-grilled-chicken-breast-with-quinoa-and-wild-rice",
@@ -1176,12 +1126,7 @@
       "saturatedFat": 1,
       "sodium": 562
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "braised"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "braised"]
   },
   {
     "id": "sheet-pan-grilled-chicken-breast-with-quinoa-and-wild-rice",
@@ -1254,12 +1199,7 @@
       "saturatedFat": 1,
       "sodium": 411
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "sheet pan"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "sheet pan"]
   },
   {
     "id": "slow-cooker-grilled-chicken-breast-with-quinoa-and-wild-rice",
@@ -1332,12 +1272,7 @@
       "saturatedFat": 3,
       "sodium": 591
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "slow cooker"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "slow cooker"]
   },
   {
     "id": "one-pot-grilled-chicken-breast-with-quinoa-and-wild-rice",
@@ -1410,12 +1345,7 @@
       "saturatedFat": 1,
       "sodium": 499
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "one-pot"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "one-pot"]
   },
   {
     "id": "stuffed-grilled-chicken-breast-with-quinoa-and-wild-rice",
@@ -1567,12 +1497,7 @@
       "saturatedFat": 2,
       "sodium": 552
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "glazed"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "glazed"]
   },
   {
     "id": "roasted-turkey-meatballs-with-roasted-vegetables-and-cauliflower-rice",
@@ -1647,12 +1572,7 @@
       "sodium": 337,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "roasted"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "roasted"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -1724,12 +1644,7 @@
       "sodium": 439,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "roasted"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "roasted"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -1806,12 +1721,7 @@
       "sodium": 550,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "grilled"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "grilled"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -1883,12 +1793,7 @@
       "sodium": 372,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "grilled"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "grilled"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -1964,12 +1869,7 @@
       "sodium": 405,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "grilled"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "grilled"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -2041,12 +1941,7 @@
       "sodium": 362,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "baked"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "baked"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -2122,12 +2017,7 @@
       "sodium": 494,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "baked"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "baked"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -2204,12 +2094,7 @@
       "sodium": 290,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "stir-fried"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "stir-fried"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -2281,12 +2166,7 @@
       "sodium": 262,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "stir-fried"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "stir-fried"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -2362,12 +2242,7 @@
       "sodium": 440,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "stir-fried"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "stir-fried"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -2444,12 +2319,7 @@
       "sodium": 565,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "braised"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "braised"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -2521,12 +2391,7 @@
       "sodium": 384,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "braised"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "braised"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -2602,12 +2467,7 @@
       "sodium": 218,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "braised"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "braised"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -2679,12 +2539,7 @@
       "sodium": 368,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "sheet pan"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "sheet pan"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -2761,12 +2616,7 @@
       "sodium": 251,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "slow cooker"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "slow cooker"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -2838,12 +2688,7 @@
       "sodium": 356,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "slow cooker"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "slow cooker"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -2919,12 +2764,7 @@
       "sodium": 252,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "slow cooker"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "slow cooker"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -2996,12 +2836,7 @@
       "sodium": 352,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "one-pot"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "one-pot"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -3073,12 +2908,7 @@
       "sodium": 476,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "stuffed"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "stuffed"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -3150,12 +2980,7 @@
       "sodium": 416,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "glazed"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "glazed"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -3231,12 +3056,7 @@
       "sodium": 518,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "glazed"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "glazed"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -3313,13 +3133,7 @@
       "sodium": 345,
       "carbChoices": 3
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "roasted"
-    ],
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "roasted"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -3391,13 +3205,7 @@
       "sodium": 401,
       "carbChoices": 3
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "roasted"
-    ],
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "roasted"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -3473,13 +3281,7 @@
       "sodium": 580,
       "carbChoices": 3
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "roasted"
-    ],
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "roasted"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -3635,13 +3437,7 @@
       "sodium": 411,
       "carbChoices": 3
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "grilled"
-    ],
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "grilled"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -3801,13 +3597,7 @@
       "sodium": 409,
       "carbChoices": 3
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "baked"
-    ],
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "baked"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -3879,13 +3669,7 @@
       "sodium": 463,
       "carbChoices": 3
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "baked"
-    ],
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "baked"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -4045,13 +3829,7 @@
       "sodium": 436,
       "carbChoices": 3
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "stir-fried"
-    ],
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "stir-fried"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -4615,13 +4393,7 @@
       "sodium": 245,
       "carbChoices": 3
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "sheet pan"
-    ],
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "sheet pan"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -4781,13 +4553,7 @@
       "sodium": 203,
       "carbChoices": 3
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "slow cooker"
-    ],
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "slow cooker"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -5026,13 +4792,7 @@
       "sodium": 469,
       "carbChoices": 3
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "one-pot"
-    ],
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "one-pot"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -5104,13 +4864,7 @@
       "sodium": 438,
       "carbChoices": 3
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "one-pot"
-    ],
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "one-pot"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -5270,13 +5024,7 @@
       "sodium": 213,
       "carbChoices": 3
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "stuffed"
-    ],
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "stuffed"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -5348,13 +5096,7 @@
       "sodium": 209,
       "carbChoices": 3
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "stuffed"
-    ],
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "stuffed"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -5514,13 +5256,7 @@
       "sodium": 281,
       "carbChoices": 3
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "glazed"
-    ],
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "glazed"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -6231,12 +5967,7 @@
       "saturatedFat": 3,
       "sodium": 412
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "slow cooker"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "slow cooker"]
   },
   {
     "id": "one-pot-lean-beef-with-quinoa-and-wild-rice",
@@ -6309,12 +6040,7 @@
       "saturatedFat": 1,
       "sodium": 512
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "one-pot"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "one-pot"]
   },
   {
     "id": "stuffed-lean-beef-with-quinoa-and-wild-rice",
@@ -6387,12 +6113,7 @@
       "saturatedFat": 1,
       "sodium": 282
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "stuffed"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "stuffed"]
   },
   {
     "id": "glazed-lean-beef-with-quinoa-and-wild-rice",
@@ -6465,12 +6186,7 @@
       "saturatedFat": 4,
       "sodium": 504
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "glazed"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "glazed"]
   },
   {
     "id": "roasted-pork-tenderloin-with-quinoa-and-wild-rice",
@@ -6543,12 +6259,7 @@
       "saturatedFat": 2,
       "sodium": 243
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "roasted"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "roasted"]
   },
   {
     "id": "stir-fried-pork-tenderloin-with-quinoa-and-wild-rice",
@@ -6621,12 +6332,7 @@
       "saturatedFat": 2,
       "sodium": 440
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "stir-fried"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "stir-fried"]
   },
   {
     "id": "sheet-pan-pork-tenderloin-with-quinoa-and-wild-rice",
@@ -6699,12 +6405,7 @@
       "saturatedFat": 3,
       "sodium": 542
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "sheet pan"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "sheet pan"]
   },
   {
     "id": "slow-cooker-pork-tenderloin-with-quinoa-and-wild-rice",
@@ -6777,12 +6478,7 @@
       "saturatedFat": 1,
       "sodium": 578
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "slow cooker"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "slow cooker"]
   },
   {
     "id": "stuffed-pork-tenderloin-with-quinoa-and-wild-rice",
@@ -6855,12 +6551,7 @@
       "saturatedFat": 4,
       "sodium": 206
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "stuffed"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "stuffed"]
   },
   {
     "id": "glazed-pork-tenderloin-with-quinoa-and-wild-rice",
@@ -6933,12 +6624,7 @@
       "saturatedFat": 1,
       "sodium": 547
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "glazed"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "glazed"]
   },
   {
     "id": "roasted-white-fish-with-quinoa-and-wild-rice",
@@ -7169,11 +6855,6 @@
       "saturatedFat": 1,
       "sodium": 453
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "baked"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "baked"]
   }
 ]

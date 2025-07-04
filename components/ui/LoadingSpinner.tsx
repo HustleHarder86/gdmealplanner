@@ -1,27 +1,27 @@
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg'
-  color?: 'primary' | 'white' | 'neutral'
-  fullScreen?: boolean
-  text?: string
+  size?: "sm" | "md" | "lg";
+  color?: "primary" | "white" | "neutral";
+  fullScreen?: boolean;
+  text?: string;
 }
 
-export default function LoadingSpinner({ 
-  size = 'md', 
-  color = 'primary',
+export default function LoadingSpinner({
+  size = "md",
+  color = "primary",
   fullScreen = false,
-  text
+  text,
 }: LoadingSpinnerProps) {
   const sizes = {
-    sm: 'h-4 w-4',
-    md: 'h-8 w-8',
-    lg: 'h-12 w-12',
-  }
+    sm: "h-4 w-4",
+    md: "h-8 w-8",
+    lg: "h-12 w-12",
+  };
 
   const colors = {
-    primary: 'text-primary-600',
-    white: 'text-white',
-    neutral: 'text-neutral-600',
-  }
+    primary: "text-primary-600",
+    white: "text-white",
+    neutral: "text-neutral-600",
+  };
 
   const spinner = (
     <div className="flex flex-col items-center justify-center">
@@ -45,19 +45,17 @@ export default function LoadingSpinner({
           d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
         />
       </svg>
-      {text && (
-        <p className={`mt-2 text-sm ${colors[color]}`}>{text}</p>
-      )}
+      {text && <p className={`mt-2 text-sm ${colors[color]}`}>{text}</p>}
     </div>
-  )
+  );
 
   if (fullScreen) {
     return (
       <div className="fixed inset-0 bg-white bg-opacity-75 flex items-center justify-center z-50">
         {spinner}
       </div>
-    )
+    );
   }
 
-  return spinner
+  return spinner;
 }

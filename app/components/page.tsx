@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
+import { useState } from "react";
 import {
   Button,
   Card,
@@ -20,20 +20,22 @@ import {
   RecipeCardEnhanced,
   MealSlot,
   GlucoseEntry,
-} from '@/components/ui'
-import { mockRecipes } from '@/lib/mock-data'
+} from "@/components/ui";
+import { mockRecipes } from "@/lib/mock-data";
 
 export default function ComponentsPage() {
-  const [modalOpen, setModalOpen] = useState(false)
-  const [inputValue, setInputValue] = useState('')
-  const [selectValue, setSelectValue] = useState('')
-  const [checkboxValue, setCheckboxValue] = useState(false)
+  const [modalOpen, setModalOpen] = useState(false);
+  const [inputValue, setInputValue] = useState("");
+  const [selectValue, setSelectValue] = useState("");
+  const [checkboxValue, setCheckboxValue] = useState(false);
 
   return (
     <div className="container py-8 space-y-12">
       <div>
         <h1 className="text-3xl font-bold mb-2">Component Library</h1>
-        <p className="text-neutral-600">All UI components for Pregnancy Plate Planner</p>
+        <p className="text-neutral-600">
+          All UI components for Pregnancy Plate Planner
+        </p>
       </div>
 
       {/* Buttons */}
@@ -45,8 +47,12 @@ export default function ComponentsPage() {
           <Button variant="outline">Outline</Button>
           <Button variant="danger">Danger</Button>
           <Button variant="ghost">Ghost</Button>
-          <Button variant="primary" loading>Loading</Button>
-          <Button variant="primary" disabled>Disabled</Button>
+          <Button variant="primary" loading>
+            Loading
+          </Button>
+          <Button variant="primary" disabled>
+            Disabled
+          </Button>
         </div>
         <div className="flex flex-wrap gap-4 mt-4">
           <Button size="sm">Small</Button>
@@ -71,7 +77,7 @@ export default function ComponentsPage() {
               <Button size="sm">Action</Button>
             </CardFooter>
           </Card>
-          
+
           <Card variant="bordered">
             <CardHeader>
               <CardTitle>Bordered Card</CardTitle>
@@ -80,7 +86,7 @@ export default function ComponentsPage() {
               <p>With border variant.</p>
             </CardContent>
           </Card>
-          
+
           <Card variant="elevated">
             <CardHeader>
               <CardTitle>Elevated Card</CardTitle>
@@ -117,25 +123,25 @@ export default function ComponentsPage() {
             onChange={(e) => setInputValue(e.target.value)}
             hint="This is a helpful hint"
           />
-          
+
           <Input
             label="Input with Error"
             placeholder="Enter text..."
             error="This field is required"
           />
-          
+
           <Select
             label="Select Input"
             value={selectValue}
             onChange={(e) => setSelectValue(e.target.value)}
             options={[
-              { value: 'option1', label: 'Option 1' },
-              { value: 'option2', label: 'Option 2' },
-              { value: 'option3', label: 'Option 3' },
+              { value: "option1", label: "Option 1" },
+              { value: "option2", label: "Option 2" },
+              { value: "option3", label: "Option 3" },
             ]}
             placeholder="Choose an option"
           />
-          
+
           <div>
             <Checkbox
               id="checkbox-demo"
@@ -157,7 +163,7 @@ export default function ComponentsPage() {
           <LoadingSpinner size="lg" />
           <LoadingSpinner size="md" text="Loading recipes..." />
         </div>
-        
+
         <div className="mt-6">
           <h3 className="font-medium mb-2">Skeleton Loaders</h3>
           <div className="space-y-2 max-w-md">
@@ -177,12 +183,12 @@ export default function ComponentsPage() {
             title="No recipes found"
             description="Start by adding your first recipe to build your meal plan"
             action={{
-              label: 'Add Recipe',
-              onClick: () => console.log('Add recipe'),
+              label: "Add Recipe",
+              onClick: () => console.log("Add recipe"),
             }}
             secondaryAction={{
-              label: 'Browse Library',
-              onClick: () => console.log('Browse'),
+              label: "Browse Library",
+              onClick: () => console.log("Browse"),
             }}
           />
         </Card>
@@ -194,14 +200,14 @@ export default function ComponentsPage() {
         <div className="grid md:grid-cols-3 gap-6">
           <RecipeCardEnhanced
             recipe={mockRecipes[0]}
-            onFavorite={() => console.log('Favorite')}
+            onFavorite={() => console.log("Favorite")}
             isFavorite={false}
             showQuickAdd
-            onQuickAdd={() => console.log('Quick add')}
+            onQuickAdd={() => console.log("Quick add")}
           />
           <RecipeCardEnhanced
             recipe={mockRecipes[1]}
-            onFavorite={() => console.log('Favorite')}
+            onFavorite={() => console.log("Favorite")}
             isFavorite={true}
           />
         </div>
@@ -209,35 +215,37 @@ export default function ComponentsPage() {
 
       {/* Meal Planning */}
       <section>
-        <h2 className="text-2xl font-semibold mb-4">Meal Planning Components</h2>
+        <h2 className="text-2xl font-semibold mb-4">
+          Meal Planning Components
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl">
           <MealSlot
             mealType="breakfast"
             day="Monday"
             targetCarbs={{ min: 30, max: 45 }}
-            onAddRecipe={() => console.log('Add recipe')}
+            onAddRecipe={() => console.log("Add recipe")}
           />
           <MealSlot
             mealType="breakfast"
             day="Monday"
             recipe={mockRecipes[0]}
             targetCarbs={{ min: 30, max: 45 }}
-            onSwapRecipe={() => console.log('Swap')}
-            onRemoveRecipe={() => console.log('Remove')}
+            onSwapRecipe={() => console.log("Swap")}
+            onRemoveRecipe={() => console.log("Remove")}
           />
           <MealSlot
             mealType="morning-snack"
             day="Monday"
             targetCarbs={{ min: 15, max: 20 }}
-            onAddRecipe={() => console.log('Add recipe')}
+            onAddRecipe={() => console.log("Add recipe")}
           />
           <MealSlot
             mealType="morning-snack"
             day="Monday"
             recipe={mockRecipes[3]}
             targetCarbs={{ min: 15, max: 20 }}
-            onSwapRecipe={() => console.log('Swap')}
-            onRemoveRecipe={() => console.log('Remove')}
+            onSwapRecipe={() => console.log("Swap")}
+            onRemoveRecipe={() => console.log("Remove")}
           />
         </div>
       </section>
@@ -246,7 +254,9 @@ export default function ComponentsPage() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">Tracking Components</h2>
         <div className="max-w-md">
-          <GlucoseEntry onSubmit={(data) => console.log('Glucose data:', data)} />
+          <GlucoseEntry
+            onSubmit={(data) => console.log("Glucose data:", data)}
+          />
         </div>
       </section>
 
@@ -272,5 +282,5 @@ export default function ComponentsPage() {
         </Modal>
       </section>
     </div>
-  )
+  );
 }

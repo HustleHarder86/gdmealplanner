@@ -3,7 +3,6 @@
     "title": "Grilled Chicken Salad with Quinoa",
     "description": "Protein-packed salad with whole grains",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/grilled-chicken-quinoa-salad",
     "prepTime": 15,
     "cookTime": 20,
     "totalTime": 35,
@@ -82,13 +81,14 @@
       "meal-prep-friendly",
       "gluten-free"
     ],
-    "id": "grilled-chicken-salad-with-quinoa"
+    "id": "grilled-chicken-salad-with-quinoa",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Turkey and Avocado Wrap",
     "description": "Quick and satisfying lunch wrap",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/turkey-avocado-wrap",
     "prepTime": 10,
     "cookTime": 0,
     "totalTime": 10,
@@ -155,13 +155,14 @@
       "portable",
       "high-protein"
     ],
-    "id": "turkey-and-avocado-wrap"
+    "id": "turkey-and-avocado-wrap",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Lentil Vegetable Soup",
     "description": "Hearty soup packed with fiber and protein",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/lentil-vegetable-soup",
     "prepTime": 10,
     "cookTime": 30,
     "totalTime": 40,
@@ -245,13 +246,14 @@
       "meal-prep-friendly",
       "vegan"
     ],
-    "id": "lentil-vegetable-soup"
+    "id": "lentil-vegetable-soup",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Tuna Salad on Whole Grain Crackers",
     "description": "Light lunch with omega-3 fatty acids",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/tuna-salad-crackers",
     "prepTime": 10,
     "cookTime": 0,
     "totalTime": 10,
@@ -323,13 +325,14 @@
       "omega-3",
       "meal-prep-friendly"
     ],
-    "id": "tuna-salad-on-whole-grain-crackers"
+    "id": "tuna-salad-on-whole-grain-crackers",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Chickpea Buddha Bowl",
     "description": "Colorful plant-based bowl with roasted chickpeas",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/chickpea-buddha-bowl",
     "prepTime": 10,
     "cookTime": 25,
     "totalTime": 35,
@@ -409,13 +412,14 @@
       "colorful",
       "plant-based"
     ],
-    "id": "chickpea-buddha-bowl"
+    "id": "chickpea-buddha-bowl",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Egg Salad Sandwich",
     "description": "Classic lunch with a healthy twist",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/healthy-egg-salad",
     "prepTime": 15,
     "cookTime": 10,
     "totalTime": 25,
@@ -489,7 +493,9 @@
       "classic",
       "meal-prep-friendly"
     ],
-    "id": "egg-salad-sandwich"
+    "id": "egg-salad-sandwich",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Mediterranean Chicken Pita",
@@ -573,13 +579,14 @@
       "high-protein",
       "flavorful"
     ],
-    "id": "mediterranean-chicken-pita"
+    "id": "mediterranean-chicken-pita",
+    "recipe_source": "original",
+    "source_note": "Recipe from diabetesfoodhub.org"
   },
   {
     "title": "Black Bean and Rice Bowl",
     "description": "Simple and satisfying plant-based meal",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/black-bean-rice-bowl",
     "prepTime": 10,
     "cookTime": 15,
     "totalTime": 25,
@@ -661,13 +668,14 @@
       "budget-friendly",
       "gluten-free"
     ],
-    "id": "black-bean-and-rice-bowl"
+    "id": "black-bean-and-rice-bowl",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Salmon and Spinach Salad",
     "description": "Omega-3 rich salad with baked salmon",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/salmon-spinach-salad",
     "prepTime": 10,
     "cookTime": 15,
     "totalTime": 25,
@@ -741,13 +749,14 @@
       "gluten-free",
       "heart-healthy"
     ],
-    "id": "salmon-and-spinach-salad"
+    "id": "salmon-and-spinach-salad",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Veggie Quesadilla",
     "description": "Cheesy vegetarian quesadilla with whole wheat tortilla",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/veggie-quesadilla",
     "prepTime": 10,
     "cookTime": 10,
     "totalTime": 20,
@@ -821,13 +830,14 @@
       "high-fiber",
       "kid-friendly"
     ],
-    "id": "veggie-quesadilla"
+    "id": "veggie-quesadilla",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Asian Chicken Lettuce Wraps",
     "description": "Light and crunchy wraps with Asian flavors",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/asian-lettuce-wraps",
     "prepTime": 15,
     "cookTime": 10,
     "totalTime": 25,
@@ -906,13 +916,14 @@
       "asian-inspired",
       "light"
     ],
-    "id": "asian-chicken-lettuce-wraps"
+    "id": "asian-chicken-lettuce-wraps",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Minestrone Soup",
     "description": "Italian vegetable soup with beans and pasta",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/minestrone-soup",
     "prepTime": 15,
     "cookTime": 25,
     "totalTime": 40,
@@ -996,13 +1007,14 @@
       "high-fiber",
       "comfort-food"
     ],
-    "id": "minestrone-soup"
+    "id": "minestrone-soup",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Turkey Meatball Sub",
     "description": "Healthier version of classic meatball sub",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/turkey-meatball-sub",
     "prepTime": 15,
     "cookTime": 20,
     "totalTime": 35,
@@ -1076,13 +1088,14 @@
       "high-protein",
       "italian-inspired"
     ],
-    "id": "turkey-meatball-sub"
+    "id": "turkey-meatball-sub",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Shrimp and Avocado Salad",
     "description": "Light and refreshing salad with protein",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/shrimp-avocado-salad",
     "prepTime": 15,
     "cookTime": 5,
     "totalTime": 20,
@@ -1160,6 +1173,8 @@
       "gluten-free",
       "refreshing"
     ],
-    "id": "shrimp-and-avocado-salad"
+    "id": "shrimp-and-avocado-salad",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   }
 ]

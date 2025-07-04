@@ -1,0 +1,215 @@
+================================================================================
+RECIPE URL VERIFICATION REPORT
+Generated: 2025-07-04 11:00:34
+================================================================================
+
+SUMMARY STATISTICS
+----------------------------------------
+Total recipes checked: 48
+Valid URLs (200 OK): 1 (2.1%)
+Invalid URLs (404, etc): 47 (97.9%)
+Errors/Issues: 0 (0.0%)
+  - No URL provided: 0
+  - Wrong domain: 0
+
+================================================================================
+VALID RECIPES (Real URLs)
+================================================================================
+✓ Mediterranean Chicken Pita
+  URL: https://diabetesfoodhub.org/recipes/mediterranean-chicken-pita
+  Status: 200
+
+================================================================================
+INVALID RECIPES (Fake/Dead URLs)
+================================================================================
+✗ Greek Yogurt Parfait with Berries
+  URL: https://diabetesfoodhub.org/recipes/greek-yogurt-parfait
+  Status: 404
+
+✗ Spinach and Cheese Omelet
+  URL: https://diabetesfoodhub.org/recipes/spinach-cheese-omelet
+  Status: 404
+
+✗ Whole Wheat Pancakes with Berry Compote
+  URL: https://diabetesfoodhub.org/recipes/whole-wheat-pancakes
+  Status: 404
+
+✗ Veggie Egg Scramble with Whole Wheat Toast
+  URL: https://diabetesfoodhub.org/recipes/veggie-egg-scramble
+  Status: 404
+
+✗ Overnight Oats with Almonds
+  URL: https://diabetesfoodhub.org/recipes/overnight-oats-almonds
+  Status: 404
+
+✗ Avocado Toast with Poached Egg
+  URL: https://diabetesfoodhub.org/recipes/avocado-toast-poached-egg
+  Status: 404
+
+✗ Cottage Cheese Bowl with Fruit
+  URL: https://diabetesfoodhub.org/recipes/cottage-cheese-bowl
+  Status: 404
+
+✗ Turkey Sausage Breakfast Wrap
+  URL: https://diabetesfoodhub.org/recipes/turkey-sausage-wrap
+  Status: 404
+
+✗ Breakfast Quinoa with Berries
+  URL: https://diabetesfoodhub.org/recipes/breakfast-quinoa
+  Status: 404
+
+✗ Baked Egg Cups with Vegetables
+  URL: https://diabetesfoodhub.org/recipes/baked-egg-cups
+  Status: 404
+
+✗ Chia Pudding with Mango
+  URL: https://diabetesfoodhub.org/recipes/chia-pudding-mango
+  Status: 404
+
+✗ Zucchini Bread Oatmeal
+  URL: https://diabetesfoodhub.org/recipes/zucchini-bread-oatmeal
+  Status: 404
+
+✗ Smoked Salmon Bagel Thin
+  URL: https://diabetesfoodhub.org/recipes/smoked-salmon-bagel
+  Status: 404
+
+✗ Protein Power Smoothie
+  URL: https://diabetesfoodhub.org/recipes/protein-power-smoothie
+  Status: 404
+
+✗ Grilled Chicken Salad with Quinoa
+  URL: https://diabetesfoodhub.org/recipes/grilled-chicken-quinoa-salad
+  Status: 404
+
+✗ Sweet Potato Hash with Eggs
+  URL: https://diabetesfoodhub.org/recipes/sweet-potato-hash
+  Status: 404
+
+✗ Tuna Salad on Whole Grain Crackers
+  URL: https://diabetesfoodhub.org/recipes/tuna-salad-crackers
+  Status: 404
+
+✗ Lentil Vegetable Soup
+  URL: https://diabetesfoodhub.org/recipes/lentil-vegetable-soup
+  Status: 404
+
+✗ Turkey and Avocado Wrap
+  URL: https://diabetesfoodhub.org/recipes/turkey-avocado-wrap
+  Status: 404
+
+✗ Chickpea Buddha Bowl
+  URL: https://diabetesfoodhub.org/recipes/chickpea-buddha-bowl
+  Status: 404
+
+✗ Black Bean and Rice Bowl
+  URL: https://diabetesfoodhub.org/recipes/black-bean-rice-bowl
+  Status: 404
+
+✗ Egg Salad Sandwich
+  URL: https://diabetesfoodhub.org/recipes/healthy-egg-salad
+  Status: 404
+
+✗ Salmon and Spinach Salad
+  URL: https://diabetesfoodhub.org/recipes/salmon-spinach-salad
+  Status: 404
+
+✗ Minestrone Soup
+  URL: https://diabetesfoodhub.org/recipes/minestrone-soup
+  Status: 404
+
+✗ Veggie Quesadilla
+  URL: https://diabetesfoodhub.org/recipes/veggie-quesadilla
+  Status: 404
+
+✗ Asian Chicken Lettuce Wraps
+  URL: https://diabetesfoodhub.org/recipes/asian-lettuce-wraps
+  Status: 404
+
+✗ Turkey Meatball Sub
+  URL: https://diabetesfoodhub.org/recipes/turkey-meatball-sub
+  Status: 404
+
+✗ Baked Cod with Roasted Vegetables
+  URL: https://diabetesfoodhub.org/recipes/baked-cod-vegetables
+  Status: 404
+
+✗ Shrimp and Avocado Salad
+  URL: https://diabetesfoodhub.org/recipes/shrimp-avocado-salad
+  Status: 404
+
+✗ Turkey Chili with Beans
+  URL: https://diabetesfoodhub.org/recipes/turkey-chili
+  Status: 404
+
+✗ Grilled Chicken with Sweet Potato
+  URL: https://diabetesfoodhub.org/recipes/grilled-chicken-sweet-potato
+  Status: 404
+
+✗ Vegetarian Stuffed Bell Peppers
+  URL: https://diabetesfoodhub.org/recipes/stuffed-bell-peppers
+  Status: 404
+
+✗ Baked Salmon with Asparagus
+  URL: https://diabetesfoodhub.org/recipes/baked-salmon-asparagus
+  Status: 404
+
+✗ Mediterranean Chickpea Stew
+  URL: https://diabetesfoodhub.org/recipes/mediterranean-chickpea-stew
+  Status: 404
+
+✗ Lean Beef Stir-Fry
+  URL: https://diabetesfoodhub.org/recipes/beef-stir-fry
+  Status: 404
+
+✗ Herb-Crusted Pork Tenderloin
+  URL: https://diabetesfoodhub.org/recipes/herb-crusted-pork
+  Status: 404
+
+✗ Turkey Meatloaf with Green Beans
+  URL: https://diabetesfoodhub.org/recipes/turkey-meatloaf
+  Status: 404
+
+✗ Tofu Buddha Bowl with Peanut Sauce
+  URL: https://diabetesfoodhub.org/recipes/tofu-buddha-bowl
+  Status: 404
+
+✗ Shrimp and Zucchini Noodles
+  URL: https://diabetesfoodhub.org/recipes/shrimp-zucchini-noodles
+  Status: 404
+
+✗ Asian Glazed Meatballs with Broccoli
+  URL: https://diabetesfoodhub.org/recipes/asian-glazed-meatballs
+  Status: 404
+
+✗ Baked Eggplant Parmesan
+  URL: https://diabetesfoodhub.org/recipes/baked-eggplant-parmesan
+  Status: 404
+
+✗ Greek Yogurt with Berries
+  URL: https://diabetesfoodhub.org/recipes/yogurt-berries-snack
+  Status: 404
+
+✗ Chicken Fajita Bowl
+  URL: https://diabetesfoodhub.org/recipes/chicken-fajita-bowl
+  Status: 404
+
+✗ Hummus with Veggie Sticks
+  URL: https://diabetesfoodhub.org/recipes/hummus-veggie-sticks
+  Status: 404
+
+✗ Cottage Cheese with Cucumber
+  URL: https://diabetesfoodhub.org/recipes/cottage-cheese-cucumber
+  Status: 404
+
+✗ Trail Mix Energy Bites
+  URL: https://diabetesfoodhub.org/recipes/trail-mix-bites
+  Status: 404
+
+✗ Apple Slices with Almond Butter
+  URL: https://diabetesfoodhub.org/recipes/apple-almond-butter
+  Status: 404
+
+================================================================================
+ERRORS/ISSUES
+================================================================================

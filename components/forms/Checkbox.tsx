@@ -1,13 +1,14 @@
-import { InputHTMLAttributes, forwardRef } from 'react'
+import { InputHTMLAttributes, forwardRef } from "react";
 
-interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> {
-  label: string
-  description?: string
-  error?: string
+interface CheckboxProps
+  extends Omit<InputHTMLAttributes<HTMLInputElement>, "type"> {
+  label: string;
+  description?: string;
+  error?: string;
 }
 
 const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ label, description, error, className = '', ...props }, ref) => {
+  ({ label, description, error, className = "", ...props }, ref) => {
     return (
       <div className="relative">
         <div className="flex items-start">
@@ -19,12 +20,16 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
                 h-4 w-4 rounded border-neutral-300 text-primary-600
                 focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
                 disabled:opacity-50 disabled:cursor-not-allowed
-                ${error ? 'border-red-500' : ''}
+                ${error ? "border-red-500" : ""}
                 ${className}
               `}
-              aria-invalid={error ? 'true' : 'false'}
+              aria-invalid={error ? "true" : "false"}
               aria-describedby={
-                error ? `${props.id}-error` : description ? `${props.id}-description` : undefined
+                error
+                  ? `${props.id}-error`
+                  : description
+                    ? `${props.id}-description`
+                    : undefined
               }
               {...props}
             />
@@ -46,10 +51,10 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           </p>
         )}
       </div>
-    )
-  }
-)
+    );
+  },
+);
 
-Checkbox.displayName = 'Checkbox'
+Checkbox.displayName = "Checkbox";
 
-export default Checkbox
+export default Checkbox;

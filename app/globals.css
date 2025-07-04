@@ -9,12 +9,14 @@
   }
 
   * {
-    border-color: theme('colors.neutral.200');
+    border-color: theme("colors.neutral.200");
   }
 
   body {
     @apply bg-white text-neutral-900;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
   }
 }
 

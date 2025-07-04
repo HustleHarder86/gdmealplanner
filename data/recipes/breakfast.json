@@ -3,7 +3,6 @@
     "title": "Veggie Egg Scramble with Whole Wheat Toast",
     "description": "Protein-rich breakfast with fiber from vegetables and whole grains",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/veggie-egg-scramble",
     "prepTime": 10,
     "cookTime": 15,
     "totalTime": 25,
@@ -82,13 +81,14 @@
       "30-minutes-or-less",
       "high-fiber"
     ],
-    "id": "veggie-egg-scramble-with-whole-wheat-toast"
+    "id": "veggie-egg-scramble-with-whole-wheat-toast",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Greek Yogurt Parfait with Berries",
     "description": "Quick and easy breakfast with balanced carbs and protein",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/greek-yogurt-parfait",
     "prepTime": 5,
     "cookTime": 0,
     "totalTime": 5,
@@ -145,13 +145,14 @@
       "high-protein",
       "vegetarian"
     ],
-    "id": "greek-yogurt-parfait-with-berries"
+    "id": "greek-yogurt-parfait-with-berries",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Spinach and Cheese Omelet",
     "description": "Fluffy omelet packed with nutrients and protein",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/spinach-cheese-omelet",
     "prepTime": 5,
     "cookTime": 10,
     "totalTime": 15,
@@ -221,13 +222,14 @@
       "high-protein",
       "vegetarian"
     ],
-    "id": "spinach-and-cheese-omelet"
+    "id": "spinach-and-cheese-omelet",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Overnight Oats with Almonds",
     "description": "Make-ahead breakfast with slow-releasing carbs",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/overnight-oats-almonds",
     "prepTime": 5,
     "cookTime": 0,
     "totalTime": 5,
@@ -294,13 +296,14 @@
       "high-fiber",
       "vegan"
     ],
-    "id": "overnight-oats-with-almonds"
+    "id": "overnight-oats-with-almonds",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Whole Wheat Pancakes with Berry Compote",
     "description": "Weekend breakfast with controlled portions and fiber",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/whole-wheat-pancakes",
     "prepTime": 10,
     "cookTime": 15,
     "totalTime": 25,
@@ -374,13 +377,14 @@
       "vegetarian",
       "high-fiber"
     ],
-    "id": "whole-wheat-pancakes-with-berry-compote"
+    "id": "whole-wheat-pancakes-with-berry-compote",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Avocado Toast with Poached Egg",
     "description": "Trendy breakfast with healthy fats and protein",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/avocado-toast-poached-egg",
     "prepTime": 5,
     "cookTime": 10,
     "totalTime": 15,
@@ -449,13 +453,14 @@
       "high-fiber",
       "vegetarian"
     ],
-    "id": "avocado-toast-with-poached-egg"
+    "id": "avocado-toast-with-poached-egg",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Cottage Cheese Bowl with Fruit",
     "description": "High-protein breakfast with fresh fruit",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/cottage-cheese-bowl",
     "prepTime": 5,
     "cookTime": 0,
     "totalTime": 5,
@@ -517,13 +522,14 @@
       "high-protein",
       "vegetarian"
     ],
-    "id": "cottage-cheese-bowl-with-fruit"
+    "id": "cottage-cheese-bowl-with-fruit",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Breakfast Quinoa with Berries",
     "description": "Protein-packed alternative to oatmeal",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/breakfast-quinoa",
     "prepTime": 5,
     "cookTime": 20,
     "totalTime": 25,
@@ -591,13 +597,14 @@
       "high-fiber",
       "30-minutes-or-less"
     ],
-    "id": "breakfast-quinoa-with-berries"
+    "id": "breakfast-quinoa-with-berries",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Turkey Sausage Breakfast Wrap",
     "description": "Portable breakfast with lean protein",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/turkey-sausage-wrap",
     "prepTime": 10,
     "cookTime": 15,
     "totalTime": 25,
@@ -665,13 +672,14 @@
       "high-protein",
       "meal-prep-friendly"
     ],
-    "id": "turkey-sausage-breakfast-wrap"
+    "id": "turkey-sausage-breakfast-wrap",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Baked Egg Cups with Vegetables",
     "description": "Make-ahead individual egg portions",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/baked-egg-cups",
     "prepTime": 10,
     "cookTime": 20,
     "totalTime": 30,
@@ -750,13 +758,14 @@
       "portable",
       "vegetarian"
     ],
-    "id": "baked-egg-cups-with-vegetables"
+    "id": "baked-egg-cups-with-vegetables",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Chia Pudding with Mango",
     "description": "Creamy make-ahead breakfast with omega-3s",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/chia-pudding-mango",
     "prepTime": 5,
     "cookTime": 0,
     "totalTime": 5,
@@ -818,13 +827,14 @@
       "vegan",
       "high-fiber"
     ],
-    "id": "chia-pudding-with-mango"
+    "id": "chia-pudding-with-mango",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Zucchini Bread Oatmeal",
     "description": "Vegetables hidden in a comforting breakfast",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/zucchini-bread-oatmeal",
     "prepTime": 5,
     "cookTime": 10,
     "totalTime": 15,
@@ -892,13 +902,14 @@
       "hidden-veggies",
       "high-fiber"
     ],
-    "id": "zucchini-bread-oatmeal"
+    "id": "zucchini-bread-oatmeal",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Smoked Salmon Bagel Thin",
     "description": "Light version of classic breakfast with omega-3s",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/smoked-salmon-bagel",
     "prepTime": 5,
     "cookTime": 0,
     "totalTime": 5,
@@ -965,13 +976,14 @@
       "high-protein",
       "omega-3"
     ],
-    "id": "smoked-salmon-bagel-thin"
+    "id": "smoked-salmon-bagel-thin",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Sweet Potato Hash with Eggs",
     "description": "Colorful breakfast skillet with complex carbs",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/sweet-potato-hash",
     "prepTime": 10,
     "cookTime": 20,
     "totalTime": 30,
@@ -1045,13 +1057,14 @@
       "colorful",
       "high-fiber"
     ],
-    "id": "sweet-potato-hash-with-eggs"
+    "id": "sweet-potato-hash-with-eggs",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Protein Power Smoothie",
     "description": "Quick breakfast drink with hidden vegetables",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/protein-power-smoothie",
     "prepTime": 5,
     "cookTime": 0,
     "totalTime": 5,
@@ -1117,6 +1130,8 @@
       "hidden-veggies",
       "high-protein"
     ],
-    "id": "protein-power-smoothie"
+    "id": "protein-power-smoothie",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   }
 ]

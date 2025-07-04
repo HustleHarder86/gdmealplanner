@@ -7,6 +7,7 @@ A comprehensive gestational diabetes meal planning application for expecting mot
 ## Overview
 
 Pregnancy Plate Planner helps expecting mothers with gestational diabetes manage their condition through:
+
 - Personalized meal planning with carbohydrate counting
 - Blood glucose tracking and pattern analysis
 - Gestational diabetes-friendly recipe library
@@ -18,6 +19,7 @@ Pregnancy Plate Planner helps expecting mothers with gestational diabetes manage
 ## Features
 
 ### Core Functionality
+
 - **Smart Meal Planning**: AI-powered weekly meal plans following gestational diabetes guidelines (30-40% carbs, balanced proteins/fats)
 - **Recipe Library**: 500+ curated recipes with detailed nutritional information and glycemic index ratings
 - **Glucose Tracking**: Comprehensive blood glucose monitoring with pre/post-meal tracking
@@ -25,6 +27,7 @@ Pregnancy Plate Planner helps expecting mothers with gestational diabetes manage
 - **Educational Hub**: Expert-reviewed articles, videos, and guides on managing gestational diabetes
 
 ### Technical Features
+
 - Progressive Web App with offline support
 - Real-time data synchronization
 - Mobile-responsive design
@@ -66,6 +69,7 @@ gdmealplanner/
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js 18+ and npm/yarn
 - Firebase CLI installed globally
 - Python 3.8+ (for recipe scraper)
@@ -73,28 +77,33 @@ gdmealplanner/
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/yourusername/gdmealplanner.git
 cd gdmealplanner
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Set up environment variables:
+
 ```bash
 cp .env.example .env.local
 ```
 
 4. Configure Firebase:
+
 ```bash
 firebase init
 # Select: Firestore, Functions, Storage, Hosting
 ```
 
 5. Run development server:
+
 ```bash
 npm run dev
 ```
@@ -102,6 +111,7 @@ npm run dev
 ### Environment Variables
 
 Create a `.env.local` file with:
+
 ```
 NEXT_PUBLIC_FIREBASE_API_KEY=
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
@@ -125,24 +135,28 @@ See `.env.example` for a complete list of environment variables.
 ## Development Workflow
 
 ### Running Tests
+
 ```bash
 npm run test
 npm run test:e2e
 ```
 
 ### Linting and Formatting
+
 ```bash
 npm run lint
 npm run format
 ```
 
 ### Building for Production
+
 ```bash
 npm run build
 npm run start
 ```
 
 ### Recipe Scraper
+
 ```bash
 cd scripts/scraper
 python scraper.py --source diabetes-recipes.com --limit 50
@@ -151,6 +165,7 @@ python scraper.py --source diabetes-recipes.com --limit 50
 ## Firebase Security Rules
 
 Basic Firestore rules are in `firebase/firestore.rules`. Key principles:
+
 - Users can only read/write their own data
 - Recipes are publicly readable
 - Admin functions require custom claims
@@ -158,11 +173,13 @@ Basic Firestore rules are in `firebase/firestore.rules`. Key principles:
 ## Deployment
 
 ### Vercel (Recommended)
+
 ```bash
 vercel --prod
 ```
 
 ### Firebase Hosting
+
 ```bash
 npm run build
 firebase deploy

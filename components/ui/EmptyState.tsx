@@ -1,17 +1,17 @@
-import Button from './Button'
+import Button from "./Button";
 
 interface EmptyStateProps {
-  icon?: React.ReactNode
-  title: string
-  description?: string
+  icon?: React.ReactNode;
+  title: string;
+  description?: string;
   action?: {
-    label: string
-    onClick: () => void
-  }
+    label: string;
+    onClick: () => void;
+  };
   secondaryAction?: {
-    label: string
-    onClick: () => void
-  }
+    label: string;
+    onClick: () => void;
+  };
 }
 
 export default function EmptyState({
@@ -28,13 +28,15 @@ export default function EmptyState({
           {icon}
         </div>
       )}
-      
+
       <h3 className="text-lg font-medium text-neutral-900 mb-2">{title}</h3>
-      
+
       {description && (
-        <p className="text-sm text-neutral-600 mb-6 max-w-sm mx-auto">{description}</p>
+        <p className="text-sm text-neutral-600 mb-6 max-w-sm mx-auto">
+          {description}
+        </p>
       )}
-      
+
       {(action || secondaryAction) && (
         <div className="flex items-center justify-center gap-3">
           {action && (
@@ -43,12 +45,16 @@ export default function EmptyState({
             </Button>
           )}
           {secondaryAction && (
-            <Button onClick={secondaryAction.onClick} variant="outline" size="sm">
+            <Button
+              onClick={secondaryAction.onClick}
+              variant="outline"
+              size="sm"
+            >
               {secondaryAction.label}
             </Button>
           )}
         </div>
       )}
     </div>
-  )
+  );
 }

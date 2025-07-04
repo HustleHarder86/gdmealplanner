@@ -374,12 +374,7 @@
       "saturatedFat": 2,
       "sodium": 484
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "quick"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "quick"]
   },
   {
     "id": "quick-greek-yogurt-with-cherry-tomatoes",
@@ -436,12 +431,7 @@
       "saturatedFat": 2,
       "sodium": 232
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "quick"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "quick"]
   },
   {
     "id": "quick-greek-yogurt-with-celery-and-almond-butter",
@@ -1206,12 +1196,7 @@
       "saturatedFat": 1,
       "sodium": 570
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "make-ahead"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "make-ahead"]
   },
   {
     "id": "make-ahead-greek-yogurt-with-chia-seeds",
@@ -1462,12 +1447,7 @@
       "saturatedFat": 1,
       "sodium": 541
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "make-ahead"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "make-ahead"]
   },
   {
     "id": "make-ahead-greek-yogurt-with-celery-and-almond-butter",
@@ -1975,12 +1955,7 @@
       "saturatedFat": 4,
       "sodium": 484
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "no-cook"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "no-cook"]
   },
   {
     "id": "no-cook-greek-yogurt-with-celery-and-almond-butter",
@@ -2168,12 +2143,7 @@
       "saturatedFat": 4,
       "sodium": 281
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "crunchy"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "crunchy"]
   },
   {
     "id": "crunchy-greek-yogurt-with-whole-grain-crackers",
@@ -3001,12 +2971,7 @@
       "saturatedFat": 4,
       "sodium": 430
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "creamy"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "creamy"]
   },
   {
     "id": "creamy-greek-yogurt-with-celery-and-almond-butter",
@@ -3194,12 +3159,7 @@
       "saturatedFat": 1,
       "sodium": 247
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "sweet"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "sweet"]
   },
   {
     "id": "sweet-greek-yogurt-with-whole-grain-crackers",
@@ -3450,12 +3410,7 @@
       "saturatedFat": 1,
       "sodium": 498
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "sweet"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "sweet"]
   },
   {
     "id": "sweet-greek-yogurt-with-cherry-tomatoes",
@@ -3706,12 +3661,7 @@
       "saturatedFat": 4,
       "sodium": 418
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "savory"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "savory"]
   },
   {
     "id": "savory-greek-yogurt-with-whole-grain-crackers",
@@ -4025,12 +3975,7 @@
       "saturatedFat": 3,
       "sodium": 204
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "savory"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "savory"]
   },
   {
     "id": "savory-greek-yogurt-with-celery-and-almond-butter",
@@ -4475,12 +4420,7 @@
       "saturatedFat": 2,
       "sodium": 554
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "protein-packed"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "protein-packed"]
   },
   {
     "id": "protein-packed-greek-yogurt-with-cherry-tomatoes",
@@ -4537,12 +4477,7 @@
       "saturatedFat": 1,
       "sodium": 320
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "protein-packed"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "protein-packed"]
   },
   {
     "id": "protein-packed-greek-yogurt-with-celery-and-almond-butter",
@@ -5050,12 +4985,7 @@
       "saturatedFat": 1,
       "sodium": 415
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "fiber-rich"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "fiber-rich"]
   },
   {
     "id": "fiber-rich-greek-yogurt-with-celery-and-almond-butter",
@@ -5374,12 +5304,7 @@
       "saturatedFat": 1,
       "sodium": 266
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "quick"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "quick"]
   },
   {
     "id": "quick-cottage-cheese-with-chia-seeds",

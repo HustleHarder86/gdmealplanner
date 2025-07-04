@@ -1,18 +1,24 @@
-import { notFound } from 'next/navigation'
-import Link from 'next/link'
-import { Badge } from '@/components/ui'
-import { recipeService } from '@/lib/recipe-service'
-import { MedicalComplianceService } from '@/lib/medical-compliance'
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import { Badge } from "@/components/ui";
+import { recipeService } from "@/lib/recipe-service";
+import { MedicalComplianceService } from "@/lib/medical-compliance";
 
-export default function RecipeDetailPage({ params }: { params: { id: string } }) {
-  const recipe = recipeService.getRecipeById(params.id)
-  
+export default function RecipeDetailPage({
+  params,
+}: {
+  params: { id: string };
+}) {
+  const recipe = recipeService.getRecipeById(params.id);
+
   if (!recipe) {
-    notFound()
+    notFound();
   }
 
-  const isCompliant = MedicalComplianceService.isRecipeCompliant(recipe)
-  const carbChoices = MedicalComplianceService.getCarbChoices(recipe.nutrition.carbs)
+  const isCompliant = MedicalComplianceService.isRecipeCompliant(recipe);
+  const carbChoices = MedicalComplianceService.getCarbChoices(
+    recipe.nutrition.carbs,
+  );
 
   return (
     <div className="container py-8">
@@ -20,7 +26,10 @@ export default function RecipeDetailPage({ params }: { params: { id: string } })
       <nav className="mb-6">
         <ol className="flex items-center space-x-2 text-sm">
           <li>
-            <Link href="/recipes" className="text-primary-600 hover:text-primary-800">
+            <Link
+              href="/recipes"
+              className="text-primary-600 hover:text-primary-800"
+            >
               Recipes
             </Link>
           </li>
@@ -34,7 +43,7 @@ export default function RecipeDetailPage({ params }: { params: { id: string } })
         <div className="lg:col-span-2">
           <h1 className="text-3xl font-bold mb-4">{recipe.title}</h1>
           <p className="text-neutral-600 mb-6">{recipe.description}</p>
-          
+
           {/* Recipe Meta */}
           <div className="flex flex-wrap gap-4 mb-6">
             <div className="flex items-center gap-2">
@@ -85,12 +94,19 @@ export default function RecipeDetailPage({ params }: { params: { id: string } })
           {/* Nutrition Card */}
           <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
             <h3 className="font-semibold mb-4">Nutrition per Serving</h3>
-            {recipe.category === 'snacks' && recipe.nutrition.carbs >= 14 && recipe.nutrition.carbs <= 16 && recipe.nutrition.protein >= 5 && (
-              <div className="bg-green-50 border border-green-200 rounded-md p-3 mb-4">
-                <p className="text-sm text-green-800 font-medium">✓ Suitable for bedtime snack</p>
-                <p className="text-xs text-green-600 mt-1">15g carbs + adequate protein</p>
-              </div>
-            )}
+            {recipe.category === "snacks" &&
+              recipe.nutrition.carbs >= 14 &&
+              recipe.nutrition.carbs <= 16 &&
+              recipe.nutrition.protein >= 5 && (
+                <div className="bg-green-50 border border-green-200 rounded-md p-3 mb-4">
+                  <p className="text-sm text-green-800 font-medium">
+                    ✓ Suitable for bedtime snack
+                  </p>
+                  <p className="text-xs text-green-600 mt-1">
+                    15g carbs + adequate protein
+                  </p>
+                </div>
+              )}
             <div className="space-y-2">
               <div className="flex justify-between">
                 <span>Calories</span>
@@ -141,7 +157,7 @@ export default function RecipeDetailPage({ params }: { params: { id: string } })
                     {ingredient.unit && (
                       <span className="font-medium"> {ingredient.unit}</span>
                     )}
-                    {(ingredient.amount || ingredient.unit) && ' '}
+                    {(ingredient.amount || ingredient.unit) && " "}
                     {ingredient.item}
                   </span>
                 </li>
@@ -154,10 +170,10 @@ export default function RecipeDetailPage({ params }: { params: { id: string } })
       {/* Source Attribution */}
       <div className="mt-8 pt-8 border-t border-neutral-200">
         <p className="text-sm text-neutral-600">
-          Recipe adapted from{' '}
-          <a 
-            href={recipe.url} 
-            target="_blank" 
+          Recipe adapted from{" "}
+          <a
+            href={recipe.url}
+            target="_blank"
             rel="noopener noreferrer"
             className="text-primary-600 hover:text-primary-800"
           >
@@ -166,17 +182,17 @@ export default function RecipeDetailPage({ params }: { params: { id: string } })
         </p>
       </div>
     </div>
-  )
+  );
 }
 
 // Generate static params for all recipes
 export async function generateStaticParams() {
-  const recipes = recipeService.getAllRecipes()
+  const recipes = recipeService.getAllRecipes();
   // Generate static params for all recipes
   return recipes.map((recipe) => ({
     id: recipe.id,
-  }))
+  }));
 }
 
 // Enable dynamic rendering for recipes not pre-rendered
-export const dynamicParams = true
+export const dynamicParams = true;

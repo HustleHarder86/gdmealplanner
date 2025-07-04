@@ -151,12 +151,7 @@
       "saturatedFat": 4,
       "sodium": 419
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "grilled"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "grilled"]
   },
   {
     "id": "baked-baked-salmon-with-quinoa-and-wild-rice",
@@ -230,12 +225,7 @@
       "saturatedFat": 4,
       "sodium": 454
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "baked"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "baked"]
   },
   {
     "id": "stir-fried-baked-salmon-with-quinoa-and-wild-rice",
@@ -309,12 +299,7 @@
       "saturatedFat": 4,
       "sodium": 520
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "stir-fried"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "stir-fried"]
   },
   {
     "id": "braised-baked-salmon-with-quinoa-and-wild-rice",
@@ -468,12 +453,7 @@
       "saturatedFat": 3,
       "sodium": 425
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "sheet pan"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "sheet pan"]
   },
   {
     "id": "slow-cooker-baked-salmon-with-quinoa-and-wild-rice",
@@ -707,12 +687,7 @@
       "saturatedFat": 2,
       "sodium": 265
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "stuffed"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "stuffed"]
   },
   {
     "id": "glazed-baked-salmon-with-quinoa-and-wild-rice",
@@ -786,12 +761,7 @@
       "saturatedFat": 1,
       "sodium": 422
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "glazed"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "glazed"]
   },
   {
     "id": "roasted-grilled-chicken-breast-with-quinoa-and-wild-rice",
@@ -864,12 +834,7 @@
       "saturatedFat": 2,
       "sodium": 310
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "roasted"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "roasted"]
   },
   {
     "id": "grilled-grilled-chicken-breast-with-quinoa-and-wild-rice",
@@ -942,12 +907,7 @@
       "saturatedFat": 2,
       "sodium": 527
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "grilled"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "grilled"]
   },
   {
     "id": "baked-grilled-chicken-breast-with-quinoa-and-wild-rice",
@@ -1020,12 +980,7 @@
       "saturatedFat": 1,
       "sodium": 225
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "baked"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "baked"]
   },
   {
     "id": "stir-fried-grilled-chicken-breast-with-quinoa-and-wild-rice",
@@ -1098,12 +1053,7 @@
       "saturatedFat": 4,
       "sodium": 279
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "stir-fried"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "stir-fried"]
   },
   {
     "id": "braised-grilled-chicken-breast-with-quinoa-and-wild-rice",
@@ -1176,12 +1126,7 @@
       "saturatedFat": 1,
       "sodium": 562
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "braised"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "braised"]
   },
   {
     "id": "sheet-pan-grilled-chicken-breast-with-quinoa-and-wild-rice",
@@ -1254,12 +1199,7 @@
       "saturatedFat": 1,
       "sodium": 411
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "sheet pan"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "sheet pan"]
   },
   {
     "id": "slow-cooker-grilled-chicken-breast-with-quinoa-and-wild-rice",
@@ -1332,12 +1272,7 @@
       "saturatedFat": 3,
       "sodium": 591
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "slow cooker"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "slow cooker"]
   },
   {
     "id": "one-pot-grilled-chicken-breast-with-quinoa-and-wild-rice",
@@ -1410,12 +1345,7 @@
       "saturatedFat": 1,
       "sodium": 499
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "one-pot"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "one-pot"]
   },
   {
     "id": "stuffed-grilled-chicken-breast-with-quinoa-and-wild-rice",
@@ -1567,12 +1497,7 @@
       "saturatedFat": 2,
       "sodium": 552
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "glazed"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "glazed"]
   },
   {
     "id": "roasted-turkey-meatballs-with-roasted-vegetables-and-cauliflower-rice",
@@ -1645,12 +1570,7 @@
       "saturatedFat": 4,
       "sodium": 337
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "roasted"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "roasted"]
   },
   {
     "id": "roasted-turkey-meatballs-with-wild-rice",
@@ -1718,12 +1638,7 @@
       "saturatedFat": 2,
       "sodium": 439
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "roasted"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "roasted"]
   },
   {
     "id": "grilled-turkey-meatballs-with-roasted-vegetables-and-cauliflower-rice",
@@ -1796,12 +1711,7 @@
       "saturatedFat": 1,
       "sodium": 550
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "grilled"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "grilled"]
   },
   {
     "id": "grilled-turkey-meatballs-with-wild-rice",
@@ -1869,12 +1779,7 @@
       "saturatedFat": 4,
       "sodium": 372
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "grilled"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "grilled"]
   },
   {
     "id": "grilled-turkey-meatballs-with-mixed-salad-and-roasted-vegetables",
@@ -1947,12 +1852,7 @@
       "saturatedFat": 2,
       "sodium": 405
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "grilled"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "grilled"]
   },
   {
     "id": "baked-turkey-meatballs-with-wild-rice",
@@ -2020,12 +1920,7 @@
       "saturatedFat": 1,
       "sodium": 362
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "baked"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "baked"]
   },
   {
     "id": "baked-turkey-meatballs-with-mixed-salad-and-roasted-vegetables",
@@ -2098,12 +1993,7 @@
       "saturatedFat": 4,
       "sodium": 494
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "baked"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "baked"]
   },
   {
     "id": "stir-fried-turkey-meatballs-with-roasted-vegetables-and-cauliflower-rice",
@@ -2176,12 +2066,7 @@
       "saturatedFat": 2,
       "sodium": 290
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "stir-fried"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "stir-fried"]
   },
   {
     "id": "stir-fried-turkey-meatballs-with-wild-rice",
@@ -2249,12 +2134,7 @@
       "saturatedFat": 1,
       "sodium": 262
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "stir-fried"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "stir-fried"]
   },
   {
     "id": "stir-fried-turkey-meatballs-with-mixed-salad-and-roasted-vegetables",
@@ -2327,12 +2207,7 @@
       "saturatedFat": 3,
       "sodium": 440
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "stir-fried"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "stir-fried"]
   },
   {
     "id": "braised-turkey-meatballs-with-roasted-vegetables-and-cauliflower-rice",
@@ -2405,12 +2280,7 @@
       "saturatedFat": 2,
       "sodium": 565
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "braised"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "braised"]
   },
   {
     "id": "braised-turkey-meatballs-with-wild-rice",
@@ -2478,12 +2348,7 @@
       "saturatedFat": 4,
       "sodium": 384
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "braised"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "braised"]
   },
   {
     "id": "braised-turkey-meatballs-with-mixed-salad-and-roasted-vegetables",
@@ -2556,12 +2421,7 @@
       "saturatedFat": 1,
       "sodium": 218
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "braised"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "braised"]
   },
   {
     "id": "sheet-pan-turkey-meatballs-with-wild-rice",
@@ -2629,12 +2489,7 @@
       "saturatedFat": 2,
       "sodium": 368
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "sheet pan"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "sheet pan"]
   },
   {
     "id": "slow-cooker-turkey-meatballs-with-roasted-vegetables-and-cauliflower-rice",
@@ -2707,12 +2562,7 @@
       "saturatedFat": 4,
       "sodium": 251
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "slow cooker"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "slow cooker"]
   },
   {
     "id": "slow-cooker-turkey-meatballs-with-wild-rice",
@@ -2780,12 +2630,7 @@
       "saturatedFat": 1,
       "sodium": 356
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "slow cooker"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "slow cooker"]
   },
   {
     "id": "slow-cooker-turkey-meatballs-with-mixed-salad-and-roasted-vegetables",
@@ -2858,12 +2703,7 @@
       "saturatedFat": 1,
       "sodium": 252
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "slow cooker"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "slow cooker"]
   },
   {
     "id": "one-pot-turkey-meatballs-with-wild-rice",
@@ -2931,12 +2771,7 @@
       "saturatedFat": 2,
       "sodium": 352
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "one-pot"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "one-pot"]
   },
   {
     "id": "stuffed-turkey-meatballs-with-wild-rice",
@@ -3004,12 +2839,7 @@
       "saturatedFat": 1,
       "sodium": 476
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "stuffed"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "stuffed"]
   },
   {
     "id": "glazed-turkey-meatballs-with-wild-rice",
@@ -3077,12 +2907,7 @@
       "saturatedFat": 4,
       "sodium": 416
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "glazed"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "glazed"]
   },
   {
     "id": "glazed-turkey-meatballs-with-mixed-salad-and-roasted-vegetables",
@@ -3155,12 +2980,7 @@
       "saturatedFat": 4,
       "sodium": 518
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "glazed"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "glazed"]
   },
   {
     "id": "roasted-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
@@ -3233,13 +3053,7 @@
       "saturatedFat": 1,
       "sodium": 345
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "roasted"
-    ]
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "roasted"]
   },
   {
     "id": "roasted-tofu-stir-fry-with-wild-rice",
@@ -3307,13 +3121,7 @@
       "saturatedFat": 2,
       "sodium": 401
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "roasted"
-    ]
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "roasted"]
   },
   {
     "id": "roasted-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -3386,13 +3194,7 @@
       "saturatedFat": 2,
       "sodium": 580
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "roasted"
-    ]
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "roasted"]
   },
   {
     "id": "grilled-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
@@ -3540,13 +3342,7 @@
       "saturatedFat": 3,
       "sodium": 411
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "grilled"
-    ]
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "grilled"]
   },
   {
     "id": "grilled-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -3699,13 +3495,7 @@
       "saturatedFat": 2,
       "sodium": 409
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "baked"
-    ]
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "baked"]
   },
   {
     "id": "baked-tofu-stir-fry-with-wild-rice",
@@ -3773,13 +3563,7 @@
       "saturatedFat": 3,
       "sodium": 463
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "baked"
-    ]
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "baked"]
   },
   {
     "id": "baked-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -3932,13 +3716,7 @@
       "saturatedFat": 2,
       "sodium": 436
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "stir-fried"
-    ]
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "stir-fried"]
   },
   {
     "id": "stir-fried-tofu-stir-fry-with-wild-rice",
@@ -4476,13 +4254,7 @@
       "saturatedFat": 4,
       "sodium": 245
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "sheet pan"
-    ]
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "sheet pan"]
   },
   {
     "id": "sheet-pan-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -4635,13 +4407,7 @@
       "saturatedFat": 2,
       "sodium": 203
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "slow cooker"
-    ]
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "slow cooker"]
   },
   {
     "id": "slow-cooker-tofu-stir-fry-with-wild-rice",
@@ -4869,13 +4635,7 @@
       "saturatedFat": 3,
       "sodium": 469
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "one-pot"
-    ]
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "one-pot"]
   },
   {
     "id": "one-pot-tofu-stir-fry-with-wild-rice",
@@ -4943,13 +4703,7 @@
       "saturatedFat": 2,
       "sodium": 438
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "one-pot"
-    ]
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "one-pot"]
   },
   {
     "id": "one-pot-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -5102,13 +4856,7 @@
       "saturatedFat": 2,
       "sodium": 213
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "stuffed"
-    ]
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "stuffed"]
   },
   {
     "id": "stuffed-tofu-stir-fry-with-wild-rice",
@@ -5176,13 +4924,7 @@
       "saturatedFat": 3,
       "sodium": 209
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "stuffed"
-    ]
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "stuffed"]
   },
   {
     "id": "stuffed-tofu-stir-fry-with-mixed-salad-and-roasted-vegetables",
@@ -5335,13 +5077,7 @@
       "saturatedFat": 1,
       "sodium": 281
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "glazed"
-    ]
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "glazed"]
   },
   {
     "id": "glazed-tofu-stir-fry-with-wild-rice",
@@ -6043,12 +5779,7 @@
       "saturatedFat": 3,
       "sodium": 412
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "slow cooker"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "slow cooker"]
   },
   {
     "id": "one-pot-lean-beef-with-quinoa-and-wild-rice",
@@ -6121,12 +5852,7 @@
       "saturatedFat": 1,
       "sodium": 512
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "one-pot"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "one-pot"]
   },
   {
     "id": "stuffed-lean-beef-with-quinoa-and-wild-rice",
@@ -6199,12 +5925,7 @@
       "saturatedFat": 1,
       "sodium": 282
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "stuffed"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "stuffed"]
   },
   {
     "id": "glazed-lean-beef-with-quinoa-and-wild-rice",
@@ -6277,12 +5998,7 @@
       "saturatedFat": 4,
       "sodium": 504
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "glazed"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "glazed"]
   },
   {
     "id": "roasted-pork-tenderloin-with-quinoa-and-wild-rice",
@@ -6355,12 +6071,7 @@
       "saturatedFat": 2,
       "sodium": 243
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "roasted"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "roasted"]
   },
   {
     "id": "stir-fried-pork-tenderloin-with-quinoa-and-wild-rice",
@@ -6433,12 +6144,7 @@
       "saturatedFat": 2,
       "sodium": 440
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "stir-fried"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "stir-fried"]
   },
   {
     "id": "sheet-pan-pork-tenderloin-with-quinoa-and-wild-rice",
@@ -6511,12 +6217,7 @@
       "saturatedFat": 3,
       "sodium": 542
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "sheet pan"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "sheet pan"]
   },
   {
     "id": "slow-cooker-pork-tenderloin-with-quinoa-and-wild-rice",
@@ -6589,12 +6290,7 @@
       "saturatedFat": 1,
       "sodium": 578
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "slow cooker"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "slow cooker"]
   },
   {
     "id": "stuffed-pork-tenderloin-with-quinoa-and-wild-rice",
@@ -6667,12 +6363,7 @@
       "saturatedFat": 4,
       "sodium": 206
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "stuffed"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "stuffed"]
   },
   {
     "id": "glazed-pork-tenderloin-with-quinoa-and-wild-rice",
@@ -6745,12 +6436,7 @@
       "saturatedFat": 1,
       "sodium": 547
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "glazed"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "glazed"]
   },
   {
     "id": "roasted-white-fish-with-quinoa-and-wild-rice",
@@ -6981,11 +6667,6 @@
       "saturatedFat": 1,
       "sodium": 453
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "baked"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "baked"]
   }
 ]

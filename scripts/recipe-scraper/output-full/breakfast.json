@@ -151,12 +151,7 @@
       "saturatedFat": 2,
       "sodium": 462
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-fiber",
-      "gluten-free",
-      "american"
-    ]
+    "tags": ["30-minutes-or-less", "high-fiber", "gluten-free", "american"]
   },
   {
     "id": "mexican-scrambled-eggs-with-whole-grain-bread-and-berries",
@@ -390,12 +385,7 @@
       "saturatedFat": 3,
       "sodium": 441
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-fiber",
-      "gluten-free",
-      "nordic"
-    ]
+    "tags": ["30-minutes-or-less", "high-fiber", "gluten-free", "nordic"]
   },
   {
     "id": "french-scrambled-eggs-with-whole-grain-bread-and-berries",
@@ -469,12 +459,7 @@
       "saturatedFat": 4,
       "sodium": 558
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-fiber",
-      "gluten-free",
-      "french"
-    ]
+    "tags": ["30-minutes-or-less", "high-fiber", "gluten-free", "french"]
   },
   {
     "id": "italian-scrambled-eggs-with-whole-grain-bread-and-berries",
@@ -548,12 +533,7 @@
       "saturatedFat": 1,
       "sodium": 485
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-fiber",
-      "gluten-free",
-      "italian"
-    ]
+    "tags": ["30-minutes-or-less", "high-fiber", "gluten-free", "italian"]
   },
   {
     "id": "middle-eastern-scrambled-eggs-with-whole-grain-bread-and-berries",
@@ -706,12 +686,7 @@
       "saturatedFat": 4,
       "sodium": 503
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-fiber",
-      "gluten-free",
-      "indian-spiced"
-    ]
+    "tags": ["30-minutes-or-less", "high-fiber", "gluten-free", "indian-spiced"]
   },
   {
     "id": "southwest-scrambled-eggs-with-whole-grain-bread-and-berries",
@@ -1004,12 +979,7 @@
       "saturatedFat": 1,
       "sodium": 459
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-fiber",
-      "gluten-free",
-      "american"
-    ]
+    "tags": ["30-minutes-or-less", "high-fiber", "gluten-free", "american"]
   },
   {
     "id": "american-greek-yogurt-bowl-with-whole-grain-bread-and-berries",
@@ -1076,12 +1046,7 @@
       "saturatedFat": 1,
       "sodium": 498
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-fiber",
-      "gluten-free",
-      "american"
-    ]
+    "tags": ["30-minutes-or-less", "high-fiber", "gluten-free", "american"]
   },
   {
     "id": "mexican-greek-yogurt-bowl-with-berries-and-nuts",
@@ -2096,12 +2061,7 @@
       "saturatedFat": 3,
       "sodium": 244
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-fiber",
-      "gluten-free",
-      "indian-spiced"
-    ]
+    "tags": ["30-minutes-or-less", "high-fiber", "gluten-free", "indian-spiced"]
   },
   {
     "id": "southwest-greek-yogurt-bowl-with-berries-and-nuts",
@@ -2168,12 +2128,7 @@
       "saturatedFat": 1,
       "sodium": 397
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-fiber",
-      "gluten-free",
-      "southwest"
-    ]
+    "tags": ["30-minutes-or-less", "high-fiber", "gluten-free", "southwest"]
   },
   {
     "id": "southwest-greek-yogurt-bowl-with-whole-grain-bread-and-berries",
@@ -2381,12 +2336,7 @@
       "saturatedFat": 4,
       "sodium": 568
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "mediterranean"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "mediterranean"]
   },
   {
     "id": "mediterranean-smoothie-with-spinach",
@@ -2448,12 +2398,7 @@
       "saturatedFat": 2,
       "sodium": 459
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "mediterranean"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "mediterranean"]
   },
   {
     "id": "mediterranean-smoothie-with-chia-seeds",
@@ -2588,12 +2533,7 @@
       "saturatedFat": 2,
       "sodium": 271
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-fiber",
-      "gluten-free",
-      "mediterranean"
-    ]
+    "tags": ["30-minutes-or-less", "high-fiber", "gluten-free", "mediterranean"]
   },
   {
     "id": "mediterranean-smoothie-with-vegetables",
@@ -2723,12 +2663,7 @@
       "saturatedFat": 4,
       "sodium": 220
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "american"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "american"]
   },
   {
     "id": "american-smoothie-with-avocado-and-chia-seeds",
@@ -3082,12 +3017,7 @@
       "saturatedFat": 4,
       "sodium": 417
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-fiber",
-      "gluten-free",
-      "mexican"
-    ]
+    "tags": ["30-minutes-or-less", "high-fiber", "gluten-free", "mexican"]
   },
   {
     "id": "mexican-smoothie-with-chia-seeds",
@@ -3358,11 +3288,7 @@
       "saturatedFat": 1,
       "sodium": 308
     },
-    "tags": [
-      "30-minutes-or-less",
-      "gluten-free",
-      "asian-inspired"
-    ]
+    "tags": ["30-minutes-or-less", "gluten-free", "asian-inspired"]
   },
   {
     "id": "asian-inspired-smoothie-with-avocado-and-chia-seeds",
@@ -3638,11 +3564,7 @@
       "saturatedFat": 4,
       "sodium": 392
     },
-    "tags": [
-      "30-minutes-or-less",
-      "gluten-free",
-      "nordic"
-    ]
+    "tags": ["30-minutes-or-less", "gluten-free", "nordic"]
   },
   {
     "id": "nordic-smoothie-with-spinach",
@@ -3908,12 +3830,7 @@
       "saturatedFat": 2,
       "sodium": 447
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "nordic"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "nordic"]
   },
   {
     "id": "nordic-smoothie-with-vegetables",
@@ -3975,12 +3892,7 @@
       "saturatedFat": 3,
       "sodium": 314
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-fiber",
-      "gluten-free",
-      "nordic"
-    ]
+    "tags": ["30-minutes-or-less", "high-fiber", "gluten-free", "nordic"]
   },
   {
     "id": "french-smoothie-with-berries-and-nuts",
@@ -4115,12 +4027,7 @@
       "saturatedFat": 1,
       "sodium": 276
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-fiber",
-      "gluten-free",
-      "french"
-    ]
+    "tags": ["30-minutes-or-less", "high-fiber", "gluten-free", "french"]
   },
   {
     "id": "french-smoothie-with-spinach",
@@ -4182,12 +4089,7 @@
       "saturatedFat": 4,
       "sodium": 254
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "french"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "french"]
   },
   {
     "id": "french-smoothie-with-avocado-and-chia-seeds",
@@ -4322,11 +4224,7 @@
       "saturatedFat": 2,
       "sodium": 515
     },
-    "tags": [
-      "30-minutes-or-less",
-      "gluten-free",
-      "french"
-    ]
+    "tags": ["30-minutes-or-less", "gluten-free", "french"]
   },
   {
     "id": "italian-smoothie-with-spinach",
@@ -4388,12 +4286,7 @@
       "saturatedFat": 1,
       "sodium": 217
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "italian"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "italian"]
   },
   {
     "id": "italian-smoothie-with-avocado-and-chia-seeds",
@@ -4669,12 +4562,7 @@
       "saturatedFat": 2,
       "sodium": 463
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "italian"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "italian"]
   },
   {
     "id": "middle-eastern-smoothie-with-spinach",
@@ -5159,12 +5047,7 @@
       "saturatedFat": 1,
       "sodium": 238
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "indian-spiced"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "indian-spiced"]
   },
   {
     "id": "indian-spiced-smoothie-with-avocado-and-chia-seeds",
@@ -5440,12 +5323,7 @@
       "saturatedFat": 2,
       "sodium": 341
     },
-    "tags": [
-      "quick",
-      "30-minutes-or-less",
-      "gluten-free",
-      "indian-spiced"
-    ]
+    "tags": ["quick", "30-minutes-or-less", "gluten-free", "indian-spiced"]
   },
   {
     "id": "indian-spiced-smoothie-with-vegetables",
@@ -5507,11 +5385,7 @@
       "saturatedFat": 4,
       "sodium": 257
     },
-    "tags": [
-      "30-minutes-or-less",
-      "gluten-free",
-      "indian-spiced"
-    ]
+    "tags": ["30-minutes-or-less", "gluten-free", "indian-spiced"]
   },
   {
     "id": "southwest-smoothie-with-berries-and-nuts",

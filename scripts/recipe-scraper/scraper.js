@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const https = require('https');
+const fs = require("fs");
+const path = require("path");
+const https = require("https");
 
 // Sample recipe data that mimics what would be scraped from diabetesfoodhub.org
 // These are realistic GD-friendly recipes with proper nutrition values
@@ -10,7 +10,8 @@ const recipes = {
   breakfast: [
     {
       title: "Veggie Egg Scramble with Whole Wheat Toast",
-      description: "Protein-rich breakfast with fiber from vegetables and whole grains",
+      description:
+        "Protein-rich breakfast with fiber from vegetables and whole grains",
       source: "diabetesfoodhub.org",
       url: "https://diabetesfoodhub.org/recipes/veggie-egg-scramble",
       prepTime: 10,
@@ -28,7 +29,7 @@ const recipes = {
         { amount: "2", unit: "slices", item: "whole wheat bread" },
         { amount: "1", unit: "tbsp", item: "olive oil" },
         { amount: "1/4", unit: "tsp", item: "salt" },
-        { amount: "1/4", unit: "tsp", item: "black pepper" }
+        { amount: "1/4", unit: "tsp", item: "black pepper" },
       ],
       instructions: [
         "Heat olive oil in a non-stick pan over medium heat.",
@@ -37,7 +38,7 @@ const recipes = {
         "Whisk eggs with milk, salt, and pepper.",
         "Pour egg mixture into pan with vegetables.",
         "Gently scramble eggs until just set, about 3-4 minutes.",
-        "Toast whole wheat bread and serve alongside scrambled eggs."
+        "Toast whole wheat bread and serve alongside scrambled eggs.",
       ],
       nutrition: {
         calories: 285,
@@ -47,9 +48,9 @@ const recipes = {
         protein: 18,
         fat: 10,
         saturatedFat: 3,
-        sodium: 420
+        sodium: 420,
       },
-      tags: ["high-protein", "vegetarian", "30-minutes-or-less", "high-fiber"]
+      tags: ["high-protein", "vegetarian", "30-minutes-or-less", "high-fiber"],
     },
     {
       title: "Greek Yogurt Parfait with Berries",
@@ -64,17 +65,21 @@ const recipes = {
       image: "images/greek-yogurt-parfait.jpg",
       ingredients: [
         { amount: "1", unit: "cup", item: "plain Greek yogurt (non-fat)" },
-        { amount: "1/2", unit: "cup", item: "mixed berries (blueberries, strawberries)" },
+        {
+          amount: "1/2",
+          unit: "cup",
+          item: "mixed berries (blueberries, strawberries)",
+        },
         { amount: "2", unit: "tbsp", item: "granola (low-sugar)" },
         { amount: "1", unit: "tbsp", item: "chia seeds" },
-        { amount: "1", unit: "tsp", item: "honey" }
+        { amount: "1", unit: "tsp", item: "honey" },
       ],
       instructions: [
         "In a glass or bowl, layer half of the Greek yogurt.",
         "Add half of the berries and half of the granola.",
         "Repeat layers with remaining yogurt, berries, and granola.",
         "Top with chia seeds and drizzle with honey.",
-        "Serve immediately."
+        "Serve immediately.",
       ],
       nutrition: {
         calories: 245,
@@ -84,9 +89,9 @@ const recipes = {
         protein: 20,
         fat: 4,
         saturatedFat: 1,
-        sodium: 85
+        sodium: 85,
       },
-      tags: ["quick", "no-cook", "high-protein", "vegetarian"]
+      tags: ["quick", "no-cook", "high-protein", "vegetarian"],
     },
     {
       title: "Spinach and Cheese Omelet",
@@ -106,7 +111,7 @@ const recipes = {
         { amount: "2", unit: "tbsp", item: "reduced-fat cheddar cheese" },
         { amount: "1", unit: "tsp", item: "olive oil" },
         { amount: "1/8", unit: "tsp", item: "salt" },
-        { amount: "1/8", unit: "tsp", item: "black pepper" }
+        { amount: "1/8", unit: "tsp", item: "black pepper" },
       ],
       instructions: [
         "Beat eggs with water, salt, and pepper in a bowl.",
@@ -116,7 +121,7 @@ const recipes = {
         "Cook until edges set, about 2 minutes.",
         "Add spinach and cheese to one half of the omelet.",
         "Fold omelet in half and cook 1 more minute.",
-        "Slide onto plate and serve immediately."
+        "Slide onto plate and serve immediately.",
       ],
       nutrition: {
         calories: 210,
@@ -126,9 +131,9 @@ const recipes = {
         protein: 16,
         fat: 12,
         saturatedFat: 4,
-        sodium: 380
+        sodium: 380,
       },
-      tags: ["quick", "low-carb-option", "high-protein", "vegetarian"]
+      tags: ["quick", "low-carb-option", "high-protein", "vegetarian"],
     },
     {
       title: "Overnight Oats with Almonds",
@@ -148,14 +153,14 @@ const recipes = {
         { amount: "1", unit: "tbsp", item: "ground flaxseed" },
         { amount: "1/4", unit: "cup", item: "blueberries" },
         { amount: "2", unit: "tbsp", item: "sliced almonds" },
-        { amount: "1/2", unit: "tsp", item: "cinnamon" }
+        { amount: "1/2", unit: "tsp", item: "cinnamon" },
       ],
       instructions: [
         "In a jar or container, combine oats, almond milk, almond butter, flaxseed, and cinnamon.",
         "Stir well to combine all ingredients.",
         "Cover and refrigerate overnight or at least 4 hours.",
         "In the morning, top with blueberries and sliced almonds.",
-        "Enjoy cold or warmed up in the microwave."
+        "Enjoy cold or warmed up in the microwave.",
       ],
       nutrition: {
         calories: 320,
@@ -165,9 +170,9 @@ const recipes = {
         protein: 12,
         fat: 14,
         saturatedFat: 1,
-        sodium: 95
+        sodium: 95,
       },
-      tags: ["make-ahead", "no-cook", "high-fiber", "vegan"]
+      tags: ["make-ahead", "no-cook", "high-fiber", "vegan"],
     },
     {
       title: "Whole Wheat Pancakes with Berry Compote",
@@ -188,7 +193,7 @@ const recipes = {
         { amount: "3/4", unit: "cup", item: "low-fat milk" },
         { amount: "1", unit: "tbsp", item: "olive oil" },
         { amount: "1", unit: "cup", item: "mixed berries" },
-        { amount: "1", unit: "tbsp", item: "water" }
+        { amount: "1", unit: "tbsp", item: "water" },
       ],
       instructions: [
         "Mix flour, baking powder, and salt in a bowl.",
@@ -198,7 +203,7 @@ const recipes = {
         "Pour 1/4 cup batter for each pancake.",
         "Cook until bubbles form and edges set, flip and cook 1-2 minutes more.",
         "For compote, heat berries with water in a small pan until softened.",
-        "Serve pancakes topped with warm berry compote."
+        "Serve pancakes topped with warm berry compote.",
       ],
       nutrition: {
         calories: 290,
@@ -208,9 +213,9 @@ const recipes = {
         protein: 12,
         fat: 8,
         saturatedFat: 2,
-        sodium: 320
+        sodium: 320,
       },
-      tags: ["weekend-breakfast", "vegetarian", "high-fiber"]
+      tags: ["weekend-breakfast", "vegetarian", "high-fiber"],
     },
     {
       title: "Avocado Toast with Poached Egg",
@@ -230,7 +235,7 @@ const recipes = {
         { amount: "1", unit: "tsp", item: "lemon juice" },
         { amount: "1/8", unit: "tsp", item: "red pepper flakes" },
         { amount: "1/8", unit: "tsp", item: "salt" },
-        { amount: "1/8", unit: "tsp", item: "black pepper" }
+        { amount: "1/8", unit: "tsp", item: "black pepper" },
       ],
       instructions: [
         "Toast the bread until golden brown.",
@@ -239,7 +244,7 @@ const recipes = {
         "Poach egg for 3-4 minutes until white is set but yolk is runny.",
         "Mash avocado with lemon juice, salt, and pepper.",
         "Spread avocado mixture on toast.",
-        "Top with poached egg and sprinkle with red pepper flakes."
+        "Top with poached egg and sprinkle with red pepper flakes.",
       ],
       nutrition: {
         calories: 265,
@@ -249,9 +254,9 @@ const recipes = {
         protein: 12,
         fat: 13,
         saturatedFat: 3,
-        sodium: 340
+        sodium: 340,
       },
-      tags: ["quick", "trendy", "high-fiber", "vegetarian"]
+      tags: ["quick", "trendy", "high-fiber", "vegetarian"],
     },
     {
       title: "Cottage Cheese Bowl with Fruit",
@@ -270,14 +275,14 @@ const recipes = {
         { amount: "1/4", unit: "cup", item: "blueberries" },
         { amount: "2", unit: "tbsp", item: "chopped walnuts" },
         { amount: "1", unit: "tsp", item: "honey" },
-        { amount: "1/4", unit: "tsp", item: "cinnamon" }
+        { amount: "1/4", unit: "tsp", item: "cinnamon" },
       ],
       instructions: [
         "Place cottage cheese in a bowl.",
         "Arrange peaches and blueberries on top.",
         "Sprinkle with walnuts and cinnamon.",
         "Drizzle with honey.",
-        "Serve immediately."
+        "Serve immediately.",
       ],
       nutrition: {
         calories: 275,
@@ -287,9 +292,9 @@ const recipes = {
         protein: 24,
         fat: 8,
         saturatedFat: 2,
-        sodium: 460
+        sodium: 460,
       },
-      tags: ["quick", "no-cook", "high-protein", "vegetarian"]
+      tags: ["quick", "no-cook", "high-protein", "vegetarian"],
     },
     {
       title: "Breakfast Quinoa with Berries",
@@ -309,7 +314,7 @@ const recipes = {
         { amount: "1/2", unit: "tsp", item: "cinnamon" },
         { amount: "1", unit: "cup", item: "mixed berries" },
         { amount: "2", unit: "tbsp", item: "chopped almonds" },
-        { amount: "1", unit: "tbsp", item: "maple syrup" }
+        { amount: "1", unit: "tbsp", item: "maple syrup" },
       ],
       instructions: [
         "Rinse quinoa under cold water.",
@@ -317,7 +322,7 @@ const recipes = {
         "Bring to a boil, then reduce heat and simmer for 15 minutes.",
         "Remove from heat and let stand 5 minutes.",
         "Fluff with a fork and divide into bowls.",
-        "Top with berries, almonds, and maple syrup."
+        "Top with berries, almonds, and maple syrup.",
       ],
       nutrition: {
         calories: 260,
@@ -327,9 +332,9 @@ const recipes = {
         protein: 10,
         fat: 7,
         saturatedFat: 1,
-        sodium: 85
+        sodium: 85,
       },
-      tags: ["gluten-free", "vegan", "high-fiber", "30-minutes-or-less"]
+      tags: ["gluten-free", "vegan", "high-fiber", "30-minutes-or-less"],
     },
     {
       title: "Turkey Sausage Breakfast Wrap",
@@ -349,7 +354,7 @@ const recipes = {
         { amount: "1/4", unit: "cup", item: "reduced-fat cheddar cheese" },
         { amount: "1/2", unit: "cup", item: "baby spinach" },
         { amount: "1/4", unit: "cup", item: "salsa" },
-        { amount: "1", unit: "tsp", item: "olive oil" }
+        { amount: "1", unit: "tsp", item: "olive oil" },
       ],
       instructions: [
         "Cook turkey sausage in a skillet until browned, breaking into crumbles.",
@@ -358,7 +363,7 @@ const recipes = {
         "Warm tortillas in microwave for 20 seconds.",
         "Divide sausage, eggs, cheese, and spinach between tortillas.",
         "Top with salsa and roll up tightly.",
-        "Cut in half and serve warm."
+        "Cut in half and serve warm.",
       ],
       nutrition: {
         calories: 295,
@@ -368,9 +373,9 @@ const recipes = {
         protein: 22,
         fat: 11,
         saturatedFat: 4,
-        sodium: 580
+        sodium: 580,
       },
-      tags: ["portable", "high-protein", "meal-prep-friendly"]
+      tags: ["portable", "high-protein", "meal-prep-friendly"],
     },
     {
       title: "Baked Egg Cups with Vegetables",
@@ -392,7 +397,7 @@ const recipes = {
         { amount: "1", unit: "cup", item: "chopped spinach" },
         { amount: "1/4", unit: "cup", item: "reduced-fat cheese" },
         { amount: "1/2", unit: "tsp", item: "salt" },
-        { amount: "1/4", unit: "tsp", item: "black pepper" }
+        { amount: "1/4", unit: "tsp", item: "black pepper" },
       ],
       instructions: [
         "Preheat oven to 350°F and spray muffin tin with cooking spray.",
@@ -401,7 +406,7 @@ const recipes = {
         "Pour egg mixture over vegetables.",
         "Sprinkle cheese on top.",
         "Bake for 18-20 minutes until eggs are set.",
-        "Cool slightly before removing from tin."
+        "Cool slightly before removing from tin.",
       ],
       nutrition: {
         calories: 225,
@@ -411,9 +416,9 @@ const recipes = {
         protein: 14,
         fat: 8,
         saturatedFat: 3,
-        sodium: 340
+        sodium: 340,
       },
-      tags: ["make-ahead", "meal-prep", "portable", "vegetarian"]
+      tags: ["make-ahead", "meal-prep", "portable", "vegetarian"],
     },
     {
       title: "Chia Pudding with Mango",
@@ -432,14 +437,14 @@ const recipes = {
         { amount: "1", unit: "tbsp", item: "maple syrup" },
         { amount: "1/2", unit: "tsp", item: "vanilla extract" },
         { amount: "1/2", unit: "cup", item: "diced mango" },
-        { amount: "2", unit: "tbsp", item: "toasted coconut flakes" }
+        { amount: "2", unit: "tbsp", item: "toasted coconut flakes" },
       ],
       instructions: [
         "In a bowl, whisk together chia seeds, coconut milk, maple syrup, and vanilla.",
         "Let sit for 5 minutes, then whisk again to break up clumps.",
         "Cover and refrigerate overnight or at least 4 hours.",
         "Divide into serving bowls.",
-        "Top with mango and toasted coconut."
+        "Top with mango and toasted coconut.",
       ],
       nutrition: {
         calories: 245,
@@ -449,9 +454,9 @@ const recipes = {
         protein: 8,
         fat: 11,
         saturatedFat: 5,
-        sodium: 45
+        sodium: 45,
       },
-      tags: ["make-ahead", "no-cook", "vegan", "high-fiber"]
+      tags: ["make-ahead", "no-cook", "vegan", "high-fiber"],
     },
     {
       title: "Zucchini Bread Oatmeal",
@@ -471,7 +476,7 @@ const recipes = {
         { amount: "1/2", unit: "tsp", item: "cinnamon" },
         { amount: "1/4", unit: "tsp", item: "nutmeg" },
         { amount: "1", unit: "tbsp", item: "walnuts" },
-        { amount: "1", unit: "tsp", item: "maple syrup" }
+        { amount: "1", unit: "tsp", item: "maple syrup" },
       ],
       instructions: [
         "Bring water to boil in a small saucepan.",
@@ -479,7 +484,7 @@ const recipes = {
         "Cook for 3 minutes, stirring occasionally.",
         "Add grated zucchini, cinnamon, and nutmeg.",
         "Cook 2-3 more minutes until oats are creamy.",
-        "Transfer to bowl and top with walnuts and maple syrup."
+        "Transfer to bowl and top with walnuts and maple syrup.",
       ],
       nutrition: {
         calories: 235,
@@ -489,9 +494,9 @@ const recipes = {
         protein: 8,
         fat: 6,
         saturatedFat: 1,
-        sodium: 25
+        sodium: 25,
       },
-      tags: ["quick", "vegetarian", "hidden-veggies", "high-fiber"]
+      tags: ["quick", "vegetarian", "hidden-veggies", "high-fiber"],
     },
     {
       title: "Smoked Salmon Bagel Thin",
@@ -511,14 +516,14 @@ const recipes = {
         { amount: "2", unit: "slices", item: "tomato" },
         { amount: "2", unit: "slices", item: "red onion" },
         { amount: "1", unit: "tbsp", item: "capers" },
-        { amount: "1", unit: "tsp", item: "fresh dill" }
+        { amount: "1", unit: "tsp", item: "fresh dill" },
       ],
       instructions: [
         "Toast bagel thin until golden.",
         "Spread cream cheese on both halves.",
         "Layer salmon, tomato, and onion on bottom half.",
         "Sprinkle with capers and dill.",
-        "Top with other bagel half or serve open-faced."
+        "Top with other bagel half or serve open-faced.",
       ],
       nutrition: {
         calories: 255,
@@ -528,9 +533,9 @@ const recipes = {
         protein: 18,
         fat: 8,
         saturatedFat: 3,
-        sodium: 680
+        sodium: 680,
       },
-      tags: ["quick", "no-cook", "high-protein", "omega-3"]
+      tags: ["quick", "no-cook", "high-protein", "omega-3"],
     },
     {
       title: "Sweet Potato Hash with Eggs",
@@ -551,7 +556,7 @@ const recipes = {
         { amount: "1", unit: "tbsp", item: "olive oil" },
         { amount: "1/2", unit: "tsp", item: "paprika" },
         { amount: "1/4", unit: "tsp", item: "garlic powder" },
-        { amount: "Salt and pepper to taste", unit: "", item: "" }
+        { amount: "Salt and pepper to taste", unit: "", item: "" },
       ],
       instructions: [
         "Heat olive oil in a large skillet over medium heat.",
@@ -560,7 +565,7 @@ const recipes = {
         "Season with paprika, garlic powder, salt, and pepper.",
         "Make two wells in the hash and crack eggs into them.",
         "Cover and cook until eggs are set to desired doneness.",
-        "Serve hot from the skillet."
+        "Serve hot from the skillet.",
       ],
       nutrition: {
         calories: 270,
@@ -570,9 +575,9 @@ const recipes = {
         protein: 12,
         fat: 10,
         saturatedFat: 2,
-        sodium: 280
+        sodium: 280,
       },
-      tags: ["weekend-breakfast", "vegetarian", "colorful", "high-fiber"]
+      tags: ["weekend-breakfast", "vegetarian", "colorful", "high-fiber"],
     },
     {
       title: "Protein Power Smoothie",
@@ -592,13 +597,13 @@ const recipes = {
         { amount: "1/2", unit: "cup", item: "frozen berries" },
         { amount: "1", unit: "tbsp", item: "almond butter" },
         { amount: "1", unit: "tbsp", item: "ground flaxseed" },
-        { amount: "1/2", unit: "tsp", item: "vanilla extract" }
+        { amount: "1/2", unit: "tsp", item: "vanilla extract" },
       ],
       instructions: [
         "Add all ingredients to a blender.",
         "Blend until smooth and creamy.",
         "Add more almond milk if needed for desired consistency.",
-        "Pour into a glass and enjoy immediately."
+        "Pour into a glass and enjoy immediately.",
       ],
       nutrition: {
         calories: 265,
@@ -608,10 +613,10 @@ const recipes = {
         protein: 18,
         fat: 10,
         saturatedFat: 1,
-        sodium: 180
+        sodium: 180,
       },
-      tags: ["quick", "no-cook", "hidden-veggies", "high-protein"]
-    }
+      tags: ["quick", "no-cook", "hidden-veggies", "high-protein"],
+    },
   ],
   lunch: [
     {
@@ -634,7 +639,7 @@ const recipes = {
         { amount: "1/4", unit: "cup", item: "red onion, sliced" },
         { amount: "2", unit: "tbsp", item: "olive oil" },
         { amount: "2", unit: "tbsp", item: "lemon juice" },
-        { amount: "1", unit: "tsp", item: "dried oregano" }
+        { amount: "1", unit: "tsp", item: "dried oregano" },
       ],
       instructions: [
         "Cook quinoa according to package directions and let cool.",
@@ -644,7 +649,7 @@ const recipes = {
         "In a large bowl, combine greens, tomatoes, cucumber, and onion.",
         "Add cooled quinoa and toss.",
         "Whisk olive oil and lemon juice for dressing.",
-        "Top salad with sliced chicken and drizzle with dressing."
+        "Top salad with sliced chicken and drizzle with dressing.",
       ],
       nutrition: {
         calories: 340,
@@ -654,9 +659,9 @@ const recipes = {
         protein: 28,
         fat: 10,
         saturatedFat: 2,
-        sodium: 320
+        sodium: 320,
       },
-      tags: ["high-protein", "meal-prep-friendly", "gluten-free"]
+      tags: ["high-protein", "meal-prep-friendly", "gluten-free"],
     },
     {
       title: "Turkey and Avocado Wrap",
@@ -676,14 +681,14 @@ const recipes = {
         { amount: "1/4", unit: "cup", item: "shredded lettuce" },
         { amount: "2", unit: "slices", item: "tomato" },
         { amount: "1", unit: "tbsp", item: "hummus" },
-        { amount: "1", unit: "tsp", item: "mustard" }
+        { amount: "1", unit: "tsp", item: "mustard" },
       ],
       instructions: [
         "Lay tortilla flat and spread hummus and mustard.",
         "Layer turkey slices in the center.",
         "Add avocado, lettuce, and tomato.",
         "Roll tightly, tucking in sides as you go.",
-        "Cut in half diagonally and serve."
+        "Cut in half diagonally and serve.",
       ],
       nutrition: {
         calories: 310,
@@ -693,9 +698,9 @@ const recipes = {
         protein: 25,
         fat: 10,
         saturatedFat: 2,
-        sodium: 680
+        sodium: 680,
       },
-      tags: ["quick", "no-cook", "portable", "high-protein"]
+      tags: ["quick", "no-cook", "portable", "high-protein"],
     },
     {
       title: "Lentil Vegetable Soup",
@@ -718,7 +723,7 @@ const recipes = {
         { amount: "2", unit: "cloves", item: "garlic, minced" },
         { amount: "2", unit: "cups", item: "spinach" },
         { amount: "1", unit: "tsp", item: "cumin" },
-        { amount: "1", unit: "tbsp", item: "olive oil" }
+        { amount: "1", unit: "tbsp", item: "olive oil" },
       ],
       instructions: [
         "Heat olive oil in a large pot over medium heat.",
@@ -727,7 +732,7 @@ const recipes = {
         "Add lentils, broth, and tomatoes.",
         "Bring to boil, then simmer for 20-25 minutes until lentils are tender.",
         "Stir in spinach during last 2 minutes.",
-        "Season with salt and pepper to taste."
+        "Season with salt and pepper to taste.",
       ],
       nutrition: {
         calories: 285,
@@ -737,9 +742,9 @@ const recipes = {
         protein: 16,
         fat: 4,
         saturatedFat: 1,
-        sodium: 420
+        sodium: 420,
       },
-      tags: ["vegetarian", "high-fiber", "meal-prep-friendly", "vegan"]
+      tags: ["vegetarian", "high-fiber", "meal-prep-friendly", "vegan"],
     },
     {
       title: "Tuna Salad on Whole Grain Crackers",
@@ -760,14 +765,14 @@ const recipes = {
         { amount: "2", unit: "tbsp", item: "red onion, diced" },
         { amount: "1", unit: "tbsp", item: "pickle relish" },
         { amount: "16", unit: "", item: "whole grain crackers" },
-        { amount: "1", unit: "cup", item: "baby carrots" }
+        { amount: "1", unit: "cup", item: "baby carrots" },
       ],
       instructions: [
         "Drain tuna and place in a bowl.",
         "Mix in Greek yogurt, mayo, celery, onion, and relish.",
         "Season with salt and pepper to taste.",
         "Serve tuna salad with crackers and baby carrots.",
-        "Can be stored in refrigerator for up to 3 days."
+        "Can be stored in refrigerator for up to 3 days.",
       ],
       nutrition: {
         calories: 295,
@@ -777,9 +782,9 @@ const recipes = {
         protein: 26,
         fat: 8,
         saturatedFat: 2,
-        sodium: 580
+        sodium: 580,
       },
-      tags: ["no-cook", "high-protein", "omega-3", "meal-prep-friendly"]
+      tags: ["no-cook", "high-protein", "omega-3", "meal-prep-friendly"],
     },
     {
       title: "Chickpea Buddha Bowl",
@@ -801,7 +806,7 @@ const recipes = {
         { amount: "1/4", unit: "cup", item: "tahini" },
         { amount: "2", unit: "tbsp", item: "lemon juice" },
         { amount: "1", unit: "tbsp", item: "olive oil" },
-        { amount: "1", unit: "tsp", item: "cumin" }
+        { amount: "1", unit: "tsp", item: "cumin" },
       ],
       instructions: [
         "Preheat oven to 400°F.",
@@ -811,7 +816,7 @@ const recipes = {
         "Divide rice between bowls.",
         "Top with kale, roasted chickpeas, sweet potato, and cabbage.",
         "Mix tahini with lemon juice and water for dressing.",
-        "Drizzle dressing over bowls."
+        "Drizzle dressing over bowls.",
       ],
       nutrition: {
         calories: 360,
@@ -821,9 +826,9 @@ const recipes = {
         protein: 15,
         fat: 14,
         saturatedFat: 2,
-        sodium: 380
+        sodium: 380,
       },
-      tags: ["vegan", "high-fiber", "colorful", "plant-based"]
+      tags: ["vegan", "high-fiber", "colorful", "plant-based"],
     },
     {
       title: "Egg Salad Sandwich",
@@ -844,7 +849,7 @@ const recipes = {
         { amount: "2", unit: "tbsp", item: "celery, diced" },
         { amount: "4", unit: "slices", item: "whole grain bread" },
         { amount: "4", unit: "leaves", item: "lettuce" },
-        { amount: "1", unit: "", item: "tomato, sliced" }
+        { amount: "1", unit: "", item: "tomato, sliced" },
       ],
       instructions: [
         "Peel and chop hard-boiled eggs.",
@@ -853,7 +858,7 @@ const recipes = {
         "Toast bread if desired.",
         "Spread egg salad on two slices of bread.",
         "Top with lettuce and tomato.",
-        "Close sandwiches and cut in half."
+        "Close sandwiches and cut in half.",
       ],
       nutrition: {
         calories: 310,
@@ -863,9 +868,9 @@ const recipes = {
         protein: 20,
         fat: 12,
         saturatedFat: 3,
-        sodium: 480
+        sodium: 480,
       },
-      tags: ["vegetarian", "high-protein", "classic", "meal-prep-friendly"]
+      tags: ["vegetarian", "high-protein", "classic", "meal-prep-friendly"],
     },
     {
       title: "Mediterranean Chicken Pita",
@@ -887,7 +892,7 @@ const recipes = {
         { amount: "2", unit: "tbsp", item: "feta cheese" },
         { amount: "1/4", unit: "cup", item: "tzatziki sauce" },
         { amount: "1", unit: "tbsp", item: "olive oil" },
-        { amount: "1", unit: "tsp", item: "oregano" }
+        { amount: "1", unit: "tsp", item: "oregano" },
       ],
       instructions: [
         "Season chicken with oregano, salt, and pepper.",
@@ -896,7 +901,7 @@ const recipes = {
         "Warm pita breads in microwave or on stovetop.",
         "Cut pitas in half to form pockets.",
         "Fill with chicken, cucumber, tomatoes, and onion.",
-        "Top with feta and tzatziki sauce."
+        "Top with feta and tzatziki sauce.",
       ],
       nutrition: {
         calories: 330,
@@ -906,9 +911,9 @@ const recipes = {
         protein: 28,
         fat: 10,
         saturatedFat: 3,
-        sodium: 520
+        sodium: 520,
       },
-      tags: ["mediterranean", "high-protein", "flavorful"]
+      tags: ["mediterranean", "high-protein", "flavorful"],
     },
     {
       title: "Black Bean and Rice Bowl",
@@ -931,14 +936,14 @@ const recipes = {
         { amount: "2", unit: "tbsp", item: "lime juice" },
         { amount: "1", unit: "tbsp", item: "olive oil" },
         { amount: "1", unit: "tsp", item: "cumin" },
-        { amount: "1/4", unit: "", item: "avocado, sliced" }
+        { amount: "1/4", unit: "", item: "avocado, sliced" },
       ],
       instructions: [
         "Heat black beans with cumin in a small pot.",
         "In a skillet, sauté bell pepper and corn in olive oil for 5 minutes.",
         "Divide rice between bowls.",
         "Top with black beans, sautéed vegetables, and onion.",
-        "Drizzle with lime juice and garnish with cilantro and avocado."
+        "Drizzle with lime juice and garnish with cilantro and avocado.",
       ],
       nutrition: {
         calories: 340,
@@ -948,9 +953,9 @@ const recipes = {
         protein: 15,
         fat: 10,
         saturatedFat: 2,
-        sodium: 320
+        sodium: 320,
       },
-      tags: ["vegan", "high-fiber", "budget-friendly", "gluten-free"]
+      tags: ["vegan", "high-fiber", "budget-friendly", "gluten-free"],
     },
     {
       title: "Salmon and Spinach Salad",
@@ -971,7 +976,7 @@ const recipes = {
         { amount: "2", unit: "tbsp", item: "goat cheese" },
         { amount: "2", unit: "tbsp", item: "balsamic vinegar" },
         { amount: "1", unit: "tbsp", item: "olive oil" },
-        { amount: "1", unit: "tsp", item: "honey" }
+        { amount: "1", unit: "tsp", item: "honey" },
       ],
       instructions: [
         "Preheat oven to 400°F.",
@@ -980,7 +985,7 @@ const recipes = {
         "Mix spinach, strawberries, and pecans in a bowl.",
         "Whisk together balsamic vinegar, olive oil, and honey.",
         "Flake salmon over salad.",
-        "Crumble goat cheese on top and drizzle with dressing."
+        "Crumble goat cheese on top and drizzle with dressing.",
       ],
       nutrition: {
         calories: 360,
@@ -990,9 +995,9 @@ const recipes = {
         protein: 28,
         fat: 16,
         saturatedFat: 4,
-        sodium: 280
+        sodium: 280,
       },
-      tags: ["omega-3", "high-protein", "gluten-free", "heart-healthy"]
+      tags: ["omega-3", "high-protein", "gluten-free", "heart-healthy"],
     },
     {
       title: "Veggie Quesadilla",
@@ -1013,7 +1018,7 @@ const recipes = {
         { amount: "2", unit: "tbsp", item: "onion, diced" },
         { amount: "1/4", unit: "cup", item: "spinach" },
         { amount: "2", unit: "tbsp", item: "salsa" },
-        { amount: "1", unit: "tsp", item: "olive oil" }
+        { amount: "1", unit: "tsp", item: "olive oil" },
       ],
       instructions: [
         "Heat olive oil in a skillet over medium heat.",
@@ -1022,7 +1027,7 @@ const recipes = {
         "Top with sautéed vegetables, spinach, and cheese.",
         "Fold tortilla in half.",
         "Cook in skillet for 2-3 minutes per side until golden.",
-        "Cut into wedges and serve with salsa."
+        "Cut into wedges and serve with salsa.",
       ],
       nutrition: {
         calories: 310,
@@ -1032,9 +1037,9 @@ const recipes = {
         protein: 16,
         fat: 10,
         saturatedFat: 4,
-        sodium: 580
+        sodium: 580,
       },
-      tags: ["vegetarian", "quick", "high-fiber", "kid-friendly"]
+      tags: ["vegetarian", "quick", "high-fiber", "kid-friendly"],
     },
     {
       title: "Asian Chicken Lettuce Wraps",
@@ -1056,7 +1061,7 @@ const recipes = {
         { amount: "1", unit: "tbsp", item: "fresh ginger, minced" },
         { amount: "2", unit: "tbsp", item: "low-sodium soy sauce" },
         { amount: "1", unit: "tsp", item: "sesame oil" },
-        { amount: "1", unit: "tbsp", item: "rice vinegar" }
+        { amount: "1", unit: "tbsp", item: "rice vinegar" },
       ],
       instructions: [
         "Heat sesame oil in a large skillet over medium-high heat.",
@@ -1065,7 +1070,7 @@ const recipes = {
         "Stir in water chestnuts, soy sauce, and rice vinegar.",
         "Cook 2-3 more minutes until heated through.",
         "Remove from heat and stir in green onions.",
-        "Spoon mixture into lettuce leaves and serve."
+        "Spoon mixture into lettuce leaves and serve.",
       ],
       nutrition: {
         calories: 290,
@@ -1075,9 +1080,9 @@ const recipes = {
         protein: 24,
         fat: 10,
         saturatedFat: 3,
-        sodium: 480
+        sodium: 480,
       },
-      tags: ["low-carb-option", "gluten-free", "asian-inspired", "light"]
+      tags: ["low-carb-option", "gluten-free", "asian-inspired", "light"],
     },
     {
       title: "Minestrone Soup",
@@ -1100,7 +1105,7 @@ const recipes = {
         { amount: "1", unit: "cup", item: "celery, diced" },
         { amount: "2", unit: "cups", item: "spinach" },
         { amount: "1", unit: "tbsp", item: "Italian seasoning" },
-        { amount: "2", unit: "tbsp", item: "olive oil" }
+        { amount: "2", unit: "tbsp", item: "olive oil" },
       ],
       instructions: [
         "Heat olive oil in a large pot over medium heat.",
@@ -1109,7 +1114,7 @@ const recipes = {
         "Bring to boil, then add pasta.",
         "Simmer for 10-12 minutes until pasta is tender.",
         "Stir in spinach during last 2 minutes.",
-        "Season with salt and pepper to taste."
+        "Season with salt and pepper to taste.",
       ],
       nutrition: {
         calories: 295,
@@ -1119,9 +1124,9 @@ const recipes = {
         protein: 15,
         fat: 8,
         saturatedFat: 1,
-        sodium: 480
+        sodium: 480,
       },
-      tags: ["vegetarian", "italian", "high-fiber", "comfort-food"]
+      tags: ["vegetarian", "italian", "high-fiber", "comfort-food"],
     },
     {
       title: "Turkey Meatball Sub",
@@ -1142,7 +1147,7 @@ const recipes = {
         { amount: "1", unit: "cup", item: "marinara sauce" },
         { amount: "1/4", unit: "cup", item: "part-skim mozzarella" },
         { amount: "1", unit: "tsp", item: "Italian seasoning" },
-        { amount: "2", unit: "cloves", item: "garlic, minced" }
+        { amount: "2", unit: "cloves", item: "garlic, minced" },
       ],
       instructions: [
         "Preheat oven to 400°F.",
@@ -1152,7 +1157,7 @@ const recipes = {
         "Heat marinara sauce in a pot.",
         "Add cooked meatballs to sauce.",
         "Split sub rolls and fill with meatballs and sauce.",
-        "Top with mozzarella and broil for 2 minutes until melted."
+        "Top with mozzarella and broil for 2 minutes until melted.",
       ],
       nutrition: {
         calories: 360,
@@ -1162,9 +1167,9 @@ const recipes = {
         protein: 28,
         fat: 12,
         saturatedFat: 4,
-        sodium: 680
+        sodium: 680,
       },
-      tags: ["comfort-food", "high-protein", "italian-inspired"]
+      tags: ["comfort-food", "high-protein", "italian-inspired"],
     },
     {
       title: "Shrimp and Avocado Salad",
@@ -1186,7 +1191,7 @@ const recipes = {
         { amount: "2", unit: "tbsp", item: "lime juice" },
         { amount: "1", unit: "tbsp", item: "olive oil" },
         { amount: "1", unit: "tsp", item: "chili powder" },
-        { amount: "1/4", unit: "cup", item: "cilantro" }
+        { amount: "1/4", unit: "cup", item: "cilantro" },
       ],
       instructions: [
         "Season shrimp with chili powder, salt, and pepper.",
@@ -1194,7 +1199,7 @@ const recipes = {
         "Cook shrimp for 2-3 minutes per side until pink.",
         "In a large bowl, combine greens, tomatoes, and cucumber.",
         "Top with cooked shrimp and avocado slices.",
-        "Drizzle with lime juice and garnish with cilantro."
+        "Drizzle with lime juice and garnish with cilantro.",
       ],
       nutrition: {
         calories: 280,
@@ -1204,10 +1209,10 @@ const recipes = {
         protein: 24,
         fat: 12,
         saturatedFat: 2,
-        sodium: 320
+        sodium: 320,
       },
-      tags: ["low-calorie", "high-protein", "gluten-free", "refreshing"]
-    }
+      tags: ["low-calorie", "high-protein", "gluten-free", "refreshing"],
+    },
   ],
   dinner: [
     {
@@ -1230,7 +1235,7 @@ const recipes = {
         { amount: "2", unit: "cloves", item: "garlic, minced" },
         { amount: "1", unit: "tbsp", item: "lemon juice" },
         { amount: "1", unit: "tsp", item: "dried herbs" },
-        { amount: "1/2", unit: "cup", item: "brown rice, cooked" }
+        { amount: "1/2", unit: "cup", item: "brown rice, cooked" },
       ],
       instructions: [
         "Preheat oven to 400°F.",
@@ -1240,7 +1245,7 @@ const recipes = {
         "Push vegetables to sides and place cod in center.",
         "Drizzle with remaining oil and lemon juice.",
         "Bake for 10-12 minutes until fish flakes easily.",
-        "Serve with brown rice."
+        "Serve with brown rice.",
       ],
       nutrition: {
         calories: 340,
@@ -1250,9 +1255,9 @@ const recipes = {
         protein: 30,
         fat: 10,
         saturatedFat: 2,
-        sodium: 280
+        sodium: 280,
       },
-      tags: ["low-calorie", "high-protein", "gluten-free", "heart-healthy"]
+      tags: ["low-calorie", "high-protein", "gluten-free", "heart-healthy"],
     },
     {
       title: "Turkey Chili with Beans",
@@ -1274,7 +1279,7 @@ const recipes = {
         { amount: "1", unit: "cup", item: "bell pepper, diced" },
         { amount: "2", unit: "tbsp", item: "chili powder" },
         { amount: "1", unit: "tsp", item: "cumin" },
-        { amount: "2", unit: "cups", item: "low-sodium chicken broth" }
+        { amount: "2", unit: "cups", item: "low-sodium chicken broth" },
       ],
       instructions: [
         "Brown ground turkey in a large pot over medium heat.",
@@ -1283,7 +1288,7 @@ const recipes = {
         "Add tomatoes, beans, and broth.",
         "Bring to boil, then reduce heat and simmer 20 minutes.",
         "Season with salt and pepper to taste.",
-        "Serve hot with optional toppings."
+        "Serve hot with optional toppings.",
       ],
       nutrition: {
         calories: 360,
@@ -1293,9 +1298,14 @@ const recipes = {
         protein: 32,
         fat: 8,
         saturatedFat: 2,
-        sodium: 580
+        sodium: 580,
       },
-      tags: ["high-protein", "high-fiber", "comfort-food", "meal-prep-friendly"]
+      tags: [
+        "high-protein",
+        "high-fiber",
+        "comfort-food",
+        "meal-prep-friendly",
+      ],
     },
     {
       title: "Grilled Chicken with Sweet Potato",
@@ -1315,7 +1325,7 @@ const recipes = {
         { amount: "2", unit: "tbsp", item: "olive oil" },
         { amount: "1", unit: "tsp", item: "paprika" },
         { amount: "1", unit: "tsp", item: "garlic powder" },
-        { amount: "1", unit: "tbsp", item: "fresh herbs" }
+        { amount: "1", unit: "tbsp", item: "fresh herbs" },
       ],
       instructions: [
         "Preheat grill or grill pan to medium-high.",
@@ -1325,7 +1335,7 @@ const recipes = {
         "Grill chicken 6-7 minutes per side until cooked.",
         "Grill sweet potato slices 4-5 minutes per side.",
         "Steam green beans for 5 minutes until tender.",
-        "Serve chicken with sweet potato and green beans."
+        "Serve chicken with sweet potato and green beans.",
       ],
       nutrition: {
         calories: 380,
@@ -1335,9 +1345,9 @@ const recipes = {
         protein: 35,
         fat: 12,
         saturatedFat: 2,
-        sodium: 320
+        sodium: 320,
       },
-      tags: ["balanced", "high-protein", "gluten-free", "colorful"]
+      tags: ["balanced", "high-protein", "gluten-free", "colorful"],
     },
     {
       title: "Vegetarian Stuffed Bell Peppers",
@@ -1359,7 +1369,7 @@ const recipes = {
         { amount: "1/4", unit: "cup", item: "onion, diced" },
         { amount: "1/4", unit: "cup", item: "reduced-fat cheese" },
         { amount: "1", unit: "tsp", item: "cumin" },
-        { amount: "1", unit: "tbsp", item: "olive oil" }
+        { amount: "1", unit: "tbsp", item: "olive oil" },
       ],
       instructions: [
         "Preheat oven to 375°F.",
@@ -1369,7 +1379,7 @@ const recipes = {
         "Stuff peppers with quinoa mixture.",
         "Place in baking dish with 1/4 cup water.",
         "Cover and bake for 25 minutes.",
-        "Top with cheese and bake 5 more minutes uncovered."
+        "Top with cheese and bake 5 more minutes uncovered.",
       ],
       nutrition: {
         calories: 320,
@@ -1379,9 +1389,9 @@ const recipes = {
         protein: 16,
         fat: 10,
         saturatedFat: 3,
-        sodium: 380
+        sodium: 380,
       },
-      tags: ["vegetarian", "colorful", "high-fiber", "gluten-free"]
+      tags: ["vegetarian", "colorful", "high-fiber", "gluten-free"],
     },
     {
       title: "Baked Salmon with Asparagus",
@@ -1402,7 +1412,7 @@ const recipes = {
         { amount: "2", unit: "cloves", item: "garlic, minced" },
         { amount: "1", unit: "", item: "lemon, sliced" },
         { amount: "1", unit: "tsp", item: "dried dill" },
-        { amount: "1/2", unit: "cup", item: "wild rice, cooked" }
+        { amount: "1/2", unit: "cup", item: "wild rice, cooked" },
       ],
       instructions: [
         "Preheat oven to 400°F.",
@@ -1413,7 +1423,7 @@ const recipes = {
         "Brush salmon with remaining oil, garlic, and dill.",
         "Top with lemon slices.",
         "Bake for 15-18 minutes until salmon flakes.",
-        "Serve with wild rice."
+        "Serve with wild rice.",
       ],
       nutrition: {
         calories: 380,
@@ -1423,9 +1433,9 @@ const recipes = {
         protein: 32,
         fat: 16,
         saturatedFat: 3,
-        sodium: 280
+        sodium: 280,
       },
-      tags: ["omega-3", "heart-healthy", "quick", "gluten-free"]
+      tags: ["omega-3", "heart-healthy", "quick", "gluten-free"],
     },
     {
       title: "Lean Beef Stir-Fry",
@@ -1446,7 +1456,7 @@ const recipes = {
         { amount: "1", unit: "tbsp", item: "sesame oil" },
         { amount: "1", unit: "tsp", item: "fresh ginger, minced" },
         { amount: "2", unit: "cloves", item: "garlic, minced" },
-        { amount: "1/2", unit: "cup", item: "brown rice, cooked" }
+        { amount: "1/2", unit: "cup", item: "brown rice, cooked" },
       ],
       instructions: [
         "Heat sesame oil in wok or large skillet over high heat.",
@@ -1456,7 +1466,7 @@ const recipes = {
         "Stir-fry for 3-4 minutes until crisp-tender.",
         "Return beef to pan with soy sauce.",
         "Toss everything together for 1 minute.",
-        "Serve over brown rice."
+        "Serve over brown rice.",
       ],
       nutrition: {
         calories: 360,
@@ -1466,9 +1476,9 @@ const recipes = {
         protein: 30,
         fat: 14,
         saturatedFat: 4,
-        sodium: 480
+        sodium: 480,
       },
-      tags: ["quick", "asian-inspired", "high-protein", "colorful"]
+      tags: ["quick", "asian-inspired", "high-protein", "colorful"],
     },
     {
       title: "Mediterranean Chickpea Stew",
@@ -1491,7 +1501,7 @@ const recipes = {
         { amount: "2", unit: "tbsp", item: "tomato paste" },
         { amount: "1", unit: "tsp", item: "oregano" },
         { amount: "2", unit: "tbsp", item: "olive oil" },
-        { amount: "1/4", unit: "cup", item: "fresh basil" }
+        { amount: "1/4", unit: "cup", item: "fresh basil" },
       ],
       instructions: [
         "Heat olive oil in large pot over medium heat.",
@@ -1501,7 +1511,7 @@ const recipes = {
         "Add tomatoes, chickpeas, and broth.",
         "Bring to boil, then simmer 15 minutes.",
         "Season with salt and pepper.",
-        "Garnish with fresh basil before serving."
+        "Garnish with fresh basil before serving.",
       ],
       nutrition: {
         calories: 310,
@@ -1511,9 +1521,9 @@ const recipes = {
         protein: 15,
         fat: 10,
         saturatedFat: 1,
-        sodium: 480
+        sodium: 480,
       },
-      tags: ["vegetarian", "mediterranean", "high-fiber", "vegan"]
+      tags: ["vegetarian", "mediterranean", "high-fiber", "vegan"],
     },
     {
       title: "Herb-Crusted Pork Tenderloin",
@@ -1533,7 +1543,7 @@ const recipes = {
         { amount: "1", unit: "tbsp", item: "olive oil" },
         { amount: "2", unit: "cups", item: "Brussels sprouts, halved" },
         { amount: "1", unit: "cup", item: "baby potatoes, halved" },
-        { amount: "1", unit: "tbsp", item: "Dijon mustard" }
+        { amount: "1", unit: "tbsp", item: "Dijon mustard" },
       ],
       instructions: [
         "Preheat oven to 425°F.",
@@ -1543,7 +1553,7 @@ const recipes = {
         "Place pork on baking sheet with vegetables.",
         "Roast for 20-25 minutes until pork reaches 145°F.",
         "Let pork rest 5 minutes before slicing.",
-        "Serve with roasted vegetables."
+        "Serve with roasted vegetables.",
       ],
       nutrition: {
         calories: 340,
@@ -1553,9 +1563,9 @@ const recipes = {
         protein: 32,
         fat: 12,
         saturatedFat: 3,
-        sodium: 320
+        sodium: 320,
       },
-      tags: ["lean-protein", "herb-crusted", "elegant", "gluten-free"]
+      tags: ["lean-protein", "herb-crusted", "elegant", "gluten-free"],
     },
     {
       title: "Tofu Buddha Bowl with Peanut Sauce",
@@ -1577,7 +1587,7 @@ const recipes = {
         { amount: "2", unit: "tbsp", item: "peanut butter" },
         { amount: "1", unit: "tbsp", item: "lime juice" },
         { amount: "1", unit: "tbsp", item: "low-sodium soy sauce" },
-        { amount: "1", unit: "tbsp", item: "sesame oil" }
+        { amount: "1", unit: "tbsp", item: "sesame oil" },
       ],
       instructions: [
         "Press tofu to remove excess water.",
@@ -1587,7 +1597,7 @@ const recipes = {
         "Mix peanut butter, lime juice, soy sauce, and water for sauce.",
         "Divide rice between bowls.",
         "Arrange tofu, cabbage, edamame, and carrots on top.",
-        "Drizzle with peanut sauce."
+        "Drizzle with peanut sauce.",
       ],
       nutrition: {
         calories: 380,
@@ -1597,9 +1607,9 @@ const recipes = {
         protein: 22,
         fat: 16,
         saturatedFat: 3,
-        sodium: 420
+        sodium: 420,
       },
-      tags: ["vegan", "plant-based", "colorful", "high-protein"]
+      tags: ["vegan", "plant-based", "colorful", "high-protein"],
     },
     {
       title: "Turkey Meatloaf with Green Beans",
@@ -1620,7 +1630,7 @@ const recipes = {
         { amount: "1/4", unit: "cup", item: "milk" },
         { amount: "2", unit: "tbsp", item: "ketchup" },
         { amount: "1", unit: "tsp", item: "Worcestershire sauce" },
-        { amount: "1", unit: "lb", item: "green beans" }
+        { amount: "1", unit: "lb", item: "green beans" },
       ],
       instructions: [
         "Preheat oven to 350°F.",
@@ -1630,7 +1640,7 @@ const recipes = {
         "Bake for 40-45 minutes until cooked through.",
         "Steam green beans for 5 minutes.",
         "Let meatloaf rest 5 minutes before slicing.",
-        "Serve with green beans."
+        "Serve with green beans.",
       ],
       nutrition: {
         calories: 320,
@@ -1640,9 +1650,9 @@ const recipes = {
         protein: 28,
         fat: 10,
         saturatedFat: 3,
-        sodium: 480
+        sodium: 480,
       },
-      tags: ["comfort-food", "meal-prep-friendly", "family-friendly"]
+      tags: ["comfort-food", "meal-prep-friendly", "family-friendly"],
     },
     {
       title: "Shrimp and Zucchini Noodles",
@@ -1663,7 +1673,7 @@ const recipes = {
         { amount: "2", unit: "tbsp", item: "olive oil" },
         { amount: "1/4", unit: "cup", item: "white wine or broth" },
         { amount: "1", unit: "tbsp", item: "lemon juice" },
-        { amount: "1/4", unit: "cup", item: "fresh basil" }
+        { amount: "1/4", unit: "cup", item: "fresh basil" },
       ],
       instructions: [
         "Heat 1 tbsp olive oil in large skillet.",
@@ -1674,7 +1684,7 @@ const recipes = {
         "Cook 3-4 minutes until noodles are tender.",
         "Add wine and lemon juice.",
         "Return shrimp to pan and toss.",
-        "Garnish with fresh basil."
+        "Garnish with fresh basil.",
       ],
       nutrition: {
         calories: 280,
@@ -1684,9 +1694,9 @@ const recipes = {
         protein: 24,
         fat: 12,
         saturatedFat: 2,
-        sodium: 320
+        sodium: 320,
       },
-      tags: ["low-carb-option", "quick", "light", "gluten-free"]
+      tags: ["low-carb-option", "quick", "light", "gluten-free"],
     },
     {
       title: "Chicken Fajita Bowl",
@@ -1708,7 +1718,7 @@ const recipes = {
         { amount: "2", unit: "tbsp", item: "fajita seasoning" },
         { amount: "1", unit: "tbsp", item: "olive oil" },
         { amount: "2", unit: "tbsp", item: "Greek yogurt" },
-        { amount: "2", unit: "tbsp", item: "salsa" }
+        { amount: "2", unit: "tbsp", item: "salsa" },
       ],
       instructions: [
         "Season chicken with fajita seasoning.",
@@ -1718,7 +1728,7 @@ const recipes = {
         "Add peppers and onions to pan.",
         "Cook 5 minutes until softened.",
         "Divide rice between bowls.",
-        "Top with chicken, vegetables, beans, yogurt, and salsa."
+        "Top with chicken, vegetables, beans, yogurt, and salsa.",
       ],
       nutrition: {
         calories: 360,
@@ -1728,9 +1738,9 @@ const recipes = {
         protein: 32,
         fat: 10,
         saturatedFat: 2,
-        sodium: 580
+        sodium: 580,
       },
-      tags: ["mexican-inspired", "colorful", "high-protein", "customizable"]
+      tags: ["mexican-inspired", "colorful", "high-protein", "customizable"],
     },
     {
       title: "Baked Eggplant Parmesan",
@@ -1751,7 +1761,7 @@ const recipes = {
         { amount: "1/2", unit: "cup", item: "whole wheat breadcrumbs" },
         { amount: "1", unit: "", item: "egg, beaten" },
         { amount: "2", unit: "cups", item: "arugula" },
-        { amount: "1", unit: "tbsp", item: "olive oil" }
+        { amount: "1", unit: "tbsp", item: "olive oil" },
       ],
       instructions: [
         "Preheat oven to 375°F.",
@@ -1761,7 +1771,7 @@ const recipes = {
         "In baking dish, layer sauce, eggplant, and cheeses.",
         "Repeat layers.",
         "Bake 15 minutes until cheese melts.",
-        "Serve over arugula tossed with olive oil."
+        "Serve over arugula tossed with olive oil.",
       ],
       nutrition: {
         calories: 320,
@@ -1771,9 +1781,9 @@ const recipes = {
         protein: 18,
         fat: 12,
         saturatedFat: 5,
-        sodium: 620
+        sodium: 620,
       },
-      tags: ["italian", "vegetarian", "comfort-food", "high-fiber"]
+      tags: ["italian", "vegetarian", "comfort-food", "high-fiber"],
     },
     {
       title: "Asian Glazed Meatballs with Broccoli",
@@ -1795,7 +1805,7 @@ const recipes = {
         { amount: "1", unit: "tbsp", item: "honey" },
         { amount: "1", unit: "tsp", item: "sesame oil" },
         { amount: "2", unit: "cloves", item: "garlic, minced" },
-        { amount: "1/2", unit: "cup", item: "brown rice, cooked" }
+        { amount: "1/2", unit: "cup", item: "brown rice, cooked" },
       ],
       instructions: [
         "Preheat oven to 400°F.",
@@ -1805,7 +1815,7 @@ const recipes = {
         "Steam broccoli for 5 minutes.",
         "Mix soy sauce, honey, sesame oil, and remaining garlic.",
         "Toss cooked meatballs in glaze.",
-        "Serve over rice with broccoli."
+        "Serve over rice with broccoli.",
       ],
       nutrition: {
         calories: 360,
@@ -1815,10 +1825,10 @@ const recipes = {
         protein: 28,
         fat: 14,
         saturatedFat: 5,
-        sodium: 520
+        sodium: 520,
       },
-      tags: ["asian-inspired", "kid-friendly", "balanced"]
-    }
+      tags: ["asian-inspired", "kid-friendly", "balanced"],
+    },
   ],
   snacks: [
     {
@@ -1835,13 +1845,13 @@ const recipes = {
       ingredients: [
         { amount: "1", unit: "small", item: "apple, sliced" },
         { amount: "1", unit: "tbsp", item: "almond butter" },
-        { amount: "1/8", unit: "tsp", item: "cinnamon" }
+        { amount: "1/8", unit: "tsp", item: "cinnamon" },
       ],
       instructions: [
         "Wash and slice apple.",
         "Arrange on plate.",
         "Serve with almond butter for dipping.",
-        "Sprinkle with cinnamon if desired."
+        "Sprinkle with cinnamon if desired.",
       ],
       nutrition: {
         calories: 165,
@@ -1851,9 +1861,9 @@ const recipes = {
         protein: 4,
         fat: 9,
         saturatedFat: 1,
-        sodium: 35
+        sodium: 35,
       },
-      tags: ["quick", "no-cook", "portable", "kid-friendly"]
+      tags: ["quick", "no-cook", "portable", "kid-friendly"],
     },
     {
       title: "Greek Yogurt with Berries",
@@ -1869,12 +1879,12 @@ const recipes = {
       ingredients: [
         { amount: "1/2", unit: "cup", item: "plain Greek yogurt" },
         { amount: "1/4", unit: "cup", item: "mixed berries" },
-        { amount: "1", unit: "tsp", item: "chia seeds" }
+        { amount: "1", unit: "tsp", item: "chia seeds" },
       ],
       instructions: [
         "Place yogurt in a small bowl.",
         "Top with berries and chia seeds.",
-        "Enjoy immediately."
+        "Enjoy immediately.",
       ],
       nutrition: {
         calories: 120,
@@ -1884,9 +1894,9 @@ const recipes = {
         protein: 12,
         fat: 3,
         saturatedFat: 1,
-        sodium: 40
+        sodium: 40,
       },
-      tags: ["quick", "high-protein", "no-cook", "probiotic"]
+      tags: ["quick", "high-protein", "no-cook", "probiotic"],
     },
     {
       title: "Hummus with Veggie Sticks",
@@ -1903,12 +1913,12 @@ const recipes = {
         { amount: "1/4", unit: "cup", item: "hummus" },
         { amount: "1/2", unit: "cup", item: "carrot sticks" },
         { amount: "1/2", unit: "cup", item: "cucumber slices" },
-        { amount: "1/2", unit: "cup", item: "bell pepper strips" }
+        { amount: "1/2", unit: "cup", item: "bell pepper strips" },
       ],
       instructions: [
         "Place hummus in center of plate.",
         "Arrange vegetables around hummus.",
-        "Use vegetables for dipping."
+        "Use vegetables for dipping.",
       ],
       nutrition: {
         calories: 140,
@@ -1918,9 +1928,9 @@ const recipes = {
         protein: 6,
         fat: 5,
         saturatedFat: 1,
-        sodium: 240
+        sodium: 240,
       },
-      tags: ["vegan", "high-fiber", "colorful", "no-cook"]
+      tags: ["vegan", "high-fiber", "colorful", "no-cook"],
     },
     {
       title: "Cottage Cheese with Cucumber",
@@ -1937,13 +1947,13 @@ const recipes = {
         { amount: "1/2", unit: "cup", item: "low-fat cottage cheese" },
         { amount: "1/2", unit: "cup", item: "cucumber, diced" },
         { amount: "1", unit: "tsp", item: "fresh dill" },
-        { amount: "1/8", unit: "tsp", item: "black pepper" }
+        { amount: "1/8", unit: "tsp", item: "black pepper" },
       ],
       instructions: [
         "Place cottage cheese in bowl.",
         "Top with cucumber.",
         "Sprinkle with dill and pepper.",
-        "Mix gently and enjoy."
+        "Mix gently and enjoy.",
       ],
       nutrition: {
         calories: 100,
@@ -1953,9 +1963,9 @@ const recipes = {
         protein: 13,
         fat: 2,
         saturatedFat: 1,
-        sodium: 320
+        sodium: 320,
       },
-      tags: ["high-protein", "low-calorie", "refreshing", "quick"]
+      tags: ["high-protein", "low-calorie", "refreshing", "quick"],
     },
     {
       title: "Trail Mix Energy Bites",
@@ -1974,14 +1984,14 @@ const recipes = {
         { amount: "1/4", unit: "cup", item: "ground flaxseed" },
         { amount: "2", unit: "tbsp", item: "mini chocolate chips" },
         { amount: "2", unit: "tbsp", item: "dried cranberries" },
-        { amount: "2", unit: "tbsp", item: "honey" }
+        { amount: "2", unit: "tbsp", item: "honey" },
       ],
       instructions: [
         "Mix all ingredients in a bowl.",
         "Chill mixture for 30 minutes.",
         "Roll into 12 small balls.",
         "Store in refrigerator.",
-        "Each serving is 2 balls."
+        "Each serving is 2 balls.",
       ],
       nutrition: {
         calories: 180,
@@ -1991,16 +2001,16 @@ const recipes = {
         protein: 6,
         fat: 9,
         saturatedFat: 2,
-        sodium: 30
+        sodium: 30,
       },
-      tags: ["make-ahead", "portable", "no-bake", "kid-friendly"]
-    }
-  ]
+      tags: ["make-ahead", "portable", "no-bake", "kid-friendly"],
+    },
+  ],
 };
 
 // Create output directories
-const outputDir = path.join(__dirname, 'output');
-const imagesDir = path.join(outputDir, 'images');
+const outputDir = path.join(__dirname, "output");
+const imagesDir = path.join(outputDir, "images");
 
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
@@ -2013,7 +2023,7 @@ if (!fs.existsSync(imagesDir)) {
 function downloadPlaceholderImage(imagePath, recipeName) {
   // For now, just create an empty file as placeholder
   const fullPath = path.join(outputDir, imagePath);
-  fs.writeFileSync(fullPath, '');
+  fs.writeFileSync(fullPath, "");
   console.log(`Created placeholder for: ${imagePath}`);
 }
 
@@ -2023,20 +2033,20 @@ let recipesByCategory = {
   breakfast: [],
   lunch: [],
   dinner: [],
-  snacks: []
+  snacks: [],
 };
 
 // Collect all recipes
 for (const [category, categoryRecipes] of Object.entries(recipes)) {
   for (const recipe of categoryRecipes) {
     // Add ID
-    recipe.id = recipe.title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-    
+    recipe.id = recipe.title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+
     // Download placeholder image
     if (recipe.image) {
       downloadPlaceholderImage(recipe.image, recipe.title);
     }
-    
+
     // Add to collections
     allRecipes.push(recipe);
     recipesByCategory[category].push(recipe);
@@ -2045,15 +2055,15 @@ for (const [category, categoryRecipes] of Object.entries(recipes)) {
 
 // Save all recipes
 fs.writeFileSync(
-  path.join(outputDir, 'recipes.json'),
-  JSON.stringify(allRecipes, null, 2)
+  path.join(outputDir, "recipes.json"),
+  JSON.stringify(allRecipes, null, 2),
 );
 
 // Save by category
 for (const [category, categoryRecipes] of Object.entries(recipesByCategory)) {
   fs.writeFileSync(
     path.join(outputDir, `${category}.json`),
-    JSON.stringify(categoryRecipes, null, 2)
+    JSON.stringify(categoryRecipes, null, 2),
   );
 }
 
@@ -2064,28 +2074,28 @@ const summary = {
     breakfast: recipesByCategory.breakfast.length,
     lunch: recipesByCategory.lunch.length,
     dinner: recipesByCategory.dinner.length,
-    snacks: recipesByCategory.snacks.length
+    snacks: recipesByCategory.snacks.length,
   },
-  timestamp: new Date().toISOString()
+  timestamp: new Date().toISOString(),
 };
 
 fs.writeFileSync(
-  path.join(outputDir, 'summary.json'),
-  JSON.stringify(summary, null, 2)
+  path.join(outputDir, "summary.json"),
+  JSON.stringify(summary, null, 2),
 );
 
-console.log('\nRecipe Generation Complete!');
-console.log('==========================');
+console.log("\nRecipe Generation Complete!");
+console.log("==========================");
 console.log(`Total recipes: ${allRecipes.length}`);
 console.log(`Breakfast: ${recipesByCategory.breakfast.length}`);
 console.log(`Lunch: ${recipesByCategory.lunch.length}`);
 console.log(`Dinner: ${recipesByCategory.dinner.length}`);
 console.log(`Snacks: ${recipesByCategory.snacks.length}`);
-console.log('\nFiles created:');
-console.log('- output/recipes.json (all recipes)');
-console.log('- output/breakfast.json');
-console.log('- output/lunch.json');
-console.log('- output/dinner.json');
-console.log('- output/snacks.json');
-console.log('- output/summary.json');
-console.log('- output/images/ (placeholder images)');
+console.log("\nFiles created:");
+console.log("- output/recipes.json (all recipes)");
+console.log("- output/breakfast.json");
+console.log("- output/lunch.json");
+console.log("- output/dinner.json");
+console.log("- output/snacks.json");
+console.log("- output/summary.json");
+console.log("- output/images/ (placeholder images)");

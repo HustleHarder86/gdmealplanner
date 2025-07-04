@@ -1,56 +1,52 @@
 interface SkeletonProps {
-  className?: string
-  variant?: 'text' | 'circular' | 'rectangular'
-  width?: string | number
-  height?: string | number
-  count?: number
+  className?: string;
+  variant?: "text" | "circular" | "rectangular";
+  width?: string | number;
+  height?: string | number;
+  count?: number;
 }
 
 export default function Skeleton({
-  className = '',
-  variant = 'text',
+  className = "",
+  variant = "text",
   width,
   height,
   count = 1,
 }: SkeletonProps) {
-  const baseStyles = 'animate-pulse bg-neutral-200'
-  
+  const baseStyles = "animate-pulse bg-neutral-200";
+
   const variants = {
-    text: 'rounded',
-    circular: 'rounded-full',
-    rectangular: 'rounded-lg',
-  }
-  
+    text: "rounded",
+    circular: "rounded-full",
+    rectangular: "rounded-lg",
+  };
+
   const defaultHeights = {
-    text: 'h-4',
-    circular: 'h-12 w-12',
-    rectangular: 'h-20',
-  }
-  
+    text: "h-4",
+    circular: "h-12 w-12",
+    rectangular: "h-20",
+  };
+
   const skeletonStyle = {
     width: width,
     height: height,
-  }
-  
+  };
+
   const elements = Array.from({ length: count }, (_, i) => (
     <div
       key={i}
       className={`
         ${baseStyles}
         ${variants[variant]}
-        ${!width && variant === 'text' ? 'w-full' : ''}
-        ${!height ? defaultHeights[variant] : ''}
+        ${!width && variant === "text" ? "w-full" : ""}
+        ${!height ? defaultHeights[variant] : ""}
         ${className}
       `}
       style={skeletonStyle}
     />
-  ))
-  
-  return count > 1 ? (
-    <div className="space-y-2">{elements}</div>
-  ) : (
-    elements[0]
-  )
+  ));
+
+  return count > 1 ? <div className="space-y-2">{elements}</div> : elements[0];
 }
 
 // Preset skeleton components
@@ -67,7 +63,7 @@ export function RecipeCardSkeleton() {
       </div>
       <Skeleton variant="rectangular" height={36} />
     </div>
-  )
+  );
 }
 
 export function MealPlanSkeleton() {
@@ -79,5 +75,5 @@ export function MealPlanSkeleton() {
         ))}
       </div>
     </div>
-  )
+  );
 }

@@ -1,8 +1,8 @@
-import Link from 'next/link'
-import { Recipe } from '@/lib/types'
+import Link from "next/link";
+import { Recipe } from "@/lib/types";
 
 interface RecipeCardProps {
-  recipe: Recipe
+  recipe: Recipe;
 }
 
 export default function RecipeCard({ recipe }: RecipeCardProps) {
@@ -11,10 +11,10 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
       {/* Recipe Image Placeholder */}
       <div className="w-full h-48 bg-gradient-to-br from-primary-100 to-primary-200 rounded-lg mb-4 flex items-center justify-center">
         <span className="text-4xl">
-          {recipe.category === 'breakfast' && '🍳'}
-          {recipe.category === 'lunch' && '🥗'}
-          {recipe.category === 'dinner' && '🍽️'}
-          {recipe.category === 'snacks' && '🥜'}
+          {recipe.category === "breakfast" && "🍳"}
+          {recipe.category === "lunch" && "🥗"}
+          {recipe.category === "dinner" && "🍽️"}
+          {recipe.category === "snacks" && "🥜"}
         </span>
       </div>
 
@@ -27,15 +27,21 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
       {/* Quick Stats */}
       <div className="grid grid-cols-3 gap-2 mb-4 text-sm">
         <div className="text-center">
-          <div className="font-semibold text-primary-600">{recipe.nutrition.carbs}g</div>
+          <div className="font-semibold text-primary-600">
+            {recipe.nutrition.carbs}g
+          </div>
           <div className="text-neutral-500">Carbs</div>
         </div>
         <div className="text-center">
-          <div className="font-semibold text-primary-600">{recipe.nutrition.protein}g</div>
+          <div className="font-semibold text-primary-600">
+            {recipe.nutrition.protein}g
+          </div>
           <div className="text-neutral-500">Protein</div>
         </div>
         <div className="text-center">
-          <div className="font-semibold text-primary-600">{recipe.prepTime + recipe.cookTime}m</div>
+          <div className="font-semibold text-primary-600">
+            {recipe.prepTime + recipe.cookTime}m
+          </div>
           <div className="text-neutral-500">Time</div>
         </div>
       </div>
@@ -60,5 +66,5 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
         View Recipe
       </Link>
     </div>
-  )
+  );
 }

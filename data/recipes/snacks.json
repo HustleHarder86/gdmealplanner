@@ -3,7 +3,6 @@
     "title": "Apple Slices with Almond Butter",
     "description": "Simple snack with fiber and healthy fats",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/apple-almond-butter",
     "prepTime": 5,
     "cookTime": 0,
     "totalTime": 5,
@@ -49,13 +48,14 @@
       "portable",
       "kid-friendly"
     ],
-    "id": "apple-slices-with-almond-butter"
+    "id": "apple-slices-with-almond-butter",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Greek Yogurt with Berries",
     "description": "Protein-rich snack with antioxidants",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/yogurt-berries-snack",
     "prepTime": 2,
     "cookTime": 0,
     "totalTime": 2,
@@ -100,13 +100,14 @@
       "no-cook",
       "probiotic"
     ],
-    "id": "greek-yogurt-with-berries"
+    "id": "greek-yogurt-with-berries",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Hummus with Veggie Sticks",
     "description": "Crunchy vegetables with protein-packed dip",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/hummus-veggie-sticks",
     "prepTime": 5,
     "cookTime": 0,
     "totalTime": 5,
@@ -156,13 +157,14 @@
       "colorful",
       "no-cook"
     ],
-    "id": "hummus-with-veggie-sticks"
+    "id": "hummus-with-veggie-sticks",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Cottage Cheese with Cucumber",
     "description": "Light and refreshing high-protein snack",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/cottage-cheese-cucumber",
     "prepTime": 3,
     "cookTime": 0,
     "totalTime": 3,
@@ -213,13 +215,14 @@
       "refreshing",
       "quick"
     ],
-    "id": "cottage-cheese-with-cucumber"
+    "id": "cottage-cheese-with-cucumber",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Trail Mix Energy Bites",
     "description": "No-bake energy balls with nuts and dried fruit",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/trail-mix-bites",
     "prepTime": 10,
     "cookTime": 0,
     "totalTime": 10,
@@ -281,6 +284,8 @@
       "no-bake",
       "kid-friendly"
     ],
-    "id": "trail-mix-energy-bites"
+    "id": "trail-mix-energy-bites",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   }
 ]

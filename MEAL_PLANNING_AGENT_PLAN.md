@@ -1,21 +1,24 @@
 # Meal Planning Agent - Implementation Plan
 
 ## Overview
+
 Create a comprehensive meal planning system that generates 7-day meal plans following Halton Healthcare guidelines, with smart grocery lists and meal variety.
 
 ## Core Features
 
 ### 1. Meal Plan Generation
+
 - **7-day meal plans** with 3 meals + 3 snacks per day
 - **Daily targets**: ~180g carbs minimum
 - **Meal spacing**: 4-6 hours between meals
 - **Medical compliance**: All meals follow exact carb guidelines
   - Breakfast: 30g (25-35g range)
-  - Lunch/Dinner: 45g (40-50g range)  
+  - Lunch/Dinner: 45g (40-50g range)
   - Snacks: 15-30g
   - Bedtime snack: 15g + protein
 
 ### 2. Smart Grocery List
+
 - **Intelligent combining**: Merge duplicate ingredients across recipes
 - **Quantity aggregation**: Sum up amounts (e.g., 3 recipes need chicken = total pounds)
 - **Category organization**: Group by store sections (produce, dairy, proteins, etc.)
@@ -23,6 +26,7 @@ Create a comprehensive meal planning system that generates 7-day meal plans foll
 - **Shopping mode**: Check off items as you shop
 
 ### 3. Meal Variety Algorithm
+
 - **No repeat main proteins** within 3 days
 - **Cuisine variety**: Mix different cuisine types throughout week
 - **Cooking method variety**: Not all grilled/baked on same day
@@ -36,71 +40,72 @@ Create a comprehensive meal planning system that generates 7-day meal plans foll
 
 ```typescript
 interface MealPlan {
-  id: string
-  userId: string
-  startDate: Date
-  endDate: Date
-  days: DayPlan[]
-  groceryList: GroceryList
-  preferences: MealPlanPreferences
-  createdAt: Date
+  id: string;
+  userId: string;
+  startDate: Date;
+  endDate: Date;
+  days: DayPlan[];
+  groceryList: GroceryList;
+  preferences: MealPlanPreferences;
+  createdAt: Date;
 }
 
 interface DayPlan {
-  date: Date
+  date: Date;
   meals: {
-    breakfast: Recipe
-    morningSnack: Recipe
-    lunch: Recipe
-    afternoonSnack: Recipe
-    dinner: Recipe
-    eveningSnack: Recipe // Must have 15g carbs + protein
-  }
-  totalCarbs: number
-  nutritionSummary: NutritionSummary
+    breakfast: Recipe;
+    morningSnack: Recipe;
+    lunch: Recipe;
+    afternoonSnack: Recipe;
+    dinner: Recipe;
+    eveningSnack: Recipe; // Must have 15g carbs + protein
+  };
+  totalCarbs: number;
+  nutritionSummary: NutritionSummary;
 }
 
 interface GroceryList {
-  id: string
-  mealPlanId: string
-  categories: GroceryCategory[]
-  totalItems: number
-  checkedItems: string[]
+  id: string;
+  mealPlanId: string;
+  categories: GroceryCategory[];
+  totalItems: number;
+  checkedItems: string[];
 }
 
 interface GroceryCategory {
-  name: string // "Produce", "Dairy", "Proteins", etc.
-  items: GroceryItem[]
+  name: string; // "Produce", "Dairy", "Proteins", etc.
+  items: GroceryItem[];
 }
 
 interface GroceryItem {
-  id: string
-  name: string
-  quantity: number
-  unit: string
-  fromRecipes: string[] // Recipe IDs using this item
-  checked: boolean
+  id: string;
+  name: string;
+  quantity: number;
+  unit: string;
+  fromRecipes: string[]; // Recipe IDs using this item
+  checked: boolean;
 }
 
 interface MealPlanPreferences {
-  avoidIngredients: string[]
-  dietaryRestrictions: string[]
-  cuisinePreferences: string[]
-  cookingTimePreference: 'quick' | 'moderate' | 'any'
-  servingsNeeded: number
+  avoidIngredients: string[];
+  dietaryRestrictions: string[];
+  cuisinePreferences: string[];
+  cookingTimePreference: "quick" | "moderate" | "any";
+  servingsNeeded: number;
 }
 ```
 
 ### Algorithm Components
 
 #### 1. Meal Selection Algorithm
+
 ```typescript
 function selectMealsForWeek(preferences: MealPlanPreferences): DayPlan[] {
   // Track used recipes to ensure variety
-  const usedRecipes = new Set<string>()
-  const usedProteins = new Map<string, Date>() // Protein -> last used date
-  const usedCuisines = new Map<string, number>() // Cuisine -> count
-  
+  const usedRecipes = new Set<string>();
+  const usedProteins = new Map<string, Date>(); // Protein -> last used date
+  const usedCuisines = new Map<string, number>(); // Cuisine -> count
+
   // For each day:
   // 1. Select breakfast (rotate bases: eggs, oats, yogurt, etc.)
   // 2. Select lunch/dinner (ensure protein variety)
@@ -111,6 +116,7 @@ function selectMealsForWeek(preferences: MealPlanPreferences): DayPlan[] {
 ```
 
 #### 2. Grocery Aggregation Algorithm
+
 ```typescript
 function generateSmartGroceryList(mealPlan: MealPlan): GroceryList {
   // 1. Extract all ingredients from all recipes
@@ -123,6 +129,7 @@ function generateSmartGroceryList(mealPlan: MealPlan): GroceryList {
 ```
 
 #### 3. Variety Scoring System
+
 ```typescript
 function calculateVarietyScore(mealPlan: MealPlan): number {
   // Score based on:
@@ -138,12 +145,14 @@ function calculateVarietyScore(mealPlan: MealPlan): number {
 ## UI Components Needed
 
 ### 1. Meal Plan Calendar View
+
 - **Weekly grid** showing all meals
 - **Drag-and-drop** to swap meals
 - **Quick stats** per day (carbs, calories)
 - **Visual indicators** for variety
 
 ### 2. Meal Plan Generator
+
 - **Preferences form**
   - Dietary restrictions
   - Avoided ingredients
@@ -153,6 +162,7 @@ function calculateVarietyScore(mealPlan: MealPlan): number {
 - **Regenerate options** for specific days/meals
 
 ### 3. Smart Grocery List
+
 - **Categorized view** (Produce, Dairy, etc.)
 - **Check-off functionality**
 - **Add custom items**
@@ -160,6 +170,7 @@ function calculateVarietyScore(mealPlan: MealPlan): number {
 - **Store preference** (organize by your store's layout)
 
 ### 4. Meal Swap Interface
+
 - **"Find alternatives" button** on each meal
 - **Filter alternatives** by cooking time, ingredients
 - **Nutrition comparison** when swapping
@@ -168,6 +179,7 @@ function calculateVarietyScore(mealPlan: MealPlan): number {
 ## Implementation Steps
 
 ### Phase 1: Core Algorithm (Week 1)
+
 1. Create meal selection algorithm
 2. Implement variety scoring
 3. Build grocery aggregation logic
@@ -175,6 +187,7 @@ function calculateVarietyScore(mealPlan: MealPlan): number {
 5. Write comprehensive tests
 
 ### Phase 2: UI Components (Week 2)
+
 1. Build meal plan calendar component
 2. Create preferences form
 3. Implement grocery list UI
@@ -182,6 +195,7 @@ function calculateVarietyScore(mealPlan: MealPlan): number {
 5. Create loading/error states
 
 ### Phase 3: Integration & Polish (Week 3)
+
 1. Connect to recipe service
 2. Add local storage for offline access
 3. Implement sharing features
@@ -214,22 +228,26 @@ Response: { success: boolean }
 ## Testing Strategy
 
 ### Unit Tests
+
 - Meal selection algorithm with various preferences
 - Variety scoring calculations
 - Grocery aggregation logic
 - Unit conversion utilities
 
 ### Integration Tests
+
 - Full meal plan generation
 - Grocery list generation from meal plan
 - Meal swapping with constraint validation
 
 ### E2E Tests
+
 - Complete flow: preferences -> generation -> grocery list
 - Meal swapping and regeneration
 - Grocery list checking and exporting
 
 ## Success Metrics
+
 - All generated meals meet medical guidelines
 - Variety score > 80 for all meal plans
 - Grocery list aggregation reduces items by 30%+
@@ -237,6 +255,7 @@ Response: { success: boolean }
 - User can generate plan in < 10 seconds
 
 ## Next Steps After Deployment
+
 1. Add meal prep mode (batch cooking)
 2. Integration with grocery delivery services
 3. Leftover tracking and suggestions

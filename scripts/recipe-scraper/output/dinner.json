@@ -77,12 +77,7 @@
       "saturatedFat": 2,
       "sodium": 280
     },
-    "tags": [
-      "low-calorie",
-      "high-protein",
-      "gluten-free",
-      "heart-healthy"
-    ],
+    "tags": ["low-calorie", "high-protein", "gluten-free", "heart-healthy"],
     "id": "baked-cod-with-roasted-vegetables"
   },
   {
@@ -238,12 +233,7 @@
       "saturatedFat": 2,
       "sodium": 320
     },
-    "tags": [
-      "balanced",
-      "high-protein",
-      "gluten-free",
-      "colorful"
-    ],
+    "tags": ["balanced", "high-protein", "gluten-free", "colorful"],
     "id": "grilled-chicken-with-sweet-potato"
   },
   {
@@ -324,12 +314,7 @@
       "saturatedFat": 3,
       "sodium": 380
     },
-    "tags": [
-      "vegetarian",
-      "colorful",
-      "high-fiber",
-      "gluten-free"
-    ],
+    "tags": ["vegetarian", "colorful", "high-fiber", "gluten-free"],
     "id": "vegetarian-stuffed-bell-peppers"
   },
   {
@@ -406,12 +391,7 @@
       "saturatedFat": 3,
       "sodium": 280
     },
-    "tags": [
-      "omega-3",
-      "heart-healthy",
-      "quick",
-      "gluten-free"
-    ],
+    "tags": ["omega-3", "heart-healthy", "quick", "gluten-free"],
     "id": "baked-salmon-with-asparagus"
   },
   {
@@ -487,12 +467,7 @@
       "saturatedFat": 4,
       "sodium": 480
     },
-    "tags": [
-      "quick",
-      "asian-inspired",
-      "high-protein",
-      "colorful"
-    ],
+    "tags": ["quick", "asian-inspired", "high-protein", "colorful"],
     "id": "lean-beef-stir-fry"
   },
   {
@@ -578,12 +553,7 @@
       "saturatedFat": 1,
       "sodium": 480
     },
-    "tags": [
-      "vegetarian",
-      "mediterranean",
-      "high-fiber",
-      "vegan"
-    ],
+    "tags": ["vegetarian", "mediterranean", "high-fiber", "vegan"],
     "id": "mediterranean-chickpea-stew"
   },
   {
@@ -654,12 +624,7 @@
       "saturatedFat": 3,
       "sodium": 320
     },
-    "tags": [
-      "lean-protein",
-      "herb-crusted",
-      "elegant",
-      "gluten-free"
-    ],
+    "tags": ["lean-protein", "herb-crusted", "elegant", "gluten-free"],
     "id": "herb-crusted-pork-tenderloin"
   },
   {
@@ -740,12 +705,7 @@
       "saturatedFat": 3,
       "sodium": 420
     },
-    "tags": [
-      "vegan",
-      "plant-based",
-      "colorful",
-      "high-protein"
-    ],
+    "tags": ["vegan", "plant-based", "colorful", "high-protein"],
     "id": "tofu-buddha-bowl-with-peanut-sauce"
   },
   {
@@ -821,11 +781,7 @@
       "saturatedFat": 3,
       "sodium": 480
     },
-    "tags": [
-      "comfort-food",
-      "meal-prep-friendly",
-      "family-friendly"
-    ],
+    "tags": ["comfort-food", "meal-prep-friendly", "family-friendly"],
     "id": "turkey-meatloaf-with-green-beans"
   },
   {
@@ -902,12 +858,7 @@
       "saturatedFat": 2,
       "sodium": 320
     },
-    "tags": [
-      "low-carb-option",
-      "quick",
-      "light",
-      "gluten-free"
-    ],
+    "tags": ["low-carb-option", "quick", "light", "gluten-free"],
     "id": "shrimp-and-zucchini-noodles"
   },
   {
@@ -988,12 +939,7 @@
       "saturatedFat": 2,
       "sodium": 580
     },
-    "tags": [
-      "mexican-inspired",
-      "colorful",
-      "high-protein",
-      "customizable"
-    ],
+    "tags": ["mexican-inspired", "colorful", "high-protein", "customizable"],
     "id": "chicken-fajita-bowl"
   },
   {
@@ -1069,12 +1015,7 @@
       "saturatedFat": 5,
       "sodium": 620
     },
-    "tags": [
-      "italian",
-      "vegetarian",
-      "comfort-food",
-      "high-fiber"
-    ],
+    "tags": ["italian", "vegetarian", "comfort-food", "high-fiber"],
     "id": "baked-eggplant-parmesan"
   },
   {
@@ -1155,11 +1096,7 @@
       "saturatedFat": 5,
       "sodium": 520
     },
-    "tags": [
-      "asian-inspired",
-      "kid-friendly",
-      "balanced"
-    ],
+    "tags": ["asian-inspired", "kid-friendly", "balanced"],
     "id": "asian-glazed-meatballs-with-broccoli"
   }
 ]

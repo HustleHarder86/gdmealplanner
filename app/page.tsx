@@ -1,10 +1,10 @@
-import Link from 'next/link'
-import { RecipeCard } from '@/components/ui'
-import { recipeService } from '@/lib/recipe-service'
+import Link from "next/link";
+import { RecipeCard } from "@/components/ui";
+import { recipeService } from "@/lib/recipe-service";
 
 export default function HomePage() {
   // Get featured recipes (quick recipes for busy moms)
-  const featuredRecipes = recipeService.getQuickRecipes(20).slice(0, 3)
+  const featuredRecipes = recipeService.getQuickRecipes(20).slice(0, 3);
   return (
     <div className="container py-12">
       {/* Hero Section */}
@@ -13,8 +13,8 @@ export default function HomePage() {
           Pregnancy Plate Planner
         </h1>
         <p className="text-xl text-neutral-600 mb-8 max-w-2xl mx-auto">
-          Manage gestational diabetes with confidence through personalized meal plans, 
-          easy tracking, and expert guidance.
+          Manage gestational diabetes with confidence through personalized meal
+          plans, easy tracking, and expert guidance.
         </p>
         <div className="flex gap-4 justify-center">
           <Link href="/meal-planner" className="btn-primary">
@@ -34,7 +34,8 @@ export default function HomePage() {
           </div>
           <h3 className="text-xl font-semibold mb-2">Smart Meal Planning</h3>
           <p className="text-neutral-600">
-            7-day meal plans tailored for gestational diabetes with balanced carbs and nutrients.
+            7-day meal plans tailored for gestational diabetes with balanced
+            carbs and nutrients.
           </p>
         </div>
 
@@ -44,7 +45,8 @@ export default function HomePage() {
           </div>
           <h3 className="text-xl font-semibold mb-2">Glucose Tracking</h3>
           <p className="text-neutral-600">
-            Log and visualize your blood sugar levels to identify patterns and stay on target.
+            Log and visualize your blood sugar levels to identify patterns and
+            stay on target.
           </p>
         </div>
 
@@ -54,7 +56,8 @@ export default function HomePage() {
           </div>
           <h3 className="text-xl font-semibold mb-2">Expert Education</h3>
           <p className="text-neutral-600">
-            Learn carb counting, portion control, and GD management from trusted sources.
+            Learn carb counting, portion control, and GD management from trusted
+            sources.
           </p>
         </div>
       </section>
@@ -66,22 +69,30 @@ export default function HomePage() {
           <div className="text-center">
             <div className="text-3xl font-bold text-primary-600 mb-2">1</div>
             <h4 className="font-semibold mb-1">Create Profile</h4>
-            <p className="text-sm text-neutral-600">Tell us about your pregnancy and dietary needs</p>
+            <p className="text-sm text-neutral-600">
+              Tell us about your pregnancy and dietary needs
+            </p>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-primary-600 mb-2">2</div>
             <h4 className="font-semibold mb-1">Get Meal Plan</h4>
-            <p className="text-sm text-neutral-600">Receive a personalized 7-day GD-friendly plan</p>
+            <p className="text-sm text-neutral-600">
+              Receive a personalized 7-day GD-friendly plan
+            </p>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-primary-600 mb-2">3</div>
             <h4 className="font-semibold mb-1">Track Progress</h4>
-            <p className="text-sm text-neutral-600">Log glucose readings and meals daily</p>
+            <p className="text-sm text-neutral-600">
+              Log glucose readings and meals daily
+            </p>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-primary-600 mb-2">4</div>
             <h4 className="font-semibold mb-1">Stay Healthy</h4>
-            <p className="text-sm text-neutral-600">Manage GD effectively for you and baby</p>
+            <p className="text-sm text-neutral-600">
+              Manage GD effectively for you and baby
+            </p>
           </div>
         </div>
       </section>
@@ -90,7 +101,9 @@ export default function HomePage() {
       <section className="mb-16">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold mb-2">Quick & Healthy Recipes</h2>
-          <p className="text-neutral-600">Perfect for busy moms - ready in 20 minutes or less</p>
+          <p className="text-neutral-600">
+            Perfect for busy moms - ready in 20 minutes or less
+          </p>
         </div>
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {featuredRecipes.map((recipe) => (
@@ -115,5 +128,5 @@ export default function HomePage() {
         </Link>
       </section>
     </div>
-  )
+  );
 }

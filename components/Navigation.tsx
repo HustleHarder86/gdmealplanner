@@ -1,19 +1,19 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { useState } from 'react'
+import Link from "next/link";
+import { useState } from "react";
 
 export default function Navigation() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/recipes', label: 'Recipes' },
-    { href: '/meal-planner', label: 'Meal Planner' },
-    { href: '/tracking', label: 'Tracking' },
-    { href: '/education', label: 'Learn' },
-    { href: '/components', label: 'UI Demo' },
-  ]
+    { href: "/", label: "Home" },
+    { href: "/recipes", label: "Recipes" },
+    { href: "/meal-planner", label: "Meal Planner" },
+    { href: "/tracking", label: "Tracking" },
+    { href: "/education", label: "Learn" },
+    { href: "/components", label: "UI Demo" },
+  ];
 
   return (
     <nav className="bg-white shadow-sm border-b border-neutral-200">
@@ -91,5 +91,5 @@ export default function Navigation() {
         )}
       </div>
     </nav>
-  )
+  );
 }

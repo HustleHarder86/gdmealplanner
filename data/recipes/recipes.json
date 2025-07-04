@@ -3,7 +3,6 @@
     "title": "Veggie Egg Scramble with Whole Wheat Toast",
     "description": "Protein-rich breakfast with fiber from vegetables and whole grains",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/veggie-egg-scramble",
     "prepTime": 10,
     "cookTime": 15,
     "totalTime": 25,
@@ -82,13 +81,14 @@
       "30-minutes-or-less",
       "high-fiber"
     ],
-    "id": "veggie-egg-scramble-with-whole-wheat-toast"
+    "id": "veggie-egg-scramble-with-whole-wheat-toast",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Greek Yogurt Parfait with Berries",
     "description": "Quick and easy breakfast with balanced carbs and protein",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/greek-yogurt-parfait",
     "prepTime": 5,
     "cookTime": 0,
     "totalTime": 5,
@@ -145,13 +145,14 @@
       "high-protein",
       "vegetarian"
     ],
-    "id": "greek-yogurt-parfait-with-berries"
+    "id": "greek-yogurt-parfait-with-berries",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Spinach and Cheese Omelet",
     "description": "Fluffy omelet packed with nutrients and protein",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/spinach-cheese-omelet",
     "prepTime": 5,
     "cookTime": 10,
     "totalTime": 15,
@@ -221,13 +222,14 @@
       "high-protein",
       "vegetarian"
     ],
-    "id": "spinach-and-cheese-omelet"
+    "id": "spinach-and-cheese-omelet",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Overnight Oats with Almonds",
     "description": "Make-ahead breakfast with slow-releasing carbs",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/overnight-oats-almonds",
     "prepTime": 5,
     "cookTime": 0,
     "totalTime": 5,
@@ -294,13 +296,14 @@
       "high-fiber",
       "vegan"
     ],
-    "id": "overnight-oats-with-almonds"
+    "id": "overnight-oats-with-almonds",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Whole Wheat Pancakes with Berry Compote",
     "description": "Weekend breakfast with controlled portions and fiber",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/whole-wheat-pancakes",
     "prepTime": 10,
     "cookTime": 15,
     "totalTime": 25,
@@ -374,13 +377,14 @@
       "vegetarian",
       "high-fiber"
     ],
-    "id": "whole-wheat-pancakes-with-berry-compote"
+    "id": "whole-wheat-pancakes-with-berry-compote",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Avocado Toast with Poached Egg",
     "description": "Trendy breakfast with healthy fats and protein",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/avocado-toast-poached-egg",
     "prepTime": 5,
     "cookTime": 10,
     "totalTime": 15,
@@ -449,13 +453,14 @@
       "high-fiber",
       "vegetarian"
     ],
-    "id": "avocado-toast-with-poached-egg"
+    "id": "avocado-toast-with-poached-egg",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Cottage Cheese Bowl with Fruit",
     "description": "High-protein breakfast with fresh fruit",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/cottage-cheese-bowl",
     "prepTime": 5,
     "cookTime": 0,
     "totalTime": 5,
@@ -517,13 +522,14 @@
       "high-protein",
       "vegetarian"
     ],
-    "id": "cottage-cheese-bowl-with-fruit"
+    "id": "cottage-cheese-bowl-with-fruit",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Breakfast Quinoa with Berries",
     "description": "Protein-packed alternative to oatmeal",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/breakfast-quinoa",
     "prepTime": 5,
     "cookTime": 20,
     "totalTime": 25,
@@ -591,13 +597,14 @@
       "high-fiber",
       "30-minutes-or-less"
     ],
-    "id": "breakfast-quinoa-with-berries"
+    "id": "breakfast-quinoa-with-berries",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Turkey Sausage Breakfast Wrap",
     "description": "Portable breakfast with lean protein",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/turkey-sausage-wrap",
     "prepTime": 10,
     "cookTime": 15,
     "totalTime": 25,
@@ -665,13 +672,14 @@
       "high-protein",
       "meal-prep-friendly"
     ],
-    "id": "turkey-sausage-breakfast-wrap"
+    "id": "turkey-sausage-breakfast-wrap",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Baked Egg Cups with Vegetables",
     "description": "Make-ahead individual egg portions",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/baked-egg-cups",
     "prepTime": 10,
     "cookTime": 20,
     "totalTime": 30,
@@ -750,13 +758,14 @@
       "portable",
       "vegetarian"
     ],
-    "id": "baked-egg-cups-with-vegetables"
+    "id": "baked-egg-cups-with-vegetables",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Chia Pudding with Mango",
     "description": "Creamy make-ahead breakfast with omega-3s",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/chia-pudding-mango",
     "prepTime": 5,
     "cookTime": 0,
     "totalTime": 5,
@@ -818,13 +827,14 @@
       "vegan",
       "high-fiber"
     ],
-    "id": "chia-pudding-with-mango"
+    "id": "chia-pudding-with-mango",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Zucchini Bread Oatmeal",
     "description": "Vegetables hidden in a comforting breakfast",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/zucchini-bread-oatmeal",
     "prepTime": 5,
     "cookTime": 10,
     "totalTime": 15,
@@ -892,13 +902,14 @@
       "hidden-veggies",
       "high-fiber"
     ],
-    "id": "zucchini-bread-oatmeal"
+    "id": "zucchini-bread-oatmeal",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Smoked Salmon Bagel Thin",
     "description": "Light version of classic breakfast with omega-3s",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/smoked-salmon-bagel",
     "prepTime": 5,
     "cookTime": 0,
     "totalTime": 5,
@@ -965,13 +976,14 @@
       "high-protein",
       "omega-3"
     ],
-    "id": "smoked-salmon-bagel-thin"
+    "id": "smoked-salmon-bagel-thin",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Sweet Potato Hash with Eggs",
     "description": "Colorful breakfast skillet with complex carbs",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/sweet-potato-hash",
     "prepTime": 10,
     "cookTime": 20,
     "totalTime": 30,
@@ -1045,13 +1057,14 @@
       "colorful",
       "high-fiber"
     ],
-    "id": "sweet-potato-hash-with-eggs"
+    "id": "sweet-potato-hash-with-eggs",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Protein Power Smoothie",
     "description": "Quick breakfast drink with hidden vegetables",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/protein-power-smoothie",
     "prepTime": 5,
     "cookTime": 0,
     "totalTime": 5,
@@ -1117,13 +1130,14 @@
       "hidden-veggies",
       "high-protein"
     ],
-    "id": "protein-power-smoothie"
+    "id": "protein-power-smoothie",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Grilled Chicken Salad with Quinoa",
     "description": "Protein-packed salad with whole grains",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/grilled-chicken-quinoa-salad",
     "prepTime": 15,
     "cookTime": 20,
     "totalTime": 35,
@@ -1202,13 +1216,14 @@
       "meal-prep-friendly",
       "gluten-free"
     ],
-    "id": "grilled-chicken-salad-with-quinoa"
+    "id": "grilled-chicken-salad-with-quinoa",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Turkey and Avocado Wrap",
     "description": "Quick and satisfying lunch wrap",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/turkey-avocado-wrap",
     "prepTime": 10,
     "cookTime": 0,
     "totalTime": 10,
@@ -1275,13 +1290,14 @@
       "portable",
       "high-protein"
     ],
-    "id": "turkey-and-avocado-wrap"
+    "id": "turkey-and-avocado-wrap",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Lentil Vegetable Soup",
     "description": "Hearty soup packed with fiber and protein",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/lentil-vegetable-soup",
     "prepTime": 10,
     "cookTime": 30,
     "totalTime": 40,
@@ -1365,13 +1381,14 @@
       "meal-prep-friendly",
       "vegan"
     ],
-    "id": "lentil-vegetable-soup"
+    "id": "lentil-vegetable-soup",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Tuna Salad on Whole Grain Crackers",
     "description": "Light lunch with omega-3 fatty acids",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/tuna-salad-crackers",
     "prepTime": 10,
     "cookTime": 0,
     "totalTime": 10,
@@ -1443,13 +1460,14 @@
       "omega-3",
       "meal-prep-friendly"
     ],
-    "id": "tuna-salad-on-whole-grain-crackers"
+    "id": "tuna-salad-on-whole-grain-crackers",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Chickpea Buddha Bowl",
     "description": "Colorful plant-based bowl with roasted chickpeas",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/chickpea-buddha-bowl",
     "prepTime": 10,
     "cookTime": 25,
     "totalTime": 35,
@@ -1529,13 +1547,14 @@
       "colorful",
       "plant-based"
     ],
-    "id": "chickpea-buddha-bowl"
+    "id": "chickpea-buddha-bowl",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Egg Salad Sandwich",
     "description": "Classic lunch with a healthy twist",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/healthy-egg-salad",
     "prepTime": 15,
     "cookTime": 10,
     "totalTime": 25,
@@ -1609,7 +1628,9 @@
       "classic",
       "meal-prep-friendly"
     ],
-    "id": "egg-salad-sandwich"
+    "id": "egg-salad-sandwich",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Mediterranean Chicken Pita",
@@ -1693,13 +1714,14 @@
       "high-protein",
       "flavorful"
     ],
-    "id": "mediterranean-chicken-pita"
+    "id": "mediterranean-chicken-pita",
+    "recipe_source": "original",
+    "source_note": "Recipe from diabetesfoodhub.org"
   },
   {
     "title": "Black Bean and Rice Bowl",
     "description": "Simple and satisfying plant-based meal",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/black-bean-rice-bowl",
     "prepTime": 10,
     "cookTime": 15,
     "totalTime": 25,
@@ -1781,13 +1803,14 @@
       "budget-friendly",
       "gluten-free"
     ],
-    "id": "black-bean-and-rice-bowl"
+    "id": "black-bean-and-rice-bowl",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Salmon and Spinach Salad",
     "description": "Omega-3 rich salad with baked salmon",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/salmon-spinach-salad",
     "prepTime": 10,
     "cookTime": 15,
     "totalTime": 25,
@@ -1861,13 +1884,14 @@
       "gluten-free",
       "heart-healthy"
     ],
-    "id": "salmon-and-spinach-salad"
+    "id": "salmon-and-spinach-salad",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Veggie Quesadilla",
     "description": "Cheesy vegetarian quesadilla with whole wheat tortilla",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/veggie-quesadilla",
     "prepTime": 10,
     "cookTime": 10,
     "totalTime": 20,
@@ -1941,13 +1965,14 @@
       "high-fiber",
       "kid-friendly"
     ],
-    "id": "veggie-quesadilla"
+    "id": "veggie-quesadilla",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Asian Chicken Lettuce Wraps",
     "description": "Light and crunchy wraps with Asian flavors",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/asian-lettuce-wraps",
     "prepTime": 15,
     "cookTime": 10,
     "totalTime": 25,
@@ -2026,13 +2051,14 @@
       "asian-inspired",
       "light"
     ],
-    "id": "asian-chicken-lettuce-wraps"
+    "id": "asian-chicken-lettuce-wraps",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Minestrone Soup",
     "description": "Italian vegetable soup with beans and pasta",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/minestrone-soup",
     "prepTime": 15,
     "cookTime": 25,
     "totalTime": 40,
@@ -2116,13 +2142,14 @@
       "high-fiber",
       "comfort-food"
     ],
-    "id": "minestrone-soup"
+    "id": "minestrone-soup",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Turkey Meatball Sub",
     "description": "Healthier version of classic meatball sub",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/turkey-meatball-sub",
     "prepTime": 15,
     "cookTime": 20,
     "totalTime": 35,
@@ -2196,13 +2223,14 @@
       "high-protein",
       "italian-inspired"
     ],
-    "id": "turkey-meatball-sub"
+    "id": "turkey-meatball-sub",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Shrimp and Avocado Salad",
     "description": "Light and refreshing salad with protein",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/shrimp-avocado-salad",
     "prepTime": 15,
     "cookTime": 5,
     "totalTime": 20,
@@ -2280,13 +2308,14 @@
       "gluten-free",
       "refreshing"
     ],
-    "id": "shrimp-and-avocado-salad"
+    "id": "shrimp-and-avocado-salad",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Baked Cod with Roasted Vegetables",
     "description": "Light and healthy dinner with lean protein",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/baked-cod-vegetables",
     "prepTime": 10,
     "cookTime": 25,
     "totalTime": 35,
@@ -2366,13 +2395,14 @@
       "gluten-free",
       "heart-healthy"
     ],
-    "id": "baked-cod-with-roasted-vegetables"
+    "id": "baked-cod-with-roasted-vegetables",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Turkey Chili with Beans",
     "description": "Hearty and warming chili packed with protein",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/turkey-chili",
     "prepTime": 15,
     "cookTime": 30,
     "totalTime": 45,
@@ -2451,13 +2481,14 @@
       "comfort-food",
       "meal-prep-friendly"
     ],
-    "id": "turkey-chili-with-beans"
+    "id": "turkey-chili-with-beans",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Grilled Chicken with Sweet Potato",
     "description": "Balanced meal with lean protein and complex carbs",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/grilled-chicken-sweet-potato",
     "prepTime": 10,
     "cookTime": 25,
     "totalTime": 35,
@@ -2527,13 +2558,14 @@
       "gluten-free",
       "colorful"
     ],
-    "id": "grilled-chicken-with-sweet-potato"
+    "id": "grilled-chicken-with-sweet-potato",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Vegetarian Stuffed Bell Peppers",
     "description": "Colorful peppers filled with quinoa and vegetables",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/stuffed-bell-peppers",
     "prepTime": 15,
     "cookTime": 30,
     "totalTime": 45,
@@ -2613,13 +2645,14 @@
       "high-fiber",
       "gluten-free"
     ],
-    "id": "vegetarian-stuffed-bell-peppers"
+    "id": "vegetarian-stuffed-bell-peppers",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Baked Salmon with Asparagus",
     "description": "Omega-3 rich dinner with roasted vegetables",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/baked-salmon-asparagus",
     "prepTime": 10,
     "cookTime": 20,
     "totalTime": 30,
@@ -2695,13 +2728,14 @@
       "quick",
       "gluten-free"
     ],
-    "id": "baked-salmon-with-asparagus"
+    "id": "baked-salmon-with-asparagus",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Lean Beef Stir-Fry",
     "description": "Quick Asian-inspired stir-fry with vegetables",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/beef-stir-fry",
     "prepTime": 15,
     "cookTime": 15,
     "totalTime": 30,
@@ -2776,13 +2810,14 @@
       "high-protein",
       "colorful"
     ],
-    "id": "lean-beef-stir-fry"
+    "id": "lean-beef-stir-fry",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Mediterranean Chickpea Stew",
     "description": "Hearty vegetarian stew with Mediterranean flavors",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/mediterranean-chickpea-stew",
     "prepTime": 10,
     "cookTime": 25,
     "totalTime": 35,
@@ -2867,13 +2902,14 @@
       "high-fiber",
       "vegan"
     ],
-    "id": "mediterranean-chickpea-stew"
+    "id": "mediterranean-chickpea-stew",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Herb-Crusted Pork Tenderloin",
     "description": "Lean pork with flavorful herb crust",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/herb-crusted-pork",
     "prepTime": 10,
     "cookTime": 25,
     "totalTime": 35,
@@ -2943,13 +2979,14 @@
       "elegant",
       "gluten-free"
     ],
-    "id": "herb-crusted-pork-tenderloin"
+    "id": "herb-crusted-pork-tenderloin",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Tofu Buddha Bowl with Peanut Sauce",
     "description": "Colorful vegan bowl with crispy tofu",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/tofu-buddha-bowl",
     "prepTime": 15,
     "cookTime": 20,
     "totalTime": 35,
@@ -3029,13 +3066,14 @@
       "colorful",
       "high-protein"
     ],
-    "id": "tofu-buddha-bowl-with-peanut-sauce"
+    "id": "tofu-buddha-bowl-with-peanut-sauce",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Turkey Meatloaf with Green Beans",
     "description": "Comfort food made healthier with lean turkey",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/turkey-meatloaf",
     "prepTime": 15,
     "cookTime": 45,
     "totalTime": 60,
@@ -3109,13 +3147,14 @@
       "meal-prep-friendly",
       "family-friendly"
     ],
-    "id": "turkey-meatloaf-with-green-beans"
+    "id": "turkey-meatloaf-with-green-beans",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Shrimp and Zucchini Noodles",
     "description": "Low-carb dinner with spiralized vegetables",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/shrimp-zucchini-noodles",
     "prepTime": 15,
     "cookTime": 10,
     "totalTime": 25,
@@ -3191,13 +3230,14 @@
       "light",
       "gluten-free"
     ],
-    "id": "shrimp-and-zucchini-noodles"
+    "id": "shrimp-and-zucchini-noodles",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Chicken Fajita Bowl",
     "description": "Mexican-inspired bowl with seasoned chicken",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/chicken-fajita-bowl",
     "prepTime": 10,
     "cookTime": 20,
     "totalTime": 30,
@@ -3277,13 +3317,14 @@
       "high-protein",
       "customizable"
     ],
-    "id": "chicken-fajita-bowl"
+    "id": "chicken-fajita-bowl",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Baked Eggplant Parmesan",
     "description": "Lighter version of Italian classic",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/baked-eggplant-parmesan",
     "prepTime": 20,
     "cookTime": 35,
     "totalTime": 55,
@@ -3358,13 +3399,14 @@
       "comfort-food",
       "high-fiber"
     ],
-    "id": "baked-eggplant-parmesan"
+    "id": "baked-eggplant-parmesan",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Asian Glazed Meatballs with Broccoli",
     "description": "Flavorful meatballs with sweet and savory glaze",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/asian-glazed-meatballs",
     "prepTime": 15,
     "cookTime": 20,
     "totalTime": 35,
@@ -3443,13 +3485,14 @@
       "kid-friendly",
       "balanced"
     ],
-    "id": "asian-glazed-meatballs-with-broccoli"
+    "id": "asian-glazed-meatballs-with-broccoli",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Apple Slices with Almond Butter",
     "description": "Simple snack with fiber and healthy fats",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/apple-almond-butter",
     "prepTime": 5,
     "cookTime": 0,
     "totalTime": 5,
@@ -3495,13 +3538,14 @@
       "portable",
       "kid-friendly"
     ],
-    "id": "apple-slices-with-almond-butter"
+    "id": "apple-slices-with-almond-butter",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Greek Yogurt with Berries",
     "description": "Protein-rich snack with antioxidants",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/yogurt-berries-snack",
     "prepTime": 2,
     "cookTime": 0,
     "totalTime": 2,
@@ -3546,13 +3590,14 @@
       "no-cook",
       "probiotic"
     ],
-    "id": "greek-yogurt-with-berries"
+    "id": "greek-yogurt-with-berries",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Hummus with Veggie Sticks",
     "description": "Crunchy vegetables with protein-packed dip",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/hummus-veggie-sticks",
     "prepTime": 5,
     "cookTime": 0,
     "totalTime": 5,
@@ -3602,13 +3647,14 @@
       "colorful",
       "no-cook"
     ],
-    "id": "hummus-with-veggie-sticks"
+    "id": "hummus-with-veggie-sticks",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Cottage Cheese with Cucumber",
     "description": "Light and refreshing high-protein snack",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/cottage-cheese-cucumber",
     "prepTime": 3,
     "cookTime": 0,
     "totalTime": 3,
@@ -3659,13 +3705,14 @@
       "refreshing",
       "quick"
     ],
-    "id": "cottage-cheese-with-cucumber"
+    "id": "cottage-cheese-with-cucumber",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   },
   {
     "title": "Trail Mix Energy Bites",
     "description": "No-bake energy balls with nuts and dried fruit",
     "source": "diabetesfoodhub.org",
-    "url": "https://diabetesfoodhub.org/recipes/trail-mix-bites",
     "prepTime": 10,
     "cookTime": 0,
     "totalTime": 10,
@@ -3727,6 +3774,8 @@
       "no-bake",
       "kid-friendly"
     ],
-    "id": "trail-mix-energy-bites"
+    "id": "trail-mix-energy-bites",
+    "recipe_source": "created",
+    "source_note": "Original recipe created for gestational diabetes meal planning"
   }
 ]

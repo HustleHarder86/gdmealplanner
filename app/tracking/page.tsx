@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 export default function TrackingPage() {
   // Mock data for demo
@@ -7,7 +7,7 @@ export default function TrackingPage() {
     carbsConsumed: 142,
     mealsLogged: 4,
     waterIntake: 6,
-  }
+  };
 
   return (
     <div className="container py-8">
@@ -18,19 +18,27 @@ export default function TrackingPage() {
         <h2 className="text-xl font-semibold mb-4">Today&apos;s Summary</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary-600">{todayStats.avgGlucose}</div>
+            <div className="text-3xl font-bold text-primary-600">
+              {todayStats.avgGlucose}
+            </div>
             <div className="text-sm text-neutral-600">Avg Glucose (mg/dL)</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary-600">{todayStats.carbsConsumed}g</div>
+            <div className="text-3xl font-bold text-primary-600">
+              {todayStats.carbsConsumed}g
+            </div>
             <div className="text-sm text-neutral-600">Carbs Consumed</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary-600">{todayStats.mealsLogged}/6</div>
+            <div className="text-3xl font-bold text-primary-600">
+              {todayStats.mealsLogged}/6
+            </div>
             <div className="text-sm text-neutral-600">Meals Logged</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-primary-600">{todayStats.waterIntake}</div>
+            <div className="text-3xl font-bold text-primary-600">
+              {todayStats.waterIntake}
+            </div>
             <div className="text-sm text-neutral-600">Glasses of Water</div>
           </div>
         </div>
@@ -38,7 +46,10 @@ export default function TrackingPage() {
 
       {/* Tracking Options */}
       <div className="grid md:grid-cols-2 gap-6">
-        <Link href="/tracking/glucose" className="card hover:shadow-md transition-shadow">
+        <Link
+          href="/tracking/glucose"
+          className="card hover:shadow-md transition-shadow"
+        >
           <div className="flex items-center mb-4">
             <div className="w-12 h-12 bg-secondary-100 rounded-full flex items-center justify-center mr-4">
               <span className="text-2xl">📊</span>
@@ -46,12 +57,16 @@ export default function TrackingPage() {
             <h3 className="text-xl font-semibold">Glucose Tracking</h3>
           </div>
           <p className="text-neutral-600 mb-4">
-            Log blood sugar readings, view trends, and identify patterns in your glucose levels.
+            Log blood sugar readings, view trends, and identify patterns in your
+            glucose levels.
           </p>
           <div className="text-primary-600 font-medium">Track Glucose →</div>
         </Link>
 
-        <Link href="/tracking/nutrition" className="card hover:shadow-md transition-shadow">
+        <Link
+          href="/tracking/nutrition"
+          className="card hover:shadow-md transition-shadow"
+        >
           <div className="flex items-center mb-4">
             <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-4">
               <span className="text-2xl">🥗</span>
@@ -76,5 +91,5 @@ export default function TrackingPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

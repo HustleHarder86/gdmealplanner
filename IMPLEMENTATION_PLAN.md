@@ -1,11 +1,13 @@
 # Implementation Plan - Medical Guidelines Integration
 
 ## Overview
+
 This document outlines how we will integrate the comprehensive medical guidelines from Halton Healthcare into the Pregnancy Plate Planner application.
 
 ## Immediate Actions
 
 ### 1. Recipe Validation Update
+
 - Update recipe validation to match exact medical guidelines:
   - Breakfast: 30g carbs (2 choices)
   - Lunch/Dinner: 45g carbs (3 choices)
@@ -15,6 +17,7 @@ This document outlines how we will integrate the comprehensive medical guideline
 - Validate all 360 recipes against these standards
 
 ### 2. Meal Planning Algorithm Enhancement
+
 - Implement daily carb distribution:
   - Total: ~180g carbs/day minimum
   - 3 meals + 3 snacks pattern
@@ -27,6 +30,7 @@ This document outlines how we will integrate the comprehensive medical guideline
 - Morning sensitivity adjustment option
 
 ### 3. Glucose Tracking Features
+
 - Implement official tracking format:
   - Fasting (before breakfast)
   - 2 hours after breakfast
@@ -40,12 +44,14 @@ This document outlines how we will integrate the comprehensive medical guideline
 - Create daily record sheets matching medical format
 
 ### 4. Smart Grocery List Enhancement
+
 - Group by food categories from guidelines
 - Include portion size references
 - Add carb counting helpers
 - Highlight protein sources for bedtime snacks
 
 ### 5. Education Content Creation
+
 - Understanding GD section with medical accuracy
 - Carbohydrate portion visual guide
 - Nutrition label reading tutorial
@@ -55,12 +61,13 @@ This document outlines how we will integrate the comprehensive medical guideline
 ## Technical Implementation
 
 ### Database Schema Updates
+
 ```typescript
 // Update Recipe type
 interface Recipe {
   // existing fields...
   carbChoices: number; // carbs / 15
-  mealType: 'breakfast' | 'lunch' | 'dinner' | 'snack' | 'bedtime-snack';
+  mealType: "breakfast" | "lunch" | "dinner" | "snack" | "bedtime-snack";
   plateProportion?: {
     vegetables: number; // percentage
     protein: number;
@@ -73,8 +80,14 @@ interface GlucoseReading {
   userId: string;
   timestamp: Date;
   value: number;
-  unit: 'mmol/L' | 'mg/dL';
-  readingType: 'fasting' | '1hr-post-breakfast' | '2hr-post-breakfast' | '2hr-post-lunch' | '2hr-post-dinner' | 'other';
+  unit: "mmol/L" | "mg/dL";
+  readingType:
+    | "fasting"
+    | "1hr-post-breakfast"
+    | "2hr-post-breakfast"
+    | "2hr-post-lunch"
+    | "2hr-post-dinner"
+    | "other";
   mealAssociation?: string; // meal ID if applicable
   comments?: string;
   withinTarget: boolean;
@@ -82,6 +95,7 @@ interface GlucoseReading {
 ```
 
 ### UI Components Needed
+
 1. **Carb Choice Calculator**: Visual portion guide
 2. **Plate Builder**: Interactive meal composition tool
 3. **Daily Record Sheet**: Printable glucose log format
@@ -89,33 +103,34 @@ interface GlucoseReading {
 5. **Meal Timing Reminder**: Notification system
 
 ### Validation Rules
+
 ```typescript
 const mealValidation = {
-  breakfast: { 
-    minCarbs: 25, 
-    maxCarbs: 35, 
-    targetCarbs: 30 
+  breakfast: {
+    minCarbs: 25,
+    maxCarbs: 35,
+    targetCarbs: 30,
   },
-  lunch: { 
-    minCarbs: 40, 
-    maxCarbs: 50, 
-    targetCarbs: 45 
+  lunch: {
+    minCarbs: 40,
+    maxCarbs: 50,
+    targetCarbs: 45,
   },
-  dinner: { 
-    minCarbs: 40, 
-    maxCarbs: 50, 
-    targetCarbs: 45 
+  dinner: {
+    minCarbs: 40,
+    maxCarbs: 50,
+    targetCarbs: 45,
   },
-  snack: { 
-    minCarbs: 15, 
-    maxCarbs: 30, 
-    targetCarbs: 15 
+  snack: {
+    minCarbs: 15,
+    maxCarbs: 30,
+    targetCarbs: 15,
   },
-  bedtimeSnack: { 
-    minCarbs: 15, 
-    maxCarbs: 15, 
-    requiresProtein: true 
-  }
+  bedtimeSnack: {
+    minCarbs: 15,
+    maxCarbs: 15,
+    requiresProtein: true,
+  },
 };
 ```
 

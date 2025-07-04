@@ -4,201 +4,95 @@
   "description": "Fresh flavors from the Mediterranean with olive oil, whole grains, and lean proteins",
   "meals": {
     "monday": {
-      "breakfast": "indian-spiced-greek-yogurt-bowl-with-whole-grain-bread-and-berries",
-      "morningSnack": "make-ahead-greek-yogurt-with-cucumber-and-bell-peppers",
-      "lunch": "wrap-chicken-wrap-with-mixed-vegetables",
-      "afternoonSnack": "portable-cottage-cheese-with-almond-butter-and-berries",
-      "dinner": "slow-cooker-baked-salmon-with-quinoa-and-wild-rice",
-      "eveningSnack": "savory-greek-yogurt-with-celery-and-almond-butter"
+      "breakfast": "italian-smoothie-with-spinach",
+      "morningSnack": "creamy-greek-yogurt-with-chia-seeds",
+      "lunch": "buddha-bowl-chicken-wrap-with-lentils",
+      "afternoonSnack": "fiber-rich-greek-yogurt-with-nuts",
+      "dinner": "roasted-white-fish-with-quinoa-and-wild-rice",
+      "eveningSnack": "crunchy-greek-yogurt-with-cucumber-and-bell-peppers"
     },
     "tuesday": {
-      "breakfast": "italian-smoothie-with-hemp-hearts",
-      "morningSnack": "crunchy-greek-yogurt-with-celery-and-almond-butter",
-      "lunch": "skillet-tuna-salad-with-chickpeas-and-mixed-vegetables",
-      "afternoonSnack": "make-ahead-greek-yogurt-with-nuts",
-      "dinner": "slow-cooker-tofu-stir-fry-with-wild-rice",
-      "eveningSnack": "sweet-greek-yogurt-with-cucumber-and-bell-peppers"
+      "breakfast": "mediterranean-smoothie-with-spinach",
+      "morningSnack": "no-cook-greek-yogurt-with-whole-grain-crackers",
+      "lunch": "skillet-turkey-sandwich-with-leafy-greens",
+      "afternoonSnack": "sweet-greek-yogurt-with-nuts",
+      "dinner": "glazed-turkey-meatballs-with-mixed-salad-and-roasted-vegetables",
+      "eveningSnack": "protein-packed-greek-yogurt-with-cucumber-and-bell-peppers"
     },
     "wednesday": {
-      "breakfast": "italian-smoothie-with-chia-seeds",
-      "morningSnack": "savory-greek-yogurt-with-berries",
-      "lunch": "stuffed-tuna-salad-with-whole-wheat-wrap-and-black-beans",
-      "afternoonSnack": "quick-cottage-cheese-with-cucumber-and-bell-peppers",
-      "dinner": "baked-grilled-chicken-breast-with-quinoa-and-wild-rice",
-      "eveningSnack": "quick-cottage-cheese-with-whole-grain-crackers"
+      "breakfast": "southwest-greek-yogurt-bowl-with-whole-grain-bread-and-berries",
+      "morningSnack": "fiber-rich-greek-yogurt-with-bell-peppers",
+      "lunch": "stuffed-tuna-salad-with-chickpeas-and-mixed-vegetables",
+      "afternoonSnack": "quick-greek-yogurt-with-nuts",
+      "dinner": "slow-cooker-baked-salmon-with-quinoa-and-wild-rice",
+      "eveningSnack": "portable-greek-yogurt-with-celery-and-almond-butter"
     },
     "thursday": {
-      "breakfast": "middle-eastern-greek-yogurt-bowl-with-berries-and-nuts",
-      "morningSnack": "savory-greek-yogurt-with-nuts",
-      "lunch": "salad-chicken-wrap-with-black-beans",
-      "afternoonSnack": "protein-packed-greek-yogurt-with-nuts",
-      "dinner": "grilled-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
-      "eveningSnack": "creamy-greek-yogurt-with-chia-seeds"
-    },
-    "friday": {
-      "breakfast": "mediterranean-smoothie-with-almond-butter-and-hemp-hearts",
-      "morningSnack": "quick-cottage-cheese-with-almond-butter-and-berries",
-      "lunch": "salad-tuna-salad-with-chickpeas-and-mixed-vegetables",
-      "afternoonSnack": "quick-cottage-cheese-with-chia-seeds",
-      "dinner": "baked-lean-beef-with-quinoa-and-wild-rice",
+      "breakfast": "indian-spiced-greek-yogurt-bowl-with-whole-grain-bread-and-berries",
+      "morningSnack": "make-ahead-greek-yogurt-with-cherry-tomatoes",
+      "lunch": "soup-lentil-salad-with-leafy-greens",
+      "afternoonSnack": "portable-greek-yogurt-with-nuts",
+      "dinner": "glazed-tofu-stir-fry-with-wild-rice",
       "eveningSnack": "make-ahead-greek-yogurt-with-chia-seeds"
     },
+    "friday": {
+      "breakfast": "asian-inspired-greek-yogurt-bowl-with-whole-grain-bread-and-berries",
+      "morningSnack": "crunchy-greek-yogurt-with-whole-grain-crackers",
+      "lunch": "sandwich-turkey-sandwich-with-leafy-greens",
+      "afternoonSnack": "creamy-greek-yogurt-with-nuts",
+      "dinner": "stir-fried-tofu-stir-fry-with-roasted-vegetables-and-cauliflower-rice",
+      "eveningSnack": "creamy-greek-yogurt-with-celery-and-almond-butter"
+    },
     "saturday": {
-      "breakfast": "american-greek-yogurt-bowl-with-whole-grain-bread-and-berries",
-      "morningSnack": "no-cook-greek-yogurt-with-whole-grain-crackers",
-      "lunch": "buddha-bowl-grilled-chicken-with-whole-wheat-wrap-and-black-beans",
-      "afternoonSnack": "quick-greek-yogurt-with-nuts",
-      "dinner": "sheet-pan-tofu-stir-fry-with-wild-rice",
-      "eveningSnack": "fiber-rich-greek-yogurt-with-chia-seeds"
+      "breakfast": "italian-greek-yogurt-bowl-with-whole-grain-bread-and-berries",
+      "morningSnack": "sweet-greek-yogurt-with-bell-peppers",
+      "lunch": "buddha-bowl-chicken-wrap-with-black-beans",
+      "afternoonSnack": "quick-cottage-cheese-with-celery-and-almond-butter",
+      "dinner": "braised-grilled-chicken-breast-with-quinoa-and-wild-rice",
+      "eveningSnack": "no-cook-greek-yogurt-with-chia-seeds"
     },
     "sunday": {
-      "breakfast": "mediterranean-smoothie-with-nuts",
-      "morningSnack": "fiber-rich-greek-yogurt-with-celery-and-almond-butter",
-      "lunch": "baked-tuna-salad-with-whole-wheat-wrap-and-black-beans",
-      "afternoonSnack": "portable-greek-yogurt-with-nuts",
-      "dinner": "roasted-turkey-meatballs-with-roasted-vegetables-and-cauliflower-rice",
-      "eveningSnack": "no-cook-greek-yogurt-with-chia-seeds"
+      "breakfast": "mexican-greek-yogurt-bowl-with-whole-grain-bread-and-berries",
+      "morningSnack": "creamy-greek-yogurt-with-whole-grain-crackers",
+      "lunch": "soup-tuna-salad-with-whole-wheat-wrap-and-black-beans",
+      "afternoonSnack": "quick-cottage-cheese-with-almond-butter-and-berries",
+      "dinner": "slow-cooker-lean-beef-with-quinoa-and-wild-rice",
+      "eveningSnack": "no-cook-greek-yogurt-with-cucumber-and-bell-peppers"
     }
   },
   "stats": {
-    "avgDailyCarbs": 171,
-    "avgDailyCalories": 2501,
+    "avgDailyCarbs": 173,
+    "avgDailyCalories": 2550,
     "avgPrepTime": 18,
-    "totalUniqueIngredients": 36
+    "totalUniqueIngredients": 50
   },
   "groceryList": {
     "categories": [
       {
-        "name": "Dairy",
-        "items": [
-          {
-            "name": "almond butter",
-            "amount": "1/4",
-            "unit": "cup",
-            "category": "Dairy",
-            "recipes": [
-              "Portable Cottage Cheese with almond butter and berries",
-              "Savory Greek Yogurt with celery and almond butter",
-              "Crunchy Greek Yogurt with celery and almond butter",
-              "Mediterranean Smoothie with almond butter and hemp hearts",
-              "Quick Cottage Cheese with almond butter and berries",
-              "Fiber-rich Greek Yogurt with celery and almond butter"
-            ]
-          },
-          {
-            "name": "cottage cheese",
-            "amount": "4",
-            "unit": "oz",
-            "category": "Dairy",
-            "recipes": [
-              "Portable Cottage Cheese with almond butter and berries",
-              "Quick Cottage Cheese with cucumber and bell peppers",
-              "Quick Cottage Cheese with whole grain crackers",
-              "Quick Cottage Cheese with almond butter and berries",
-              "Quick Cottage Cheese with chia seeds"
-            ]
-          },
-          {
-            "name": "greek yogurt",
-            "amount": "4",
-            "unit": "oz",
-            "category": "Dairy",
-            "recipes": [
-              "Make-ahead Greek Yogurt with cucumber and bell peppers",
-              "Savory Greek Yogurt with celery and almond butter",
-              "Crunchy Greek Yogurt with celery and almond butter",
-              "Make-ahead Greek Yogurt with nuts",
-              "Sweet Greek Yogurt with cucumber and bell peppers",
-              "Savory Greek Yogurt with berries",
-              "Savory Greek Yogurt with nuts",
-              "Protein-packed Greek Yogurt with nuts",
-              "Creamy Greek Yogurt with chia seeds",
-              "Make-ahead Greek Yogurt with chia seeds",
-              "No-cook Greek Yogurt with whole grain crackers",
-              "Quick Greek Yogurt with nuts",
-              "Fiber-rich Greek Yogurt with chia seeds",
-              "Fiber-rich Greek Yogurt with celery and almond butter",
-              "Portable Greek Yogurt with nuts",
-              "No-cook Greek Yogurt with chia seeds"
-            ]
-          },
-          {
-            "name": "plain Greek yogurt",
-            "amount": "2",
-            "unit": "cup",
-            "category": "Dairy",
-            "recipes": [
-              "Indian-spiced Greek Yogurt Bowl with whole grain bread and berries",
-              "Middle Eastern Greek Yogurt Bowl with berries and nuts",
-              "American Greek Yogurt Bowl with whole grain bread and berries"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Grains",
-        "items": [
-          {
-            "name": "cauliflower rice",
-            "amount": "1.5",
-            "unit": "cup",
-            "category": "Grains",
-            "recipes": [
-              "Grilled Tofu Stir-fry with roasted vegetables and cauliflower rice",
-              "Roasted Turkey Meatballs with roasted vegetables and cauliflower rice"
-            ]
-          },
-          {
-            "name": "quinoa",
-            "amount": "1/2",
-            "unit": "cup",
-            "category": "Grains",
-            "recipes": [
-              "Slow Cooker Baked Salmon with quinoa and wild rice",
-              "Baked Grilled Chicken Breast with quinoa and wild rice",
-              "Baked Lean Beef with quinoa and wild rice"
-            ]
-          },
-          {
-            "name": "whole grain bread",
-            "amount": "0.8",
-            "unit": "cup",
-            "category": "Grains",
-            "recipes": [
-              "Indian-spiced Greek Yogurt Bowl with whole grain bread and berries",
-              "American Greek Yogurt Bowl with whole grain bread and berries"
-            ]
-          },
-          {
-            "name": "wild rice",
-            "amount": "1/2",
-            "unit": "cup",
-            "category": "Grains",
-            "recipes": [
-              "Slow Cooker Baked Salmon with quinoa and wild rice",
-              "Slow Cooker Tofu Stir-fry with wild rice",
-              "Baked Grilled Chicken Breast with quinoa and wild rice",
-              "Baked Lean Beef with quinoa and wild rice",
-              "Sheet Pan Tofu Stir-fry with wild rice"
-            ]
-          }
-        ]
-      },
-      {
         "name": "Other",
         "items": [
+          {
+            "name": "avocado",
+            "amount": "1/4",
+            "unit": "medium",
+            "category": "Other",
+            "recipes": [
+              "Turkey Buddha Bowl with lentils",
+              "Turkey Buddha Bowl with black beans"
+            ]
+          },
           {
             "name": "berries",
             "amount": "0.8",
             "unit": "cup",
             "category": "Other",
             "recipes": [
+              "Southwest Greek Yogurt Bowl with whole grain bread and berries",
               "Indian-spiced Greek Yogurt Bowl with whole grain bread and berries",
-              "Portable Cottage Cheese with almond butter and berries",
-              "Savory Greek Yogurt with berries",
-              "Middle Eastern Greek Yogurt Bowl with berries and nuts",
-              "Quick Cottage Cheese with almond butter and berries",
-              "American Greek Yogurt Bowl with whole grain bread and berries"
+              "Asian-inspired Greek Yogurt Bowl with whole grain bread and berries",
+              "Italian Greek Yogurt Bowl with whole grain bread and berries",
+              "Mexican Greek Yogurt Bowl with whole grain bread and berries",
+              "Quick Cottage Cheese with almond butter and berries"
             ]
           },
           {
@@ -207,34 +101,31 @@
             "unit": "cup",
             "category": "Other",
             "recipes": [
-              "Stuffed Tuna Salad with whole wheat wrap and black beans",
-              "Salad Chicken Wrap with black beans",
-              "Buddha Bowl Grilled Chicken with whole wheat wrap and black beans",
-              "Baked Tuna Salad with whole wheat wrap and black beans"
+              "Turkey Buddha Bowl with black beans",
+              "Soup Tuna Salad with whole wheat wrap and black beans"
             ]
           },
           {
             "name": "celery",
-            "amount": "1/4",
-            "unit": "cup",
+            "amount": "2",
+            "unit": "tbsp",
             "category": "Other",
             "recipes": [
-              "Savory Greek Yogurt with celery and almond butter",
-              "Crunchy Greek Yogurt with celery and almond butter",
-              "Fiber-rich Greek Yogurt with celery and almond butter"
+              "Stuffed Tuna Salad with chickpeas and mixed vegetables",
+              "Portable Greek Yogurt with celery and almond butter",
+              "Creamy Greek Yogurt with celery and almond butter",
+              "Quick Cottage Cheese with celery and almond butter",
+              "Soup Tuna Salad with whole wheat wrap and black beans"
             ]
           },
           {
             "name": "chia seeds",
-            "amount": "1/2",
+            "amount": "1/4",
             "unit": "cup",
             "category": "Other",
             "recipes": [
-              "Italian Smoothie with chia seeds",
               "Creamy Greek Yogurt with chia seeds",
-              "Quick Cottage Cheese with chia seeds",
               "Make-ahead Greek Yogurt with chia seeds",
-              "Fiber-rich Greek Yogurt with chia seeds",
               "No-cook Greek Yogurt with chia seeds"
             ]
           },
@@ -244,8 +135,7 @@
             "unit": "cup",
             "category": "Other",
             "recipes": [
-              "Skillet Tuna Salad with chickpeas and mixed vegetables",
-              "Salad Tuna Salad with chickpeas and mixed vegetables"
+              "Stuffed Tuna Salad with chickpeas and mixed vegetables"
             ]
           },
           {
@@ -254,13 +144,13 @@
             "unit": "tsp",
             "category": "Other",
             "recipes": [
+              "Italian Smoothie with spinach",
+              "Mediterranean Smoothie with spinach",
+              "Southwest Greek Yogurt Bowl with whole grain bread and berries",
               "Indian-spiced Greek Yogurt Bowl with whole grain bread and berries",
-              "Italian Smoothie with hemp hearts",
-              "Italian Smoothie with chia seeds",
-              "Middle Eastern Greek Yogurt Bowl with berries and nuts",
-              "Mediterranean Smoothie with almond butter and hemp hearts",
-              "American Greek Yogurt Bowl with whole grain bread and berries",
-              "Mediterranean Smoothie with nuts"
+              "Asian-inspired Greek Yogurt Bowl with whole grain bread and berries",
+              "Italian Greek Yogurt Bowl with whole grain bread and berries",
+              "Mexican Greek Yogurt Bowl with whole grain bread and berries"
             ]
           },
           {
@@ -269,30 +159,20 @@
             "unit": "clove",
             "category": "Other",
             "recipes": [
-              "Wrap Chicken Wrap with mixed vegetables",
+              "Turkey Buddha Bowl with lentils",
+              "Roasted White Fish with quinoa and wild rice",
+              "Skillet Turkey Sandwich with leafy greens",
+              "Glazed Turkey Meatballs with mixed salad and roasted vegetables",
+              "Stuffed Tuna Salad with chickpeas and mixed vegetables",
               "Slow Cooker Baked Salmon with quinoa and wild rice",
-              "Skillet Tuna Salad with chickpeas and mixed vegetables",
-              "Slow Cooker Tofu Stir-fry with wild rice",
-              "Stuffed Tuna Salad with whole wheat wrap and black beans",
-              "Baked Grilled Chicken Breast with quinoa and wild rice",
-              "Salad Chicken Wrap with black beans",
-              "Grilled Tofu Stir-fry with roasted vegetables and cauliflower rice",
-              "Salad Tuna Salad with chickpeas and mixed vegetables",
-              "Baked Lean Beef with quinoa and wild rice",
-              "Buddha Bowl Grilled Chicken with whole wheat wrap and black beans",
-              "Sheet Pan Tofu Stir-fry with wild rice",
-              "Baked Tuna Salad with whole wheat wrap and black beans",
-              "Roasted Turkey Meatballs with roasted vegetables and cauliflower rice"
-            ]
-          },
-          {
-            "name": "hemp hearts",
-            "amount": "1/2",
-            "unit": "cup",
-            "category": "Other",
-            "recipes": [
-              "Italian Smoothie with hemp hearts",
-              "Mediterranean Smoothie with almond butter and hemp hearts"
+              "Soup Lentil Salad with leafy greens",
+              "Glazed Tofu Stir-fry with wild rice",
+              "Turkey Sandwich",
+              "Stir-fried Tofu Stir-fry with roasted vegetables and cauliflower rice",
+              "Turkey Buddha Bowl with black beans",
+              "Braised Grilled Chicken Breast with quinoa and wild rice",
+              "Soup Tuna Salad with whole wheat wrap and black beans",
+              "Slow Cooker Lean Beef with quinoa and wild rice"
             ]
           },
           {
@@ -301,20 +181,68 @@
             "unit": "tsp",
             "category": "Other",
             "recipes": [
-              "Wrap Chicken Wrap with mixed vegetables",
+              "Turkey Buddha Bowl with lentils",
+              "Roasted White Fish with quinoa and wild rice",
+              "Skillet Turkey Sandwich with leafy greens",
+              "Glazed Turkey Meatballs with mixed salad and roasted vegetables",
+              "Stuffed Tuna Salad with chickpeas and mixed vegetables",
               "Slow Cooker Baked Salmon with quinoa and wild rice",
-              "Skillet Tuna Salad with chickpeas and mixed vegetables",
-              "Slow Cooker Tofu Stir-fry with wild rice",
-              "Stuffed Tuna Salad with whole wheat wrap and black beans",
-              "Baked Grilled Chicken Breast with quinoa and wild rice",
-              "Salad Chicken Wrap with black beans",
-              "Grilled Tofu Stir-fry with roasted vegetables and cauliflower rice",
-              "Salad Tuna Salad with chickpeas and mixed vegetables",
-              "Baked Lean Beef with quinoa and wild rice",
-              "Buddha Bowl Grilled Chicken with whole wheat wrap and black beans",
-              "Sheet Pan Tofu Stir-fry with wild rice",
-              "Baked Tuna Salad with whole wheat wrap and black beans",
-              "Roasted Turkey Meatballs with roasted vegetables and cauliflower rice"
+              "Soup Lentil Salad with leafy greens",
+              "Glazed Tofu Stir-fry with wild rice",
+              "Turkey Sandwich",
+              "Stir-fried Tofu Stir-fry with roasted vegetables and cauliflower rice",
+              "Turkey Buddha Bowl with black beans",
+              "Braised Grilled Chicken Breast with quinoa and wild rice",
+              "Soup Tuna Salad with whole wheat wrap and black beans",
+              "Slow Cooker Lean Beef with quinoa and wild rice"
+            ]
+          },
+          {
+            "name": "leafy greens",
+            "amount": "1/2",
+            "unit": "cup",
+            "category": "Other",
+            "recipes": [
+              "Skillet Turkey Sandwich with leafy greens",
+              "Soup Lentil Salad with leafy greens",
+              "Turkey Sandwich"
+            ]
+          },
+          {
+            "name": "lentil salad",
+            "amount": "8",
+            "unit": "oz",
+            "category": "Other",
+            "recipes": [
+              "Soup Lentil Salad with leafy greens"
+            ]
+          },
+          {
+            "name": "lentils",
+            "amount": "1/2",
+            "unit": "cup",
+            "category": "Other",
+            "recipes": [
+              "Turkey Buddha Bowl with lentils"
+            ]
+          },
+          {
+            "name": "mayonnaise",
+            "amount": "1",
+            "unit": "tbsp",
+            "category": "Other",
+            "recipes": [
+              "Stuffed Tuna Salad with chickpeas and mixed vegetables",
+              "Soup Tuna Salad with whole wheat wrap and black beans"
+            ]
+          },
+          {
+            "name": "mixed salad",
+            "amount": "1/2",
+            "unit": "cup",
+            "category": "Other",
+            "recipes": [
+              "Glazed Turkey Meatballs with mixed salad and roasted vegetables"
             ]
           },
           {
@@ -323,9 +251,17 @@
             "unit": "cup",
             "category": "Other",
             "recipes": [
-              "Wrap Chicken Wrap with mixed vegetables",
-              "Skillet Tuna Salad with chickpeas and mixed vegetables",
-              "Salad Tuna Salad with chickpeas and mixed vegetables"
+              "Stuffed Tuna Salad with chickpeas and mixed vegetables"
+            ]
+          },
+          {
+            "name": "mustard",
+            "amount": "1",
+            "unit": "tsp",
+            "category": "Other",
+            "recipes": [
+              "Skillet Turkey Sandwich with leafy greens",
+              "Turkey Sandwich"
             ]
           },
           {
@@ -334,13 +270,11 @@
             "unit": "cup",
             "category": "Other",
             "recipes": [
-              "Make-ahead Greek Yogurt with nuts",
-              "Middle Eastern Greek Yogurt Bowl with berries and nuts",
-              "Savory Greek Yogurt with nuts",
-              "Protein-packed Greek Yogurt with nuts",
+              "Fiber-rich Greek Yogurt with nuts",
+              "Sweet Greek Yogurt with nuts",
               "Quick Greek Yogurt with nuts",
-              "Mediterranean Smoothie with nuts",
-              "Portable Greek Yogurt with nuts"
+              "Portable Greek Yogurt with nuts",
+              "Creamy Greek Yogurt with nuts"
             ]
           },
           {
@@ -349,48 +283,48 @@
             "unit": "tbsp",
             "category": "Other",
             "recipes": [
-              "Indian-spiced Greek Yogurt Bowl with whole grain bread and berries",
-              "Make-ahead Greek Yogurt with cucumber and bell peppers",
-              "Wrap Chicken Wrap with mixed vegetables",
-              "Portable Cottage Cheese with almond butter and berries",
-              "Slow Cooker Baked Salmon with quinoa and wild rice",
-              "Savory Greek Yogurt with celery and almond butter",
-              "Italian Smoothie with hemp hearts",
-              "Crunchy Greek Yogurt with celery and almond butter",
-              "Skillet Tuna Salad with chickpeas and mixed vegetables",
-              "Make-ahead Greek Yogurt with nuts",
-              "Slow Cooker Tofu Stir-fry with wild rice",
-              "Sweet Greek Yogurt with cucumber and bell peppers",
-              "Italian Smoothie with chia seeds",
-              "Savory Greek Yogurt with berries",
-              "Stuffed Tuna Salad with whole wheat wrap and black beans",
-              "Quick Cottage Cheese with cucumber and bell peppers",
-              "Baked Grilled Chicken Breast with quinoa and wild rice",
-              "Quick Cottage Cheese with whole grain crackers",
-              "Middle Eastern Greek Yogurt Bowl with berries and nuts",
-              "Savory Greek Yogurt with nuts",
-              "Salad Chicken Wrap with black beans",
-              "Protein-packed Greek Yogurt with nuts",
-              "Grilled Tofu Stir-fry with roasted vegetables and cauliflower rice",
+              "Italian Smoothie with spinach",
               "Creamy Greek Yogurt with chia seeds",
-              "Mediterranean Smoothie with almond butter and hemp hearts",
-              "Quick Cottage Cheese with almond butter and berries",
-              "Salad Tuna Salad with chickpeas and mixed vegetables",
-              "Quick Cottage Cheese with chia seeds",
-              "Baked Lean Beef with quinoa and wild rice",
-              "Make-ahead Greek Yogurt with chia seeds",
-              "American Greek Yogurt Bowl with whole grain bread and berries",
+              "Turkey Buddha Bowl with lentils",
+              "Fiber-rich Greek Yogurt with nuts",
+              "Roasted White Fish with quinoa and wild rice",
+              "Crunchy Greek Yogurt with cucumber and bell peppers",
+              "Mediterranean Smoothie with spinach",
               "No-cook Greek Yogurt with whole grain crackers",
-              "Buddha Bowl Grilled Chicken with whole wheat wrap and black beans",
+              "Skillet Turkey Sandwich with leafy greens",
+              "Sweet Greek Yogurt with nuts",
+              "Glazed Turkey Meatballs with mixed salad and roasted vegetables",
+              "Protein-packed Greek Yogurt with cucumber and bell peppers",
+              "Southwest Greek Yogurt Bowl with whole grain bread and berries",
+              "Fiber-rich Greek Yogurt with bell peppers",
+              "Stuffed Tuna Salad with chickpeas and mixed vegetables",
               "Quick Greek Yogurt with nuts",
-              "Sheet Pan Tofu Stir-fry with wild rice",
-              "Fiber-rich Greek Yogurt with chia seeds",
-              "Mediterranean Smoothie with nuts",
-              "Fiber-rich Greek Yogurt with celery and almond butter",
-              "Baked Tuna Salad with whole wheat wrap and black beans",
+              "Slow Cooker Baked Salmon with quinoa and wild rice",
+              "Portable Greek Yogurt with celery and almond butter",
+              "Indian-spiced Greek Yogurt Bowl with whole grain bread and berries",
+              "Make-ahead Greek Yogurt with cherry tomatoes",
+              "Soup Lentil Salad with leafy greens",
               "Portable Greek Yogurt with nuts",
-              "Roasted Turkey Meatballs with roasted vegetables and cauliflower rice",
-              "No-cook Greek Yogurt with chia seeds"
+              "Glazed Tofu Stir-fry with wild rice",
+              "Make-ahead Greek Yogurt with chia seeds",
+              "Asian-inspired Greek Yogurt Bowl with whole grain bread and berries",
+              "Crunchy Greek Yogurt with whole grain crackers",
+              "Turkey Sandwich",
+              "Creamy Greek Yogurt with nuts",
+              "Stir-fried Tofu Stir-fry with roasted vegetables and cauliflower rice",
+              "Creamy Greek Yogurt with celery and almond butter",
+              "Italian Greek Yogurt Bowl with whole grain bread and berries",
+              "Sweet Greek Yogurt with bell peppers",
+              "Turkey Buddha Bowl with black beans",
+              "Quick Cottage Cheese with celery and almond butter",
+              "Braised Grilled Chicken Breast with quinoa and wild rice",
+              "No-cook Greek Yogurt with chia seeds",
+              "Mexican Greek Yogurt Bowl with whole grain bread and berries",
+              "Creamy Greek Yogurt with whole grain crackers",
+              "Soup Tuna Salad with whole wheat wrap and black beans",
+              "Quick Cottage Cheese with almond butter and berries",
+              "Slow Cooker Lean Beef with quinoa and wild rice",
+              "No-cook Greek Yogurt with cucumber and bell peppers"
             ]
           },
           {
@@ -399,8 +333,8 @@
             "unit": "cup",
             "category": "Other",
             "recipes": [
-              "Grilled Tofu Stir-fry with roasted vegetables and cauliflower rice",
-              "Roasted Turkey Meatballs with roasted vegetables and cauliflower rice"
+              "Glazed Turkey Meatballs with mixed salad and roasted vegetables",
+              "Stir-fried Tofu Stir-fry with roasted vegetables and cauliflower rice"
             ]
           },
           {
@@ -409,48 +343,48 @@
             "unit": "tsp",
             "category": "Other",
             "recipes": [
-              "Indian-spiced Greek Yogurt Bowl with whole grain bread and berries",
-              "Make-ahead Greek Yogurt with cucumber and bell peppers",
-              "Wrap Chicken Wrap with mixed vegetables",
-              "Portable Cottage Cheese with almond butter and berries",
-              "Slow Cooker Baked Salmon with quinoa and wild rice",
-              "Savory Greek Yogurt with celery and almond butter",
-              "Italian Smoothie with hemp hearts",
-              "Crunchy Greek Yogurt with celery and almond butter",
-              "Skillet Tuna Salad with chickpeas and mixed vegetables",
-              "Make-ahead Greek Yogurt with nuts",
-              "Slow Cooker Tofu Stir-fry with wild rice",
-              "Sweet Greek Yogurt with cucumber and bell peppers",
-              "Italian Smoothie with chia seeds",
-              "Savory Greek Yogurt with berries",
-              "Stuffed Tuna Salad with whole wheat wrap and black beans",
-              "Quick Cottage Cheese with cucumber and bell peppers",
-              "Baked Grilled Chicken Breast with quinoa and wild rice",
-              "Quick Cottage Cheese with whole grain crackers",
-              "Middle Eastern Greek Yogurt Bowl with berries and nuts",
-              "Savory Greek Yogurt with nuts",
-              "Salad Chicken Wrap with black beans",
-              "Protein-packed Greek Yogurt with nuts",
-              "Grilled Tofu Stir-fry with roasted vegetables and cauliflower rice",
+              "Italian Smoothie with spinach",
               "Creamy Greek Yogurt with chia seeds",
-              "Mediterranean Smoothie with almond butter and hemp hearts",
-              "Quick Cottage Cheese with almond butter and berries",
-              "Salad Tuna Salad with chickpeas and mixed vegetables",
-              "Quick Cottage Cheese with chia seeds",
-              "Baked Lean Beef with quinoa and wild rice",
-              "Make-ahead Greek Yogurt with chia seeds",
-              "American Greek Yogurt Bowl with whole grain bread and berries",
+              "Turkey Buddha Bowl with lentils",
+              "Fiber-rich Greek Yogurt with nuts",
+              "Roasted White Fish with quinoa and wild rice",
+              "Crunchy Greek Yogurt with cucumber and bell peppers",
+              "Mediterranean Smoothie with spinach",
               "No-cook Greek Yogurt with whole grain crackers",
-              "Buddha Bowl Grilled Chicken with whole wheat wrap and black beans",
+              "Skillet Turkey Sandwich with leafy greens",
+              "Sweet Greek Yogurt with nuts",
+              "Glazed Turkey Meatballs with mixed salad and roasted vegetables",
+              "Protein-packed Greek Yogurt with cucumber and bell peppers",
+              "Southwest Greek Yogurt Bowl with whole grain bread and berries",
+              "Fiber-rich Greek Yogurt with bell peppers",
+              "Stuffed Tuna Salad with chickpeas and mixed vegetables",
               "Quick Greek Yogurt with nuts",
-              "Sheet Pan Tofu Stir-fry with wild rice",
-              "Fiber-rich Greek Yogurt with chia seeds",
-              "Mediterranean Smoothie with nuts",
-              "Fiber-rich Greek Yogurt with celery and almond butter",
-              "Baked Tuna Salad with whole wheat wrap and black beans",
+              "Slow Cooker Baked Salmon with quinoa and wild rice",
+              "Portable Greek Yogurt with celery and almond butter",
+              "Indian-spiced Greek Yogurt Bowl with whole grain bread and berries",
+              "Make-ahead Greek Yogurt with cherry tomatoes",
+              "Soup Lentil Salad with leafy greens",
               "Portable Greek Yogurt with nuts",
-              "Roasted Turkey Meatballs with roasted vegetables and cauliflower rice",
-              "No-cook Greek Yogurt with chia seeds"
+              "Glazed Tofu Stir-fry with wild rice",
+              "Make-ahead Greek Yogurt with chia seeds",
+              "Asian-inspired Greek Yogurt Bowl with whole grain bread and berries",
+              "Crunchy Greek Yogurt with whole grain crackers",
+              "Turkey Sandwich",
+              "Creamy Greek Yogurt with nuts",
+              "Stir-fried Tofu Stir-fry with roasted vegetables and cauliflower rice",
+              "Creamy Greek Yogurt with celery and almond butter",
+              "Italian Greek Yogurt Bowl with whole grain bread and berries",
+              "Sweet Greek Yogurt with bell peppers",
+              "Turkey Buddha Bowl with black beans",
+              "Quick Cottage Cheese with celery and almond butter",
+              "Braised Grilled Chicken Breast with quinoa and wild rice",
+              "No-cook Greek Yogurt with chia seeds",
+              "Mexican Greek Yogurt Bowl with whole grain bread and berries",
+              "Creamy Greek Yogurt with whole grain crackers",
+              "Soup Tuna Salad with whole wheat wrap and black beans",
+              "Quick Cottage Cheese with almond butter and berries",
+              "Slow Cooker Lean Beef with quinoa and wild rice",
+              "No-cook Greek Yogurt with cucumber and bell peppers"
             ]
           },
           {
@@ -459,10 +393,8 @@
             "unit": "oz",
             "category": "Other",
             "recipes": [
-              "Italian Smoothie with hemp hearts",
-              "Italian Smoothie with chia seeds",
-              "Mediterranean Smoothie with almond butter and hemp hearts",
-              "Mediterranean Smoothie with nuts"
+              "Italian Smoothie with spinach",
+              "Mediterranean Smoothie with spinach"
             ]
           },
           {
@@ -471,8 +403,19 @@
             "unit": "cup",
             "category": "Other",
             "recipes": [
-              "Quick Cottage Cheese with whole grain crackers",
-              "No-cook Greek Yogurt with whole grain crackers"
+              "No-cook Greek Yogurt with whole grain crackers",
+              "Crunchy Greek Yogurt with whole grain crackers",
+              "Creamy Greek Yogurt with whole grain crackers"
+            ]
+          },
+          {
+            "name": "whole wheat tortilla",
+            "amount": "1",
+            "unit": "large",
+            "category": "Other",
+            "recipes": [
+              "Turkey Buddha Bowl with lentils",
+              "Turkey Buddha Bowl with black beans"
             ]
           },
           {
@@ -481,9 +424,7 @@
             "unit": "cup",
             "category": "Other",
             "recipes": [
-              "Stuffed Tuna Salad with whole wheat wrap and black beans",
-              "Buddha Bowl Grilled Chicken with whole wheat wrap and black beans",
-              "Baked Tuna Salad with whole wheat wrap and black beans"
+              "Soup Tuna Salad with whole wheat wrap and black beans"
             ]
           }
         ]
@@ -497,9 +438,11 @@
             "unit": "cup",
             "category": "Produce",
             "recipes": [
-              "Make-ahead Greek Yogurt with cucumber and bell peppers",
-              "Sweet Greek Yogurt with cucumber and bell peppers",
-              "Quick Cottage Cheese with cucumber and bell peppers"
+              "Crunchy Greek Yogurt with cucumber and bell peppers",
+              "Protein-packed Greek Yogurt with cucumber and bell peppers",
+              "Fiber-rich Greek Yogurt with bell peppers",
+              "Sweet Greek Yogurt with bell peppers",
+              "No-cook Greek Yogurt with cucumber and bell peppers"
             ]
           },
           {
@@ -508,48 +451,57 @@
             "unit": "tsp",
             "category": "Produce",
             "recipes": [
-              "Indian-spiced Greek Yogurt Bowl with whole grain bread and berries",
-              "Make-ahead Greek Yogurt with cucumber and bell peppers",
-              "Wrap Chicken Wrap with mixed vegetables",
-              "Portable Cottage Cheese with almond butter and berries",
-              "Slow Cooker Baked Salmon with quinoa and wild rice",
-              "Savory Greek Yogurt with celery and almond butter",
-              "Italian Smoothie with hemp hearts",
-              "Crunchy Greek Yogurt with celery and almond butter",
-              "Skillet Tuna Salad with chickpeas and mixed vegetables",
-              "Make-ahead Greek Yogurt with nuts",
-              "Slow Cooker Tofu Stir-fry with wild rice",
-              "Sweet Greek Yogurt with cucumber and bell peppers",
-              "Italian Smoothie with chia seeds",
-              "Savory Greek Yogurt with berries",
-              "Stuffed Tuna Salad with whole wheat wrap and black beans",
-              "Quick Cottage Cheese with cucumber and bell peppers",
-              "Baked Grilled Chicken Breast with quinoa and wild rice",
-              "Quick Cottage Cheese with whole grain crackers",
-              "Middle Eastern Greek Yogurt Bowl with berries and nuts",
-              "Savory Greek Yogurt with nuts",
-              "Salad Chicken Wrap with black beans",
-              "Protein-packed Greek Yogurt with nuts",
-              "Grilled Tofu Stir-fry with roasted vegetables and cauliflower rice",
+              "Italian Smoothie with spinach",
               "Creamy Greek Yogurt with chia seeds",
-              "Mediterranean Smoothie with almond butter and hemp hearts",
-              "Quick Cottage Cheese with almond butter and berries",
-              "Salad Tuna Salad with chickpeas and mixed vegetables",
-              "Quick Cottage Cheese with chia seeds",
-              "Baked Lean Beef with quinoa and wild rice",
-              "Make-ahead Greek Yogurt with chia seeds",
-              "American Greek Yogurt Bowl with whole grain bread and berries",
+              "Turkey Buddha Bowl with lentils",
+              "Fiber-rich Greek Yogurt with nuts",
+              "Roasted White Fish with quinoa and wild rice",
+              "Crunchy Greek Yogurt with cucumber and bell peppers",
+              "Mediterranean Smoothie with spinach",
               "No-cook Greek Yogurt with whole grain crackers",
-              "Buddha Bowl Grilled Chicken with whole wheat wrap and black beans",
+              "Skillet Turkey Sandwich with leafy greens",
+              "Sweet Greek Yogurt with nuts",
+              "Glazed Turkey Meatballs with mixed salad and roasted vegetables",
+              "Protein-packed Greek Yogurt with cucumber and bell peppers",
+              "Southwest Greek Yogurt Bowl with whole grain bread and berries",
+              "Fiber-rich Greek Yogurt with bell peppers",
+              "Stuffed Tuna Salad with chickpeas and mixed vegetables",
               "Quick Greek Yogurt with nuts",
-              "Sheet Pan Tofu Stir-fry with wild rice",
-              "Fiber-rich Greek Yogurt with chia seeds",
-              "Mediterranean Smoothie with nuts",
-              "Fiber-rich Greek Yogurt with celery and almond butter",
-              "Baked Tuna Salad with whole wheat wrap and black beans",
+              "Slow Cooker Baked Salmon with quinoa and wild rice",
+              "Portable Greek Yogurt with celery and almond butter",
+              "Indian-spiced Greek Yogurt Bowl with whole grain bread and berries",
+              "Make-ahead Greek Yogurt with cherry tomatoes",
+              "Soup Lentil Salad with leafy greens",
               "Portable Greek Yogurt with nuts",
-              "Roasted Turkey Meatballs with roasted vegetables and cauliflower rice",
-              "No-cook Greek Yogurt with chia seeds"
+              "Glazed Tofu Stir-fry with wild rice",
+              "Make-ahead Greek Yogurt with chia seeds",
+              "Asian-inspired Greek Yogurt Bowl with whole grain bread and berries",
+              "Crunchy Greek Yogurt with whole grain crackers",
+              "Turkey Sandwich",
+              "Creamy Greek Yogurt with nuts",
+              "Stir-fried Tofu Stir-fry with roasted vegetables and cauliflower rice",
+              "Creamy Greek Yogurt with celery and almond butter",
+              "Italian Greek Yogurt Bowl with whole grain bread and berries",
+              "Sweet Greek Yogurt with bell peppers",
+              "Turkey Buddha Bowl with black beans",
+              "Quick Cottage Cheese with celery and almond butter",
+              "Braised Grilled Chicken Breast with quinoa and wild rice",
+              "No-cook Greek Yogurt with chia seeds",
+              "Mexican Greek Yogurt Bowl with whole grain bread and berries",
+              "Creamy Greek Yogurt with whole grain crackers",
+              "Soup Tuna Salad with whole wheat wrap and black beans",
+              "Quick Cottage Cheese with almond butter and berries",
+              "Slow Cooker Lean Beef with quinoa and wild rice",
+              "No-cook Greek Yogurt with cucumber and bell peppers"
+            ]
+          },
+          {
+            "name": "cherry tomatoes",
+            "amount": "1/4",
+            "unit": "cup",
+            "category": "Produce",
+            "recipes": [
+              "Make-ahead Greek Yogurt with cherry tomatoes"
             ]
           },
           {
@@ -558,9 +510,120 @@
             "unit": "cup",
             "category": "Produce",
             "recipes": [
-              "Make-ahead Greek Yogurt with cucumber and bell peppers",
-              "Sweet Greek Yogurt with cucumber and bell peppers",
-              "Quick Cottage Cheese with cucumber and bell peppers"
+              "Crunchy Greek Yogurt with cucumber and bell peppers",
+              "Protein-packed Greek Yogurt with cucumber and bell peppers",
+              "No-cook Greek Yogurt with cucumber and bell peppers"
+            ]
+          },
+          {
+            "name": "lettuce",
+            "amount": "1/4",
+            "unit": "cup",
+            "category": "Produce",
+            "recipes": [
+              "Turkey Buddha Bowl with lentils",
+              "Skillet Turkey Sandwich with leafy greens",
+              "Turkey Sandwich",
+              "Turkey Buddha Bowl with black beans"
+            ]
+          },
+          {
+            "name": "onion",
+            "amount": "1",
+            "unit": "tbsp",
+            "category": "Produce",
+            "recipes": [
+              "Stuffed Tuna Salad with chickpeas and mixed vegetables",
+              "Soup Tuna Salad with whole wheat wrap and black beans"
+            ]
+          },
+          {
+            "name": "spinach",
+            "amount": "1/2",
+            "unit": "cup",
+            "category": "Produce",
+            "recipes": [
+              "Italian Smoothie with spinach",
+              "Mediterranean Smoothie with spinach"
+            ]
+          },
+          {
+            "name": "tomato",
+            "amount": "1/4",
+            "unit": "cup",
+            "category": "Produce",
+            "recipes": [
+              "Turkey Buddha Bowl with lentils",
+              "Skillet Turkey Sandwich with leafy greens",
+              "Turkey Sandwich",
+              "Turkey Buddha Bowl with black beans"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dairy",
+        "items": [
+          {
+            "name": "almond butter",
+            "amount": "1/4",
+            "unit": "cup",
+            "category": "Dairy",
+            "recipes": [
+              "Portable Greek Yogurt with celery and almond butter",
+              "Creamy Greek Yogurt with celery and almond butter",
+              "Quick Cottage Cheese with celery and almond butter",
+              "Quick Cottage Cheese with almond butter and berries"
+            ]
+          },
+          {
+            "name": "cottage cheese",
+            "amount": "4",
+            "unit": "oz",
+            "category": "Dairy",
+            "recipes": [
+              "Quick Cottage Cheese with celery and almond butter",
+              "Quick Cottage Cheese with almond butter and berries"
+            ]
+          },
+          {
+            "name": "greek yogurt",
+            "amount": "4",
+            "unit": "oz",
+            "category": "Dairy",
+            "recipes": [
+              "Creamy Greek Yogurt with chia seeds",
+              "Fiber-rich Greek Yogurt with nuts",
+              "Crunchy Greek Yogurt with cucumber and bell peppers",
+              "No-cook Greek Yogurt with whole grain crackers",
+              "Sweet Greek Yogurt with nuts",
+              "Protein-packed Greek Yogurt with cucumber and bell peppers",
+              "Fiber-rich Greek Yogurt with bell peppers",
+              "Quick Greek Yogurt with nuts",
+              "Portable Greek Yogurt with celery and almond butter",
+              "Make-ahead Greek Yogurt with cherry tomatoes",
+              "Portable Greek Yogurt with nuts",
+              "Make-ahead Greek Yogurt with chia seeds",
+              "Crunchy Greek Yogurt with whole grain crackers",
+              "Creamy Greek Yogurt with nuts",
+              "Creamy Greek Yogurt with celery and almond butter",
+              "Sweet Greek Yogurt with bell peppers",
+              "No-cook Greek Yogurt with chia seeds",
+              "Creamy Greek Yogurt with whole grain crackers",
+              "No-cook Greek Yogurt with cucumber and bell peppers"
+            ]
+          },
+          {
+            "name": "plain Greek yogurt",
+            "amount": "2",
+            "unit": "cup",
+            "category": "Dairy",
+            "recipes": [
+              "Southwest Greek Yogurt Bowl with whole grain bread and berries",
+              "Indian-spiced Greek Yogurt Bowl with whole grain bread and berries",
+              "Asian-inspired Greek Yogurt Bowl with whole grain bread and berries",
+              "Italian Greek Yogurt Bowl with whole grain bread and berries",
+              "Mexican Greek Yogurt Bowl with whole grain bread and berries"
             ]
           }
         ]
@@ -569,22 +632,23 @@
         "name": "Proteins",
         "items": [
           {
-            "name": "chicken breast",
-            "amount": "8",
+            "name": "canned tuna",
+            "amount": "3",
             "unit": "oz",
             "category": "Proteins",
             "recipes": [
-              "Buddha Bowl Grilled Chicken with whole wheat wrap and black beans"
+              "Stuffed Tuna Salad with chickpeas and mixed vegetables",
+              "Soup Tuna Salad with whole wheat wrap and black beans"
             ]
           },
           {
-            "name": "chicken wrap",
-            "amount": "8",
+            "name": "chicken breast",
+            "amount": "4",
             "unit": "oz",
             "category": "Proteins",
             "recipes": [
-              "Wrap Chicken Wrap with mixed vegetables",
-              "Salad Chicken Wrap with black beans"
+              "Turkey Buddha Bowl with lentils",
+              "Turkey Buddha Bowl with black beans"
             ]
           },
           {
@@ -593,9 +657,8 @@
             "unit": "oz",
             "category": "Proteins",
             "recipes": [
-              "Slow Cooker Tofu Stir-fry with wild rice",
-              "Grilled Tofu Stir-fry with roasted vegetables and cauliflower rice",
-              "Sheet Pan Tofu Stir-fry with wild rice"
+              "Glazed Tofu Stir-fry with wild rice",
+              "Stir-fried Tofu Stir-fry with roasted vegetables and cauliflower rice"
             ]
           },
           {
@@ -604,7 +667,7 @@
             "unit": "oz",
             "category": "Proteins",
             "recipes": [
-              "Baked Grilled Chicken Breast with quinoa and wild rice"
+              "Braised Grilled Chicken Breast with quinoa and wild rice"
             ]
           },
           {
@@ -613,7 +676,7 @@
             "unit": "oz",
             "category": "Proteins",
             "recipes": [
-              "Baked Lean Beef with quinoa and wild rice"
+              "Slow Cooker Lean Beef with quinoa and wild rice"
             ]
           },
           {
@@ -626,15 +689,13 @@
             ]
           },
           {
-            "name": "tuna salad",
-            "amount": "8",
+            "name": "sliced turkey",
+            "amount": "4",
             "unit": "oz",
             "category": "Proteins",
             "recipes": [
-              "Skillet Tuna Salad with chickpeas and mixed vegetables",
-              "Stuffed Tuna Salad with whole wheat wrap and black beans",
-              "Salad Tuna Salad with chickpeas and mixed vegetables",
-              "Baked Tuna Salad with whole wheat wrap and black beans"
+              "Skillet Turkey Sandwich with leafy greens",
+              "Turkey Sandwich"
             ]
           },
           {
@@ -643,13 +704,84 @@
             "unit": "oz",
             "category": "Proteins",
             "recipes": [
-              "Roasted Turkey Meatballs with roasted vegetables and cauliflower rice"
+              "Glazed Turkey Meatballs with mixed salad and roasted vegetables"
+            ]
+          },
+          {
+            "name": "white fish",
+            "amount": "8",
+            "unit": "oz",
+            "category": "Proteins",
+            "recipes": [
+              "Roasted White Fish with quinoa and wild rice"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Grains",
+        "items": [
+          {
+            "name": "cauliflower rice",
+            "amount": "1.5",
+            "unit": "cup",
+            "category": "Grains",
+            "recipes": [
+              "Stir-fried Tofu Stir-fry with roasted vegetables and cauliflower rice"
+            ]
+          },
+          {
+            "name": "quinoa",
+            "amount": "1/2",
+            "unit": "cup",
+            "category": "Grains",
+            "recipes": [
+              "Roasted White Fish with quinoa and wild rice",
+              "Slow Cooker Baked Salmon with quinoa and wild rice",
+              "Braised Grilled Chicken Breast with quinoa and wild rice",
+              "Slow Cooker Lean Beef with quinoa and wild rice"
+            ]
+          },
+          {
+            "name": "whole grain bread",
+            "amount": "0.8",
+            "unit": "cup",
+            "category": "Grains",
+            "recipes": [
+              "Southwest Greek Yogurt Bowl with whole grain bread and berries",
+              "Indian-spiced Greek Yogurt Bowl with whole grain bread and berries",
+              "Asian-inspired Greek Yogurt Bowl with whole grain bread and berries",
+              "Italian Greek Yogurt Bowl with whole grain bread and berries",
+              "Mexican Greek Yogurt Bowl with whole grain bread and berries"
+            ]
+          },
+          {
+            "name": "whole wheat bread",
+            "amount": "2",
+            "unit": "slices",
+            "category": "Grains",
+            "recipes": [
+              "Skillet Turkey Sandwich with leafy greens",
+              "Turkey Sandwich"
+            ]
+          },
+          {
+            "name": "wild rice",
+            "amount": "1/2",
+            "unit": "cup",
+            "category": "Grains",
+            "recipes": [
+              "Roasted White Fish with quinoa and wild rice",
+              "Slow Cooker Baked Salmon with quinoa and wild rice",
+              "Glazed Tofu Stir-fry with wild rice",
+              "Braised Grilled Chicken Breast with quinoa and wild rice",
+              "Slow Cooker Lean Beef with quinoa and wild rice"
             ]
           }
         ]
       }
     ],
-    "totalItems": 36
+    "totalItems": 50
   },
   "season": "winter"
 }

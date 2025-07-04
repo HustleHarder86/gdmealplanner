@@ -647,7 +647,7 @@
   },
   {
     "id": "wrap-grilled-chicken-with-whole-wheat-wrap-and-black-beans",
-    "title": "Wrap Grilled Chicken with whole wheat wrap and black beans",
+    "title": "Grilled Chicken with whole wheat Wrap",
     "description": "27g protein-packed lunch to keep you satisfied",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/wrap-grilled-chicken-with-whole-wheat-wrap-and-black-beans",
@@ -2411,7 +2411,7 @@
   },
   {
     "id": "buddha-bowl-turkey-sandwich-with-mixed-vegetables",
-    "title": "Buddha Bowl Turkey Sandwich with mixed vegetables",
+    "title": "Turkey Buddha Bowl with mixed vegetables",
     "description": "Delicious lunch option with balanced nutrition for gestational diabetes",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/buddha-bowl-turkey-sandwich-with-mixed-vegetables",
@@ -2423,9 +2423,29 @@
     "image": "images/buddha-bowl-turkey-sandwich-with-mixed-vegetables.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "turkey sandwich"
+        "item": "sliced turkey"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "whole wheat bread"
+      },
+      {
+        "amount": "2",
+        "unit": "leaves",
+        "item": "lettuce"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "tomato"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "mustard"
       },
       {
         "amount": "1/2",
@@ -2460,7 +2480,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare turkey sandwich according to package directions or standard method.",
+      "Toast the bread if desired. Layer the turkey, lettuce, tomato, and condiments between bread slices.",
       "Prepare mixed vegetables as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -2486,7 +2506,7 @@
   },
   {
     "id": "buddha-bowl-turkey-sandwich-with-leafy-greens",
-    "title": "Buddha Bowl Turkey Sandwich with leafy greens",
+    "title": "Turkey Buddha Bowl with leafy greens",
     "description": "Quick and healthy lunch perfect for managing blood sugar levels",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/buddha-bowl-turkey-sandwich-with-leafy-greens",
@@ -2498,9 +2518,29 @@
     "image": "images/buddha-bowl-turkey-sandwich-with-leafy-greens.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "turkey sandwich"
+        "item": "sliced turkey"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "whole wheat bread"
+      },
+      {
+        "amount": "2",
+        "unit": "leaves",
+        "item": "lettuce"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "tomato"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "mustard"
       },
       {
         "amount": "1/2",
@@ -2535,7 +2575,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare turkey sandwich according to package directions or standard method.",
+      "Toast the bread if desired. Layer the turkey, lettuce, tomato, and condiments between bread slices.",
       "Prepare leafy greens as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -2574,9 +2614,29 @@
     "image": "images/salad-turkey-sandwich-with-mixed-vegetables.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "turkey sandwich"
+        "item": "sliced turkey"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "whole wheat bread"
+      },
+      {
+        "amount": "2",
+        "unit": "leaves",
+        "item": "lettuce"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "tomato"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "mustard"
       },
       {
         "amount": "1/2",
@@ -2611,7 +2671,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare turkey sandwich according to package directions or standard method.",
+      "Toast the bread if desired. Layer the turkey, lettuce, tomato, and condiments between bread slices.",
       "Prepare mixed vegetables as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -2649,9 +2709,29 @@
     "image": "images/salad-turkey-sandwich-with-leafy-greens.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "turkey sandwich"
+        "item": "sliced turkey"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "whole wheat bread"
+      },
+      {
+        "amount": "2",
+        "unit": "leaves",
+        "item": "lettuce"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "tomato"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "mustard"
       },
       {
         "amount": "1/2",
@@ -2686,7 +2766,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare turkey sandwich according to package directions or standard method.",
+      "Toast the bread if desired. Layer the turkey, lettuce, tomato, and condiments between bread slices.",
       "Prepare leafy greens as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -2714,7 +2794,7 @@
   },
   {
     "id": "wrap-turkey-sandwich-with-mixed-vegetables",
-    "title": "Wrap Turkey Sandwich with mixed vegetables",
+    "title": "Wrap Turkey with mixed vegetables",
     "description": "Easy lunch recipe ready in 29 minutes",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/wrap-turkey-sandwich-with-mixed-vegetables",
@@ -2726,9 +2806,29 @@
     "image": "images/wrap-turkey-sandwich-with-mixed-vegetables.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "turkey sandwich"
+        "item": "sliced turkey"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "whole wheat bread"
+      },
+      {
+        "amount": "2",
+        "unit": "leaves",
+        "item": "lettuce"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "tomato"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "mustard"
       },
       {
         "amount": "1/2",
@@ -2763,7 +2863,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare turkey sandwich according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare mixed vegetables as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -2788,7 +2888,7 @@
   },
   {
     "id": "wrap-turkey-sandwich-with-leafy-greens",
-    "title": "Wrap Turkey Sandwich with leafy greens",
+    "title": "Wrap Turkey with leafy greens",
     "description": "Delicious lunch option with balanced nutrition for gestational diabetes",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/wrap-turkey-sandwich-with-leafy-greens",
@@ -2800,9 +2900,29 @@
     "image": "images/wrap-turkey-sandwich-with-leafy-greens.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "turkey sandwich"
+        "item": "sliced turkey"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "whole wheat bread"
+      },
+      {
+        "amount": "2",
+        "unit": "leaves",
+        "item": "lettuce"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "tomato"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "mustard"
       },
       {
         "amount": "1/2",
@@ -2837,7 +2957,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare turkey sandwich according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare leafy greens as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -2877,9 +2997,29 @@
     "image": "images/soup-turkey-sandwich-with-mixed-vegetables.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "turkey sandwich"
+        "item": "sliced turkey"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "whole wheat bread"
+      },
+      {
+        "amount": "2",
+        "unit": "leaves",
+        "item": "lettuce"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "tomato"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "mustard"
       },
       {
         "amount": "1/2",
@@ -2914,7 +3054,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare turkey sandwich according to package directions or standard method.",
+      "Toast the bread if desired. Layer the turkey, lettuce, tomato, and condiments between bread slices.",
       "Prepare mixed vegetables as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -2952,9 +3092,29 @@
     "image": "images/soup-turkey-sandwich-with-leafy-greens.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "turkey sandwich"
+        "item": "sliced turkey"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "whole wheat bread"
+      },
+      {
+        "amount": "2",
+        "unit": "leaves",
+        "item": "lettuce"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "tomato"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "mustard"
       },
       {
         "amount": "1/2",
@@ -2989,7 +3149,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare turkey sandwich according to package directions or standard method.",
+      "Toast the bread if desired. Layer the turkey, lettuce, tomato, and condiments between bread slices.",
       "Prepare leafy greens as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -3017,7 +3177,7 @@
   },
   {
     "id": "sandwich-turkey-sandwich-with-mixed-vegetables",
-    "title": "Sandwich Turkey Sandwich with mixed vegetables",
+    "title": "Turkey Sandwich",
     "description": "22g protein-packed lunch to keep you satisfied",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/sandwich-turkey-sandwich-with-mixed-vegetables",
@@ -3029,9 +3189,29 @@
     "image": "images/sandwich-turkey-sandwich-with-mixed-vegetables.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "turkey sandwich"
+        "item": "sliced turkey"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "whole wheat bread"
+      },
+      {
+        "amount": "2",
+        "unit": "leaves",
+        "item": "lettuce"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "tomato"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "mustard"
       },
       {
         "amount": "1/2",
@@ -3066,7 +3246,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare turkey sandwich according to package directions or standard method.",
+      "Toast the bread if desired. Layer the turkey, lettuce, tomato, and condiments between bread slices.",
       "Prepare mixed vegetables as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -3092,7 +3272,7 @@
   },
   {
     "id": "sandwich-turkey-sandwich-with-leafy-greens",
-    "title": "Sandwich Turkey Sandwich with leafy greens",
+    "title": "Turkey Sandwich",
     "description": "Easy lunch recipe ready in 15 minutes",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/sandwich-turkey-sandwich-with-leafy-greens",
@@ -3104,9 +3284,29 @@
     "image": "images/sandwich-turkey-sandwich-with-leafy-greens.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "turkey sandwich"
+        "item": "sliced turkey"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "whole wheat bread"
+      },
+      {
+        "amount": "2",
+        "unit": "leaves",
+        "item": "lettuce"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "tomato"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "mustard"
       },
       {
         "amount": "1/2",
@@ -3141,7 +3341,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare turkey sandwich according to package directions or standard method.",
+      "Toast the bread if desired. Layer the turkey, lettuce, tomato, and condiments between bread slices.",
       "Prepare leafy greens as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -3169,7 +3369,7 @@
   },
   {
     "id": "grain-bowl-turkey-sandwich-with-mixed-vegetables",
-    "title": "Grain Bowl Turkey Sandwich with mixed vegetables",
+    "title": "Turkey Grain Bowl with mixed vegetables",
     "description": "Delicious lunch option with balanced nutrition for gestational diabetes",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/grain-bowl-turkey-sandwich-with-mixed-vegetables",
@@ -3181,9 +3381,29 @@
     "image": "images/grain-bowl-turkey-sandwich-with-mixed-vegetables.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "turkey sandwich"
+        "item": "sliced turkey"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "whole wheat bread"
+      },
+      {
+        "amount": "2",
+        "unit": "leaves",
+        "item": "lettuce"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "tomato"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "mustard"
       },
       {
         "amount": "1/2",
@@ -3218,7 +3438,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare turkey sandwich according to package directions or standard method.",
+      "Toast the bread if desired. Layer the turkey, lettuce, tomato, and condiments between bread slices.",
       "Prepare mixed vegetables as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -3244,7 +3464,7 @@
   },
   {
     "id": "grain-bowl-turkey-sandwich-with-leafy-greens",
-    "title": "Grain Bowl Turkey Sandwich with leafy greens",
+    "title": "Turkey Grain Bowl with leafy greens",
     "description": "Quick and healthy lunch perfect for managing blood sugar levels",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/grain-bowl-turkey-sandwich-with-leafy-greens",
@@ -3256,9 +3476,29 @@
     "image": "images/grain-bowl-turkey-sandwich-with-leafy-greens.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "turkey sandwich"
+        "item": "sliced turkey"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "whole wheat bread"
+      },
+      {
+        "amount": "2",
+        "unit": "leaves",
+        "item": "lettuce"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "tomato"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "mustard"
       },
       {
         "amount": "1/2",
@@ -3293,7 +3533,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare turkey sandwich according to package directions or standard method.",
+      "Toast the bread if desired. Layer the turkey, lettuce, tomato, and condiments between bread slices.",
       "Prepare leafy greens as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -3333,9 +3573,29 @@
     "image": "images/lettuce-cups-turkey-sandwich-with-mixed-vegetables.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "turkey sandwich"
+        "item": "sliced turkey"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "whole wheat bread"
+      },
+      {
+        "amount": "2",
+        "unit": "leaves",
+        "item": "lettuce"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "tomato"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "mustard"
       },
       {
         "amount": "1/2",
@@ -3370,7 +3630,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare turkey sandwich according to package directions or standard method.",
+      "Toast the bread if desired. Layer the turkey, lettuce, tomato, and condiments between bread slices.",
       "Prepare mixed vegetables as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -3407,9 +3667,29 @@
     "image": "images/lettuce-cups-turkey-sandwich-with-leafy-greens.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "turkey sandwich"
+        "item": "sliced turkey"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "whole wheat bread"
+      },
+      {
+        "amount": "2",
+        "unit": "leaves",
+        "item": "lettuce"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "tomato"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "mustard"
       },
       {
         "amount": "1/2",
@@ -3444,7 +3724,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare turkey sandwich according to package directions or standard method.",
+      "Toast the bread if desired. Layer the turkey, lettuce, tomato, and condiments between bread slices.",
       "Prepare leafy greens as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -3484,9 +3764,29 @@
     "image": "images/stuffed-turkey-sandwich-with-mixed-vegetables.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "turkey sandwich"
+        "item": "sliced turkey"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "whole wheat bread"
+      },
+      {
+        "amount": "2",
+        "unit": "leaves",
+        "item": "lettuce"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "tomato"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "mustard"
       },
       {
         "amount": "1/2",
@@ -3521,7 +3821,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare turkey sandwich according to package directions or standard method.",
+      "Toast the bread if desired. Layer the turkey, lettuce, tomato, and condiments between bread slices.",
       "Prepare mixed vegetables as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -3558,9 +3858,29 @@
     "image": "images/stuffed-turkey-sandwich-with-leafy-greens.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "turkey sandwich"
+        "item": "sliced turkey"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "whole wheat bread"
+      },
+      {
+        "amount": "2",
+        "unit": "leaves",
+        "item": "lettuce"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "tomato"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "mustard"
       },
       {
         "amount": "1/2",
@@ -3595,7 +3915,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare turkey sandwich according to package directions or standard method.",
+      "Toast the bread if desired. Layer the turkey, lettuce, tomato, and condiments between bread slices.",
       "Prepare leafy greens as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -3635,9 +3955,29 @@
     "image": "images/skillet-turkey-sandwich-with-mixed-vegetables.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "turkey sandwich"
+        "item": "sliced turkey"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "whole wheat bread"
+      },
+      {
+        "amount": "2",
+        "unit": "leaves",
+        "item": "lettuce"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "tomato"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "mustard"
       },
       {
         "amount": "1/2",
@@ -3672,7 +4012,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare turkey sandwich according to package directions or standard method.",
+      "Toast the bread if desired. Layer the turkey, lettuce, tomato, and condiments between bread slices.",
       "Prepare mixed vegetables as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -3709,9 +4049,29 @@
     "image": "images/skillet-turkey-sandwich-with-leafy-greens.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "turkey sandwich"
+        "item": "sliced turkey"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "whole wheat bread"
+      },
+      {
+        "amount": "2",
+        "unit": "leaves",
+        "item": "lettuce"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "tomato"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "mustard"
       },
       {
         "amount": "1/2",
@@ -3746,7 +4106,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare turkey sandwich according to package directions or standard method.",
+      "Toast the bread if desired. Layer the turkey, lettuce, tomato, and condiments between bread slices.",
       "Prepare leafy greens as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -3786,9 +4146,29 @@
     "image": "images/baked-turkey-sandwich-with-mixed-vegetables.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "turkey sandwich"
+        "item": "sliced turkey"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "whole wheat bread"
+      },
+      {
+        "amount": "2",
+        "unit": "leaves",
+        "item": "lettuce"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "tomato"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "mustard"
       },
       {
         "amount": "1/2",
@@ -3823,7 +4203,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare turkey sandwich according to package directions or standard method.",
+      "Toast the bread if desired. Layer the turkey, lettuce, tomato, and condiments between bread slices.",
       "Prepare mixed vegetables as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -3860,9 +4240,29 @@
     "image": "images/baked-turkey-sandwich-with-leafy-greens.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "turkey sandwich"
+        "item": "sliced turkey"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "whole wheat bread"
+      },
+      {
+        "amount": "2",
+        "unit": "leaves",
+        "item": "lettuce"
+      },
+      {
+        "amount": "2",
+        "unit": "slices",
+        "item": "tomato"
+      },
+      {
+        "amount": "1",
+        "unit": "tsp",
+        "item": "mustard"
       },
       {
         "amount": "1/2",
@@ -3897,7 +4297,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare turkey sandwich according to package directions or standard method.",
+      "Toast the bread if desired. Layer the turkey, lettuce, tomato, and condiments between bread slices.",
       "Prepare leafy greens as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -3925,7 +4325,7 @@
   },
   {
     "id": "buddha-bowl-tuna-salad-with-chickpeas-and-mixed-vegetables",
-    "title": "Buddha Bowl Tuna Salad with chickpeas and mixed vegetables",
+    "title": "Turkey Buddha Bowl with chickpeas and mixed vegetables",
     "description": "Delicious lunch option with balanced nutrition for gestational diabetes",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/buddha-bowl-tuna-salad-with-chickpeas-and-mixed-vegetables",
@@ -3937,9 +4337,24 @@
     "image": "images/buddha-bowl-tuna-salad-with-chickpeas-and-mixed-vegetables.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "3",
         "unit": "oz",
-        "item": "tuna salad"
+        "item": "canned tuna"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "mayonnaise"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "celery"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "onion"
       },
       {
         "amount": "1/2",
@@ -3979,7 +4394,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare tuna salad according to package directions or standard method.",
+      "Drain the tuna. Mix with mayonnaise, diced celery, and onion. Season with salt and pepper to taste.",
       "Prepare chickpeas and mixed vegetables as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -4007,7 +4422,7 @@
   },
   {
     "id": "buddha-bowl-tuna-salad-with-whole-wheat-wrap-and-black-beans",
-    "title": "Buddha Bowl Tuna Salad with whole wheat wrap and black beans",
+    "title": "Turkey Buddha Bowl with whole wheat wrap and black beans",
     "description": "Quick and healthy lunch perfect for managing blood sugar levels",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/buddha-bowl-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -4019,9 +4434,24 @@
     "image": "images/buddha-bowl-tuna-salad-with-whole-wheat-wrap-and-black-beans.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "3",
         "unit": "oz",
-        "item": "tuna salad"
+        "item": "canned tuna"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "mayonnaise"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "celery"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "onion"
       },
       {
         "amount": "1/2",
@@ -4061,7 +4491,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare tuna salad according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare whole wheat wrap and black beans as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -4086,7 +4516,7 @@
   },
   {
     "id": "salad-tuna-salad-with-chickpeas-and-mixed-vegetables",
-    "title": "Salad Tuna Salad with chickpeas and mixed vegetables",
+    "title": "Tuna Salad",
     "description": "Nutritious lunch recipe with 12g of fiber",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/salad-tuna-salad-with-chickpeas-and-mixed-vegetables",
@@ -4098,9 +4528,24 @@
     "image": "images/salad-tuna-salad-with-chickpeas-and-mixed-vegetables.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "3",
         "unit": "oz",
-        "item": "tuna salad"
+        "item": "canned tuna"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "mayonnaise"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "celery"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "onion"
       },
       {
         "amount": "1/2",
@@ -4140,7 +4585,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare tuna salad according to package directions or standard method.",
+      "Drain the tuna. Mix with mayonnaise, diced celery, and onion. Season with salt and pepper to taste.",
       "Prepare chickpeas and mixed vegetables as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -4169,7 +4614,7 @@
   },
   {
     "id": "salad-tuna-salad-with-whole-wheat-wrap-and-black-beans",
-    "title": "Salad Tuna Salad with whole wheat wrap and black beans",
+    "title": "Tuna Salad",
     "description": "24g protein-packed lunch to keep you satisfied",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/salad-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -4181,9 +4626,24 @@
     "image": "images/salad-tuna-salad-with-whole-wheat-wrap-and-black-beans.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "3",
         "unit": "oz",
-        "item": "tuna salad"
+        "item": "canned tuna"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "mayonnaise"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "celery"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "onion"
       },
       {
         "amount": "1/2",
@@ -4223,7 +4683,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare tuna salad according to package directions or standard method.",
+      "Drain the tuna. Mix with mayonnaise, diced celery, and onion. Season with salt and pepper to taste.",
       "Prepare whole wheat wrap and black beans as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -4247,7 +4707,7 @@
   },
   {
     "id": "wrap-tuna-salad-with-chickpeas-and-mixed-vegetables",
-    "title": "Wrap Tuna Salad with chickpeas and mixed vegetables",
+    "title": "Wrap Tuna with chickpeas and mixed vegetables",
     "description": "Easy lunch recipe ready in 20 minutes",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/wrap-tuna-salad-with-chickpeas-and-mixed-vegetables",
@@ -4259,9 +4719,24 @@
     "image": "images/wrap-tuna-salad-with-chickpeas-and-mixed-vegetables.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "3",
         "unit": "oz",
-        "item": "tuna salad"
+        "item": "canned tuna"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "mayonnaise"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "celery"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "onion"
       },
       {
         "amount": "1/2",
@@ -4301,7 +4776,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare tuna salad according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare chickpeas and mixed vegetables as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -4330,7 +4805,7 @@
   },
   {
     "id": "wrap-tuna-salad-with-whole-wheat-wrap-and-black-beans",
-    "title": "Wrap Tuna Salad with whole wheat wrap and black beans",
+    "title": "Tuna Salad with whole wheat Wrap",
     "description": "Delicious lunch option with balanced nutrition for gestational diabetes",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/wrap-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -4342,9 +4817,24 @@
     "image": "images/wrap-tuna-salad-with-whole-wheat-wrap-and-black-beans.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "3",
         "unit": "oz",
-        "item": "tuna salad"
+        "item": "canned tuna"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "mayonnaise"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "celery"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "onion"
       },
       {
         "amount": "1/2",
@@ -4384,7 +4874,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare tuna salad according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare whole wheat wrap and black beans as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -4420,9 +4910,24 @@
     "image": "images/soup-tuna-salad-with-chickpeas-and-mixed-vegetables.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "3",
         "unit": "oz",
-        "item": "tuna salad"
+        "item": "canned tuna"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "mayonnaise"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "celery"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "onion"
       },
       {
         "amount": "1/2",
@@ -4462,7 +4967,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare tuna salad according to package directions or standard method.",
+      "Drain the tuna. Mix with mayonnaise, diced celery, and onion. Season with salt and pepper to taste.",
       "Prepare chickpeas and mixed vegetables as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -4502,9 +5007,24 @@
     "image": "images/soup-tuna-salad-with-whole-wheat-wrap-and-black-beans.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "3",
         "unit": "oz",
-        "item": "tuna salad"
+        "item": "canned tuna"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "mayonnaise"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "celery"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "onion"
       },
       {
         "amount": "1/2",
@@ -4544,7 +5064,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare tuna salad according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare whole wheat wrap and black beans as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -4581,9 +5101,24 @@
     "image": "images/sandwich-tuna-salad-with-chickpeas-and-mixed-vegetables.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "3",
         "unit": "oz",
-        "item": "tuna salad"
+        "item": "canned tuna"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "mayonnaise"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "celery"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "onion"
       },
       {
         "amount": "1/2",
@@ -4623,7 +5158,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare tuna salad according to package directions or standard method.",
+      "Toast the bread if desired. Layer the turkey, lettuce, tomato, and condiments between bread slices.",
       "Prepare chickpeas and mixed vegetables as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -4663,9 +5198,24 @@
     "image": "images/sandwich-tuna-salad-with-whole-wheat-wrap-and-black-beans.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "3",
         "unit": "oz",
-        "item": "tuna salad"
+        "item": "canned tuna"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "mayonnaise"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "celery"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "onion"
       },
       {
         "amount": "1/2",
@@ -4705,7 +5255,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare tuna salad according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare whole wheat wrap and black beans as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -4730,7 +5280,7 @@
   },
   {
     "id": "grain-bowl-tuna-salad-with-chickpeas-and-mixed-vegetables",
-    "title": "Grain Bowl Tuna Salad with chickpeas and mixed vegetables",
+    "title": "Turkey Grain Bowl with chickpeas and mixed vegetables",
     "description": "Delicious lunch option with balanced nutrition for gestational diabetes",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/grain-bowl-tuna-salad-with-chickpeas-and-mixed-vegetables",
@@ -4742,9 +5292,24 @@
     "image": "images/grain-bowl-tuna-salad-with-chickpeas-and-mixed-vegetables.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "3",
         "unit": "oz",
-        "item": "tuna salad"
+        "item": "canned tuna"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "mayonnaise"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "celery"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "onion"
       },
       {
         "amount": "1/2",
@@ -4784,7 +5349,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare tuna salad according to package directions or standard method.",
+      "Drain the tuna. Mix with mayonnaise, diced celery, and onion. Season with salt and pepper to taste.",
       "Prepare chickpeas and mixed vegetables as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -4812,7 +5377,7 @@
   },
   {
     "id": "grain-bowl-tuna-salad-with-whole-wheat-wrap-and-black-beans",
-    "title": "Grain Bowl Tuna Salad with whole wheat wrap and black beans",
+    "title": "Turkey Grain Bowl with whole wheat wrap and black beans",
     "description": "Quick and healthy lunch perfect for managing blood sugar levels",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/grain-bowl-tuna-salad-with-whole-wheat-wrap-and-black-beans",
@@ -4824,9 +5389,24 @@
     "image": "images/grain-bowl-tuna-salad-with-whole-wheat-wrap-and-black-beans.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "3",
         "unit": "oz",
-        "item": "tuna salad"
+        "item": "canned tuna"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "mayonnaise"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "celery"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "onion"
       },
       {
         "amount": "1/2",
@@ -4866,7 +5446,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare tuna salad according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare whole wheat wrap and black beans as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -4903,9 +5483,24 @@
     "image": "images/lettuce-cups-tuna-salad-with-chickpeas-and-mixed-vegetables.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "3",
         "unit": "oz",
-        "item": "tuna salad"
+        "item": "canned tuna"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "mayonnaise"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "celery"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "onion"
       },
       {
         "amount": "1/2",
@@ -4945,7 +5540,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare tuna salad according to package directions or standard method.",
+      "Drain the tuna. Mix with mayonnaise, diced celery, and onion. Season with salt and pepper to taste.",
       "Prepare chickpeas and mixed vegetables as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -4985,9 +5580,24 @@
     "image": "images/lettuce-cups-tuna-salad-with-whole-wheat-wrap-and-black-beans.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "3",
         "unit": "oz",
-        "item": "tuna salad"
+        "item": "canned tuna"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "mayonnaise"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "celery"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "onion"
       },
       {
         "amount": "1/2",
@@ -5027,7 +5637,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare tuna salad according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare whole wheat wrap and black beans as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -5063,9 +5673,24 @@
     "image": "images/stuffed-tuna-salad-with-chickpeas-and-mixed-vegetables.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "3",
         "unit": "oz",
-        "item": "tuna salad"
+        "item": "canned tuna"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "mayonnaise"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "celery"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "onion"
       },
       {
         "amount": "1/2",
@@ -5105,7 +5730,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare tuna salad according to package directions or standard method.",
+      "Drain the tuna. Mix with mayonnaise, diced celery, and onion. Season with salt and pepper to taste.",
       "Prepare chickpeas and mixed vegetables as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -5146,9 +5771,24 @@
     "image": "images/stuffed-tuna-salad-with-whole-wheat-wrap-and-black-beans.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "3",
         "unit": "oz",
-        "item": "tuna salad"
+        "item": "canned tuna"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "mayonnaise"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "celery"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "onion"
       },
       {
         "amount": "1/2",
@@ -5188,7 +5828,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare tuna salad according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare whole wheat wrap and black beans as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -5225,9 +5865,24 @@
     "image": "images/skillet-tuna-salad-with-chickpeas-and-mixed-vegetables.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "3",
         "unit": "oz",
-        "item": "tuna salad"
+        "item": "canned tuna"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "mayonnaise"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "celery"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "onion"
       },
       {
         "amount": "1/2",
@@ -5267,7 +5922,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare tuna salad according to package directions or standard method.",
+      "Drain the tuna. Mix with mayonnaise, diced celery, and onion. Season with salt and pepper to taste.",
       "Prepare chickpeas and mixed vegetables as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -5307,9 +5962,24 @@
     "image": "images/skillet-tuna-salad-with-whole-wheat-wrap-and-black-beans.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "3",
         "unit": "oz",
-        "item": "tuna salad"
+        "item": "canned tuna"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "mayonnaise"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "celery"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "onion"
       },
       {
         "amount": "1/2",
@@ -5349,7 +6019,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare tuna salad according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare whole wheat wrap and black beans as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -5385,9 +6055,24 @@
     "image": "images/baked-tuna-salad-with-chickpeas-and-mixed-vegetables.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "3",
         "unit": "oz",
-        "item": "tuna salad"
+        "item": "canned tuna"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "mayonnaise"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "celery"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "onion"
       },
       {
         "amount": "1/2",
@@ -5427,7 +6112,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare tuna salad according to package directions or standard method.",
+      "Drain the tuna. Mix with mayonnaise, diced celery, and onion. Season with salt and pepper to taste.",
       "Prepare chickpeas and mixed vegetables as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -5468,9 +6153,24 @@
     "image": "images/baked-tuna-salad-with-whole-wheat-wrap-and-black-beans.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "3",
         "unit": "oz",
-        "item": "tuna salad"
+        "item": "canned tuna"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "mayonnaise"
+      },
+      {
+        "amount": "2",
+        "unit": "tbsp",
+        "item": "celery"
+      },
+      {
+        "amount": "1",
+        "unit": "tbsp",
+        "item": "onion"
       },
       {
         "amount": "1/2",
@@ -5510,7 +6210,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare tuna salad according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare whole wheat wrap and black beans as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -5534,7 +6234,7 @@
   },
   {
     "id": "salad-lentil-salad-with-mixed-vegetables",
-    "title": "Salad Lentil Salad with mixed vegetables",
+    "title": "Lentil Salad",
     "description": "Delicious lunch option with balanced nutrition for gestational diabetes",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/salad-lentil-salad-with-mixed-vegetables",
@@ -5910,7 +6610,7 @@
   },
   {
     "id": "buddha-bowl-chicken-wrap-with-quinoa",
-    "title": "Buddha Bowl Chicken Wrap with quinoa",
+    "title": "Turkey Buddha Bowl with quinoa",
     "description": "Delicious lunch option with balanced nutrition for gestational diabetes",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/buddha-bowl-chicken-wrap-with-quinoa",
@@ -5922,9 +6622,29 @@
     "image": "images/buddha-bowl-chicken-wrap-with-quinoa.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "chicken wrap"
+        "item": "chicken breast"
+      },
+      {
+        "amount": "1",
+        "unit": "large",
+        "item": "whole wheat tortilla"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "lettuce"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "tomato"
+      },
+      {
+        "amount": "1/4",
+        "unit": "medium",
+        "item": "avocado"
       },
       {
         "amount": "1/2",
@@ -5959,7 +6679,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare chicken wrap according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare quinoa as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -5984,7 +6704,7 @@
   },
   {
     "id": "buddha-bowl-chicken-wrap-with-sweet-potato",
-    "title": "Buddha Bowl Chicken Wrap with sweet potato",
+    "title": "Turkey Buddha Bowl with sweet potato",
     "description": "Quick and healthy lunch perfect for managing blood sugar levels",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/buddha-bowl-chicken-wrap-with-sweet-potato",
@@ -5996,9 +6716,29 @@
     "image": "images/buddha-bowl-chicken-wrap-with-sweet-potato.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "chicken wrap"
+        "item": "chicken breast"
+      },
+      {
+        "amount": "1",
+        "unit": "large",
+        "item": "whole wheat tortilla"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "lettuce"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "tomato"
+      },
+      {
+        "amount": "1/4",
+        "unit": "medium",
+        "item": "avocado"
       },
       {
         "amount": "1/2",
@@ -6033,7 +6773,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare chicken wrap according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare sweet potato as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -6058,7 +6798,7 @@
   },
   {
     "id": "buddha-bowl-chicken-wrap-with-mixed-vegetables",
-    "title": "Buddha Bowl Chicken Wrap with mixed vegetables",
+    "title": "Turkey Buddha Bowl with mixed vegetables",
     "description": "Nutritious lunch recipe with 8g of fiber",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/buddha-bowl-chicken-wrap-with-mixed-vegetables",
@@ -6070,9 +6810,29 @@
     "image": "images/buddha-bowl-chicken-wrap-with-mixed-vegetables.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "chicken wrap"
+        "item": "chicken breast"
+      },
+      {
+        "amount": "1",
+        "unit": "large",
+        "item": "whole wheat tortilla"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "lettuce"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "tomato"
+      },
+      {
+        "amount": "1/4",
+        "unit": "medium",
+        "item": "avocado"
       },
       {
         "amount": "1/2",
@@ -6107,7 +6867,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare chicken wrap according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare mixed vegetables as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -6135,7 +6895,7 @@
   },
   {
     "id": "buddha-bowl-chicken-wrap-with-black-beans",
-    "title": "Buddha Bowl Chicken Wrap with black beans",
+    "title": "Turkey Buddha Bowl with black beans",
     "description": "24g protein-packed lunch to keep you satisfied",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/buddha-bowl-chicken-wrap-with-black-beans",
@@ -6147,9 +6907,29 @@
     "image": "images/buddha-bowl-chicken-wrap-with-black-beans.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "chicken wrap"
+        "item": "chicken breast"
+      },
+      {
+        "amount": "1",
+        "unit": "large",
+        "item": "whole wheat tortilla"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "lettuce"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "tomato"
+      },
+      {
+        "amount": "1/4",
+        "unit": "medium",
+        "item": "avocado"
       },
       {
         "amount": "1/2",
@@ -6184,7 +6964,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare chicken wrap according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare black beans as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -6209,7 +6989,7 @@
   },
   {
     "id": "buddha-bowl-chicken-wrap-with-lentils",
-    "title": "Buddha Bowl Chicken Wrap with lentils",
+    "title": "Turkey Buddha Bowl with lentils",
     "description": "Easy lunch recipe ready in 27 minutes",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/buddha-bowl-chicken-wrap-with-lentils",
@@ -6221,9 +7001,29 @@
     "image": "images/buddha-bowl-chicken-wrap-with-lentils.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "chicken wrap"
+        "item": "chicken breast"
+      },
+      {
+        "amount": "1",
+        "unit": "large",
+        "item": "whole wheat tortilla"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "lettuce"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "tomato"
+      },
+      {
+        "amount": "1/4",
+        "unit": "medium",
+        "item": "avocado"
       },
       {
         "amount": "1/2",
@@ -6258,7 +7058,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare chicken wrap according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare lentils as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -6295,9 +7095,29 @@
     "image": "images/salad-chicken-wrap-with-quinoa.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "chicken wrap"
+        "item": "chicken breast"
+      },
+      {
+        "amount": "1",
+        "unit": "large",
+        "item": "whole wheat tortilla"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "lettuce"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "tomato"
+      },
+      {
+        "amount": "1/4",
+        "unit": "medium",
+        "item": "avocado"
       },
       {
         "amount": "1/2",
@@ -6332,7 +7152,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare chicken wrap according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare quinoa as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -6369,9 +7189,29 @@
     "image": "images/salad-chicken-wrap-with-sweet-potato.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "chicken wrap"
+        "item": "chicken breast"
+      },
+      {
+        "amount": "1",
+        "unit": "large",
+        "item": "whole wheat tortilla"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "lettuce"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "tomato"
+      },
+      {
+        "amount": "1/4",
+        "unit": "medium",
+        "item": "avocado"
       },
       {
         "amount": "1/2",
@@ -6406,7 +7246,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare chicken wrap according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare sweet potato as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -6442,9 +7282,29 @@
     "image": "images/salad-chicken-wrap-with-mixed-vegetables.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "chicken wrap"
+        "item": "chicken breast"
+      },
+      {
+        "amount": "1",
+        "unit": "large",
+        "item": "whole wheat tortilla"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "lettuce"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "tomato"
+      },
+      {
+        "amount": "1/4",
+        "unit": "medium",
+        "item": "avocado"
       },
       {
         "amount": "1/2",
@@ -6479,7 +7339,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare chicken wrap according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare mixed vegetables as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -6519,9 +7379,29 @@
     "image": "images/salad-chicken-wrap-with-black-beans.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "chicken wrap"
+        "item": "chicken breast"
+      },
+      {
+        "amount": "1",
+        "unit": "large",
+        "item": "whole wheat tortilla"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "lettuce"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "tomato"
+      },
+      {
+        "amount": "1/4",
+        "unit": "medium",
+        "item": "avocado"
       },
       {
         "amount": "1/2",
@@ -6556,7 +7436,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare chicken wrap according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare black beans as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -6594,9 +7474,29 @@
     "image": "images/salad-chicken-wrap-with-lentils.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "chicken wrap"
+        "item": "chicken breast"
+      },
+      {
+        "amount": "1",
+        "unit": "large",
+        "item": "whole wheat tortilla"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "lettuce"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "tomato"
+      },
+      {
+        "amount": "1/4",
+        "unit": "medium",
+        "item": "avocado"
       },
       {
         "amount": "1/2",
@@ -6631,7 +7531,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare chicken wrap according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare lentils as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -6655,7 +7555,7 @@
   },
   {
     "id": "wrap-chicken-wrap-with-quinoa",
-    "title": "Wrap Chicken Wrap with quinoa",
+    "title": "Chicken Wrap",
     "description": "Delicious lunch option with balanced nutrition for gestational diabetes",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/wrap-chicken-wrap-with-quinoa",
@@ -6667,9 +7567,29 @@
     "image": "images/wrap-chicken-wrap-with-quinoa.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "chicken wrap"
+        "item": "chicken breast"
+      },
+      {
+        "amount": "1",
+        "unit": "large",
+        "item": "whole wheat tortilla"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "lettuce"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "tomato"
+      },
+      {
+        "amount": "1/4",
+        "unit": "medium",
+        "item": "avocado"
       },
       {
         "amount": "1/2",
@@ -6704,7 +7624,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare chicken wrap according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare quinoa as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -6729,7 +7649,7 @@
   },
   {
     "id": "wrap-chicken-wrap-with-sweet-potato",
-    "title": "Wrap Chicken Wrap with sweet potato",
+    "title": "Chicken Wrap",
     "description": "Quick and healthy lunch perfect for managing blood sugar levels",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/wrap-chicken-wrap-with-sweet-potato",
@@ -6741,9 +7661,29 @@
     "image": "images/wrap-chicken-wrap-with-sweet-potato.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "chicken wrap"
+        "item": "chicken breast"
+      },
+      {
+        "amount": "1",
+        "unit": "large",
+        "item": "whole wheat tortilla"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "lettuce"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "tomato"
+      },
+      {
+        "amount": "1/4",
+        "unit": "medium",
+        "item": "avocado"
       },
       {
         "amount": "1/2",
@@ -6778,7 +7718,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare chicken wrap according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare sweet potato as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -6804,7 +7744,7 @@
   },
   {
     "id": "wrap-chicken-wrap-with-mixed-vegetables",
-    "title": "Wrap Chicken Wrap with mixed vegetables",
+    "title": "Chicken Wrap",
     "description": "Nutritious lunch recipe with 6g of fiber",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/wrap-chicken-wrap-with-mixed-vegetables",
@@ -6816,9 +7756,29 @@
     "image": "images/wrap-chicken-wrap-with-mixed-vegetables.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "chicken wrap"
+        "item": "chicken breast"
+      },
+      {
+        "amount": "1",
+        "unit": "large",
+        "item": "whole wheat tortilla"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "lettuce"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "tomato"
+      },
+      {
+        "amount": "1/4",
+        "unit": "medium",
+        "item": "avocado"
       },
       {
         "amount": "1/2",
@@ -6853,7 +7813,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare chicken wrap according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare mixed vegetables as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -6880,7 +7840,7 @@
   },
   {
     "id": "wrap-chicken-wrap-with-black-beans",
-    "title": "Wrap Chicken Wrap with black beans",
+    "title": "Chicken Wrap",
     "description": "24g protein-packed lunch to keep you satisfied",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/wrap-chicken-wrap-with-black-beans",
@@ -6892,9 +7852,29 @@
     "image": "images/wrap-chicken-wrap-with-black-beans.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "chicken wrap"
+        "item": "chicken breast"
+      },
+      {
+        "amount": "1",
+        "unit": "large",
+        "item": "whole wheat tortilla"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "lettuce"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "tomato"
+      },
+      {
+        "amount": "1/4",
+        "unit": "medium",
+        "item": "avocado"
       },
       {
         "amount": "1/2",
@@ -6929,7 +7909,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare chicken wrap according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare black beans as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."
@@ -6953,7 +7933,7 @@
   },
   {
     "id": "wrap-chicken-wrap-with-lentils",
-    "title": "Wrap Chicken Wrap with lentils",
+    "title": "Chicken Wrap",
     "description": "Easy lunch recipe ready in 22 minutes",
     "source": "diabetesfoodhub.org",
     "url": "https://diabetesfoodhub.org/recipes/wrap-chicken-wrap-with-lentils",
@@ -6965,9 +7945,29 @@
     "image": "images/wrap-chicken-wrap-with-lentils.jpg",
     "ingredients": [
       {
-        "amount": "8",
+        "amount": "4",
         "unit": "oz",
-        "item": "chicken wrap"
+        "item": "chicken breast"
+      },
+      {
+        "amount": "1",
+        "unit": "large",
+        "item": "whole wheat tortilla"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "lettuce"
+      },
+      {
+        "amount": "1/4",
+        "unit": "cup",
+        "item": "tomato"
+      },
+      {
+        "amount": "1/4",
+        "unit": "medium",
+        "item": "avocado"
       },
       {
         "amount": "1/2",
@@ -7002,7 +8002,7 @@
     ],
     "instructions": [
       "Prepare all ingredients and preheat oven to 375°F if baking.",
-      "Prepare chicken wrap according to package directions or standard method.",
+      "Warm the tortilla. Cook the chicken breast until internal temperature reaches 165°F. Slice the chicken and place on tortilla with vegetables.",
       "Prepare lentils as desired.",
       "Plate the main protein with sides.",
       "Garnish as desired and serve hot."

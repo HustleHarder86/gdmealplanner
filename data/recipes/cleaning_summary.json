@@ -1,0 +1,12 @@
+{
+  "totalRecipes": 48,
+  "recipesUpdated": 48,
+  "fakeUrlsRemoved": 47,
+  "sourceAttributionsAdded": 48,
+  "timestamp": "2025-07-04T15:06:14.966Z",
+  "recipesBySource": {
+    "original": 1,
+    "created": 47,
+    "adapted": 0
+  }
+}

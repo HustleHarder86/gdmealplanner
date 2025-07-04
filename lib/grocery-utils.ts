@@ -70,6 +70,41 @@ export function parseAmount(amount: string): number {
 }
 
 /**
+ * Transform complete dish names to raw ingredients
+ */
+export function transformDishToIngredient(name: string, amount: string, unit: string): { name: string; amount: string; unit: string } {
+  const lowerName = name.toLowerCase();
+  
+  // Map of dish names to raw ingredients
+  const dishToIngredient: Record<string, { name: string; amount?: string; unit?: string }> = {
+    "chicken wrap": { name: "chicken breast" },
+    "turkey sandwich": { name: "sliced turkey" },
+    "tuna salad": { name: "canned tuna" },
+    "chicken salad": { name: "chicken breast" },
+    "egg salad": { name: "hard boiled eggs" },
+    "turkey wrap": { name: "sliced turkey" },
+    "roast beef sandwich": { name: "sliced roast beef" },
+    "ham sandwich": { name: "sliced ham" },
+    "grilled cheese": { name: "cheese slices", amount: "2", unit: "slices" },
+    "peanut butter sandwich": { name: "peanut butter", amount: "2", unit: "tablespoons" },
+  };
+  
+  // Check if this is a complete dish that needs transformation
+  for (const [dish, ingredient] of Object.entries(dishToIngredient)) {
+    if (lowerName.includes(dish)) {
+      return {
+        name: ingredient.name,
+        amount: ingredient.amount || amount,
+        unit: ingredient.unit || unit
+      };
+    }
+  }
+  
+  // Return original if no transformation needed
+  return { name, amount, unit };
+}
+
+/**
  * Normalize ingredient names for better grouping
  */
 export function normalizeIngredientName(name: string): string {
@@ -84,6 +119,9 @@ export function normalizeIngredientName(name: string): string {
     "non-fat greek yogurt": "greek yogurt",
     "whole wheat": "whole-wheat",
     "whole grain": "whole-grain",
+    "sliced turkey": "turkey breast",
+    "sliced ham": "ham",
+    "sliced roast beef": "roast beef",
   };
   
   for (const [pattern, replacement] of Object.entries(replacements)) {
@@ -150,14 +188,16 @@ export function groupGroceryItems(items: any[]): GroupedGroceryItem[] {
   const grouped = new Map<string, GroupedGroceryItem>();
   
   for (const item of items) {
-    const normalizedName = normalizeIngredientName(item.name);
+    // Transform complete dishes to raw ingredients first
+    const transformed = transformDishToIngredient(item.name, item.amount || item.quantity || "", item.unit || "");
+    const normalizedName = normalizeIngredientName(transformed.name);
     const existing = grouped.get(normalizedName);
     
     if (existing) {
       // Add to existing group
       existing.items.push({
-        amount: item.amount,
-        unit: item.unit,
+        amount: transformed.amount,
+        unit: transformed.unit,
         recipes: item.recipes || [],
       });
       
@@ -166,21 +206,21 @@ export function groupGroceryItems(items: any[]): GroupedGroceryItem[] {
       existing.recipes = Array.from(new Set(allRecipes));
       
       // Sum amounts if units match
-      if (existing.unit === item.unit) {
-        existing.totalAmount = addAmounts(existing.totalAmount, item.amount);
+      if (existing.unit === transformed.unit) {
+        existing.totalAmount = addAmounts(existing.totalAmount, transformed.amount);
       }
     } else {
       // Create new group
       grouped.set(normalizedName, {
         name: normalizedName,
-        displayName: item.name, // Keep original name for display
-        totalAmount: item.amount,
-        unit: item.unit,
+        displayName: transformed.name, // Use transformed name for display
+        totalAmount: transformed.amount,
+        unit: transformed.unit,
         category: item.category,
         recipes: item.recipes || [],
         items: [{
-          amount: item.amount,
-          unit: item.unit,
+          amount: transformed.amount,
+          unit: transformed.unit,
           recipes: item.recipes || [],
         }],
       });

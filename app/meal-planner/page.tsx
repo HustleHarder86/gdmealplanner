@@ -91,7 +91,7 @@ export default function MealPlannerPage() {
                 {Array.from({ length: 12 }, (_, i) => (
                   <div
                     key={i}
-                    className={`h-1.5 w-1.5 rounded-full transition-colors ${
+                    className={`h-2 w-2 rounded-full transition-colors ${
                       i + 1 === currentWeek ? "bg-green-600" : "bg-gray-300"
                     }`}
                   />
@@ -217,7 +217,7 @@ export default function MealPlannerPage() {
           if (!recipe) return null;
 
           return (
-            <div key={mealType} className="bg-white rounded-lg shadow-sm p-4">
+            <div key={mealType} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-4">
               <h3 className="font-semibold text-lg mb-2 capitalize">
                 {mealType.replace(/([A-Z])/g, " $1").trim()}
               </h3>
@@ -266,12 +266,13 @@ export default function MealPlannerPage() {
             <div className="flex gap-2">
               <button 
                 onClick={() => window.print()}
-                className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-                title="Print list"
+                className="flex items-center gap-2 px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors border border-gray-200"
+                title="Print grocery list"
               >
-                <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
                 </svg>
+                Print
               </button>
             </div>
           </div>
@@ -308,7 +309,7 @@ export default function MealPlannerPage() {
                           htmlFor={`${category.name}-${index}`}
                           className="flex-1 text-sm cursor-pointer hover:bg-gray-50 p-2 -m-2 rounded"
                         >
-                          {item.quantity} {item.name}
+                          {(item as any).amount} {(item as any).unit} {item.name}
                         </label>
                       </li>
                     ))}

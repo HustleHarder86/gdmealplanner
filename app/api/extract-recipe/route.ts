@@ -210,18 +210,12 @@ function extractRecipeFromHtml(html: string, url: string): RecipeData | null {
 function extractJsonLdFromHtml(html: string): any {
   console.log('Extracting JSON-LD...');
   
-  const jsonLdRegex = /<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gi;
-  const matches: RegExpMatchArray[] = [];
-  let match;
+  // Get all JSON-LD scripts using the improved extraction
+  const scriptContents = extractJsonLdScripts(html);
+  console.log(`Found ${scriptContents.length} JSON-LD scripts`);
   
-  while ((match = jsonLdRegex.exec(html)) !== null) {
-    matches.push(match);
-  }
-  
-  console.log(`Found ${matches.length} JSON-LD scripts`);
-  
-  for (let i = 0; i < matches.length; i++) {
-    const scriptContent = matches[i][1];
+  for (let i = 0; i < scriptContents.length; i++) {
+    const scriptContent = scriptContents[i];
     console.log(`Processing JSON-LD script ${i + 1}:`, scriptContent.substring(0, 200) + '...');
     
     try {
@@ -310,12 +304,26 @@ function extractPageTitle(html: string): string {
 }
 
 function extractJsonLdScripts(html: string): string[] {
-  const jsonLdRegex = /<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gi;
-  const scripts: string[] = [];
-  let match;
+  // Try multiple regex patterns to catch different formats
+  const patterns = [
+    /<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gi,
+    /<script[^>]*type='application\/ld\+json'[^>]*>(.*?)<\/script>/gi,
+    /<script[^>]*type=application\/ld\+json[^>]*>(.*?)<\/script>/gi,
+    /<script[^>]*application\/ld\+json[^>]*>(.*?)<\/script>/gi
+  ];
   
-  while ((match = jsonLdRegex.exec(html)) !== null) {
-    scripts.push(match[1]);
+  const scripts: string[] = [];
+  
+  for (const pattern of patterns) {
+    let match;
+    pattern.lastIndex = 0; // Reset regex
+    
+    while ((match = pattern.exec(html)) !== null) {
+      const content = match[1].trim();
+      if (content && !scripts.includes(content)) {
+        scripts.push(content);
+      }
+    }
   }
   
   return scripts;

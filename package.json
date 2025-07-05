@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test-import": "tsx src/services/spoonacular/automated-import/test-import.ts",
+    "import:daily": "tsx src/services/spoonacular/automated-import/run-daily-import.ts"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.4",
@@ -21,11 +23,13 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.20",
+    "dotenv": "^16.4.5",
     "eslint": "^8",
     "eslint-config-next": "14.2.21",
     "postcss": "^8",
     "prettier": "^3.3.3",
     "tailwindcss": "^3.4.1",
+    "tsx": "^4.7.1",
     "typescript": "^5"
   }
 }

@@ -304,7 +304,7 @@
                             <div class="recipe-card">
                                 <div class="recipe-title">${recipe.title}</div>
                                 <div class="recipe-info">
-                                    ID: ${recipe.id} | Ready in: ${recipe.readyInMinutes} min | Servings: ${recipe.servings}
+                                    ID: ${recipe.id} | Nutrition data: ${recipe.hasNutrition ? '✅ Available' : '❌ Not available'}
                                 </div>
                             </div>
                         `).join('');

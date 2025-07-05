@@ -52,8 +52,7 @@ export async function GET(request: NextRequest) {
           firstThreeRecipes: searchResults.results.slice(0, 3).map(r => ({
             id: r.id,
             title: r.title,
-            readyInMinutes: r.readyInMinutes,
-            servings: r.servings
+            hasNutrition: !!r.nutrition
           }))
         },
         recipeDetails: recipeDetails ? {

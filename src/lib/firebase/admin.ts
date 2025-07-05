@@ -24,21 +24,33 @@ const initializeAdmin = () => {
       }
     } else {
       // Try to construct service account from individual environment variables
-      const projectId = process.env.projectId;
-      const privateKey = process.env.FIREBASE_PRIVATE_KEY;
-      const clientEmail = process.env.FIREBASE_CLIENT_EMAIL;
+      const projectId = process.env.project_id;
+      const privateKey = process.env.private_key;
+      const clientEmail = process.env.client_email;
+      const privateKeyId = process.env.private_key_id;
+      const clientId = process.env.client_id;
       
       if (projectId && privateKey && clientEmail) {
         try {
           // Replace escaped newlines in private key
           const formattedPrivateKey = privateKey.replace(/\\n/g, '\n');
           
+          // Build the full service account object
+          const serviceAccount = {
+            type: "service_account",
+            project_id: projectId,
+            private_key_id: privateKeyId || "not-provided",
+            private_key: formattedPrivateKey,
+            client_email: clientEmail,
+            client_id: clientId || "not-provided",
+            auth_uri: process.env.auth_uri || "https://accounts.google.com/o/oauth2/auth",
+            token_uri: process.env.token_uri || "https://oauth2.googleapis.com/token",
+            auth_provider_x509_cert_url: process.env.auth_provider_x509_cert_url || "https://www.googleapis.com/oauth2/v1/certs",
+            client_x509_cert_url: process.env.client_x509_cert_url || `https://www.googleapis.com/robot/v1/metadata/x509/${encodeURIComponent(clientEmail)}`
+          };
+          
           initializeApp({
-            credential: cert({
-              projectId: projectId,
-              privateKey: formattedPrivateKey,
-              clientEmail: clientEmail,
-            }),
+            credential: cert(serviceAccount),
             projectId: projectId,
           });
           console.log('Firebase Admin initialized with individual credentials');
@@ -47,7 +59,7 @@ const initializeAdmin = () => {
           throw new Error('Firebase Admin initialization failed');
         }
       } else {
-        throw new Error('Firebase Admin credentials not configured. Please provide either FIREBASE_ADMIN_KEY or individual credentials (projectId, FIREBASE_PRIVATE_KEY, FIREBASE_CLIENT_EMAIL)');
+        throw new Error('Firebase Admin credentials not configured. Please provide either FIREBASE_ADMIN_KEY or individual credentials (project_id, private_key, client_email)');
       }
     }
   }

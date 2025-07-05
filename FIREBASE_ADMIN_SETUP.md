@@ -24,12 +24,17 @@
 
 ### Method 2: Individual Variables
 
-If you prefer not to store the full JSON, extract these fields from your service account JSON:
+If you prefer not to store the full JSON, add these exact fields from your service account JSON with these exact names:
 
-1. `projectId` - Already set in Vercel
-2. Add these new variables:
-   - `FIREBASE_PRIVATE_KEY`: The private_key field (include the quotes and newlines)
-   - `FIREBASE_CLIENT_EMAIL`: The client_email field
+1. `project_id` - The project ID
+2. `private_key` - The private key (include the BEGIN/END headers and newlines)
+3. `client_email` - The service account email
+4. `private_key_id` - The private key ID
+5. `client_id` - The client ID
+6. `auth_uri` - The auth URI (optional, has default)
+7. `token_uri` - The token URI (optional, has default)
+8. `auth_provider_x509_cert_url` - The auth provider cert URL (optional, has default)
+9. `client_x509_cert_url` - The client cert URL (optional, has default)
 
 ## Important Notes
 

@@ -7,10 +7,12 @@ export async function GET() {
     firestore: "❌ Not connected",
     environment: {
       hasFirebaseAdminKey: !!process.env.FIREBASE_ADMIN_KEY,
-      hasProjectId: !!process.env.projectId,
+      hasProjectId: !!process.env.project_id,
+      hasPrivateKey: !!process.env.private_key,
+      hasClientEmail: !!process.env.client_email,
+      hasPrivateKeyId: !!process.env.private_key_id,
+      hasClientId: !!process.env.client_id,
       hasSpoonacularKey: !!process.env.SPOONACULAR_API_KEY,
-      hasPrivateKey: !!process.env.FIREBASE_PRIVATE_KEY,
-      hasClientEmail: !!process.env.FIREBASE_CLIENT_EMAIL,
     },
     error: null as string | null,
   };

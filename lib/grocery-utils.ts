@@ -8,7 +8,7 @@
 export function pluralizeUnit(amount: string, unit: string): string {
   // Parse amount to determine if plural is needed
   const numericAmount = parseAmount(amount);
-  
+
   // Don't pluralize if amount is 1 or less
   if (numericAmount <= 1) {
     return unit;
@@ -37,7 +37,10 @@ export function pluralizeUnit(amount: string, unit: string): string {
   if (pluralMap[lowerUnit]) {
     // Preserve original casing
     if (unit[0] === unit[0].toUpperCase()) {
-      return pluralMap[lowerUnit].charAt(0).toUpperCase() + pluralMap[lowerUnit].slice(1);
+      return (
+        pluralMap[lowerUnit].charAt(0).toUpperCase() +
+        pluralMap[lowerUnit].slice(1)
+      );
     }
     return pluralMap[lowerUnit];
   }
@@ -51,20 +54,20 @@ export function pluralizeUnit(amount: string, unit: string): string {
  */
 export function parseAmount(amount: string): number {
   if (!amount) return 0;
-  
+
   // Handle fractions like "1/2", "3/4"
   if (amount.includes("/")) {
     const [numerator, denominator] = amount.split("/").map(Number);
     return numerator / denominator;
   }
-  
+
   // Handle mixed numbers like "1 1/2"
   if (amount.includes(" ") && amount.split(" ")[1]?.includes("/")) {
     const [whole, fraction] = amount.split(" ");
     const [numerator, denominator] = fraction.split("/").map(Number);
     return Number(whole) + numerator / denominator;
   }
-  
+
   // Handle regular numbers
   return Number(amount) || 0;
 }
@@ -72,11 +75,18 @@ export function parseAmount(amount: string): number {
 /**
  * Transform complete dish names to raw ingredients
  */
-export function transformDishToIngredient(name: string, amount: string, unit: string): { name: string; amount: string; unit: string } {
+export function transformDishToIngredient(
+  name: string,
+  amount: string,
+  unit: string,
+): { name: string; amount: string; unit: string } {
   const lowerName = name.toLowerCase();
-  
+
   // Map of dish names to raw ingredients
-  const dishToIngredient: Record<string, { name: string; amount?: string; unit?: string }> = {
+  const dishToIngredient: Record<
+    string,
+    { name: string; amount?: string; unit?: string }
+  > = {
     "chicken wrap": { name: "chicken breast" },
     "turkey sandwich": { name: "sliced turkey" },
     "tuna salad": { name: "canned tuna" },
@@ -86,20 +96,24 @@ export function transformDishToIngredient(name: string, amount: string, unit: st
     "roast beef sandwich": { name: "sliced roast beef" },
     "ham sandwich": { name: "sliced ham" },
     "grilled cheese": { name: "cheese slices", amount: "2", unit: "slices" },
-    "peanut butter sandwich": { name: "peanut butter", amount: "2", unit: "tablespoons" },
+    "peanut butter sandwich": {
+      name: "peanut butter",
+      amount: "2",
+      unit: "tablespoons",
+    },
   };
-  
+
   // Check if this is a complete dish that needs transformation
   for (const [dish, ingredient] of Object.entries(dishToIngredient)) {
     if (lowerName.includes(dish)) {
       return {
         name: ingredient.name,
         amount: ingredient.amount || amount,
-        unit: ingredient.unit || unit
+        unit: ingredient.unit || unit,
       };
     }
   }
-  
+
   // Return original if no transformation needed
   return { name, amount, unit };
 }
@@ -110,7 +124,7 @@ export function transformDishToIngredient(name: string, amount: string, unit: st
 export function normalizeIngredientName(name: string): string {
   // Convert to lowercase for consistency
   let normalized = name.toLowerCase().trim();
-  
+
   // Remove common variations
   const replacements: Record<string, string> = {
     "cottage cheese bowl": "cottage cheese",
@@ -123,13 +137,13 @@ export function normalizeIngredientName(name: string): string {
     "sliced ham": "ham",
     "sliced roast beef": "roast beef",
   };
-  
+
   for (const [pattern, replacement] of Object.entries(replacements)) {
     if (normalized.includes(pattern)) {
       normalized = normalized.replace(pattern, replacement);
     }
   }
-  
+
   return normalized;
 }
 
@@ -140,12 +154,12 @@ export function addAmounts(amount1: string, amount2: string): string {
   const num1 = parseAmount(amount1);
   const num2 = parseAmount(amount2);
   const sum = num1 + num2;
-  
+
   // Convert back to fraction if needed
   if (sum % 1 === 0) {
     return sum.toString();
   }
-  
+
   // Common fractions
   const fractions: Record<number, string> = {
     0.25: "1/4",
@@ -154,15 +168,15 @@ export function addAmounts(amount1: string, amount2: string): string {
     0.66: "2/3",
     0.75: "3/4",
   };
-  
+
   // Check if sum is close to a common fraction
   for (const [decimal, fraction] of Object.entries(fractions)) {
-    if (Math.abs(sum % 1 - Number(decimal)) < 0.01) {
+    if (Math.abs((sum % 1) - Number(decimal)) < 0.01) {
       const whole = Math.floor(sum);
       return whole > 0 ? `${whole} ${fraction}` : fraction;
     }
   }
-  
+
   // Return decimal if no common fraction found
   return sum.toFixed(2);
 }
@@ -186,13 +200,17 @@ export interface GroupedGroceryItem {
 
 export function groupGroceryItems(items: any[]): GroupedGroceryItem[] {
   const grouped = new Map<string, GroupedGroceryItem>();
-  
+
   for (const item of items) {
     // Transform complete dishes to raw ingredients first
-    const transformed = transformDishToIngredient(item.name, item.amount || item.quantity || "", item.unit || "");
+    const transformed = transformDishToIngredient(
+      item.name,
+      item.amount || item.quantity || "",
+      item.unit || "",
+    );
     const normalizedName = normalizeIngredientName(transformed.name);
     const existing = grouped.get(normalizedName);
-    
+
     if (existing) {
       // Add to existing group
       existing.items.push({
@@ -200,14 +218,17 @@ export function groupGroceryItems(items: any[]): GroupedGroceryItem[] {
         unit: transformed.unit,
         recipes: item.recipes || [],
       });
-      
+
       // Combine recipes (avoid duplicates)
       const allRecipes = [...existing.recipes, ...(item.recipes || [])];
       existing.recipes = Array.from(new Set(allRecipes));
-      
+
       // Sum amounts if units match
       if (existing.unit === transformed.unit) {
-        existing.totalAmount = addAmounts(existing.totalAmount, transformed.amount);
+        existing.totalAmount = addAmounts(
+          existing.totalAmount,
+          transformed.amount,
+        );
       }
     } else {
       // Create new group
@@ -218,14 +239,16 @@ export function groupGroceryItems(items: any[]): GroupedGroceryItem[] {
         unit: transformed.unit,
         category: item.category,
         recipes: item.recipes || [],
-        items: [{
-          amount: transformed.amount,
-          unit: transformed.unit,
-          recipes: item.recipes || [],
-        }],
+        items: [
+          {
+            amount: transformed.amount,
+            unit: transformed.unit,
+            recipes: item.recipes || [],
+          },
+        ],
       });
     }
   }
-  
+
   return Array.from(grouped.values());
 }

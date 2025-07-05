@@ -7,6 +7,7 @@ This solution addresses the need for importing 100% real recipes for the gestati
 ## Solution Components
 
 ### 1. Browser Bookmarklet (`recipe-importer-bookmarklet.js`)
+
 - **Purpose**: Extracts recipe data from any recipe website while browsing
 - **Features**:
   - Automatic JSON-LD structured data extraction
@@ -16,6 +17,7 @@ This solution addresses the need for importing 100% real recipes for the gestati
   - One-click import to app database
 
 ### 2. API Endpoint (`app/api/import-recipe/route.ts`)
+
 - **Purpose**: Receives and processes recipe data from bookmarklet
 - **Features**:
   - Validates GD nutritional requirements
@@ -25,6 +27,7 @@ This solution addresses the need for importing 100% real recipes for the gestati
   - CORS support for cross-origin requests
 
 ### 3. Supporting Files
+
 - **Instructions**: `BOOKMARKLET_INSTRUCTIONS.md` - Complete user guide
 - **Testing**: `test-api-endpoint.js` - API endpoint verification script
 
@@ -46,6 +49,7 @@ Recipe Website → Bookmarklet → Extract Data → Validate GD → API Endpoint
 ## GD Validation Rules
 
 All imported recipes must meet these requirements:
+
 - **Carbohydrates**: 10-50g per serving
 - **Protein**: Minimum 5g per serving
 - **Fiber**: Minimum 2g per serving
@@ -54,12 +58,14 @@ All imported recipes must meet these requirements:
 ## Data Structure
 
 Recipes are automatically formatted and saved to:
+
 - `data/recipes/breakfast.json`
-- `data/recipes/lunch.json` 
+- `data/recipes/lunch.json`
 - `data/recipes/dinner.json`
 - `data/recipes/snacks.json`
 
 Each recipe includes:
+
 ```json
 {
   "id": "unique-recipe-id-timestamp",
@@ -100,6 +106,7 @@ Each recipe includes:
 ## Advantages of This Approach
 
 ### ✅ Benefits
+
 1. **100% Real Recipes**: All recipes come from legitimate, existing websites
 2. **User Control**: Manual review ensures quality and appropriateness
 3. **No Legal Issues**: No automated scraping that might violate ToS
@@ -109,6 +116,7 @@ Each recipe includes:
 7. **Tracking**: Complete log of all imported recipes
 
 ### 📈 Scalability
+
 - Can import unlimited recipes from any source
 - Easy to share bookmarklet with multiple users
 - No rate limiting or blocking concerns
@@ -117,6 +125,7 @@ Each recipe includes:
 ## Supported Recipe Websites
 
 The bookmarklet works on sites that use structured data (schema.org), including:
+
 - AllRecipes
 - Food Network
 - EatingWell
@@ -129,6 +138,7 @@ The bookmarklet works on sites that use structured data (schema.org), including:
 ## Getting Started
 
 ### 1. Setup (One-time)
+
 ```bash
 # Make sure your Next.js app is running
 cd /home/amy/dev/gdmealplanner
@@ -139,11 +149,13 @@ node scripts/recipe-scraper/test-api-endpoint.js
 ```
 
 ### 2. Install Bookmarklet
+
 1. Copy the code from `recipe-importer-bookmarklet.js`
 2. Create a new bookmark in your browser
 3. Paste the code as the URL
 
 ### 3. Start Importing
+
 1. Visit any recipe website
 2. Navigate to a specific recipe page
 3. Click your bookmarklet
@@ -152,12 +164,14 @@ node scripts/recipe-scraper/test-api-endpoint.js
 ## Future Enhancements
 
 ### Phase 1 Improvements
+
 - [ ] Image extraction and local storage
 - [ ] Duplicate recipe detection
 - [ ] Bulk import capabilities
 - [ ] Recipe modification before import
 
 ### Phase 2 Features
+
 - [ ] Integration with meal planning system
 - [ ] User ratings and reviews
 - [ ] Recipe recommendation engine
@@ -166,6 +180,7 @@ node scripts/recipe-scraper/test-api-endpoint.js
 ## Success Metrics
 
 With this solution, you can achieve:
+
 - **300+ real recipes** within 30 days of active importing
 - **100% verified** recipes from legitimate sources
 - **Zero legal concerns** about data usage

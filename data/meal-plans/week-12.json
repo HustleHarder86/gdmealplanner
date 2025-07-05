@@ -76,9 +76,7 @@
             "amount": "3",
             "unit": "oz",
             "category": "Proteins",
-            "recipes": [
-              "Wrap Tuna with chickpeas and mixed vegetables"
-            ]
+            "recipes": ["Wrap Tuna with chickpeas and mixed vegetables"]
           },
           {
             "name": "chicken breast",
@@ -225,9 +223,7 @@
             "amount": "2",
             "unit": "cup",
             "category": "Dairy",
-            "recipes": [
-              "Nordic Greek Yogurt Bowl with berries and nuts"
-            ]
+            "recipes": ["Nordic Greek Yogurt Bowl with berries and nuts"]
           }
         ]
       },
@@ -239,9 +235,7 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Grains",
-            "recipes": [
-              "Sandwich Grilled Chicken with brown rice and quinoa"
-            ]
+            "recipes": ["Sandwich Grilled Chicken with brown rice and quinoa"]
           },
           {
             "name": "cauliflower rice",
@@ -309,9 +303,7 @@
             "amount": "1/4",
             "unit": "medium",
             "category": "Other",
-            "recipes": [
-              "Chicken Wrap"
-            ]
+            "recipes": ["Chicken Wrap"]
           },
           {
             "name": "berries",
@@ -334,9 +326,7 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Grilled Chicken with whole wheat Wrap"
-            ]
+            "recipes": ["Grilled Chicken with whole wheat Wrap"]
           },
           {
             "name": "celery",
@@ -364,9 +354,7 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Wrap Tuna with chickpeas and mixed vegetables"
-            ]
+            "recipes": ["Wrap Tuna with chickpeas and mixed vegetables"]
           },
           {
             "name": "cinnamon",
@@ -442,18 +430,14 @@
             "amount": "8",
             "unit": "oz",
             "category": "Other",
-            "recipes": [
-              "Wrap Lentil Salad with leafy greens"
-            ]
+            "recipes": ["Wrap Lentil Salad with leafy greens"]
           },
           {
             "name": "mayonnaise",
             "amount": "1",
             "unit": "tbsp",
             "category": "Other",
-            "recipes": [
-              "Wrap Tuna with chickpeas and mixed vegetables"
-            ]
+            "recipes": ["Wrap Tuna with chickpeas and mixed vegetables"]
           },
           {
             "name": "mixed salad",
@@ -638,18 +622,14 @@
             "amount": "1",
             "unit": "large",
             "category": "Other",
-            "recipes": [
-              "Chicken Wrap"
-            ]
+            "recipes": ["Chicken Wrap"]
           },
           {
             "name": "whole wheat wrap",
             "amount": "1/2",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Grilled Chicken with whole wheat Wrap"
-            ]
+            "recipes": ["Grilled Chicken with whole wheat Wrap"]
           }
         ]
       },
@@ -752,18 +732,14 @@
             "amount": "1",
             "unit": "tbsp",
             "category": "Produce",
-            "recipes": [
-              "Wrap Tuna with chickpeas and mixed vegetables"
-            ]
+            "recipes": ["Wrap Tuna with chickpeas and mixed vegetables"]
           },
           {
             "name": "spinach",
             "amount": "1/2",
             "unit": "cup",
             "category": "Produce",
-            "recipes": [
-              "French Smoothie with spinach"
-            ]
+            "recipes": ["French Smoothie with spinach"]
           },
           {
             "name": "tomato",

@@ -143,9 +143,7 @@
             "amount": "2",
             "unit": "cup",
             "category": "Dairy",
-            "recipes": [
-              "French Greek Yogurt Bowl with berries and nuts"
-            ]
+            "recipes": ["French Greek Yogurt Bowl with berries and nuts"]
           }
         ]
       },
@@ -157,9 +155,7 @@
             "amount": "1/4",
             "unit": "medium",
             "category": "Other",
-            "recipes": [
-              "Salad Chicken Wrap with quinoa"
-            ]
+            "recipes": ["Salad Chicken Wrap with quinoa"]
           },
           {
             "name": "berries",
@@ -280,9 +276,7 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Lettuce Cups Turkey Sandwich with leafy greens"
-            ]
+            "recipes": ["Lettuce Cups Turkey Sandwich with leafy greens"]
           },
           {
             "name": "lentil salad",
@@ -328,9 +322,7 @@
             "amount": "1",
             "unit": "tsp",
             "category": "Other",
-            "recipes": [
-              "Lettuce Cups Turkey Sandwich with leafy greens"
-            ]
+            "recipes": ["Lettuce Cups Turkey Sandwich with leafy greens"]
           },
           {
             "name": "nuts",
@@ -401,9 +393,7 @@
             "amount": "8",
             "unit": "oz",
             "category": "Other",
-            "recipes": [
-              "Glazed Pork Tenderloin with quinoa and wild rice"
-            ]
+            "recipes": ["Glazed Pork Tenderloin with quinoa and wild rice"]
           },
           {
             "name": "roasted vegetables",
@@ -482,9 +472,7 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Nordic Smoothie with vegetables"
-            ]
+            "recipes": ["Nordic Smoothie with vegetables"]
           },
           {
             "name": "whole grain crackers",
@@ -503,9 +491,7 @@
             "amount": "1",
             "unit": "large",
             "category": "Other",
-            "recipes": [
-              "Salad Chicken Wrap with quinoa"
-            ]
+            "recipes": ["Salad Chicken Wrap with quinoa"]
           },
           {
             "name": "whole wheat wrap",
@@ -591,9 +577,7 @@
             "amount": "1/4",
             "unit": "cup",
             "category": "Produce",
-            "recipes": [
-              "No-cook Greek Yogurt with cherry tomatoes"
-            ]
+            "recipes": ["No-cook Greek Yogurt with cherry tomatoes"]
           },
           {
             "name": "cucumber",
@@ -695,18 +679,14 @@
             "amount": "8",
             "unit": "oz",
             "category": "Proteins",
-            "recipes": [
-              "One-Pot Lean Beef with quinoa and wild rice"
-            ]
+            "recipes": ["One-Pot Lean Beef with quinoa and wild rice"]
           },
           {
             "name": "sliced turkey",
             "amount": "4",
             "unit": "oz",
             "category": "Proteins",
-            "recipes": [
-              "Lettuce Cups Turkey Sandwich with leafy greens"
-            ]
+            "recipes": ["Lettuce Cups Turkey Sandwich with leafy greens"]
           },
           {
             "name": "turkey meatballs",
@@ -760,9 +740,7 @@
             "amount": "2",
             "unit": "slices",
             "category": "Grains",
-            "recipes": [
-              "Lettuce Cups Turkey Sandwich with leafy greens"
-            ]
+            "recipes": ["Lettuce Cups Turkey Sandwich with leafy greens"]
           },
           {
             "name": "wild rice",

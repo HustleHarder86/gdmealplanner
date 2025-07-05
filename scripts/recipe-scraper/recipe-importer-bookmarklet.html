@@ -1,351 +1,415 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipe Importer Bookmarklet - GD Meal Planner</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #f5f5f5;
-            line-height: 1.6;
-        }
-        
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-        
-        h1 {
-            color: #2c5530;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        
-        .subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 30px;
-            font-style: italic;
-        }
-        
-        .url-input-section {
-            background: #e3f2fd;
-            border: 2px solid #2196f3;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-            text-align: center;
-        }
-        
-        .url-input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 14px;
-            margin: 10px 0;
-        }
-        
-        .generate-btn {
-            background: #2196f3;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 16px;
-            margin: 10px;
-        }
-        
-        .generate-btn:hover {
-            background: #1976d2;
-        }
-        
-        .bookmarklet-box {
-            background: #f8f9fa;
-            border: 2px dashed #28a745;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-            text-align: center;
-            display: none;
-        }
-        
-        .bookmarklet-link {
-            display: inline-block;
-            background: #28a745;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 16px;
-            margin: 10px 0;
-            transition: background 0.3s;
-        }
-        
-        .bookmarklet-link:hover {
-            background: #218838;
-            color: white;
-        }
-        
-        .instructions {
-            background: #e3f2fd;
-            border-left: 4px solid #2196f3;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        
-        .step {
-            margin: 15px 0;
-            padding: 10px;
-            background: white;
-            border-radius: 6px;
-            border-left: 4px solid #28a745;
-        }
-        
-        .warning {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            border-radius: 6px;
-            padding: 15px;
-            margin: 20px 0;
-        }
-        
-        .code-box {
-            background: #f1f3f4;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            padding: 15px;
-            font-family: monospace;
-            font-size: 14px;
-            white-space: pre-wrap;
-            word-break: break-all;
-            max-height: 200px;
-            overflow-y: auto;
-        }
-        
-        .copy-btn {
-            background: #007bff;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            margin: 10px 0;
-        }
-        
-        .copy-btn:hover {
-            background: #0056b3;
-        }
-        
-        .success {
-            color: #28a745;
-            font-weight: bold;
-        }
-        
-        .feature-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        
-        .feature-list li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .feature-list li:before {
-            content: "✅ ";
-            color: #28a745;
-            font-weight: bold;
-        }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #f5f5f5;
+        line-height: 1.6;
+      }
+
+      .container {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #2c5530;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 30px;
+        font-style: italic;
+      }
+
+      .url-input-section {
+        background: #e3f2fd;
+        border: 2px solid #2196f3;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 20px 0;
+        text-align: center;
+      }
+
+      .url-input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+        margin: 10px 0;
+      }
+
+      .generate-btn {
+        background: #2196f3;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 10px;
+      }
+
+      .generate-btn:hover {
+        background: #1976d2;
+      }
+
+      .bookmarklet-box {
+        background: #f8f9fa;
+        border: 2px dashed #28a745;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 20px 0;
+        text-align: center;
+        display: none;
+      }
+
+      .bookmarklet-link {
+        display: inline-block;
+        background: #28a745;
+        color: white;
+        padding: 15px 30px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 10px 0;
+        transition: background 0.3s;
+      }
+
+      .bookmarklet-link:hover {
+        background: #218838;
+        color: white;
+      }
+
+      .instructions {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 20px;
+        margin: 20px 0;
+      }
+
+      .step {
+        margin: 15px 0;
+        padding: 10px;
+        background: white;
+        border-radius: 6px;
+        border-left: 4px solid #28a745;
+      }
+
+      .warning {
+        background: #fff3cd;
+        border: 1px solid #ffeaa7;
+        border-radius: 6px;
+        padding: 15px;
+        margin: 20px 0;
+      }
+
+      .code-box {
+        background: #f1f3f4;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 15px;
+        font-family: monospace;
+        font-size: 14px;
+        white-space: pre-wrap;
+        word-break: break-all;
+        max-height: 200px;
+        overflow-y: auto;
+      }
+
+      .copy-btn {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 10px 0;
+      }
+
+      .copy-btn:hover {
+        background: #0056b3;
+      }
+
+      .success {
+        color: #28a745;
+        font-weight: bold;
+      }
+
+      .feature-list {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .feature-list li {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .feature-list li:before {
+        content: "✅ ";
+        color: #28a745;
+        font-weight: bold;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>🍳 Recipe Importer Bookmarklet</h1>
-        <p class="subtitle">Import recipes from any website directly into your GD Meal Planner</p>
-        
-        <div class="url-input-section">
-            <h3>🔧 Setup Your Vercel URL</h3>
-            <p>Enter your Vercel deployment URL to generate the bookmarklet:</p>
-            <input type="text" id="vercel-url" class="url-input" placeholder="https://your-app-name.vercel.app" value="">
-            <br>
-            <button class="generate-btn" onclick="generateBookmarklet()">Generate Bookmarklet</button>
-            <p><small>💡 Example: <code>https://gdmealplanner.vercel.app</code></small></p>
-        </div>
-        
-        <div class="bookmarklet-box" id="bookmarklet-container">
-            <h3>📌 Drag this link to your bookmarks bar:</h3>
-            <a href="#" id="bookmarklet-link" class="bookmarklet-link">📥 Import Recipe to GD App</a>
-            <p><strong>Drag the green button above to your bookmarks bar</strong></p>
-        </div>
+      <h1>🍳 Recipe Importer Bookmarklet</h1>
+      <p class="subtitle">
+        Import recipes from any website directly into your GD Meal Planner
+      </p>
 
-        <div class="warning">
-            <strong>⚠️ Important:</strong> Make sure your GD Meal Planner app is deployed and accessible at your Vercel URL before using the bookmarklet!
-        </div>
+      <div class="url-input-section">
+        <h3>🔧 Setup Your Vercel URL</h3>
+        <p>Enter your Vercel deployment URL to generate the bookmarklet:</p>
+        <input
+          type="text"
+          id="vercel-url"
+          class="url-input"
+          placeholder="https://your-app-name.vercel.app"
+          value=""
+        />
+        <br />
+        <button class="generate-btn" onclick="generateBookmarklet()">
+          Generate Bookmarklet
+        </button>
+        <p>
+          <small
+            >💡 Example: <code>https://gdmealplanner.vercel.app</code></small
+          >
+        </p>
+      </div>
 
-        <div class="instructions">
-            <h3>📋 How to Install & Use</h3>
-            
-            <div class="step">
-                <strong>Step 1:</strong> Enter your Vercel URL above and click "Generate Bookmarklet"
-            </div>
-            
-            <div class="step">
-                <strong>Step 2:</strong> Make sure your bookmarks bar is visible in your browser
-                <ul>
-                    <li><strong>Chrome/Edge:</strong> Ctrl+Shift+B (Windows) or Cmd+Shift+B (Mac)</li>
-                    <li><strong>Firefox:</strong> Ctrl+Shift+B (Windows) or Cmd+Shift+B (Mac)</li>
-                    <li><strong>Safari:</strong> View → Show Bookmarks Bar</li>
-                </ul>
-            </div>
-            
-            <div class="step">
-                <strong>Step 3:</strong> Drag the green "Import Recipe to GD App" button to your bookmarks bar
-            </div>
-            
-            <div class="step">
-                <strong>Step 4:</strong> Visit any recipe website (AllRecipes, Food Network, etc.)
-            </div>
-            
-            <div class="step">
-                <strong>Step 5:</strong> Go to a specific recipe page and click your bookmarklet!
-            </div>
-        </div>
+      <div class="bookmarklet-box" id="bookmarklet-container">
+        <h3>📌 Drag this link to your bookmarks bar:</h3>
+        <a href="#" id="bookmarklet-link" class="bookmarklet-link"
+          >📥 Import Recipe to GD App</a
+        >
+        <p>
+          <strong>Drag the green button above to your bookmarks bar</strong>
+        </p>
+      </div>
 
-        <h3>✨ Features</h3>
-        <ul class="feature-list">
-            <li>Extracts recipe data automatically from any website</li>
-            <li>Validates recipes meet GD requirements (10-50g carbs, 5g+ protein, 2g+ fiber)</li>
-            <li>Shows interactive preview with nutrition analysis</li>
-            <li>One-click import to your app database</li>
-            <li>Automatically categorizes recipes (breakfast, lunch, dinner, snacks)</li>
-            <li>Parses ingredients into structured format</li>
-            <li>Logs all imports for tracking</li>
-        </ul>
+      <div class="warning">
+        <strong>⚠️ Important:</strong> Make sure your GD Meal Planner app is
+        deployed and accessible at your Vercel URL before using the bookmarklet!
+      </div>
 
-        <h3>🌐 Compatible Websites</h3>
-        <p>Works on any recipe site with structured data, including:</p>
-        <ul>
-            <li>AllRecipes</li>
-            <li>Food Network</li>
-            <li>EatingWell</li>
-            <li>Taste of Home</li>
-            <li>BBC Good Food</li>
-            <li>Serious Eats</li>
-            <li>Most food blogs</li>
-        </ul>
+      <div class="instructions">
+        <h3>📋 How to Install & Use</h3>
 
-        <h3>🔧 Troubleshooting</h3>
-        <ul>
-            <li><strong>"No recipe data found":</strong> Try a different recipe site with better structured data</li>
-            <li><strong>"Import failed":</strong> Make sure your app is deployed and accessible</li>
-            <li><strong>"Doesn't meet GD requirements":</strong> Look for recipes with 10-50g carbs and more protein/fiber</li>
-        </ul>
-
-        <div class="warning">
-            <p><strong>💡 Pro Tip:</strong> Look for recipes that already mention "diabetes-friendly", "low-carb", or "balanced nutrition" for best results!</p>
-        </div>
-        
-        <hr style="margin: 30px 0;">
-        
-        <h3>📋 Alternative: Copy & Paste Method</h3>
-        <p>If dragging doesn't work, you can manually create a bookmark:</p>
-        
         <div class="step">
-            <strong>1.</strong> Copy this code to your clipboard:
-            <button class="copy-btn" onclick="copyBookmarklet()">📋 Copy Bookmarklet Code</button>
-            <div class="code-box" id="bookmarklet-code-display">Generate bookmarklet first to see the code here</div>
-        </div>
-        
-        <div class="step">
-            <strong>2.</strong> Right-click your bookmarks bar and select "Add page" or "Add bookmark"
-        </div>
-        
-        <div class="step">
-            <strong>3.</strong> Paste the code as the URL and name it "Import Recipe to GD App"
+          <strong>Step 1:</strong> Enter your Vercel URL above and click
+          "Generate Bookmarklet"
         </div>
 
-        <p class="success" id="success-message" style="display: none;">✅ Ready to start importing real recipes for your GD meal planner!</p>
+        <div class="step">
+          <strong>Step 2:</strong> Make sure your bookmarks bar is visible in
+          your browser
+          <ul>
+            <li>
+              <strong>Chrome/Edge:</strong> Ctrl+Shift+B (Windows) or
+              Cmd+Shift+B (Mac)
+            </li>
+            <li>
+              <strong>Firefox:</strong> Ctrl+Shift+B (Windows) or Cmd+Shift+B
+              (Mac)
+            </li>
+            <li><strong>Safari:</strong> View → Show Bookmarks Bar</li>
+          </ul>
+        </div>
+
+        <div class="step">
+          <strong>Step 3:</strong> Drag the green "Import Recipe to GD App"
+          button to your bookmarks bar
+        </div>
+
+        <div class="step">
+          <strong>Step 4:</strong> Visit any recipe website (AllRecipes, Food
+          Network, etc.)
+        </div>
+
+        <div class="step">
+          <strong>Step 5:</strong> Go to a specific recipe page and click your
+          bookmarklet!
+        </div>
+      </div>
+
+      <h3>✨ Features</h3>
+      <ul class="feature-list">
+        <li>Extracts recipe data automatically from any website</li>
+        <li>
+          Validates recipes meet GD requirements (10-50g carbs, 5g+ protein, 2g+
+          fiber)
+        </li>
+        <li>Shows interactive preview with nutrition analysis</li>
+        <li>One-click import to your app database</li>
+        <li>
+          Automatically categorizes recipes (breakfast, lunch, dinner, snacks)
+        </li>
+        <li>Parses ingredients into structured format</li>
+        <li>Logs all imports for tracking</li>
+      </ul>
+
+      <h3>🌐 Compatible Websites</h3>
+      <p>Works on any recipe site with structured data, including:</p>
+      <ul>
+        <li>AllRecipes</li>
+        <li>Food Network</li>
+        <li>EatingWell</li>
+        <li>Taste of Home</li>
+        <li>BBC Good Food</li>
+        <li>Serious Eats</li>
+        <li>Most food blogs</li>
+      </ul>
+
+      <h3>🔧 Troubleshooting</h3>
+      <ul>
+        <li>
+          <strong>"No recipe data found":</strong> Try a different recipe site
+          with better structured data
+        </li>
+        <li>
+          <strong>"Import failed":</strong> Make sure your app is deployed and
+          accessible
+        </li>
+        <li>
+          <strong>"Doesn't meet GD requirements":</strong> Look for recipes with
+          10-50g carbs and more protein/fiber
+        </li>
+      </ul>
+
+      <div class="warning">
+        <p>
+          <strong>💡 Pro Tip:</strong> Look for recipes that already mention
+          "diabetes-friendly", "low-carb", or "balanced nutrition" for best
+          results!
+        </p>
+      </div>
+
+      <hr style="margin: 30px 0" />
+
+      <h3>📋 Alternative: Copy & Paste Method</h3>
+      <p>If dragging doesn't work, you can manually create a bookmark:</p>
+
+      <div class="step">
+        <strong>1.</strong> Copy this code to your clipboard:
+        <button class="copy-btn" onclick="copyBookmarklet()">
+          📋 Copy Bookmarklet Code
+        </button>
+        <div class="code-box" id="bookmarklet-code-display">
+          Generate bookmarklet first to see the code here
+        </div>
+      </div>
+
+      <div class="step">
+        <strong>2.</strong> Right-click your bookmarks bar and select "Add page"
+        or "Add bookmark"
+      </div>
+
+      <div class="step">
+        <strong>3.</strong> Paste the code as the URL and name it "Import Recipe
+        to GD App"
+      </div>
+
+      <p class="success" id="success-message" style="display: none">
+        ✅ Ready to start importing real recipes for your GD meal planner!
+      </p>
     </div>
 
     <script>
-        let generatedBookmarkletCode = '';
+      let generatedBookmarkletCode = "";
 
-        function generateBookmarklet() {
-            const vercelUrl = document.getElementById('vercel-url').value.trim();
-            
-            if (!vercelUrl) {
-                alert('Please enter your Vercel URL first!');
-                return;
-            }
-            
-            // Ensure URL has proper format
-            let apiUrl = vercelUrl;
-            if (!apiUrl.startsWith('http')) {
-                apiUrl = 'https://' + apiUrl;
-            }
-            if (apiUrl.endsWith('/')) {
-                apiUrl = apiUrl.slice(0, -1);
-            }
-            apiUrl += '/api/import-recipe';
-            
-            // Generate the bookmarklet code with the custom API endpoint
-            generatedBookmarkletCode = generateBookmarkletCode(apiUrl);
-            
-            // Update the draggable link
-            const bookmarkletLink = document.getElementById('bookmarklet-link');
-            bookmarkletLink.href = generatedBookmarkletCode;
-            
-            // Show the bookmarklet container
-            document.getElementById('bookmarklet-container').style.display = 'block';
-            
-            // Update the code display
-            document.getElementById('bookmarklet-code-display').textContent = generatedBookmarkletCode;
-            
-            // Show success message
-            document.getElementById('success-message').style.display = 'block';
-            
-            console.log('Generated bookmarklet for:', apiUrl);
+      function generateBookmarklet() {
+        const vercelUrl = document.getElementById("vercel-url").value.trim();
+
+        if (!vercelUrl) {
+          alert("Please enter your Vercel URL first!");
+          return;
         }
 
-        function generateBookmarkletCode(apiEndpoint) {
-            const code = `(function(){'use strict';const API_ENDPOINT='${apiEndpoint}';function createOverlay(){const overlay=document.createElement('div');overlay.id='recipe-importer-overlay';overlay.innerHTML=\`<div style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.8);z-index: 999999;display: flex;align-items: center;justify-content: center;font-family: Arial, sans-serif;"><div style="background: white;padding: 30px;border-radius: 12px;max-width: 600px;max-height: 80vh;overflow-y: auto;box-shadow: 0 20px 40px rgba(0,0,0,0.3);"><div id="import-content"><h2 style="margin: 0 0 20px 0; color: #333;">🍳 Recipe Importer</h2><div id="import-status">Extracting recipe data...</div><div id="import-progress" style="width: 100%;height: 4px;background: #f0f0f0;border-radius: 2px;margin: 15px 0;overflow: hidden;"><div id="progress-bar" style="height: 100%;background: linear-gradient(90deg, #4CAF50, #45a049);width: 0%;transition: width 0.3s;"></div></div><div id="recipe-preview"></div><div id="import-actions" style="margin-top: 20px; text-align: center;"></div></div></div></div>\`;document.body.appendChild(overlay);return overlay;}function extractJsonLd(){const scripts=document.querySelectorAll('script[type="application/ld+json"]');for(const script of scripts){try{const data=JSON.parse(script.textContent);if(Array.isArray(data)){const recipe=data.find(item=>item['@type']==='Recipe');if(recipe)return recipe;}else if(data['@type']==='Recipe'){return data;}}catch(e){}}return null;}function extractMicrodata(){const recipeElement=document.querySelector('[itemtype*="schema.org/Recipe"]');if(!recipeElement)return null;const extract=(prop)=>{const elem=recipeElement.querySelector(\`[itemprop="\${prop}"]\`);return elem?(elem.textContent||elem.getAttribute('content')||'').trim():'';};const extractList=(prop)=>{const elems=recipeElement.querySelectorAll(\`[itemprop="\${prop}"]\`);return Array.from(elems).map(elem=>(elem.textContent||elem.getAttribute('content')||'').trim()).filter(text=>text.length>0);};return{'@type':'Recipe',name:extract('name'),description:extract('description'),prepTime:extract('prepTime'),cookTime:extract('cookTime'),totalTime:extract('totalTime'),recipeYield:extract('recipeYield'),recipeIngredient:extractList('recipeIngredient'),recipeInstructions:extractList('recipeInstructions'),nutrition:{calories:extract('calories'),carbohydrateContent:extract('carbohydrateContent'),proteinContent:extract('proteinContent'),fiberContent:extract('fiberContent'),fatContent:extract('fatContent')}};}function parseDuration(duration){if(!duration)return 0;if(typeof duration==='number')return duration;const match=duration.match(/PT(\\d+)M/)||duration.match(/(\\d+)\\s*min/i);return match?parseInt(match[1]):0;}function parseIngredient(text){const patterns=[/^([\\d\\s\\-\\/\\.½⅓⅔¼¾]+)\\s*(cups?|tbsp|tsp|oz|lb|g|ml|L)\\s+(.+)$/i,/^(\\d+)\\s+(.+)$/,/^(.+)$/];for(const pattern of patterns){const match=text.match(pattern);if(match){if(match.length===4){return{amount:match[1].trim(),unit:match[2].trim(),item:match[3].trim()};}else if(match.length===3){return{amount:match[1].trim(),unit:'',item:match[2].trim()};}else{return{amount:'',unit:'',item:match[1].trim()};}}}return{amount:'',unit:'',item:text};}function parseNutrition(nutritionData){const nutrition={calories:0,carbs:0,protein:0,fiber:0,fat:0,sugar:0};if(!nutritionData)return nutrition;const extract=(value)=>{if(typeof value==='number')return value;const match=String(value).match(/(\\d+)/);return match?parseInt(match[1]):0;};nutrition.calories=extract(nutritionData.calories);nutrition.carbs=extract(nutritionData.carbohydrateContent);nutrition.protein=extract(nutritionData.proteinContent);nutrition.fiber=extract(nutritionData.fiberContent);nutrition.fat=extract(nutritionData.fatContent);nutrition.sugar=extract(nutritionData.sugarContent);return nutrition;}function validateGDNutrition(nutrition){const{carbs,protein,fiber}=nutrition;if(carbs===0)return{valid:false,reason:'No carbohydrate data'};if(carbs<10||carbs>50)return{valid:false,reason:\`Carbs out of range: \${carbs}g (need 10-50g)\`};if(protein<5)return{valid:false,reason:\`Low protein: \${protein}g (need 5g+)\`};if(fiber<2)return{valid:false,reason:\`Low fiber: \${fiber}g (need 2g+)\`};return{valid:true,reason:'Meets GD requirements'};}function determineCategory(title){const lower=title.toLowerCase();if(/breakfast|egg|pancake|oatmeal|smoothie|granola/.test(lower))return'breakfast';if(/snack|bite|energy|bar/.test(lower))return'snacks';if(/lunch|sandwich|wrap|salad|soup/.test(lower))return'lunch';return'dinner';}function updateStatus(message,progress=0){const statusEl=document.getElementById('import-status');const progressBar=document.getElementById('progress-bar');if(statusEl)statusEl.textContent=message;if(progressBar)progressBar.style.width=progress+'%';}function showPreview(recipe,validation){const previewEl=document.getElementById('recipe-preview');const actionsEl=document.getElementById('import-actions');const validationColor=validation.valid?'#4CAF50':'#f44336';const validationIcon=validation.valid?'✅':'❌';previewEl.innerHTML=\`<div style="text-align: left; margin: 20px 0;"><h3 style="margin: 0 0 10px 0; color: #333;">\${recipe.title}</h3><p style="color: #666; margin: 0 0 15px 0; font-size: 14px;">\${recipe.description.substring(0,150)}...</p><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;"><div><strong>⏱️ Time:</strong> \${recipe.totalTime} minutes<br><strong>🍽️ Serves:</strong> \${recipe.servings}<br><strong>📂 Category:</strong> \${recipe.category}</div><div><strong>🍞 Carbs:</strong> \${recipe.nutrition.carbs}g<br><strong>🥩 Protein:</strong> \${recipe.nutrition.protein}g<br><strong>🌾 Fiber:</strong> \${recipe.nutrition.fiber}g</div></div><div style="padding: 10px;border-radius: 6px;background: \${validation.valid?'#e8f5e8':'#ffe8e8'};border: 1px solid \${validationColor};margin: 15px 0;">\${validationIcon} <strong>GD Validation:</strong> \${validation.reason}</div><details style="margin: 15px 0;"><summary style="cursor: pointer; font-weight: bold;">📋 Ingredients (\${recipe.ingredients.length})</summary><ul style="margin: 10px 0; padding-left: 20px;">\${recipe.ingredients.slice(0,5).map(ing=>\`<li>\${ing.text}</li>\`).join('')}\${recipe.ingredients.length>5?\`<li><em>... and \${recipe.ingredients.length-5} more</em></li>\`:''}</ul></details></div>\`;actionsEl.innerHTML=\`<button id="import-btn" style="background: \${validation.valid?'#4CAF50':'#ccc'};color: white;border: none;padding: 12px 24px;border-radius: 6px;font-size: 16px;cursor: \${validation.valid?'pointer':'not-allowed'};margin-right: 10px;" \${!validation.valid?'disabled':''}>\${validation.valid?'✅ Import Recipe':'❌ Cannot Import'}</button><button id="cancel-btn" style="background: #666;color: white;border: none;padding: 12px 24px;border-radius: 6px;font-size: 16px;cursor: pointer;">Cancel</button>\`;document.getElementById('cancel-btn').onclick=()=>{document.getElementById('recipe-importer-overlay').remove();};if(validation.valid){document.getElementById('import-btn').onclick=()=>importRecipe(recipe);}}async function importRecipe(recipe){updateStatus('Importing recipe to your app...',90);try{const response=await fetch(API_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',},body:JSON.stringify({recipe:recipe,source_url:window.location.href,imported_at:new Date().toISOString()})});if(response.ok){updateStatus('✅ Recipe imported successfully!',100);setTimeout(()=>{document.getElementById('recipe-importer-overlay').remove();},2000);}else{throw new Error(\`HTTP \${response.status}: \${response.statusText}\`);}}catch(error){updateStatus(\`❌ Import failed: \${error.message}\`,0);console.error('Import error:',error);}}function main(){if(document.getElementById('recipe-importer-overlay')){return;}const overlay=createOverlay();setTimeout(()=>{updateStatus('Searching for recipe data...',20);let recipeData=extractJsonLd();if(!recipeData){updateStatus('Trying microdata extraction...',40);recipeData=extractMicrodata();}if(!recipeData||!recipeData.name){updateStatus('❌ No recipe data found on this page',0);document.getElementById('import-actions').innerHTML=\`<button onclick="document.getElementById('recipe-importer-overlay').remove()" style="background: #666;color: white;border: none;padding: 12px 24px;border-radius: 6px;cursor: pointer;">Close</button>\`;return;}updateStatus('Processing recipe data...',60);const recipe={title:recipeData.name,description:recipeData.description||'',url:window.location.href,source:window.location.hostname,prepTime:parseDuration(recipeData.prepTime),cookTime:parseDuration(recipeData.cookTime),totalTime:parseDuration(recipeData.totalTime),servings:parseInt(recipeData.recipeYield)||4,ingredients:[],instructions:[],nutrition:parseNutrition(recipeData.nutrition),category:'',verified:true,imported_at:new Date().toISOString()};if(!recipe.totalTime){recipe.totalTime=recipe.prepTime+recipe.cookTime;}if(Array.isArray(recipeData.recipeIngredient)){recipe.ingredients=recipeData.recipeIngredient.map(ing=>({text:ing,parsed:parseIngredient(ing)}));}if(recipeData.recipeInstructions){const instructions=Array.isArray(recipeData.recipeInstructions)?recipeData.recipeInstructions:[recipeData.recipeInstructions];recipe.instructions=instructions.map(inst=>{if(typeof inst==='string')return inst;return inst.text||inst.name||'';}).filter(text=>text.length>5);}recipe.category=determineCategory(recipe.title);updateStatus('Validating for gestational diabetes...',80);const validation=validateGDNutrition(recipe.nutrition);showPreview(recipe,validation);},500);}main();})();`;
-            
-            return `javascript:${encodeURIComponent(code)}`;
+        // Ensure URL has proper format
+        let apiUrl = vercelUrl;
+        if (!apiUrl.startsWith("http")) {
+          apiUrl = "https://" + apiUrl;
+        }
+        if (apiUrl.endsWith("/")) {
+          apiUrl = apiUrl.slice(0, -1);
+        }
+        apiUrl += "/api/import-recipe";
+
+        // Generate the bookmarklet code with the custom API endpoint
+        generatedBookmarkletCode = generateBookmarkletCode(apiUrl);
+
+        // Update the draggable link
+        const bookmarkletLink = document.getElementById("bookmarklet-link");
+        bookmarkletLink.href = generatedBookmarkletCode;
+
+        // Show the bookmarklet container
+        document.getElementById("bookmarklet-container").style.display =
+          "block";
+
+        // Update the code display
+        document.getElementById("bookmarklet-code-display").textContent =
+          generatedBookmarkletCode;
+
+        // Show success message
+        document.getElementById("success-message").style.display = "block";
+
+        console.log("Generated bookmarklet for:", apiUrl);
+      }
+
+      function generateBookmarkletCode(apiEndpoint) {
+        const code = `(function(){'use strict';const API_ENDPOINT='${apiEndpoint}';function createOverlay(){const overlay=document.createElement('div');overlay.id='recipe-importer-overlay';overlay.innerHTML=\`<div style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.8);z-index: 999999;display: flex;align-items: center;justify-content: center;font-family: Arial, sans-serif;"><div style="background: white;padding: 30px;border-radius: 12px;max-width: 600px;max-height: 80vh;overflow-y: auto;box-shadow: 0 20px 40px rgba(0,0,0,0.3);"><div id="import-content"><h2 style="margin: 0 0 20px 0; color: #333;">🍳 Recipe Importer</h2><div id="import-status">Extracting recipe data...</div><div id="import-progress" style="width: 100%;height: 4px;background: #f0f0f0;border-radius: 2px;margin: 15px 0;overflow: hidden;"><div id="progress-bar" style="height: 100%;background: linear-gradient(90deg, #4CAF50, #45a049);width: 0%;transition: width 0.3s;"></div></div><div id="recipe-preview"></div><div id="import-actions" style="margin-top: 20px; text-align: center;"></div></div></div></div>\`;document.body.appendChild(overlay);return overlay;}function extractJsonLd(){const scripts=document.querySelectorAll('script[type="application/ld+json"]');for(const script of scripts){try{const data=JSON.parse(script.textContent);if(Array.isArray(data)){const recipe=data.find(item=>item['@type']==='Recipe');if(recipe)return recipe;}else if(data['@type']==='Recipe'){return data;}}catch(e){}}return null;}function extractMicrodata(){const recipeElement=document.querySelector('[itemtype*="schema.org/Recipe"]');if(!recipeElement)return null;const extract=(prop)=>{const elem=recipeElement.querySelector(\`[itemprop="\${prop}"]\`);return elem?(elem.textContent||elem.getAttribute('content')||'').trim():'';};const extractList=(prop)=>{const elems=recipeElement.querySelectorAll(\`[itemprop="\${prop}"]\`);return Array.from(elems).map(elem=>(elem.textContent||elem.getAttribute('content')||'').trim()).filter(text=>text.length>0);};return{'@type':'Recipe',name:extract('name'),description:extract('description'),prepTime:extract('prepTime'),cookTime:extract('cookTime'),totalTime:extract('totalTime'),recipeYield:extract('recipeYield'),recipeIngredient:extractList('recipeIngredient'),recipeInstructions:extractList('recipeInstructions'),nutrition:{calories:extract('calories'),carbohydrateContent:extract('carbohydrateContent'),proteinContent:extract('proteinContent'),fiberContent:extract('fiberContent'),fatContent:extract('fatContent')}};}function parseDuration(duration){if(!duration)return 0;if(typeof duration==='number')return duration;const match=duration.match(/PT(\\d+)M/)||duration.match(/(\\d+)\\s*min/i);return match?parseInt(match[1]):0;}function parseIngredient(text){const patterns=[/^([\\d\\s\\-\\/\\.½⅓⅔¼¾]+)\\s*(cups?|tbsp|tsp|oz|lb|g|ml|L)\\s+(.+)$/i,/^(\\d+)\\s+(.+)$/,/^(.+)$/];for(const pattern of patterns){const match=text.match(pattern);if(match){if(match.length===4){return{amount:match[1].trim(),unit:match[2].trim(),item:match[3].trim()};}else if(match.length===3){return{amount:match[1].trim(),unit:'',item:match[2].trim()};}else{return{amount:'',unit:'',item:match[1].trim()};}}}return{amount:'',unit:'',item:text};}function parseNutrition(nutritionData){const nutrition={calories:0,carbs:0,protein:0,fiber:0,fat:0,sugar:0};if(!nutritionData)return nutrition;const extract=(value)=>{if(typeof value==='number')return value;const match=String(value).match(/(\\d+)/);return match?parseInt(match[1]):0;};nutrition.calories=extract(nutritionData.calories);nutrition.carbs=extract(nutritionData.carbohydrateContent);nutrition.protein=extract(nutritionData.proteinContent);nutrition.fiber=extract(nutritionData.fiberContent);nutrition.fat=extract(nutritionData.fatContent);nutrition.sugar=extract(nutritionData.sugarContent);return nutrition;}function validateGDNutrition(nutrition){const{carbs,protein,fiber}=nutrition;if(carbs===0)return{valid:false,reason:'No carbohydrate data'};if(carbs<10||carbs>50)return{valid:false,reason:\`Carbs out of range: \${carbs}g (need 10-50g)\`};if(protein<5)return{valid:false,reason:\`Low protein: \${protein}g (need 5g+)\`};if(fiber<2)return{valid:false,reason:\`Low fiber: \${fiber}g (need 2g+)\`};return{valid:true,reason:'Meets GD requirements'};}function determineCategory(title){const lower=title.toLowerCase();if(/breakfast|egg|pancake|oatmeal|smoothie|granola/.test(lower))return'breakfast';if(/snack|bite|energy|bar/.test(lower))return'snacks';if(/lunch|sandwich|wrap|salad|soup/.test(lower))return'lunch';return'dinner';}function updateStatus(message,progress=0){const statusEl=document.getElementById('import-status');const progressBar=document.getElementById('progress-bar');if(statusEl)statusEl.textContent=message;if(progressBar)progressBar.style.width=progress+'%';}function showPreview(recipe,validation){const previewEl=document.getElementById('recipe-preview');const actionsEl=document.getElementById('import-actions');const validationColor=validation.valid?'#4CAF50':'#f44336';const validationIcon=validation.valid?'✅':'❌';previewEl.innerHTML=\`<div style="text-align: left; margin: 20px 0;"><h3 style="margin: 0 0 10px 0; color: #333;">\${recipe.title}</h3><p style="color: #666; margin: 0 0 15px 0; font-size: 14px;">\${recipe.description.substring(0,150)}...</p><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0;"><div><strong>⏱️ Time:</strong> \${recipe.totalTime} minutes<br><strong>🍽️ Serves:</strong> \${recipe.servings}<br><strong>📂 Category:</strong> \${recipe.category}</div><div><strong>🍞 Carbs:</strong> \${recipe.nutrition.carbs}g<br><strong>🥩 Protein:</strong> \${recipe.nutrition.protein}g<br><strong>🌾 Fiber:</strong> \${recipe.nutrition.fiber}g</div></div><div style="padding: 10px;border-radius: 6px;background: \${validation.valid?'#e8f5e8':'#ffe8e8'};border: 1px solid \${validationColor};margin: 15px 0;">\${validationIcon} <strong>GD Validation:</strong> \${validation.reason}</div><details style="margin: 15px 0;"><summary style="cursor: pointer; font-weight: bold;">📋 Ingredients (\${recipe.ingredients.length})</summary><ul style="margin: 10px 0; padding-left: 20px;">\${recipe.ingredients.slice(0,5).map(ing=>\`<li>\${ing.text}</li>\`).join('')}\${recipe.ingredients.length>5?\`<li><em>... and \${recipe.ingredients.length-5} more</em></li>\`:''}</ul></details></div>\`;actionsEl.innerHTML=\`<button id="import-btn" style="background: \${validation.valid?'#4CAF50':'#ccc'};color: white;border: none;padding: 12px 24px;border-radius: 6px;font-size: 16px;cursor: \${validation.valid?'pointer':'not-allowed'};margin-right: 10px;" \${!validation.valid?'disabled':''}>\${validation.valid?'✅ Import Recipe':'❌ Cannot Import'}</button><button id="cancel-btn" style="background: #666;color: white;border: none;padding: 12px 24px;border-radius: 6px;font-size: 16px;cursor: pointer;">Cancel</button>\`;document.getElementById('cancel-btn').onclick=()=>{document.getElementById('recipe-importer-overlay').remove();};if(validation.valid){document.getElementById('import-btn').onclick=()=>importRecipe(recipe);}}async function importRecipe(recipe){updateStatus('Importing recipe to your app...',90);try{const response=await fetch(API_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',},body:JSON.stringify({recipe:recipe,source_url:window.location.href,imported_at:new Date().toISOString()})});if(response.ok){updateStatus('✅ Recipe imported successfully!',100);setTimeout(()=>{document.getElementById('recipe-importer-overlay').remove();},2000);}else{throw new Error(\`HTTP \${response.status}: \${response.statusText}\`);}}catch(error){updateStatus(\`❌ Import failed: \${error.message}\`,0);console.error('Import error:',error);}}function main(){if(document.getElementById('recipe-importer-overlay')){return;}const overlay=createOverlay();setTimeout(()=>{updateStatus('Searching for recipe data...',20);let recipeData=extractJsonLd();if(!recipeData){updateStatus('Trying microdata extraction...',40);recipeData=extractMicrodata();}if(!recipeData||!recipeData.name){updateStatus('❌ No recipe data found on this page',0);document.getElementById('import-actions').innerHTML=\`<button onclick="document.getElementById('recipe-importer-overlay').remove()" style="background: #666;color: white;border: none;padding: 12px 24px;border-radius: 6px;cursor: pointer;">Close</button>\`;return;}updateStatus('Processing recipe data...',60);const recipe={title:recipeData.name,description:recipeData.description||'',url:window.location.href,source:window.location.hostname,prepTime:parseDuration(recipeData.prepTime),cookTime:parseDuration(recipeData.cookTime),totalTime:parseDuration(recipeData.totalTime),servings:parseInt(recipeData.recipeYield)||4,ingredients:[],instructions:[],nutrition:parseNutrition(recipeData.nutrition),category:'',verified:true,imported_at:new Date().toISOString()};if(!recipe.totalTime){recipe.totalTime=recipe.prepTime+recipe.cookTime;}if(Array.isArray(recipeData.recipeIngredient)){recipe.ingredients=recipeData.recipeIngredient.map(ing=>({text:ing,parsed:parseIngredient(ing)}));}if(recipeData.recipeInstructions){const instructions=Array.isArray(recipeData.recipeInstructions)?recipeData.recipeInstructions:[recipeData.recipeInstructions];recipe.instructions=instructions.map(inst=>{if(typeof inst==='string')return inst;return inst.text||inst.name||'';}).filter(text=>text.length>5);}recipe.category=determineCategory(recipe.title);updateStatus('Validating for gestational diabetes...',80);const validation=validateGDNutrition(recipe.nutrition);showPreview(recipe,validation);},500);}main();})();`;
+
+        return `javascript:${encodeURIComponent(code)}`;
+      }
+
+      function copyBookmarklet() {
+        if (!generatedBookmarkletCode) {
+          alert(
+            "Please generate the bookmarklet first by entering your Vercel URL!",
+          );
+          return;
         }
 
-        function copyBookmarklet() {
-            if (!generatedBookmarkletCode) {
-                alert('Please generate the bookmarklet first by entering your Vercel URL!');
-                return;
-            }
-            
-            navigator.clipboard.writeText(generatedBookmarkletCode).then(() => {
-                alert('✅ Bookmarklet code copied to clipboard!');
-            }).catch(() => {
-                // Fallback for older browsers
-                const textArea = document.createElement('textarea');
-                textArea.value = generatedBookmarkletCode;
-                document.body.appendChild(textArea);
-                textArea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textArea);
-                alert('✅ Bookmarklet code copied to clipboard!');
-            });
-        }
+        navigator.clipboard
+          .writeText(generatedBookmarkletCode)
+          .then(() => {
+            alert("✅ Bookmarklet code copied to clipboard!");
+          })
+          .catch(() => {
+            // Fallback for older browsers
+            const textArea = document.createElement("textarea");
+            textArea.value = generatedBookmarkletCode;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textArea);
+            alert("✅ Bookmarklet code copied to clipboard!");
+          });
+      }
 
-        // Auto-focus on the URL input
-        window.addEventListener('load', () => {
-            document.getElementById('vercel-url').focus();
-        });
+      // Auto-focus on the URL input
+      window.addEventListener("load", () => {
+        document.getElementById("vercel-url").focus();
+      });
     </script>
-</body>
+  </body>
 </html>

@@ -185,9 +185,7 @@
             "amount": "2",
             "unit": "slices",
             "category": "Grains",
-            "recipes": [
-              "Salad Turkey Sandwich with leafy greens"
-            ]
+            "recipes": ["Salad Turkey Sandwich with leafy greens"]
           },
           {
             "name": "wild rice",
@@ -320,9 +318,7 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Southwest Smoothie with almond butter and hemp hearts"
-            ]
+            "recipes": ["Southwest Smoothie with almond butter and hemp hearts"]
           },
           {
             "name": "herbs or spices",
@@ -351,9 +347,7 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Salad Turkey Sandwich with leafy greens"
-            ]
+            "recipes": ["Salad Turkey Sandwich with leafy greens"]
           },
           {
             "name": "mayonnaise",
@@ -388,9 +382,7 @@
             "amount": "1",
             "unit": "tsp",
             "category": "Other",
-            "recipes": [
-              "Salad Turkey Sandwich with leafy greens"
-            ]
+            "recipes": ["Salad Turkey Sandwich with leafy greens"]
           },
           {
             "name": "nuts",
@@ -533,18 +525,14 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Chicken Wrap"
-            ]
+            "recipes": ["Chicken Wrap"]
           },
           {
             "name": "whole grain crackers",
             "amount": "1/4",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Protein-packed Greek Yogurt with whole grain crackers"
-            ]
+            "recipes": ["Protein-packed Greek Yogurt with whole grain crackers"]
           },
           {
             "name": "whole wheat tortilla",
@@ -636,9 +624,7 @@
             "amount": "1/4",
             "unit": "cup",
             "category": "Produce",
-            "recipes": [
-              "Crunchy Greek Yogurt with cherry tomatoes"
-            ]
+            "recipes": ["Crunchy Greek Yogurt with cherry tomatoes"]
           },
           {
             "name": "cucumber",
@@ -752,9 +738,7 @@
             "amount": "4",
             "unit": "oz",
             "category": "Proteins",
-            "recipes": [
-              "Salad Turkey Sandwich with leafy greens"
-            ]
+            "recipes": ["Salad Turkey Sandwich with leafy greens"]
           }
         ]
       }

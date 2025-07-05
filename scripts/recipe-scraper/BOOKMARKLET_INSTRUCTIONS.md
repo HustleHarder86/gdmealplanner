@@ -15,6 +15,7 @@ This bookmarklet allows you to manually import recipes from any recipe website d
 ### 2. Start Your Local Server
 
 Make sure your Next.js app is running locally:
+
 ```bash
 cd /home/amy/dev/gdmealplanner
 npm run dev
@@ -25,26 +26,32 @@ The app should be accessible at `http://localhost:3000`
 ## How to Use
 
 ### 1. Find a Recipe
+
 - Visit any recipe website (AllRecipes, Food Network, EatingWell, etc.)
 - Navigate to a specific recipe page
 - Make sure the page has loaded completely
 
 ### 2. Run the Bookmarklet
+
 - Click the "Import Recipe to GD App" bookmark you created
 - The importer will open as an overlay on the current page
 
 ### 3. Review the Extracted Data
+
 The bookmarklet will automatically:
+
 - Extract recipe title, ingredients, instructions, and nutrition data
 - Validate that the recipe meets GD requirements (10-50g carbs, 5g+ protein, 2g+ fiber)
 - Show you a preview with nutritional analysis
 
 ### 4. Import or Cancel
+
 - **Green "Import Recipe" button**: Recipe meets GD requirements and can be imported
 - **Gray "Cannot Import" button**: Recipe doesn't meet requirements (too many/few carbs, etc.)
 - **Cancel button**: Close without importing
 
 ### 5. Confirmation
+
 - If successful, you'll see "Recipe imported successfully!"
 - The recipe will be automatically saved to the appropriate category in your app
 - A log entry will be created for tracking
@@ -64,7 +71,7 @@ The bookmarklet looks for structured data (JSON-LD) on recipe pages and extracts
 Recipes must meet these requirements to be imported:
 
 - **Carbohydrates**: 10-50g per serving
-- **Protein**: Minimum 5g per serving  
+- **Protein**: Minimum 5g per serving
 - **Fiber**: Minimum 2g per serving
 - **Time**: Maximum 60 minutes total time
 
@@ -83,16 +90,19 @@ The bookmarklet works best on sites that use structured data (schema.org), inclu
 ## Troubleshooting
 
 ### "No recipe data found"
+
 - The website doesn't use structured data
 - Try a different recipe site
 - Some sites require scrolling to load data
 
 ### "Doesn't meet GD requirements"
+
 - Check the carb content (should be 10-50g)
 - Look for recipes with more fiber and protein
 - Consider modifying the recipe before importing
 
 ### Import fails
+
 - Make sure your local server is running at `http://localhost:3000`
 - Check the browser console for error messages
 - Verify the API endpoint is accessible
@@ -100,12 +110,14 @@ The bookmarklet works best on sites that use structured data (schema.org), inclu
 ## File Locations
 
 After importing, recipes are saved to:
+
 - `data/recipes/breakfast.json`
-- `data/recipes/lunch.json` 
+- `data/recipes/lunch.json`
 - `data/recipes/dinner.json`
 - `data/recipes/snacks.json`
 
 Import logs are saved to:
+
 - `logs/recipe-imports.log`
 
 ## Tips for Best Results
@@ -118,6 +130,7 @@ Import logs are saved to:
 ## Next Steps
 
 After importing recipes:
+
 1. Review them in your app at `http://localhost:3000/recipes`
 2. Add them to meal plans
 3. Rate and review them after trying

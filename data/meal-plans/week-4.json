@@ -370,18 +370,14 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Turkey Buddha Bowl with sweet potato"
-            ]
+            "recipes": ["Turkey Buddha Bowl with sweet potato"]
           },
           {
             "name": "vegetables",
             "amount": "1/2",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Asian-inspired Smoothie with vegetables"
-            ]
+            "recipes": ["Asian-inspired Smoothie with vegetables"]
           },
           {
             "name": "whole grain crackers",
@@ -399,10 +395,7 @@
             "amount": "1",
             "unit": "large",
             "category": "Other",
-            "recipes": [
-              "Turkey Buddha Bowl with sweet potato",
-              "Chicken Wrap"
-            ]
+            "recipes": ["Turkey Buddha Bowl with sweet potato", "Chicken Wrap"]
           },
           {
             "name": "whole wheat wrap",
@@ -513,10 +506,7 @@
             "amount": "1/4",
             "unit": "cup",
             "category": "Produce",
-            "recipes": [
-              "Turkey Buddha Bowl with sweet potato",
-              "Chicken Wrap"
-            ]
+            "recipes": ["Turkey Buddha Bowl with sweet potato", "Chicken Wrap"]
           },
           {
             "name": "onion",
@@ -533,10 +523,7 @@
             "amount": "1/4",
             "unit": "cup",
             "category": "Produce",
-            "recipes": [
-              "Turkey Buddha Bowl with sweet potato",
-              "Chicken Wrap"
-            ]
+            "recipes": ["Turkey Buddha Bowl with sweet potato", "Chicken Wrap"]
           }
         ]
       },
@@ -671,9 +658,7 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Grains",
-            "recipes": [
-              "Soup Grilled Chicken with brown rice and quinoa"
-            ]
+            "recipes": ["Soup Grilled Chicken with brown rice and quinoa"]
           },
           {
             "name": "cauliflower rice",

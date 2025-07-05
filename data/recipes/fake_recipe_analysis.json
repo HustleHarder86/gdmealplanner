@@ -78,27 +78,19 @@
         "saturatedFat": 3,
         "sodium": 520
       },
-      "tags": [
-        "mediterranean",
-        "high-protein",
-        "flavorful"
-      ],
+      "tags": ["mediterranean", "high-protein", "flavorful"],
       "id": "mediterranean-chicken-pita"
     }
   ],
   "fakeRecipes": [
     {
       "title": "Grilled Chicken Salad with Quinoa",
-      "issues": [
-        "Generic instructions"
-      ],
+      "issues": ["Generic instructions"],
       "category": "lunch"
     },
     {
       "title": "Mediterranean Chickpea Stew",
-      "issues": [
-        "Template-based title"
-      ],
+      "issues": ["Template-based title"],
       "category": "dinner"
     }
   ],

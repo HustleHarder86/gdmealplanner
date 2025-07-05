@@ -140,10 +140,7 @@
             "amount": "1/4",
             "unit": "medium",
             "category": "Other",
-            "recipes": [
-              "Salad Chicken Wrap with sweet potato",
-              "Chicken Wrap"
-            ]
+            "recipes": ["Salad Chicken Wrap with sweet potato", "Chicken Wrap"]
           },
           {
             "name": "berries",
@@ -281,9 +278,7 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Chicken Wrap"
-            ]
+            "recipes": ["Chicken Wrap"]
           },
           {
             "name": "mayonnaise",
@@ -446,9 +441,7 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Salad Chicken Wrap with sweet potato"
-            ]
+            "recipes": ["Salad Chicken Wrap with sweet potato"]
           },
           {
             "name": "whole grain crackers",
@@ -467,10 +460,7 @@
             "amount": "1",
             "unit": "large",
             "category": "Other",
-            "recipes": [
-              "Salad Chicken Wrap with sweet potato",
-              "Chicken Wrap"
-            ]
+            "recipes": ["Salad Chicken Wrap with sweet potato", "Chicken Wrap"]
           },
           {
             "name": "whole wheat wrap",
@@ -573,10 +563,7 @@
             "amount": "1/4",
             "unit": "cup",
             "category": "Produce",
-            "recipes": [
-              "Salad Chicken Wrap with sweet potato",
-              "Chicken Wrap"
-            ]
+            "recipes": ["Salad Chicken Wrap with sweet potato", "Chicken Wrap"]
           },
           {
             "name": "onion",
@@ -594,10 +581,7 @@
             "amount": "1/4",
             "unit": "cup",
             "category": "Produce",
-            "recipes": [
-              "Salad Chicken Wrap with sweet potato",
-              "Chicken Wrap"
-            ]
+            "recipes": ["Salad Chicken Wrap with sweet potato", "Chicken Wrap"]
           }
         ]
       },
@@ -650,9 +634,7 @@
             "amount": "8",
             "unit": "oz",
             "category": "Proteins",
-            "recipes": [
-              "Sheet Pan Lean Beef with quinoa and wild rice"
-            ]
+            "recipes": ["Sheet Pan Lean Beef with quinoa and wild rice"]
           },
           {
             "name": "turkey meatballs",

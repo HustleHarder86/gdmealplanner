@@ -10,6 +10,7 @@ Your application has **two separate recipe datasets**:
 ## Dataset Analysis
 
 ### 1. Active Dataset (48 recipes) - ✅ Already Cleaned
+
 - **Location**: `/data/recipes/`
 - **Status**: Currently being used by the application
 - **Verification Results**:
@@ -19,6 +20,7 @@ Your application has **two separate recipe datasets**:
   - Source attribution added to all recipes
 
 ### 2. Unused Dataset (360 recipes) - ❌ 100% Fake
+
 - **Location**: `/scripts/recipe-scraper/output-full/`
 - **Status**: NOT imported or used by the application
 - **Analysis Results**:
@@ -31,6 +33,7 @@ Your application has **two separate recipe datasets**:
 ## Key Findings
 
 ### The Good News
+
 ✅ Your application is using the smaller, cleaner dataset
 ✅ I've already removed fake URLs from the active dataset
 ✅ All active recipes now have proper source attribution
@@ -39,11 +42,13 @@ Your application has **two separate recipe datasets**:
 ### The Recipe Generation Methods
 
 **Method 1: Python Scraper (`scraper.py`)**
+
 - Designed to scrape real recipes
 - Produced the 48 recipes currently in use
 - Only 1 was actually from diabetesfoodhub.org
 
 **Method 2: JavaScript Generator (`scraper-full.js`)**
+
 - Generated 360 completely fake recipes
 - Used template combinations:
   - 10 cuisine styles × 10 base items × various additions
@@ -53,6 +58,7 @@ Your application has **two separate recipe datasets**:
 ## Current Application Status
 
 The recipe service (`/lib/recipe-service.ts`) imports from:
+
 ```typescript
 import recipesData from "@/scripts/recipe-scraper/data/recipes/recipes.json";
 import breakfastData from "@/scripts/recipe-scraper/data/recipes/breakfast.json";
@@ -66,11 +72,13 @@ These files contain the 48 cleaned recipes, NOT the 360 fake ones.
 ## Recommendations
 
 ### Immediate Actions (Already Complete ✅)
+
 1. ✅ Removed fake URLs from active recipes
 2. ✅ Added source attribution ("created" vs "original")
 3. ✅ Fixed ingredient lists to show raw ingredients
 
 ### Future Improvements
+
 1. **Delete the unused 360 recipes** - They serve no purpose and are misleading
 2. **Get real recipes** - Partner with recipe sites or nutritionists
 3. **Quality control** - Have recipes reviewed by dietitians specializing in GD

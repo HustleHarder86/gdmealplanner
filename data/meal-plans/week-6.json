@@ -149,9 +149,7 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Nordic Smoothie with flaxseed"
-            ]
+            "recipes": ["Nordic Smoothie with flaxseed"]
           },
           {
             "name": "garlic, minced",
@@ -180,9 +178,7 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "American Smoothie with almond butter and hemp hearts"
-            ]
+            "recipes": ["American Smoothie with almond butter and hemp hearts"]
           },
           {
             "name": "herbs or spices",
@@ -230,9 +226,7 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Turkey Sandwich"
-            ]
+            "recipes": ["Turkey Sandwich"]
           },
           {
             "name": "mustard",
@@ -315,9 +309,7 @@
             "amount": "8",
             "unit": "oz",
             "category": "Other",
-            "recipes": [
-              "Stir-fried Pork Tenderloin with quinoa and wild rice"
-            ]
+            "recipes": ["Stir-fried Pork Tenderloin with quinoa and wild rice"]
           },
           {
             "name": "roasted vegetables",
@@ -399,9 +391,7 @@
             "amount": "1/4",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Quick Cottage Cheese with whole grain crackers"
-            ]
+            "recipes": ["Quick Cottage Cheese with whole grain crackers"]
           },
           {
             "name": "whole wheat wrap",
@@ -612,9 +602,7 @@
             "amount": "8",
             "unit": "oz",
             "category": "Proteins",
-            "recipes": [
-              "Glazed Baked Salmon with quinoa and wild rice"
-            ]
+            "recipes": ["Glazed Baked Salmon with quinoa and wild rice"]
           },
           {
             "name": "sliced turkey",
@@ -648,9 +636,7 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Grains",
-            "recipes": [
-              "Wrap Grilled Chicken with brown rice and quinoa"
-            ]
+            "recipes": ["Wrap Grilled Chicken with brown rice and quinoa"]
           },
           {
             "name": "cauliflower rice",

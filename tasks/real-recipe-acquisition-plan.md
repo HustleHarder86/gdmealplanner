@@ -1,9 +1,11 @@
 # Real Recipe Acquisition Plan - 300+ Exact Recipes
 
 ## Goal
+
 Replace all generated recipes with 300+ REAL, medically-appropriate gestational diabetes recipes from legitimate sources.
 
 ## Challenge Analysis
+
 - Need 300+ recipes that meet GD nutritional requirements
 - Must have exact ingredients, instructions, and verified nutrition data
 - Cannot use fake URLs or made-up recipes
@@ -12,23 +14,21 @@ Replace all generated recipes with 300+ REAL, medically-appropriate gestational 
 ## Proposed Solution Strategy
 
 ### Option 1: Official API Partnerships (Recommended)
+
 **Pros**: Legal, accurate, updated regularly
 **Cons**: May require payment or partnership agreements
 
 1. **Diabetic Living / Diabetic Gourmet Magazine**
    - Contact for API access or content partnership
    - Already focused on diabetes-friendly recipes
-   
 2. **American Diabetes Association**
    - diabetes.org has extensive recipe database
    - May offer API for healthcare apps
-   
 3. **Edamam Recipe API**
    - 2.3M+ recipes with full nutrition data
    - Has diet filters (low-carb, high-fiber)
    - $0-$500/month depending on usage
    - https://developer.edamam.com/
-   
 4. **Spoonacular API**
    - 365K+ recipes with instructions
    - Nutrition data included
@@ -36,6 +36,7 @@ Replace all generated recipes with 300+ REAL, medically-appropriate gestational 
    - https://spoonacular.com/food-api
 
 ### Option 2: Manual Curation with Permission
+
 **Pros**: Quality control, GD-specific
 **Cons**: Time-intensive, need permissions
 
@@ -53,6 +54,7 @@ Replace all generated recipes with 300+ REAL, medically-appropriate gestational 
    - Ensures medical accuracy
 
 ### Option 3: Web Scraping with Verification
+
 **Pros**: Large volume possible
 **Cons**: Legal concerns, quality varies
 
@@ -66,19 +68,18 @@ Replace all generated recipes with 300+ REAL, medically-appropriate gestational 
      - Open recipe platforms
 
 ### Option 4: Hybrid Approach (Most Realistic)
+
 Combine multiple strategies for best results:
 
 1. **Phase 1: Core Recipes (50-100)**
    - Partner with 1-2 dietitians to create original GD recipes
    - These become your "premium" verified recipes
-   
 2. **Phase 2: API Integration (200-250)**
    - Use Edamam or Spoonacular API
    - Filter for GD-appropriate recipes:
      - Carbs: 15-45g per meal
      - High fiber (3g+ per meal)
      - Balanced protein
-   
 3. **Phase 3: Curated Collection (50-100)**
    - Partner with GD recipe blogs
    - Get permission for specific recipes
@@ -87,23 +88,27 @@ Combine multiple strategies for best results:
 ## Implementation Steps
 
 ### 1. Legal Foundation
+
 - [ ] Create recipe attribution policy
 - [ ] Draft partnership agreements
 - [ ] Set up API accounts with usage limits
 - [ ] Consult lawyer about recipe copyright
 
 ### 2. Technical Infrastructure
+
 - [ ] Build recipe import system that preserves source data
 - [ ] Create validation system for GD requirements
 - [ ] Set up automated nutrition verification
 - [ ] Implement source tracking for every recipe
 
 ### 3. Data Collection Pipeline
+
 ```
 Source Recipe → Validation → Nutrition Check → GD Approval → Import
 ```
 
 ### 4. Quality Assurance
+
 - [ ] Every recipe must have:
   - Verified source URL or attribution
   - Complete ingredients with exact measurements
@@ -115,12 +120,14 @@ Source Recipe → Validation → Nutrition Check → GD Approval → Import
 ## Recipe Requirements Checklist
 
 ### Nutritional Requirements (per serving)
+
 - **Breakfast**: 25-35g carbs, 15-20g protein, 5g+ fiber
-- **Lunch/Dinner**: 30-45g carbs, 20g+ protein, 5g+ fiber  
+- **Lunch/Dinner**: 30-45g carbs, 20g+ protein, 5g+ fiber
 - **Snacks**: 15-20g carbs, 5-10g protein, 2g+ fiber
 - **All**: Under 45 minutes total time
 
 ### Data Requirements
+
 - [ ] Original source URL (working link)
 - [ ] Recipe title (exact from source)
 - [ ] Ingredients (exact measurements)
@@ -132,6 +139,7 @@ Source Recipe → Validation → Nutrition Check → GD Approval → Import
 ## Recommended Tools
 
 ### Recipe Validation Script
+
 ```python
 def validate_gd_recipe(recipe):
     # Check carb ranges
@@ -143,6 +151,7 @@ def validate_gd_recipe(recipe):
 ```
 
 ### Source Tracking Database
+
 ```json
 {
   "recipe_id": "...",
@@ -159,11 +168,13 @@ def validate_gd_recipe(recipe):
 ## Cost Estimates
 
 ### API Costs (Monthly)
+
 - Edamam: $0-500 (free tier: 10,000 calls)
 - Spoonacular: $0-299 (free tier: 150 calls/day)
 - Custom development: $2,000-5,000
 
 ### Partnership Costs
+
 - Dietitian recipes: $50-100 per recipe
 - Blog partnerships: Often free with attribution
 - Content licensing: Varies widely
@@ -171,21 +182,25 @@ def validate_gd_recipe(recipe):
 ## Timeline
 
 ### Month 1
+
 - Set up legal framework
 - Build import/validation system
 - Create 25 original recipes with dietitian
 
 ### Month 2
+
 - Integrate recipe API
 - Import and validate 150 recipes
 - Begin blog partnerships
 
 ### Month 3
+
 - Complete 300+ recipe collection
 - Quality assurance testing
 - Launch with verified recipes
 
 ## Success Metrics
+
 - 300+ real recipes with verified sources
 - 100% pass GD nutritional requirements
 - 0 fake or generated recipes
@@ -193,6 +208,7 @@ def validate_gd_recipe(recipe):
 - Average user rating 4.5+ stars
 
 ## Next Steps
+
 1. Choose primary strategy (API vs. partnerships)
 2. Set budget for recipe acquisition
 3. Build validation/import system

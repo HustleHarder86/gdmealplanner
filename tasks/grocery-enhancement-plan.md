@@ -1,17 +1,20 @@
 # Grocery List Enhancement Plan
 
 ## Overview
+
 Enhance the grocery list with proper plural handling for units and grouping of identical items from different recipes.
 
 ## Todo Items
 
 ### Phase 1: Plural Unit Handling
+
 - [x] Create a utility function to handle unit pluralization
 - [x] Handle common units (cup/cups, tablespoon/tablespoons, etc.)
 - [x] Apply pluralization based on amount values
 - [x] Test with various unit types
 
 ### Phase 2: Item Grouping
+
 - [x] Analyze current grocery list structure
 - [x] Create logic to combine identical items
 - [x] Sum quantities when items are the same
@@ -19,12 +22,14 @@ Enhance the grocery list with proper plural handling for units and grouping of i
 - [x] Show which recipes use each item
 
 ### Phase 3: Display Improvements
+
 - [x] Update UI to show grouped items
 - [x] Display recipe sources for each item
 - [x] Format combined quantities properly
 - [x] Test with multiple weeks
 
 ## Implementation Notes
+
 - Keep utility functions simple and reusable
 - Maintain data structure compatibility
 - Ensure no loss of information when grouping
@@ -55,12 +60,14 @@ Enhance the grocery list with proper plural handling for units and grouping of i
    - Improved spacing and visual separation between items
 
 ### Technical Highlights:
+
 - Non-destructive grouping preserves original data
 - Handles edge cases like empty units and fractional amounts
 - Maintains compatibility with existing data structure
 - Efficient grouping using Map for performance
 
 ### Example Results:
+
 - "1/2 cup greek yogurt" + "1/2 cup greek yogurt" = "1 cup greek yogurt"
 - "1 tablespoon olive oil" becomes "1 tablespoon olive oil"
 - "2 tablespoon olive oil" becomes "2 tablespoons olive oil"

@@ -76,9 +76,7 @@
             "amount": "1/4",
             "unit": "medium",
             "category": "Other",
-            "recipes": [
-              "Salad Chicken Wrap with mixed vegetables"
-            ]
+            "recipes": ["Salad Chicken Wrap with mixed vegetables"]
           },
           {
             "name": "berries",
@@ -181,9 +179,7 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Italian Smoothie with hemp hearts"
-            ]
+            "recipes": ["Italian Smoothie with hemp hearts"]
           },
           {
             "name": "herbs or spices",
@@ -318,9 +314,7 @@
             "amount": "8",
             "unit": "oz",
             "category": "Other",
-            "recipes": [
-              "Slow Cooker Pork Tenderloin with quinoa and wild rice"
-            ]
+            "recipes": ["Slow Cooker Pork Tenderloin with quinoa and wild rice"]
           },
           {
             "name": "roasted vegetables",
@@ -410,9 +404,7 @@
             "amount": "1",
             "unit": "large",
             "category": "Other",
-            "recipes": [
-              "Salad Chicken Wrap with mixed vegetables"
-            ]
+            "recipes": ["Salad Chicken Wrap with mixed vegetables"]
           },
           {
             "name": "whole wheat wrap",
@@ -541,9 +533,7 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Produce",
-            "recipes": [
-              "Middle Eastern Smoothie with spinach"
-            ]
+            "recipes": ["Middle Eastern Smoothie with spinach"]
           },
           {
             "name": "tomato",
@@ -659,9 +649,7 @@
             "amount": "8",
             "unit": "oz",
             "category": "Proteins",
-            "recipes": [
-              "Stuffed Lean Beef with quinoa and wild rice"
-            ]
+            "recipes": ["Stuffed Lean Beef with quinoa and wild rice"]
           },
           {
             "name": "sliced turkey",

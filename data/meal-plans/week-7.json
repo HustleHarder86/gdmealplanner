@@ -317,9 +317,7 @@
             "amount": "8",
             "unit": "oz",
             "category": "Other",
-            "recipes": [
-              "Sheet Pan Pork Tenderloin with quinoa and wild rice"
-            ]
+            "recipes": ["Sheet Pan Pork Tenderloin with quinoa and wild rice"]
           },
           {
             "name": "roasted vegetables",
@@ -652,9 +650,7 @@
             "amount": "8",
             "unit": "oz",
             "category": "Proteins",
-            "recipes": [
-              "Roasted Lean Beef with quinoa and wild rice"
-            ]
+            "recipes": ["Roasted Lean Beef with quinoa and wild rice"]
           },
           {
             "name": "salmon fillet",

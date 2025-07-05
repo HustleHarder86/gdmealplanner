@@ -290,9 +290,7 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Mexican Smoothie with flaxseed"
-            ]
+            "recipes": ["Mexican Smoothie with flaxseed"]
           },
           {
             "name": "garlic, minced",
@@ -523,18 +521,14 @@
             "amount": "1/4",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Quick Cottage Cheese with whole grain crackers"
-            ]
+            "recipes": ["Quick Cottage Cheese with whole grain crackers"]
           },
           {
             "name": "whole wheat tortilla",
             "amount": "1",
             "unit": "large",
             "category": "Other",
-            "recipes": [
-              "Salad Chicken Wrap with black beans"
-            ]
+            "recipes": ["Salad Chicken Wrap with black beans"]
           },
           {
             "name": "whole wheat wrap",
@@ -617,9 +611,7 @@
             "amount": "1/4",
             "unit": "cup",
             "category": "Produce",
-            "recipes": [
-              "Creamy Greek Yogurt with cherry tomatoes"
-            ]
+            "recipes": ["Creamy Greek Yogurt with cherry tomatoes"]
           },
           {
             "name": "cucumber",
@@ -636,9 +628,7 @@
             "amount": "1/4",
             "unit": "cup",
             "category": "Produce",
-            "recipes": [
-              "Salad Chicken Wrap with black beans"
-            ]
+            "recipes": ["Salad Chicken Wrap with black beans"]
           },
           {
             "name": "onion",
@@ -657,9 +647,7 @@
             "amount": "1/4",
             "unit": "cup",
             "category": "Produce",
-            "recipes": [
-              "Salad Chicken Wrap with black beans"
-            ]
+            "recipes": ["Salad Chicken Wrap with black beans"]
           }
         ]
       },
@@ -725,9 +713,7 @@
             "amount": "8",
             "unit": "oz",
             "category": "Proteins",
-            "recipes": [
-              "Braised Baked Salmon with quinoa and wild rice"
-            ]
+            "recipes": ["Braised Baked Salmon with quinoa and wild rice"]
           }
         ]
       }

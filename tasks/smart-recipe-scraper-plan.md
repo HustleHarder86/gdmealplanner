@@ -1,9 +1,11 @@
 # Smart Recipe Scraper Plan - Finding & Extracting Real GD Recipes
 
 ## Overview
+
 Build an intelligent scraper that can find and extract REAL recipes from multiple legitimate sources, with verification that they actually exist.
 
 ## Advantages of Custom Scraper
+
 - ✅ Free (no API costs)
 - ✅ Can target GD-specific sources
 - ✅ Full control over data quality
@@ -13,6 +15,7 @@ Build an intelligent scraper that can find and extract REAL recipes from multipl
 ## Target Websites for Scraping
 
 ### Tier 1: Diabetes-Specific Sites
+
 1. **diabetes.org/recipes**
    - American Diabetes Association
    - All recipes are diabetes-friendly
@@ -21,7 +24,6 @@ Build an intelligent scraper that can find and extract REAL recipes from multipl
 2. **diabetesfoodhub.org**
    - Dedicated diabetes recipe site
    - Already know structure from previous attempt
-   
 3. **diabetesforecast.org/recipes**
    - Diabetes Forecast magazine
    - Tested recipes with full nutrition
@@ -31,6 +33,7 @@ Build an intelligent scraper that can find and extract REAL recipes from multipl
    - UK-based but applicable everywhere
 
 ### Tier 2: Major Recipe Sites with Filters
+
 1. **allrecipes.com**
    - Has diabetic-friendly category
    - Extensive nutrition data
@@ -61,7 +64,7 @@ class SmartGDRecipeScraper:
             EatingWellScraper(),
             # ... more scrapers
         ]
-        
+
     def find_gd_recipes(self):
         """Smart search for GD-appropriate recipes"""
         search_terms = [
@@ -72,13 +75,13 @@ class SmartGDRecipeScraper:
             "diabetes friendly breakfast",
             # ... more targeted searches
         ]
-        
+
     def verify_recipe_exists(self, url):
         """Verify URL returns 200 and has recipe content"""
-        
+
     def extract_recipe_data(self, url):
         """Extract all recipe components"""
-        
+
     def validate_gd_requirements(self, recipe):
         """Ensure meets GD nutritional needs"""
 ```
@@ -86,6 +89,7 @@ class SmartGDRecipeScraper:
 ## Scraping Strategy
 
 ### 1. Search Phase
+
 ```python
 # Use multiple search strategies
 - Site-specific searches (site:diabetes.org recipes 30g carbs)
@@ -95,6 +99,7 @@ class SmartGDRecipeScraper:
 ```
 
 ### 2. Extraction Phase
+
 ```python
 # Smart extraction using multiple methods
 - JSON-LD structured data (most reliable)
@@ -104,6 +109,7 @@ class SmartGDRecipeScraper:
 ```
 
 ### 3. Validation Phase
+
 ```python
 # Verify everything is real
 - Check URL returns 200 OK
@@ -115,29 +121,31 @@ class SmartGDRecipeScraper:
 ## Technical Implementation
 
 ### Recipe Extractor Patterns
+
 ```python
 def extract_recipe(self, soup, url):
     # Try structured data first
     json_ld = soup.find('script', type='application/ld+json')
     if json_ld and '@type': 'Recipe' in json_ld:
         return self.parse_json_ld(json_ld)
-    
+
     # Try microdata
     recipe = soup.find(attrs={'itemtype': 'http://schema.org/Recipe'})
     if recipe:
         return self.parse_microdata(recipe)
-    
+
     # Fall back to site-specific patterns
     return self.parse_html_patterns(soup, url)
 ```
 
 ### GD Validation Rules
+
 ```python
 def is_gd_appropriate(self, nutrition):
     carbs = nutrition.get('carbs', 0)
     fiber = nutrition.get('fiber', 0)
     protein = nutrition.get('protein', 0)
-    
+
     # Meal categories
     if self.is_breakfast(recipe):
         return 25 <= carbs <= 35 and protein >= 15
@@ -150,11 +158,13 @@ def is_gd_appropriate(self, nutrition):
 ## Scraping Workflow
 
 1. **Discovery Phase** (Find recipe URLs)
+
    ```
    Search → Filter → Verify URL exists → Add to queue
    ```
 
 2. **Extraction Phase** (Get recipe data)
+
    ```
    Fetch page → Extract data → Validate completeness → Store
    ```
@@ -167,6 +177,7 @@ def is_gd_appropriate(self, nutrition):
 ## Avoiding Common Pitfalls
 
 ### Legal/Ethical Considerations
+
 - Respect robots.txt
 - Add delays between requests
 - Include proper User-Agent
@@ -174,6 +185,7 @@ def is_gd_appropriate(self, nutrition):
 - Always attribute sources
 
 ### Technical Challenges
+
 - Handle JavaScript-rendered pages (use Selenium if needed)
 - Deal with various recipe formats
 - Extract from images (OCR for scanned recipes)
@@ -186,7 +198,7 @@ def is_gd_appropriate(self, nutrition):
 class GDRecipeCollector:
     def collect_recipes(self, target_count=300):
         recipes = []
-        
+
         # Phase 1: Collect from diabetes-specific sites
         for scraper in self.diabetes_scrapers:
             found = scraper.find_recipes(
@@ -195,7 +207,7 @@ class GDRecipeCollector:
                 require_nutrition=True
             )
             recipes.extend(found)
-        
+
         # Phase 2: Search general sites with filters
         for scraper in self.general_scrapers:
             found = scraper.search_recipes(
@@ -203,13 +215,13 @@ class GDRecipeCollector:
                 filters={"diet": "diabetic-friendly"}
             )
             recipes.extend(found)
-        
+
         # Phase 3: Validate all recipes
         validated = []
         for recipe in recipes:
             if self.validate_recipe(recipe):
                 validated.append(recipe)
-        
+
         return validated[:target_count]
 ```
 

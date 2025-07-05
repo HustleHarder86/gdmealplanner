@@ -220,9 +220,7 @@
             "amount": "1/4",
             "unit": "medium",
             "category": "Other",
-            "recipes": [
-              "Chicken Wrap"
-            ]
+            "recipes": ["Chicken Wrap"]
           },
           {
             "name": "berries",
@@ -243,18 +241,14 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Chicken Wrap"
-            ]
+            "recipes": ["Chicken Wrap"]
           },
           {
             "name": "celery",
             "amount": "1/4",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Portable Greek Yogurt with celery and almond butter"
-            ]
+            "recipes": ["Portable Greek Yogurt with celery and almond butter"]
           },
           {
             "name": "chia seeds",
@@ -289,9 +283,7 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Southwest Smoothie with flaxseed"
-            ]
+            "recipes": ["Southwest Smoothie with flaxseed"]
           },
           {
             "name": "garlic, minced",
@@ -320,9 +312,7 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "American Smoothie with hemp hearts"
-            ]
+            "recipes": ["American Smoothie with hemp hearts"]
           },
           {
             "name": "herbs or spices",
@@ -361,9 +351,7 @@
             "amount": "8",
             "unit": "oz",
             "category": "Other",
-            "recipes": [
-              "Stuffed Lentil Salad with mixed vegetables"
-            ]
+            "recipes": ["Stuffed Lentil Salad with mixed vegetables"]
           },
           {
             "name": "mixed salad",
@@ -545,18 +533,14 @@
             "amount": "1/4",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Sweet Greek Yogurt with whole grain crackers"
-            ]
+            "recipes": ["Sweet Greek Yogurt with whole grain crackers"]
           },
           {
             "name": "whole wheat tortilla",
             "amount": "1",
             "unit": "large",
             "category": "Other",
-            "recipes": [
-              "Chicken Wrap"
-            ]
+            "recipes": ["Chicken Wrap"]
           }
         ]
       },

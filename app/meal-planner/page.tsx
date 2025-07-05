@@ -85,7 +85,9 @@ export default function MealPlannerPage() {
           </button>
 
           <div className="text-center">
-            <h2 className="text-xl font-semibold text-gray-800">{mealPlan.theme}</h2>
+            <h2 className="text-xl font-semibold text-gray-800">
+              {mealPlan.theme}
+            </h2>
             <div className="flex items-center justify-center gap-2 mt-1">
               <p className="text-sm text-gray-600">Week {currentWeek} of 12</p>
               <div className="flex gap-1">
@@ -110,9 +112,7 @@ export default function MealPlannerPage() {
           </button>
         </div>
 
-        <p className="text-center text-gray-600 mb-4">
-          {mealPlan.description}
-        </p>
+        <p className="text-center text-gray-600 mb-4">{mealPlan.description}</p>
 
         {/* Week Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-neutral-50 rounded-lg">
@@ -145,7 +145,9 @@ export default function MealPlannerPage() {
 
       {/* Daily Nutrition Summary */}
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-4 mb-6">
-        <h3 className="text-lg font-semibold mb-3">Today&apos;s Nutrition Target</h3>
+        <h3 className="text-lg font-semibold mb-3">
+          Today&apos;s Nutrition Target
+        </h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="bg-white rounded-lg p-3">
             <div className="flex items-center gap-2 mb-1">
@@ -201,9 +203,11 @@ export default function MealPlannerPage() {
               </div>
             )}
             {selectedDay === day && (
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 
+              <div
+                className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 
                 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent 
-                border-t-[6px] border-t-green-500" />
+                border-t-[6px] border-t-green-500"
+              />
             )}
           </button>
         ))}
@@ -218,7 +222,10 @@ export default function MealPlannerPage() {
           if (!recipe) return null;
 
           return (
-            <div key={mealType} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-4">
+            <div
+              key={mealType}
+              className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-4"
+            >
               <h3 className="font-semibold text-lg mb-2 capitalize">
                 {mealType.replace(/([A-Z])/g, " $1").trim()}
               </h3>
@@ -265,24 +272,34 @@ export default function MealPlannerPage() {
           <div className="p-4 border-b flex items-center justify-between">
             <h3 className="text-xl font-semibold">Grocery List</h3>
             <div className="flex gap-2">
-              <button 
+              <button
                 onClick={() => window.print()}
                 className="flex items-center gap-2 px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors border border-gray-200"
                 title="Print grocery list"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"
+                  />
                 </svg>
                 Print
               </button>
             </div>
           </div>
-          
+
           <div className="divide-y">
             {mealPlan.groceryList.categories.map((category) => {
               // Group items within each category
               const groupedItems = groupGroceryItems(category.items);
-              
+
               return (
                 <div key={category.name}>
                   <div className="px-4 py-2 bg-gray-50 flex items-center gap-2">
@@ -304,9 +321,15 @@ export default function MealPlannerPage() {
                   <div className="px-4 py-2">
                     <ul className="space-y-2">
                       {groupedItems.map((item, index) => {
-                        const displayUnit = pluralizeUnit(item.totalAmount, item.unit);
+                        const displayUnit = pluralizeUnit(
+                          item.totalAmount,
+                          item.unit,
+                        );
                         return (
-                          <li key={index} className="border-b border-gray-100 last:border-0 pb-2 last:pb-0">
+                          <li
+                            key={index}
+                            className="border-b border-gray-100 last:border-0 pb-2 last:pb-0"
+                          >
                             <div className="flex items-start gap-3">
                               <input
                                 type="checkbox"
@@ -319,13 +342,16 @@ export default function MealPlannerPage() {
                                   className="text-sm cursor-pointer block hover:bg-gray-50 p-2 -m-2 rounded"
                                 >
                                   <span className="font-medium">
-                                    {item.totalAmount} {displayUnit} {item.displayName}
+                                    {item.totalAmount} {displayUnit}{" "}
+                                    {item.displayName}
                                   </span>
                                 </label>
                                 {item.recipes.length > 0 && (
                                   <div className="text-xs text-gray-500 mt-1 ml-2">
-                                    Used in: {item.recipes.slice(0, 2).join(", ")}
-                                    {item.recipes.length > 2 && ` +${item.recipes.length - 2} more`}
+                                    Used in:{" "}
+                                    {item.recipes.slice(0, 2).join(", ")}
+                                    {item.recipes.length > 2 &&
+                                      ` +${item.recipes.length - 2} more`}
                                   </div>
                                 )}
                               </div>
@@ -356,37 +382,79 @@ export default function MealPlannerPage() {
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-2 md:hidden">
         <div className="flex justify-around">
           <button className="flex flex-col items-center p-2 text-gray-600">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+              />
             </svg>
             <span className="text-xs mt-1">Week</span>
           </button>
-          <button 
+          <button
             onClick={() => {
-              const today = new Date().toLocaleDateString('en-US', { weekday: 'long' }).toLowerCase();
+              const today = new Date()
+                .toLocaleDateString("en-US", { weekday: "long" })
+                .toLowerCase();
               if (Object.keys(mealPlan.meals).includes(today)) {
                 setSelectedDay(today);
               }
             }}
             className="flex flex-col items-center p-2 text-green-600"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
             </svg>
             <span className="text-xs mt-1">Today</span>
           </button>
-          <button 
+          <button
             onClick={() => setShowGroceryList(!showGroceryList)}
             className="flex flex-col items-center p-2 text-gray-600"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+              />
             </svg>
             <span className="text-xs mt-1">Grocery</span>
           </button>
           <button className="flex flex-col items-center p-2 text-gray-600">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"
+              />
             </svg>
             <span className="text-xs mt-1">Print</span>
           </button>

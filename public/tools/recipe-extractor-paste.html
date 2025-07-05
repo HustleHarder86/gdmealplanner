@@ -1,341 +1,371 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipe Extractor - Paste URL - GD Meal Planner</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #f5f5f5;
-            line-height: 1.6;
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #f5f5f5;
+        line-height: 1.6;
+      }
+
+      .container {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #2c5530;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 30px;
+        font-style: italic;
+      }
+
+      .input-section {
+        background: #e3f2fd;
+        border: 2px solid #2196f3;
+        border-radius: 8px;
+        padding: 25px;
+        margin: 20px 0;
+      }
+
+      .url-input {
+        width: 100%;
+        padding: 15px;
+        border: 2px solid #ddd;
+        border-radius: 6px;
+        font-size: 16px;
+        margin: 10px 0;
+        box-sizing: border-box;
+      }
+
+      .url-input:focus {
+        outline: none;
+        border-color: #2196f3;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        transition: all 0.3s;
+        margin: 10px 5px;
+        font-size: 16px;
+      }
+
+      .btn-primary {
+        background: #28a745;
+        color: white;
+      }
+
+      .btn-primary:hover:not(:disabled) {
+        background: #218838;
+      }
+
+      .btn-primary:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+      }
+
+      .btn-secondary {
+        background: #007bff;
+        color: white;
+      }
+
+      .btn-secondary:hover {
+        background: #0056b3;
+      }
+
+      .instructions {
+        background: #fff3cd;
+        border: 1px solid #ffeaa7;
+        border-radius: 6px;
+        padding: 20px;
+        margin: 20px 0;
+      }
+
+      .step {
+        margin: 10px 0;
+        padding: 15px;
+        background: white;
+        border-radius: 6px;
+        border-left: 4px solid #ffc107;
+      }
+
+      .code-output {
+        background: #f8f9fa;
+        border: 2px solid #dee2e6;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 20px 0;
+        display: none;
+      }
+
+      .code-block {
+        background: #263238;
+        color: #aed581;
+        border-radius: 6px;
+        padding: 15px;
+        font-family: "Consolas", "Monaco", monospace;
+        font-size: 14px;
+        overflow-x: auto;
+        margin: 15px 0;
+        position: relative;
+      }
+
+      .copy-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #4caf50;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 12px;
+      }
+
+      .copy-btn:hover {
+        background: #45a049;
+      }
+
+      .error-msg {
+        background: #ffebee;
+        border: 1px solid #f44336;
+        color: #c62828;
+        padding: 15px;
+        border-radius: 6px;
+        margin: 15px 0;
+        display: none;
+      }
+
+      .success-msg {
+        background: #e8f5e8;
+        border: 1px solid #4caf50;
+        color: #2e7d2e;
+        padding: 15px;
+        border-radius: 6px;
+        margin: 15px 0;
+        display: none;
+      }
+
+      .example-urls {
+        background: #f0f4c3;
+        border: 1px solid #cddc39;
+        border-radius: 6px;
+        padding: 15px;
+        margin: 20px 0;
+      }
+
+      .example-url {
+        color: #1976d2;
+        cursor: pointer;
+        text-decoration: none;
+        display: block;
+        margin: 5px 0;
+      }
+
+      .example-url:hover {
+        text-decoration: underline;
+      }
+
+      .loading {
+        display: none;
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .spinner {
+        border: 3px solid #f3f3f3;
+        border-top: 3px solid #2196f3;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        margin: 0 auto;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
         }
-        
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        100% {
+          transform: rotate(360deg);
         }
-        
-        h1 {
-            color: #2c5530;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        
-        .subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 30px;
-            font-style: italic;
-        }
-        
-        .input-section {
-            background: #e3f2fd;
-            border: 2px solid #2196f3;
-            border-radius: 8px;
-            padding: 25px;
-            margin: 20px 0;
-        }
-        
-        .url-input {
-            width: 100%;
-            padding: 15px;
-            border: 2px solid #ddd;
-            border-radius: 6px;
-            font-size: 16px;
-            margin: 10px 0;
-            box-sizing: border-box;
-        }
-        
-        .url-input:focus {
-            outline: none;
-            border-color: #2196f3;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-            transition: all 0.3s;
-            margin: 10px 5px;
-            font-size: 16px;
-        }
-        
-        .btn-primary {
-            background: #28a745;
-            color: white;
-        }
-        
-        .btn-primary:hover:not(:disabled) {
-            background: #218838;
-        }
-        
-        .btn-primary:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-        }
-        
-        .btn-secondary {
-            background: #007bff;
-            color: white;
-        }
-        
-        .btn-secondary:hover {
-            background: #0056b3;
-        }
-        
-        .instructions {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            border-radius: 6px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        
-        .step {
-            margin: 10px 0;
-            padding: 15px;
-            background: white;
-            border-radius: 6px;
-            border-left: 4px solid #ffc107;
-        }
-        
-        .code-output {
-            background: #f8f9fa;
-            border: 2px solid #dee2e6;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-            display: none;
-        }
-        
-        .code-block {
-            background: #263238;
-            color: #aed581;
-            border-radius: 6px;
-            padding: 15px;
-            font-family: 'Consolas', 'Monaco', monospace;
-            font-size: 14px;
-            overflow-x: auto;
-            margin: 15px 0;
-            position: relative;
-        }
-        
-        .copy-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #4caf50;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 12px;
-        }
-        
-        .copy-btn:hover {
-            background: #45a049;
-        }
-        
-        .error-msg {
-            background: #ffebee;
-            border: 1px solid #f44336;
-            color: #c62828;
-            padding: 15px;
-            border-radius: 6px;
-            margin: 15px 0;
-            display: none;
-        }
-        
-        .success-msg {
-            background: #e8f5e8;
-            border: 1px solid #4caf50;
-            color: #2e7d2e;
-            padding: 15px;
-            border-radius: 6px;
-            margin: 15px 0;
-            display: none;
-        }
-        
-        .example-urls {
-            background: #f0f4c3;
-            border: 1px solid #cddc39;
-            border-radius: 6px;
-            padding: 15px;
-            margin: 20px 0;
-        }
-        
-        .example-url {
-            color: #1976d2;
-            cursor: pointer;
-            text-decoration: none;
-            display: block;
-            margin: 5px 0;
-        }
-        
-        .example-url:hover {
-            text-decoration: underline;
-        }
-        
-        .loading {
-            display: none;
-            text-align: center;
-            margin: 20px 0;
-        }
-        
-        .spinner {
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid #2196f3;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .warning {
-            background: #fffde7;
-            border: 1px solid #fbc02d;
-            border-radius: 6px;
-            padding: 15px;
-            margin: 20px 0;
-        }
+      }
+
+      .warning {
+        background: #fffde7;
+        border: 1px solid #fbc02d;
+        border-radius: 6px;
+        padding: 15px;
+        margin: 20px 0;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>🔗 Recipe Extractor - Paste URL</h1>
-        <p class="subtitle">Generate extraction code for any recipe URL</p>
-        
-        <div class="input-section">
-            <h3>📝 Enter Recipe URL</h3>
-            <input type="url" 
-                   id="recipe-url" 
-                   class="url-input" 
-                   placeholder="https://www.allrecipes.com/recipe/..." 
-                   value="">
-            <button id="generate-btn" class="btn btn-primary" onclick="generateCode()">
-                🔧 Generate Extraction Code
-            </button>
+      <h1>🔗 Recipe Extractor - Paste URL</h1>
+      <p class="subtitle">Generate extraction code for any recipe URL</p>
+
+      <div class="input-section">
+        <h3>📝 Enter Recipe URL</h3>
+        <input
+          type="url"
+          id="recipe-url"
+          class="url-input"
+          placeholder="https://www.allrecipes.com/recipe/..."
+          value=""
+        />
+        <button
+          id="generate-btn"
+          class="btn btn-primary"
+          onclick="generateCode()"
+        >
+          🔧 Generate Extraction Code
+        </button>
+      </div>
+
+      <div class="example-urls">
+        <strong>🔗 Quick Test URLs:</strong>
+        <a
+          class="example-url"
+          onclick="setUrl('https://www.allrecipes.com/recipe/50658/thai-peanut-chicken/')"
+        >
+          AllRecipes - Thai Peanut Chicken
+        </a>
+        <a
+          class="example-url"
+          onclick="setUrl('https://www.food.com/recipe/baked-chicken-breasts-5586')"
+        >
+          Food.com - Baked Chicken Breasts
+        </a>
+        <a
+          class="example-url"
+          onclick="setUrl('https://www.bbcgoodfood.com/recipes/chicken-tikka-masala')"
+        >
+          BBC Good Food - Chicken Tikka Masala
+        </a>
+      </div>
+
+      <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p>Generating extraction code...</p>
+      </div>
+
+      <div id="error-msg" class="error-msg"></div>
+      <div id="success-msg" class="success-msg"></div>
+
+      <div id="code-output" class="code-output">
+        <h3>📋 Your Extraction Code</h3>
+        <p>Follow these steps to extract the recipe:</p>
+
+        <div class="instructions">
+          <div class="step">
+            <strong>Step 1:</strong> Open the recipe URL in your browser:
+            <br /><a
+              id="recipe-link"
+              href="#"
+              target="_blank"
+              style="word-break: break-all"
+            ></a>
+          </div>
+          <div class="step">
+            <strong>Step 2:</strong> Press <kbd>F12</kbd> to open Developer
+            Tools
+          </div>
+          <div class="step">
+            <strong>Step 3:</strong> Click on the <strong>Console</strong> tab
+          </div>
+          <div class="step">
+            <strong>Step 4:</strong> Copy and paste this code:
+          </div>
         </div>
-        
-        <div class="example-urls">
-            <strong>🔗 Quick Test URLs:</strong>
-            <a class="example-url" onclick="setUrl('https://www.allrecipes.com/recipe/50658/thai-peanut-chicken/')">
-                AllRecipes - Thai Peanut Chicken
-            </a>
-            <a class="example-url" onclick="setUrl('https://www.food.com/recipe/baked-chicken-breasts-5586')">
-                Food.com - Baked Chicken Breasts
-            </a>
-            <a class="example-url" onclick="setUrl('https://www.bbcgoodfood.com/recipes/chicken-tikka-masala')">
-                BBC Good Food - Chicken Tikka Masala
-            </a>
+
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode()">📋 Copy</button>
+          <pre id="extraction-code"></pre>
         </div>
-        
-        <div id="loading" class="loading">
-            <div class="spinner"></div>
-            <p>Generating extraction code...</p>
+
+        <div
+          class="instructions"
+          style="background: #e8f5e8; border-color: #4caf50"
+        >
+          <strong>✅ What happens next:</strong>
+          <ul style="margin: 10px 0">
+            <li>The code will extract recipe data from the page</li>
+            <li>You'll see nutrition info (carbs, protein, fiber)</li>
+            <li>GD validation will show if it meets requirements</li>
+            <li>Option to view detailed recipe information</li>
+          </ul>
         </div>
-        
-        <div id="error-msg" class="error-msg"></div>
-        <div id="success-msg" class="success-msg"></div>
-        
-        <div id="code-output" class="code-output">
-            <h3>📋 Your Extraction Code</h3>
-            <p>Follow these steps to extract the recipe:</p>
-            
-            <div class="instructions">
-                <div class="step">
-                    <strong>Step 1:</strong> Open the recipe URL in your browser:
-                    <br><a id="recipe-link" href="#" target="_blank" style="word-break: break-all;"></a>
-                </div>
-                <div class="step">
-                    <strong>Step 2:</strong> Press <kbd>F12</kbd> to open Developer Tools
-                </div>
-                <div class="step">
-                    <strong>Step 3:</strong> Click on the <strong>Console</strong> tab
-                </div>
-                <div class="step">
-                    <strong>Step 4:</strong> Copy and paste this code:
-                </div>
-            </div>
-            
-            <div class="code-block">
-                <button class="copy-btn" onclick="copyCode()">📋 Copy</button>
-                <pre id="extraction-code"></pre>
-            </div>
-            
-            <div class="instructions" style="background: #e8f5e8; border-color: #4caf50;">
-                <strong>✅ What happens next:</strong>
-                <ul style="margin: 10px 0;">
-                    <li>The code will extract recipe data from the page</li>
-                    <li>You'll see nutrition info (carbs, protein, fiber)</li>
-                    <li>GD validation will show if it meets requirements</li>
-                    <li>Option to view detailed recipe information</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="warning">
-            <strong>⚠️ Why this approach?</strong> Recipe sites load data with JavaScript after the page loads. 
-            Direct server extraction can't see this dynamic content. This method runs in your browser where 
-            all the data is already loaded and accessible.
-        </div>
+      </div>
+
+      <div class="warning">
+        <strong>⚠️ Why this approach?</strong> Recipe sites load data with
+        JavaScript after the page loads. Direct server extraction can't see this
+        dynamic content. This method runs in your browser where all the data is
+        already loaded and accessible.
+      </div>
     </div>
 
     <script>
-        function setUrl(url) {
-            document.getElementById('recipe-url').value = url;
+      function setUrl(url) {
+        document.getElementById("recipe-url").value = url;
+      }
+
+      function generateCode() {
+        const url = document.getElementById("recipe-url").value.trim();
+        const errorMsg = document.getElementById("error-msg");
+        const successMsg = document.getElementById("success-msg");
+        const codeOutput = document.getElementById("code-output");
+        const loading = document.getElementById("loading");
+
+        // Reset messages
+        errorMsg.style.display = "none";
+        successMsg.style.display = "none";
+        codeOutput.style.display = "none";
+
+        // Validate URL
+        if (!url) {
+          errorMsg.textContent = "❌ Please enter a recipe URL";
+          errorMsg.style.display = "block";
+          return;
         }
-        
-        function generateCode() {
-            const url = document.getElementById('recipe-url').value.trim();
-            const errorMsg = document.getElementById('error-msg');
-            const successMsg = document.getElementById('success-msg');
-            const codeOutput = document.getElementById('code-output');
-            const loading = document.getElementById('loading');
-            
-            // Reset messages
-            errorMsg.style.display = 'none';
-            successMsg.style.display = 'none';
-            codeOutput.style.display = 'none';
-            
-            // Validate URL
-            if (!url) {
-                errorMsg.textContent = '❌ Please enter a recipe URL';
-                errorMsg.style.display = 'block';
-                return;
-            }
-            
-            try {
-                new URL(url);
-            } catch (e) {
-                errorMsg.textContent = '❌ Please enter a valid URL';
-                errorMsg.style.display = 'block';
-                return;
-            }
-            
-            // Show loading
-            loading.style.display = 'block';
-            
-            // Generate the extraction code
-            setTimeout(() => {
-                const extractionCode = `// Auto-generated Recipe Extractor for: ${url}
+
+        try {
+          new URL(url);
+        } catch (e) {
+          errorMsg.textContent = "❌ Please enter a valid URL";
+          errorMsg.style.display = "block";
+          return;
+        }
+
+        // Show loading
+        loading.style.display = "block";
+
+        // Generate the extraction code
+        setTimeout(() => {
+          const extractionCode = `// Auto-generated Recipe Extractor for: ${url}
 // Generated at: ${new Date().toLocaleString()}
 
 (function() {
@@ -497,50 +527,56 @@
         alert('No recipe found. Make sure you\\'re on the recipe page and try scrolling to the recipe section.');
     }
 })();`;
-                
-                // Hide loading
-                loading.style.display = 'none';
-                
-                // Show success message
-                successMsg.textContent = '✅ Extraction code generated successfully!';
-                successMsg.style.display = 'block';
-                
-                // Show code output
-                document.getElementById('recipe-link').href = url;
-                document.getElementById('recipe-link').textContent = url;
-                document.getElementById('extraction-code').textContent = extractionCode;
-                codeOutput.style.display = 'block';
-                
-                // Scroll to code
-                codeOutput.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 500);
-        }
-        
-        function copyCode() {
-            const code = document.getElementById('extraction-code').textContent;
-            navigator.clipboard.writeText(code).then(() => {
-                const copyBtn = document.querySelector('.copy-btn');
-                const originalText = copyBtn.textContent;
-                copyBtn.textContent = '✅ Copied!';
-                setTimeout(() => {
-                    copyBtn.textContent = originalText;
-                }, 2000);
-            }).catch(err => {
-                alert('Please select and copy the code manually');
-            });
-        }
-        
-        // Enter key support
-        document.getElementById('recipe-url').addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                generateCode();
-            }
+
+          // Hide loading
+          loading.style.display = "none";
+
+          // Show success message
+          successMsg.textContent = "✅ Extraction code generated successfully!";
+          successMsg.style.display = "block";
+
+          // Show code output
+          document.getElementById("recipe-link").href = url;
+          document.getElementById("recipe-link").textContent = url;
+          document.getElementById("extraction-code").textContent =
+            extractionCode;
+          codeOutput.style.display = "block";
+
+          // Scroll to code
+          codeOutput.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 500);
+      }
+
+      function copyCode() {
+        const code = document.getElementById("extraction-code").textContent;
+        navigator.clipboard
+          .writeText(code)
+          .then(() => {
+            const copyBtn = document.querySelector(".copy-btn");
+            const originalText = copyBtn.textContent;
+            copyBtn.textContent = "✅ Copied!";
+            setTimeout(() => {
+              copyBtn.textContent = originalText;
+            }, 2000);
+          })
+          .catch((err) => {
+            alert("Please select and copy the code manually");
+          });
+      }
+
+      // Enter key support
+      document
+        .getElementById("recipe-url")
+        .addEventListener("keypress", (e) => {
+          if (e.key === "Enter") {
+            generateCode();
+          }
         });
-        
-        // Auto-focus
-        window.addEventListener('load', () => {
-            document.getElementById('recipe-url').focus();
-        });
+
+      // Auto-focus
+      window.addEventListener("load", () => {
+        document.getElementById("recipe-url").focus();
+      });
     </script>
-</body>
+  </body>
 </html>

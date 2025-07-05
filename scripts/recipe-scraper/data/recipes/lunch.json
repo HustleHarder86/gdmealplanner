@@ -234,12 +234,7 @@
       "saturatedFat": 3,
       "sodium": 550
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-protein",
-      "high-fiber",
-      "buddha bowl"
-    ]
+    "tags": ["30-minutes-or-less", "high-protein", "high-fiber", "buddha bowl"]
   },
   {
     "id": "salad-grilled-chicken-with-brown-rice-and-quinoa",
@@ -476,12 +471,7 @@
       "saturatedFat": 2,
       "sodium": 437
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-protein",
-      "high-fiber",
-      "salad"
-    ]
+    "tags": ["30-minutes-or-less", "high-protein", "high-fiber", "salad"]
   },
   {
     "id": "wrap-grilled-chicken-with-brown-rice-and-quinoa",
@@ -555,12 +545,7 @@
       "saturatedFat": 3,
       "sodium": 532
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "wrap"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "wrap"]
   },
   {
     "id": "wrap-grilled-chicken-with-chickpeas-and-mixed-vegetables",
@@ -717,12 +702,7 @@
       "saturatedFat": 3,
       "sodium": 593
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-protein",
-      "high-fiber",
-      "wrap"
-    ]
+    "tags": ["30-minutes-or-less", "high-protein", "high-fiber", "wrap"]
   },
   {
     "id": "soup-grilled-chicken-with-brown-rice-and-quinoa",
@@ -796,12 +776,7 @@
       "saturatedFat": 1,
       "sodium": 488
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "soup"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "soup"]
   },
   {
     "id": "soup-grilled-chicken-with-chickpeas-and-mixed-vegetables",
@@ -876,12 +851,7 @@
       "sodium": 522,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "soup"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "soup"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -957,11 +927,7 @@
       "saturatedFat": 4,
       "sodium": 202
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "soup"
-    ]
+    "tags": ["high-protein", "high-fiber", "soup"]
   },
   {
     "id": "sandwich-grilled-chicken-with-brown-rice-and-quinoa",
@@ -1035,12 +1001,7 @@
       "saturatedFat": 4,
       "sodium": 261
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "sandwich"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "sandwich"]
   },
   {
     "id": "sandwich-grilled-chicken-with-chickpeas-and-mixed-vegetables",
@@ -1197,12 +1158,7 @@
       "saturatedFat": 2,
       "sodium": 481
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-protein",
-      "high-fiber",
-      "sandwich"
-    ]
+    "tags": ["30-minutes-or-less", "high-protein", "high-fiber", "sandwich"]
   },
   {
     "id": "grain-bowl-grilled-chicken-with-brown-rice-and-quinoa",
@@ -1439,11 +1395,7 @@
       "saturatedFat": 2,
       "sodium": 581
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "grain bowl"
-    ]
+    "tags": ["high-protein", "high-fiber", "grain bowl"]
   },
   {
     "id": "lettuce-cups-grilled-chicken-with-brown-rice-and-quinoa",
@@ -1680,11 +1632,7 @@
       "saturatedFat": 3,
       "sodium": 512
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "lettuce cups"
-    ]
+    "tags": ["high-protein", "high-fiber", "lettuce cups"]
   },
   {
     "id": "stuffed-grilled-chicken-with-brown-rice-and-quinoa",
@@ -1839,12 +1787,7 @@
       "sodium": 526,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "stuffed"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "stuffed"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -1920,12 +1863,7 @@
       "saturatedFat": 4,
       "sodium": 337
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-protein",
-      "high-fiber",
-      "stuffed"
-    ]
+    "tags": ["30-minutes-or-less", "high-protein", "high-fiber", "stuffed"]
   },
   {
     "id": "skillet-grilled-chicken-with-brown-rice-and-quinoa",
@@ -1999,12 +1937,7 @@
       "saturatedFat": 3,
       "sodium": 326
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "skillet"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "skillet"]
   },
   {
     "id": "skillet-grilled-chicken-with-chickpeas-and-mixed-vegetables",
@@ -2161,12 +2094,7 @@
       "saturatedFat": 3,
       "sodium": 258
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-protein",
-      "high-fiber",
-      "skillet"
-    ]
+    "tags": ["30-minutes-or-less", "high-protein", "high-fiber", "skillet"]
   },
   {
     "id": "baked-grilled-chicken-with-brown-rice-and-quinoa",
@@ -2240,12 +2168,7 @@
       "saturatedFat": 2,
       "sodium": 495
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "baked"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "baked"]
   },
   {
     "id": "baked-grilled-chicken-with-chickpeas-and-mixed-vegetables",
@@ -2402,12 +2325,7 @@
       "saturatedFat": 4,
       "sodium": 568
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-protein",
-      "high-fiber",
-      "baked"
-    ]
+    "tags": ["30-minutes-or-less", "high-protein", "high-fiber", "baked"]
   },
   {
     "id": "buddha-bowl-turkey-sandwich-with-mixed-vegetables",
@@ -4698,12 +4616,7 @@
       "saturatedFat": 3,
       "sodium": 583
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-protein",
-      "high-fiber",
-      "salad"
-    ]
+    "tags": ["30-minutes-or-less", "high-protein", "high-fiber", "salad"]
   },
   {
     "id": "wrap-tuna-salad-with-chickpeas-and-mixed-vegetables",
@@ -4889,12 +4802,7 @@
       "saturatedFat": 1,
       "sodium": 384
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-protein",
-      "high-fiber",
-      "wrap"
-    ]
+    "tags": ["30-minutes-or-less", "high-protein", "high-fiber", "wrap"]
   },
   {
     "id": "soup-tuna-salad-with-chickpeas-and-mixed-vegetables",
@@ -5652,12 +5560,7 @@
       "saturatedFat": 2,
       "sodium": 292
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-protein",
-      "high-fiber",
-      "lettuce cups"
-    ]
+    "tags": ["30-minutes-or-less", "high-protein", "high-fiber", "lettuce cups"]
   },
   {
     "id": "stuffed-tuna-salad-with-chickpeas-and-mixed-vegetables",
@@ -6034,12 +5937,7 @@
       "saturatedFat": 3,
       "sodium": 484
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-protein",
-      "high-fiber",
-      "skillet"
-    ]
+    "tags": ["30-minutes-or-less", "high-protein", "high-fiber", "skillet"]
   },
   {
     "id": "baked-tuna-salad-with-chickpeas-and-mixed-vegetables",
@@ -6225,12 +6123,7 @@
       "saturatedFat": 3,
       "sodium": 283
     },
-    "tags": [
-      "30-minutes-or-less",
-      "high-protein",
-      "high-fiber",
-      "baked"
-    ]
+    "tags": ["30-minutes-or-less", "high-protein", "high-fiber", "baked"]
   },
   {
     "id": "salad-lentil-salad-with-mixed-vegetables",
@@ -6298,13 +6191,7 @@
       "saturatedFat": 3,
       "sodium": 322
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "salad"
-    ]
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "salad"]
   },
   {
     "id": "wrap-lentil-salad-with-leafy-greens",
@@ -6373,13 +6260,7 @@
       "sodium": 457,
       "carbChoices": 3
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "wrap"
-    ],
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "wrap"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -6449,13 +6330,7 @@
       "saturatedFat": 3,
       "sodium": 449
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "soup"
-    ]
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "soup"]
   },
   {
     "id": "soup-lentil-salad-with-leafy-greens",
@@ -6524,13 +6399,7 @@
       "sodium": 415,
       "carbChoices": 3
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "soup"
-    ],
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "soup"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -6600,13 +6469,7 @@
       "saturatedFat": 2,
       "sodium": 391
     },
-    "tags": [
-      "high-fiber",
-      "vegetarian",
-      "vegan",
-      "gluten-free",
-      "stuffed"
-    ]
+    "tags": ["high-fiber", "vegetarian", "vegan", "gluten-free", "stuffed"]
   },
   {
     "id": "buddha-bowl-chicken-wrap-with-quinoa",
@@ -7261,12 +7124,7 @@
       "saturatedFat": 3,
       "sodium": 588
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "salad"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "salad"]
   },
   {
     "id": "salad-chicken-wrap-with-mixed-vegetables",
@@ -7546,12 +7404,7 @@
       "saturatedFat": 2,
       "sodium": 437
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "salad"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "salad"]
   },
   {
     "id": "wrap-chicken-wrap-with-quinoa",
@@ -7829,12 +7682,7 @@
       "sodium": 522,
       "carbChoices": 3
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "wrap"
-    ],
+    "tags": ["high-protein", "high-fiber", "gluten-free", "wrap"],
     "adjustmentNote": "Increased grain/starch portion to meet 45g carb target",
     "medicallyCompliant": true
   },
@@ -7924,12 +7772,7 @@
       "saturatedFat": 2,
       "sodium": 580
     },
-    "tags": [
-      "high-protein",
-      "high-fiber",
-      "gluten-free",
-      "wrap"
-    ]
+    "tags": ["high-protein", "high-fiber", "gluten-free", "wrap"]
   },
   {
     "id": "wrap-chicken-wrap-with-lentils",

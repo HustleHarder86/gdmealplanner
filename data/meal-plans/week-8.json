@@ -382,9 +382,7 @@
             "amount": "1",
             "unit": "large",
             "category": "Other",
-            "recipes": [
-              "Turkey Buddha Bowl with quinoa"
-            ]
+            "recipes": ["Turkey Buddha Bowl with quinoa"]
           },
           {
             "name": "whole wheat wrap",
@@ -468,9 +466,7 @@
             "amount": "1/4",
             "unit": "cup",
             "category": "Produce",
-            "recipes": [
-              "Creamy Greek Yogurt with cherry tomatoes"
-            ]
+            "recipes": ["Creamy Greek Yogurt with cherry tomatoes"]
           },
           {
             "name": "cucumber",
@@ -500,9 +496,7 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Produce",
-            "recipes": [
-              "Nordic Smoothie with spinach"
-            ]
+            "recipes": ["Nordic Smoothie with spinach"]
           },
           {
             "name": "tomato",
@@ -654,9 +648,7 @@
             "amount": "8",
             "unit": "oz",
             "category": "Proteins",
-            "recipes": [
-              "Grilled White Fish with quinoa and wild rice"
-            ]
+            "recipes": ["Grilled White Fish with quinoa and wild rice"]
           }
         ]
       },

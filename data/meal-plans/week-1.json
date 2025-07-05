@@ -213,18 +213,14 @@
             "amount": "8",
             "unit": "oz",
             "category": "Other",
-            "recipes": [
-              "Soup Lentil Salad with leafy greens"
-            ]
+            "recipes": ["Soup Lentil Salad with leafy greens"]
           },
           {
             "name": "lentils",
             "amount": "1/2",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Turkey Buddha Bowl with lentils"
-            ]
+            "recipes": ["Turkey Buddha Bowl with lentils"]
           },
           {
             "name": "mayonnaise",
@@ -423,9 +419,7 @@
             "amount": "1/2",
             "unit": "cup",
             "category": "Other",
-            "recipes": [
-              "Soup Tuna Salad with whole wheat wrap and black beans"
-            ]
+            "recipes": ["Soup Tuna Salad with whole wheat wrap and black beans"]
           }
         ]
       },
@@ -500,9 +494,7 @@
             "amount": "1/4",
             "unit": "cup",
             "category": "Produce",
-            "recipes": [
-              "Make-ahead Greek Yogurt with cherry tomatoes"
-            ]
+            "recipes": ["Make-ahead Greek Yogurt with cherry tomatoes"]
           },
           {
             "name": "cucumber",
@@ -675,18 +667,14 @@
             "amount": "8",
             "unit": "oz",
             "category": "Proteins",
-            "recipes": [
-              "Slow Cooker Lean Beef with quinoa and wild rice"
-            ]
+            "recipes": ["Slow Cooker Lean Beef with quinoa and wild rice"]
           },
           {
             "name": "salmon fillet",
             "amount": "8",
             "unit": "oz",
             "category": "Proteins",
-            "recipes": [
-              "Slow Cooker Baked Salmon with quinoa and wild rice"
-            ]
+            "recipes": ["Slow Cooker Baked Salmon with quinoa and wild rice"]
           },
           {
             "name": "sliced turkey",
@@ -712,9 +700,7 @@
             "amount": "8",
             "unit": "oz",
             "category": "Proteins",
-            "recipes": [
-              "Roasted White Fish with quinoa and wild rice"
-            ]
+            "recipes": ["Roasted White Fish with quinoa and wild rice"]
           }
         ]
       },

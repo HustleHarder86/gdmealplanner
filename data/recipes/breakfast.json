@@ -75,12 +75,7 @@
       "saturatedFat": 3,
       "sodium": 420
     },
-    "tags": [
-      "high-protein",
-      "vegetarian",
-      "30-minutes-or-less",
-      "high-fiber"
-    ],
+    "tags": ["high-protein", "vegetarian", "30-minutes-or-less", "high-fiber"],
     "id": "veggie-egg-scramble-with-whole-wheat-toast",
     "recipe_source": "created",
     "source_note": "Original recipe created for gestational diabetes meal planning"
@@ -139,12 +134,7 @@
       "saturatedFat": 1,
       "sodium": 85
     },
-    "tags": [
-      "quick",
-      "no-cook",
-      "high-protein",
-      "vegetarian"
-    ],
+    "tags": ["quick", "no-cook", "high-protein", "vegetarian"],
     "id": "greek-yogurt-parfait-with-berries",
     "recipe_source": "created",
     "source_note": "Original recipe created for gestational diabetes meal planning"
@@ -216,12 +206,7 @@
       "saturatedFat": 4,
       "sodium": 380
     },
-    "tags": [
-      "quick",
-      "low-carb-option",
-      "high-protein",
-      "vegetarian"
-    ],
+    "tags": ["quick", "low-carb-option", "high-protein", "vegetarian"],
     "id": "spinach-and-cheese-omelet",
     "recipe_source": "created",
     "source_note": "Original recipe created for gestational diabetes meal planning"
@@ -290,12 +275,7 @@
       "saturatedFat": 1,
       "sodium": 95
     },
-    "tags": [
-      "make-ahead",
-      "no-cook",
-      "high-fiber",
-      "vegan"
-    ],
+    "tags": ["make-ahead", "no-cook", "high-fiber", "vegan"],
     "id": "overnight-oats-with-almonds",
     "recipe_source": "created",
     "source_note": "Original recipe created for gestational diabetes meal planning"
@@ -372,11 +352,7 @@
       "saturatedFat": 2,
       "sodium": 320
     },
-    "tags": [
-      "weekend-breakfast",
-      "vegetarian",
-      "high-fiber"
-    ],
+    "tags": ["weekend-breakfast", "vegetarian", "high-fiber"],
     "id": "whole-wheat-pancakes-with-berry-compote",
     "recipe_source": "created",
     "source_note": "Original recipe created for gestational diabetes meal planning"
@@ -447,12 +423,7 @@
       "saturatedFat": 3,
       "sodium": 340
     },
-    "tags": [
-      "quick",
-      "trendy",
-      "high-fiber",
-      "vegetarian"
-    ],
+    "tags": ["quick", "trendy", "high-fiber", "vegetarian"],
     "id": "avocado-toast-with-poached-egg",
     "recipe_source": "created",
     "source_note": "Original recipe created for gestational diabetes meal planning"
@@ -516,12 +487,7 @@
       "saturatedFat": 2,
       "sodium": 460
     },
-    "tags": [
-      "quick",
-      "no-cook",
-      "high-protein",
-      "vegetarian"
-    ],
+    "tags": ["quick", "no-cook", "high-protein", "vegetarian"],
     "id": "cottage-cheese-bowl-with-fruit",
     "recipe_source": "created",
     "source_note": "Original recipe created for gestational diabetes meal planning"
@@ -591,12 +557,7 @@
       "saturatedFat": 1,
       "sodium": 85
     },
-    "tags": [
-      "gluten-free",
-      "vegan",
-      "high-fiber",
-      "30-minutes-or-less"
-    ],
+    "tags": ["gluten-free", "vegan", "high-fiber", "30-minutes-or-less"],
     "id": "breakfast-quinoa-with-berries",
     "recipe_source": "created",
     "source_note": "Original recipe created for gestational diabetes meal planning"
@@ -667,11 +628,7 @@
       "saturatedFat": 4,
       "sodium": 580
     },
-    "tags": [
-      "portable",
-      "high-protein",
-      "meal-prep-friendly"
-    ],
+    "tags": ["portable", "high-protein", "meal-prep-friendly"],
     "id": "turkey-sausage-breakfast-wrap",
     "recipe_source": "created",
     "source_note": "Original recipe created for gestational diabetes meal planning"
@@ -752,12 +709,7 @@
       "saturatedFat": 3,
       "sodium": 340
     },
-    "tags": [
-      "make-ahead",
-      "meal-prep",
-      "portable",
-      "vegetarian"
-    ],
+    "tags": ["make-ahead", "meal-prep", "portable", "vegetarian"],
     "id": "baked-egg-cups-with-vegetables",
     "recipe_source": "created",
     "source_note": "Original recipe created for gestational diabetes meal planning"
@@ -821,12 +773,7 @@
       "saturatedFat": 5,
       "sodium": 45
     },
-    "tags": [
-      "make-ahead",
-      "no-cook",
-      "vegan",
-      "high-fiber"
-    ],
+    "tags": ["make-ahead", "no-cook", "vegan", "high-fiber"],
     "id": "chia-pudding-with-mango",
     "recipe_source": "created",
     "source_note": "Original recipe created for gestational diabetes meal planning"
@@ -896,12 +843,7 @@
       "saturatedFat": 1,
       "sodium": 25
     },
-    "tags": [
-      "quick",
-      "vegetarian",
-      "hidden-veggies",
-      "high-fiber"
-    ],
+    "tags": ["quick", "vegetarian", "hidden-veggies", "high-fiber"],
     "id": "zucchini-bread-oatmeal",
     "recipe_source": "created",
     "source_note": "Original recipe created for gestational diabetes meal planning"
@@ -970,12 +912,7 @@
       "saturatedFat": 3,
       "sodium": 680
     },
-    "tags": [
-      "quick",
-      "no-cook",
-      "high-protein",
-      "omega-3"
-    ],
+    "tags": ["quick", "no-cook", "high-protein", "omega-3"],
     "id": "smoked-salmon-bagel-thin",
     "recipe_source": "created",
     "source_note": "Original recipe created for gestational diabetes meal planning"
@@ -1051,12 +988,7 @@
       "saturatedFat": 2,
       "sodium": 280
     },
-    "tags": [
-      "weekend-breakfast",
-      "vegetarian",
-      "colorful",
-      "high-fiber"
-    ],
+    "tags": ["weekend-breakfast", "vegetarian", "colorful", "high-fiber"],
     "id": "sweet-potato-hash-with-eggs",
     "recipe_source": "created",
     "source_note": "Original recipe created for gestational diabetes meal planning"
@@ -1124,12 +1056,7 @@
       "saturatedFat": 1,
       "sodium": 180
     },
-    "tags": [
-      "quick",
-      "no-cook",
-      "hidden-veggies",
-      "high-protein"
-    ],
+    "tags": ["quick", "no-cook", "hidden-veggies", "high-protein"],
     "id": "protein-power-smoothie",
     "recipe_source": "created",
     "source_note": "Original recipe created for gestational diabetes meal planning"

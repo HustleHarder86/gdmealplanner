@@ -1,24 +1,30 @@
 # Recipe URL Verification Summary
 
 ## Overview
+
 This report summarizes the results of verifying recipe URLs from `/data/recipes/recipes.json` against diabetesfoodhub.org.
 
 ## Key Findings
 
 ### Statistics
+
 - **Total Recipes Checked**: 48
 - **Valid URLs (Real)**: 1 (2.1%)
 - **Invalid URLs (Fake/404)**: 47 (97.9%)
 - **Errors**: 0 (0.0%)
 
 ### The Only Valid Recipe
+
 Out of 48 recipes, only **1 recipe** has a valid URL on diabetesfoodhub.org:
+
 - **Title**: Mediterranean Chicken Pita
 - **URL**: https://diabetesfoodhub.org/recipes/mediterranean-chicken-pita
 - **Status**: 200 OK
 
 ### Invalid Recipes (Sample)
+
 The following recipes have fake/non-existent URLs (404 errors):
+
 1. Greek Yogurt Parfait with Berries
 2. Spinach and Cheese Omelet
 3. Whole Wheat Pancakes with Berry Compote
@@ -29,9 +35,10 @@ The following recipes have fake/non-existent URLs (404 errors):
 8. Turkey Sausage Breakfast Wrap
 9. Breakfast Quinoa with Berries
 10. Baked Egg Cups with Vegetables
-... and 37 more recipes
+    ... and 37 more recipes
 
 ## Visual Representation
+
 ```
 Recipe URL Status Distribution:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

@@ -1,6 +1,6 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { writeFile } from 'fs/promises';
-import { join } from 'path';
+import { NextRequest, NextResponse } from "next/server";
+import { writeFile } from "fs/promises";
+import { join } from "path";
 
 /**
  * Recipe Import API Endpoint
@@ -47,12 +47,12 @@ interface ImportRequest {
 export async function POST(request: NextRequest) {
   try {
     const data: ImportRequest = await request.json();
-    
+
     // Validate required fields
     if (!data.recipe || !data.recipe.title || !data.recipe.url) {
       return NextResponse.json(
-        { error: 'Missing required recipe data' },
-        { status: 400 }
+        { error: "Missing required recipe data" },
+        { status: 400 },
       );
     }
 
@@ -63,13 +63,13 @@ export async function POST(request: NextRequest) {
     if (!validation.valid) {
       return NextResponse.json(
         { error: `Recipe doesn't meet GD requirements: ${validation.reason}` },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
     // Generate unique ID for the recipe
     const recipeId = generateRecipeId(recipe.title);
-    
+
     // Format recipe for storage
     const formattedRecipe = {
       id: recipeId,
@@ -81,11 +81,11 @@ export async function POST(request: NextRequest) {
       cookTime: recipe.cookTime,
       totalTime: recipe.totalTime,
       servings: recipe.servings,
-      ingredients: recipe.ingredients.map(ing => ({
-        amount: ing.parsed.amount || '',
-        unit: ing.parsed.unit || '',
+      ingredients: recipe.ingredients.map((ing) => ({
+        amount: ing.parsed.amount || "",
+        unit: ing.parsed.unit || "",
         item: ing.parsed.item || ing.text,
-        originalText: ing.text
+        originalText: ing.text,
       })),
       instructions: recipe.instructions,
       nutrition: {
@@ -94,7 +94,7 @@ export async function POST(request: NextRequest) {
         protein: recipe.nutrition.protein,
         fiber: recipe.nutrition.fiber,
         fat: recipe.nutrition.fat,
-        sugar: recipe.nutrition.sugar || 0
+        sugar: recipe.nutrition.sugar || 0,
       },
       category: recipe.category,
       tags: generateTags(recipe),
@@ -102,7 +102,7 @@ export async function POST(request: NextRequest) {
       verified: true,
       imported_from_bookmarklet: true,
       imported_at: data.imported_at,
-      image: `/api/placeholder/${recipeId}` // Placeholder image
+      image: `/api/placeholder/${recipeId}`, // Placeholder image
     };
 
     // Save to appropriate category file
@@ -113,20 +113,19 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      message: 'Recipe imported successfully',
+      message: "Recipe imported successfully",
       recipe: {
         id: recipeId,
         title: recipe.title,
         category: recipe.category,
-        nutrition: recipe.nutrition
-      }
+        nutrition: recipe.nutrition,
+      },
     });
-
   } catch (error) {
-    console.error('Recipe import error:', error);
+    console.error("Recipe import error:", error);
     return NextResponse.json(
-      { error: 'Failed to import recipe' },
-      { status: 500 }
+      { error: "Failed to import recipe" },
+      { status: 500 },
     );
   }
 }
@@ -136,62 +135,72 @@ function validateGDNutrition(nutrition: any) {
   const protein = nutrition.protein || 0;
   const fiber = nutrition.fiber || 0;
 
-  if (carbs === 0) return { valid: false, reason: 'No carbohydrate data' };
-  if (carbs < 10 || carbs > 50) return { valid: false, reason: `Carbs out of range: ${carbs}g (need 10-50g)` };
-  if (protein < 5) return { valid: false, reason: `Low protein: ${protein}g (need 5g+)` };
-  if (fiber < 2) return { valid: false, reason: `Low fiber: ${fiber}g (need 2g+)` };
+  if (carbs === 0) return { valid: false, reason: "No carbohydrate data" };
+  if (carbs < 10 || carbs > 50)
+    return {
+      valid: false,
+      reason: `Carbs out of range: ${carbs}g (need 10-50g)`,
+    };
+  if (protein < 5)
+    return { valid: false, reason: `Low protein: ${protein}g (need 5g+)` };
+  if (fiber < 2)
+    return { valid: false, reason: `Low fiber: ${fiber}g (need 2g+)` };
 
-  return { valid: true, reason: 'Meets GD requirements' };
+  return { valid: true, reason: "Meets GD requirements" };
 }
 
 function generateRecipeId(title: string): string {
   const timestamp = Date.now();
   const slug = title
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '');
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
   return `${slug}-${timestamp}`;
 }
 
 function generateTags(recipe: ImportedRecipe): string[] {
-  const tags: string[] = ['imported', 'gd-friendly'];
-  
-  if (recipe.totalTime <= 20) tags.push('quick');
-  if (recipe.totalTime <= 30) tags.push('30-minutes-or-less');
-  if (recipe.nutrition.protein >= 20) tags.push('high-protein');
-  if (recipe.nutrition.fiber >= 5) tags.push('high-fiber');
-  if (recipe.ingredients.length <= 5) tags.push('simple');
-  
+  const tags: string[] = ["imported", "gd-friendly"];
+
+  if (recipe.totalTime <= 20) tags.push("quick");
+  if (recipe.totalTime <= 30) tags.push("30-minutes-or-less");
+  if (recipe.nutrition.protein >= 20) tags.push("high-protein");
+  if (recipe.nutrition.fiber >= 5) tags.push("high-fiber");
+  if (recipe.ingredients.length <= 5) tags.push("simple");
+
   return tags;
 }
 
 function determineDifficulty(recipe: ImportedRecipe): string {
   let score = 0;
-  
+
   if (recipe.ingredients.length > 10) score += 1;
   if (recipe.instructions.length > 8) score += 1;
   if (recipe.totalTime > 45) score += 1;
-  if (recipe.instructions.some(inst => 
-    inst.toLowerCase().includes('marinate') || 
-    inst.toLowerCase().includes('rest') ||
-    inst.toLowerCase().includes('chill')
-  )) score += 1;
+  if (
+    recipe.instructions.some(
+      (inst) =>
+        inst.toLowerCase().includes("marinate") ||
+        inst.toLowerCase().includes("rest") ||
+        inst.toLowerCase().includes("chill"),
+    )
+  )
+    score += 1;
 
-  if (score === 0) return 'easy';
-  if (score <= 2) return 'medium';
-  return 'hard';
+  if (score === 0) return "easy";
+  if (score <= 2) return "medium";
+  return "hard";
 }
 
 async function saveRecipeToFile(recipe: any, category: string) {
   try {
-    const dataDir = join(process.cwd(), 'data', 'recipes');
+    const dataDir = join(process.cwd(), "data", "recipes");
     const categoryFile = join(dataDir, `${category}.json`);
-    
+
     // Read existing recipes
     let existingRecipes = [];
     try {
-      const fs = require('fs');
-      const content = fs.readFileSync(categoryFile, 'utf8');
+      const fs = require("fs");
+      const content = fs.readFileSync(categoryFile, "utf8");
       existingRecipes = JSON.parse(content);
     } catch (error) {
       // File doesn't exist or is empty, start with empty array
@@ -203,10 +212,10 @@ async function saveRecipeToFile(recipe: any, category: string) {
 
     // Write back to file
     await writeFile(categoryFile, JSON.stringify(existingRecipes, null, 2));
-    
+
     console.log(`Recipe saved to ${categoryFile}`);
   } catch (error) {
-    console.error('Error saving recipe to file:', error);
+    console.error("Error saving recipe to file:", error);
     throw error;
   }
 }
@@ -219,23 +228,22 @@ async function logImport(recipe: any, sourceUrl: string) {
       title: recipe.title,
       category: recipe.category,
       sourceUrl: sourceUrl,
-      nutrition: recipe.nutrition
+      nutrition: recipe.nutrition,
     };
 
-    const logDir = join(process.cwd(), 'logs');
-    const logFile = join(logDir, 'recipe-imports.log');
-    
+    const logDir = join(process.cwd(), "logs");
+    const logFile = join(logDir, "recipe-imports.log");
+
     // Ensure logs directory exists
-    const fs = require('fs');
+    const fs = require("fs");
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
     }
 
-    const logLine = JSON.stringify(logEntry) + '\n';
-    await writeFile(logFile, logLine, { flag: 'a' });
-    
+    const logLine = JSON.stringify(logEntry) + "\n";
+    await writeFile(logFile, logLine, { flag: "a" });
   } catch (error) {
-    console.error('Error logging import:', error);
+    console.error("Error logging import:", error);
     // Don't throw - logging failure shouldn't prevent import
   }
 }
@@ -245,9 +253,9 @@ export async function OPTIONS(request: NextRequest) {
   return new NextResponse(null, {
     status: 200,
     headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
     },
   });
 }

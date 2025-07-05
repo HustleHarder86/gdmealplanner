@@ -126,12 +126,28 @@ export async function POST(request: NextRequest) {
 // GET endpoint to check import status
 export async function GET(request: NextRequest) {
   try {
+    console.log('GET /api/recipes/import-batch - Starting...');
+    
     // Initialize Firebase Admin
-    await initializeFirebaseAdmin();
+    try {
+      await initializeFirebaseAdmin();
+      console.log('Firebase Admin initialized successfully');
+    } catch (error) {
+      console.error('Firebase Admin initialization error:', error);
+      return NextResponse.json(
+        { 
+          error: "Firebase initialization failed", 
+          details: error instanceof Error ? error.message : "Unknown error",
+          hint: "Check FIREBASE_ADMIN_KEY environment variable"
+        },
+        { status: 500 }
+      );
+    }
 
     // Create scheduler just to get status
     const apiKey = process.env.SPOONACULAR_API_KEY;
     if (!apiKey) {
+      console.error('Spoonacular API key not found');
       return NextResponse.json(
         { error: "Spoonacular API key not configured" },
         { status: 500 }
@@ -139,7 +155,22 @@ export async function GET(request: NextRequest) {
     }
 
     const scheduler = new RecipeImportScheduler(apiKey);
-    const status = await scheduler.getCampaignStatus();
+    
+    let status;
+    try {
+      status = await scheduler.getCampaignStatus();
+      console.log('Campaign status retrieved successfully');
+    } catch (error) {
+      console.error('Error getting campaign status:', error);
+      return NextResponse.json(
+        { 
+          error: "Failed to get campaign status", 
+          details: error instanceof Error ? error.message : "Unknown error",
+          hint: "This usually indicates a Firebase connection issue"
+        },
+        { status: 500 }
+      );
+    }
 
     // Get available strategies
     const strategies = {

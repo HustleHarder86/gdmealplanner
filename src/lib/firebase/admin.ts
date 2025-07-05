@@ -6,29 +6,49 @@ import { getAuth } from 'firebase-admin/auth';
 const initializeAdmin = () => {
   if (getApps().length === 0) {
     // Check for service account credentials
-    const serviceAccountPath = process.env.FIREBASE_ADMIN_KEY;
+    const serviceAccountKey = process.env.FIREBASE_ADMIN_KEY;
     
-    if (serviceAccountPath) {
+    if (serviceAccountKey) {
       // Initialize with service account (production)
       try {
         // Parse the service account JSON from environment variable
-        const serviceAccount = JSON.parse(serviceAccountPath);
+        const serviceAccount = JSON.parse(serviceAccountKey);
         initializeApp({
           credential: cert(serviceAccount),
-          projectId: serviceAccount.project_id,
+          projectId: serviceAccount.project_id || process.env.projectId,
         });
+        console.log('Firebase Admin initialized with service account');
       } catch (error) {
-        console.error('Failed to load Firebase service account:', error);
-        throw new Error('Firebase Admin initialization failed');
+        console.error('Failed to parse Firebase service account:', error);
+        throw new Error('Firebase Admin initialization failed - invalid service account JSON');
       }
-    } else if (process.env.projectId) {
-      // Initialize with environment variables (for Vercel)
-      initializeApp({
-        projectId: process.env.projectId,
-        // Vercel can use default credentials or you can add more config here
-      });
     } else {
-      throw new Error('Firebase Admin credentials not configured');
+      // Try to construct service account from individual environment variables
+      const projectId = process.env.projectId;
+      const privateKey = process.env.FIREBASE_PRIVATE_KEY;
+      const clientEmail = process.env.FIREBASE_CLIENT_EMAIL;
+      
+      if (projectId && privateKey && clientEmail) {
+        try {
+          // Replace escaped newlines in private key
+          const formattedPrivateKey = privateKey.replace(/\\n/g, '\n');
+          
+          initializeApp({
+            credential: cert({
+              projectId: projectId,
+              privateKey: formattedPrivateKey,
+              clientEmail: clientEmail,
+            }),
+            projectId: projectId,
+          });
+          console.log('Firebase Admin initialized with individual credentials');
+        } catch (error) {
+          console.error('Failed to initialize with individual credentials:', error);
+          throw new Error('Firebase Admin initialization failed');
+        }
+      } else {
+        throw new Error('Firebase Admin credentials not configured. Please provide either FIREBASE_ADMIN_KEY or individual credentials (projectId, FIREBASE_PRIVATE_KEY, FIREBASE_CLIENT_EMAIL)');
+      }
     }
   }
 };

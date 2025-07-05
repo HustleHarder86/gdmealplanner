@@ -80,16 +80,30 @@ export async function POST(request: NextRequest) {
     // Get current library stats
     const status = await scheduler.getCampaignStatus();
 
+    // Extract category counts from the report
+    const categoryBreakdown: Record<string, number> = {};
+    report.categoryBreakdown.forEach(cat => {
+      categoryBreakdown[cat.category] = cat.count;
+    });
+
+    // Extract quality distribution
+    const qualityDistribution: Record<string, number> = {};
+    report.qualityMetrics.scoreDistribution.forEach(dist => {
+      qualityDistribution[dist.range] = dist.count;
+    });
+
     return NextResponse.json({
       success: true,
       import: {
         strategy: selectedStrategy.name,
         category,
-        imported: report.recipesImported,
-        processed: report.recipesProcessed,
-        rejected: report.recipesRejected,
-        apiCalls: report.apiCallsUsed,
+        imported: report.summary.recipesImported,
+        processed: report.summary.recipesProcessed,
+        rejected: report.summary.recipesRejected,
+        apiCalls: report.summary.apiCallsUsed,
         errors: report.errors,
+        categoryBreakdown,
+        qualityDistribution,
       },
       library: {
         total: status.totalRecipesImported,

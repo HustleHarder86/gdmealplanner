@@ -88,7 +88,7 @@ export class RecipeImportService {
         targetCount: 3,
       },
       {
-        category: "snacks",
+        category: "snack",
         params: {
           type: "snack",
           maxReadyTime: 15,
@@ -134,7 +134,7 @@ export class RecipeImportService {
           if (imported >= targetCount) break;
 
           // Validate for GD compliance
-          const mealType = category === "snacks" ? "snack" : category;
+          const mealType = category;
           const validation = validateRecipeForGD(
             spoonacularRecipe,
             mealType as keyof typeof GD_REQUIREMENTS,
@@ -156,13 +156,11 @@ export class RecipeImportService {
             );
 
             // Add validation info
-            recipe.medicallyCompliant = validation.isValid;
-            if (
-              validation.adjustmentSuggestions &&
-              validation.adjustmentSuggestions.length > 0
-            ) {
-              recipe.adjustmentNote =
-                validation.adjustmentSuggestions.join("; ");
+            recipe.gdValidation = {
+              isValid: validation.isValid,
+              score: 0, // We don't have a score from the old validator
+              details: validation,
+              warnings: validation.adjustmentSuggestions || []
             }
 
             results.success.push(recipe);
@@ -252,11 +250,14 @@ export class RecipeImportService {
       if (validation.isValid || gdScore >= 65) {
         const recipe = transformSpoonacularRecipe(
           spoonacularRecipe,
-          mealType.includes("snack")
-            ? "snacks"
-            : (mealType as Recipe["category"]),
+          mealType as Recipe["category"]
         );
-        recipe.medicallyCompliant = validation.isValid;
+        recipe.gdValidation = {
+          isValid: validation.isValid,
+          score: gdScore,
+          details: validation,
+          warnings: validation.adjustmentSuggestions || []
+        };
         validRecipes.push(recipe);
       }
     }
@@ -275,7 +276,7 @@ export class RecipeImportService {
       const spoonacularRecipe = await this.client.getRecipeInfo(recipeId);
 
       // Determine meal type for validation
-      const mealType = category === "snacks" ? "snack" : category;
+      const mealType = category;
 
       // Validate
       const validation = validateRecipeForGD(
@@ -295,14 +296,12 @@ export class RecipeImportService {
 
       // Transform
       const recipe = transformSpoonacularRecipe(spoonacularRecipe, category);
-      recipe.medicallyCompliant = validation.isValid;
-
-      if (
-        validation.adjustmentSuggestions &&
-        validation.adjustmentSuggestions.length > 0
-      ) {
-        recipe.adjustmentNote = validation.adjustmentSuggestions.join("; ");
-      }
+      recipe.gdValidation = {
+        isValid: validation.isValid,
+        score: gdScore,
+        details: validation,
+        warnings: validation.adjustmentSuggestions || []
+      };
 
       return { recipe };
     } catch (error) {

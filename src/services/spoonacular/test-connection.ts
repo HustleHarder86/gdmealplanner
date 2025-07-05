@@ -104,7 +104,7 @@ async function testConnection() {
       const sample = breakfastRecipes[0];
       console.log(`   - Title: ${sample.title}`);
       console.log(
-        `   - Carbs: ${sample.nutrition.carbs}g (${sample.nutrition.carbChoices} choices)`,
+        `   - Carbs: ${sample.nutrition.carbohydrates}g (${sample.carbChoices} choices)`,
       );
       console.log(`   - Protein: ${sample.nutrition.protein}g`);
       console.log(`   - Fiber: ${sample.nutrition.fiber}g`);

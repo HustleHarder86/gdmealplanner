@@ -10,7 +10,7 @@ export class RecipeModel {
    */
   static async save(recipe: Recipe): Promise<string> {
     try {
-      const docRef = adminDb.collection(RECIPES_COLLECTION).doc(recipe.id);
+      const docRef = adminDb().collection(RECIPES_COLLECTION).doc(recipe.id);
       
       await docRef.set({
         ...recipe,
@@ -30,10 +30,10 @@ export class RecipeModel {
    */
   static async batchSave(recipes: Recipe[]): Promise<void> {
     try {
-      const batch = adminDb.batch();
+      const batch = adminDb().batch();
       
       recipes.forEach(recipe => {
-        const docRef = adminDb.collection(RECIPES_COLLECTION).doc(recipe.id);
+        const docRef = adminDb().collection(RECIPES_COLLECTION).doc(recipe.id);
         batch.set(docRef, {
           ...recipe,
           updatedAt: FieldValue.serverTimestamp(),
@@ -53,7 +53,7 @@ export class RecipeModel {
    */
   static async getById(id: string): Promise<Recipe | null> {
     try {
-      const doc = await adminDb.collection(RECIPES_COLLECTION).doc(id).get();
+      const doc = await adminDb().collection(RECIPES_COLLECTION).doc(id).get();
       
       if (!doc.exists) {
         return null;
@@ -71,7 +71,7 @@ export class RecipeModel {
    */
   static async exists(id: string): Promise<boolean> {
     try {
-      const doc = await adminDb.collection(RECIPES_COLLECTION).doc(id).get();
+      const doc = await adminDb().collection(RECIPES_COLLECTION).doc(id).get();
       return doc.exists;
     } catch (error) {
       console.error('Error checking recipe existence:', error);
@@ -84,7 +84,7 @@ export class RecipeModel {
    */
   static async getByCategory(category: string, limit: number = 50): Promise<Recipe[]> {
     try {
-      const snapshot = await adminDb
+      const snapshot = await adminDb()
         .collection(RECIPES_COLLECTION)
         .where('category', '==', category)
         .limit(limit)
@@ -102,7 +102,7 @@ export class RecipeModel {
    */
   static async getAllIds(): Promise<string[]> {
     try {
-      const snapshot = await adminDb
+      const snapshot = await adminDb()
         .collection(RECIPES_COLLECTION)
         .select() // Only get document IDs, not full data
         .get();
@@ -119,7 +119,7 @@ export class RecipeModel {
    */
   static async getCount(): Promise<number> {
     try {
-      const snapshot = await adminDb
+      const snapshot = await adminDb()
         .collection(RECIPES_COLLECTION)
         .count()
         .get();
@@ -140,7 +140,7 @@ export class RecipeModel {
       const counts: Record<string, number> = {};
       
       for (const category of categories) {
-        const snapshot = await adminDb
+        const snapshot = await adminDb()
           .collection(RECIPES_COLLECTION)
           .where('category', '==', category)
           .count()

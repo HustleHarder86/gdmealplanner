@@ -29,6 +29,9 @@ export function transformSpoonacularRecipe(
   // Generate tags
   const tags = generateTags(spoonacularRecipe, nutrition);
 
+  // Calculate carb choices (15g carbs = 1 choice)
+  const carbChoices = Math.round(nutrition.carbohydrates / 15);
+
   // Create the recipe object
   const recipe: Recipe = {
     id: `spoonacular-${spoonacularRecipe.id}`,
@@ -45,15 +48,13 @@ export function transformSpoonacularRecipe(
     ingredients,
     instructions,
     nutrition,
+    carbChoices,
     tags,
-    image: spoonacularRecipe.image,
-    originalImage: spoonacularRecipe.image,
+    imageUrl: spoonacularRecipe.image,
     source: spoonacularRecipe.sourceName || "Spoonacular",
-    url:
+    sourceUrl:
       spoonacularRecipe.sourceUrl ||
-      `https://spoonacular.com/recipes/${spoonacularRecipe.id}`,
-    scraped_at: new Date().toISOString(),
-    medicallyCompliant: true, // Will be validated separately
+      `https://spoonacular.com/recipes/${spoonacularRecipe.id}`
   };
 
   return recipe;
@@ -76,8 +77,7 @@ function transformNutrition(nutrients: SpoonacularNutrient[]): Nutrition {
 
   return {
     calories: getNutrientValue("calories"),
-    carbs,
-    carbChoices: calculateCarbChoices(carbs),
+    carbohydrates: carbs,
     fiber: getNutrientValue("fiber"),
     sugar: getNutrientValue("sugar"),
     protein: getNutrientValue("protein"),
@@ -100,9 +100,10 @@ function transformIngredients(
     const item = ing.nameClean || ing.originalName || ing.name;
 
     return {
-      amount: formatAmount(amount),
-      unit,
-      item: capitalizeWords(item),
+      name: capitalizeWords(item),
+      amount: ing.measures.metric.amount,
+      unit: unit,
+      original: ing.original || `${formatAmount(amount)} ${unit} ${item}`,
     };
   });
 }
@@ -169,7 +170,7 @@ function generateTags(
   // Nutrition-based tags
   if (nutrition.protein >= 20) tags.push("high-protein");
   if (nutrition.fiber >= 5) tags.push("high-fiber");
-  if (nutrition.carbs <= 20) tags.push("low-carb");
+  if (nutrition.carbohydrates <= 20) tags.push("low-carb");
 
   // Meal type tags from dishTypes
   if (recipe.dishTypes) {

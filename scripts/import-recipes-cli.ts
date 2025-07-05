@@ -92,7 +92,7 @@ async function importRecipesCLI() {
         };
         
         const report = await scheduler.manualImport(strategy, 5);
-        console.log(`✅ ${category.name}: Imported ${report.recipesImported}, Rejected ${report.recipesRejected}`);
+        console.log(`✅ ${category.name}: Imported ${report.summary.recipesImported}, Rejected ${report.summary.recipesRejected}`);
       }
     } else {
       // Import specific category
@@ -144,10 +144,10 @@ async function importRecipesCLI() {
       const report = await scheduler.manualImport(strategy, count);
 
       console.log("\n✅ Import Complete!");
-      console.log(`├─ Imported: ${report.recipesImported} recipes`);
-      console.log(`├─ Processed: ${report.recipesProcessed} recipes`);
-      console.log(`├─ Rejected: ${report.recipesRejected} recipes`);
-      console.log(`└─ API Calls: ${report.apiCallsUsed}`);
+      console.log(`├─ Imported: ${report.summary.recipesImported} recipes`);
+      console.log(`├─ Processed: ${report.summary.recipesProcessed} recipes`);
+      console.log(`├─ Rejected: ${report.summary.recipesRejected} recipes`);
+      console.log(`└─ API Calls: ${report.summary.apiCallsUsed}`);
 
       if (report.errors.length > 0) {
         console.log("\n⚠️  Errors:");

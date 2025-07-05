@@ -36,12 +36,25 @@ const initializeAdmin = () => {
 // Export the initialize function
 export const initializeFirebaseAdmin = initializeAdmin;
 
-// Initialize on module load
-initializeAdmin();
+// Lazy initialization of admin services
+let _adminDb: ReturnType<typeof getFirestore> | null = null;
+let _adminAuth: ReturnType<typeof getAuth> | null = null;
 
-// Export admin services
-export const adminDb = getFirestore();
-export const adminAuth = getAuth();
+export const adminDb = () => {
+  if (!_adminDb) {
+    initializeAdmin();
+    _adminDb = getFirestore();
+  }
+  return _adminDb;
+};
+
+export const adminAuth = () => {
+  if (!_adminAuth) {
+    initializeAdmin();
+    _adminAuth = getAuth();
+  }
+  return _adminAuth;
+};
 
 // Helper function to verify admin is initialized
 export const verifyAdminInitialized = () => {

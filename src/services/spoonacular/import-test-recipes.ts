@@ -34,14 +34,11 @@ async function importTestRecipes() {
     results.success.forEach((recipe, index) => {
       console.log(`\n${index + 1}. ${recipe.title} (${recipe.category})`);
       console.log(
-        `   - Carbs: ${recipe.nutrition.carbs}g (${recipe.nutrition.carbChoices} choices)`,
+        `   - Carbs: ${recipe.nutrition.carbohydrates}g (${recipe.carbChoices} choices)`,
       );
       console.log(`   - Protein: ${recipe.nutrition.protein}g`);
       console.log(`   - Fiber: ${recipe.nutrition.fiber}g`);
       console.log(`   - Time: ${recipe.totalTime} minutes`);
-      if (recipe.adjustmentNote) {
-        console.log(`   - Note: ${recipe.adjustmentNote}`);
-      }
     });
 
     // Show failed recipes

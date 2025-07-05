@@ -37,8 +37,8 @@ export async function GET(request: NextRequest) {
       
       recipeDetails = await client.getRecipeInfo(firstRecipeId, true);
       
-      // Validate for GD
-      gdValidation = validateRecipeForGD(recipeDetails);
+      // Validate for GD (using 'dinner' as default for testing)
+      gdValidation = validateRecipeForGD(recipeDetails, 'dinner');
     }
 
     // Return test results

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { RecipeImportScheduler } from "@/services/spoonacular/automated-import/scheduler";
-import { initializeFirebaseAdmin } from "@/lib/firebase/admin";
-import { BREAKFAST_STRATEGIES, LUNCH_STRATEGIES, DINNER_STRATEGIES, SNACK_STRATEGIES } from "@/services/spoonacular/automated-import/import-strategies";
+import { RecipeImportScheduler } from "@/src/services/spoonacular/automated-import/scheduler";
+import { initializeFirebaseAdmin } from "@/src/lib/firebase/admin";
+import { BREAKFAST_STRATEGIES, LUNCH_STRATEGIES, DINNER_STRATEGIES, SNACK_STRATEGIES } from "@/src/services/spoonacular/automated-import/import-strategies";
 
 export async function POST(request: NextRequest) {
   try {

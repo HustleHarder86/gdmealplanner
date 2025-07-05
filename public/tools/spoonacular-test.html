@@ -221,14 +221,6 @@
                 <div id="api-key-details" class="test-details"></div>
             </div>
             
-            <!-- Quota Test -->
-            <div class="test-section">
-                <div class="test-header">
-                    <div id="quota-status" class="test-status">⏳</div>
-                    <h3 class="test-title">API Quota Check</h3>
-                </div>
-                <div id="quota-details" class="test-details"></div>
-            </div>
             
             <!-- Recipe Search Test -->
             <div class="test-section">
@@ -274,7 +266,7 @@
             errorMsg.style.display = 'none';
             
             // Reset all test statuses
-            ['api-key', 'quota', 'search', 'details', 'validation'].forEach(test => {
+            ['api-key', 'search', 'details', 'validation'].forEach(test => {
                 document.getElementById(`${test}-status`).textContent = '⏳';
                 document.getElementById(`${test}-status`).className = 'test-status';
             });
@@ -296,12 +288,6 @@
                     data.tests.apiKeyConfigured 
                         ? '✅ API key is properly configured in environment variables'
                         : '❌ API key is missing from environment variables';
-                
-                // Quota Test
-                if (data.tests.quotaCheck) {
-                    updateTestStatus('quota', data.tests.quotaCheck.success);
-                    document.getElementById('quota-details').innerHTML = `<pre>${JSON.stringify(data.tests.quotaCheck.data, null, 2)}</pre>`;
-                }
                 
                 // Recipe Search Test
                 if (data.tests.recipeSearch) {

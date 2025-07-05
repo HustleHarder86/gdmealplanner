@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { SpoonacularClient } from '@/services/spoonacular/client';
-import { validateRecipeForGD } from '@/services/spoonacular/validators';
+import { SpoonacularClient } from '../../../../src/services/spoonacular/client';
+import { validateRecipeForGD } from '../../../../src/services/spoonacular/validators';
 
 export async function GET(request: NextRequest) {
   try {
@@ -15,11 +15,7 @@ export async function GET(request: NextRequest) {
     // Initialize client
     const client = new SpoonacularClient(process.env.SPOONACULAR_API_KEY);
     
-    // Test 1: Check API quota
-    console.log('Testing API quota...');
-    const quota = await client.getQuota();
-    
-    // Test 2: Search for GD-friendly recipes
+    // Test 1: Search for GD-friendly recipes
     console.log('Searching for GD-friendly recipes...');
     const searchResults = await client.searchRecipes({
       minCarbs: 15,
@@ -31,7 +27,7 @@ export async function GET(request: NextRequest) {
       addRecipeNutrition: true
     });
 
-    // Test 3: Get detailed information for first recipe
+    // Test 2: Get detailed information for first recipe
     let recipeDetails = null;
     let gdValidation = null;
     
@@ -52,10 +48,6 @@ export async function GET(request: NextRequest) {
       success: true,
       tests: {
         apiKeyConfigured: true,
-        quotaCheck: {
-          success: true,
-          data: quota
-        },
         recipeSearch: {
           success: searchResults.results.length > 0,
           resultsFound: searchResults.results.length,

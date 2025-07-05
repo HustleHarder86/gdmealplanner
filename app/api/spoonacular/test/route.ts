@@ -35,9 +35,7 @@ export async function GET(request: NextRequest) {
       const firstRecipeId = searchResults.results[0].id;
       console.log(`Getting details for recipe ${firstRecipeId}...`);
       
-      recipeDetails = await client.getRecipeInformation(firstRecipeId, {
-        includeNutrition: true
-      });
+      recipeDetails = await client.getRecipeInfo(firstRecipeId, true);
       
       // Validate for GD
       gdValidation = validateRecipeForGD(recipeDetails);

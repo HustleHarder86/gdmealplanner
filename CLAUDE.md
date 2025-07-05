@@ -6,6 +6,35 @@ This document provides guidance for Claude Code agents working on the Pregnancy 
 
 **Pregnancy Plate Planner** is a gestational diabetes meal planning application that helps expecting mothers manage their blood glucose through personalized meal plans, tracking, and education.
 
+## Deployment Platform
+
+**This project is deployed on Vercel**. All code must be compatible with Vercel's deployment environment:
+
+### Vercel-Specific Requirements:
+1. **Environment Variables**: 
+   - Use the exact names as configured in Vercel (e.g., `apiKey`, `authDomain`, `projectId`, not `NEXT_PUBLIC_FIREBASE_*`)
+   - Firebase Admin credentials should be stored as JSON string in `FIREBASE_ADMIN_KEY`
+   - Access via `process.env.variableName`
+
+2. **Import Paths**:
+   - Use proper import paths that resolve correctly in Vercel's build system
+   - The `@/` alias maps to the project root, so use `@/src/...` for src directory imports
+   - Avoid dynamic requires or imports that can't be statically analyzed
+
+3. **API Routes**:
+   - Use Next.js App Router API routes (`app/api/*/route.ts`)
+   - Export named functions: `export async function GET()`, `export async function POST()`
+   - Return `NextResponse` objects
+
+4. **Build Compatibility**:
+   - Ensure all TypeScript types are properly exported/imported
+   - No Node.js-specific APIs in client components
+   - Use `JSON.parse()` instead of `require()` for dynamic JSON loading
+
+5. **File Structure**:
+   - Follow Next.js 14 App Router conventions
+   - Server Components by default, use `"use client"` directive when needed
+
 ## Development Commands
 
 Always run these commands after making changes:
@@ -539,12 +568,45 @@ The MEDICAL_GUIDELINES.md file contains official Halton Healthcare guidelines th
 
 ## Deployment Notes
 
-- Use environment variables for all sensitive data
+### Vercel Deployment
+
+This project is deployed on Vercel. All agents must ensure their code is Vercel-compatible:
+
+**Pre-deployment Checklist:**
+1. Test the build locally: `npm run build`
+2. Ensure all imports resolve correctly
+3. Verify environment variable names match Vercel configuration
+4. Check that all TypeScript types are properly exported
+5. Test API routes with proper error handling
+
+**Deployment Process:**
+```bash
+git add .
+git commit -m "descriptive message"
+git push origin main
+# Vercel automatically deploys from main branch
+```
+
+**Environment Variables in Vercel:**
+- `apiKey`, `authDomain`, `projectId`, `storageBucket`, `messagingSenderId`, `appId` (Firebase client)
+- `FIREBASE_ADMIN_KEY` (Firebase admin - full JSON as string)
+- `SPOONACULAR_API_KEY` (Spoonacular API)
+- Any additional secrets should follow Vercel naming conventions
+
+**Common Vercel Issues to Avoid:**
+- Don't use `fs`, `path`, or other Node.js modules in client components
+- Don't use dynamic `require()` statements
+- Ensure all API routes return proper `NextResponse` objects
+- Use static imports for better tree-shaking
+- Keep API route files under 50MB (including dependencies)
+
+**Production Considerations:**
 - Enable Firebase App Check for production
-- Set up monitoring with Sentry
-- Configure proper CORS policies
+- Set up monitoring with Vercel Analytics
+- Configure proper CORS policies for API routes
 - Implement rate limiting on API routes
 - Set up automated backups for Firestore
+- Use Vercel Edge Functions for better performance where applicable
 
 ## Next Steps After Agent Deployment
 

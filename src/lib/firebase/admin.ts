@@ -11,7 +11,8 @@ const initializeAdmin = () => {
     if (serviceAccountPath) {
       // Initialize with service account (production)
       try {
-        const serviceAccount = require(serviceAccountPath);
+        // Parse the service account JSON from environment variable
+        const serviceAccount = JSON.parse(serviceAccountPath);
         initializeApp({
           credential: cert(serviceAccount),
           projectId: serviceAccount.project_id,
@@ -20,10 +21,10 @@ const initializeAdmin = () => {
         console.error('Failed to load Firebase service account:', error);
         throw new Error('Firebase Admin initialization failed');
       }
-    } else if (process.env.FIREBASE_PROJECT_ID) {
+    } else if (process.env.projectId) {
       // Initialize with environment variables (for Vercel)
       initializeApp({
-        projectId: process.env.FIREBASE_PROJECT_ID,
+        projectId: process.env.projectId,
         // Vercel can use default credentials or you can add more config here
       });
     } else {
@@ -31,6 +32,9 @@ const initializeAdmin = () => {
     }
   }
 };
+
+// Export the initialize function
+export const initializeFirebaseAdmin = initializeAdmin;
 
 // Initialize on module load
 initializeAdmin();

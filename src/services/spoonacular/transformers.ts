@@ -1,4 +1,4 @@
-import { Recipe, Ingredient, Nutrition } from "../../../lib/types";
+import { Recipe, Ingredient, Nutrition } from "../../types/recipe";
 import {
   SpoonacularRecipeInfo,
   SpoonacularNutrient,

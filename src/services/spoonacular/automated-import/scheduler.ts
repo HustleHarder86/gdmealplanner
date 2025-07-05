@@ -5,6 +5,9 @@ import { validateRecipeForImport, ValidationResult } from "./quality-validator";
 import { RecipeDeduplicator, DeduplicationResult } from "./deduplicator";
 import { RecipeCategorizer, CategorizationResult } from "./categorizer";
 import { generateDailyReport, ImportReport } from "./reporter";
+import { RecipeModel } from "../../../lib/firebase/models/recipe";
+import { transformSpoonacularRecipe } from "../transformers";
+import { Recipe } from "../../../types/recipe";
 
 /**
  * Daily Import Scheduler for Automated Recipe Import
@@ -175,13 +178,48 @@ export class RecipeImportScheduler {
    * Load existing recipes for deduplication
    */
   private async loadExistingRecipes(): Promise<void> {
-    // In a real implementation, this would load from Firebase
-    // For now, we'll simulate with an empty set
     console.log("Loading existing recipes for deduplication...");
     
-    // TODO: Implement Firebase integration
-    // const existingRecipes = await firebaseAdmin.getExistingRecipes();
-    // await this.deduplicator.loadExistingRecipes(existingRecipes);
+    try {
+      // Get all existing recipe IDs from Firebase
+      const existingRecipeIds = await RecipeModel.getAllIds();
+      
+      // Load a sample of recipes for content-based deduplication
+      // We'll load recipes from each category to ensure good coverage
+      const categories = ['breakfast', 'lunch', 'dinner', 'snack'];
+      
+      for (const category of categories) {
+        const categoryRecipes = await RecipeModel.getByCategory(category, 50);
+        
+        // Add to deduplicator
+        for (const recipe of categoryRecipes) {
+          // Convert our Recipe format back to a minimal format for deduplication
+          const minimalRecipe = {
+            id: parseInt(recipe.id.replace('sp-', '')),
+            title: recipe.title,
+            nutrition: {
+              nutrients: [
+                { name: 'Carbohydrates', amount: recipe.nutrition.carbohydrates, unit: 'g' },
+                { name: 'Protein', amount: recipe.nutrition.protein, unit: 'g' },
+                { name: 'Fat', amount: recipe.nutrition.fat, unit: 'g' }
+              ]
+            },
+            extendedIngredients: recipe.ingredients.map((ing: any) => ({
+              name: ing.name,
+              original: ing.original
+            }))
+          };
+          
+          this.deduplicator.addRecipe(recipe.id, minimalRecipe as any);
+        }
+      }
+      
+      console.log(`Loaded ${existingRecipeIds.length} existing recipes for deduplication`);
+      
+    } catch (error) {
+      console.error("Error loading existing recipes:", error);
+      // Continue with import even if loading fails
+    }
   }
 
   /**
@@ -364,19 +402,56 @@ export class RecipeImportScheduler {
   private async storeImportedRecipes(recipes: ImportedRecipe[]): Promise<void> {
     console.log(`Storing ${recipes.length} recipes in database...`);
 
-    // TODO: Implement Firebase integration
-    // for (const recipe of recipes) {
-    //   await firebaseAdmin.storeRecipe(recipe);
-    // }
+    try {
+      // Transform and batch save recipes
+      const recipesToSave: Recipe[] = [];
+      
+      for (const importedRecipe of recipes) {
+        // Transform Spoonacular recipe to our Recipe format
+        const recipe = transformSpoonacularRecipe(
+          importedRecipe.spoonacularData,
+          importedRecipe.categorization.primaryCategory as Recipe['category']
+        );
+        
+        // Enrich with import metadata and validation results
+        const enrichedRecipe: Recipe = {
+          ...recipe,
+          category: importedRecipe.categorization.primaryCategory as Recipe['category'],
+          tags: importedRecipe.categorization.tags,
+          gdValidation: {
+            isValid: importedRecipe.validation.isValid,
+            score: importedRecipe.validation.qualityScore.totalScore,
+            details: importedRecipe.validation.qualityScore,
+            warnings: importedRecipe.validation.rejectionReasons || []
+          },
+          importedFrom: 'spoonacular',
+          importedAt: importedRecipe.importMetadata.importDate,
+          verified: false,
+          popularity: 0,
+          userRatings: [],
+          timesViewed: 0,
+          timesAddedToPlan: 0
+        };
+        
+        recipesToSave.push(enrichedRecipe);
+      }
+      
+      // Batch save to Firebase
+      await RecipeModel.batchSave(recipesToSave);
+      
+      // Log summary
+      const categoryCounts = recipes.reduce((acc, recipe) => {
+        const category = recipe.categorization.primaryCategory;
+        acc[category] = (acc[category] || 0) + 1;
+        return acc;
+      }, {} as Record<string, number>);
 
-    // For now, just log
-    const categoryCounts = recipes.reduce((acc, recipe) => {
-      const category = recipe.categorization.primaryCategory;
-      acc[category] = (acc[category] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
-
-    console.log("Stored recipes by category:", categoryCounts);
+      console.log("✅ Successfully stored recipes by category:", categoryCounts);
+      
+    } catch (error) {
+      console.error("❌ Error storing recipes in Firebase:", error);
+      throw new Error(`Failed to store recipes: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    }
   }
 
   /**
@@ -409,19 +484,29 @@ export class RecipeImportScheduler {
     const daysSinceStart = Math.floor((today.getTime() - campaignStart.getTime()) / (1000 * 60 * 60 * 24));
     const currentDay = daysSinceStart + 1;
 
-    // TODO: Get actual stats from Firebase
+    // Get actual stats from Firebase
+    let totalRecipesImported = 0;
+    let categoryBreakdown = {
+      breakfast: 0,
+      lunch: 0,
+      dinner: 0,
+      snack: 0,
+    };
+    
+    try {
+      totalRecipesImported = await RecipeModel.getCount();
+      categoryBreakdown = await RecipeModel.getCountByCategory() as any;
+    } catch (error) {
+      console.error("Error getting campaign stats from Firebase:", error);
+    }
+
     return {
       currentDay,
       totalDays: this.config.totalDays,
       phase: getCurrentPhase(currentDay),
       nextImportTime: "02:00 AM",
-      totalRecipesImported: 0, // Would come from database
-      categoryBreakdown: {
-        breakfast: 0,
-        lunch: 0,
-        dinner: 0,
-        snack: 0,
-      },
+      totalRecipesImported,
+      categoryBreakdown,
     };
   }
 

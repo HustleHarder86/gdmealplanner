@@ -306,7 +306,7 @@ function generateRecommendations(
   const recommendations: string[] = [];
 
   // Check if daily quota was met
-  if (session.recipesImported < session.dayNumber <= 7 ? 100 : 100) {
+  if (session.recipesImported < 100) {
     recommendations.push(
       `Only ${session.recipesImported} recipes imported. Consider adjusting filters to be less restrictive.`
     );

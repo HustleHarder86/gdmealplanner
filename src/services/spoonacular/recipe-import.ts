@@ -1,4 +1,4 @@
-import { Recipe } from "../../../lib/types";
+import { Recipe } from "../../types/recipe";
 import { SpoonacularClient } from "./client";
 import { SpoonacularRecipeInfo, SpoonacularSearchParams } from "./types";
 import {

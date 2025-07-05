@@ -10,10 +10,16 @@
     "format": "prettier --write .",
     "typecheck": "tsc --noEmit",
     "test-import": "tsx src/services/spoonacular/automated-import/test-import.ts",
-    "import:daily": "tsx src/services/spoonacular/automated-import/run-daily-import.ts"
+    "import:daily": "tsx scripts/run-daily-import.ts",
+    "recipes:check": "tsx scripts/check-recipe-library.ts",
+    "recipes:import": "tsx scripts/run-daily-import.ts",
+    "recipes:test": "tsx scripts/test-import-small.ts",
+    "import": "tsx scripts/import-recipes-cli.ts"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.4",
+    "firebase": "^11.10.0",
+    "firebase-admin": "^13.4.0",
     "next": "14.2.21",
     "react": "^18",
     "react-dom": "^18"

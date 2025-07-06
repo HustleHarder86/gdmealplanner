@@ -128,4 +128,4 @@ export const verifyAdminInitialized = () => {
     throw new Error('Firebase Admin SDK not initialized');
   }
   return true;
-};
+};// Force redeploy: Sat Jul  5 20:18:17 EDT 2025

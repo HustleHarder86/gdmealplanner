@@ -12,30 +12,37 @@ const initializeAdmin = () => {
     if (serviceAccountKey) {
       // Initialize with service account (production)
       try {
-        // Handle case where Vercel might add extra quotes or have real newlines
-        let cleanedKey = serviceAccountKey.trim();
+        // Extract values directly to avoid JSON parsing issues
+        const extractField = (fieldName: string): string | null => {
+          const pattern = new RegExp(`"${fieldName}"\\s*:\\s*"([^"]*)"`, 's');
+          const match = serviceAccountKey.match(pattern);
+          return match ? match[1] : null;
+        };
         
-        // Remove outer quotes if they exist
-        if ((cleanedKey.startsWith('"') && cleanedKey.endsWith('"')) ||
-            (cleanedKey.startsWith("'") && cleanedKey.endsWith("'"))) {
-          cleanedKey = cleanedKey.slice(1, -1);
+        // Extract the private key
+        const privateKeyStart = serviceAccountKey.indexOf('-----BEGIN PRIVATE KEY-----');
+        const privateKeyEnd = serviceAccountKey.indexOf('-----END PRIVATE KEY-----');
+        
+        let privateKey = null;
+        if (privateKeyStart !== -1 && privateKeyEnd !== -1) {
+          privateKey = serviceAccountKey.substring(privateKeyStart, privateKeyEnd + 25);
         }
         
-        // Check if we have real newlines (not escaped)
-        if (cleanedKey.includes('\n') && !cleanedKey.includes('\\n')) {
-          // Escape the real newlines so JSON.parse can handle it
-          cleanedKey = cleanedKey.replace(/\n/g, '\\n').replace(/\r/g, '\\r');
-        } else {
-          // Handle escaped characters if present
-          cleanedKey = cleanedKey.replace(/\\n/g, '\n');
-          cleanedKey = cleanedKey.replace(/\\"/g, '"');
+        const projectId = extractField('project_id');
+        const clientEmail = extractField('client_email');
+        
+        if (!projectId || !clientEmail || !privateKey) {
+          throw new Error(`Firebase Admin initialization failed - missing required fields: projectId=${!!projectId}, clientEmail=${!!clientEmail}, privateKey=${!!privateKey}`);
         }
         
-        // Parse the service account JSON from environment variable
-        const serviceAccount = JSON.parse(cleanedKey);
+        const serviceAccount = {
+          projectId,
+          clientEmail,
+          privateKey,
+        };
         initializeApp({
           credential: cert(serviceAccount),
-          projectId: serviceAccount.project_id || process.env.projectId,
+          projectId: projectId,
         });
         console.log('Firebase Admin initialized with service account');
       } catch (error) {

@@ -238,9 +238,9 @@ export default function SetupVerificationPage() {
                           Click here to open Google Cloud Console
                         </a>
                       </li>
-                      <li>Click "Enable API" button</li>
+                      <li>Click &ldquo;Enable API&rdquo; button</li>
                       <li>Wait 2-3 minutes for propagation</li>
-                      <li>Click "Re-run Verification" above</li>
+                      <li>Click &ldquo;Re-run Verification&rdquo; above</li>
                     </ol>
                   </div>
                 )}
@@ -258,9 +258,9 @@ export default function SetupVerificationPage() {
                           Click here to enable Firebase Admin SDK API
                         </a>
                       </li>
-                      <li>Click "Enable API" button</li>
+                      <li>Click &ldquo;Enable API&rdquo; button</li>
                       <li>Wait 2-3 minutes for propagation</li>
-                      <li>Click "Re-run Verification" above</li>
+                      <li>Click &ldquo;Re-run Verification&rdquo; above</li>
                     </ol>
                   </div>
                 )}
@@ -268,7 +268,7 @@ export default function SetupVerificationPage() {
                   <div>
                     <h3 className="font-medium text-yellow-900 mb-2">Fix Project ID Configuration:</h3>
                     <p className="text-sm text-yellow-800">
-                      Remove quotes from the 'project_id' environment variable in Vercel settings.
+                      Remove quotes from the &apos;project_id&apos; environment variable in Vercel settings.
                     </p>
                   </div>
                 )}

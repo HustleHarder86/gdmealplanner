@@ -1,6 +1,7 @@
 import { initializeApp, getApps, cert } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
 import { getAuth } from 'firebase-admin/auth';
+import type { ServiceAccount } from 'firebase-admin/app';
 
 // Initialize Firebase Admin SDK
 const initializeAdmin = () => {
@@ -35,18 +36,11 @@ const initializeAdmin = () => {
           // Replace escaped newlines in private key
           const formattedPrivateKey = privateKey.replace(/\\n/g, '\n');
           
-          // Build the full service account object
+          // Build the service account object with required fields
           const serviceAccount = {
-            type: "service_account",
-            project_id: projectId,
-            private_key_id: privateKeyId || "not-provided",
-            private_key: formattedPrivateKey,
-            client_email: clientEmail,
-            client_id: clientId || "not-provided",
-            auth_uri: process.env.auth_uri || "https://accounts.google.com/o/oauth2/auth",
-            token_uri: process.env.token_uri || "https://oauth2.googleapis.com/token",
-            auth_provider_x509_cert_url: process.env.auth_provider_x509_cert_url || "https://www.googleapis.com/oauth2/v1/certs",
-            client_x509_cert_url: process.env.client_x509_cert_url || `https://www.googleapis.com/robot/v1/metadata/x509/${encodeURIComponent(clientEmail)}`
+            projectId: projectId,
+            privateKey: formattedPrivateKey,
+            clientEmail: clientEmail,
           };
           
           initializeApp({

@@ -1,87 +1,43 @@
-# Meal Planner UI Enhancement Plan
+# Task: Fix Firebase Private Key Decoding Error
 
-## Overview
+## Problem Analysis
+The Firebase Admin SDK is initializing but failing to connect to Firestore with error:
+- `error:1E08010C:DECODER routines::unsupported`
+- This occurs when trying to make any Firestore queries
+- Firebase Admin shows as "Initialized" but Firestore shows "Not connected"
 
-Enhance the meal planner interface with improved visual design, better information hierarchy, and enhanced user interactions while maintaining medical compliance and simplicity.
+## Root Cause
+The private key in Vercel environment variables is likely:
+1. Missing proper newline characters
+2. Has escaped newlines that aren't being properly converted
+3. Has extra quotes or formatting issues
 
-## Todo Items
+## Debugging Plan
 
-### Phase 1: Visual Enhancements
+### Phase 1: Diagnose Private Key Format
+- [ ] Create a diagnostic endpoint to check private key format
+- [ ] Log the first/last few characters of the private key (safely)
+- [ ] Check for common formatting issues
 
-- [x] Add gradient background to week header
-- [x] Enhance day navigation tabs with better visual indicators
-- [x] Add visual nutrition indicators to meal cards
-- [x] Create daily nutrition summary component
+### Phase 2: Fix Private Key Handling
+- [ ] Update the private key processing to handle multiple formats
+- [ ] Add better error handling for key parsing
+- [ ] Support both escaped and unescaped newlines
 
-### Phase 2: Component Improvements
+### Phase 3: Test and Verify
+- [ ] Test the updated initialization
+- [ ] Verify Firestore connection works
+- [ ] Confirm recipe import functionality
 
-- [x] Add recipe image placeholders to MealSlot cards (done in Phase 1)
-- [x] Implement carb progress bars for visual feedback (done in Phase 1)
-- [x] Add hover states and quick actions to meal cards
-- [x] Create nutrition badge components
+## Implementation Steps
 
-### Phase 3: Mobile Experience
+1. **Create Diagnostic Endpoint** - Check private key format without exposing it
+2. **Update Firebase Admin Initialization** - Handle various private key formats
+3. **Add Fallback Methods** - Try multiple parsing approaches
+4. **Test Connection** - Verify Firestore queries work
+5. **Deploy and Test** - Confirm import functionality works
 
-- [x] Improve touch targets for mobile users
-- [ ] Add swipe gestures for day navigation (skipped - requires additional library)
-- [x] Create mobile-optimized bottom navigation
-- [x] Enhance responsive grid layouts
-
-### Phase 4: User Features
-
-- [ ] Add meal timing visualization (deferred - needs more complex implementation)
-- [x] Implement enhanced grocery list with categories
-- [ ] Add print-specific styles (partial - added print button)
-- [ ] Create loading states for better UX (deferred - needs skeleton components)
-
-## Implementation Notes
-
-- Each change should be small and focused
-- Maintain existing functionality while enhancing UI
-- Use existing Tailwind classes and color palette
-- Ensure medical compliance is preserved
-- Test on mobile devices after each change
-
-## Review
-
-### Summary of Changes Made:
-
-1. **Visual Enhancements**
-   - Added gradient background to week header with progress dots indicator
-   - Enhanced day navigation tabs with scale transform, better colors, and arrow indicator
-   - Added visual nutrition indicators including progress bars and emoji badges
-   - Created daily nutrition summary dashboard with targets
-
-2. **Component Improvements**
-   - Added recipe image placeholders with meal type icons
-   - Implemented carb progress bars showing visual feedback
-   - Added hover states with quick action buttons (favorite, swap)
-   - Created reusable NutritionBadge component
-
-3. **Mobile Experience**
-   - Improved touch targets by increasing button padding on mobile
-   - Added fixed bottom navigation bar for mobile devices
-   - Enhanced responsive grid layouts with better breakpoints
-   - Added margin bottom to account for mobile navigation
-
-4. **User Features**
-   - Enhanced grocery list with category icons and visual hierarchy
-   - Added print button to grocery list
-   - Improved overall information design and readability
-
-### Technical Highlights:
-
-- All changes were kept simple and focused
-- Used existing Tailwind classes and color palette
-- Maintained medical compliance throughout
-- No breaking changes to existing functionality
-- Mobile-first responsive design approach
-
-### What Was Not Implemented:
-
-- Swipe gestures (requires additional library)
-- Full meal timing visualization (complex feature)
-- Complete print styles (needs dedicated CSS)
-- Loading skeleton states (already have basic loading)
-
-The UI is now more visually appealing, easier to navigate, and better optimized for mobile users while maintaining the medical compliance requirements.
+## Expected Outcome
+- Firebase Admin connects successfully to Firestore
+- Recipe import functionality works
+- Clear error messages if configuration issues persist

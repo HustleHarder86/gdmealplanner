@@ -33,8 +33,44 @@ const initializeAdmin = () => {
       
       if (projectId && privateKey && clientEmail) {
         try {
-          // Replace escaped newlines in private key
-          const formattedPrivateKey = privateKey.replace(/\\n/g, '\n');
+          // Handle various private key formats
+          let formattedPrivateKey = privateKey;
+          
+          // Remove surrounding quotes if present
+          if (formattedPrivateKey.startsWith('"') && formattedPrivateKey.endsWith('"')) {
+            formattedPrivateKey = formattedPrivateKey.slice(1, -1);
+          }
+          if (formattedPrivateKey.startsWith("'") && formattedPrivateKey.endsWith("'")) {
+            formattedPrivateKey = formattedPrivateKey.slice(1, -1);
+          }
+          
+          // Handle different newline formats
+          if (!formattedPrivateKey.includes('\n')) {
+            // No actual newlines, check for escaped ones
+            if (formattedPrivateKey.includes('\\n')) {
+              // Replace escaped newlines with actual newlines
+              formattedPrivateKey = formattedPrivateKey.replace(/\\n/g, '\n');
+            } else if (formattedPrivateKey.includes('\\\\n')) {
+              // Handle double-escaped newlines
+              formattedPrivateKey = formattedPrivateKey.replace(/\\\\n/g, '\n');
+            }
+          }
+          
+          // Ensure proper formatting
+          if (!formattedPrivateKey.includes('-----BEGIN PRIVATE KEY-----')) {
+            throw new Error('Private key missing BEGIN marker');
+          }
+          if (!formattedPrivateKey.includes('-----END PRIVATE KEY-----')) {
+            throw new Error('Private key missing END marker');
+          }
+          
+          // Log diagnostic info (safely)
+          console.log('Private key format check:', {
+            hasNewlines: formattedPrivateKey.includes('\n'),
+            lineCount: formattedPrivateKey.split('\n').length,
+            startsCorrectly: formattedPrivateKey.startsWith('-----BEGIN'),
+            endsCorrectly: formattedPrivateKey.includes('-----END'),
+          });
           
           // Build the service account object with required fields
           const serviceAccount = {
@@ -50,6 +86,9 @@ const initializeAdmin = () => {
           console.log('Firebase Admin initialized with individual credentials');
         } catch (error) {
           console.error('Failed to initialize with individual credentials:', error);
+          if (error instanceof Error) {
+            throw new Error(`Firebase Admin initialization failed: ${error.message}`);
+          }
           throw new Error('Firebase Admin initialization failed');
         }
       } else {

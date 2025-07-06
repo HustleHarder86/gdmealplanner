@@ -45,14 +45,12 @@ export async function GET() {
       });
     }
     
-    // Build service account object
+    // Build service account object with correct property names
     const serviceAccount = {
       type: type || 'service_account',
-      project_id: projectId,
-      private_key_id: privateKeyId || '',
-      private_key: privateKey,
-      client_email: clientEmail,
-      client_id: clientId || '',
+      projectId: projectId,  // Note: projectId not project_id for the cert() function
+      privateKey: privateKey, // Note: privateKey not private_key
+      clientEmail: clientEmail, // Note: clientEmail not client_email
     };
     
     // Initialize Firebase Admin if not already initialized

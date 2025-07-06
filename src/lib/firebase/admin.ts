@@ -12,7 +12,7 @@ const initializeAdmin = () => {
     if (serviceAccountKey) {
       // Initialize with service account (production)
       try {
-        // Handle case where Vercel might add extra quotes
+        // Handle case where Vercel might add extra quotes or escape newlines
         let cleanedKey = serviceAccountKey.trim();
         
         // Remove outer quotes if they exist
@@ -20,6 +20,12 @@ const initializeAdmin = () => {
             (cleanedKey.startsWith("'") && cleanedKey.endsWith("'"))) {
           cleanedKey = cleanedKey.slice(1, -1);
         }
+        
+        // Replace escaped newlines with actual newlines
+        cleanedKey = cleanedKey.replace(/\\n/g, '\n');
+        
+        // Replace escaped quotes
+        cleanedKey = cleanedKey.replace(/\\"/g, '"');
         
         // Parse the service account JSON from environment variable
         const serviceAccount = JSON.parse(cleanedKey);

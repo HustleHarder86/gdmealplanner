@@ -12,8 +12,17 @@ const initializeAdmin = () => {
     if (serviceAccountKey) {
       // Initialize with service account (production)
       try {
+        // Handle case where Vercel might add extra quotes
+        let cleanedKey = serviceAccountKey.trim();
+        
+        // Remove outer quotes if they exist
+        if ((cleanedKey.startsWith('"') && cleanedKey.endsWith('"')) ||
+            (cleanedKey.startsWith("'") && cleanedKey.endsWith("'"))) {
+          cleanedKey = cleanedKey.slice(1, -1);
+        }
+        
         // Parse the service account JSON from environment variable
-        const serviceAccount = JSON.parse(serviceAccountKey);
+        const serviceAccount = JSON.parse(cleanedKey);
         initializeApp({
           credential: cert(serviceAccount),
           projectId: serviceAccount.project_id || process.env.projectId,
@@ -21,6 +30,7 @@ const initializeAdmin = () => {
         console.log('Firebase Admin initialized with service account');
       } catch (error) {
         console.error('Failed to parse Firebase service account:', error);
+        console.error('First 100 chars of key:', serviceAccountKey.substring(0, 100));
         throw new Error('Firebase Admin initialization failed - invalid service account JSON');
       }
     } else {

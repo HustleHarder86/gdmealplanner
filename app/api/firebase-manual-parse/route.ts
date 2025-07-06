@@ -23,9 +23,16 @@ export async function GET() {
     const clientEmail = extractValue(rawKey, /"client_email":\s*"([^"]+)"/);
     const clientId = extractValue(rawKey, /"client_id":\s*"([^"]+)"/);
     
-    // Extract private key - this is the tricky part
-    const privateKeyMatch = rawKey.match(/"private_key":\s*"(-----BEGIN[^"]+-----\\n)"/);
+    // Extract private key - handle both escaped and real newlines
+    // First try with real newlines (which is what we have)
+    let privateKeyMatch = rawKey.match(/"private_key":\s*"(-----BEGIN[\s\S]+?-----\n)"/);
     let privateKey = privateKeyMatch ? privateKeyMatch[1] : null;
+    
+    // If that didn't work, try with escaped newlines
+    if (!privateKey) {
+      privateKeyMatch = rawKey.match(/"private_key":\s*"(-----BEGIN[^"]+-----\\n)"/);
+      privateKey = privateKeyMatch ? privateKeyMatch[1] : null;
+    }
     
     if (!privateKey) {
       return NextResponse.json({ 
@@ -35,8 +42,7 @@ export async function GET() {
       });
     }
     
-    // Convert escaped newlines to real newlines
-    privateKey = privateKey.replace(/\\n/g, '\n');
+    // The private key already has real newlines, no need to convert
     
     if (!projectId || !privateKey || !clientEmail) {
       return NextResponse.json({ 

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Database, CheckCircle, Upload } from "lucide-react";
+import { Database, CheckCircle, Upload, BookOpen } from "lucide-react";
 
 export default function AdminPage() {
   const adminTools = [
@@ -18,6 +18,14 @@ export default function AdminPage() {
       icon: Upload,
       color: "text-green-600",
       bgColor: "bg-green-50"
+    },
+    {
+      href: "/admin/recipes",
+      title: "Recipe Library",
+      description: "View and manage all imported recipes",
+      icon: BookOpen,
+      color: "text-orange-600",
+      bgColor: "bg-orange-50"
     },
     {
       href: "/api/test-firebase",

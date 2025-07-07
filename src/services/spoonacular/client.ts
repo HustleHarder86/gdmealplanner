@@ -36,12 +36,18 @@ export class SpoonacularClient {
       addRecipeNutrition: "true",
       // Default to 10 results
       number: (params.number || 10).toString(),
-      // Apply GD-specific defaults if not provided
-      minCarbs: (params.minCarbs || 10).toString(),
-      maxCarbs: (params.maxCarbs || 50).toString(),
-      minProtein: (params.minProtein || 5).toString(),
-      minFiber: (params.minFiber || 2).toString(),
     });
+
+    // Add recipe information if specified
+    if (params.addRecipeInformation) {
+      searchParams.append("addRecipeInformation", params.addRecipeInformation.toString());
+    }
+
+    // Only add nutritional constraints if explicitly provided
+    if (params.minCarbs !== undefined) searchParams.append("minCarbs", params.minCarbs.toString());
+    if (params.maxCarbs !== undefined) searchParams.append("maxCarbs", params.maxCarbs.toString());
+    if (params.minProtein !== undefined) searchParams.append("minProtein", params.minProtein.toString());
+    if (params.minFiber !== undefined) searchParams.append("minFiber", params.minFiber.toString());
 
     // Add optional parameters
     if (params.query) searchParams.append("query", params.query);

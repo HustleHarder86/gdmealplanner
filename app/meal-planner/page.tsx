@@ -53,7 +53,8 @@ export default function MealPlannerPage() {
   };
 
   const getMealRecipe = (recipeId: string): Recipe | undefined => {
-    return recipeService.getRecipeById(recipeId);
+    // TODO: Replace with API call to /api/recipes/[id]
+    return undefined;
   };
 
   if (!mealPlan) {

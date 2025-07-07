@@ -10,10 +10,17 @@ async function getRecipes(): Promise<Recipe[]> {
     
     const recipesSnapshot = await db.collection('recipes').get();
     
-    const recipes = recipesSnapshot.docs.map(doc => ({
-      id: doc.id,
-      ...doc.data()
-    })) as Recipe[];
+    const recipes = recipesSnapshot.docs.map(doc => {
+      const data = doc.data();
+      // Convert Firestore timestamps to strings
+      return {
+        id: doc.id,
+        ...data,
+        createdAt: data.createdAt?._seconds ? new Date(data.createdAt._seconds * 1000).toISOString() : null,
+        updatedAt: data.updatedAt?._seconds ? new Date(data.updatedAt._seconds * 1000).toISOString() : null,
+        importedAt: data.importedAt || null,
+      };
+    }) as Recipe[];
     
     // Sort by title
     recipes.sort((a, b) => a.title.localeCompare(b.title));

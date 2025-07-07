@@ -166,9 +166,14 @@ export class MealPlanGenerator {
   }
 
   private selectBedtimeSnack(usedSet: Set<string>, weekNumber: number): string {
+    // TODO: Load bedtime snacks from API
     // Bedtime snacks must have 15g carbs + protein
-    const bedtimeSnacks = recipeService.getBedtimeSnacks();
+    const bedtimeSnacks: Recipe[] = [];
     const available = bedtimeSnacks.filter((r) => !usedSet.has(r.id));
+
+    if (available.length === 0) {
+      return "placeholder-bedtime-snack";
+    }
 
     const recipe = available[Math.floor(Math.random() * available.length)];
     usedSet.add(recipe.id);
@@ -221,13 +226,14 @@ export class MealPlanGenerator {
 
     Object.values(weekMeals).forEach((day) => {
       Object.values(day).forEach((recipeId) => {
-        const recipe = recipeService.getRecipeById(recipeId as string);
+        // TODO: Get recipe from API
+        const recipe: Recipe | null = null;
         if (recipe) {
-          totalCarbs += recipe.nutrition.carbs;
+          totalCarbs += recipe.nutrition.carbohydrates;
           totalCalories += recipe.nutrition.calories;
           totalPrepTime += recipe.totalTime;
           recipe.ingredients.forEach((ing) =>
-            allIngredients.add(ing.item.toLowerCase()),
+            allIngredients.add(ing.name.toLowerCase()),
           );
         }
       });
@@ -250,10 +256,11 @@ export class MealPlanGenerator {
     // Aggregate all ingredients from all recipes
     Object.values(weekMeals).forEach((day) => {
       Object.entries(day).forEach(([mealType, recipeId]) => {
-        const recipe = recipeService.getRecipeById(recipeId as string);
+        // TODO: Get recipe from API
+        const recipe: Recipe | null = null;
         if (recipe) {
           recipe.ingredients.forEach((ing) => {
-            const key = this.normalizeIngredient(ing.item);
+            const key = this.normalizeIngredient(ing.name);
 
             if (ingredientMap.has(key)) {
               // Aggregate quantities
@@ -267,10 +274,10 @@ export class MealPlanGenerator {
             } else {
               // New ingredient
               ingredientMap.set(key, {
-                name: ing.item,
+                name: ing.name,
                 quantity: ing.amount,
                 unit: ing.unit,
-                category: this.categorizeIngredient(ing.item),
+                category: this.categorizeIngredient(ing.name),
                 fromRecipes: [recipeId as string],
               });
             }

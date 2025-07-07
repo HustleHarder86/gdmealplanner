@@ -10,6 +10,22 @@ const IMPORT_QUERIES = {
 
 export async function POST(request: NextRequest) {
   try {
+    // Check if imports are paused
+    const baseUrl = request.url.split('/api')[0];
+    try {
+      const pauseResponse = await fetch(`${baseUrl}/api/recipes/pause-import`);
+      const pauseData = await pauseResponse.json();
+      if (pauseData.paused) {
+        return NextResponse.json({
+          success: false,
+          message: 'Recipe imports are currently paused. Use DELETE /api/recipes/pause-import to resume.',
+          paused: true
+        });
+      }
+    } catch (error) {
+      // If pause endpoint doesn't exist, continue
+    }
+
     const body = await request.json();
     const { 
       targetTotal = 400,
@@ -21,7 +37,6 @@ export async function POST(request: NextRequest) {
     console.log(`Starting auto-import to reach ${targetTotal} recipes`);
     
     // Get current count
-    const baseUrl = request.url.split('/api')[0];
     const countResponse = await fetch(`${baseUrl}/api/recipes/count`);
     const { count: currentCount } = await countResponse.json();
     

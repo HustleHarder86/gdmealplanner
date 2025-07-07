@@ -36,6 +36,7 @@ export interface Recipe {
   source: string;
   sourceUrl?: string;
   imageUrl?: string;
+  localImageUrl?: string;
   
   // Import metadata
   importedFrom?: string;

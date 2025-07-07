@@ -129,9 +129,9 @@ export default function RecipeDetailPage({
 
           {/* Recipe Image */}
           <div className="aspect-video bg-neutral-100 rounded-lg mb-8 flex items-center justify-center overflow-hidden">
-            {recipe.imageUrl && !imageError ? (
+            {(recipe.localImageUrl || recipe.imageUrl) && !imageError ? (
               <img 
-                src={recipe.imageUrl} 
+                src={recipe.localImageUrl || recipe.imageUrl} 
                 alt={recipe.title}
                 className="w-full h-full object-cover"
                 onError={() => setImageError(true)}

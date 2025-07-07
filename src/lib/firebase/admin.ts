@@ -1,5 +1,6 @@
 import { initializeApp, getApps, cert } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
+import { getStorage } from 'firebase-admin/storage';
 import { getAuth } from 'firebase-admin/auth';
 import type { ServiceAccount } from 'firebase-admin/app';
 
@@ -43,6 +44,7 @@ const initializeAdmin = () => {
         initializeApp({
           credential: cert(serviceAccount),
           projectId: projectId,
+          storageBucket: `${projectId}.appspot.com`
         });
         console.log('Firebase Admin initialized with service account');
       } catch (error) {
@@ -109,6 +111,7 @@ const initializeAdmin = () => {
           initializeApp({
             credential: cert(serviceAccount),
             projectId: projectId,
+            storageBucket: `${projectId}.appspot.com`
           });
           console.log('Firebase Admin initialized with individual credentials');
         } catch (error) {
@@ -131,6 +134,7 @@ export const initializeFirebaseAdmin = initializeAdmin;
 // Lazy initialization of admin services
 let _adminDb: ReturnType<typeof getFirestore> | null = null;
 let _adminAuth: ReturnType<typeof getAuth> | null = null;
+let _adminStorage: ReturnType<typeof getStorage> | null = null;
 
 export const adminDb = () => {
   if (!_adminDb) {
@@ -146,6 +150,14 @@ export const adminAuth = () => {
     _adminAuth = getAuth();
   }
   return _adminAuth;
+};
+
+export const adminStorage = () => {
+  if (!_adminStorage) {
+    initializeAdmin();
+    _adminStorage = getStorage();
+  }
+  return _adminStorage;
 };
 
 // Helper function to verify admin is initialized

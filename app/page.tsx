@@ -1,10 +1,6 @@
 import Link from "next/link";
-import { RecipeCard } from "@/components/ui";
-import { recipeService } from "@/lib/recipe-service";
 
 export default function HomePage() {
-  // Get featured recipes (quick recipes for busy moms)
-  const featuredRecipes = recipeService.getQuickRecipes(20).slice(0, 3);
   return (
     <div className="container py-12">
       {/* Hero Section */}
@@ -102,17 +98,12 @@ export default function HomePage() {
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold mb-2">Quick & Healthy Recipes</h2>
           <p className="text-neutral-600">
-            Perfect for busy moms - ready in 20 minutes or less
+            Gestational diabetes-friendly recipes from Spoonacular
           </p>
-        </div>
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
-          {featuredRecipes.map((recipe) => (
-            <RecipeCard key={recipe.id} recipe={recipe} />
-          ))}
         </div>
         <div className="text-center">
           <Link href="/recipes" className="btn-secondary">
-            View All {recipeService.getAllRecipes().length} Recipes →
+            Browse Our Recipe Collection →
           </Link>
         </div>
       </section>

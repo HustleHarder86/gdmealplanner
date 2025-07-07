@@ -23,7 +23,10 @@ export async function GET() {
       const data = doc.data();
       return {
         id: doc.id,
-        ...data
+        ...data,
+        // Ensure required fields exist
+        url: data.sourceUrl || data.url || `https://spoonacular.com/recipes/${doc.id.replace('spoonacular-', '')}`,
+        image: data.imageUrl || data.image
       };
     });
     

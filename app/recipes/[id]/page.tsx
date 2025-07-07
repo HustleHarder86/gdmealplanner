@@ -1,24 +1,80 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Badge } from "@/components/ui";
-import { recipeService } from "@/lib/recipe-service";
-import { MedicalComplianceService } from "@/lib/medical-compliance";
+import { Recipe } from "@/lib/types";
 
 export default function RecipeDetailPage({
   params,
 }: {
   params: { id: string };
 }) {
-  const recipe = recipeService.getRecipeById(params.id);
+  const [recipe, setRecipe] = useState<Recipe | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  if (!recipe) {
-    notFound();
+  useEffect(() => {
+    const loadRecipe = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch(`/api/recipes/${params.id}`);
+        
+        if (response.status === 404) {
+          notFound();
+        }
+        
+        if (!response.ok) {
+          throw new Error(`Failed to load recipe: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        setRecipe(data.recipe || null);
+        setError(null);
+      } catch (err) {
+        console.error('Error loading recipe:', err);
+        setError(err instanceof Error ? err.message : 'Failed to load recipe');
+        setRecipe(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadRecipe();
+  }, [params.id]);
+
+  if (loading) {
+    return (
+      <div className="container py-8">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto mb-4"></div>
+          <p className="text-neutral-600">Loading recipe...</p>
+        </div>
+      </div>
+    );
   }
 
-  const isCompliant = MedicalComplianceService.isRecipeCompliant(recipe);
-  const carbChoices = MedicalComplianceService.getCarbChoices(
-    recipe.nutrition.carbs,
-  );
+  if (error || !recipe) {
+    return (
+      <div className="container py-8">
+        <div className="text-center">
+          <div className="text-red-600 mb-4">
+            <p className="text-lg font-semibold">Recipe not found</p>
+            <p className="text-sm">{error || 'The requested recipe could not be found.'}</p>
+          </div>
+          <Link 
+            href="/recipes"
+            className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
+          >
+            Back to Recipes
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  const carbChoices = Math.round(recipe.nutrition.carbs / 15);
 
   return (
     <div className="container py-8">
@@ -68,9 +124,17 @@ export default function RecipeDetailPage({
             ))}
           </div>
 
-          {/* Image Placeholder */}
-          <div className="aspect-video bg-neutral-100 rounded-lg mb-8 flex items-center justify-center">
-            <span className="text-6xl">🍽️</span>
+          {/* Recipe Image */}
+          <div className="aspect-video bg-neutral-100 rounded-lg mb-8 flex items-center justify-center overflow-hidden">
+            {recipe.image ? (
+              <img 
+                src={recipe.image} 
+                alt={recipe.title}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <span className="text-6xl">🍽️</span>
+            )}
           </div>
 
           {/* Instructions */}
@@ -94,7 +158,7 @@ export default function RecipeDetailPage({
           {/* Nutrition Card */}
           <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
             <h3 className="font-semibold mb-4">Nutrition per Serving</h3>
-            {recipe.category === "snacks" &&
+            {recipe.category === "snack" &&
               recipe.nutrition.carbs >= 14 &&
               recipe.nutrition.carbs <= 16 &&
               recipe.nutrition.protein >= 5 && (
@@ -170,7 +234,7 @@ export default function RecipeDetailPage({
       {/* Source Attribution */}
       <div className="mt-8 pt-8 border-t border-neutral-200">
         <p className="text-sm text-neutral-600">
-          Recipe adapted from{" "}
+          Recipe from{" "}
           <a
             href={recipe.url}
             target="_blank"
@@ -184,15 +248,3 @@ export default function RecipeDetailPage({
     </div>
   );
 }
-
-// Generate static params for all recipes
-export async function generateStaticParams() {
-  const recipes = recipeService.getAllRecipes();
-  // Generate static params for all recipes
-  return recipes.map((recipe) => ({
-    id: recipe.id,
-  }));
-}
-
-// Enable dynamic rendering for recipes not pre-rendered
-export const dynamicParams = true;

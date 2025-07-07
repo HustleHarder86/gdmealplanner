@@ -3,38 +3,7 @@
 import { useState, useMemo, useEffect } from "react";
 import { RecipeCard, Input } from "@/components/ui";
 
-interface Recipe {
-  id: string;
-  title: string;
-  description: string;
-  category: 'breakfast' | 'lunch' | 'dinner' | 'snack';
-  prepTime: number;
-  cookTime: number;
-  totalTime: number;
-  servings: number;
-  ingredients: Array<{
-    name: string;
-    amount: number;
-    unit: string;
-    original: string;
-  }>;
-  instructions: string[];
-  nutrition: {
-    calories: number;
-    carbohydrates: number;
-    fiber: number;
-    sugar: number;
-    protein: number;
-    fat: number;
-    saturatedFat: number;
-    sodium: number;
-  };
-  carbChoices: number;
-  tags: string[];
-  imageUrl?: string;
-  source: string;
-  sourceUrl?: string;
-}
+import { Recipe } from "@/lib/types";
 
 export default function RecipesPage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -86,7 +55,7 @@ export default function RecipesPage() {
           recipe.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
           recipe.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
           recipe.ingredients.some((ing) =>
-            ing.name.toLowerCase().includes(searchTerm.toLowerCase()),
+            ing.item.toLowerCase().includes(searchTerm.toLowerCase()),
           );
         return matchesSearch;
       });
@@ -111,7 +80,7 @@ export default function RecipesPage() {
     // Filter by carbs - updated to match medical guidelines
     if (selectedCarbs !== "all") {
       filteredList = filteredList.filter((recipe) => {
-        const carbs = recipe.nutrition.carbohydrates;
+        const carbs = recipe.nutrition.carbs;
 
         switch (selectedCarbs) {
           case "breakfast":

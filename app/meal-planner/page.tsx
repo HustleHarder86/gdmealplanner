@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { mealPlanService } from "@/lib/meal-plan-service";
-import { recipeService } from "@/lib/recipe-service";
+// TODO: Replace with API calls
+// import { recipeService } from "@/lib/recipe-service";
 import { WeeklyMasterPlan } from "@/lib/meal-plan-types";
 import { Recipe } from "@/lib/types";
 import { Badge, Button } from "@/components/ui";

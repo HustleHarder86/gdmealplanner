@@ -14,6 +14,7 @@ export default function RecipeDetailPage({
   const [recipe, setRecipe] = useState<Recipe | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
     const loadRecipe = async () => {
@@ -128,14 +129,22 @@ export default function RecipeDetailPage({
 
           {/* Recipe Image */}
           <div className="aspect-video bg-neutral-100 rounded-lg mb-8 flex items-center justify-center overflow-hidden">
-            {recipe.imageUrl ? (
+            {recipe.imageUrl && !imageError ? (
               <img 
                 src={recipe.imageUrl} 
                 alt={recipe.title}
                 className="w-full h-full object-cover"
+                onError={() => setImageError(true)}
+                loading="lazy"
               />
             ) : (
-              <span className="text-6xl">🍽️</span>
+              <span className="text-6xl">
+                {recipe.category === "breakfast" && "🍳"}
+                {recipe.category === "lunch" && "🥗"}
+                {recipe.category === "dinner" && "🍽️"}
+                {recipe.category === "snack" && "🥜"}
+                {!["breakfast", "lunch", "dinner", "snack"].includes(recipe.category) && "🍽️"}
+              </span>
             )}
           </div>
 

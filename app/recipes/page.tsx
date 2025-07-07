@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import { RecipeCard, Input } from "@/components/ui";
-
+import { Input } from "@/components/ui";
+import RecipeCard from "@/components/RecipeCardWithFallback";
 import { Recipe } from "@/src/types/recipe";
 
 export default function RecipesPage() {

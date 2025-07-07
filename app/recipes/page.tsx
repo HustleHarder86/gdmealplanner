@@ -53,7 +53,7 @@ export default function RecipesPage() {
       filteredList = filteredList.filter((recipe) => {
         const matchesSearch =
           recipe.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          recipe.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          (recipe.description?.toLowerCase().includes(searchTerm.toLowerCase()) ?? false) ||
           recipe.ingredients.some((ing) =>
             ing.name.toLowerCase().includes(searchTerm.toLowerCase()),
           );

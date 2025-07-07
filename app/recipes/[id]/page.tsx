@@ -98,7 +98,9 @@ export default function RecipeDetailPage({
         {/* Main Content */}
         <div className="lg:col-span-2">
           <h1 className="text-3xl font-bold mb-4">{recipe.title}</h1>
-          <p className="text-neutral-600 mb-6">{recipe.description}</p>
+          {recipe.description && (
+            <p className="text-neutral-600 mb-6">{recipe.description}</p>
+          )}
 
           {/* Recipe Meta */}
           <div className="flex flex-wrap gap-4 mb-6">

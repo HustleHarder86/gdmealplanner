@@ -28,9 +28,11 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
 
       {/* Recipe Info */}
       <h3 className="text-xl font-semibold mb-2">{recipe.title}</h3>
-      <p className="text-neutral-600 text-sm mb-4 line-clamp-2">
-        {recipe.description}
-      </p>
+      {recipe.description && (
+        <p className="text-neutral-600 text-sm mb-4 line-clamp-2">
+          {recipe.description}
+        </p>
+      )}
 
       {/* Quick Stats */}
       <div className="grid grid-cols-3 gap-2 mb-4 text-sm">

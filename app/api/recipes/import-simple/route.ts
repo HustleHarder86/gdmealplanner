@@ -113,7 +113,7 @@ export async function POST(request: NextRequest) {
       number: count,
       addRecipeNutrition: true,
       addRecipeInformation: true,
-      sort: "popularity",
+      sort: "popularity" as const,
       type: category === "snack" ? "snack,appetizer" : category === "breakfast" ? "breakfast" : "main course",
       maxCarbs: category === "breakfast" ? 50 : category === "snack" ? 30 : 60,
     };
@@ -159,7 +159,7 @@ export async function POST(request: NextRequest) {
         }
 
         // Categorize recipe
-        const categorization = categorizer.categorize(fullRecipe);
+        const categorization = await categorizer.categorizeRecipe(fullRecipe);
         
         // Transform to our format
         const recipe = transformSpoonacularRecipe(
@@ -208,19 +208,8 @@ export async function POST(request: NextRequest) {
     }
 
     // Get updated library stats
-    const allRecipes = await RecipeModel.getAll();
-    const breakdown = {
-      breakfast: 0,
-      lunch: 0,
-      dinner: 0,
-      snack: 0
-    };
-    
-    allRecipes.forEach(recipe => {
-      if (recipe.category && breakdown[recipe.category] !== undefined) {
-        breakdown[recipe.category]++;
-      }
-    });
+    const breakdown = await RecipeModel.getCountByCategory();
+    const total = Object.values(breakdown).reduce((sum, count) => sum + count, 0);
 
     return NextResponse.json({
       success: true,
@@ -233,7 +222,7 @@ export async function POST(request: NextRequest) {
         rejectedDetails: rejectedRecipes
       },
       library: {
-        total: allRecipes.length,
+        total,
         breakdown
       }
     });

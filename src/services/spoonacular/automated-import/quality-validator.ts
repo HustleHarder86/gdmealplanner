@@ -1,5 +1,6 @@
 import { SpoonacularRecipeInfo } from "../types";
-import { validateRecipeForGD, calculateGDScore, GD_REQUIREMENTS } from "../validators";
+// Use relaxed validators for import to get more recipes
+import { validateRecipeForGD, calculateGDScore, GD_REQUIREMENTS } from "../validators-relaxed";
 
 /**
  * Quality Validation System for Automated Recipe Import
@@ -344,8 +345,8 @@ export function validateRecipeForImport(
   // Calculate quality score
   const qualityScore = calculateQualityScore(recipe, detectedCategory);
 
-  // Check minimum quality threshold
-  if (qualityScore.totalScore < 50) {
+  // Check minimum quality threshold - lowered for initial import
+  if (qualityScore.totalScore < 30) {
     rejectionReasons.push(`Quality score too low: ${qualityScore.totalScore}/100`);
   }
 

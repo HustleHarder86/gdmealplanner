@@ -7,7 +7,8 @@ import {
   GroceryItem,
   GroceryCategory,
 } from "./meal-plan-types";
-import { recipeService } from "./recipe-service";
+// TODO: Replace with API calls
+// import { recipeService } from "./recipe-service";
 import { MedicalComplianceService } from "./medical-compliance";
 
 export class MealPlanGenerator {
@@ -19,12 +20,12 @@ export class MealPlanGenerator {
   };
 
   constructor() {
-    // Load all recipes by category
+    // TODO: Load recipes from API
     this.allRecipes = {
-      breakfast: recipeService.getRecipesByCategory("breakfast"),
-      lunch: recipeService.getRecipesByCategory("lunch"),
-      dinner: recipeService.getRecipesByCategory("dinner"),
-      snacks: recipeService.getRecipesByCategory("snacks"),
+      breakfast: [],
+      lunch: [],
+      dinner: [],
+      snacks: [],
     };
   }
 

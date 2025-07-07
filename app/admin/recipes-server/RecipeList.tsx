@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Recipe } from "@/src/types/recipe";
+import Image from "next/image";
 
 interface RecipeListProps {
   initialRecipes: Recipe[];
@@ -69,22 +70,37 @@ export default function RecipeList({ initialRecipes }: RecipeListProps) {
       <div className="grid gap-6">
         {filteredRecipes.map((recipe) => (
           <div key={recipe.id} className="border rounded-lg p-6 bg-white shadow">
-            <div className="flex justify-between items-start mb-4">
-              <div>
-                <h2 className="text-xl font-semibold">{recipe.title}</h2>
-                <p className="text-sm text-gray-600">
-                  Category: {recipe.category} | 
-                  Prep: {recipe.prepTime}min | 
-                  Cook: {recipe.cookTime}min
-                </p>
-              </div>
-              <button
-                onClick={() => deleteRecipe(recipe.id)}
-                className="text-red-600 hover:text-red-800"
-              >
-                Delete
-              </button>
-            </div>
+            <div className="flex gap-6">
+              {/* Recipe Image */}
+              {recipe.imageUrl && (
+                <div className="flex-shrink-0 relative w-48 h-32">
+                  <Image
+                    src={recipe.imageUrl}
+                    alt={recipe.title}
+                    fill
+                    className="object-cover rounded-lg"
+                  />
+                </div>
+              )}
+              
+              {/* Recipe Content */}
+              <div className="flex-grow">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <h2 className="text-xl font-semibold">{recipe.title}</h2>
+                    <p className="text-sm text-gray-600">
+                      Category: {recipe.category} | 
+                      Prep: {recipe.prepTime}min | 
+                      Cook: {recipe.cookTime}min
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => deleteRecipe(recipe.id)}
+                    className="text-red-600 hover:text-red-800"
+                  >
+                    Delete
+                  </button>
+                </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
               <div className="bg-gray-100 p-3 rounded">
@@ -117,15 +133,17 @@ export default function RecipeList({ initialRecipes }: RecipeListProps) {
               </ul>
             </div>
 
-            {recipe.importedAt && (
-              <div className="text-xs text-gray-500">
-                <p>Imported: {new Date(recipe.importedAt).toLocaleDateString()}</p>
-                {recipe.gdValidation && (
-                  <p>GD Score: {recipe.gdValidation.score}/100</p>
+                {recipe.importedAt && (
+                  <div className="text-xs text-gray-500">
+                    <p>Imported: {new Date(recipe.importedAt).toLocaleDateString()}</p>
+                    {recipe.gdValidation && (
+                      <p>GD Score: {recipe.gdValidation.score}/100</p>
+                    )}
+                    <p>Source: {recipe.source}</p>
+                  </div>
                 )}
-                <p>Source: {recipe.source}</p>
               </div>
-            )}
+            </div>
           </div>
         ))}
       </div>

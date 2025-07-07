@@ -24,9 +24,8 @@ export async function GET() {
       return {
         id: doc.id,
         ...data,
-        // Ensure required fields exist
-        url: data.sourceUrl || data.url || `https://spoonacular.com/recipes/${doc.id.replace('spoonacular-', '')}`,
-        image: data.imageUrl || data.image
+        // Ensure required fields exist  
+        sourceUrl: data.sourceUrl || `https://spoonacular.com/recipes/${doc.id.replace('spoonacular-', '')}`
       };
     });
     

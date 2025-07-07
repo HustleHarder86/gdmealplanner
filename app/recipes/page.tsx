@@ -3,7 +3,7 @@
 import { useState, useMemo, useEffect } from "react";
 import { RecipeCard, Input } from "@/components/ui";
 
-import { Recipe } from "@/lib/types";
+import { Recipe } from "@/src/types/recipe";
 
 export default function RecipesPage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -55,7 +55,7 @@ export default function RecipesPage() {
           recipe.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
           recipe.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
           recipe.ingredients.some((ing) =>
-            ing.item.toLowerCase().includes(searchTerm.toLowerCase()),
+            ing.name.toLowerCase().includes(searchTerm.toLowerCase()),
           );
         return matchesSearch;
       });
@@ -80,7 +80,7 @@ export default function RecipesPage() {
     // Filter by carbs - updated to match medical guidelines
     if (selectedCarbs !== "all") {
       filteredList = filteredList.filter((recipe) => {
-        const carbs = recipe.nutrition.carbs;
+        const carbs = recipe.nutrition.carbohydrates;
 
         switch (selectedCarbs) {
           case "breakfast":

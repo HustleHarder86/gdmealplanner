@@ -26,8 +26,7 @@ export async function GET(
       id: doc.id,
       ...data,
       // Ensure required fields exist
-      url: data?.sourceUrl || data?.url || `https://spoonacular.com/recipes/${doc.id.replace('spoonacular-', '')}`,
-      image: data?.imageUrl || data?.image
+      sourceUrl: data?.sourceUrl || `https://spoonacular.com/recipes/${doc.id.replace('spoonacular-', '')}`
     };
     
     return NextResponse.json({

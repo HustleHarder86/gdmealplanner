@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Badge } from "@/components/ui";
-import { Recipe } from "@/lib/types";
+import { Recipe } from "@/src/types/recipe";
 
 export default function RecipeDetailPage({
   params,
@@ -74,7 +74,7 @@ export default function RecipeDetailPage({
     );
   }
 
-  const carbChoices = Math.round(recipe.nutrition.carbs / 15);
+  const carbChoices = Math.round(recipe.nutrition.carbohydrates / 15);
 
   return (
     <div className="container py-8">
@@ -126,9 +126,9 @@ export default function RecipeDetailPage({
 
           {/* Recipe Image */}
           <div className="aspect-video bg-neutral-100 rounded-lg mb-8 flex items-center justify-center overflow-hidden">
-            {recipe.image ? (
+            {recipe.imageUrl ? (
               <img 
-                src={recipe.image} 
+                src={recipe.imageUrl} 
                 alt={recipe.title}
                 className="w-full h-full object-cover"
               />
@@ -159,8 +159,8 @@ export default function RecipeDetailPage({
           <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
             <h3 className="font-semibold mb-4">Nutrition per Serving</h3>
             {recipe.category === "snack" &&
-              recipe.nutrition.carbs >= 14 &&
-              recipe.nutrition.carbs <= 16 &&
+              recipe.nutrition.carbohydrates >= 14 &&
+              recipe.nutrition.carbohydrates <= 16 &&
               recipe.nutrition.protein >= 5 && (
                 <div className="bg-green-50 border border-green-200 rounded-md p-3 mb-4">
                   <p className="text-sm text-green-800 font-medium">
@@ -178,7 +178,7 @@ export default function RecipeDetailPage({
               </div>
               <div className="flex justify-between">
                 <span>Carbohydrates</span>
-                <span className="font-medium">{recipe.nutrition.carbs}g</span>
+                <span className="font-medium">{recipe.nutrition.carbohydrates}g</span>
               </div>
               <div className="flex justify-between">
                 <span>Carb Choices</span>
@@ -222,7 +222,7 @@ export default function RecipeDetailPage({
                       <span className="font-medium"> {ingredient.unit}</span>
                     )}
                     {(ingredient.amount || ingredient.unit) && " "}
-                    {ingredient.item}
+                    {ingredient.name}
                   </span>
                 </li>
               ))}
@@ -236,7 +236,7 @@ export default function RecipeDetailPage({
         <p className="text-sm text-neutral-600">
           Recipe from{" "}
           <a
-            href={recipe.url}
+            href={recipe.sourceUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary-600 hover:text-primary-800"

@@ -8,14 +8,22 @@ interface RecipeCardProps {
 export default function RecipeCard({ recipe }: RecipeCardProps) {
   return (
     <div className="card hover:shadow-md transition-shadow">
-      {/* Recipe Image Placeholder */}
-      <div className="w-full h-48 bg-gradient-to-br from-primary-100 to-primary-200 rounded-lg mb-4 flex items-center justify-center">
-        <span className="text-4xl">
-          {recipe.category === "breakfast" && "🍳"}
-          {recipe.category === "lunch" && "🥗"}
-          {recipe.category === "dinner" && "🍽️"}
-          {recipe.category === "snacks" && "🥜"}
-        </span>
+      {/* Recipe Image */}
+      <div className="w-full h-48 bg-gradient-to-br from-primary-100 to-primary-200 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+        {recipe.imageUrl ? (
+          <img 
+            src={recipe.imageUrl} 
+            alt={recipe.title}
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <span className="text-4xl">
+            {recipe.category === "breakfast" && "🍳"}
+            {recipe.category === "lunch" && "🥗"}
+            {recipe.category === "dinner" && "🍽️"}
+            {recipe.category === "snack" && "🥜"}
+          </span>
+        )}
       </div>
 
       {/* Recipe Info */}
@@ -28,7 +36,7 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
       <div className="grid grid-cols-3 gap-2 mb-4 text-sm">
         <div className="text-center">
           <div className="font-semibold text-primary-600">
-            {recipe.nutrition.carbs}g
+            {recipe.nutrition.carbohydrates}g
           </div>
           <div className="text-neutral-500">Carbs</div>
         </div>
@@ -40,7 +48,7 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
         </div>
         <div className="text-center">
           <div className="font-semibold text-primary-600">
-            {recipe.prepTime + recipe.cookTime}m
+            {recipe.totalTime}m
           </div>
           <div className="text-neutral-500">Time</div>
         </div>

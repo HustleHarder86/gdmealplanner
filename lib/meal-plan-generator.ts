@@ -227,15 +227,7 @@ export class MealPlanGenerator {
     Object.values(weekMeals).forEach((day) => {
       Object.values(day).forEach((recipeId) => {
         // TODO: Get recipe from API
-        const recipe: Recipe | null = null;
-        if (recipe) {
-          totalCarbs += recipe.nutrition.carbohydrates;
-          totalCalories += recipe.nutrition.calories;
-          totalPrepTime += recipe.totalTime;
-          recipe.ingredients.forEach((ing) =>
-            allIngredients.add(ing.name.toLowerCase()),
-          );
-        }
+        // For now, skip recipe stats calculation
       });
     });
 
@@ -256,33 +248,8 @@ export class MealPlanGenerator {
     // Aggregate all ingredients from all recipes
     Object.values(weekMeals).forEach((day) => {
       Object.entries(day).forEach(([mealType, recipeId]) => {
-        // TODO: Get recipe from API
-        const recipe: Recipe | null = null;
-        if (recipe) {
-          recipe.ingredients.forEach((ing) => {
-            const key = this.normalizeIngredient(ing.name);
-
-            if (ingredientMap.has(key)) {
-              // Aggregate quantities
-              const existing = ingredientMap.get(key)!;
-              existing.quantity = this.aggregateQuantity(
-                existing.quantity,
-                ing.amount,
-                ing.unit,
-              );
-              existing.fromRecipes.push(recipeId as string);
-            } else {
-              // New ingredient
-              ingredientMap.set(key, {
-                name: ing.name,
-                quantity: ing.amount,
-                unit: ing.unit,
-                category: this.categorizeIngredient(ing.name),
-                fromRecipes: [recipeId as string],
-              });
-            }
-          });
-        }
+        // TODO: Get recipe from API and aggregate ingredients
+        // For now, skip ingredient aggregation
       });
     });
 

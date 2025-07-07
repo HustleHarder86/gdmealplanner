@@ -15,6 +15,11 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
 
+// Log config status (remove in production)
+if (typeof window !== 'undefined' && !firebaseConfig.apiKey) {
+  console.error('Firebase client configuration is missing. Check NEXT_PUBLIC_* environment variables.');
+}
+
 // Export Firebase services
 export const auth = getAuth(app);
 export const db = getFirestore(app);

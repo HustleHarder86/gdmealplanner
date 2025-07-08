@@ -12,7 +12,7 @@ import {
   serverTimestamp,
   Firestore,
 } from "firebase/firestore";
-import { db } from "@/src/lib/firebase/config";
+import { db } from "@/src/lib/firebase/client";
 import {
   UserPreferences,
   DietaryRestriction,

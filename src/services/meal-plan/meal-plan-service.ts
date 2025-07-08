@@ -17,9 +17,9 @@ import {
   limit,
   serverTimestamp,
   Timestamp,
-  FirebaseError,
+  FirestoreError,
 } from "firebase/firestore";
-import { db } from "@/src/lib/firebase/config";
+import { db } from "@/src/lib/firebase/client";
 import {
   WeeklyMealPlan,
   MealSwapOptions,
@@ -384,16 +384,16 @@ export class MealPlanService {
         throw new Error("User preferences not found");
       }
 
-      // Use the algorithm to generate a new day
-      const newDayPlan = await mealPlanAlgorithm["generateDailyPlan"](
-        plan.days[dayIndex].date,
-        plan.days[dayIndex].dayOfWeek,
-        preferences,
+      // Use the algorithm to generate a new week and extract the specific day
+      const tempPlan = await mealPlanAlgorithm.generateWeeklyPlan(
+        plan.userId,
         {
           startDate: plan.weekStartDate,
           userPreferencesId: preferences.id || "",
-        },
+        }
       );
+      
+      const newDayPlan = tempPlan.days[dayIndex];
 
       // Update the plan
       plan.days[dayIndex] = newDayPlan;

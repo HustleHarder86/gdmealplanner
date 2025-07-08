@@ -1,509 +1,329 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { mealPlanService } from "@/lib/meal-plan-service";
-import { useRecipes } from "@/src/hooks/useRecipes";
-import { WeeklyMasterPlan } from "@/lib/meal-plan-types";
-import { Recipe } from "@/lib/types";
-import { Badge, Button } from "@/components/ui";
-import { pluralizeUnit, groupGroceryItems } from "@/lib/grocery-utils";
+import { useRouter } from "next/navigation";
+import { useAuth } from "@/src/contexts/AuthContext";
+import { mealPlanService } from "@/src/services/meal-plan/meal-plan-service";
+import { mealPlanAlgorithm } from "@/src/services/meal-plan/meal-plan-algorithm";
+import { ShoppingListGenerator } from "@/src/lib/meal-planning/shopping-list-generator";
+import { WeeklyMealPlan, DayOfWeek, MealType } from "@/src/types/meal-plan";
+import { ShoppingList } from "@/src/types/shopping-list";
+import { MealPlanView } from "@/src/components/meal-planner/MealPlanView";
+import { ShoppingListView } from "@/src/components/meal-planner/ShoppingListView";
+import { GeneratePlanModal } from "@/src/components/meal-planner/GeneratePlanModal";
+import { PrintableMealPlan } from "@/src/components/meal-planner/PrintableMealPlan";
+import Button from "@/components/ui/Button";
+import Card from "@/components/ui/Card";
 
 export default function MealPlannerPage() {
-  const [currentWeek, setCurrentWeek] = useState(1);
-  const [mealPlan, setMealPlan] = useState<WeeklyMasterPlan | null>(null);
-  const [weekDates, setWeekDates] = useState<{ [key: string]: Date }>({});
-  const [selectedDay, setSelectedDay] = useState<string>("monday");
-  const [showGroceryList, setShowGroceryList] = useState(false);
-
-  // Get recipes from the provider
-  const { recipes } = useRecipes();
+  const { user } = useAuth();
+  const router = useRouter();
+  const [loading, setLoading] = useState(true);
+  const [generating, setGenerating] = useState(false);
+  const [activePlan, setActivePlan] = useState<WeeklyMealPlan | null>(null);
+  const [shoppingList, setShoppingList] = useState<ShoppingList | null>(null);
+  const [showGenerateModal, setShowGenerateModal] = useState(false);
+  const [selectedDay, setSelectedDay] = useState<DayOfWeek>("monday");
+  const [showShoppingList, setShowShoppingList] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Get current week based on date
-    const weekNum = mealPlanService.getWeekNumberForDate(new Date());
-    setCurrentWeek(weekNum);
-
-    // Load meal plan
-    const plan = mealPlanService.getWeekPlan(weekNum);
-    setMealPlan(plan);
-
-    // Get week dates
-    const dates = mealPlanService.getWeekDates(new Date());
-    setWeekDates(dates);
-  }, []);
-
-  const loadWeek = (weekNumber: number) => {
-    setCurrentWeek(weekNumber);
-    const plan = mealPlanService.getWeekPlan(weekNumber);
-    setMealPlan(plan);
-  };
-
-  const navigateWeek = (direction: "prev" | "next") => {
-    const newWeek =
-      direction === "next"
-        ? currentWeek === 12
-          ? 1
-          : currentWeek + 1
-        : currentWeek === 1
-          ? 12
-          : currentWeek - 1;
-    loadWeek(newWeek);
-  };
-
-  const formatDate = (date: Date) => {
-    return date.toLocaleDateString("en-US", { month: "short", day: "numeric" });
-  };
-
-  const getMealRecipe = (recipeId: string): Recipe | undefined => {
-    // Find recipe by ID from the provider's recipes
-    const recipe = recipes.find((r) => r.id === recipeId);
-
-    // Convert from our Recipe type to the component's expected Recipe type if needed
-    if (recipe) {
-      return {
-        id: recipe.id,
-        title: recipe.title,
-        description: recipe.description || "",
-        image: recipe.imageUrl,
-        originalImage: recipe.imageUrl,
-        prepTime: recipe.prepTime,
-        cookTime: recipe.cookTime,
-        totalTime: recipe.totalTime,
-        servings: recipe.servings,
-        ingredients: recipe.ingredients.map((ing) => ({
-          amount: String(ing.amount || ""),
-          unit: ing.unit || "",
-          item: ing.name,
-        })),
-        instructions: recipe.instructions,
-        nutrition: {
-          calories: recipe.nutrition.calories,
-          carbs: recipe.nutrition.carbohydrates,
-          carbChoices: recipe.carbChoices,
-          protein: recipe.nutrition.protein,
-          fat: recipe.nutrition.fat,
-          fiber: recipe.nutrition.fiber,
-          sugar: recipe.nutrition.sugar || 0,
-          sodium: recipe.nutrition.sodium || 0,
-          saturatedFat: recipe.nutrition.saturatedFat || 0,
-        },
-        category:
-          recipe.category === "snack" ? "snacks" : (recipe.category as any),
-        tags: recipe.tags,
-        source: recipe.source,
-        url: recipe.sourceUrl || "",
-        medicallyCompliant: recipe.verified || false,
-      };
+    if (!user) {
+      router.push("/auth/login");
+      return;
     }
+    loadActivePlan();
+  }, [user, router]);
 
-    return undefined;
+  const loadActivePlan = async () => {
+    if (!user) return;
+    
+    try {
+      setLoading(true);
+      setError(null);
+      
+      // Try to get active plan for current week
+      const plan = await mealPlanService.getActiveMealPlanForDate(user.uid, new Date());
+      
+      if (plan) {
+        setActivePlan(plan);
+        // Generate shopping list
+        const list = ShoppingListGenerator.generateFromWeeklyPlan(plan, user.uid);
+        setShoppingList(list);
+      } else {
+        // No active plan, show generate option
+        setShowGenerateModal(true);
+      }
+    } catch (err) {
+      console.error("Error loading meal plan:", err);
+      setError("Failed to load meal plan. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
-  if (!mealPlan) {
+  const generateNewPlan = async (startDate: Date) => {
+    if (!user) return;
+    
+    try {
+      setGenerating(true);
+      setError(null);
+      setShowGenerateModal(false);
+      
+      // Generate new plan
+      const newPlan = await mealPlanAlgorithm.generateWeeklyPlan(user.uid, {
+        startDate,
+        userPreferencesId: user.uid,
+        quickBreakfasts: true,
+        mealPrepFriendly: true,
+      });
+      
+      // Save to Firebase
+      const planId = await mealPlanService.saveMealPlan(newPlan);
+      
+      // Set as active
+      await mealPlanService.updateMealPlanStatus(planId, "active");
+      
+      // Reload the plan
+      const savedPlan = await mealPlanService.getMealPlan(planId);
+      if (savedPlan) {
+        setActivePlan(savedPlan);
+        const list = ShoppingListGenerator.generateFromWeeklyPlan(savedPlan, user.uid);
+        setShoppingList(list);
+      }
+    } catch (err) {
+      console.error("Error generating meal plan:", err);
+      setError("Failed to generate meal plan. Please try again.");
+    } finally {
+      setGenerating(false);
+    }
+  };
+
+  const handleSwapMeal = async (dayIndex: number, mealType: MealType) => {
+    if (!activePlan) return;
+    
+    try {
+      const updatedPlan = await mealPlanService.swapMeal({
+        planId: activePlan.id!,
+        dayIndex,
+        mealType,
+        maintainNutrition: true,
+        excludeCurrentRecipe: true,
+      });
+      
+      if (updatedPlan) {
+        setActivePlan(updatedPlan);
+        // Regenerate shopping list
+        const list = ShoppingListGenerator.generateFromWeeklyPlan(updatedPlan, user!.uid);
+        setShoppingList(list);
+      }
+    } catch (err) {
+      console.error("Error swapping meal:", err);
+      setError("Failed to swap meal. Please try again.");
+    }
+  };
+
+  const handleRegenerateDay = async (dayIndex: number) => {
+    if (!activePlan) return;
+    
+    try {
+      const updatedPlan = await mealPlanService.regenerateDay(
+        activePlan.id!,
+        dayIndex
+      );
+      
+      if (updatedPlan) {
+        setActivePlan(updatedPlan);
+        // Regenerate shopping list
+        const list = ShoppingListGenerator.generateFromWeeklyPlan(updatedPlan, user!.uid);
+        setShoppingList(list);
+      }
+    } catch (err) {
+      console.error("Error regenerating day:", err);
+      setError("Failed to regenerate day. Please try again.");
+    }
+  };
+
+  const handlePrintPlan = () => {
+    window.print();
+  };
+
+  const handleSharePlan = async () => {
+    if (!activePlan) return;
+    
+    // Generate shareable text
+    const shareText = generateShareableText(activePlan);
+    
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: "My Weekly Meal Plan",
+          text: shareText,
+        });
+      } catch (err) {
+        console.log("Share cancelled or failed");
+      }
+    } else {
+      // Fallback to copying to clipboard
+      navigator.clipboard.writeText(shareText);
+      alert("Meal plan copied to clipboard!");
+    }
+  };
+
+  const generateShareableText = (plan: WeeklyMealPlan): string => {
+    let text = `Weekly Meal Plan - ${plan.weekStartDate.toLocaleDateString()}\n\n`;
+    
+    const daysOfWeek: DayOfWeek[] = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+    
+    for (const day of plan.days) {
+      text += `${day.dayOfWeek.toUpperCase()}\n`;
+      text += "-".repeat(20) + "\n";
+      
+      for (const meal of day.meals) {
+        if (meal.recipe) {
+          const mealName = meal.mealType.replace(/([A-Z])/g, " $1").trim();
+          text += `${mealName}: ${meal.recipe.title} (${meal.recipe.nutrition.carbohydrates}g carbs)\n`;
+        }
+      }
+      text += "\n";
+    }
+    
+    text += `\nDaily Averages:\n`;
+    text += `Calories: ${plan.summary.avgDailyCalories}\n`;
+    text += `Carbs: ${plan.summary.avgDailyCarbs}g\n`;
+    text += `Protein: ${plan.summary.avgDailyProtein}g\n`;
+    text += `Fiber: ${plan.summary.avgDailyFiber}g\n`;
+    
+    return text;
+  };
+
+  if (loading) {
     return (
-      <div className="container py-8">
-        <div className="animate-pulse">Loading meal plan...</div>
+      <div className="container mx-auto px-4 py-8">
+        <div className="flex items-center justify-center min-h-[400px]">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto mb-4"></div>
+            <p className="text-gray-600">Loading your meal plan...</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (generating) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <div className="flex items-center justify-center min-h-[400px]">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-green-600 mx-auto mb-4"></div>
+            <p className="text-gray-600">Generating your personalized meal plan...</p>
+            <p className="text-sm text-gray-500 mt-2">This may take a few moments</p>
+          </div>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="container py-8">
+    <div className="container mx-auto px-4 py-8">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">Weekly Meal Planner</h1>
-        <p className="text-neutral-600">
-          Your personalized meal plan following medical guidelines
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">
+          Weekly Meal Planner
+        </h1>
+        <p className="text-gray-600">
+          Your personalized meal plan following gestational diabetes guidelines
         </p>
       </div>
 
-      {/* Week Navigation */}
-      <div className="relative overflow-hidden rounded-lg bg-gradient-to-r from-green-50 to-emerald-50 p-6 mb-6 shadow-sm">
-        <div className="flex items-center justify-between mb-4">
-          <button
-            onClick={() => navigateWeek("prev")}
-            className="p-3 md:p-2 hover:bg-white/50 rounded-lg transition-all hover:shadow-sm text-lg md:text-base"
-            aria-label="Previous week"
-          >
-            ←
-          </button>
-
-          <div className="text-center">
-            <h2 className="text-xl font-semibold text-gray-800">
-              {mealPlan.theme}
-            </h2>
-            <div className="flex items-center justify-center gap-2 mt-1">
-              <p className="text-sm text-gray-600">Week {currentWeek} of 12</p>
-              <div className="flex gap-1">
-                {Array.from({ length: 12 }, (_, i) => (
-                  <div
-                    key={i}
-                    className={`h-2 w-2 rounded-full transition-colors ${
-                      i + 1 === currentWeek ? "bg-green-600" : "bg-gray-300"
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <button
-            onClick={() => navigateWeek("next")}
-            className="p-3 md:p-2 hover:bg-white/50 rounded-lg transition-all hover:shadow-sm text-lg md:text-base"
-            aria-label="Next week"
-          >
-            →
-          </button>
-        </div>
-
-        <p className="text-center text-gray-600 mb-4">{mealPlan.description}</p>
-
-        {/* Week Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-neutral-50 rounded-lg">
-          <div className="text-center">
-            <div className="text-2xl font-semibold text-primary-600">
-              {mealPlan.stats.avgDailyCarbs}g
-            </div>
-            <div className="text-sm text-neutral-600">Daily Carbs</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-semibold text-primary-600">
-              {mealPlan.stats.avgDailyCalories}
-            </div>
-            <div className="text-sm text-neutral-600">Daily Calories</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-semibold text-primary-600">
-              {mealPlan.stats.avgPrepTime}min
-            </div>
-            <div className="text-sm text-neutral-600">Avg Prep Time</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-semibold text-primary-600">
-              {mealPlan.groceryList.totalItems}
-            </div>
-            <div className="text-sm text-neutral-600">Grocery Items</div>
-          </div>
-        </div>
-      </div>
-
-      {/* Daily Nutrition Summary */}
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-4 mb-6">
-        <h3 className="text-lg font-semibold mb-3">
-          Today&apos;s Nutrition Target
-        </h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="bg-white rounded-lg p-3">
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-lg">🌾</span>
-              <span className="text-xs text-gray-600">Carbohydrates</span>
-            </div>
-            <div className="text-xl font-bold text-blue-600">180g</div>
-            <div className="text-xs text-gray-500">target</div>
-          </div>
-          <div className="bg-white rounded-lg p-3">
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-lg">💪</span>
-              <span className="text-xs text-gray-600">Protein</span>
-            </div>
-            <div className="text-xl font-bold text-purple-600">75g</div>
-            <div className="text-xs text-gray-500">minimum</div>
-          </div>
-          <div className="bg-white rounded-lg p-3">
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-lg">🥬</span>
-              <span className="text-xs text-gray-600">Fiber</span>
-            </div>
-            <div className="text-xl font-bold text-green-600">28g</div>
-            <div className="text-xs text-gray-500">goal</div>
-          </div>
-          <div className="bg-white rounded-lg p-3">
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-lg">🔥</span>
-              <span className="text-xs text-gray-600">Calories</span>
-            </div>
-            <div className="text-xl font-bold text-orange-600">2200</div>
-            <div className="text-xs text-gray-500">approx</div>
-          </div>
-        </div>
-      </div>
-
-      {/* Day Tabs */}
-      <div className="flex gap-2 mb-6 overflow-x-auto pb-2">
-        {Object.keys(mealPlan.meals).map((day) => (
-          <button
-            key={day}
-            onClick={() => setSelectedDay(day)}
-            className={`relative px-4 py-3 rounded-lg whitespace-nowrap transition-all min-w-[100px] ${
-              selectedDay === day
-                ? "bg-green-500 text-white shadow-lg scale-105"
-                : "bg-white text-gray-700 hover:bg-gray-50 border border-gray-200"
-            }`}
-          >
-            <div className="text-sm font-medium capitalize">{day}</div>
-            {weekDates[day] && (
-              <div className="text-xs mt-1 opacity-80">
-                {formatDate(weekDates[day])}
-              </div>
-            )}
-            {selectedDay === day && (
-              <div
-                className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 
-                border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent 
-                border-t-[6px] border-t-green-500"
-              />
-            )}
-          </button>
-        ))}
-      </div>
-
-      {/* Daily Meals */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 mb-6">
-        {Object.entries(
-          mealPlan.meals[selectedDay as keyof typeof mealPlan.meals],
-        ).map(([mealType, recipeId]) => {
-          const recipe = getMealRecipe(recipeId);
-          if (!recipe) return null;
-
-          return (
-            <div
-              key={mealType}
-              className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-4"
-            >
-              <h3 className="font-semibold text-lg mb-2 capitalize">
-                {mealType.replace(/([A-Z])/g, " $1").trim()}
-              </h3>
-              <h4 className="font-medium mb-2">{recipe.title}</h4>
-              <div className="flex gap-2 text-sm text-neutral-600 mb-3">
-                <span>{recipe.nutrition.carbs}g carbs</span>
-                <span>•</span>
-                <span>{recipe.nutrition.calories} cal</span>
-                <span>•</span>
-                <span>{recipe.totalTime} min</span>
-              </div>
-              <div className="flex gap-2">
-                <a
-                  href={`/recipes/${recipe.id}`}
-                  className="text-primary-600 hover:text-primary-800 text-sm font-medium"
-                >
-                  View Recipe →
-                </a>
-              </div>
-              {mealType === "eveningSnack" && (
-                <Badge variant="success" size="sm" className="mt-2">
-                  Bedtime Snack
-                </Badge>
-              )}
-            </div>
-          );
-        })}
-      </div>
-
-      {/* Action Buttons */}
-      <div className="flex gap-4">
-        <Button
-          onClick={() => setShowGroceryList(!showGroceryList)}
-          variant="primary"
-        >
-          {showGroceryList ? "Hide" : "Show"} Grocery List
-        </Button>
-        <Button variant="secondary">Print Week</Button>
-      </div>
-
-      {/* Grocery List */}
-      {showGroceryList && (
-        <div className="mt-6 bg-white rounded-lg shadow-sm border border-gray-200">
-          <div className="p-4 border-b flex items-center justify-between">
-            <h3 className="text-xl font-semibold">Grocery List</h3>
-            <div className="flex gap-2">
-              <button
-                onClick={() => window.print()}
-                className="flex items-center gap-2 px-3 py-1.5 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition-colors border border-gray-200"
-                title="Print grocery list"
-              >
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"
-                  />
-                </svg>
-                Print
-              </button>
-            </div>
-          </div>
-
-          <div className="divide-y">
-            {mealPlan.groceryList.categories.map((category) => {
-              // Group items within each category
-              const groupedItems = groupGroceryItems(category.items);
-
-              return (
-                <div key={category.name}>
-                  <div className="px-4 py-2 bg-gray-50 flex items-center gap-2">
-                    <span className="text-lg">
-                      {category.name === "produce" && "🥬"}
-                      {category.name === "grains" && "🌾"}
-                      {category.name === "proteins" && "🥩"}
-                      {category.name === "dairy" && "🥛"}
-                      {category.name === "pantry" && "🥫"}
-                      {category.name === "other" && "📦"}
-                    </span>
-                    <h4 className="font-medium text-gray-700 capitalize">
-                      {category.name}
-                    </h4>
-                    <span className="text-sm text-gray-500 ml-auto">
-                      {groupedItems.length} items
-                    </span>
-                  </div>
-                  <div className="px-4 py-2">
-                    <ul className="space-y-2">
-                      {groupedItems.map((item, index) => {
-                        const displayUnit = pluralizeUnit(
-                          item.totalAmount,
-                          item.unit,
-                        );
-                        return (
-                          <li
-                            key={index}
-                            className="border-b border-gray-100 last:border-0 pb-2 last:pb-0"
-                          >
-                            <div className="flex items-start gap-3">
-                              <input
-                                type="checkbox"
-                                className="w-4 h-4 mt-0.5 rounded border-gray-300 text-green-600 focus:ring-green-500"
-                                id={`${category.name}-${index}`}
-                              />
-                              <div className="flex-1">
-                                <label
-                                  htmlFor={`${category.name}-${index}`}
-                                  className="text-sm cursor-pointer block hover:bg-gray-50 p-2 -m-2 rounded"
-                                >
-                                  <span className="font-medium">
-                                    {item.totalAmount} {displayUnit}{" "}
-                                    {item.displayName}
-                                  </span>
-                                </label>
-                                {item.recipes.length > 0 && (
-                                  <div className="text-xs text-gray-500 mt-1 ml-2">
-                                    Used in:{" "}
-                                    {item.recipes.slice(0, 2).join(", ")}
-                                    {item.recipes.length > 2 &&
-                                      ` +${item.recipes.length - 2} more`}
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+      {error && (
+        <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-6">
+          {error}
         </div>
       )}
 
-      {/* Medical Compliance Note */}
-      <div className="mt-8 p-4 bg-blue-50 rounded-lg mb-20 md:mb-0">
-        <p className="text-sm text-blue-800">
-          <strong>Medical Note:</strong> This meal plan follows Halton
-          Healthcare guidelines with daily targets of ~180g carbohydrates
-          distributed across 3 meals and 3 snacks. Always consult with your
-          healthcare provider.
-        </p>
-      </div>
+      {!activePlan ? (
+        <Card className="p-8 text-center">
+          <h2 className="text-xl font-semibold mb-4">No Active Meal Plan</h2>
+          <p className="text-gray-600 mb-6">
+            You don't have an active meal plan for this week. Generate one to get started!
+          </p>
+          <Button
+            onClick={() => setShowGenerateModal(true)}
+            variant="primary"
+            size="lg"
+          >
+            Generate Meal Plan
+          </Button>
+        </Card>
+      ) : (
+        <>
+          {/* Meal Plan View */}
+          <MealPlanView
+            mealPlan={activePlan}
+            selectedDay={selectedDay}
+            onSelectDay={setSelectedDay}
+            onSwapMeal={handleSwapMeal}
+            onRegenerateDay={handleRegenerateDay}
+          />
 
-      {/* Mobile Bottom Navigation */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-2 md:hidden">
-        <div className="flex justify-around">
-          <button className="flex flex-col items-center p-2 text-gray-600">
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          {/* Action Buttons */}
+          <div className="flex flex-wrap gap-4 mt-8">
+            <Button
+              onClick={() => setShowShoppingList(!showShoppingList)}
+              variant="primary"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-              />
-            </svg>
-            <span className="text-xs mt-1">Week</span>
-          </button>
-          <button
-            onClick={() => {
-              const today = new Date()
-                .toLocaleDateString("en-US", { weekday: "long" })
-                .toLowerCase();
-              if (Object.keys(mealPlan.meals).includes(today)) {
-                setSelectedDay(today);
-              }
-            }}
-            className="flex flex-col items-center p-2 text-green-600"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+              {showShoppingList ? "Hide" : "Show"} Shopping List
+            </Button>
+            <Button
+              onClick={handlePrintPlan}
+              variant="secondary"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-            <span className="text-xs mt-1">Today</span>
-          </button>
-          <button
-            onClick={() => setShowGroceryList(!showGroceryList)}
-            className="flex flex-col items-center p-2 text-gray-600"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+              Print Plan
+            </Button>
+            <Button
+              onClick={handleSharePlan}
+              variant="secondary"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-              />
-            </svg>
-            <span className="text-xs mt-1">Grocery</span>
-          </button>
-          <button className="flex flex-col items-center p-2 text-gray-600">
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+              Share Plan
+            </Button>
+            <Button
+              onClick={() => setShowGenerateModal(true)}
+              variant="outline"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"
-              />
-            </svg>
-            <span className="text-xs mt-1">Print</span>
-          </button>
-        </div>
-      </div>
+              Generate New Plan
+            </Button>
+          </div>
+
+          {/* Shopping List */}
+          {showShoppingList && shoppingList && (
+            <div className="mt-8">
+              <ShoppingListView shoppingList={shoppingList} />
+            </div>
+          )}
+
+          {/* Medical Compliance Note */}
+          <div className="mt-8 p-4 bg-blue-50 rounded-lg">
+            <p className="text-sm text-blue-800">
+              <strong>Medical Note:</strong> This meal plan follows Halton Healthcare 
+              guidelines with daily targets of ~180g carbohydrates distributed across 
+              3 meals and 3 snacks. Always consult with your healthcare provider.
+            </p>
+          </div>
+        </>
+      )}
+
+      {/* Generate Plan Modal */}
+      {showGenerateModal && (
+        <GeneratePlanModal
+          onGenerate={generateNewPlan}
+          onClose={() => setShowGenerateModal(false)}
+          isGenerating={generating}
+        />
+      )}
+
+      {/* Printable Version */}
+      {activePlan && <PrintableMealPlan mealPlan={activePlan} />}
     </div>
   );
 }

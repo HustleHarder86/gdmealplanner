@@ -9,6 +9,7 @@ import { ChefHat, Home, Import, History, Settings, LogOut } from "lucide-react";
 
 // Define admin emails - in production, this should be in environment variables
 const ADMIN_EMAILS = [
+  "amy__ali@hotmail.com",
   "admin@gdmealplanner.com",
   "test@example.com", // For testing
   // Add more admin emails here

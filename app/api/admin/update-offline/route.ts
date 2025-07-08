@@ -3,7 +3,10 @@ import { adminAuth } from '@/src/lib/firebase/admin';
 import { OfflineUpdater } from '@/src/services/offline-updater';
 
 // Admin emails allowed to update offline files
-const ADMIN_EMAILS = process.env.ADMIN_EMAILS?.split(',') || [];
+const ADMIN_EMAILS = process.env.ADMIN_EMAILS?.split(',') || [
+  'amy__ali@hotmail.com',
+  'admin@gdmealplanner.com'
+];
 
 export async function POST(request: NextRequest) {
   try {

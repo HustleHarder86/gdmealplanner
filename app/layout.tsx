@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
+import { RecipeProvider } from "@/src/providers/recipe-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,16 +30,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-neutral-50 text-neutral-900`}>
-        <Navigation />
-        <main className="min-h-screen">{children}</main>
-        <footer className="bg-white border-t border-neutral-200 mt-12">
-          <div className="container py-8">
-            <p className="text-center text-sm text-neutral-600">
-              © 2025 Pregnancy Plate Planner. Always consult your healthcare
-              provider.
-            </p>
-          </div>
-        </footer>
+        <RecipeProvider>
+          <Navigation />
+          <main className="min-h-screen">{children}</main>
+          <footer className="bg-white border-t border-neutral-200 mt-12">
+            <div className="container py-8">
+              <p className="text-center text-sm text-neutral-600">
+                © 2025 Pregnancy Plate Planner. Always consult your healthcare
+                provider.
+              </p>
+            </div>
+          </footer>
+        </RecipeProvider>
       </body>
     </html>
   );

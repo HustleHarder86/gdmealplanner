@@ -1,0 +1,44 @@
+{
+  "downloadedAt": "2025-07-08T00:09:51.979Z",
+  "source": "https://gdmealplanner.vercel.app",
+  "totalRecipes": 242,
+  "byCategory": {
+    "breakfast": 81,
+    "lunch": 41,
+    "dinner": 105,
+    "snack": 15,
+    "uncategorized": 0
+  },
+  "sampleRecipes": [
+    {
+      "id": "spoonacular-1018582",
+      "title": "Delicious Mango Pineapple Smoothie",
+      "carbs": 20,
+      "category": "breakfast"
+    },
+    {
+      "id": "spoonacular-1019171",
+      "title": "Skinny Chocolate Banana Bread",
+      "carbs": 49,
+      "category": "breakfast"
+    },
+    {
+      "id": "spoonacular-1021260",
+      "title": "Simple Protein Pancakes",
+      "carbs": 18,
+      "category": "breakfast"
+    },
+    {
+      "id": "spoonacular-1046983",
+      "title": "Excellent No Fail and Easy Keto Zucchini Lasagna",
+      "carbs": 21,
+      "category": "dinner"
+    },
+    {
+      "id": "spoonacular-1095992",
+      "title": "Turkey Ranch BLT",
+      "carbs": 38,
+      "category": "dinner"
+    }
+  ]
+}

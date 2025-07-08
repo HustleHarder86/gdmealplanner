@@ -1,18 +1,54 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Input } from "@/components/ui";
 import RecipeCard from "@/components/RecipeCardWithFallback";
-import { useRecipes } from "@/src/hooks/useRecipes";
+import { Recipe } from "@/src/types/recipe";
+import { LocalRecipeService } from "@/src/services/local-recipe-service";
 
-export default function RecipesPage() {
+export default function RecipesOfflinePage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedTime, setSelectedTime] = useState("all");
   const [selectedCarbs, setSelectedCarbs] = useState("all");
-  
-  // Get recipes from the provider
-  const { recipes, loading, error } = useRecipes();
+  const [recipes, setRecipes] = useState<Recipe[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  // Load recipes using LocalRecipeService
+  useEffect(() => {
+    const loadRecipes = async () => {
+      try {
+        setLoading(true);
+        
+        // First try to load fresh data from the export API
+        try {
+          const response = await fetch('/api/recipes/export?format=json');
+          if (response.ok) {
+            const data = await response.json();
+            await LocalRecipeService.initialize(data.recipes);
+            LocalRecipeService.saveToLocalStorage();
+          }
+        } catch (fetchError) {
+          console.log('Could not fetch fresh data, using local storage');
+          // Initialize from local storage if API fails
+          await LocalRecipeService.initialize();
+        }
+        
+        const allRecipes = LocalRecipeService.getAllRecipes();
+        setRecipes(allRecipes);
+        setError(null);
+      } catch (err) {
+        console.error('Error loading recipes:', err);
+        setError(err instanceof Error ? err.message : 'Failed to load recipes');
+        setRecipes([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadRecipes();
+  }, []);
 
   const filteredRecipes = useMemo(() => {
     let filteredList = recipes;
@@ -22,17 +58,14 @@ export default function RecipesPage() {
       filteredList = filteredList.filter(recipe => recipe.category === selectedCategory);
     }
 
-    // Filter by search term
+    // Filter by search term - use LocalRecipeService search
     if (searchTerm) {
-      filteredList = filteredList.filter((recipe) => {
-        const matchesSearch =
-          recipe.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          (recipe.description?.toLowerCase().includes(searchTerm.toLowerCase()) ?? false) ||
-          recipe.ingredients.some((ing) =>
-            ing.name.toLowerCase().includes(searchTerm.toLowerCase()),
-          );
-        return matchesSearch;
-      });
+      filteredList = LocalRecipeService.searchRecipes(searchTerm);
+      
+      // Apply other filters to search results
+      if (selectedCategory !== "all") {
+        filteredList = filteredList.filter(recipe => recipe.category === selectedCategory);
+      }
     }
 
     // Filter by time
@@ -51,35 +84,46 @@ export default function RecipesPage() {
       });
     }
 
-    // Filter by carbs - updated to match medical guidelines
+    // Filter by carbs - use LocalRecipeService methods where possible
     if (selectedCarbs !== "all") {
-      filteredList = filteredList.filter((recipe) => {
-        const carbs = recipe.nutrition.carbohydrates;
+      if (selectedCarbs === "bedtime") {
+        // Use specialized method for bedtime snacks
+        const bedtimeSnacks = LocalRecipeService.getBedtimeSnacks();
+        filteredList = filteredList.filter(recipe => 
+          bedtimeSnacks.some(snack => snack.id === recipe.id)
+        );
+      } else {
+        filteredList = filteredList.filter((recipe) => {
+          const carbs = recipe.nutrition.carbohydrates;
 
-        switch (selectedCarbs) {
-          case "breakfast":
-            return carbs >= 25 && carbs <= 35; // Medical guideline for breakfast
-          case "main":
-            return carbs >= 40 && carbs <= 50; // Medical guideline for lunch/dinner
-          case "snack":
-            return carbs >= 15 && carbs <= 30; // Medical guideline for snacks
-          case "bedtime":
-            return carbs >= 14 && carbs <= 16 && recipe.nutrition.protein >= 5; // Bedtime snack
-          default:
-            return true;
-        }
-      });
+          switch (selectedCarbs) {
+            case "breakfast":
+              return carbs >= 25 && carbs <= 35;
+            case "main":
+              return carbs >= 40 && carbs <= 50;
+            case "snack":
+              return carbs >= 15 && carbs <= 30;
+            default:
+              return true;
+          }
+        });
+      }
     }
 
     return filteredList;
   }, [recipes, searchTerm, selectedCategory, selectedTime, selectedCarbs]);
+
+  // Get statistics for display
+  const stats = useMemo(() => {
+    return LocalRecipeService.getStats();
+  }, []);
 
   if (loading) {
     return (
       <div className="container py-8">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto mb-4"></div>
-          <p className="text-neutral-600">Loading recipes...</p>
+          <p className="text-neutral-600">Loading offline recipes...</p>
         </div>
       </div>
     );
@@ -110,10 +154,15 @@ export default function RecipesPage() {
   return (
     <div className="container py-8">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">GD-Friendly Recipes</h1>
+        <h1 className="text-3xl font-bold mb-2">GD-Friendly Recipes (Offline Mode)</h1>
         <p className="text-neutral-600">
-          Browse our collection of {recipes.length} gestational diabetes-friendly recipes from Spoonacular
+          Browse our collection of {recipes.length} gestational diabetes-friendly recipes - no internet required!
         </p>
+        {stats && (
+          <div className="mt-2 text-sm text-neutral-500">
+            {stats.withLocalImages} recipes with local images • {stats.quickRecipes} quick recipes • {stats.bedtimeSnacks} bedtime snacks
+          </div>
+        )}
       </div>
 
       {/* Search and Filters */}
@@ -121,7 +170,7 @@ export default function RecipesPage() {
         <div className="mb-4">
           <Input
             type="search"
-            placeholder="Search recipes..."
+            placeholder="Search recipes by title, ingredient, or tag..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="max-w-md"
@@ -163,6 +212,17 @@ export default function RecipesPage() {
             <option value="medium">15-30 min</option>
             <option value="long">30-60 min</option>
           </select>
+
+          <button
+            onClick={() => {
+              // Show quick recipes using LocalRecipeService
+              setRecipes(LocalRecipeService.getQuickRecipes());
+              setSelectedTime("quick");
+            }}
+            className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600"
+          >
+            Quick Recipes
+          </button>
         </div>
       </div>
 
@@ -170,6 +230,7 @@ export default function RecipesPage() {
       <div className="mb-4">
         <p className="text-neutral-600">
           Showing {filteredRecipes.length} of {recipes.length} recipes
+          {searchTerm && ` matching "${searchTerm}"`}
         </p>
       </div>
 
@@ -183,6 +244,7 @@ export default function RecipesPage() {
               setSelectedCategory("all");
               setSelectedTime("all");
               setSelectedCarbs("all");
+              setRecipes(LocalRecipeService.getAllRecipes());
             }}
             className="mt-4 px-4 py-2 text-primary-600 hover:text-primary-700"
           >

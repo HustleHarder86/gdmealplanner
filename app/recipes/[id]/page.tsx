@@ -4,46 +4,24 @@ import { useState, useEffect } from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Badge } from "@/components/ui";
-import { Recipe } from "@/src/types/recipe";
+import { useRecipe } from "@/src/hooks/useRecipes";
 
 export default function RecipeDetailPage({
   params,
 }: {
   params: { id: string };
 }) {
-  const [recipe, setRecipe] = useState<Recipe | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
   const [imageError, setImageError] = useState(false);
+  
+  // Get recipe from the provider
+  const { recipe, loading, error } = useRecipe(params.id);
 
+  // Handle 404 case
   useEffect(() => {
-    const loadRecipe = async () => {
-      try {
-        setLoading(true);
-        const response = await fetch(`/api/recipes/${params.id}`);
-        
-        if (response.status === 404) {
-          notFound();
-        }
-        
-        if (!response.ok) {
-          throw new Error(`Failed to load recipe: ${response.status}`);
-        }
-        
-        const data = await response.json();
-        setRecipe(data.recipe || null);
-        setError(null);
-      } catch (err) {
-        console.error('Error loading recipe:', err);
-        setError(err instanceof Error ? err.message : 'Failed to load recipe');
-        setRecipe(null);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadRecipe();
-  }, [params.id]);
+    if (!loading && !recipe && error) {
+      notFound();
+    }
+  }, [loading, recipe, error]);
 
   if (loading) {
     return (

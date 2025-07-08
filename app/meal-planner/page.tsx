@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { mealPlanService } from "@/lib/meal-plan-service";
-// TODO: Replace with API calls
-// import { recipeService } from "@/lib/recipe-service";
+import { useRecipes } from "@/src/hooks/useRecipes";
 import { WeeklyMasterPlan } from "@/lib/meal-plan-types";
 import { Recipe } from "@/lib/types";
 import { Badge, Button } from "@/components/ui";
@@ -15,6 +14,9 @@ export default function MealPlannerPage() {
   const [weekDates, setWeekDates] = useState<{ [key: string]: Date }>({});
   const [selectedDay, setSelectedDay] = useState<string>("monday");
   const [showGroceryList, setShowGroceryList] = useState(false);
+  
+  // Get recipes from the provider
+  const { recipes } = useRecipes();
 
   useEffect(() => {
     // Get current week based on date
@@ -53,7 +55,46 @@ export default function MealPlannerPage() {
   };
 
   const getMealRecipe = (recipeId: string): Recipe | undefined => {
-    // TODO: Replace with API call to /api/recipes/[id]
+    // Find recipe by ID from the provider's recipes
+    const recipe = recipes.find(r => r.id === recipeId);
+    
+    // Convert from our Recipe type to the component's expected Recipe type if needed
+    if (recipe) {
+      return {
+        id: recipe.id,
+        title: recipe.title,
+        description: recipe.description || '',
+        image: recipe.imageUrl,
+        originalImage: recipe.imageUrl,
+        prepTime: recipe.prepTime,
+        cookTime: recipe.cookTime,
+        totalTime: recipe.totalTime,
+        servings: recipe.servings,
+        ingredients: recipe.ingredients.map(ing => ({
+          amount: String(ing.amount || ''),
+          unit: ing.unit || '',
+          item: ing.name
+        })),
+        instructions: recipe.instructions,
+        nutrition: {
+          calories: recipe.nutrition.calories,
+          carbs: recipe.nutrition.carbohydrates,
+          carbChoices: recipe.carbChoices,
+          protein: recipe.nutrition.protein,
+          fat: recipe.nutrition.fat,
+          fiber: recipe.nutrition.fiber,
+          sugar: recipe.nutrition.sugar || 0,
+          sodium: recipe.nutrition.sodium || 0,
+          saturatedFat: recipe.nutrition.saturatedFat || 0
+        },
+        category: recipe.category === 'snack' ? 'snacks' : recipe.category as any,
+        tags: recipe.tags,
+        source: recipe.source,
+        url: recipe.sourceUrl || '',
+        medicallyCompliant: recipe.verified || false
+      };
+    }
+    
     return undefined;
   };
 

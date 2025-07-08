@@ -1,0 +1,2368 @@
+{
+  "category": "snack",
+  "count": 15,
+  "recipes": [
+    {
+      "id": "spoonacular-631843",
+      "title": "17 Bean White Chicken Chili",
+      "description": "17 Bean White Chicken Chili is an American main course.  This recipe serves 8.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "Beans",
+          "amount": 453.592,
+          "unit": "g",
+          "original": "1 pound Assorted Dry Beans, Cooked According to Package Directions"
+        },
+        {
+          "name": "Chicken Broth",
+          "amount": 1.175,
+          "unit": "L",
+          "original": "5 cups Chicken Broth"
+        },
+        {
+          "name": "Chicken Breasts",
+          "amount": 3,
+          "unit": "",
+          "original": "3 Chicken Breasts"
+        },
+        {
+          "name": "Cornstarch",
+          "amount": 3,
+          "unit": "Tbsps",
+          "original": "3 tablespoons Cornstarch"
+        },
+        {
+          "name": "Water",
+          "amount": 3,
+          "unit": "Tbsps",
+          "original": "3 tablespoons Cold Water"
+        },
+        {
+          "name": "Corn",
+          "amount": 154,
+          "unit": "g",
+          "original": "1 cup Corn"
+        },
+        {
+          "name": "Bell Pepper",
+          "amount": 1,
+          "unit": "",
+          "original": "1 Bell Pepper, Chopped"
+        },
+        {
+          "name": "Onion",
+          "amount": 0.5,
+          "unit": "",
+          "original": "1/2 Large Onion, Chopped"
+        },
+        {
+          "name": "Garlic",
+          "amount": 2,
+          "unit": "cloves",
+          "original": "2 cloves Garlic, Minced"
+        },
+        {
+          "name": "Chiles",
+          "amount": 1,
+          "unit": "can",
+          "original": "1 can Diced Green Chiles"
+        },
+        {
+          "name": "Tomato",
+          "amount": 1,
+          "unit": "",
+          "original": "1 Tomato, Chopped"
+        },
+        {
+          "name": "Lime",
+          "amount": 0.5,
+          "unit": "",
+          "original": "1/2 Lime, Squeezed"
+        },
+        {
+          "name": "Cumin",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon Cumin"
+        },
+        {
+          "name": "Chili Powder",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon Chili Powder"
+        },
+        {
+          "name": "Oregano",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon Oregano"
+        },
+        {
+          "name": "Bell Pepper",
+          "amount": 0.25,
+          "unit": "tsps",
+          "original": "1/4 teaspoon Crushed Red Pepper"
+        },
+        {
+          "name": "Pepper",
+          "amount": 0.25,
+          "unit": "tsps",
+          "original": "1/4 teaspoon Pepper"
+        },
+        {
+          "name": "Bunch Cilantro",
+          "amount": 1,
+          "unit": "",
+          "original": "1 Small Bunch Cilantro, Chopped"
+        },
+        {
+          "name": "Salt",
+          "amount": 8,
+          "unit": "servings",
+          "original": "Salt to Taste"
+        },
+        {
+          "name": "Corriander",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon Corriander"
+        },
+        {
+          "name": "Corriander",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon Corriander"
+        }
+      ],
+      "instructions": [
+        "1. Cook your beans according to package directions.",
+        "2. Add the broth to a large pot and bring to a boil.",
+        "3. Add in the chicken and cook through.",
+        "4. Shred chicken and set aside.",
+        "5. Mix together the water and cornstarch.",
+        "6. Add to broth and boil for a minute until slightly thickened.",
+        "7. Add the chicken back into the broth along with the corn, bell pepper, onion, garlic, chiles, tomato, and lime.",
+        "8. Add in the spices; the cumin, chile powder, oregano, coriander, crushed pepper, and pepper.",
+        "9. Add the cooked beans into the chili along with the cilantro.",
+        "10. Salt to taste and let simmer on low heat covered until ready to eat."
+      ],
+      "nutrition": {
+        "calories": 177,
+        "carbohydrates": 16,
+        "fiber": 3,
+        "sugar": 3,
+        "protein": 22,
+        "fat": 3,
+        "saturatedFat": 1,
+        "sodium": 918
+      },
+      "carbChoices": 1,
+      "tags": [
+        "snack",
+        "gluten-free",
+        "dairy-free",
+        "american",
+        "chicken"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/631843-556x370.jpg",
+      "source": "foodista.com",
+      "sourceUrl": "https://www.foodista.com/recipe/WM748VQ5/17-bean-white-chicken-chili",
+      "gdValidation": {
+        "isValid": true,
+        "score": 55,
+        "details": {
+          "totalScore": 55,
+          "gdComplianceScore": 30,
+          "practicalityScore": 25,
+          "popularityScore": 0,
+          "breakdown": {
+            "gdCompliance": {
+              "score": 30,
+              "maxScore": 40,
+              "details": {
+                "carbRange": 10,
+                "proteinAdequacy": 10,
+                "fiberContent": 10
+              }
+            },
+            "practicality": {
+              "score": 25,
+              "maxScore": 30,
+              "details": {
+                "cookingTime": 8,
+                "ingredientAvailability": 7,
+                "difficultyLevel": 10
+              }
+            },
+            "popularity": {
+              "score": 0,
+              "maxScore": 30,
+              "details": {
+                "spoonacularRating": 0,
+                "numberOfReviews": 0
+              }
+            }
+          },
+          "warnings": [
+            "Low popularity - consider user acceptance"
+          ],
+          "recommendations": []
+        },
+        "warnings": []
+      },
+      "importedFrom": "spoonacular",
+      "importedAt": "2025-07-07T15:33:16.981Z",
+      "verified": false,
+      "popularity": 0,
+      "userRatings": [],
+      "timesViewed": 0,
+      "timesAddedToPlan": 0,
+      "createdAt": {
+        "_seconds": 1751902398,
+        "_nanoseconds": 122000000
+      },
+      "updatedAt": {
+        "_seconds": 1751902398,
+        "_nanoseconds": 122000000
+      }
+    },
+    {
+      "id": "spoonacular-634431",
+      "title": "Basil Lime White Bean Hummus",
+      "description": "Basil Lime White Bean Hummus requires around 45 minutes from start to finish.  One serving contains 96 calories, 4g of protein, and 4g of fat.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "Cannellini Beans",
+          "amount": 425.243,
+          "unit": "g",
+          "original": "15 ounce can of cannellini beans, drained and rinsed"
+        },
+        {
+          "name": "Garlic",
+          "amount": 2,
+          "unit": "cloves",
+          "original": "2 cloves of garlic, minced"
+        },
+        {
+          "name": "Basil",
+          "amount": 6,
+          "unit": "g",
+          "original": "1/4 cup fresh basil"
+        },
+        {
+          "name": "Lime Zest",
+          "amount": 1,
+          "unit": "",
+          "original": "1 zest of lime"
+        },
+        {
+          "name": "Juice From Lime",
+          "amount": 0.5,
+          "unit": "",
+          "original": "1/2 juice from lime"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons olive oil"
+        },
+        {
+          "name": "Water",
+          "amount": 4,
+          "unit": "Tbsps",
+          "original": "4 tablespoons water (add only as needed)"
+        },
+        {
+          "name": "Salt",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon salt"
+        },
+        {
+          "name": "Pepper",
+          "amount": 0.25,
+          "unit": "tsps",
+          "original": "1/4 teaspoon black pepper"
+        }
+      ],
+      "instructions": [
+        "1. Combine beans, garlic, basil, lime zest, juice, and olive oil in the food processor and blend until mixed.",
+        "2. With the processor on, add water until desired consistency is reached.",
+        "3. Add salt and pepper, then taste and add more if needed.",
+        "4. Serve with chips or veggies, preferably cold. If you can't wait, eat it right away!"
+      ],
+      "nutrition": {
+        "calories": 96,
+        "carbohydrates": 13,
+        "fiber": 3,
+        "sugar": 0,
+        "protein": 4,
+        "fat": 4,
+        "saturatedFat": 1,
+        "sodium": 149
+      },
+      "carbChoices": 1,
+      "tags": [
+        "snack",
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "dairy-free",
+        "middle eastern",
+        "beans"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/634431-556x370.jpg",
+      "source": "Foodista",
+      "sourceUrl": "https://www.foodista.com/recipe/J2ST3QZK/basil-lime-white-bean-hummus",
+      "gdValidation": {
+        "isValid": true,
+        "score": 74,
+        "details": {
+          "totalScore": 74,
+          "gdComplianceScore": 40,
+          "practicalityScore": 28,
+          "popularityScore": 6,
+          "breakdown": {
+            "gdCompliance": {
+              "score": 40,
+              "maxScore": 40,
+              "details": {
+                "carbRange": 20,
+                "proteinAdequacy": 10,
+                "fiberContent": 10
+              }
+            },
+            "practicality": {
+              "score": 28,
+              "maxScore": 30,
+              "details": {
+                "cookingTime": 8,
+                "ingredientAvailability": 10,
+                "difficultyLevel": 10
+              }
+            },
+            "popularity": {
+              "score": 6,
+              "maxScore": 30,
+              "details": {
+                "spoonacularRating": 6,
+                "numberOfReviews": 0
+              }
+            }
+          },
+          "warnings": [
+            "Low popularity - consider user acceptance"
+          ],
+          "recommendations": []
+        },
+        "warnings": []
+      },
+      "importedFrom": "spoonacular",
+      "importedAt": "2025-07-07T15:48:18.893Z",
+      "verified": false,
+      "popularity": 0,
+      "userRatings": [],
+      "timesViewed": 0,
+      "timesAddedToPlan": 0,
+      "createdAt": {
+        "_seconds": 1751903312,
+        "_nanoseconds": 429000000
+      },
+      "updatedAt": {
+        "_seconds": 1751903312,
+        "_nanoseconds": 429000000
+      }
+    },
+    {
+      "id": "spoonacular-636422",
+      "title": "Buffalo Wing Hummus",
+      "description": "Buffalo Wing Hummus could be just the gluten free, dairy free, lacto ovo vegetarian, and vegan recipe you've been looking for.  This recipe makes 8 servings with 37 calories, 2g of protein, and 1g of fat each.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "Barbecue Sauce",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 Tablespoons Barbecue Sauce"
+        },
+        {
+          "name": "Chickpeas",
+          "amount": 246,
+          "unit": "g",
+          "original": "1 ½ cup Canned Chickpeas"
+        },
+        {
+          "name": "Celery Salt",
+          "amount": 0.25,
+          "unit": "tsps",
+          "original": "¼ teaspoons Celery Salt"
+        },
+        {
+          "name": "Garlic",
+          "amount": 1,
+          "unit": "clove",
+          "original": "1 clove garlic"
+        },
+        {
+          "name": "Franks Hot Sauce",
+          "amount": 3,
+          "unit": "Tbsps",
+          "original": "3 Tablespoons Franks Hot Sauce (try 2 Tbsp. First To Check Spice Factor)"
+        },
+        {
+          "name": "Lemon Juice",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 Tablespoons Lemon Juice, Fresh"
+        },
+        {
+          "name": "Paprika",
+          "amount": 0.75,
+          "unit": "tsps",
+          "original": "¾ teaspoons Paprika"
+        },
+        {
+          "name": "Distilled Vinegar",
+          "amount": 0.5,
+          "unit": "Tbsps",
+          "original": "½ Tablespoons Distilled White Vinegar"
+        }
+      ],
+      "instructions": [
+        "1. Put the chickpeas, chickpea liquid, garlic, lemon juice, paprika, celery salt, barbecue sauce, hot sauce, and vinegar in a food processor. Puree until smooth and creamy."
+      ],
+      "nutrition": {
+        "calories": 37,
+        "carbohydrates": 7,
+        "fiber": 1,
+        "sugar": 2,
+        "protein": 2,
+        "fat": 1,
+        "saturatedFat": 0,
+        "sodium": 332
+      },
+      "carbChoices": 0,
+      "tags": [
+        "snack",
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "dairy-free",
+        "american"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/636422-556x370.jpg",
+      "source": "Foodista",
+      "sourceUrl": "https://www.foodista.com/recipe/TKRJW6HH/buffalo-wing-hummus-with-lime-chips",
+      "gdValidation": {
+        "isValid": true,
+        "score": 58,
+        "details": {
+          "totalScore": 58,
+          "gdComplianceScore": 30,
+          "practicalityScore": 25,
+          "popularityScore": 3,
+          "breakdown": {
+            "gdCompliance": {
+              "score": 30,
+              "maxScore": 40,
+              "details": {
+                "carbRange": 20,
+                "proteinAdequacy": 0,
+                "fiberContent": 10
+              }
+            },
+            "practicality": {
+              "score": 25,
+              "maxScore": 30,
+              "details": {
+                "cookingTime": 8,
+                "ingredientAvailability": 10,
+                "difficultyLevel": 7
+              }
+            },
+            "popularity": {
+              "score": 3,
+              "maxScore": 30,
+              "details": {
+                "spoonacularRating": 0,
+                "numberOfReviews": 3
+              }
+            }
+          },
+          "warnings": [
+            "Low popularity - consider user acceptance"
+          ],
+          "recommendations": []
+        },
+        "warnings": []
+      },
+      "importedFrom": "spoonacular",
+      "importedAt": "2025-07-07T15:48:17.766Z",
+      "verified": false,
+      "popularity": 0,
+      "userRatings": [],
+      "timesViewed": 0,
+      "timesAddedToPlan": 0,
+      "createdAt": {
+        "_seconds": 1751903312,
+        "_nanoseconds": 429000000
+      },
+      "updatedAt": {
+        "_seconds": 1751903312,
+        "_nanoseconds": 429000000
+      }
+    },
+    {
+      "id": "spoonacular-636962",
+      "title": "Caprese Quick Bread",
+      "description": "Forget going out to eat or ordering takeout every time you crave Mediterranean food.  Try making Caprese Quick Bread at home.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 12,
+      "ingredients": [
+        {
+          "name": "Flour",
+          "amount": 93.75,
+          "unit": "g",
+          "original": "¾ cups All-purpose Flour"
+        },
+        {
+          "name": "Flour",
+          "amount": 90,
+          "unit": "g",
+          "original": "¾ cups White Whole Wheat Flour"
+        },
+        {
+          "name": "Baking Powder",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 Tablespoon Baking Powder"
+        },
+        {
+          "name": "Salt",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "½ teaspoons Salt"
+        },
+        {
+          "name": "Basil",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 Tablespoon Dried Basil"
+        },
+        {
+          "name": "Weight Lite Mozzarella Cheese",
+          "amount": 113.398,
+          "unit": "g",
+          "original": "4 ounces, weight Lite Mozzarella Cheese, Shredded"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 Tablespoon Olive Oil"
+        },
+        {
+          "name": "Egg",
+          "amount": 1,
+          "unit": "",
+          "original": "1 whole Egg, Lightly Beaten"
+        },
+        {
+          "name": "Non-fat Milk",
+          "amount": 245,
+          "unit": "ml",
+          "original": "1 cup Non-fat Milk"
+        },
+        {
+          "name": "Sundried Tomatoes",
+          "amount": 27.5,
+          "unit": "g",
+          "original": "¼ cups Sundried Tomatoes, Diced, Not Oil Packed"
+        },
+        {
+          "name": "Butter",
+          "amount": 0.75,
+          "unit": "Tbsps",
+          "original": "¾ Tablespoons Butter, Melted"
+        }
+      ],
+      "instructions": [
+        "1. Heat oven to 35",
+        "2. Spray a 9x5x3 loaf pan or two mini bread pans with cooking spray.",
+        "3. Stir together flours,cheese, baking powder, basil and salt in medium bowl.",
+        "4. Add olive oil, egg and milk, stir till combined. Fold in sundried tomatoes.",
+        "5. Pour into pan, drizzle melted butter over top of bread. (Bread will be thick, flatten it out with your fingers)",
+        "6. Bake 30 minutes for mini loaf pans and 40  50 minutes for large loaf pan, or until golden brown and toothpick inserted in center comes out clean. Cool 5 minutes, remove from pan to wire rack. Cool 30 minutes before slicing, if you can control yourself!"
+      ],
+      "nutrition": {
+        "calories": 118,
+        "carbohydrates": 14,
+        "fiber": 1,
+        "sugar": 2,
+        "protein": 5,
+        "fat": 5,
+        "saturatedFat": 2,
+        "sodium": 284
+      },
+      "carbChoices": 1,
+      "tags": [
+        "snack",
+        "vegetarian",
+        "mediterranean",
+        "italian",
+        "european"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/636962-556x370.jpg",
+      "source": "foodista.com",
+      "sourceUrl": "https://www.foodista.com/recipe/W5MF623S/caprese-quick-bread",
+      "gdValidation": {
+        "isValid": true,
+        "score": 71,
+        "details": {
+          "totalScore": 71,
+          "gdComplianceScore": 40,
+          "practicalityScore": 28,
+          "popularityScore": 3,
+          "breakdown": {
+            "gdCompliance": {
+              "score": 40,
+              "maxScore": 40,
+              "details": {
+                "carbRange": 20,
+                "proteinAdequacy": 10,
+                "fiberContent": 10
+              }
+            },
+            "practicality": {
+              "score": 28,
+              "maxScore": 30,
+              "details": {
+                "cookingTime": 8,
+                "ingredientAvailability": 10,
+                "difficultyLevel": 10
+              }
+            },
+            "popularity": {
+              "score": 3,
+              "maxScore": 30,
+              "details": {
+                "spoonacularRating": 0,
+                "numberOfReviews": 3
+              }
+            }
+          },
+          "warnings": [
+            "Low popularity - consider user acceptance"
+          ],
+          "recommendations": []
+        },
+        "warnings": []
+      },
+      "importedFrom": "spoonacular",
+      "importedAt": "2025-07-07T17:59:17.499Z",
+      "verified": false,
+      "popularity": 0,
+      "userRatings": [],
+      "timesViewed": 0,
+      "timesAddedToPlan": 0,
+      "createdAt": {
+        "_seconds": 1751911159,
+        "_nanoseconds": 911000000
+      },
+      "updatedAt": {
+        "_seconds": 1751911159,
+        "_nanoseconds": 911000000
+      }
+    },
+    {
+      "id": "spoonacular-637476",
+      "title": "Chavrie Hummus",
+      "description": "Chavrie Hummus could be just the gluten free and lacto ovo vegetarian recipe you've been looking for.  This hor d'oeuvre has 195 calories, 11g of protein, and 13g of fat per serving.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Cilantro",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon Chopped Cilantro"
+        },
+        {
+          "name": "Chavrie Goat Cheese",
+          "amount": 150.252,
+          "unit": "g",
+          "original": "5.3 oz Chavrie fresh goat cheese"
+        },
+        {
+          "name": "Hummus",
+          "amount": 226.796,
+          "unit": "g",
+          "original": "1 8 oz package Hummus"
+        },
+        {
+          "name": "Lemon Juice",
+          "amount": 28.35,
+          "unit": "g",
+          "original": "1 ounce lemon juice"
+        }
+      ],
+      "instructions": [
+        "1. Combine all ingredients and mix well",
+        "2. Transfer mixture to a serving dish and refrigerate",
+        "3. Serve with your favorite chips"
+      ],
+      "nutrition": {
+        "calories": 195,
+        "carbohydrates": 9,
+        "fiber": 3,
+        "sugar": 1,
+        "protein": 11,
+        "fat": 13,
+        "saturatedFat": 6,
+        "sodium": 353
+      },
+      "carbChoices": 1,
+      "tags": [
+        "snack",
+        "vegetarian",
+        "gluten-free",
+        "middle eastern"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/637476-556x370.jpg",
+      "source": "Foodista",
+      "sourceUrl": "https://www.foodista.com/recipe/ZK7CTVNS/chavrie-hummus",
+      "gdValidation": {
+        "isValid": true,
+        "score": 71,
+        "details": {
+          "totalScore": 71,
+          "gdComplianceScore": 40,
+          "practicalityScore": 28,
+          "popularityScore": 3,
+          "breakdown": {
+            "gdCompliance": {
+              "score": 40,
+              "maxScore": 40,
+              "details": {
+                "carbRange": 20,
+                "proteinAdequacy": 10,
+                "fiberContent": 10
+              }
+            },
+            "practicality": {
+              "score": 28,
+              "maxScore": 30,
+              "details": {
+                "cookingTime": 8,
+                "ingredientAvailability": 10,
+                "difficultyLevel": 10
+              }
+            },
+            "popularity": {
+              "score": 3,
+              "maxScore": 30,
+              "details": {
+                "spoonacularRating": 3,
+                "numberOfReviews": 0
+              }
+            }
+          },
+          "warnings": [
+            "Low popularity - consider user acceptance"
+          ],
+          "recommendations": []
+        },
+        "warnings": []
+      },
+      "importedFrom": "spoonacular",
+      "importedAt": "2025-07-07T15:48:23.431Z",
+      "verified": false,
+      "popularity": 0,
+      "userRatings": [],
+      "timesViewed": 0,
+      "timesAddedToPlan": 0,
+      "createdAt": {
+        "_seconds": 1751903312,
+        "_nanoseconds": 429000000
+      },
+      "updatedAt": {
+        "_seconds": 1751903312,
+        "_nanoseconds": 429000000
+      }
+    },
+    {
+      "id": "spoonacular-639410",
+      "title": "Cilantro Hummus",
+      "description": "Need a gluten free, dairy free, lacto ovo vegetarian, and vegan hor d'oeuvre.  Cilantro Hummus could be an amazing recipe to try.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "Garbanzo Beans",
+          "amount": 425.243,
+          "unit": "g",
+          "original": "1 (15 oz) can garbanzo beans, drained and rinsed"
+        },
+        {
+          "name": "Tahini",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 Tbsp. tahini"
+        },
+        {
+          "name": "Lemon Juice",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 Tbsp. lemon juice"
+        },
+        {
+          "name": "Garlic Cloves",
+          "amount": 2,
+          "unit": "",
+          "original": "2 garlic cloves, minced"
+        },
+        {
+          "name": "Salt",
+          "amount": 0.25,
+          "unit": "tsps",
+          "original": "1/4 tsp. salt (I used a little less)"
+        },
+        {
+          "name": "Cayenne Pepper",
+          "amount": 1,
+          "unit": "pinch",
+          "original": "pinch cayenne pepper"
+        },
+        {
+          "name": "Water",
+          "amount": 59.147,
+          "unit": "ml",
+          "original": "1/4 c. water (more or less depending on texture you want)"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 Tbsp. olive oil (more or less depending on texture you want)"
+        },
+        {
+          "name": "Cilantro",
+          "amount": 4,
+          "unit": "g",
+          "original": "1/4 c. cilantro (or more depending on preference) + 3 extra for garnish"
+        }
+      ],
+      "instructions": [
+        "1. In your food processor, add the garbanzo beans, tahini, lemon juice, garlic, salt and cayenne. Turn on and pulse until mixture is fairly smooth.",
+        "2. Start processor running steady and slowly pour in the water, stopping to test the texture, then adding more water if you'd like.",
+        "3. Again, with motor running, slowly pour in the olive oil, adding more if you'd like.",
+        "4. Stop processor, taste and adjust seasonings, pulse and repeat taste testing until you have it the way you like it.",
+        "5. Add cilantro and pulse a few times.",
+        "6. Spoon out into a bowl and garnish with a drizzle of olive oil and cilantro if desired.",
+        "7. Serve immediately, or cover and refrigerate.",
+        "8. Serve as a dip, spread or however you'd like!"
+      ],
+      "nutrition": {
+        "calories": 75,
+        "carbohydrates": 8,
+        "fiber": 2,
+        "sugar": 0,
+        "protein": 3,
+        "fat": 4,
+        "saturatedFat": 0,
+        "sodium": 222
+      },
+      "carbChoices": 1,
+      "tags": [
+        "snack",
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "dairy-free",
+        "middle eastern",
+        "beans"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/639410-556x370.jpg",
+      "source": "Foodista",
+      "sourceUrl": "https://www.foodista.com/recipe/JMRM47TD/cilantro-hummus",
+      "gdValidation": {
+        "isValid": true,
+        "score": 71,
+        "details": {
+          "totalScore": 71,
+          "gdComplianceScore": 40,
+          "practicalityScore": 28,
+          "popularityScore": 3,
+          "breakdown": {
+            "gdCompliance": {
+              "score": 40,
+              "maxScore": 40,
+              "details": {
+                "carbRange": 20,
+                "proteinAdequacy": 10,
+                "fiberContent": 10
+              }
+            },
+            "practicality": {
+              "score": 28,
+              "maxScore": 30,
+              "details": {
+                "cookingTime": 8,
+                "ingredientAvailability": 10,
+                "difficultyLevel": 10
+              }
+            },
+            "popularity": {
+              "score": 3,
+              "maxScore": 30,
+              "details": {
+                "spoonacularRating": 3,
+                "numberOfReviews": 0
+              }
+            }
+          },
+          "warnings": [
+            "Low popularity - consider user acceptance"
+          ],
+          "recommendations": []
+        },
+        "warnings": []
+      },
+      "importedFrom": "spoonacular",
+      "importedAt": "2025-07-07T15:48:30.234Z",
+      "verified": false,
+      "popularity": 0,
+      "userRatings": [],
+      "timesViewed": 0,
+      "timesAddedToPlan": 0,
+      "createdAt": {
+        "_seconds": 1751903312,
+        "_nanoseconds": 429000000
+      },
+      "updatedAt": {
+        "_seconds": 1751903312,
+        "_nanoseconds": 429000000
+      }
+    },
+    {
+      "id": "spoonacular-640834",
+      "title": "Crispy Rosemary Hummus",
+      "description": "You can never have too many middl eastern recipes, so give Crispy Rosemary Hummus a try.  This recipe serves 8.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "Garbanzo Beans",
+          "amount": 425.243,
+          "unit": "g",
+          "original": "15 oz. cans garbanzo beans, drained"
+        },
+        {
+          "name": "Greek Yogurt",
+          "amount": 200,
+          "unit": "ml",
+          "original": "cup plain greek yogurt"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons olive oil"
+        },
+        {
+          "name": "Rosemary",
+          "amount": 4,
+          "unit": "sprigs",
+          "original": "4 sprigs of fresh rosemary"
+        },
+        {
+          "name": "Lemon Juice",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon lemon juice"
+        },
+        {
+          "name": "Garlic Clove",
+          "amount": 1,
+          "unit": "large",
+          "original": "1 large garlic clove"
+        },
+        {
+          "name": "Salt",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon salt"
+        },
+        {
+          "name": "Bell Pepper",
+          "amount": 8,
+          "unit": "servings",
+          "original": "Pepper to taste"
+        }
+      ],
+      "instructions": [
+        "1. Place the oil in a small skillet over high heat.",
+        "2. Once smoking, flash-fry the rosemary sprigs for 30 seconds per side.",
+        "3. Remove and place on a paper towel, reserving the oil.",
+        "4. Place the garbanzo beans in the food processor with the yogurt, rosemary-infused oil, lemon juice, garlic, salt and pepper.",
+        "5. Puree to desired  consistency.",
+        "6. Pull the crispy rosemary leaves off the stems and place them in the food processor. Pulse until the rosemary has worked through the hummus.",
+        "7. Makes 2  cups."
+      ],
+      "nutrition": {
+        "calories": 113,
+        "carbohydrates": 13,
+        "fiber": 4,
+        "sugar": 4,
+        "protein": 6,
+        "fat": 5,
+        "saturatedFat": 1,
+        "sodium": 451
+      },
+      "carbChoices": 1,
+      "tags": [
+        "snack",
+        "vegetarian",
+        "gluten-free",
+        "middle eastern",
+        "beans"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/640834-556x370.jpg",
+      "source": "Foodista",
+      "sourceUrl": "https://www.foodista.com/recipe/GCVC5D7M/crispy-rosemary-hummus",
+      "gdValidation": {
+        "isValid": true,
+        "score": 77,
+        "details": {
+          "totalScore": 77,
+          "gdComplianceScore": 40,
+          "practicalityScore": 28,
+          "popularityScore": 9,
+          "breakdown": {
+            "gdCompliance": {
+              "score": 40,
+              "maxScore": 40,
+              "details": {
+                "carbRange": 20,
+                "proteinAdequacy": 10,
+                "fiberContent": 10
+              }
+            },
+            "practicality": {
+              "score": 28,
+              "maxScore": 30,
+              "details": {
+                "cookingTime": 8,
+                "ingredientAvailability": 10,
+                "difficultyLevel": 10
+              }
+            },
+            "popularity": {
+              "score": 9,
+              "maxScore": 30,
+              "details": {
+                "spoonacularRating": 9,
+                "numberOfReviews": 0
+              }
+            }
+          },
+          "warnings": [
+            "Low popularity - consider user acceptance"
+          ],
+          "recommendations": []
+        },
+        "warnings": []
+      },
+      "importedFrom": "spoonacular",
+      "importedAt": "2025-07-07T15:48:26.839Z",
+      "verified": false,
+      "popularity": 0,
+      "userRatings": [],
+      "timesViewed": 0,
+      "timesAddedToPlan": 0,
+      "createdAt": {
+        "_seconds": 1751903312,
+        "_nanoseconds": 429000000
+      },
+      "updatedAt": {
+        "_seconds": 1751903312,
+        "_nanoseconds": 429000000
+      }
+    },
+    {
+      "id": "spoonacular-642169",
+      "title": "Edamame Hummus",
+      "description": "Need a gluten free, dairy free, lacto ovo vegetarian, and vegan hor d'oeuvre.  Edamame Hummus could be an awesome recipe to try.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Chili Flakes",
+          "amount": 0.25,
+          "unit": "tsps",
+          "original": "¼ teaspoon chili flakes (if you like it spicy)"
+        },
+        {
+          "name": "Edamame",
+          "amount": 226.796,
+          "unit": "g",
+          "original": "8 oz. Edamame"
+        },
+        {
+          "name": "Flat-leaf Parsley",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon chopped, fresh flat-leaf parsley"
+        },
+        {
+          "name": "Garlic",
+          "amount": 4,
+          "unit": "cloves",
+          "original": "4 cloves garlic minced"
+        },
+        {
+          "name": "Ground Coriander",
+          "amount": 0.25,
+          "unit": "tsps",
+          "original": "¼ teaspoon ground coriander"
+        },
+        {
+          "name": "Ground Cumin",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "½ teaspoon ground cumin"
+        },
+        {
+          "name": "Kosher Salt",
+          "amount": 0.75,
+          "unit": "tsps",
+          "original": "¾ teaspoon Kosher salt"
+        },
+        {
+          "name": "Lemon",
+          "amount": 1,
+          "unit": "",
+          "original": "1 lemon"
+        },
+        {
+          "name": "Lemon Zest",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "½ teaspoon freshly grated lemon zest"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 3,
+          "unit": "Tbsps",
+          "original": "3 tablespoons extra-virgin olive oil"
+        },
+        {
+          "name": "Tahini",
+          "amount": 60,
+          "unit": "ml",
+          "original": "¼ cup Tahini (sesame-seed paste)"
+        },
+        {
+          "name": "Water",
+          "amount": 709.764,
+          "unit": "ml",
+          "original": "3 cups of Water"
+        }
+      ],
+      "instructions": [
+        "1. Boil the edamame in salted water for 4 to 5 minutes.",
+        "2. Drain.In a food processor, puree the Edamame, tahini, water, lemon zest and juice, garlic, salt, cumin, coriander, and chili flakes (optional) until smooth.With the motor running, slowly drizzle in 2 tablespoons of olive oil and mix until absorbed.",
+        "3. Transfer to a small bowl, stir in the parsley and drizzle with remaining oil.",
+        "4. Serve, or refrigerate, covered, up to 3 days."
+      ],
+      "nutrition": {
+        "calories": 177,
+        "carbohydrates": 10,
+        "fiber": 3,
+        "sugar": 2,
+        "protein": 6,
+        "fat": 14,
+        "saturatedFat": 2,
+        "sodium": 303
+      },
+      "carbChoices": 1,
+      "tags": [
+        "snack",
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "dairy-free",
+        "middle eastern"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/642169-556x370.jpg",
+      "source": "Foodista",
+      "sourceUrl": "https://www.foodista.com/recipe/JP74GT52/edamame-hummus",
+      "gdValidation": {
+        "isValid": true,
+        "score": 71,
+        "details": {
+          "totalScore": 71,
+          "gdComplianceScore": 40,
+          "practicalityScore": 28,
+          "popularityScore": 3,
+          "breakdown": {
+            "gdCompliance": {
+              "score": 40,
+              "maxScore": 40,
+              "details": {
+                "carbRange": 20,
+                "proteinAdequacy": 10,
+                "fiberContent": 10
+              }
+            },
+            "practicality": {
+              "score": 28,
+              "maxScore": 30,
+              "details": {
+                "cookingTime": 8,
+                "ingredientAvailability": 10,
+                "difficultyLevel": 10
+              }
+            },
+            "popularity": {
+              "score": 3,
+              "maxScore": 30,
+              "details": {
+                "spoonacularRating": 3,
+                "numberOfReviews": 0
+              }
+            }
+          },
+          "warnings": [
+            "Low popularity - consider user acceptance"
+          ],
+          "recommendations": []
+        },
+        "warnings": []
+      },
+      "importedFrom": "spoonacular",
+      "importedAt": "2025-07-07T15:48:21.167Z",
+      "verified": false,
+      "popularity": 0,
+      "userRatings": [],
+      "timesViewed": 0,
+      "timesAddedToPlan": 0,
+      "createdAt": {
+        "_seconds": 1751903312,
+        "_nanoseconds": 429000000
+      },
+      "updatedAt": {
+        "_seconds": 1751903312,
+        "_nanoseconds": 429000000
+      }
+    },
+    {
+      "id": "spoonacular-647636",
+      "title": "Hummus With Tahini Sauce",
+      "description": "You can never have too many middl eastern recipes, so give Hummus With Tahini Sauce a try.  This gluten free, dairy free, lacto ovo vegetarian, and vegan recipe serves 2 and costs $1.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Chickpeas- Any Brand- Drain And Wash",
+          "amount": 1,
+          "unit": "can",
+          "original": "1 can Chickpeas- any brand- Drain and wash"
+        },
+        {
+          "name": "Lemon Juice",
+          "amount": 61,
+          "unit": "ml",
+          "original": "1/4 cup lemon juice"
+        },
+        {
+          "name": "Tahini Sauce",
+          "amount": 120,
+          "unit": "ml",
+          "original": "1/2 cup Tahini sauce"
+        },
+        {
+          "name": "Cumin",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon Cumin"
+        },
+        {
+          "name": "Garlic",
+          "amount": 2,
+          "unit": "cloves",
+          "original": "Couple of crushed garlic cloves"
+        },
+        {
+          "name": "Salt",
+          "amount": 2,
+          "unit": "servings",
+          "original": "Salt to taste"
+        },
+        {
+          "name": "Sumac And Olive",
+          "amount": 2,
+          "unit": "servings",
+          "original": "Parsley, Paprika or Sumac and Olive"
+        }
+      ],
+      "instructions": [
+        "1. In a food processor mix all the ingredients and process them on high speed.",
+        "2. Pour into a serving bowl, garnish with parsley, Sumac, Cumin and Olive Oil, or you may garnish to your liking using whole chickpeas and Olive Oil."
+      ],
+      "nutrition": {
+        "calories": 400,
+        "carbohydrates": 17,
+        "fiber": 4,
+        "sugar": 1,
+        "protein": 11,
+        "fat": 35,
+        "saturatedFat": 5,
+        "sodium": 529
+      },
+      "carbChoices": 1,
+      "tags": [
+        "snack",
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "dairy-free",
+        "middle eastern"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/647636-556x370.jpg",
+      "source": "Foodista",
+      "sourceUrl": "https://www.foodista.com/recipe/T4HXRPRM/hummus-with-tahini-sauce",
+      "gdValidation": {
+        "isValid": true,
+        "score": 74,
+        "details": {
+          "totalScore": 74,
+          "gdComplianceScore": 40,
+          "practicalityScore": 25,
+          "popularityScore": 9,
+          "breakdown": {
+            "gdCompliance": {
+              "score": 40,
+              "maxScore": 40,
+              "details": {
+                "carbRange": 20,
+                "proteinAdequacy": 10,
+                "fiberContent": 10
+              }
+            },
+            "practicality": {
+              "score": 25,
+              "maxScore": 30,
+              "details": {
+                "cookingTime": 8,
+                "ingredientAvailability": 10,
+                "difficultyLevel": 7
+              }
+            },
+            "popularity": {
+              "score": 9,
+              "maxScore": 30,
+              "details": {
+                "spoonacularRating": 9,
+                "numberOfReviews": 0
+              }
+            }
+          },
+          "warnings": [
+            "Low popularity - consider user acceptance"
+          ],
+          "recommendations": []
+        },
+        "warnings": []
+      },
+      "importedFrom": "spoonacular",
+      "importedAt": "2025-07-07T15:48:29.089Z",
+      "verified": false,
+      "popularity": 0,
+      "userRatings": [],
+      "timesViewed": 0,
+      "timesAddedToPlan": 0,
+      "createdAt": {
+        "_seconds": 1751903312,
+        "_nanoseconds": 429000000
+      },
+      "updatedAt": {
+        "_seconds": 1751903312,
+        "_nanoseconds": 429000000
+      }
+    },
+    {
+      "id": "spoonacular-648339",
+      "title": "Jalapeno Cheese Quick Bread",
+      "description": "The recipe Jalapeno Cheese Quick Bread can be made in around 45 minutes.  For 22 cents per serving, this recipe covers 6% of your daily requirements of vitamins and minerals.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 12,
+      "ingredients": [
+        {
+          "name": "Unbleached All Purpose Flour",
+          "amount": 93.75,
+          "unit": "g",
+          "original": "3/4 cup unbleached all purpose flour"
+        },
+        {
+          "name": "Flour",
+          "amount": 90,
+          "unit": "g",
+          "original": "3/4 cup whole-wheat flour"
+        },
+        {
+          "name": "Baking Powder",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tbsp baking powder"
+        },
+        {
+          "name": "Salt",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 tsp. salt"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tbsp light olive oil"
+        },
+        {
+          "name": "Egg",
+          "amount": 1,
+          "unit": "",
+          "original": "1 egg, lightly beaten"
+        },
+        {
+          "name": "Non-fat Milk",
+          "amount": 183.75,
+          "unit": "ml",
+          "original": "3/4 cup non-fat milk"
+        },
+        {
+          "name": "Cheddar Cheese",
+          "amount": 113,
+          "unit": "g",
+          "original": "1 cup light cheddar cheese (I used a light Mexican blend)"
+        },
+        {
+          "name": "Pickled Jalapenos",
+          "amount": 34,
+          "unit": "g",
+          "original": "1/4 cups pickled jalapenos, drained, diced"
+        }
+      ],
+      "instructions": [
+        "1. Heat oven to 350",
+        "2. Lightly grease loaf pan, 9x5x3 or two mini muffin pans with cooking spray.",
+        "3. Stir together flour, cheese, baking powder, and salt in medium bowl.",
+        "4. Add olive oil, egg and milk, stir till combined. Fold in jalapenos.",
+        "5. Pour into pan",
+        "6. Bake 30 to 45 minutes or until golden brown and toothpick inserted in center comes out clean. Cool 5 minutes; run knife around edges of pan to loosen.",
+        "7. Remove from pan to wire rack. Cool 30 minutes before slicing, if you can wait that long, I didnt."
+      ],
+      "nutrition": {
+        "calories": 114,
+        "carbohydrates": 13,
+        "fiber": 1,
+        "sugar": 1,
+        "protein": 5,
+        "fat": 5,
+        "saturatedFat": 2,
+        "sodium": 324
+      },
+      "carbChoices": 1,
+      "tags": [
+        "snack",
+        "vegetarian"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/648339-556x370.jpg",
+      "source": "foodista.com",
+      "sourceUrl": "https://www.foodista.com/recipe/Q5S66TH2/jalapeno-cheese-quick-bread",
+      "gdValidation": {
+        "isValid": true,
+        "score": 74,
+        "details": {
+          "totalScore": 74,
+          "gdComplianceScore": 40,
+          "practicalityScore": 28,
+          "popularityScore": 6,
+          "breakdown": {
+            "gdCompliance": {
+              "score": 40,
+              "maxScore": 40,
+              "details": {
+                "carbRange": 20,
+                "proteinAdequacy": 10,
+                "fiberContent": 10
+              }
+            },
+            "practicality": {
+              "score": 28,
+              "maxScore": 30,
+              "details": {
+                "cookingTime": 8,
+                "ingredientAvailability": 10,
+                "difficultyLevel": 10
+              }
+            },
+            "popularity": {
+              "score": 6,
+              "maxScore": 30,
+              "details": {
+                "spoonacularRating": 3,
+                "numberOfReviews": 3
+              }
+            }
+          },
+          "warnings": [
+            "Low popularity - consider user acceptance"
+          ],
+          "recommendations": []
+        },
+        "warnings": []
+      },
+      "importedFrom": "spoonacular",
+      "importedAt": "2025-07-07T17:59:10.533Z",
+      "verified": false,
+      "popularity": 0,
+      "userRatings": [],
+      "timesViewed": 0,
+      "timesAddedToPlan": 0,
+      "createdAt": {
+        "_seconds": 1751911159,
+        "_nanoseconds": 911000000
+      },
+      "updatedAt": {
+        "_seconds": 1751911159,
+        "_nanoseconds": 911000000
+      }
+    },
+    {
+      "id": "spoonacular-651958",
+      "title": "Mini frittatas with quinoa",
+      "description": "Need a gluten free hor d'oeuvre.  Mini frittatas with quinoa could be a great recipe to try.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 24,
+      "ingredients": [
+        {
+          "name": "Quinoa",
+          "amount": 138.75,
+          "unit": "g",
+          "original": "2 cups cooked quinoa (about ¾ cup uncooked)*"
+        },
+        {
+          "name": "Eggs",
+          "amount": 2,
+          "unit": "",
+          "original": "2 eggs"
+        },
+        {
+          "name": "Egg Whites",
+          "amount": 2,
+          "unit": "",
+          "original": "2 egg whites"
+        },
+        {
+          "name": "Zucchini",
+          "amount": 124,
+          "unit": "g",
+          "original": "1 cup zucchini, shredded"
+        },
+        {
+          "name": "Swiss Cheese",
+          "amount": 108,
+          "unit": "g",
+          "original": "1 cup Swiss cheese, coarsely grated"
+        },
+        {
+          "name": "Ham",
+          "amount": 57,
+          "unit": "g",
+          "original": "½ cup ham, diced"
+        },
+        {
+          "name": "Parsley",
+          "amount": 15,
+          "unit": "g",
+          "original": "¼ cup parsley, chopped"
+        },
+        {
+          "name": "Parmesan Cheese",
+          "amount": 2,
+          "unit": "Tbs",
+          "original": "2 Tbs Parmesan cheese, grated"
+        },
+        {
+          "name": "Ground Pepper",
+          "amount": 0.25,
+          "unit": "tsps",
+          "original": "¼ tsp white ground pepper"
+        }
+      ],
+      "instructions": [
+        "1. In a large bowl mix to combine all the ingredients.",
+        "2. Grease a muffin tin and spoon mixture to the top of each cup.",
+        "3. Bake in an oven at 200C / 390F for 30 minutes, or until the edges of the frittatas are golden brown (do not under bake or they won't come out of the pan).",
+        "4. Let cool for at least 5 minutes in the tin before serving.",
+        "5. Eat hot or cold.",
+        "6. * Cook quinoa in 350 ml water for 20 minutes (or according to the package instructions). After cooking, leave to soak any remaining water for additional 5 minutes."
+      ],
+      "nutrition": {
+        "calories": 37,
+        "carbohydrates": 2,
+        "fiber": 0,
+        "sugar": 0,
+        "protein": 3,
+        "fat": 2,
+        "saturatedFat": 1,
+        "sodium": 56
+      },
+      "carbChoices": 0,
+      "tags": [
+        "snack",
+        "gluten-free",
+        "eggs"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/651958-556x370.jpg",
+      "source": "foodista.com",
+      "sourceUrl": "https://www.foodista.com/recipe/QQ7HS5BT/mini-frittatas-with-quinoa",
+      "gdValidation": {
+        "isValid": false,
+        "score": 31,
+        "details": {
+          "totalScore": 31,
+          "gdComplianceScore": 0,
+          "practicalityScore": 28,
+          "popularityScore": 3,
+          "breakdown": {
+            "gdCompliance": {
+              "score": 0,
+              "maxScore": 40,
+              "details": {
+                "carbRange": 0,
+                "proteinAdequacy": 0,
+                "fiberContent": 0
+              }
+            },
+            "practicality": {
+              "score": 28,
+              "maxScore": 30,
+              "details": {
+                "cookingTime": 8,
+                "ingredientAvailability": 10,
+                "difficultyLevel": 10
+              }
+            },
+            "popularity": {
+              "score": 3,
+              "maxScore": 30,
+              "details": {
+                "spoonacularRating": 0,
+                "numberOfReviews": 3
+              }
+            }
+          },
+          "warnings": [
+            "Low GD compliance - may not be suitable for gestational diabetes",
+            "Low popularity - consider user acceptance"
+          ],
+          "recommendations": [
+            "Serve with high-fiber sides like vegetables or whole grains"
+          ]
+        },
+        "warnings": [
+          "Failed GD compliance validation"
+        ]
+      },
+      "importedFrom": "spoonacular",
+      "importedAt": "2025-07-07T17:59:47.326Z",
+      "verified": false,
+      "popularity": 0,
+      "userRatings": [],
+      "timesViewed": 0,
+      "timesAddedToPlan": 0,
+      "createdAt": {
+        "_seconds": 1751911195,
+        "_nanoseconds": 256000000
+      },
+      "updatedAt": {
+        "_seconds": 1751911195,
+        "_nanoseconds": 256000000
+      }
+    },
+    {
+      "id": "spoonacular-655316",
+      "title": "Peanut Butter Hummus",
+      "description": "Peanut Butter Hummus is a gluten free, dairy free, lacto ovo vegetarian, and vegan recipe with 8 servings.  For 24 cents per serving, this recipe covers 7% of your daily requirements of vitamins and minerals.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "Chickpeas",
+          "amount": 1,
+          "unit": "can",
+          "original": "1 can (19 oz/540 mL) chickpeas, drained and rinsed"
+        },
+        {
+          "name": "Ground Cumin",
+          "amount": 2,
+          "unit": "ml",
+          "original": "½ tsp (2 mL) ground cumin"
+        },
+        {
+          "name": "Lemon Juice",
+          "amount": 60,
+          "unit": "ml",
+          "original": "¼ cup (60 mL) lemon juice"
+        },
+        {
+          "name": "Peanut Butter",
+          "amount": 129,
+          "unit": "g",
+          "original": "1/2 cup peanut butter"
+        },
+        {
+          "name": "Salt",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon salt"
+        },
+        {
+          "name": "Water",
+          "amount": 60,
+          "unit": "ml",
+          "original": "¼ cup (60 mL) hot water"
+        }
+      ],
+      "instructions": [
+        "1. Place all ingredients in a food processor or blender. Whirl until smooth.",
+        "2. Serve with veggies and crackers.Tip: If a thinner hummus is preferred, add additional water or lemon juice to taste."
+      ],
+      "nutrition": {
+        "calories": 149,
+        "carbohydrates": 12,
+        "fiber": 3,
+        "sugar": 2,
+        "protein": 6,
+        "fat": 9,
+        "saturatedFat": 2,
+        "sodium": 373
+      },
+      "carbChoices": 1,
+      "tags": [
+        "snack",
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "dairy-free",
+        "middle eastern"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/655316-556x370.jpg",
+      "source": "Foodista",
+      "sourceUrl": "http://www.foodista.com/recipe/SNXDZZ82/peanut-butter-hummus",
+      "gdValidation": {
+        "isValid": true,
+        "score": 68,
+        "details": {
+          "totalScore": 68,
+          "gdComplianceScore": 40,
+          "practicalityScore": 25,
+          "popularityScore": 3,
+          "breakdown": {
+            "gdCompliance": {
+              "score": 40,
+              "maxScore": 40,
+              "details": {
+                "carbRange": 20,
+                "proteinAdequacy": 10,
+                "fiberContent": 10
+              }
+            },
+            "practicality": {
+              "score": 25,
+              "maxScore": 30,
+              "details": {
+                "cookingTime": 8,
+                "ingredientAvailability": 10,
+                "difficultyLevel": 7
+              }
+            },
+            "popularity": {
+              "score": 3,
+              "maxScore": 30,
+              "details": {
+                "spoonacularRating": 3,
+                "numberOfReviews": 0
+              }
+            }
+          },
+          "warnings": [
+            "Low popularity - consider user acceptance"
+          ],
+          "recommendations": []
+        },
+        "warnings": []
+      },
+      "importedFrom": "spoonacular",
+      "importedAt": "2025-07-07T15:48:27.963Z",
+      "verified": false,
+      "popularity": 0,
+      "userRatings": [],
+      "timesViewed": 0,
+      "timesAddedToPlan": 0,
+      "createdAt": {
+        "_seconds": 1751903312,
+        "_nanoseconds": 429000000
+      },
+      "updatedAt": {
+        "_seconds": 1751903312,
+        "_nanoseconds": 429000000
+      }
+    },
+    {
+      "id": "spoonacular-657686",
+      "title": "Quinoa Tabbouleh Salad",
+      "description": "Quinoa Tabbouleh Salad requires about 45 minutes from start to finish.  For 52 cents per serving, this recipe covers 8% of your daily requirements of vitamins and minerals.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "Quinoa",
+          "amount": 170,
+          "unit": "g",
+          "original": "1 cup uncooked quinoa"
+        },
+        {
+          "name": "Water",
+          "amount": 473.176,
+          "unit": "ml",
+          "original": "2 cups water"
+        },
+        {
+          "name": "Green Onions",
+          "amount": 4,
+          "unit": "",
+          "original": "4 green onions, chopped"
+        },
+        {
+          "name": "Tomato",
+          "amount": 1,
+          "unit": "",
+          "original": "1 tomato, diced"
+        },
+        {
+          "name": "Cucumber",
+          "amount": 0.5,
+          "unit": "large",
+          "original": "1/2 large cucumber, diced"
+        },
+        {
+          "name": "Mint",
+          "amount": 11.25,
+          "unit": "g",
+          "original": "1/4 cup loosely packed fresh mint, finely minced"
+        },
+        {
+          "name": "Parsley",
+          "amount": 7.5,
+          "unit": "g",
+          "original": "1/8 cup fresh parsley, finely minced"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 3,
+          "unit": "Tbsps",
+          "original": "3 tablespoons olive oil"
+        },
+        {
+          "name": "Lemon Juice",
+          "amount": 61,
+          "unit": "ml",
+          "original": "1/4 cup lemon juice, or less (to taste- I like a lot!)"
+        },
+        {
+          "name": "Garlic Powder",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon garlic powder"
+        },
+        {
+          "name": "Freshly Cracked Pepper",
+          "amount": 8,
+          "unit": "servings",
+          "original": "Freshly cracked black pepper, to taste"
+        }
+      ],
+      "instructions": [
+        "1. Bring water to a boil in a medium saucepan.",
+        "2. Add quinoa and stir. Cover and reduce heat. Allow quinoa to simmer on medium-low heat until all water is cooked off, about 20 minutes. Stir occasionally. Be careful not to burn your quinoa. Allow to cool.",
+        "3. Place cooled quinoa into a large bowl (preferably something with an airtight lid).",
+        "4. Add all remaining ingredients and gently stir until very well-mixed. Cover and refrigerate for at least an hour.",
+        "5. Stir again before serving.",
+        "6. Can be stored, covered, in the refrigerator for two or three days. But it's best on the first day, when the veggies are still fresh and crisp!"
+      ],
+      "nutrition": {
+        "calories": 136,
+        "carbohydrates": 16,
+        "fiber": 2,
+        "sugar": 1,
+        "protein": 4,
+        "fat": 7,
+        "saturatedFat": 1,
+        "sodium": 7
+      },
+      "carbChoices": 1,
+      "tags": [
+        "snack",
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "dairy-free",
+        "middle eastern"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/657686-556x370.jpg",
+      "source": "Foodista",
+      "sourceUrl": "https://www.foodista.com/recipe/SBXR5T6R/quinoa-tabbouleh-salad",
+      "gdValidation": {
+        "isValid": true,
+        "score": 80,
+        "details": {
+          "totalScore": 80,
+          "gdComplianceScore": 40,
+          "practicalityScore": 28,
+          "popularityScore": 12,
+          "breakdown": {
+            "gdCompliance": {
+              "score": 40,
+              "maxScore": 40,
+              "details": {
+                "carbRange": 20,
+                "proteinAdequacy": 10,
+                "fiberContent": 10
+              }
+            },
+            "practicality": {
+              "score": 28,
+              "maxScore": 30,
+              "details": {
+                "cookingTime": 8,
+                "ingredientAvailability": 10,
+                "difficultyLevel": 10
+              }
+            },
+            "popularity": {
+              "score": 12,
+              "maxScore": 30,
+              "details": {
+                "spoonacularRating": 12,
+                "numberOfReviews": 0
+              }
+            }
+          },
+          "warnings": [],
+          "recommendations": []
+        },
+        "warnings": []
+      },
+      "importedFrom": "spoonacular",
+      "importedAt": "2025-07-07T12:58:41.888Z",
+      "verified": false,
+      "popularity": 0,
+      "userRatings": [],
+      "timesViewed": 0,
+      "timesAddedToPlan": 0,
+      "createdAt": {
+        "_seconds": 1751893143,
+        "_nanoseconds": 518000000
+      },
+      "updatedAt": {
+        "_seconds": 1751893143,
+        "_nanoseconds": 518000000
+      }
+    },
+    {
+      "id": "spoonacular-658503",
+      "title": "Roasted Beet Hummus",
+      "description": "Roasted Beet Hummus requires roughly 45 minutes from start to finish.  This recipe serves 10.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 10,
+      "ingredients": [
+        {
+          "name": "Roasted Beets",
+          "amount": 1,
+          "unit": "medium",
+          "original": "1 medium roasted red beets"
+        },
+        {
+          "name": "Chickpeas",
+          "amount": 164,
+          "unit": "g",
+          "original": "1 cup cooked chickpeas"
+        },
+        {
+          "name": "Garlic",
+          "amount": 2,
+          "unit": "cloves",
+          "original": "2 cloves garlic, minced"
+        },
+        {
+          "name": "Ground Cumin",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon ground cumin"
+        },
+        {
+          "name": "Juice Of Lemon",
+          "amount": 1,
+          "unit": "",
+          "original": "juice and zest of 1 lemon"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 10,
+          "unit": "servings",
+          "original": "Olive Oil"
+        },
+        {
+          "name": "Salt",
+          "amount": 10,
+          "unit": "servings",
+          "original": "Salt"
+        },
+        {
+          "name": "Tahini Sesame Seed Paste",
+          "amount": 60,
+          "unit": "ml",
+          "original": "1/4 cup tahini sesame seed paste"
+        }
+      ],
+      "instructions": [
+        "1. Place all ingredients except for the chickpeas and olive oil in a food processor or blender.Pulse until well blended.",
+        "2. Add the chickpeas and olive oil and pulse until just incorporated.",
+        "3. Add more olive oil as necessary for blending the chickpeas into a paste, or to thin out the hummus to a thinner consistency.",
+        "4. Serve with warm pita or flat bread."
+      ],
+      "nutrition": {
+        "calories": 196,
+        "carbohydrates": 8,
+        "fiber": 2,
+        "sugar": 2,
+        "protein": 3,
+        "fat": 18,
+        "saturatedFat": 2,
+        "sodium": 211
+      },
+      "carbChoices": 1,
+      "tags": [
+        "snack",
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "dairy-free",
+        "middle eastern"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/658503-556x370.jpg",
+      "source": "Foodista",
+      "sourceUrl": "https://www.foodista.com/recipe/8JHF7S2G/roasted-beet-hummus",
+      "gdValidation": {
+        "isValid": true,
+        "score": 63,
+        "details": {
+          "totalScore": 63,
+          "gdComplianceScore": 35,
+          "practicalityScore": 28,
+          "popularityScore": 0,
+          "breakdown": {
+            "gdCompliance": {
+              "score": 35,
+              "maxScore": 40,
+              "details": {
+                "carbRange": 20,
+                "proteinAdequacy": 5,
+                "fiberContent": 10
+              }
+            },
+            "practicality": {
+              "score": 28,
+              "maxScore": 30,
+              "details": {
+                "cookingTime": 8,
+                "ingredientAvailability": 10,
+                "difficultyLevel": 10
+              }
+            },
+            "popularity": {
+              "score": 0,
+              "maxScore": 30,
+              "details": {
+                "spoonacularRating": 0,
+                "numberOfReviews": 0
+              }
+            }
+          },
+          "warnings": [
+            "Low popularity - consider user acceptance"
+          ],
+          "recommendations": []
+        },
+        "warnings": []
+      },
+      "importedFrom": "spoonacular",
+      "importedAt": "2025-07-07T15:48:22.304Z",
+      "verified": false,
+      "popularity": 0,
+      "userRatings": [],
+      "timesViewed": 0,
+      "timesAddedToPlan": 0,
+      "createdAt": {
+        "_seconds": 1751903312,
+        "_nanoseconds": 429000000
+      },
+      "updatedAt": {
+        "_seconds": 1751903312,
+        "_nanoseconds": 429000000
+      }
+    },
+    {
+      "id": "spoonacular-716195",
+      "title": "Spicy Indian-Style Hummus",
+      "description": "You can never have too many middl eastern recipes, so give Spicy Indian-Style Hummus a try.  For 44 cents per serving, you get a hor d'oeuvre that serves 12.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 12,
+      "ingredients": [
+        {
+          "name": "Asafetida",
+          "amount": 1,
+          "unit": "pinch",
+          "original": "pinch of asafetida"
+        },
+        {
+          "name": "Cayenne",
+          "amount": 0.25,
+          "unit": "tsps",
+          "original": "1/4 teaspoon cayenne"
+        },
+        {
+          "name": "Chickpeas",
+          "amount": 250,
+          "unit": "g",
+          "original": "1 1/4 cups dried chickpeas"
+        },
+        {
+          "name": "Chives",
+          "amount": 10,
+          "unit": "g",
+          "original": "1/4 cup fresh chives, chopped"
+        },
+        {
+          "name": "Ginger",
+          "amount": 1,
+          "unit": "inch",
+          "original": "1-inch piece fresh ginger, chopped"
+        },
+        {
+          "name": "Parsley",
+          "amount": 30,
+          "unit": "g",
+          "original": "1/2 cup fresh parsley or cilantro, chopped"
+        },
+        {
+          "name": "Garlic",
+          "amount": 2,
+          "unit": "cloves",
+          "original": "2 cloves garlic, chopped"
+        },
+        {
+          "name": "Ground Coriander",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon ground coriander"
+        },
+        {
+          "name": "Ground Cumin",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon ground cumin"
+        },
+        {
+          "name": "Ground Pepper",
+          "amount": 12,
+          "unit": "servings",
+          "original": "fresh ground black pepper to taste"
+        },
+        {
+          "name": "Juice Of Lemon",
+          "amount": 1,
+          "unit": "",
+          "original": "juice from 1 lemon"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 - 3 tablespoons olive oil (or more to achieve your desired consistency"
+        },
+        {
+          "name": "Chilies",
+          "amount": 2,
+          "unit": "",
+          "original": "2 fresh green or red chilies, seeded and chopped"
+        },
+        {
+          "name": "Sea Salt",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon sea salt, or to taste"
+        },
+        {
+          "name": "Tahini",
+          "amount": 60,
+          "unit": "ml",
+          "original": "1/4 cup tahini"
+        },
+        {
+          "name": "Turmeric",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon turmeric"
+        }
+      ],
+      "instructions": [
+        "1. Rinse the chickpeas and soak for 8 hours or overnight covered in several inches of water with a little yogurt whey or lemon juice added.",
+        "2. Drain and rinse, then transfer to a large saucepan.  Cover with several inches of fresh water, bring to a boil, reduce the heat to medium-low and cover.  Simmer for 1 to 1 1/2 hours or until the beans are buttery soft.",
+        "3. Drain.In a food processor, combine all of the ingredients and process until you have a thick, smooth paste. You may need to add extra olive oil or a bit of water if you want a thinner paste. Makes 3 cups, nutrition information is based on 1/4 cup serving."
+      ],
+      "nutrition": {
+        "calories": 134,
+        "carbohydrates": 15,
+        "fiber": 4,
+        "sugar": 3,
+        "protein": 5,
+        "fat": 6,
+        "saturatedFat": 1,
+        "sodium": 203
+      },
+      "carbChoices": 1,
+      "tags": [
+        "snack",
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "dairy-free",
+        "middle eastern"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/716195-556x370.jpg",
+      "source": "foodandspice.com",
+      "sourceUrl": "https://www.foodandspice.com/2012/07/spicy-hummus-indian-style.html",
+      "gdValidation": {
+        "isValid": true,
+        "score": 89,
+        "details": {
+          "totalScore": 89,
+          "gdComplianceScore": 40,
+          "practicalityScore": 25,
+          "popularityScore": 24,
+          "breakdown": {
+            "gdCompliance": {
+              "score": 40,
+              "maxScore": 40,
+              "details": {
+                "carbRange": 20,
+                "proteinAdequacy": 10,
+                "fiberContent": 10
+              }
+            },
+            "practicality": {
+              "score": 25,
+              "maxScore": 30,
+              "details": {
+                "cookingTime": 8,
+                "ingredientAvailability": 7,
+                "difficultyLevel": 10
+              }
+            },
+            "popularity": {
+              "score": 24,
+              "maxScore": 30,
+              "details": {
+                "spoonacularRating": 15,
+                "numberOfReviews": 9
+              }
+            }
+          },
+          "warnings": [],
+          "recommendations": []
+        },
+        "warnings": []
+      },
+      "importedFrom": "spoonacular",
+      "importedAt": "2025-07-07T15:48:16.637Z",
+      "verified": false,
+      "popularity": 0,
+      "userRatings": [],
+      "timesViewed": 0,
+      "timesAddedToPlan": 0,
+      "createdAt": {
+        "_seconds": 1751903312,
+        "_nanoseconds": 429000000
+      },
+      "updatedAt": {
+        "_seconds": 1751903312,
+        "_nanoseconds": 429000000
+      }
+    }
+  ]
+}

@@ -2,6 +2,39 @@
 
 This document provides guidance for Claude Code agents working on the Pregnancy Plate Planner project. It includes agent definitions, development workflows, and important context for AI-assisted development.
 
+## 🔴 CRITICAL: Branch Management Policy
+
+**ALL SUBAGENTS MUST FOLLOW THIS WORKFLOW:**
+
+1. **Create a Feature Branch**: 
+   ```bash
+   git checkout -b feature/[agent-name]-[task-description]
+   # Example: git checkout -b feature/nutrition-tracking-implementation
+   ```
+
+2. **Make All Changes on the Feature Branch**:
+   - Implement features
+   - Test thoroughly
+   - Commit with descriptive messages
+
+3. **Push to Feature Branch**:
+   ```bash
+   git push origin feature/[branch-name]
+   ```
+
+4. **Do NOT Merge to Main**:
+   - Leave the branch for review and testing
+   - Document the branch name in your completion summary
+   - The human will review, test, and merge when ready
+
+5. **Branch Naming Convention**:
+   - `feature/` prefix for new features
+   - `fix/` prefix for bug fixes
+   - Use kebab-case
+   - Be descriptive but concise
+
+**This policy ensures code quality and allows for proper testing before production deployment.**
+
 ## Project Overview
 
 **Pregnancy Plate Planner** is a gestational diabetes meal planning application that helps expecting mothers manage their blood glucose through personalized meal plans, tracking, and education.
@@ -11,7 +44,8 @@ This document provides guidance for Claude Code agents working on the Pregnancy 
 **This project is deployed on Vercel**. All code must be compatible with Vercel's deployment environment:
 
 ### Vercel-Specific Requirements:
-1. **Environment Variables**: 
+
+1. **Environment Variables**:
    - Use the exact names as configured in Vercel (e.g., `apiKey`, `authDomain`, `projectId`, not `NEXT_PUBLIC_FIREBASE_*`)
    - Firebase Admin credentials should be stored as JSON string in `FIREBASE_ADMIN_KEY`
    - Access via `process.env.variableName`
@@ -72,9 +106,57 @@ This app will be deployed as a subdomain (app.pregnancyplateplanner.com) alongsi
 
 See `INTEGRATION_STRATEGY.md` for detailed implementation plans.
 
+## Current Project Status
+
+**Last Updated**: 2025-07-08
+
+### ✅ Completed Features
+
+1. **Offline-First Recipe System**
+   - 242 recipes successfully imported from Spoonacular API
+   - All recipes stored in Firebase with complete nutritional data
+   - Offline JSON export system for static serving
+   - Zero API calls required for regular users
+   - Local recipe service (`LocalRecipeService`) for client-side operations
+
+2. **Admin Recipe Management**
+   - Complete admin dashboard at `/admin/recipes`
+   - Spoonacular recipe import with search and bulk import
+   - Recipe viewing, editing, and deletion
+   - GD validation scoring for all recipes
+   - Recipe categorization and filtering
+   - Export functionality for offline data preparation
+
+3. **Authentication System**
+   - Firebase Auth integration with email/password
+   - Login/signup pages with error handling
+   - Password reset functionality
+   - Admin role protection (whitelist-based)
+   - Session persistence
+
+4. **Core Recipe Features**
+   - Recipe browsing with category filters
+   - Individual recipe detail pages
+   - Nutritional information display
+   - Offline-capable recipe viewing
+   - Image fallback system for broken Spoonacular images
+
+### 🏗️ Current Architecture
+
+```
+Spoonacular API → Admin Import → Firebase → Offline JSON → Users
+                     ↓
+                Admin Only
+```
+
+- **Admin Flow**: Admins can search and import recipes from Spoonacular
+- **User Flow**: Users access pre-imported recipes with zero API calls
+- **Data Storage**: Firebase for dynamic data, static JSON for offline use
+- **Image Handling**: Firebase Storage with fallback to Spoonacular URLs
+
 ## Claude Code Agents
 
-Last Supervisor Update: 2025-07-01 18:25:40
+Last Supervisor Update: 2025-07-08
 The following agents are designed to build different parts of the application. Deploy them as needed based on current development priorities.
 
 ### 0. Supervisor Agent
@@ -120,7 +202,7 @@ The Supervisor should update agent statuses in this file automatically.
 
 ### 1. Firebase Setup Agent
 
-**Status**: Needs Review ⚠️
+**Status**: Completed ✅
 **Files**: `/firebase/`, `/src/lib/firebase/`  
 **Dependencies**: None
 
@@ -149,7 +231,7 @@ Ensure all Firebase SDK imports use modular syntax (v9+).
 
 ### 2. Recipe Scraper Agent
 
-**Status**: Failed ❌
+**Status**: Replaced by Admin Import System ✅
 **Files**: `/scripts/scraper/`  
 **Dependencies**: Firebase must be configured first
 
@@ -182,7 +264,7 @@ Output format should match the Recipe TypeScript interface.
 
 ### 3. Next.js Foundation Agent
 
-**Status**: Failed ❌
+**Status**: Completed ✅
 **Files**: `/src/`, `/public/`, root config files  
 **Dependencies**: None
 
@@ -217,7 +299,7 @@ Use modern React patterns (Server Components where appropriate).
 
 ### 4. Authentication Flow Agent
 
-**Status**: Failed ❌
+**Status**: Completed ✅
 **Files**: `/src/app/auth/`, `/src/components/auth/`, `/src/hooks/`  
 **Dependencies**: Firebase Setup Agent, Next.js Foundation Agent
 
@@ -573,6 +655,7 @@ The MEDICAL_GUIDELINES.md file contains official Halton Healthcare guidelines th
 This project is deployed on Vercel. All agents must ensure their code is Vercel-compatible:
 
 **Pre-deployment Checklist:**
+
 1. Test the build locally: `npm run build`
 2. Ensure all imports resolve correctly
 3. Verify environment variable names match Vercel configuration
@@ -580,6 +663,7 @@ This project is deployed on Vercel. All agents must ensure their code is Vercel-
 5. Test API routes with proper error handling
 
 **Deployment Process:**
+
 ```bash
 git add .
 git commit -m "descriptive message"
@@ -588,12 +672,14 @@ git push origin main
 ```
 
 **Environment Variables in Vercel:**
+
 - `apiKey`, `authDomain`, `projectId`, `storageBucket`, `messagingSenderId`, `appId` (Firebase client)
 - `FIREBASE_ADMIN_KEY` (Firebase admin - full JSON as string)
 - `SPOONACULAR_API_KEY` (Spoonacular API)
 - Any additional secrets should follow Vercel naming conventions
 
 **Common Vercel Issues to Avoid:**
+
 - Don't use `fs`, `path`, or other Node.js modules in client components
 - Don't use dynamic `require()` statements
 - Ensure all API routes return proper `NextResponse` objects
@@ -601,6 +687,7 @@ git push origin main
 - Keep API route files under 50MB (including dependencies)
 
 **Production Considerations:**
+
 - Enable Firebase App Check for production
 - Set up monitoring with Vercel Analytics
 - Configure proper CORS policies for API routes
@@ -608,14 +695,309 @@ git push origin main
 - Set up automated backups for Firestore
 - Use Vercel Edge Functions for better performance where applicable
 
-## Next Steps After Agent Deployment
+## Next Steps - Phase 2 Implementation
 
-When agents complete their tasks:
+### Priority 1: Core User Features
 
-1. Update agent status in this file
-2. Run integration tests
-3. Update documentation
-4. Plan next agent deployment
-5. Check for dependency updates
+1. **Meal Planning Algorithm (Agent #5)**
+   - Implement 12-week rotation system
+   - Generate personalized meal plans following GD guidelines
+   - Shopping list generation
+   - Meal swap functionality
+
+2. **Glucose Tracking (Agent #6)**
+   - Blood glucose entry and tracking
+   - Data visualization with charts
+   - Pattern analysis and insights
+   - Healthcare provider reports
+
+3. **Nutrition Tracking (Agent #8)**
+   - Integration with meal plans
+   - Daily macro/micronutrient tracking
+   - Progress visualization
+   - Prenatal vitamin reminders
+
+### Priority 2: User Experience
+
+1. **UI Component Library (Agent #7)**
+   - Complete component set with Tailwind
+   - Mobile-responsive design
+   - Drag-and-drop meal planning
+   - Print-friendly layouts
+
+2. **Educational Content (Agent #10)**
+   - GD education articles
+   - Interactive guides
+   - Video tutorials
+   - Knowledge checks
+
+### Priority 3: Production Readiness
+
+1. **Testing Suite (Agent #12)**
+   - Unit tests for algorithms
+   - Integration tests
+   - E2E tests with Cypress
+   - Performance benchmarks
+
+2. **WordPress Integration**
+   - SSO implementation
+   - Shared styling
+   - User data sync
+   - Analytics integration
+
+3. **Performance Optimization**
+   - Implement PWA features
+   - Service worker for offline
+   - Image optimization
+   - Code splitting
+
+### Priority 4: Monetization (Phase 3)
+
+1. **Stripe Integration (Agent #11)**
+   - Subscription tiers
+   - Payment processing
+   - Customer portal
+   - Usage limits for free tier
+
+## Immediate Next Steps
+
+1. **Complete Meal Planning Algorithm** - This is the core feature users need
+2. **Implement Glucose Tracking** - Essential for GD management
+3. **Add PWA Support** - Enable offline functionality
+4. **Create Production Deployment Guide** - Document deployment process
+5. **Set Up Monitoring** - Error tracking and analytics
 
 Remember: The goal is to create a tool that genuinely helps expecting mothers manage gestational diabetes safely and effectively.
+
+## Priority 1 Agent Definitions - Ready for Deployment
+
+### 5. Meal Planning Algorithm Agent
+
+**Status**: Ready to Deploy  
+**Files**: `/src/lib/meal-planning/`, `/app/meal-planner/`  
+**Dependencies**: Offline recipe system (completed)
+
+**Prompt**:
+
+```
+Build the core meal planning algorithm for gestational diabetes management using the offline recipe system.
+
+Tasks:
+1. Create algorithm that generates 7-day meal plans with:
+   - 3 main meals (breakfast: 25-35g, lunch/dinner: 40-50g carbs)
+   - 3 snacks (15-30g carbs each)
+   - Bedtime snack (14-16g carbs + protein)
+   - Total daily carbs: 175-200g
+2. Use LocalRecipeService to select recipes from offline data
+3. Implement user preference filtering:
+   - Dietary restrictions (vegetarian, vegan, gluten-free, dairy-free)
+   - Allergies (nuts, shellfish, eggs, etc.)
+   - Disliked ingredients
+   - Cooking time preferences
+4. Ensure nutritional balance:
+   - Adequate protein (25-30% of calories)
+   - Healthy fats (30-35% of calories)
+   - High fiber (25-30g daily)
+   - Prenatal nutrition requirements
+5. Create meal plan variations:
+   - Avoid repeating meals too often
+   - Balance cooking complexity throughout week
+   - Consider meal prep opportunities
+6. Build meal plan management:
+   - Save/load meal plans to Firebase
+   - Regenerate individual days
+   - Swap meals functionality
+   - Copy plans between weeks
+7. Generate shopping lists:
+   - Aggregate ingredients
+   - Group by store section
+   - Account for quantities
+   - Handle pantry staples
+8. Add meal prep guidance:
+   - Identify prep-ahead opportunities
+   - Batch cooking suggestions
+   - Storage instructions
+9. Create printable/shareable formats:
+   - PDF meal plan with recipes
+   - Shopping list export
+   - Share via email/message
+10. Track meal plan performance:
+    - User ratings
+    - Glucose impact tracking
+    - Favorite meal patterns
+
+Use the existing RecipeProvider and LocalRecipeService for all recipe data.
+Reference MEDICAL_GUIDELINES.md for carb targets and meal timing.
+```
+
+### 6. Glucose Tracking Agent
+
+**Status**: Ready to Deploy  
+**Files**: `/app/tracking/glucose/`, `/src/components/glucose/`  
+**Dependencies**: Firebase and authentication (completed)
+
+**Prompt**:
+
+```
+Implement comprehensive blood glucose tracking system for gestational diabetes management.
+
+Tasks:
+1. Create glucose entry form with:
+   - Reading value (mg/dL and mmol/L support)
+   - Toggle between units with conversion
+   - Timestamp (default to now)
+   - Meal association:
+     * Fasting/wake up
+     * Pre-breakfast, 1hr post, 2hr post
+     * Pre-lunch, 1hr post, 2hr post
+     * Pre-dinner, 1hr post, 2hr post
+     * Pre-snack, post-snack
+     * Bedtime
+     * Middle of night
+   - Notes field for context
+   - Quick entry buttons for common times
+2. Build data visualization dashboard:
+   - Daily glucose curve chart
+   - Color coding for target ranges:
+     * Fasting: <95 mg/dL (<5.3 mmol/L)
+     * 1hr post: <140 mg/dL (<7.8 mmol/L)
+     * 2hr post: <120 mg/dL (<6.7 mmol/L)
+   - Weekly trend view
+   - Monthly overview calendar
+   - Time-in-range statistics
+   - Pattern identification (highs/lows by meal)
+3. Implement quick entry methods:
+   - Voice input support
+   - Recent readings quick-copy
+   - Bulk entry for missed readings
+   - CSV import capability
+4. Add reminder system:
+   - Customizable reminder times
+   - Push notifications (PWA)
+   - Missed reading alerts
+   - Pre-meal reminders
+5. Create comprehensive reports:
+   - PDF export for healthcare providers
+   - Include all readings with timestamps
+   - Statistical summary
+   - Graphs and trends
+   - Notes and context
+   - Printable logbook format
+6. Build insights engine:
+   - Identify problem patterns
+   - Correlate with meals (if logged)
+   - Success rate by meal type
+   - Weekly improvement tracking
+   - Personalized recommendations
+7. Add data management:
+   - Edit past entries
+   - Delete incorrect readings
+   - Bulk operations
+   - Data backup/restore
+8. Implement target customization:
+   - Allow provider-specific targets
+   - Different targets by meal
+   - Adjustment over pregnancy
+9. Create mobile-optimized interface:
+   - Large touch targets
+   - Swipe gestures
+   - Offline capability
+   - Quick access from home
+10. Add integrations:
+    - Export to Apple Health/Google Fit
+    - Share with family/care team
+    - Sync with meal plans
+
+Store all data in Firebase with user ID isolation.
+Use Chart.js or Recharts for visualizations.
+Reference MEDICAL_GUIDELINES.md for target ranges.
+```
+
+### 7. Nutrition Tracking Agent
+
+**Status**: Ready to Deploy  
+**Files**: `/app/tracking/nutrition/`, `/src/components/nutrition/`  
+**Dependencies**: Meal planning and Firebase (completed)
+
+**Prompt**:
+
+```
+Build nutrition tracking features integrated with meal plans and focused on GD management.
+
+Tasks:
+1. Create food logging interface:
+   - Log meals from active meal plan (one-click)
+   - Search and add custom foods
+   - Modify portion sizes
+   - Quick-add frequent foods
+   - Barcode scanning placeholder
+   - Photo meal diary option
+   - Copy previous day's meals
+2. Build comprehensive food database:
+   - Use offline recipe data
+   - Add common foods database
+   - Custom food creation
+   - Save favorite combinations
+   - Restaurant meal estimates
+3. Create daily tracking dashboard:
+   - Carbohydrate tracking vs targets:
+     * Per meal targets
+     * Daily total (175-200g)
+     * Distribution timing
+   - Macro breakdown:
+     * Carbs (40-45%)
+     * Protein (25-30%)
+     * Fat (30-35%)
+   - Fiber intake (target: 25-30g)
+   - Key micronutrients:
+     * Folate (600mcg)
+     * Iron (27mg)
+     * Calcium (1000mg)
+     * DHA (200mg)
+     * Vitamin D
+   - Hydration tracking
+   - Prenatal vitamin checkbox
+4. Implement meal timing tracking:
+   - Log actual meal times
+   - Compare to recommended schedule
+   - Track spacing between meals
+   - Overnight fasting duration
+5. Build analytics and insights:
+   - Weekly nutrition summary
+   - Trends over time
+   - Achievement badges
+   - Areas for improvement
+   - Correlation with glucose (if tracked)
+6. Create visual feedback:
+   - Progress rings/bars
+   - Traffic light system
+   - Daily score/rating
+   - Streak tracking
+   - Celebration animations
+7. Add meal plan adherence:
+   - Track % followed
+   - Log substitutions
+   - Rate meals
+   - Note challenges
+8. Implement quick actions:
+   - Common snack buttons
+   - Water intake counter
+   - Meal skip/delay logging
+   - Emergency snack logging
+9. Create reports and exports:
+   - Weekly summary PDF
+   - Healthcare provider report
+   - CSV data export
+   - Integration with glucose data
+10. Build education integration:
+    - Contextual tips
+    - Nutrition facts
+    - GD-specific guidance
+    - Link to education content
+
+Store all data in Firebase per user.
+Integrate with LocalRecipeService for nutrition data.
+Reference MEDICAL_GUIDELINES.md for nutrition targets.
+```
+
+EOF < /dev/null

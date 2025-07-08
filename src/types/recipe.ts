@@ -42,6 +42,7 @@ export interface Recipe {
   importedFrom?: string;
   importedAt?: string;
   verified?: boolean;
+  spoonacularId?: string;
   
   // User engagement
   popularity?: number;

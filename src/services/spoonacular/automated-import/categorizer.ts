@@ -56,39 +56,126 @@ function mapToGDCategory(category: MealCategory): keyof typeof GD_REQUIREMENTS {
 
 export class RecipeCategorizer {
   // Keyword mappings for different meal types
-  private readonly mealKeywords: Record<MealCategory, {
-    strong: string[];
-    moderate: string[];
-    ingredients: string[];
-  }> = {
+  private readonly mealKeywords: Record<
+    MealCategory,
+    {
+      strong: string[];
+      moderate: string[];
+      ingredients: string[];
+    }
+  > = {
     breakfast: {
-      strong: ["breakfast", "morning", "brunch", "pancake", "waffle", "cereal", "oatmeal", "porridge", "muesli", "granola"],
-      moderate: ["egg", "bacon", "sausage", "toast", "muffin", "smoothie", "coffee", "omelet", "frittata"],
-      ingredients: ["eggs", "oats", "yogurt", "berries", "banana", "milk", "cream cheese", "maple syrup", "bacon", "sausage"],
+      strong: [
+        "breakfast",
+        "morning",
+        "brunch",
+        "pancake",
+        "waffle",
+        "cereal",
+        "oatmeal",
+        "porridge",
+        "muesli",
+        "granola",
+      ],
+      moderate: [
+        "egg",
+        "bacon",
+        "sausage",
+        "toast",
+        "muffin",
+        "smoothie",
+        "coffee",
+        "omelet",
+        "frittata",
+      ],
+      ingredients: [
+        "eggs",
+        "oats",
+        "yogurt",
+        "berries",
+        "banana",
+        "milk",
+        "cream cheese",
+        "maple syrup",
+        "bacon",
+        "sausage",
+      ],
     },
     lunch: {
       strong: ["lunch", "midday", "sandwich", "salad", "wrap", "soup"],
-      moderate: ["bowl", "pita", "hummus", "tuna", "chicken salad", "pasta salad"],
-      ingredients: ["lettuce", "tomato", "cucumber", "deli meat", "cheese", "bread", "tortilla", "avocado"],
+      moderate: [
+        "bowl",
+        "pita",
+        "hummus",
+        "tuna",
+        "chicken salad",
+        "pasta salad",
+      ],
+      ingredients: [
+        "lettuce",
+        "tomato",
+        "cucumber",
+        "deli meat",
+        "cheese",
+        "bread",
+        "tortilla",
+        "avocado",
+      ],
     },
     dinner: {
-      strong: ["dinner", "supper", "main course", "entree", "casserole", "roast"],
-      moderate: ["steak", "salmon", "chicken breast", "pasta", "rice", "curry", "stir fry", "lasagna"],
-      ingredients: ["beef", "pork", "fish", "chicken", "pasta", "rice", "potatoes", "vegetables"],
+      strong: [
+        "dinner",
+        "supper",
+        "main course",
+        "entree",
+        "casserole",
+        "roast",
+      ],
+      moderate: [
+        "steak",
+        "salmon",
+        "chicken breast",
+        "pasta",
+        "rice",
+        "curry",
+        "stir fry",
+        "lasagna",
+      ],
+      ingredients: [
+        "beef",
+        "pork",
+        "fish",
+        "chicken",
+        "pasta",
+        "rice",
+        "potatoes",
+        "vegetables",
+      ],
     },
     snack: {
       strong: ["snack", "appetizer", "bite", "mini", "energy ball", "bar"],
       moderate: ["dip", "crackers", "nuts", "trail mix", "popcorn", "chips"],
-      ingredients: ["nuts", "seeds", "crackers", "hummus", "fruit", "cheese", "yogurt"],
+      ingredients: [
+        "nuts",
+        "seeds",
+        "crackers",
+        "hummus",
+        "fruit",
+        "cheese",
+        "yogurt",
+      ],
     },
   };
 
   // Typical nutrition ranges for each meal type
-  private readonly nutritionProfiles: Record<MealCategory, {
-    carbs: { min: number; max: number; ideal: number };
-    protein: { min: number; max: number; ideal: number };
-    calories: { min: number; max: number; ideal: number };
-  }> = {
+  private readonly nutritionProfiles: Record<
+    MealCategory,
+    {
+      carbs: { min: number; max: number; ideal: number };
+      protein: { min: number; max: number; ideal: number };
+      calories: { min: number; max: number; ideal: number };
+    }
+  > = {
     breakfast: {
       carbs: { min: 15, max: 35, ideal: 25 },
       protein: { min: 7, max: 20, ideal: 12 },
@@ -129,10 +216,14 @@ export class RecipeCategorizer {
       }));
 
     const primaryCategory = sortedCategories[0];
-    const alternativeCategories = sortedCategories.slice(1).filter((cat) => cat.confidence > 30);
+    const alternativeCategories = sortedCategories
+      .slice(1)
+      .filter((cat) => cat.confidence > 30);
 
     // Add reasoning
-    reasoning.push(...this.generateReasoning(features, primaryCategory.category, recipe));
+    reasoning.push(
+      ...this.generateReasoning(features, primaryCategory.category, recipe),
+    );
 
     // Add tags
     tags.push(...this.generateTags(recipe, primaryCategory.category));
@@ -140,7 +231,8 @@ export class RecipeCategorizer {
     return {
       primaryCategory: primaryCategory.category,
       confidence: primaryCategory.confidence,
-      alternativeCategories: alternativeCategories.length > 0 ? alternativeCategories : undefined,
+      alternativeCategories:
+        alternativeCategories.length > 0 ? alternativeCategories : undefined,
       reasoning,
       tags,
     };
@@ -182,7 +274,7 @@ export class RecipeCategorizer {
    */
   private calculateCategoryScores(
     features: CategoryFeatures,
-    recipe: SpoonacularRecipeInfo
+    recipe: SpoonacularRecipeInfo,
   ): Record<keyof typeof GD_REQUIREMENTS, number> {
     const scores: Record<MealCategory, number> = {
       breakfast: 0,
@@ -202,16 +294,25 @@ export class RecipeCategorizer {
 
     for (const category of Object.keys(scores) as MealCategory[]) {
       // Nutrition score
-      const nutritionScore = this.calculateNutritionScore(features.nutritionProfile, category);
+      const nutritionScore = this.calculateNutritionScore(
+        features.nutritionProfile,
+        category,
+      );
 
       // Time of day score
       const timeScore = features.timeOfDay[category];
 
       // Ingredient score
-      const ingredientScore = features.ingredients[`${category}Ingredients` as keyof typeof features.ingredients];
+      const ingredientScore =
+        features.ingredients[
+          `${category}Ingredients` as keyof typeof features.ingredients
+        ];
 
       // Preparation score
-      const prepScore = this.calculatePreparationScore(features.preparation, category);
+      const prepScore = this.calculatePreparationScore(
+        features.preparation,
+        category,
+      );
 
       // Explicit type score
       const explicitScore = this.calculateExplicitTypeScore(recipe, category);
@@ -241,7 +342,7 @@ export class RecipeCategorizer {
     for (const [category, score] of Object.entries(scores)) {
       gdScores[mapToGDCategory(category as MealCategory)] = score;
     }
-    
+
     // Fill in missing GD categories with 0
     const allGDScores = {
       breakfast: 0,
@@ -262,37 +363,46 @@ export class RecipeCategorizer {
    */
   private calculateNutritionScore(
     nutrition: CategoryFeatures["nutritionProfile"],
-    category: MealCategory
+    category: MealCategory,
   ): number {
     const profile = this.nutritionProfiles[category];
     let score = 0;
 
     // Carbs score
-    if (nutrition.carbs >= profile.carbs.min && nutrition.carbs <= profile.carbs.max) {
+    if (
+      nutrition.carbs >= profile.carbs.min &&
+      nutrition.carbs <= profile.carbs.max
+    ) {
       const deviation = Math.abs(nutrition.carbs - profile.carbs.ideal);
       const maxDeviation = Math.max(
         profile.carbs.ideal - profile.carbs.min,
-        profile.carbs.max - profile.carbs.ideal
+        profile.carbs.max - profile.carbs.ideal,
       );
       score += 0.4 * (1 - deviation / maxDeviation);
     }
 
     // Protein score
-    if (nutrition.protein >= profile.protein.min && nutrition.protein <= profile.protein.max) {
+    if (
+      nutrition.protein >= profile.protein.min &&
+      nutrition.protein <= profile.protein.max
+    ) {
       const deviation = Math.abs(nutrition.protein - profile.protein.ideal);
       const maxDeviation = Math.max(
         profile.protein.ideal - profile.protein.min,
-        profile.protein.max - profile.protein.ideal
+        profile.protein.max - profile.protein.ideal,
       );
       score += 0.3 * (1 - deviation / maxDeviation);
     }
 
     // Calories score
-    if (nutrition.calories >= profile.calories.min && nutrition.calories <= profile.calories.max) {
+    if (
+      nutrition.calories >= profile.calories.min &&
+      nutrition.calories <= profile.calories.max
+    ) {
       const deviation = Math.abs(nutrition.calories - profile.calories.ideal);
       const maxDeviation = Math.max(
         profile.calories.ideal - profile.calories.min,
-        profile.calories.max - profile.calories.ideal
+        profile.calories.max - profile.calories.ideal,
       );
       score += 0.3 * (1 - deviation / maxDeviation);
     }
@@ -303,7 +413,9 @@ export class RecipeCategorizer {
   /**
    * Calculate time of day scores based on keywords
    */
-  private calculateTimeOfDayScores(recipe: SpoonacularRecipeInfo): CategoryFeatures["timeOfDay"] {
+  private calculateTimeOfDayScores(
+    recipe: SpoonacularRecipeInfo,
+  ): CategoryFeatures["timeOfDay"] {
     const title = recipe.title.toLowerCase();
     const summary = (recipe.summary || "").toLowerCase();
     const instructions = (recipe.instructions || "").toLowerCase();
@@ -342,9 +454,13 @@ export class RecipeCategorizer {
   /**
    * Calculate ingredient-based scores
    */
-  private calculateIngredientScores(recipe: SpoonacularRecipeInfo): CategoryFeatures["ingredients"] {
+  private calculateIngredientScores(
+    recipe: SpoonacularRecipeInfo,
+  ): CategoryFeatures["ingredients"] {
     const ingredients = recipe.extendedIngredients || [];
-    const ingredientNames = ingredients.map((ing) => (ing.nameClean || ing.name || "").toLowerCase());
+    const ingredientNames = ingredients.map((ing) =>
+      (ing.nameClean || ing.name || "").toLowerCase(),
+    );
 
     const scores = {
       breakfastIngredients: 0,
@@ -368,7 +484,8 @@ export class RecipeCategorizer {
 
       // Calculate score based on percentage of matching ingredients
       if (ingredients.length > 0) {
-        score = matches / Math.min(ingredients.length, keywords.ingredients.length);
+        score =
+          matches / Math.min(ingredients.length, keywords.ingredients.length);
       }
 
       scores[`${category}Ingredients` as keyof typeof scores] = score;
@@ -411,7 +528,7 @@ export class RecipeCategorizer {
    */
   private calculatePreparationScore(
     preparation: CategoryFeatures["preparation"],
-    category: MealCategory
+    category: MealCategory,
   ): number {
     let score = 0;
 
@@ -420,13 +537,15 @@ export class RecipeCategorizer {
         // Breakfast should be quick
         if (preparation.cookingTime <= 20) score += 0.5;
         if (preparation.complexity < 0.3) score += 0.3;
-        if (preparation.servings >= 1 && preparation.servings <= 4) score += 0.2;
+        if (preparation.servings >= 1 && preparation.servings <= 4)
+          score += 0.2;
         break;
       case "lunch":
         // Lunch can be moderate
         if (preparation.cookingTime <= 30) score += 0.4;
         if (preparation.complexity < 0.5) score += 0.3;
-        if (preparation.servings >= 2 && preparation.servings <= 4) score += 0.3;
+        if (preparation.servings >= 2 && preparation.servings <= 4)
+          score += 0.3;
         break;
       case "dinner":
         // Dinner can be more complex
@@ -450,7 +569,7 @@ export class RecipeCategorizer {
    */
   private calculateExplicitTypeScore(
     recipe: SpoonacularRecipeInfo,
-    category: MealCategory
+    category: MealCategory,
   ): number {
     const dishTypes = recipe.dishTypes || [];
     const occasions = recipe.occasions || [];
@@ -496,7 +615,7 @@ export class RecipeCategorizer {
    */
   private applySpecialCaseModifiers(
     scores: Record<string, number>,
-    recipe: SpoonacularRecipeInfo
+    recipe: SpoonacularRecipeInfo,
   ): void {
     const title = recipe.title.toLowerCase();
 
@@ -528,7 +647,10 @@ export class RecipeCategorizer {
     }
 
     // Very low calorie items are likely snacks
-    const calories = this.getNutrientValue(recipe.nutrition?.nutrients || [], "calories");
+    const calories = this.getNutrientValue(
+      recipe.nutrition?.nutrients || [],
+      "calories",
+    );
     if (calories < 200) {
       scores.snack *= 1.5;
       scores.dinner *= 0.5;
@@ -541,18 +663,22 @@ export class RecipeCategorizer {
   private generateReasoning(
     features: CategoryFeatures,
     category: keyof typeof GD_REQUIREMENTS,
-    recipe: SpoonacularRecipeInfo
+    recipe: SpoonacularRecipeInfo,
   ): string[] {
     const reasoning: string[] = [];
     // Map to simplified category for nutrition profiles
-    const simplifiedCategory = ["morningSnack", "afternoonSnack", "eveningSnack"].includes(category) 
-      ? "snack" as MealCategory
-      : category as MealCategory;
-    
+    const simplifiedCategory = [
+      "morningSnack",
+      "afternoonSnack",
+      "eveningSnack",
+    ].includes(category)
+      ? ("snack" as MealCategory)
+      : (category as MealCategory);
+
     if (!this.nutritionProfiles[simplifiedCategory]) {
       return reasoning;
     }
-    
+
     const profile = this.nutritionProfiles[simplifiedCategory];
 
     // Nutrition reasoning
@@ -561,7 +687,7 @@ export class RecipeCategorizer {
       features.nutritionProfile.carbs <= profile.carbs.max
     ) {
       reasoning.push(
-        `Carbohydrate content (${features.nutritionProfile.carbs}g) fits ${category} range`
+        `Carbohydrate content (${features.nutritionProfile.carbs}g) fits ${category} range`,
       );
     }
 
@@ -571,14 +697,21 @@ export class RecipeCategorizer {
     }
 
     // Ingredient reasoning
-    if (features.ingredients[`${simplifiedCategory}Ingredients` as keyof typeof features.ingredients] > 0.3) {
+    if (
+      features.ingredients[
+        `${simplifiedCategory}Ingredients` as keyof typeof features.ingredients
+      ] > 0.3
+    ) {
       reasoning.push(`Ingredients typical of ${category} meals`);
     }
 
     // Preparation reasoning
     if (category === "breakfast" && features.preparation.cookingTime <= 20) {
       reasoning.push("Quick preparation time suitable for breakfast");
-    } else if (category === "dinner" && features.preparation.cookingTime >= 30) {
+    } else if (
+      category === "dinner" &&
+      features.preparation.cookingTime >= 30
+    ) {
       reasoning.push("Cooking time appropriate for dinner meal");
     } else if (category === "snack" && features.preparation.cookingTime <= 15) {
       reasoning.push("Very quick preparation ideal for snacks");
@@ -597,7 +730,7 @@ export class RecipeCategorizer {
    */
   private generateTags(
     recipe: SpoonacularRecipeInfo,
-    category: keyof typeof GD_REQUIREMENTS
+    category: keyof typeof GD_REQUIREMENTS,
   ): string[] {
     const tags: string[] = [category];
 
@@ -624,14 +757,30 @@ export class RecipeCategorizer {
     const ingredients = recipe.extendedIngredients || [];
     const hasWholeGrains = ingredients.some((ing) => {
       const name = (ing.nameClean || ing.name || "").toLowerCase();
-      return name.includes("whole") && (name.includes("grain") || name.includes("wheat"));
+      return (
+        name.includes("whole") &&
+        (name.includes("grain") || name.includes("wheat"))
+      );
     });
     if (hasWholeGrains) tags.push("whole-grains");
 
     // Add protein source tags
-    const proteinSources = ["chicken", "beef", "fish", "tofu", "beans", "eggs", "turkey", "pork"];
+    const proteinSources = [
+      "chicken",
+      "beef",
+      "fish",
+      "tofu",
+      "beans",
+      "eggs",
+      "turkey",
+      "pork",
+    ];
     for (const protein of proteinSources) {
-      if (ingredients.some((ing) => (ing.nameClean || ing.name || "").toLowerCase().includes(protein))) {
+      if (
+        ingredients.some((ing) =>
+          (ing.nameClean || ing.name || "").toLowerCase().includes(protein),
+        )
+      ) {
         tags.push(protein);
         break;
       }
@@ -645,7 +794,7 @@ export class RecipeCategorizer {
    */
   private getNutrientValue(nutrients: any[], name: string): number {
     const nutrient = nutrients.find((n: any) =>
-      n.name.toLowerCase().includes(name.toLowerCase())
+      n.name.toLowerCase().includes(name.toLowerCase()),
     );
     return nutrient?.amount || 0;
   }
@@ -653,7 +802,9 @@ export class RecipeCategorizer {
   /**
    * Bulk categorize recipes
    */
-  categorizeRecipes(recipes: SpoonacularRecipeInfo[]): Map<string, CategorizationResult> {
+  categorizeRecipes(
+    recipes: SpoonacularRecipeInfo[],
+  ): Map<string, CategorizationResult> {
     const results = new Map<string, CategorizationResult>();
 
     for (const recipe of recipes) {
@@ -667,7 +818,9 @@ export class RecipeCategorizer {
   /**
    * Get category distribution statistics
    */
-  getCategoryDistribution(results: Map<string, CategorizationResult>): Record<string, number> {
+  getCategoryDistribution(
+    results: Map<string, CategorizationResult>,
+  ): Record<string, number> {
     const distribution: Record<string, number> = {
       breakfast: 0,
       lunch: 0,

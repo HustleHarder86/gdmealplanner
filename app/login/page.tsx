@@ -2,7 +2,10 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
+import {
+  signInWithEmailAndPassword,
+  sendPasswordResetEmail,
+} from "firebase/auth";
 import { auth } from "@/src/lib/firebase/client";
 import Link from "next/link";
 
@@ -22,8 +25,10 @@ export default function LoginPage() {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       // Redirect to admin if that's where they came from
-      const returnUrl = new URLSearchParams(window.location.search).get('returnUrl');
-      router.push(returnUrl || '/');
+      const returnUrl = new URLSearchParams(window.location.search).get(
+        "returnUrl",
+      );
+      router.push(returnUrl || "/");
     } catch (error: any) {
       setError(error.message || "Failed to sign in");
     } finally {
@@ -120,8 +125,8 @@ export default function LoginPage() {
               </button>
             </div>
 
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               className="w-full btn-primary"
               disabled={loading}
             >
@@ -143,7 +148,10 @@ export default function LoginPage() {
         </div>
 
         <div className="mt-6 text-center">
-          <Link href="/" className="text-sm text-neutral-600 hover:text-neutral-800">
+          <Link
+            href="/"
+            className="text-sm text-neutral-600 hover:text-neutral-800"
+          >
             ← Back to home
           </Link>
         </div>

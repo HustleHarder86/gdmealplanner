@@ -16,11 +16,11 @@ export default function RecipePreviewModal({
   onImport,
 }: RecipePreviewModalProps) {
   const nutrients = recipe.nutrition?.nutrients || [];
-  const carbs = nutrients.find(n => n.name === "Carbohydrates")?.amount || 0;
-  const protein = nutrients.find(n => n.name === "Protein")?.amount || 0;
-  const fat = nutrients.find(n => n.name === "Fat")?.amount || 0;
-  const fiber = nutrients.find(n => n.name === "Fiber")?.amount || 0;
-  const calories = nutrients.find(n => n.name === "Calories")?.amount || 0;
+  const carbs = nutrients.find((n) => n.name === "Carbohydrates")?.amount || 0;
+  const protein = nutrients.find((n) => n.name === "Protein")?.amount || 0;
+  const fat = nutrients.find((n) => n.name === "Fat")?.amount || 0;
+  const fiber = nutrients.find((n) => n.name === "Fiber")?.amount || 0;
+  const calories = nutrients.find((n) => n.name === "Calories")?.amount || 0;
 
   // Check GD compliance
   const isGDCompliant = carbs <= 45 && carbs >= 15;
@@ -30,7 +30,9 @@ export default function RecipePreviewModal({
       <div className="bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-hidden">
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b">
-          <h2 className="text-xl font-semibold text-gray-900">Recipe Preview</h2>
+          <h2 className="text-xl font-semibold text-gray-900">
+            Recipe Preview
+          </h2>
           <button
             onClick={onClose}
             className="text-gray-400 hover:text-gray-600"
@@ -131,21 +133,29 @@ export default function RecipePreviewModal({
             </div>
 
             {/* Ingredients */}
-            {recipe.extendedIngredients && recipe.extendedIngredients.length > 0 && (
-              <div className="mb-6">
-                <h4 className="font-semibold text-gray-900 mb-3">Ingredients</h4>
-                <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
-                  {recipe.extendedIngredients.map((ingredient, index) => (
-                    <li key={index}>{ingredient.original}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
+            {recipe.extendedIngredients &&
+              recipe.extendedIngredients.length > 0 && (
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-900 mb-3">
+                    Ingredients
+                  </h4>
+                  <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
+                    {recipe.extendedIngredients.map((ingredient, index) => (
+                      <li key={index}>{ingredient.original}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
             {/* Diet Labels */}
-            {(recipe.vegetarian || recipe.vegan || recipe.glutenFree || recipe.dairyFree) && (
+            {(recipe.vegetarian ||
+              recipe.vegan ||
+              recipe.glutenFree ||
+              recipe.dairyFree) && (
               <div className="mb-6">
-                <h4 className="font-semibold text-gray-900 mb-3">Diet Labels</h4>
+                <h4 className="font-semibold text-gray-900 mb-3">
+                  Diet Labels
+                </h4>
                 <div className="flex flex-wrap gap-2">
                   {recipe.vegetarian && (
                     <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">

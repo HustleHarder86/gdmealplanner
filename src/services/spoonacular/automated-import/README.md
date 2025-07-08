@@ -5,6 +5,7 @@ This system automatically imports 100 gestational diabetes-compliant recipes dai
 ## System Overview
 
 ### Key Features
+
 - **Intelligent Filtering**: Uses rotating strategies to import diverse recipe types
 - **Quality Validation**: Scores recipes 0-100 based on GD compliance, practicality, and popularity
 - **Deduplication**: Prevents duplicate recipes using fingerprinting and fuzzy matching
@@ -12,12 +13,14 @@ This system automatically imports 100 gestational diabetes-compliant recipes dai
 - **Daily Reports**: Generates comprehensive reports on import performance
 
 ### Import Schedule (7-day cycle)
+
 - **Days 1-2**: Breakfast focus (40-60 recipes/day)
 - **Days 3-4**: Main meals (30 lunch + 30 dinner/day)
 - **Days 5-6**: Snacks (40-60 recipes/day)
 - **Day 7**: Gap filling (20 per category)
 
 ### Campaign Phases
+
 - **Phase 1 (Days 1-10)**: Core library - popular, well-rated recipes
 - **Phase 2 (Days 11-15)**: Dietary variations - vegetarian, vegan, gluten-free
 - **Phase 3 (Days 16-20)**: Seasonal & special - international cuisines, batch cooking
@@ -25,10 +28,10 @@ This system automatically imports 100 gestational diabetes-compliant recipes dai
 ## Quick Start
 
 ```typescript
-import { RecipeImportScheduler } from './automated-import';
+import { RecipeImportScheduler } from "./automated-import";
 
 const scheduler = new RecipeImportScheduler(process.env.SPOONACULAR_API_KEY, {
-  campaignStartDate: '2024-01-01',
+  campaignStartDate: "2024-01-01",
   dailyQuota: 100,
   minQualityScore: 50,
 });
@@ -43,22 +46,26 @@ console.log(formatReportForDisplay(report));
 Each recipe is scored 0-100 based on:
 
 ### GD Compliance (40 points)
+
 - Carb range compliance: 20pts
 - Protein adequacy: 10pts
 - Fiber content: 10pts
 
 ### Practicality (30 points)
+
 - Cooking time: 10pts
 - Ingredient availability: 10pts
 - Difficulty level: 10pts
 
 ### Popularity (30 points)
+
 - Spoonacular rating: 15pts
 - Number of reviews: 15pts
 
 ## Deduplication
 
 The system prevents duplicates through:
+
 1. **Exact ID matching**: Checks Spoonacular recipe IDs
 2. **Title matching**: Normalized title comparison
 3. **Similar recipe detection**: Fuzzy matching on title and ingredients
@@ -67,6 +74,7 @@ The system prevents duplicates through:
 ## Auto-categorization
 
 Recipes are categorized based on:
+
 - Nutritional profile matching
 - Keyword analysis
 - Ingredient patterns
@@ -76,14 +84,18 @@ Recipes are categorized based on:
 ## Configuration
 
 ### Import Strategies
+
 Edit `import-strategies.ts` to modify:
+
 - Search queries
 - Nutritional constraints
 - Excluded ingredients
 - Sort preferences
 
 ### Quality Thresholds
+
 Adjust in scheduler configuration:
+
 - `minQualityScore`: Minimum score to accept (default: 50)
 - `maxRetries`: API retry attempts (default: 3)
 - `rateLimitDelay`: Delay between API calls (default: 1000ms)
@@ -91,6 +103,7 @@ Adjust in scheduler configuration:
 ## Daily Reports
 
 Reports include:
+
 - Import summary (recipes imported, rejected, API usage)
 - Category breakdown with average quality scores
 - Quality score distribution
@@ -133,6 +146,7 @@ console.log(`Total imported: ${status.totalRecipesImported}`);
 ## Error Handling
 
 The system handles:
+
 - API rate limits with automatic delays
 - Network failures with retries
 - Invalid recipe data with validation

@@ -40,14 +40,21 @@ export class SpoonacularClient {
 
     // Add recipe information if specified
     if (params.addRecipeInformation) {
-      searchParams.append("addRecipeInformation", params.addRecipeInformation.toString());
+      searchParams.append(
+        "addRecipeInformation",
+        params.addRecipeInformation.toString(),
+      );
     }
 
     // Only add nutritional constraints if explicitly provided
-    if (params.minCarbs !== undefined) searchParams.append("minCarbs", params.minCarbs.toString());
-    if (params.maxCarbs !== undefined) searchParams.append("maxCarbs", params.maxCarbs.toString());
-    if (params.minProtein !== undefined) searchParams.append("minProtein", params.minProtein.toString());
-    if (params.minFiber !== undefined) searchParams.append("minFiber", params.minFiber.toString());
+    if (params.minCarbs !== undefined)
+      searchParams.append("minCarbs", params.minCarbs.toString());
+    if (params.maxCarbs !== undefined)
+      searchParams.append("maxCarbs", params.maxCarbs.toString());
+    if (params.minProtein !== undefined)
+      searchParams.append("minProtein", params.minProtein.toString());
+    if (params.minFiber !== undefined)
+      searchParams.append("minFiber", params.minFiber.toString());
 
     // Add optional parameters
     if (params.query) searchParams.append("query", params.query);

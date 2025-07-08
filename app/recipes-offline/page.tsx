@@ -20,27 +20,27 @@ export default function RecipesOfflinePage() {
     const loadRecipes = async () => {
       try {
         setLoading(true);
-        
+
         // First try to load fresh data from the export API
         try {
-          const response = await fetch('/api/recipes/export?format=json');
+          const response = await fetch("/api/recipes/export?format=json");
           if (response.ok) {
             const data = await response.json();
             await LocalRecipeService.initialize(data.recipes);
             LocalRecipeService.saveToLocalStorage();
           }
         } catch (fetchError) {
-          console.log('Could not fetch fresh data, using local storage');
+          console.log("Could not fetch fresh data, using local storage");
           // Initialize from local storage if API fails
           await LocalRecipeService.initialize();
         }
-        
+
         const allRecipes = LocalRecipeService.getAllRecipes();
         setRecipes(allRecipes);
         setError(null);
       } catch (err) {
-        console.error('Error loading recipes:', err);
-        setError(err instanceof Error ? err.message : 'Failed to load recipes');
+        console.error("Error loading recipes:", err);
+        setError(err instanceof Error ? err.message : "Failed to load recipes");
         setRecipes([]);
       } finally {
         setLoading(false);
@@ -55,16 +55,20 @@ export default function RecipesOfflinePage() {
 
     // Filter by category
     if (selectedCategory !== "all") {
-      filteredList = filteredList.filter(recipe => recipe.category === selectedCategory);
+      filteredList = filteredList.filter(
+        (recipe) => recipe.category === selectedCategory,
+      );
     }
 
     // Filter by search term - use LocalRecipeService search
     if (searchTerm) {
       filteredList = LocalRecipeService.searchRecipes(searchTerm);
-      
+
       // Apply other filters to search results
       if (selectedCategory !== "all") {
-        filteredList = filteredList.filter(recipe => recipe.category === selectedCategory);
+        filteredList = filteredList.filter(
+          (recipe) => recipe.category === selectedCategory,
+        );
       }
     }
 
@@ -89,8 +93,8 @@ export default function RecipesOfflinePage() {
       if (selectedCarbs === "bedtime") {
         // Use specialized method for bedtime snacks
         const bedtimeSnacks = LocalRecipeService.getBedtimeSnacks();
-        filteredList = filteredList.filter(recipe => 
-          bedtimeSnacks.some(snack => snack.id === recipe.id)
+        filteredList = filteredList.filter((recipe) =>
+          bedtimeSnacks.some((snack) => snack.id === recipe.id),
         );
       } else {
         filteredList = filteredList.filter((recipe) => {
@@ -134,13 +138,23 @@ export default function RecipesOfflinePage() {
       <div className="container py-8">
         <div className="text-center">
           <div className="text-red-600 mb-4">
-            <svg className="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.96-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+            <svg
+              className="w-12 h-12 mx-auto mb-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.96-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+              />
             </svg>
             <p className="text-lg font-semibold">Failed to load recipes</p>
             <p className="text-sm">{error}</p>
           </div>
-          <button 
+          <button
             onClick={() => window.location.reload()}
             className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
           >
@@ -154,13 +168,18 @@ export default function RecipesOfflinePage() {
   return (
     <div className="container py-8">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">GD-Friendly Recipes (Offline Mode)</h1>
+        <h1 className="text-3xl font-bold mb-2">
+          GD-Friendly Recipes (Offline Mode)
+        </h1>
         <p className="text-neutral-600">
-          Browse our collection of {recipes.length} gestational diabetes-friendly recipes - no internet required!
+          Browse our collection of {recipes.length} gestational
+          diabetes-friendly recipes - no internet required!
         </p>
         {stats && (
           <div className="mt-2 text-sm text-neutral-500">
-            {stats.withLocalImages} recipes with local images • {stats.quickRecipes} quick recipes • {stats.bedtimeSnacks} bedtime snacks
+            {stats.withLocalImages} recipes with local images •{" "}
+            {stats.quickRecipes} quick recipes • {stats.bedtimeSnacks} bedtime
+            snacks
           </div>
         )}
       </div>
@@ -237,8 +256,10 @@ export default function RecipesOfflinePage() {
       {/* No results message */}
       {filteredRecipes.length === 0 && recipes.length > 0 && (
         <div className="text-center py-12">
-          <p className="text-neutral-600 text-lg">No recipes match your current filters.</p>
-          <button 
+          <p className="text-neutral-600 text-lg">
+            No recipes match your current filters.
+          </p>
+          <button
             onClick={() => {
               setSearchTerm("");
               setSelectedCategory("all");

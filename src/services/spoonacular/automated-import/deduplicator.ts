@@ -40,11 +40,13 @@ export class RecipeDeduplicator {
   /**
    * Load existing recipe fingerprints from database
    */
-  async loadExistingRecipes(recipes: Array<{ id: string; data: any }>): Promise<void> {
+  async loadExistingRecipes(
+    recipes: Array<{ id: string; data: any }>,
+  ): Promise<void> {
     for (const recipe of recipes) {
       const fingerprint = this.createFingerprint(recipe.data);
       this.existingFingerprints.set(recipe.id, fingerprint);
-      
+
       // Update indexes
       this.indexRecipe(fingerprint);
     }
@@ -98,14 +100,14 @@ export class RecipeDeduplicator {
   private createFingerprint(recipe: any): RecipeFingerprint {
     // Normalize title
     const normalizedTitle = this.normalizeTitle(recipe.title || "");
-    
+
     // Hash title for quick comparison
     const titleHash = this.hash(normalizedTitle);
-    
+
     // Extract and sort main ingredients
     const mainIngredients = this.extractMainIngredients(recipe);
     const ingredientHash = this.hash(mainIngredients.sort().join(","));
-    
+
     // Create nutrition hash
     const nutritionHash = this.createNutritionHash(recipe);
 
@@ -142,11 +144,42 @@ export class RecipeDeduplicator {
    */
   private isStopWord(word: string): boolean {
     const stopWords = new Set([
-      "the", "a", "an", "and", "or", "but", "in", "on", "at", "to", "for",
-      "of", "with", "by", "from", "about", "into", "through", "during",
-      "before", "after", "above", "below", "between", "under", "over",
-      "recipe", "easy", "quick", "simple", "best", "homemade", "healthy",
-      "delicious", "tasty", "yummy"
+      "the",
+      "a",
+      "an",
+      "and",
+      "or",
+      "but",
+      "in",
+      "on",
+      "at",
+      "to",
+      "for",
+      "of",
+      "with",
+      "by",
+      "from",
+      "about",
+      "into",
+      "through",
+      "during",
+      "before",
+      "after",
+      "above",
+      "below",
+      "between",
+      "under",
+      "over",
+      "recipe",
+      "easy",
+      "quick",
+      "simple",
+      "best",
+      "homemade",
+      "healthy",
+      "delicious",
+      "tasty",
+      "yummy",
     ]);
     return stopWords.has(word);
   }
@@ -159,8 +192,12 @@ export class RecipeDeduplicator {
     const mainIngredients: string[] = [];
 
     for (const ingredient of ingredients) {
-      const name = (ingredient.nameClean || ingredient.name || "").toLowerCase();
-      
+      const name = (
+        ingredient.nameClean ||
+        ingredient.name ||
+        ""
+      ).toLowerCase();
+
       // Skip common seasonings and small amounts
       if (this.isSeasoningOrMinor(name, ingredient.amount)) {
         continue;
@@ -181,9 +218,25 @@ export class RecipeDeduplicator {
    */
   private isSeasoningOrMinor(name: string, amount?: number): boolean {
     const seasonings = new Set([
-      "salt", "pepper", "oil", "butter", "sugar", "flour", "water",
-      "garlic", "onion", "vanilla", "cinnamon", "paprika", "oregano",
-      "basil", "thyme", "rosemary", "parsley", "bay leaf", "cumin"
+      "salt",
+      "pepper",
+      "oil",
+      "butter",
+      "sugar",
+      "flour",
+      "water",
+      "garlic",
+      "onion",
+      "vanilla",
+      "cinnamon",
+      "paprika",
+      "oregano",
+      "basil",
+      "thyme",
+      "rosemary",
+      "parsley",
+      "bay leaf",
+      "cumin",
     ]);
 
     // Check if it's a seasoning
@@ -205,9 +258,25 @@ export class RecipeDeduplicator {
   private extractCoreIngredientName(name: string): string {
     // Remove common descriptors
     const descriptors = [
-      "fresh", "frozen", "canned", "dried", "ground", "whole", "chopped",
-      "diced", "sliced", "minced", "crushed", "shredded", "grated",
-      "boneless", "skinless", "lean", "low-fat", "fat-free", "organic"
+      "fresh",
+      "frozen",
+      "canned",
+      "dried",
+      "ground",
+      "whole",
+      "chopped",
+      "diced",
+      "sliced",
+      "minced",
+      "crushed",
+      "shredded",
+      "grated",
+      "boneless",
+      "skinless",
+      "lean",
+      "low-fat",
+      "fat-free",
+      "organic",
     ];
 
     let coreName = name;
@@ -223,7 +292,7 @@ export class RecipeDeduplicator {
    */
   private createNutritionHash(recipe: any): string {
     const nutrients = recipe.nutrition?.nutrients || [];
-    
+
     // Extract key nutrients
     const carbs = this.getNutrientValue(nutrients, "carbohydrates");
     const protein = this.getNutrientValue(nutrients, "protein");
@@ -246,7 +315,7 @@ export class RecipeDeduplicator {
    */
   private getNutrientValue(nutrients: any[], name: string): number {
     const nutrient = nutrients.find((n: any) =>
-      n.name.toLowerCase().includes(name.toLowerCase())
+      n.name.toLowerCase().includes(name.toLowerCase()),
     );
     return nutrient?.amount || 0;
   }
@@ -285,7 +354,7 @@ export class RecipeDeduplicator {
    */
   private checkExactIdMatch(spoonacularId: number): DeduplicationResult {
     const idStr = String(spoonacularId);
-    
+
     for (const [recipeId, fingerprint] of this.existingFingerprints) {
       if (fingerprint.id === idStr) {
         return {
@@ -325,7 +394,9 @@ export class RecipeDeduplicator {
   /**
    * Check for similar recipes using fuzzy matching
    */
-  private checkSimilarRecipe(fingerprint: RecipeFingerprint): DeduplicationResult {
+  private checkSimilarRecipe(
+    fingerprint: RecipeFingerprint,
+  ): DeduplicationResult {
     const candidates = this.findCandidateRecipes(fingerprint);
 
     for (const candidateId of candidates) {
@@ -351,14 +422,16 @@ export class RecipeDeduplicator {
   /**
    * Check for recipe variants (same dish, different preparation)
    */
-  private checkRecipeVariant(fingerprint: RecipeFingerprint): DeduplicationResult {
+  private checkRecipeVariant(
+    fingerprint: RecipeFingerprint,
+  ): DeduplicationResult {
     // Check if nutrition is very similar
     for (const [recipeId, existing] of this.existingFingerprints) {
       if (fingerprint.nutritionHash === existing.nutritionHash) {
         // Check if ingredients are mostly the same
         const ingredientOverlap = this.calculateIngredientOverlap(
           fingerprint.mainIngredients,
-          existing.mainIngredients
+          existing.mainIngredients,
         );
 
         if (ingredientOverlap >= 0.7) {
@@ -405,7 +478,10 @@ export class RecipeDeduplicator {
   /**
    * Calculate similarity between two recipes
    */
-  private calculateSimilarity(fp1: RecipeFingerprint, fp2: RecipeFingerprint): number {
+  private calculateSimilarity(
+    fp1: RecipeFingerprint,
+    fp2: RecipeFingerprint,
+  ): number {
     const weights = {
       title: 0.3,
       ingredients: 0.4,
@@ -417,22 +493,26 @@ export class RecipeDeduplicator {
     // Title similarity
     const titleSimilarity = this.calculateTitleSimilarity(
       fp1.normalizedTitle,
-      fp2.normalizedTitle
+      fp2.normalizedTitle,
     );
 
     // Ingredient similarity
     const ingredientSimilarity = this.calculateIngredientOverlap(
       fp1.mainIngredients,
-      fp2.mainIngredients
+      fp2.mainIngredients,
     );
 
     // Cooking time similarity
     const timeSimilarity =
-      1 - Math.abs(fp1.cookingTime - fp2.cookingTime) / Math.max(fp1.cookingTime, fp2.cookingTime);
+      1 -
+      Math.abs(fp1.cookingTime - fp2.cookingTime) /
+        Math.max(fp1.cookingTime, fp2.cookingTime);
 
     // Servings similarity
     const servingsSimilarity =
-      1 - Math.abs(fp1.servings - fp2.servings) / Math.max(fp1.servings, fp2.servings);
+      1 -
+      Math.abs(fp1.servings - fp2.servings) /
+        Math.max(fp1.servings, fp2.servings);
 
     // Nutrition similarity
     const nutritionSimilarity = fp1.nutritionHash === fp2.nutritionHash ? 1 : 0;
@@ -454,7 +534,9 @@ export class RecipeDeduplicator {
     const words1 = new Set(title1.split(" "));
     const words2 = new Set(title2.split(" "));
 
-    const intersection = new Set(Array.from(words1).filter((x) => words2.has(x)));
+    const intersection = new Set(
+      Array.from(words1).filter((x) => words2.has(x)),
+    );
     const union = new Set([...Array.from(words1), ...Array.from(words2)]);
 
     return intersection.size / union.size;
@@ -463,7 +545,10 @@ export class RecipeDeduplicator {
   /**
    * Calculate ingredient overlap
    */
-  private calculateIngredientOverlap(ingredients1: string[], ingredients2: string[]): number {
+  private calculateIngredientOverlap(
+    ingredients1: string[],
+    ingredients2: string[],
+  ): number {
     const set1 = new Set(ingredients1);
     const set2 = new Set(ingredients2);
 
@@ -491,10 +576,12 @@ export class RecipeDeduplicator {
     uniqueIngredientCombinations: number;
   } {
     const uniqueTitles = new Set(
-      Array.from(this.existingFingerprints.values()).map((fp) => fp.titleHash)
+      Array.from(this.existingFingerprints.values()).map((fp) => fp.titleHash),
     );
     const uniqueIngredients = new Set(
-      Array.from(this.existingFingerprints.values()).map((fp) => fp.ingredientHash)
+      Array.from(this.existingFingerprints.values()).map(
+        (fp) => fp.ingredientHash,
+      ),
     );
 
     return {

@@ -1,14 +1,17 @@
 # MCP: Automated Recipe Import System
 
 ## Overview
+
 This MCP defines an automated system to build a comprehensive recipe library by importing 100 GD-compliant recipes daily from Spoonacular API, with intelligent filtering and categorization.
 
 ## Objective
+
 Build a library of 2,000+ gestational diabetes-friendly recipes over 20 days using automated imports with smart filters, quality validation, and proper categorization.
 
 ## System Architecture
 
 ### Daily Import Schedule (100 recipes/day)
+
 - **Days 1-2**: Breakfast focus (40 recipes/day)
 - **Days 3-4**: Main meals (30 lunch + 30 dinner/day)
 - **Days 5-6**: Snacks (40 recipes/day)
@@ -18,16 +21,19 @@ Build a library of 2,000+ gestational diabetes-friendly recipes over 20 days usi
 ### Import Strategy
 
 #### Phase 1: Core Library (Days 1-10)
+
 - 1,000 recipes total
 - 300 breakfast, 350 lunch, 350 dinner, 200 snacks
 - Focus on popular, well-rated recipes
 
 #### Phase 2: Dietary Variations (Days 11-15)
+
 - 500 recipes for special diets
 - Vegetarian, vegan, gluten-free, dairy-free
 - Quick recipes (<15 minutes)
 
 #### Phase 3: Seasonal & Special (Days 16-20)
+
 - 500 seasonal and international recipes
 - Batch cooking options
 - Restaurant favorites (healthified)
@@ -35,6 +41,7 @@ Build a library of 2,000+ gestational diabetes-friendly recipes over 20 days usi
 ## Filter Specifications
 
 ### Breakfast Filters (Days 1-2)
+
 ```javascript
 // Round 1: Classic breakfast (20 recipes)
 {
@@ -58,6 +65,7 @@ Build a library of 2,000+ gestational diabetes-friendly recipes over 20 days usi
 ```
 
 ### Lunch Filters (Day 3)
+
 ```javascript
 // Round 1: Salads & bowls (15 recipes)
 {
@@ -80,6 +88,7 @@ Build a library of 2,000+ gestational diabetes-friendly recipes over 20 days usi
 ```
 
 ### Dinner Filters (Day 4)
+
 ```javascript
 // Round 1: Protein-focused (15 recipes)
 {
@@ -102,6 +111,7 @@ Build a library of 2,000+ gestational diabetes-friendly recipes over 20 days usi
 ```
 
 ### Snack Filters (Days 5-6)
+
 ```javascript
 // Round 1: Morning snacks (20 recipes)
 {
@@ -123,7 +133,9 @@ Build a library of 2,000+ gestational diabetes-friendly recipes over 20 days usi
 ```
 
 ### Universal Quality Filters
+
 Applied to ALL queries:
+
 ```javascript
 {
   addRecipeNutrition: true,
@@ -139,6 +151,7 @@ Applied to ALL queries:
 ## Implementation Tasks
 
 ### 1. Automated Import Service
+
 ```
 /src/services/spoonacular/automated-import/
 ├── scheduler.ts         # Daily import scheduler
@@ -150,6 +163,7 @@ Applied to ALL queries:
 ```
 
 ### 2. Database Schema
+
 ```
 /recipes_library/
 ├── imported_recipes/
@@ -172,6 +186,7 @@ Applied to ALL queries:
 ```
 
 ### 3. Admin Dashboard
+
 ```
 /app/admin/recipe-import/
 ├── page.tsx           # Dashboard overview
@@ -184,6 +199,7 @@ Applied to ALL queries:
 ## Automation Logic
 
 ### Daily Execution Flow
+
 1. **2:00 AM**: Wake up scheduler
 2. **2:05 AM**: Determine today's category focus
 3. **2:10 AM**: Load filter configurations
@@ -196,11 +212,12 @@ Applied to ALL queries:
 10. **5:00 AM**: Send summary email
 
 ### Import Algorithm
+
 ```typescript
 async function dailyImport() {
   const dayOfCycle = getDayOfCycle(); // 1-7
   const strategies = getImportStrategies(dayOfCycle);
-  
+
   for (const strategy of strategies) {
     const recipes = await searchRecipes(strategy.filters);
     const validated = await validateRecipes(recipes);
@@ -208,7 +225,7 @@ async function dailyImport() {
     const categorized = await categorizeRecipes(unique);
     await storeRecipes(categorized);
   }
-  
+
   await generateReport();
 }
 ```
@@ -216,6 +233,7 @@ async function dailyImport() {
 ## Quality Scoring System
 
 Each recipe gets scored 0-100 based on:
+
 - **GD Compliance (40 points)**
   - Carb range compliance: 20pts
   - Protein adequacy: 10pts
@@ -231,6 +249,7 @@ Each recipe gets scored 0-100 based on:
 ## Monitoring & Adjustments
 
 ### Daily Metrics
+
 - Total recipes imported
 - GD compliance rate
 - Category distribution
@@ -238,18 +257,21 @@ Each recipe gets scored 0-100 based on:
 - API quota usage
 
 ### Weekly Adjustments
+
 - Identify underperforming categories
 - Adjust filters based on success rates
 - Remove poor-performing search terms
 - Add trending ingredients
 
 ### Failure Handling
+
 - Retry failed imports up to 3 times
 - Log all failures with reasons
 - Email alerts for >10% failure rate
 - Automatic filter adjustment for consistent failures
 
 ## Success Criteria
+
 - [ ] 2,000+ recipes imported in 20 days
 - [ ] 90%+ GD compliance rate
 - [ ] <5% duplicate rate
@@ -258,6 +280,7 @@ Each recipe gets scored 0-100 based on:
 - [ ] Daily import success rate >95%
 
 ## Manual Overrides
+
 - Pause/resume schedule
 - Skip specific days
 - Adjust daily quota
@@ -268,6 +291,7 @@ Each recipe gets scored 0-100 based on:
 ## Reporting
 
 ### Daily Report Includes
+
 - Recipes imported by category
 - Quality score distribution
 - Failed imports with reasons
@@ -275,6 +299,7 @@ Each recipe gets scored 0-100 based on:
 - Tomorrow's planned imports
 
 ### Weekly Report Includes
+
 - Total library growth
 - Category balance analysis
 - Popular recipes identified
@@ -282,6 +307,7 @@ Each recipe gets scored 0-100 based on:
 - Recommendations for adjustments
 
 ## Security & Performance
+
 - API keys stored securely
 - Rate limiting: 1 request/second
 - Batch operations where possible
@@ -289,6 +315,7 @@ Each recipe gets scored 0-100 based on:
 - Indexed recipe lookups
 
 ## Future Enhancements
+
 - Machine learning for better categorization
 - User preference learning
 - Seasonal recipe prioritization
@@ -296,11 +323,13 @@ Each recipe gets scored 0-100 based on:
 - Integration with meal planning algorithm
 
 ---
+
 Last Updated: [Current Date]
 Status: Ready for Implementation
 Assigned To: Automated Recipe Import Subagent
 
 ## Implementation Phases
+
 1. **Phase 1**: Build core import service (Day 1-2)
 2. **Phase 2**: Add scheduling and automation (Day 3-4)
 3. **Phase 3**: Create admin dashboard (Day 5)

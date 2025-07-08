@@ -54,7 +54,7 @@ export function transformSpoonacularRecipe(
     source: spoonacularRecipe.sourceName || "Spoonacular",
     sourceUrl:
       spoonacularRecipe.sourceUrl ||
-      `https://spoonacular.com/recipes/${spoonacularRecipe.id}`
+      `https://spoonacular.com/recipes/${spoonacularRecipe.id}`,
   };
 
   return recipe;

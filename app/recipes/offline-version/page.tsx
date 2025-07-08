@@ -21,18 +21,18 @@ export default function RecipesOfflineVersionPage() {
     const loadRecipes = async () => {
       try {
         setLoading(true);
-        
+
         // Initialize with production recipes
         await initializeRecipes();
-        
+
         const allRecipes = LocalRecipeService.getAllRecipes();
         setRecipes(allRecipes);
         setError(null);
-        
+
         console.log(`Loaded ${allRecipes.length} recipes offline`);
       } catch (err) {
-        console.error('Error loading recipes:', err);
-        setError(err instanceof Error ? err.message : 'Failed to load recipes');
+        console.error("Error loading recipes:", err);
+        setError(err instanceof Error ? err.message : "Failed to load recipes");
         setRecipes([]);
       } finally {
         setLoading(false);
@@ -47,16 +47,20 @@ export default function RecipesOfflineVersionPage() {
 
     // Filter by category
     if (selectedCategory !== "all") {
-      filteredList = filteredList.filter(recipe => recipe.category === selectedCategory);
+      filteredList = filteredList.filter(
+        (recipe) => recipe.category === selectedCategory,
+      );
     }
 
     // Filter by search term
     if (searchTerm) {
       filteredList = LocalRecipeService.searchRecipes(searchTerm);
-      
+
       // Apply other filters to search results
       if (selectedCategory !== "all") {
-        filteredList = filteredList.filter(recipe => recipe.category === selectedCategory);
+        filteredList = filteredList.filter(
+          (recipe) => recipe.category === selectedCategory,
+        );
       }
     }
 
@@ -80,8 +84,8 @@ export default function RecipesOfflineVersionPage() {
     if (selectedCarbs !== "all") {
       if (selectedCarbs === "bedtime") {
         const bedtimeSnacks = LocalRecipeService.getBedtimeSnacks();
-        filteredList = filteredList.filter(recipe => 
-          bedtimeSnacks.some(snack => snack.id === recipe.id)
+        filteredList = filteredList.filter((recipe) =>
+          bedtimeSnacks.some((snack) => snack.id === recipe.id),
         );
       } else {
         filteredList = filteredList.filter((recipe) => {
@@ -112,7 +116,9 @@ export default function RecipesOfflineVersionPage() {
       <div className="container py-8">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto mb-4"></div>
-          <p className="text-neutral-600">Loading recipes from offline data...</p>
+          <p className="text-neutral-600">
+            Loading recipes from offline data...
+          </p>
         </div>
       </div>
     );
@@ -136,7 +142,8 @@ export default function RecipesOfflineVersionPage() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">GD-Friendly Recipes</h1>
         <p className="text-neutral-600">
-          {recipes.length} recipes loaded from offline data - no API calls needed!
+          {recipes.length} recipes loaded from offline data - no API calls
+          needed!
         </p>
         <div className="mt-2 flex gap-4 text-sm text-green-600">
           <span>✅ Offline Ready</span>
@@ -164,10 +171,18 @@ export default function RecipesOfflineVersionPage() {
             onChange={(e) => setSelectedCategory(e.target.value)}
           >
             <option value="all">All Meals</option>
-            <option value="breakfast">Breakfast ({stats?.byCategory?.breakfast || 0})</option>
-            <option value="lunch">Lunch ({stats?.byCategory?.lunch || 0})</option>
-            <option value="dinner">Dinner ({stats?.byCategory?.dinner || 0})</option>
-            <option value="snack">Snacks ({stats?.byCategory?.snack || 0})</option>
+            <option value="breakfast">
+              Breakfast ({stats?.byCategory?.breakfast || 0})
+            </option>
+            <option value="lunch">
+              Lunch ({stats?.byCategory?.lunch || 0})
+            </option>
+            <option value="dinner">
+              Dinner ({stats?.byCategory?.dinner || 0})
+            </option>
+            <option value="snack">
+              Snacks ({stats?.byCategory?.snack || 0})
+            </option>
           </select>
 
           <select
@@ -179,7 +194,9 @@ export default function RecipesOfflineVersionPage() {
             <option value="breakfast">Breakfast (25-35g)</option>
             <option value="main">Lunch/Dinner (40-50g)</option>
             <option value="snack">Snacks (15-30g)</option>
-            <option value="bedtime">Bedtime Snack ({stats?.bedtimeSnacks || 0} recipes)</option>
+            <option value="bedtime">
+              Bedtime Snack ({stats?.bedtimeSnacks || 0} recipes)
+            </option>
           </select>
 
           <select
@@ -188,7 +205,9 @@ export default function RecipesOfflineVersionPage() {
             onChange={(e) => setSelectedTime(e.target.value)}
           >
             <option value="all">Any Cook Time</option>
-            <option value="quick">Under 15 min ({LocalRecipeService.getQuickRecipes(15).length})</option>
+            <option value="quick">
+              Under 15 min ({LocalRecipeService.getQuickRecipes(15).length})
+            </option>
             <option value="medium">15-30 min</option>
             <option value="long">30-60 min</option>
           </select>
@@ -206,8 +225,10 @@ export default function RecipesOfflineVersionPage() {
       {/* No results message */}
       {filteredRecipes.length === 0 && recipes.length > 0 && (
         <div className="text-center py-12">
-          <p className="text-neutral-600 text-lg">No recipes match your current filters.</p>
-          <button 
+          <p className="text-neutral-600 text-lg">
+            No recipes match your current filters.
+          </p>
+          <button
             onClick={() => {
               setSearchTerm("");
               setSelectedCategory("all");

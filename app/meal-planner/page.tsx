@@ -14,7 +14,7 @@ export default function MealPlannerPage() {
   const [weekDates, setWeekDates] = useState<{ [key: string]: Date }>({});
   const [selectedDay, setSelectedDay] = useState<string>("monday");
   const [showGroceryList, setShowGroceryList] = useState(false);
-  
+
   // Get recipes from the provider
   const { recipes } = useRecipes();
 
@@ -56,24 +56,24 @@ export default function MealPlannerPage() {
 
   const getMealRecipe = (recipeId: string): Recipe | undefined => {
     // Find recipe by ID from the provider's recipes
-    const recipe = recipes.find(r => r.id === recipeId);
-    
+    const recipe = recipes.find((r) => r.id === recipeId);
+
     // Convert from our Recipe type to the component's expected Recipe type if needed
     if (recipe) {
       return {
         id: recipe.id,
         title: recipe.title,
-        description: recipe.description || '',
+        description: recipe.description || "",
         image: recipe.imageUrl,
         originalImage: recipe.imageUrl,
         prepTime: recipe.prepTime,
         cookTime: recipe.cookTime,
         totalTime: recipe.totalTime,
         servings: recipe.servings,
-        ingredients: recipe.ingredients.map(ing => ({
-          amount: String(ing.amount || ''),
-          unit: ing.unit || '',
-          item: ing.name
+        ingredients: recipe.ingredients.map((ing) => ({
+          amount: String(ing.amount || ""),
+          unit: ing.unit || "",
+          item: ing.name,
         })),
         instructions: recipe.instructions,
         nutrition: {
@@ -85,16 +85,17 @@ export default function MealPlannerPage() {
           fiber: recipe.nutrition.fiber,
           sugar: recipe.nutrition.sugar || 0,
           sodium: recipe.nutrition.sodium || 0,
-          saturatedFat: recipe.nutrition.saturatedFat || 0
+          saturatedFat: recipe.nutrition.saturatedFat || 0,
         },
-        category: recipe.category === 'snack' ? 'snacks' : recipe.category as any,
+        category:
+          recipe.category === "snack" ? "snacks" : (recipe.category as any),
         tags: recipe.tags,
         source: recipe.source,
-        url: recipe.sourceUrl || '',
-        medicallyCompliant: recipe.verified || false
+        url: recipe.sourceUrl || "",
+        medicallyCompliant: recipe.verified || false,
       };
     }
-    
+
     return undefined;
   };
 

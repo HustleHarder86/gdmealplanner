@@ -119,12 +119,7 @@
         "sodium": 936
       },
       "carbChoices": 3,
-      "tags": [
-        "lunch",
-        "vegetarian",
-        "dairy-free",
-        "eggs"
-      ],
+      "tags": ["lunch", "vegetarian", "dairy-free", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/1096010-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/6RMF5QTL/egg-salad-wrap",
@@ -164,9 +159,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -259,12 +252,7 @@
         "sodium": 813
       },
       "carbChoices": 1,
-      "tags": [
-        "lunch",
-        "gluten-free",
-        "quick",
-        "chicken"
-      ],
+      "tags": ["lunch", "gluten-free", "quick", "chicken"],
       "imageUrl": "https://img.spoonacular.com/recipes/1160166-556x370.jpg",
       "source": "pinkwhen.com",
       "sourceUrl": "https://www.pinkwhen.com/healthy-chicken-salad-with-apples/",
@@ -304,9 +292,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -374,9 +360,7 @@
           "original": "2 medium yams, peeled and roughly chopped"
         }
       ],
-      "instructions": [
-        "Detailed instructions available at the source."
-      ],
+      "instructions": ["Detailed instructions available at the source."],
       "nutrition": {
         "calories": 357,
         "carbohydrates": 65,
@@ -388,12 +372,7 @@
         "sodium": 475
       },
       "carbChoices": 4,
-      "tags": [
-        "lunch",
-        "gluten-free",
-        "dairy-free",
-        "healthy"
-      ],
+      "tags": ["lunch", "gluten-free", "dairy-free", "healthy"],
       "imageUrl": "https://img.spoonacular.com/recipes/13073-556x370.jpg",
       "source": "Foodista",
       "sourceUrl": "https://www.foodista.com/recipe/ZCXQ32XG/seared-ahi-tuna-salad",
@@ -540,12 +519,7 @@
         "sodium": 652
       },
       "carbChoices": 1,
-      "tags": [
-        "lunch",
-        "dairy-free",
-        "quick",
-        "chicken"
-      ],
+      "tags": ["lunch", "dairy-free", "quick", "chicken"],
       "imageUrl": "https://img.spoonacular.com/recipes/1504225-556x370.jpg",
       "source": "pinkwhen.com",
       "sourceUrl": "https://www.pinkwhen.com/copycat-chick-fil-a-chicken-salad/",
@@ -585,9 +559,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -876,13 +848,7 @@
         "sodium": 616
       },
       "carbChoices": 0,
-      "tags": [
-        "lunch",
-        "gluten-free",
-        "dairy-free",
-        "quick",
-        "southern"
-      ],
+      "tags": ["lunch", "gluten-free", "dairy-free", "quick", "southern"],
       "imageUrl": "https://img.spoonacular.com/recipes/1697531-556x370.jpg",
       "source": "maplewoodroad.com",
       "sourceUrl": "https://maplewoodroad.com/southern-tuna-salad/",
@@ -1013,13 +979,7 @@
         "sodium": 417
       },
       "carbChoices": 2,
-      "tags": [
-        "lunch",
-        "vegetarian",
-        "gluten-free",
-        "mexican",
-        "eggs"
-      ],
+      "tags": ["lunch", "vegetarian", "gluten-free", "mexican", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/511748-556x370.jpg",
       "source": "pickfreshfoods.com",
       "sourceUrl": "https://pickfreshfoods.com/breakfast-tacos/",
@@ -1059,9 +1019,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -1157,11 +1115,7 @@
         "sodium": 267
       },
       "carbChoices": 0,
-      "tags": [
-        "lunch",
-        "gluten-free",
-        "chicken"
-      ],
+      "tags": ["lunch", "gluten-free", "chicken"],
       "imageUrl": "https://img.spoonacular.com/recipes/632203-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/S7Y2FCHY/almond-grape-chicken-salad",
@@ -1357,12 +1311,7 @@
         "sodium": 1029
       },
       "carbChoices": 2,
-      "tags": [
-        "lunch",
-        "gluten-free",
-        "dairy-free",
-        "chicken"
-      ],
+      "tags": ["lunch", "gluten-free", "dairy-free", "chicken"],
       "imageUrl": "https://img.spoonacular.com/recipes/632209-556x370.jpg",
       "source": "Foodista",
       "sourceUrl": "https://www.foodista.com/recipe/TQV76X3D/almond-crusted-chicken-salad-with-honey-mustard-dressing",
@@ -1405,9 +1354,7 @@
           "warnings": [],
           "recommendations": []
         },
-        "warnings": [
-          "Contains inappropriate content for pregnancy"
-        ]
+        "warnings": ["Contains inappropriate content for pregnancy"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T18:00:10.112Z",
@@ -1506,12 +1453,7 @@
         "sodium": 194
       },
       "carbChoices": 1,
-      "tags": [
-        "lunch",
-        "gluten-free",
-        "asian",
-        "chicken"
-      ],
+      "tags": ["lunch", "gluten-free", "asian", "chicken"],
       "imageUrl": "https://img.spoonacular.com/recipes/632821-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/GTBZT3NS/asian-chicken-salad",
@@ -1654,12 +1596,7 @@
         "sodium": 142
       },
       "carbChoices": 2,
-      "tags": [
-        "lunch",
-        "gluten-free",
-        "dairy-free",
-        "chicken"
-      ],
+      "tags": ["lunch", "gluten-free", "dairy-free", "chicken"],
       "imageUrl": "https://img.spoonacular.com/recipes/633132-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/T2D345B2/avocado-chicken-salad",
@@ -1813,12 +1750,7 @@
         "sodium": 1051
       },
       "carbChoices": 3,
-      "tags": [
-        "lunch",
-        "gluten-free",
-        "dairy-free",
-        "chicken"
-      ],
+      "tags": ["lunch", "gluten-free", "dairy-free", "chicken"],
       "imageUrl": "https://img.spoonacular.com/recipes/633166-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/4N2C27VP/avocado-corn-tomato-and-tortilla-soup",
@@ -1858,9 +1790,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -2006,14 +1936,10 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
-        "warnings": [
-          "Failed GD compliance validation"
-        ]
+        "warnings": ["Failed GD compliance validation"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T15:48:20.026Z",
@@ -2135,11 +2061,7 @@
         "sodium": 853
       },
       "carbChoices": 2,
-      "tags": [
-        "lunch",
-        "vegetarian",
-        "chicken"
-      ],
+      "tags": ["lunch", "vegetarian", "chicken"],
       "imageUrl": "https://img.spoonacular.com/recipes/636178-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/N3TSHPQV/broccoli-cheddar-soup-a-panera-bread-co-copycat",
@@ -2307,13 +2229,7 @@
         "sodium": 560
       },
       "carbChoices": 1,
-      "tags": [
-        "lunch",
-        "gluten-free",
-        "30-minutes",
-        "creole",
-        "cajun"
-      ],
+      "tags": ["lunch", "gluten-free", "30-minutes", "creole", "cajun"],
       "imageUrl": "https://img.spoonacular.com/recipes/636742-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/B5XRTYLQ/cajun-shrimp-chowda",
@@ -2353,9 +2269,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -2437,12 +2351,7 @@
         "sodium": 680
       },
       "carbChoices": 0,
-      "tags": [
-        "lunch",
-        "gluten-free",
-        "dairy-free",
-        "chicken"
-      ],
+      "tags": ["lunch", "gluten-free", "dairy-free", "chicken"],
       "imageUrl": "https://img.spoonacular.com/recipes/638488-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/CGYQCRH6/chicken-tortilla-chip-soup",
@@ -2640,9 +2549,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -2751,9 +2658,7 @@
         "sodium": 824
       },
       "carbChoices": 0,
-      "tags": [
-        "lunch"
-      ],
+      "tags": ["lunch"],
       "imageUrl": "https://img.spoonacular.com/recipes/639620-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/BC488L24/classic-new-england-crab-cakes",
@@ -2801,9 +2706,7 @@
             "Serve with high-fiber sides like vegetables or whole grains"
           ]
         },
-        "warnings": [
-          "Contains inappropriate content for pregnancy"
-        ]
+        "warnings": ["Contains inappropriate content for pregnancy"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T15:33:40.447Z",
@@ -2915,12 +2818,7 @@
         "sodium": 2620
       },
       "carbChoices": 2,
-      "tags": [
-        "lunch",
-        "gluten-free",
-        "dairy-free",
-        "chicken"
-      ],
+      "tags": ["lunch", "gluten-free", "dairy-free", "chicken"],
       "imageUrl": "https://img.spoonacular.com/recipes/639956-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/ZCN7725B/colorful-crunchy-apple-and-chicken-salad-with-fresh-mint-and-basil",
@@ -2960,9 +2858,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -3060,10 +2956,7 @@
         "sodium": 387
       },
       "carbChoices": 1,
-      "tags": [
-        "lunch",
-        "eggs"
-      ],
+      "tags": ["lunch", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/640425-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/NQ62BSM4/cranberry-turkey-meatballs",
@@ -3111,9 +3004,7 @@
             "Serve with high-fiber sides like vegetables or whole grains"
           ]
         },
-        "warnings": [
-          "Contains inappropriate content for pregnancy"
-        ]
+        "warnings": ["Contains inappropriate content for pregnancy"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T17:49:42.425Z",
@@ -3223,12 +3114,7 @@
         "sodium": 840
       },
       "carbChoices": 0,
-      "tags": [
-        "lunch",
-        "gluten-free",
-        "dairy-free",
-        "chicken"
-      ],
+      "tags": ["lunch", "gluten-free", "dairy-free", "chicken"],
       "imageUrl": "https://img.spoonacular.com/recipes/641200-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/TKBSZNQ7/dairy-free-chicken-salad",
@@ -3437,14 +3323,10 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
-        "warnings": [
-          "Failed GD compliance validation"
-        ]
+        "warnings": ["Failed GD compliance validation"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T15:48:24.570Z",
@@ -3573,11 +3455,7 @@
         "sodium": 416
       },
       "carbChoices": 0,
-      "tags": [
-        "lunch",
-        "gluten-free",
-        "chicken"
-      ],
+      "tags": ["lunch", "gluten-free", "chicken"],
       "imageUrl": "https://img.spoonacular.com/recipes/643252-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/PWMBND63/fragrant-curried-chicken-salad",
@@ -3747,13 +3625,7 @@
         "sodium": 1806
       },
       "carbChoices": 2,
-      "tags": [
-        "lunch",
-        "mediterranean",
-        "french",
-        "european",
-        "beef"
-      ],
+      "tags": ["lunch", "mediterranean", "french", "european", "beef"],
       "imageUrl": "https://img.spoonacular.com/recipes/643362-556x370.jpg",
       "source": "Foodista",
       "sourceUrl": "https://www.foodista.com/recipe/Y6YT6DKN/french-onion-marsala-soup",
@@ -3793,14 +3665,10 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
-        "warnings": [
-          "Contains inappropriate content for pregnancy"
-        ]
+        "warnings": ["Contains inappropriate content for pregnancy"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T17:49:29.170Z",
@@ -3892,13 +3760,7 @@
         "sodium": 536
       },
       "carbChoices": 3,
-      "tags": [
-        "lunch",
-        "gluten-free",
-        "dairy-free",
-        "quick",
-        "chicken"
-      ],
+      "tags": ["lunch", "gluten-free", "dairy-free", "quick", "chicken"],
       "imageUrl": "https://img.spoonacular.com/recipes/644038-556x370.jpg",
       "source": "Foodista",
       "sourceUrl": "https://www.foodista.com/recipe/HSC852ZY/fruity-curried-chicken-salad",
@@ -3938,9 +3800,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -4091,12 +3951,7 @@
         "sodium": 647
       },
       "carbChoices": 3,
-      "tags": [
-        "lunch",
-        "gluten-free",
-        "30-minutes",
-        "chicken"
-      ],
+      "tags": ["lunch", "gluten-free", "30-minutes", "chicken"],
       "imageUrl": "https://img.spoonacular.com/recipes/644306-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/2HFYQSNY/garlic-lime-grilled-chicken-salad",
@@ -4281,12 +4136,7 @@
         "sodium": 771
       },
       "carbChoices": 4,
-      "tags": [
-        "lunch",
-        "gluten-free",
-        "dairy-free",
-        "chicken"
-      ],
+      "tags": ["lunch", "gluten-free", "dairy-free", "chicken"],
       "imageUrl": "https://img.spoonacular.com/recipes/644813-556x370.jpg",
       "source": "Foodista",
       "sourceUrl": "https://www.foodista.com/recipe/Y27WDZ62/gluten-free-coconut-chicken-salad",
@@ -4326,9 +4176,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -4424,13 +4272,7 @@
         "sodium": 1192
       },
       "carbChoices": 1,
-      "tags": [
-        "lunch",
-        "gluten-free",
-        "mediterranean",
-        "european",
-        "greek"
-      ],
+      "tags": ["lunch", "gluten-free", "mediterranean", "european", "greek"],
       "imageUrl": "https://img.spoonacular.com/recipes/645265-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/GPCD3SV6/great-greek-salad",
@@ -4722,11 +4564,7 @@
         "sodium": 353
       },
       "carbChoices": 2,
-      "tags": [
-        "lunch",
-        "dairy-free",
-        "chicken"
-      ],
+      "tags": ["lunch", "dairy-free", "chicken"],
       "imageUrl": "https://img.spoonacular.com/recipes/649343-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/45YXCP8Q/layered-chicken-salad-with-couscous",
@@ -4766,9 +4604,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -4918,9 +4754,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -5048,11 +4882,7 @@
         "sodium": 801
       },
       "carbChoices": 1,
-      "tags": [
-        "lunch",
-        "gluten-free",
-        "dairy-free"
-      ],
+      "tags": ["lunch", "gluten-free", "dairy-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/651453-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/56LBK6DL/mediterrean-tuna-salad",
@@ -5100,9 +4930,7 @@
             "Serve with high-fiber sides like vegetables or whole grains"
           ]
         },
-        "warnings": [
-          "Contains inappropriate content for pregnancy"
-        ]
+        "warnings": ["Contains inappropriate content for pregnancy"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T17:59:57.593Z",
@@ -5549,12 +5377,7 @@
         "sodium": 508
       },
       "carbChoices": 2,
-      "tags": [
-        "lunch",
-        "vegetarian",
-        "gluten-free",
-        "mexican"
-      ],
+      "tags": ["lunch", "vegetarian", "gluten-free", "mexican"],
       "imageUrl": "https://img.spoonacular.com/recipes/652679-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/B3GF8X6H/mushroom-quesadillas",
@@ -5594,9 +5417,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -5738,9 +5559,7 @@
         "sodium": 1018
       },
       "carbChoices": 3,
-      "tags": [
-        "lunch"
-      ],
+      "tags": ["lunch"],
       "imageUrl": "https://img.spoonacular.com/recipes/656688-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/SNM7K427/poppy-seed-chicken-salad",
@@ -5927,13 +5746,7 @@
         "sodium": 1630
       },
       "carbChoices": 2,
-      "tags": [
-        "lunch",
-        "mediterranean",
-        "italian",
-        "european",
-        "beans"
-      ],
+      "tags": ["lunch", "mediterranean", "italian", "european", "beans"],
       "imageUrl": "https://img.spoonacular.com/recipes/658024-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/55CQV2NL/recipe-for-minestrone-soup",
@@ -6354,12 +6167,7 @@
         "sodium": 378
       },
       "carbChoices": 4,
-      "tags": [
-        "lunch",
-        "gluten-free",
-        "dairy-free",
-        "healthy"
-      ],
+      "tags": ["lunch", "gluten-free", "dairy-free", "healthy"],
       "imageUrl": "https://img.spoonacular.com/recipes/659927-556x370.jpg",
       "source": "Foodista",
       "sourceUrl": "https://www.foodista.com/recipe/ZTNWCWQP/shrimp-and-avocado-salad",
@@ -6506,10 +6314,7 @@
         "sodium": 377
       },
       "carbChoices": 1,
-      "tags": [
-        "lunch",
-        "gluten-free"
-      ],
+      "tags": ["lunch", "gluten-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/660024-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/JXG8XBXH/shrimp-spring-salad",
@@ -6549,9 +6354,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -6711,12 +6514,7 @@
         "sodium": 1271
       },
       "carbChoices": 2,
-      "tags": [
-        "lunch",
-        "gluten-free",
-        "healthy",
-        "chicken"
-      ],
+      "tags": ["lunch", "gluten-free", "healthy", "chicken"],
       "imageUrl": "https://img.spoonacular.com/recipes/664090-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/XYFWSH25/a-turkish-inspired-chicken-salad-with-tomato-cucumber-red-onion-salsa-charred-green-peppers-and-home-made-cacik-delicious-and-healthy",

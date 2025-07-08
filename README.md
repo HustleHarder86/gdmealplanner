@@ -4,6 +4,10 @@ A comprehensive gestational diabetes meal planning application for expecting mot
 
 🌐 **Live Site**: [https://pregnancyplateplanner.com](https://pregnancyplateplanner.com)
 
+## 🚀 Current Status: Offline-First Architecture
+
+The application has been successfully migrated to an offline-first architecture with 242 pre-validated recipes. Regular users experience zero API calls, ensuring fast, reliable access to meal planning resources.
+
 ## Overview
 
 Pregnancy Plate Planner helps expecting mothers with gestational diabetes manage their condition through:
@@ -18,21 +22,28 @@ Pregnancy Plate Planner helps expecting mothers with gestational diabetes manage
 
 ## Features
 
-### Core Functionality
+### ✅ Implemented Features
 
-- **Smart Meal Planning**: AI-powered weekly meal plans following gestational diabetes guidelines (30-40% carbs, balanced proteins/fats)
-- **Recipe Library**: 500+ curated recipes with detailed nutritional information and glycemic index ratings
-- **Glucose Tracking**: Comprehensive blood glucose monitoring with pre/post-meal tracking
-- **Nutrition Dashboard**: Daily macro/micronutrient tracking with visual progress indicators
-- **Educational Hub**: Expert-reviewed articles, videos, and guides on managing gestational diabetes
+- **Offline Recipe System**: 242 pre-validated GD-friendly recipes available without API calls
+- **Admin Recipe Management**: Complete admin dashboard for recipe import and management
+- **Authentication System**: Firebase Auth with email/password and admin role protection
+- **Recipe Browsing**: Category-based filtering with nutritional information display
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
 
-### Technical Features
+### 🚧 In Development
 
-- Progressive Web App with offline support
-- Real-time data synchronization
-- Mobile-responsive design
-- Secure authentication and data encryption
-- Export functionality for healthcare providers
+- **Smart Meal Planning**: 12-week rotation meal plans following GD guidelines
+- **Glucose Tracking**: Blood glucose monitoring with pattern analysis
+- **Nutrition Dashboard**: Daily macro/micronutrient tracking
+- **Educational Hub**: GD management guides and resources
+
+### Technical Architecture
+
+- **Offline-First Design**: Static recipe data with Firebase fallback
+- **Zero API Calls**: Pre-imported recipes eliminate runtime API dependencies
+- **Admin-Only Imports**: Spoonacular API access restricted to administrators
+- **Progressive Web App**: Ready for offline support implementation
+- **Secure Authentication**: Firebase Auth with role-based access
 
 ## Tech Stack
 
@@ -49,21 +60,21 @@ Pregnancy Plate Planner helps expecting mothers with gestational diabetes manage
 ```
 gdmealplanner/
 ├── app/                    # Next.js 14 App Router
-│   ├── (protected)/       # Protected routes with navigation
-│   ├── auth/              # Authentication pages
-│   ├── education/         # Public educational content
-│   └── globals.css        # Global styles
-├── components/            # Reusable React components
-│   ├── ui/                # Core UI components
-│   └── Navigation.tsx     # Main navigation component
-├── lib/                   # Utility functions
-│   └── env.ts            # Environment variable config
-├── public/               # Static assets
-│   ├── manifest.json     # PWA manifest
-│   └── sw.js            # Service worker
-├── scripts/              # Utility scripts
-│   └── scraper/          # Recipe scraping tools (future)
-└── firebase/             # Firebase configuration (future)
+│   ├── admin/             # Admin dashboard and tools
+│   │   ├── recipes/       # Recipe management
+│   │   └── import-recipes/ # Spoonacular import interface
+│   ├── api/               # API routes
+│   │   ├── admin/         # Admin-only endpoints
+│   │   └── recipes/       # Recipe data endpoints
+│   ├── login/             # Authentication pages
+│   ├── meal-planner/      # Meal planning interface
+│   └── recipes/           # Recipe browsing
+├── src/                   # Source code
+│   ├── services/          # Service layer
+│   │   └── local-recipe-service.ts # Offline recipe service
+│   ├── lib/firebase/      # Firebase configuration
+│   └── types/             # TypeScript definitions
+└── public/                # Static assets
 ```
 
 ## Getting Started
@@ -113,7 +124,7 @@ npm run dev
 Create a `.env.local` file with:
 
 ```
-# Firebase Client Configuration
+# Firebase Client Configuration (Vercel format)
 apiKey=
 authDomain=
 projectId=
@@ -121,19 +132,14 @@ storageBucket=
 messagingSenderId=
 appId=
 
-# Spoonacular API Configuration
+# Firebase Admin Configuration
+FIREBASE_ADMIN_KEY= # Full service account JSON as string
+
+# Spoonacular API Configuration (Admin use only)
 SPOONACULAR_API_KEY=
 
-# Firebase Admin Configuration
-FIREBASE_ADMIN_KEY=
-FIREBASE_ADMIN_CLIENT_EMAIL=
-FIREBASE_ADMIN_PRIVATE_KEY=
-FIREBASE_ADMIN_PROJECT_ID=
-
-# Stripe Configuration (Phase 2)
-STRIPE_SECRET_KEY=
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
-STRIPE_WEBHOOK_SECRET=
+# Admin Whitelist
+ADMIN_EMAIL_WHITELIST=email1@example.com,email2@example.com
 ```
 
 See `.env.example` for a complete list of environment variables.
@@ -178,24 +184,54 @@ Basic Firestore rules are in `firebase/firestore.rules`. Key principles:
 
 ## Deployment
 
-### Vercel (Recommended)
+### Vercel Deployment (Production)
+
+The app is configured for automatic deployment on Vercel:
+
+1. **Environment Setup**: Configure all environment variables in Vercel dashboard
+2. **Automatic Deployment**: Push to `main` branch triggers deployment
+3. **Build Command**: `npm run build`
+4. **Output Directory**: `.next`
+
+### Local Development
 
 ```bash
-vercel --prod
-```
+# Install dependencies
+npm install
 
-### Firebase Hosting
+# Run development server
+npm run dev
 
-```bash
+# Build for production
 npm run build
-firebase deploy
+
+# Run production build locally
+npm start
 ```
 
-## Subscription Tiers
+## Roadmap
 
-- **Free Tier**: 7-day meal plans, basic tracking, 10 saved recipes
-- **Premium ($9.99/mo)**: Unlimited meal plans, advanced analytics, meal prep mode, unlimited recipes
-- **Premium+ ($14.99/mo)**: All Premium features + grocery delivery integration, dietitian chat support
+### Phase 1: Core Features (Current)
+
+- ✅ Offline recipe system
+- ✅ Admin recipe management
+- ✅ Authentication system
+- ✅ Recipe browsing
+
+### Phase 2: User Features (Next)
+
+- 🚧 Meal planning algorithm
+- 🚧 Glucose tracking
+- 🚧 Nutrition tracking
+- 🚧 Educational content
+- 🚧 PWA implementation
+
+### Phase 3: Premium Features
+
+- 📅 Subscription system (Stripe)
+- 📅 Advanced analytics
+- 📅 Dietitian support
+- 📅 WordPress integration
 
 ## Contributing
 

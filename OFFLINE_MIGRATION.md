@@ -5,6 +5,7 @@ This guide explains how to make the Pregnancy Plate Planner app work completely 
 ## Current Status
 
 The app now has:
+
 - ✅ 242 recipes imported from Spoonacular
 - ✅ Complete recipe data stored in Firebase
 - ✅ Image download system to Firebase Storage
@@ -66,16 +67,16 @@ GET /api/recipes/prepare-offline
 The `LocalRecipeService` can replace all API calls:
 
 ```typescript
-import { LocalRecipeService } from '@/src/services/local-recipe-service';
+import { LocalRecipeService } from "@/src/services/local-recipe-service";
 
 // Initialize with exported data
-const recipeData = await fetch('/data/recipes.json').then(r => r.json());
+const recipeData = await fetch("/data/recipes.json").then((r) => r.json());
 await LocalRecipeService.initialize(recipeData.recipes);
 
 // Use the service
 const allRecipes = LocalRecipeService.getAllRecipes();
-const breakfastRecipes = LocalRecipeService.getRecipesByCategory('breakfast');
-const recipe = LocalRecipeService.getRecipeById('spoonacular-123');
+const breakfastRecipes = LocalRecipeService.getRecipesByCategory("breakfast");
+const recipe = LocalRecipeService.getRecipeById("spoonacular-123");
 ```
 
 ## Removing Spoonacular Dependencies
@@ -96,6 +97,7 @@ Once all data is backed up and images are downloaded:
 ## Data Structure
 
 Each recipe contains:
+
 - Complete nutritional information
 - All ingredients with amounts
 - Step-by-step instructions
@@ -114,6 +116,7 @@ Each recipe contains:
 ## Verification Checklist
 
 Before removing the API:
+
 - [ ] All 242+ recipes have complete data
 - [ ] All images downloaded to Firebase Storage
 - [ ] Backup created and verified

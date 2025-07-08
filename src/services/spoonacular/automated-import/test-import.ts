@@ -2,7 +2,7 @@
 
 /**
  * Test script for the Automated Recipe Import System
- * 
+ *
  * This script demonstrates:
  * 1. Testing individual components
  * 2. Running a small test import
@@ -23,9 +23,9 @@ config();
 
 async function testCategorizer() {
   console.log("\n🧪 Testing Recipe Categorizer...\n");
-  
+
   const categorizer = new RecipeCategorizer();
-  
+
   // Test with mock recipe data
   const mockRecipes = [
     {
@@ -63,7 +63,9 @@ async function testCategorizer() {
   for (const recipe of mockRecipes) {
     const result = categorizer.categorizeRecipe(recipe as any);
     console.log(`Recipe: ${recipe.title}`);
-    console.log(`Category: ${result.primaryCategory} (${result.confidence}% confidence)`);
+    console.log(
+      `Category: ${result.primaryCategory} (${result.confidence}% confidence)`,
+    );
     console.log(`Reasoning: ${result.reasoning.join(", ")}`);
     console.log(`Tags: ${result.tags.join(", ")}`);
     console.log("");
@@ -72,7 +74,7 @@ async function testCategorizer() {
 
 async function testQualityValidator() {
   console.log("\n🧪 Testing Quality Validator...\n");
-  
+
   const mockRecipe = {
     id: 123,
     title: "Overnight Oats with Berries",
@@ -98,14 +100,18 @@ async function testQualityValidator() {
   };
 
   const validation = validateRecipeForImport(mockRecipe as any, "breakfast");
-  
+
   console.log(`Recipe: ${mockRecipe.title}`);
   console.log(`Valid: ${validation.isValid ? "✓" : "✗"}`);
   console.log(`Quality Score: ${validation.qualityScore.totalScore}/100`);
-  console.log(`  - GD Compliance: ${validation.qualityScore.gdComplianceScore}/40`);
-  console.log(`  - Practicality: ${validation.qualityScore.practicalityScore}/30`);
+  console.log(
+    `  - GD Compliance: ${validation.qualityScore.gdComplianceScore}/40`,
+  );
+  console.log(
+    `  - Practicality: ${validation.qualityScore.practicalityScore}/30`,
+  );
   console.log(`  - Popularity: ${validation.qualityScore.popularityScore}/30`);
-  
+
   if (validation.qualityScore.warnings.length > 0) {
     console.log(`Warnings: ${validation.qualityScore.warnings.join(", ")}`);
   }
@@ -116,9 +122,9 @@ async function testQualityValidator() {
 
 async function testDeduplicator() {
   console.log("\n🧪 Testing Recipe Deduplicator...\n");
-  
+
   const deduplicator = new RecipeDeduplicator();
-  
+
   // Add some existing recipes
   const existingRecipes = [
     {
@@ -142,9 +148,9 @@ async function testDeduplicator() {
       },
     },
   ];
-  
+
   await deduplicator.loadExistingRecipes(existingRecipes);
-  
+
   // Test with similar recipe
   const newRecipe = {
     id: 2001,
@@ -164,9 +170,9 @@ async function testDeduplicator() {
     readyInMinutes: 12,
     servings: 2,
   };
-  
+
   const result = deduplicator.checkDuplicate(newRecipe as any);
-  
+
   console.log(`Checking: ${newRecipe.title}`);
   console.log(`Is Duplicate: ${result.isDuplicate ? "Yes" : "No"}`);
   if (result.isDuplicate) {
@@ -174,17 +180,19 @@ async function testDeduplicator() {
     console.log(`Confidence: ${result.confidence}%`);
     console.log(`Reason: ${result.reason}`);
   }
-  
+
   const stats = deduplicator.getStatistics();
   console.log(`\nDeduplicator Statistics:`);
   console.log(`Total Recipes: ${stats.totalRecipes}`);
   console.log(`Unique Titles: ${stats.uniqueTitles}`);
-  console.log(`Unique Ingredient Combinations: ${stats.uniqueIngredientCombinations}`);
+  console.log(
+    `Unique Ingredient Combinations: ${stats.uniqueIngredientCombinations}`,
+  );
 }
 
 async function testSmallImport() {
   console.log("\n🚀 Running Small Test Import...\n");
-  
+
   const apiKey = process.env.SPOONACULAR_API_KEY;
   if (!apiKey) {
     console.error("❌ SPOONACULAR_API_KEY not found in environment variables");
@@ -193,7 +201,7 @@ async function testSmallImport() {
 
   // Create scheduler with test configuration
   const scheduler = new RecipeImportScheduler(apiKey, {
-    campaignStartDate: new Date().toISOString().split('T')[0],
+    campaignStartDate: new Date().toISOString().split("T")[0],
     dailyQuota: 10, // Small test import
     minQualityScore: 50,
     rateLimitDelay: 1500, // Be nice to the API
@@ -210,12 +218,11 @@ async function testSmallImport() {
     console.log("This will import up to 10 recipes...\n");
 
     const report = await scheduler.manualImport(testStrategy, 10);
-    
+
     console.log("\n" + "=".repeat(60));
     console.log("IMPORT COMPLETED");
     console.log("=".repeat(60));
     console.log(formatReportForDisplay(report));
-    
   } catch (error) {
     console.error("❌ Import failed:", error);
   }
@@ -223,7 +230,7 @@ async function testSmallImport() {
 
 async function testAPIConnection() {
   console.log("\n🔌 Testing API Connection...\n");
-  
+
   const apiKey = process.env.SPOONACULAR_API_KEY;
   if (!apiKey) {
     console.error("❌ SPOONACULAR_API_KEY not found in environment variables");
@@ -231,14 +238,14 @@ async function testAPIConnection() {
   }
 
   const client = new SpoonacularClient(apiKey);
-  
+
   try {
     const response = await client.searchRecipes({
       query: "breakfast",
       number: 1,
       addRecipeNutrition: true,
     });
-    
+
     console.log("✓ API connection successful");
     console.log(`Found ${response.totalResults} total results`);
     if (response.results.length > 0) {
@@ -253,7 +260,7 @@ async function testAPIConnection() {
 
 async function main() {
   console.log("🤖 Automated Recipe Import System - Test Suite");
-  console.log("=" .repeat(60));
+  console.log("=".repeat(60));
 
   // Test individual components
   await testCategorizer();
@@ -269,7 +276,9 @@ async function main() {
     if (runImport) {
       await testSmallImport();
     } else {
-      console.log("\n💡 Tip: Run with --import flag to test actual recipe import");
+      console.log(
+        "\n💡 Tip: Run with --import flag to test actual recipe import",
+      );
       console.log("   Example: npm run test-import -- --import");
     }
   }

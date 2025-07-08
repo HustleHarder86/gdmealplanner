@@ -68,8 +68,12 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-800 mb-4">Access Denied</h1>
-          <p className="text-gray-600">You don&apos;t have permission to access this area.</p>
+          <h1 className="text-2xl font-bold text-gray-800 mb-4">
+            Access Denied
+          </h1>
+          <p className="text-gray-600">
+            You don&apos;t have permission to access this area.
+          </p>
         </div>
       </div>
     );
@@ -83,7 +87,9 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <ChefHat className="h-8 w-8 text-green-600 mr-3" />
-              <h1 className="text-xl font-semibold text-gray-900">Recipe Admin</h1>
+              <h1 className="text-xl font-semibold text-gray-900">
+                Recipe Admin
+              </h1>
             </div>
             <div className="flex items-center space-x-4">
               <span className="text-sm text-gray-600">{user.email}</span>
@@ -154,9 +160,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
 
         {/* Main Content */}
         <main className="flex-1 overflow-y-auto">
-          <div className="p-8">
-            {children}
-          </div>
+          <div className="p-8">{children}</div>
         </main>
       </div>
     </div>

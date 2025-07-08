@@ -1,27 +1,28 @@
 import { NextRequest, NextResponse } from "next/server";
 import { RecipeImportScheduler } from "@/src/services/spoonacular/automated-import/scheduler";
 import { initializeFirebaseAdmin } from "@/src/lib/firebase/admin";
-import { BREAKFAST_STRATEGIES, LUNCH_STRATEGIES, DINNER_STRATEGIES, SNACK_STRATEGIES } from "@/src/services/spoonacular/automated-import/import-strategies";
+import {
+  BREAKFAST_STRATEGIES,
+  LUNCH_STRATEGIES,
+  DINNER_STRATEGIES,
+  SNACK_STRATEGIES,
+} from "@/src/services/spoonacular/automated-import/import-strategies";
 
 export async function POST(request: NextRequest) {
   try {
     // In development, allow imports without auth
     const isDevelopment = process.env.NODE_ENV === "development";
-    
+
     // Parse request body
     const body = await request.json();
-    const { 
-      category = "breakfast", 
-      count = 5,
-      strategyIndex = 0,
-    } = body;
+    const { category = "breakfast", count = 5, strategyIndex = 0 } = body;
 
     // Check for API key
     const apiKey = process.env.SPOONACULAR_API_KEY;
     if (!apiKey) {
       return NextResponse.json(
         { error: "Spoonacular API key not configured" },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
@@ -30,7 +31,7 @@ export async function POST(request: NextRequest) {
 
     // Create scheduler
     const scheduler = new RecipeImportScheduler(apiKey, {
-      campaignStartDate: new Date().toISOString().split('T')[0],
+      campaignStartDate: new Date().toISOString().split("T")[0],
       dailyQuota: count,
       minQualityScore: 50,
       rateLimitDelay: 2000, // 2 seconds between API calls
@@ -53,16 +54,20 @@ export async function POST(request: NextRequest) {
         break;
       default:
         return NextResponse.json(
-          { error: "Invalid category. Use: breakfast, lunch, dinner, or snack" },
-          { status: 400 }
+          {
+            error: "Invalid category. Use: breakfast, lunch, dinner, or snack",
+          },
+          { status: 400 },
         );
     }
 
     // Check strategy index
     if (strategyIndex >= strategies.length) {
       return NextResponse.json(
-        { error: `Invalid strategy index. Maximum for ${category} is ${strategies.length - 1}` },
-        { status: 400 }
+        {
+          error: `Invalid strategy index. Maximum for ${category} is ${strategies.length - 1}`,
+        },
+        { status: 400 },
       );
     }
 
@@ -82,13 +87,13 @@ export async function POST(request: NextRequest) {
 
     // Extract category counts from the report
     const categoryBreakdown: Record<string, number> = {};
-    report.categoryBreakdown.forEach(cat => {
+    report.categoryBreakdown.forEach((cat) => {
       categoryBreakdown[cat.category] = cat.count;
     });
 
     // Extract quality distribution
     const qualityDistribution: Record<string, number> = {};
-    report.qualityMetrics.scoreDistribution.forEach(dist => {
+    report.qualityMetrics.scoreDistribution.forEach((dist) => {
       qualityDistribution[dist.range] = dist.count;
     });
 
@@ -110,15 +115,14 @@ export async function POST(request: NextRequest) {
         breakdown: status.categoryBreakdown,
       },
     });
-
   } catch (error) {
     console.error("Import error:", error);
     return NextResponse.json(
-      { 
-        error: "Import failed", 
-        details: error instanceof Error ? error.message : "Unknown error" 
+      {
+        error: "Import failed",
+        details: error instanceof Error ? error.message : "Unknown error",
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -126,58 +130,74 @@ export async function POST(request: NextRequest) {
 // GET endpoint to check import status
 export async function GET(request: NextRequest) {
   try {
-    console.log('GET /api/recipes/import-batch - Starting...');
-    
+    console.log("GET /api/recipes/import-batch - Starting...");
+
     // Initialize Firebase Admin
     try {
       await initializeFirebaseAdmin();
-      console.log('Firebase Admin initialized successfully');
+      console.log("Firebase Admin initialized successfully");
     } catch (error) {
-      console.error('Firebase Admin initialization error:', error);
+      console.error("Firebase Admin initialization error:", error);
       return NextResponse.json(
-        { 
-          error: "Firebase initialization failed", 
+        {
+          error: "Firebase initialization failed",
           details: error instanceof Error ? error.message : "Unknown error",
-          hint: "Check FIREBASE_ADMIN_KEY environment variable"
+          hint: "Check FIREBASE_ADMIN_KEY environment variable",
         },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
     // Create scheduler just to get status
     const apiKey = process.env.SPOONACULAR_API_KEY;
     if (!apiKey) {
-      console.error('Spoonacular API key not found');
+      console.error("Spoonacular API key not found");
       return NextResponse.json(
         { error: "Spoonacular API key not configured" },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
     const scheduler = new RecipeImportScheduler(apiKey);
-    
+
     let status;
     try {
       status = await scheduler.getCampaignStatus();
-      console.log('Campaign status retrieved successfully');
+      console.log("Campaign status retrieved successfully");
     } catch (error) {
-      console.error('Error getting campaign status:', error);
+      console.error("Error getting campaign status:", error);
       return NextResponse.json(
-        { 
-          error: "Failed to get campaign status", 
+        {
+          error: "Failed to get campaign status",
           details: error instanceof Error ? error.message : "Unknown error",
-          hint: "This usually indicates a Firebase connection issue"
+          hint: "This usually indicates a Firebase connection issue",
         },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
     // Get available strategies
     const strategies = {
-      breakfast: BREAKFAST_STRATEGIES.map((s, i) => ({ index: i, name: s.name, description: s.description })),
-      lunch: LUNCH_STRATEGIES.map((s, i) => ({ index: i, name: s.name, description: s.description })),
-      dinner: DINNER_STRATEGIES.map((s, i) => ({ index: i, name: s.name, description: s.description })),
-      snack: SNACK_STRATEGIES.map((s, i) => ({ index: i, name: s.name, description: s.description })),
+      breakfast: BREAKFAST_STRATEGIES.map((s, i) => ({
+        index: i,
+        name: s.name,
+        description: s.description,
+      })),
+      lunch: LUNCH_STRATEGIES.map((s, i) => ({
+        index: i,
+        name: s.name,
+        description: s.description,
+      })),
+      dinner: DINNER_STRATEGIES.map((s, i) => ({
+        index: i,
+        name: s.name,
+        description: s.description,
+      })),
+      snack: SNACK_STRATEGIES.map((s, i) => ({
+        index: i,
+        name: s.name,
+        description: s.description,
+      })),
     };
 
     return NextResponse.json({
@@ -198,15 +218,14 @@ export async function GET(request: NextRequest) {
         },
       },
     });
-
   } catch (error) {
     console.error("Status check error:", error);
     return NextResponse.json(
-      { 
-        error: "Failed to get status", 
-        details: error instanceof Error ? error.message : "Unknown error" 
+      {
+        error: "Failed to get status",
+        details: error instanceof Error ? error.message : "Unknown error",
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

@@ -1,4 +1,4 @@
-import { LocalRecipeService } from './local-recipe-service';
+import { LocalRecipeService } from "./local-recipe-service";
 
 let initialized = false;
 
@@ -13,7 +13,7 @@ export async function initializeRecipes() {
 
   try {
     // Try to load from static file first (fastest)
-    const response = await fetch('/data/recipes.min.json');
+    const response = await fetch("/data/recipes.min.json");
     if (response.ok) {
       const data = await response.json();
       await LocalRecipeService.initialize(data.recipes);
@@ -23,12 +23,12 @@ export async function initializeRecipes() {
       return;
     }
   } catch (error) {
-    console.log('Could not load from static file, trying API...');
+    console.log("Could not load from static file, trying API...");
   }
 
   try {
     // Fallback to API
-    const response = await fetch('/api/recipes/export-offline?format=json');
+    const response = await fetch("/api/recipes/export-offline?format=json");
     if (response.ok) {
       const data = await response.json();
       await LocalRecipeService.initialize(data.recipes);
@@ -38,7 +38,7 @@ export async function initializeRecipes() {
       return;
     }
   } catch (error) {
-    console.log('Could not load from API, trying localStorage...');
+    console.log("Could not load from API, trying localStorage...");
   }
 
   // Final fallback to localStorage
@@ -48,7 +48,7 @@ export async function initializeRecipes() {
     initialized = true;
     console.log(`✅ Loaded ${recipes.length} recipes from localStorage`);
   } else {
-    console.error('❌ No recipes available offline');
+    console.error("❌ No recipes available offline");
   }
 }
 

@@ -1,570 +1,616 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipe Import Tool - GD Meal Planner</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #f5f5f5;
-            line-height: 1.6;
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #f5f5f5;
+        line-height: 1.6;
+      }
+
+      .container {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #2c5530;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 30px;
+        font-style: italic;
+      }
+
+      .import-section {
+        background: #f8f9fa;
+        border: 2px solid #dee2e6;
+        border-radius: 8px;
+        padding: 25px;
+        margin: 20px 0;
+      }
+
+      .import-section.primary {
+        background: #e3f2fd;
+        border-color: #2196f3;
+      }
+
+      .category-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin: 20px 0;
+      }
+
+      .category-card {
+        background: white;
+        border: 2px solid #e9ecef;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .category-card:hover {
+        border-color: #2196f3;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .category-card.selected {
+        background: #e3f2fd;
+        border-color: #2196f3;
+      }
+
+      .category-icon {
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+
+      .category-name {
+        font-weight: bold;
+        font-size: 18px;
+        color: #333;
+      }
+
+      .category-count {
+        color: #666;
+        font-size: 14px;
+        margin-top: 5px;
+      }
+
+      .input-group {
+        margin: 20px 0;
+      }
+
+      .input-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #333;
+      }
+
+      .input-group input {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #ddd;
+        border-radius: 6px;
+        font-size: 16px;
+        box-sizing: border-box;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        transition: all 0.3s;
+        margin: 10px 5px;
+        font-size: 16px;
+      }
+
+      .btn-primary {
+        background: #28a745;
+        color: white;
+      }
+
+      .btn-primary:hover:not(:disabled) {
+        background: #218838;
+      }
+
+      .btn-primary:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+      }
+
+      .btn-secondary {
+        background: #6c757d;
+        color: white;
+      }
+
+      .btn-secondary:hover {
+        background: #5a6268;
+      }
+
+      .import-controls {
+        text-align: center;
+        margin: 30px 0;
+      }
+
+      .results-section {
+        display: none;
+        margin-top: 30px;
+      }
+
+      .results-header {
+        background: #e8f5e8;
+        border: 1px solid #4caf50;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      .results-header.error {
+        background: #ffebee;
+        border-color: #f44336;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+        margin: 20px 0;
+      }
+
+      .stat-card {
+        background: white;
+        border: 1px solid #e9ecef;
+        border-radius: 6px;
+        padding: 15px;
+        text-align: center;
+      }
+
+      .stat-value {
+        font-size: 32px;
+        font-weight: bold;
+        color: #2196f3;
+      }
+
+      .stat-label {
+        color: #666;
+        font-size: 14px;
+      }
+
+      .recipe-result {
+        background: white;
+        border: 1px solid #e9ecef;
+        border-radius: 6px;
+        padding: 15px;
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .recipe-result.success {
+        border-left: 4px solid #4caf50;
+      }
+
+      .recipe-result.error {
+        border-left: 4px solid #f44336;
+      }
+
+      .recipe-info {
+        flex: 1;
+      }
+
+      .recipe-title {
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 5px;
+      }
+
+      .recipe-meta {
+        font-size: 14px;
+        color: #666;
+      }
+
+      .recipe-status {
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .recipe-status.imported {
+        background: #e8f5e8;
+        color: #2e7d2e;
+      }
+
+      .recipe-status.failed {
+        background: #ffebee;
+        color: #c62828;
+      }
+
+      .loading {
+        display: none;
+        text-align: center;
+        margin: 30px 0;
+      }
+
+      .spinner {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #2196f3;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 20px;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
         }
-        
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        100% {
+          transform: rotate(360deg);
         }
-        
-        h1 {
-            color: #2c5530;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        
-        .subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 30px;
-            font-style: italic;
-        }
-        
-        .import-section {
-            background: #f8f9fa;
-            border: 2px solid #dee2e6;
-            border-radius: 8px;
-            padding: 25px;
-            margin: 20px 0;
-        }
-        
-        .import-section.primary {
-            background: #e3f2fd;
-            border-color: #2196f3;
-        }
-        
-        .category-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-        }
-        
-        .category-card {
-            background: white;
-            border: 2px solid #e9ecef;
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .category-card:hover {
-            border-color: #2196f3;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        
-        .category-card.selected {
-            background: #e3f2fd;
-            border-color: #2196f3;
-        }
-        
-        .category-icon {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-        
-        .category-name {
-            font-weight: bold;
-            font-size: 18px;
-            color: #333;
-        }
-        
-        .category-count {
-            color: #666;
-            font-size: 14px;
-            margin-top: 5px;
-        }
-        
-        .input-group {
-            margin: 20px 0;
-        }
-        
-        .input-group label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 8px;
-            color: #333;
-        }
-        
-        .input-group input {
-            width: 100%;
-            padding: 10px;
-            border: 2px solid #ddd;
-            border-radius: 6px;
-            font-size: 16px;
-            box-sizing: border-box;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-            transition: all 0.3s;
-            margin: 10px 5px;
-            font-size: 16px;
-        }
-        
-        .btn-primary {
-            background: #28a745;
-            color: white;
-        }
-        
-        .btn-primary:hover:not(:disabled) {
-            background: #218838;
-        }
-        
-        .btn-primary:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-        }
-        
-        .btn-secondary {
-            background: #6c757d;
-            color: white;
-        }
-        
-        .btn-secondary:hover {
-            background: #5a6268;
-        }
-        
-        .import-controls {
-            text-align: center;
-            margin: 30px 0;
-        }
-        
-        .results-section {
-            display: none;
-            margin-top: 30px;
-        }
-        
-        .results-header {
-            background: #e8f5e8;
-            border: 1px solid #4caf50;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .results-header.error {
-            background: #ffebee;
-            border-color: #f44336;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-        }
-        
-        .stat-card {
-            background: white;
-            border: 1px solid #e9ecef;
-            border-radius: 6px;
-            padding: 15px;
-            text-align: center;
-        }
-        
-        .stat-value {
-            font-size: 32px;
-            font-weight: bold;
-            color: #2196f3;
-        }
-        
-        .stat-label {
-            color: #666;
-            font-size: 14px;
-        }
-        
-        .recipe-result {
-            background: white;
-            border: 1px solid #e9ecef;
-            border-radius: 6px;
-            padding: 15px;
-            margin: 10px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .recipe-result.success {
-            border-left: 4px solid #4caf50;
-        }
-        
-        .recipe-result.error {
-            border-left: 4px solid #f44336;
-        }
-        
-        .recipe-info {
-            flex: 1;
-        }
-        
-        .recipe-title {
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 5px;
-        }
-        
-        .recipe-meta {
-            font-size: 14px;
-            color: #666;
-        }
-        
-        .recipe-status {
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: bold;
-        }
-        
-        .recipe-status.imported {
-            background: #e8f5e8;
-            color: #2e7d2e;
-        }
-        
-        .recipe-status.failed {
-            background: #ffebee;
-            color: #c62828;
-        }
-        
-        .loading {
-            display: none;
-            text-align: center;
-            margin: 30px 0;
-        }
-        
-        .spinner {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #2196f3;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 20px;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .warning {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            border-radius: 6px;
-            padding: 15px;
-            margin: 20px 0;
-        }
+      }
+
+      .warning {
+        background: #fff3cd;
+        border: 1px solid #ffeaa7;
+        border-radius: 6px;
+        padding: 15px;
+        margin: 20px 0;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>📥 Recipe Import Tool</h1>
-        <p class="subtitle">Import GD-friendly recipes from Spoonacular API</p>
-        
-        <!-- Import by Category -->
-        <div class="import-section primary">
-            <h3>📂 Import by Category</h3>
-            <p>Select a meal category and number of recipes to import:</p>
-            
-            <div class="category-grid">
-                <div class="category-card" onclick="selectCategory('breakfast')" data-category="breakfast">
-                    <div class="category-icon">🍳</div>
-                    <div class="category-name">Breakfast</div>
-                    <div class="category-count">15-30g carbs</div>
-                </div>
-                
-                <div class="category-card" onclick="selectCategory('lunch')" data-category="lunch">
-                    <div class="category-icon">🥗</div>
-                    <div class="category-name">Lunch</div>
-                    <div class="category-count">30-45g carbs</div>
-                </div>
-                
-                <div class="category-card" onclick="selectCategory('dinner')" data-category="dinner">
-                    <div class="category-icon">🍽️</div>
-                    <div class="category-name">Dinner</div>
-                    <div class="category-count">30-45g carbs</div>
-                </div>
-                
-                <div class="category-card" onclick="selectCategory('snacks')" data-category="snacks">
-                    <div class="category-icon">🥜</div>
-                    <div class="category-name">Snacks</div>
-                    <div class="category-count">10-20g carbs</div>
-                </div>
-            </div>
-            
-            <div class="input-group">
-                <label for="recipe-count">Number of recipes to import:</label>
-                <input type="number" id="recipe-count" min="1" max="20" value="3" />
-            </div>
-            
-            <div class="import-controls">
-                <button id="import-category-btn" class="btn btn-primary" onclick="importByCategory()" disabled>
-                    🚀 Import Selected Category
-                </button>
-            </div>
+      <h1>📥 Recipe Import Tool</h1>
+      <p class="subtitle">Import GD-friendly recipes from Spoonacular API</p>
+
+      <!-- Import by Category -->
+      <div class="import-section primary">
+        <h3>📂 Import by Category</h3>
+        <p>Select a meal category and number of recipes to import:</p>
+
+        <div class="category-grid">
+          <div
+            class="category-card"
+            onclick="selectCategory('breakfast')"
+            data-category="breakfast"
+          >
+            <div class="category-icon">🍳</div>
+            <div class="category-name">Breakfast</div>
+            <div class="category-count">15-30g carbs</div>
+          </div>
+
+          <div
+            class="category-card"
+            onclick="selectCategory('lunch')"
+            data-category="lunch"
+          >
+            <div class="category-icon">🥗</div>
+            <div class="category-name">Lunch</div>
+            <div class="category-count">30-45g carbs</div>
+          </div>
+
+          <div
+            class="category-card"
+            onclick="selectCategory('dinner')"
+            data-category="dinner"
+          >
+            <div class="category-icon">🍽️</div>
+            <div class="category-name">Dinner</div>
+            <div class="category-count">30-45g carbs</div>
+          </div>
+
+          <div
+            class="category-card"
+            onclick="selectCategory('snacks')"
+            data-category="snacks"
+          >
+            <div class="category-icon">🥜</div>
+            <div class="category-name">Snacks</div>
+            <div class="category-count">10-20g carbs</div>
+          </div>
         </div>
-        
-        <!-- Import by IDs -->
-        <div class="import-section">
-            <h3>🔢 Import by Recipe IDs</h3>
-            <p>Enter specific Spoonacular recipe IDs (comma-separated):</p>
-            
-            <div class="input-group">
-                <label for="recipe-ids">Recipe IDs:</label>
-                <input type="text" id="recipe-ids" placeholder="716429, 715495, 664147" />
+
+        <div class="input-group">
+          <label for="recipe-count">Number of recipes to import:</label>
+          <input type="number" id="recipe-count" min="1" max="20" value="3" />
+        </div>
+
+        <div class="import-controls">
+          <button
+            id="import-category-btn"
+            class="btn btn-primary"
+            onclick="importByCategory()"
+            disabled
+          >
+            🚀 Import Selected Category
+          </button>
+        </div>
+      </div>
+
+      <!-- Import by IDs -->
+      <div class="import-section">
+        <h3>🔢 Import by Recipe IDs</h3>
+        <p>Enter specific Spoonacular recipe IDs (comma-separated):</p>
+
+        <div class="input-group">
+          <label for="recipe-ids">Recipe IDs:</label>
+          <input
+            type="text"
+            id="recipe-ids"
+            placeholder="716429, 715495, 664147"
+          />
+        </div>
+
+        <div class="import-controls">
+          <button class="btn btn-secondary" onclick="importByIds()">
+            📥 Import Specific Recipes
+          </button>
+        </div>
+      </div>
+
+      <!-- Test Import -->
+      <div class="import-section">
+        <h3>🧪 Quick Test Import</h3>
+        <p>Import 10 pre-selected GD-friendly recipes across all categories:</p>
+
+        <div class="import-controls">
+          <button class="btn btn-secondary" onclick="testImport()">
+            ⚡ Import 10 Test Recipes
+          </button>
+        </div>
+      </div>
+
+      <div class="warning">
+        <strong>⚠️ Note:</strong> Each import consumes API quota. The test
+        import will use 10 API calls.
+      </div>
+
+      <!-- Loading -->
+      <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p id="loading-message">Importing recipes...</p>
+      </div>
+
+      <!-- Results -->
+      <div id="results-section" class="results-section">
+        <div id="results-header" class="results-header">
+          <h3>📊 Import Results</h3>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-value" id="stat-total">0</div>
+              <div class="stat-label">Total Attempted</div>
             </div>
-            
-            <div class="import-controls">
-                <button class="btn btn-secondary" onclick="importByIds()">
-                    📥 Import Specific Recipes
-                </button>
+            <div class="stat-card">
+              <div class="stat-value" id="stat-success">0</div>
+              <div class="stat-label">Imported</div>
             </div>
-        </div>
-        
-        <!-- Test Import -->
-        <div class="import-section">
-            <h3>🧪 Quick Test Import</h3>
-            <p>Import 10 pre-selected GD-friendly recipes across all categories:</p>
-            
-            <div class="import-controls">
-                <button class="btn btn-secondary" onclick="testImport()">
-                    ⚡ Import 10 Test Recipes
-                </button>
+            <div class="stat-card">
+              <div class="stat-value" id="stat-gd">0</div>
+              <div class="stat-label">GD Compliant</div>
             </div>
-        </div>
-        
-        <div class="warning">
-            <strong>⚠️ Note:</strong> Each import consumes API quota. The test import will use 10 API calls.
-        </div>
-        
-        <!-- Loading -->
-        <div id="loading" class="loading">
-            <div class="spinner"></div>
-            <p id="loading-message">Importing recipes...</p>
-        </div>
-        
-        <!-- Results -->
-        <div id="results-section" class="results-section">
-            <div id="results-header" class="results-header">
-                <h3>📊 Import Results</h3>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-value" id="stat-total">0</div>
-                        <div class="stat-label">Total Attempted</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-value" id="stat-success">0</div>
-                        <div class="stat-label">Imported</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-value" id="stat-gd">0</div>
-                        <div class="stat-label">GD Compliant</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-value" id="stat-failed">0</div>
-                        <div class="stat-label">Failed</div>
-                    </div>
-                </div>
+            <div class="stat-card">
+              <div class="stat-value" id="stat-failed">0</div>
+              <div class="stat-label">Failed</div>
             </div>
-            
-            <div id="results-list"></div>
+          </div>
         </div>
+
+        <div id="results-list"></div>
+      </div>
     </div>
 
     <script>
-        let selectedCategory = null;
-        
-        function selectCategory(category) {
-            selectedCategory = category;
-            
-            // Update UI
-            document.querySelectorAll('.category-card').forEach(card => {
-                card.classList.remove('selected');
-            });
-            document.querySelector(`[data-category="${category}"]`).classList.add('selected');
-            
-            // Enable import button
-            document.getElementById('import-category-btn').disabled = false;
+      let selectedCategory = null;
+
+      function selectCategory(category) {
+        selectedCategory = category;
+
+        // Update UI
+        document.querySelectorAll(".category-card").forEach((card) => {
+          card.classList.remove("selected");
+        });
+        document
+          .querySelector(`[data-category="${category}"]`)
+          .classList.add("selected");
+
+        // Enable import button
+        document.getElementById("import-category-btn").disabled = false;
+      }
+
+      async function importByCategory() {
+        if (!selectedCategory) {
+          alert("Please select a category first");
+          return;
         }
-        
-        async function importByCategory() {
-            if (!selectedCategory) {
-                alert('Please select a category first');
-                return;
-            }
-            
-            const count = parseInt(document.getElementById('recipe-count').value);
-            if (!count || count < 1) {
-                alert('Please enter a valid number of recipes');
-                return;
-            }
-            
-            await performImport({
+
+        const count = parseInt(document.getElementById("recipe-count").value);
+        if (!count || count < 1) {
+          alert("Please enter a valid number of recipes");
+          return;
+        }
+
+        await performImport({
+          searchParams: {
+            category: selectedCategory,
+            count: count,
+          },
+        });
+      }
+
+      async function importByIds() {
+        const idsInput = document.getElementById("recipe-ids").value.trim();
+        if (!idsInput) {
+          alert("Please enter recipe IDs");
+          return;
+        }
+
+        const recipeIds = idsInput
+          .split(",")
+          .map((id) => parseInt(id.trim()))
+          .filter((id) => !isNaN(id));
+        if (recipeIds.length === 0) {
+          alert("Please enter valid recipe IDs");
+          return;
+        }
+
+        await performImport({ recipeIds });
+      }
+
+      async function testImport() {
+        // Import 10 test recipes: 3 breakfast, 3 lunch, 2 dinner, 2 snacks
+        const testPlan = [
+          { category: "breakfast", count: 3 },
+          { category: "lunch", count: 3 },
+          { category: "dinner", count: 2 },
+          { category: "snacks", count: 2 },
+        ];
+
+        const loading = document.getElementById("loading");
+        const loadingMessage = document.getElementById("loading-message");
+        loading.style.display = "block";
+
+        let allResults = [];
+
+        for (const plan of testPlan) {
+          loadingMessage.textContent = `Importing ${plan.count} ${plan.category} recipes...`;
+
+          try {
+            const response = await fetch("/api/spoonacular/import", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
                 searchParams: {
-                    category: selectedCategory,
-                    count: count
-                }
-            });
-        }
-        
-        async function importByIds() {
-            const idsInput = document.getElementById('recipe-ids').value.trim();
-            if (!idsInput) {
-                alert('Please enter recipe IDs');
-                return;
-            }
-            
-            const recipeIds = idsInput.split(',').map(id => parseInt(id.trim())).filter(id => !isNaN(id));
-            if (recipeIds.length === 0) {
-                alert('Please enter valid recipe IDs');
-                return;
-            }
-            
-            await performImport({ recipeIds });
-        }
-        
-        async function testImport() {
-            // Import 10 test recipes: 3 breakfast, 3 lunch, 2 dinner, 2 snacks
-            const testPlan = [
-                { category: 'breakfast', count: 3 },
-                { category: 'lunch', count: 3 },
-                { category: 'dinner', count: 2 },
-                { category: 'snacks', count: 2 }
-            ];
-            
-            const loading = document.getElementById('loading');
-            const loadingMessage = document.getElementById('loading-message');
-            loading.style.display = 'block';
-            
-            let allResults = [];
-            
-            for (const plan of testPlan) {
-                loadingMessage.textContent = `Importing ${plan.count} ${plan.category} recipes...`;
-                
-                try {
-                    const response = await fetch('/api/spoonacular/import', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({
-                            searchParams: {
-                                category: plan.category,
-                                count: plan.count
-                            }
-                        })
-                    });
-                    
-                    const data = await response.json();
-                    if (data.results) {
-                        allResults = allResults.concat(data.results);
-                    }
-                } catch (error) {
-                    console.error(`Error importing ${plan.category}:`, error);
-                }
-            }
-            
-            // Display combined results
-            displayResults({
-                success: true,
-                summary: {
-                    totalAttempted: allResults.length,
-                    successfulImports: allResults.filter(r => r.imported).length,
-                    failedImports: allResults.filter(r => !r.imported).length,
-                    gdCompliant: allResults.filter(r => r.gdValid).length
+                  category: plan.category,
+                  count: plan.count,
                 },
-                results: allResults
+              }),
             });
-            
-            loading.style.display = 'none';
-        }
-        
-        async function performImport(requestBody) {
-            const loading = document.getElementById('loading');
-            const resultsSection = document.getElementById('results-section');
-            
-            // Show loading
-            loading.style.display = 'block';
-            resultsSection.style.display = 'none';
-            
-            try {
-                const response = await fetch('/api/spoonacular/import', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(requestBody)
-                });
-                
-                const data = await response.json();
-                
-                if (!response.ok || !data.success) {
-                    throw new Error(data.error || 'Import failed');
-                }
-                
-                displayResults(data);
-                
-            } catch (error) {
-                alert(`Import error: ${error.message}`);
-                console.error('Import error:', error);
-            } finally {
-                loading.style.display = 'none';
+
+            const data = await response.json();
+            if (data.results) {
+              allResults = allResults.concat(data.results);
             }
+          } catch (error) {
+            console.error(`Error importing ${plan.category}:`, error);
+          }
         }
-        
-        function displayResults(data) {
-            const resultsSection = document.getElementById('results-section');
-            const resultsHeader = document.getElementById('results-header');
-            const resultsList = document.getElementById('results-list');
-            
-            // Update stats
-            document.getElementById('stat-total').textContent = data.summary.totalAttempted;
-            document.getElementById('stat-success').textContent = data.summary.successfulImports;
-            document.getElementById('stat-gd').textContent = data.summary.gdCompliant;
-            document.getElementById('stat-failed').textContent = data.summary.failedImports;
-            
-            // Update header style
-            resultsHeader.className = data.summary.failedImports > 0 ? 'results-header error' : 'results-header';
-            
-            // Display individual results
-            resultsList.innerHTML = data.results.map(result => `
-                <div class="recipe-result ${result.imported ? 'success' : 'error'}">
+
+        // Display combined results
+        displayResults({
+          success: true,
+          summary: {
+            totalAttempted: allResults.length,
+            successfulImports: allResults.filter((r) => r.imported).length,
+            failedImports: allResults.filter((r) => !r.imported).length,
+            gdCompliant: allResults.filter((r) => r.gdValid).length,
+          },
+          results: allResults,
+        });
+
+        loading.style.display = "none";
+      }
+
+      async function performImport(requestBody) {
+        const loading = document.getElementById("loading");
+        const resultsSection = document.getElementById("results-section");
+
+        // Show loading
+        loading.style.display = "block";
+        resultsSection.style.display = "none";
+
+        try {
+          const response = await fetch("/api/spoonacular/import", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(requestBody),
+          });
+
+          const data = await response.json();
+
+          if (!response.ok || !data.success) {
+            throw new Error(data.error || "Import failed");
+          }
+
+          displayResults(data);
+        } catch (error) {
+          alert(`Import error: ${error.message}`);
+          console.error("Import error:", error);
+        } finally {
+          loading.style.display = "none";
+        }
+      }
+
+      function displayResults(data) {
+        const resultsSection = document.getElementById("results-section");
+        const resultsHeader = document.getElementById("results-header");
+        const resultsList = document.getElementById("results-list");
+
+        // Update stats
+        document.getElementById("stat-total").textContent =
+          data.summary.totalAttempted;
+        document.getElementById("stat-success").textContent =
+          data.summary.successfulImports;
+        document.getElementById("stat-gd").textContent =
+          data.summary.gdCompliant;
+        document.getElementById("stat-failed").textContent =
+          data.summary.failedImports;
+
+        // Update header style
+        resultsHeader.className =
+          data.summary.failedImports > 0
+            ? "results-header error"
+            : "results-header";
+
+        // Display individual results
+        resultsList.innerHTML = data.results
+          .map(
+            (result) => `
+                <div class="recipe-result ${result.imported ? "success" : "error"}">
                     <div class="recipe-info">
                         <div class="recipe-title">${result.title || `Recipe ID: ${result.id}`}</div>
                         <div class="recipe-meta">
-                            ${result.category ? `Category: ${result.category}` : ''}
-                            ${result.gdValid !== undefined ? ` | GD Valid: ${result.gdValid ? '✅' : '❌'}` : ''}
-                            ${result.error ? ` | Error: ${result.error}` : ''}
+                            ${result.category ? `Category: ${result.category}` : ""}
+                            ${result.gdValid !== undefined ? ` | GD Valid: ${result.gdValid ? "✅" : "❌"}` : ""}
+                            ${result.error ? ` | Error: ${result.error}` : ""}
                         </div>
                     </div>
-                    <div class="recipe-status ${result.imported ? 'imported' : 'failed'}">
-                        ${result.imported ? '✅ Imported' : '❌ Failed'}
+                    <div class="recipe-status ${result.imported ? "imported" : "failed"}">
+                        ${result.imported ? "✅ Imported" : "❌ Failed"}
                     </div>
                 </div>
-            `).join('');
-            
-            resultsSection.style.display = 'block';
-            resultsSection.scrollIntoView({ behavior: 'smooth' });
-        }
+            `,
+          )
+          .join("");
+
+        resultsSection.style.display = "block";
+        resultsSection.scrollIntoView({ behavior: "smooth" });
+      }
     </script>
-</body>
+  </body>
 </html>

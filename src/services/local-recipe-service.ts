@@ -1,4 +1,4 @@
-import { Recipe } from '@/src/types/recipe';
+import { Recipe } from "@/src/types/recipe";
 
 /**
  * Local Recipe Service - Works without API connection
@@ -21,12 +21,12 @@ export class LocalRecipeService {
     if (recipeData) {
       // Load from provided data
       this.recipes.clear();
-      recipeData.forEach(recipe => {
+      recipeData.forEach((recipe) => {
         this.recipes.set(recipe.id, recipe);
       });
     } else {
       // Try to load from local storage
-      const stored = localStorage.getItem('recipes_data');
+      const stored = localStorage.getItem("recipes_data");
       if (stored) {
         const data = JSON.parse(stored);
         data.forEach((recipe: Recipe) => {
@@ -36,7 +36,9 @@ export class LocalRecipeService {
     }
 
     this.initialized = true;
-    console.log(`LocalRecipeService initialized with ${this.recipes.size} recipes`);
+    console.log(
+      `LocalRecipeService initialized with ${this.recipes.size} recipes`,
+    );
   }
 
   /**
@@ -58,7 +60,7 @@ export class LocalRecipeService {
    */
   static getRecipesByCategory(category: string): Recipe[] {
     return Array.from(this.recipes.values()).filter(
-      recipe => recipe.category === category
+      (recipe) => recipe.category === category,
     );
   }
 
@@ -67,16 +69,14 @@ export class LocalRecipeService {
    */
   static searchRecipes(query: string): Recipe[] {
     const searchTerm = query.toLowerCase();
-    return Array.from(this.recipes.values()).filter(recipe => {
+    return Array.from(this.recipes.values()).filter((recipe) => {
       return (
         recipe.title.toLowerCase().includes(searchTerm) ||
         recipe.description?.toLowerCase().includes(searchTerm) ||
-        recipe.ingredients.some(ing => 
-          ing.name.toLowerCase().includes(searchTerm)
+        recipe.ingredients.some((ing) =>
+          ing.name.toLowerCase().includes(searchTerm),
         ) ||
-        recipe.tags.some(tag => 
-          tag.toLowerCase().includes(searchTerm)
-        )
+        recipe.tags.some((tag) => tag.toLowerCase().includes(searchTerm))
       );
     });
   }
@@ -89,7 +89,7 @@ export class LocalRecipeService {
     minProtein?: number;
     maxCalories?: number;
   }): Recipe[] {
-    return Array.from(this.recipes.values()).filter(recipe => {
+    return Array.from(this.recipes.values()).filter((recipe) => {
       const nutrition = recipe.nutrition;
       if (criteria.maxCarbs && nutrition.carbohydrates > criteria.maxCarbs) {
         return false;
@@ -108,9 +108,9 @@ export class LocalRecipeService {
    * Get bedtime snacks (15g carbs + protein)
    */
   static getBedtimeSnacks(): Recipe[] {
-    return Array.from(this.recipes.values()).filter(recipe => {
+    return Array.from(this.recipes.values()).filter((recipe) => {
       return (
-        recipe.category === 'snack' &&
+        recipe.category === "snack" &&
         recipe.nutrition.carbohydrates >= 14 &&
         recipe.nutrition.carbohydrates <= 16 &&
         recipe.nutrition.protein >= 5
@@ -123,7 +123,7 @@ export class LocalRecipeService {
    */
   static getQuickRecipes(maxMinutes: number = 30): Recipe[] {
     return Array.from(this.recipes.values()).filter(
-      recipe => recipe.totalTime <= maxMinutes
+      (recipe) => recipe.totalTime <= maxMinutes,
     );
   }
 
@@ -141,7 +141,7 @@ export class LocalRecipeService {
    */
   static saveToLocalStorage() {
     const data = Array.from(this.recipes.values());
-    localStorage.setItem('recipes_data', JSON.stringify(data));
+    localStorage.setItem("recipes_data", JSON.stringify(data));
     console.log(`Saved ${data.length} recipes to local storage`);
   }
 
@@ -150,17 +150,20 @@ export class LocalRecipeService {
    */
   static getStats() {
     const recipes = this.getAllRecipes();
-    const byCategory = recipes.reduce((acc, recipe) => {
-      acc[recipe.category] = (acc[recipe.category] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
+    const byCategory = recipes.reduce(
+      (acc, recipe) => {
+        acc[recipe.category] = (acc[recipe.category] || 0) + 1;
+        return acc;
+      },
+      {} as Record<string, number>,
+    );
 
     return {
       total: recipes.length,
       byCategory,
-      withLocalImages: recipes.filter(r => r.localImageUrl).length,
-      quickRecipes: recipes.filter(r => r.totalTime <= 30).length,
-      bedtimeSnacks: this.getBedtimeSnacks().length
+      withLocalImages: recipes.filter((r) => r.localImageUrl).length,
+      quickRecipes: recipes.filter((r) => r.totalTime <= 30).length,
+      bedtimeSnacks: this.getBedtimeSnacks().length,
     };
   }
 }

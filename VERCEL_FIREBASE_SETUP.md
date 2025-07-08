@@ -7,6 +7,7 @@ Vercel's dashboard doesn't support multi-line environment variables. Your Fireba
 ### Required Format
 
 Your `FIREBASE_ADMIN_KEY` should be:
+
 1. **One continuous line** (no line breaks)
 2. **Valid JSON** with escaped newlines in the private key
 3. **No outer quotes** around the entire JSON
@@ -44,6 +45,7 @@ The CLI handles multi-line input better than the web dashboard.
 ## Troubleshooting
 
 If you see errors about:
+
 - "Bad control character" - Your JSON has real newlines instead of \n
 - "Invalid JSON" - Check for extra quotes or invalid escaping
 - "PERMISSION_DENIED" - Enable Firestore API in Google Cloud Console

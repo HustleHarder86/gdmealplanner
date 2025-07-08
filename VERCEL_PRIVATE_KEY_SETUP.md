@@ -9,6 +9,7 @@ The Firebase private key is very sensitive to formatting. Here are the most comm
 **Problem**: Vercel might show your private key with `\n` instead of actual line breaks.
 
 **Solution**: When adding the private key to Vercel:
+
 1. Copy the private key from your service account JSON
 2. In Vercel, paste it WITHOUT quotes
 3. The key should look like this:
@@ -29,7 +30,8 @@ The Firebase private key is very sensitive to formatting. Here are the most comm
 
 **Problem**: The entire key is on one line with `\n` characters.
 
-**Solution**: 
+**Solution**:
+
 1. Copy the key to a text editor
 2. Replace all `\n` with actual line breaks
 3. Paste the multi-line version into Vercel

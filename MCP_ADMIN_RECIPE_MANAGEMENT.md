@@ -1,9 +1,11 @@
 # MCP: Admin Recipe Management System
 
 ## Mission
+
 Create a comprehensive admin system for managing recipe imports from Spoonacular and updating the offline recipe files, maintaining the workflow: Spoonacular → Firebase → Offline Files → Users.
 
 ## Success Criteria
+
 1. Admin dashboard for searching and importing recipes from Spoonacular
 2. Bulk import capabilities with preview
 3. Automatic offline file updates after imports
@@ -12,6 +14,7 @@ Create a comprehensive admin system for managing recipe imports from Spoonacular
 6. Maintains existing Spoonacular import functionality
 
 ## Architecture Flow
+
 ```
 Admin Dashboard → Spoonacular API → Preview/Validate → Firebase → Update Offline Files → Users
 ```
@@ -19,14 +22,18 @@ Admin Dashboard → Spoonacular API → Preview/Validate → Firebase → Update
 ## Phase 1: Admin Dashboard UI (Priority: HIGH)
 
 ### 1.1 Create Admin Layout
+
 **File**: `/app/admin/layout.tsx`
+
 - Admin-specific navigation
 - Authentication check
 - Sidebar with admin tools
 - Consistent admin styling
 
 ### 1.2 Recipe Import Dashboard
+
 **File**: `/app/admin/recipes/import/page.tsx`
+
 - Search interface for Spoonacular recipes
 - Filter by:
   - Meal type (breakfast, lunch, dinner, snack)
@@ -38,7 +45,9 @@ Admin Dashboard → Spoonacular API → Preview/Validate → Firebase → Update
 - Import progress tracking
 
 ### 1.3 Recipe Preview Modal
+
 **Component**: `/components/admin/RecipePreviewModal.tsx`
+
 - Full recipe details
 - Nutrition information
 - GD compliance check
@@ -46,7 +55,9 @@ Admin Dashboard → Spoonacular API → Preview/Validate → Firebase → Update
 - Accept/Reject buttons
 
 ### 1.4 Import History Page
+
 **File**: `/app/admin/recipes/history/page.tsx`
+
 - List of all import sessions
 - Statistics per import
 - Success/failure counts
@@ -56,7 +67,9 @@ Admin Dashboard → Spoonacular API → Preview/Validate → Firebase → Update
 ## Phase 2: Enhanced Import APIs (Priority: HIGH)
 
 ### 2.1 Bulk Import Endpoint
+
 **File**: `/app/api/admin/recipes/bulk-import/route.ts`
+
 - Accept array of Spoonacular recipe IDs
 - Validate GD compliance
 - Check for duplicates
@@ -64,14 +77,18 @@ Admin Dashboard → Spoonacular API → Preview/Validate → Firebase → Update
 - Return detailed results
 
 ### 2.2 Recipe Search Proxy
+
 **File**: `/app/api/admin/recipes/search-spoonacular/route.ts`
+
 - Proxy Spoonacular search with admin auth
 - Add GD-specific filters
 - Cache search results
 - Return enriched data
 
 ### 2.3 Import Status Endpoint
+
 **File**: `/app/api/admin/recipes/import-status/route.ts`
+
 - Real-time import progress
 - WebSocket or polling support
 - Detailed error reporting
@@ -80,7 +97,9 @@ Admin Dashboard → Spoonacular API → Preview/Validate → Firebase → Update
 ## Phase 3: Automated Workflows (Priority: MEDIUM)
 
 ### 3.1 Post-Import Automation
+
 **File**: `/src/services/admin/post-import-workflow.ts`
+
 - Automatically update offline files after import
 - Create backup before update
 - Validate imported recipes
@@ -88,7 +107,9 @@ Admin Dashboard → Spoonacular API → Preview/Validate → Firebase → Update
 - Update statistics
 
 ### 3.2 Recipe Enrichment Service
+
 **File**: `/src/services/admin/recipe-enrichment.ts`
+
 - Add GD-specific metadata
 - Calculate carb choices
 - Validate nutrition data
@@ -96,7 +117,9 @@ Admin Dashboard → Spoonacular API → Preview/Validate → Firebase → Update
 - Generate meal suggestions
 
 ### 3.3 Duplicate Detection
+
 **File**: `/src/services/admin/duplicate-detector.ts`
+
 - Check for existing recipes
 - Fuzzy matching on titles
 - Ingredient comparison
@@ -105,7 +128,9 @@ Admin Dashboard → Spoonacular API → Preview/Validate → Firebase → Update
 ## Phase 4: Admin Tools & Analytics (Priority: LOW)
 
 ### 4.1 Recipe Analytics Dashboard
+
 **File**: `/app/admin/recipes/analytics/page.tsx`
+
 - Total recipes by category
 - GD compliance statistics
 - Popular recipes
@@ -113,7 +138,9 @@ Admin Dashboard → Spoonacular API → Preview/Validate → Firebase → Update
 - User engagement metrics
 
 ### 4.2 Bulk Operations
+
 **File**: `/app/admin/recipes/bulk-ops/page.tsx`
+
 - Mass update categories
 - Bulk delete
 - Export subsets
@@ -121,7 +148,9 @@ Admin Dashboard → Spoonacular API → Preview/Validate → Firebase → Update
 - Fix data issues
 
 ### 4.3 Recipe Editor
+
 **File**: `/app/admin/recipes/edit/[id]/page.tsx`
+
 - Edit existing recipes
 - Update nutrition info
 - Fix import errors
@@ -131,10 +160,11 @@ Admin Dashboard → Spoonacular API → Preview/Validate → Firebase → Update
 ## Implementation Details
 
 ### Admin Authentication
+
 ```typescript
 // middleware.ts
 export function middleware(request: NextRequest) {
-  if (request.nextUrl.pathname.startsWith('/admin')) {
+  if (request.nextUrl.pathname.startsWith("/admin")) {
     // Check Firebase Auth
     // Verify admin email
     // Redirect if not authorized
@@ -143,6 +173,7 @@ export function middleware(request: NextRequest) {
 ```
 
 ### Import Flow Component
+
 ```typescript
 // components/admin/ImportFlow.tsx
 1. Search Spoonacular
@@ -155,6 +186,7 @@ export function middleware(request: NextRequest) {
 ```
 
 ### Bulk Import Process
+
 ```typescript
 // services/admin/bulk-importer.ts
 export async function bulkImport(recipeIds: string[]) {
@@ -168,6 +200,7 @@ export async function bulkImport(recipeIds: string[]) {
 ```
 
 ## File Structure
+
 ```
 /app/
   admin/
@@ -201,6 +234,7 @@ export async function bulkImport(recipeIds: string[]) {
 ```
 
 ## Security Requirements
+
 1. Firebase Auth required
 2. Admin email whitelist
 3. Rate limiting on imports
@@ -208,6 +242,7 @@ export async function bulkImport(recipeIds: string[]) {
 5. CSRF protection
 
 ## UI/UX Requirements
+
 1. Clean, professional admin interface
 2. Real-time progress indicators
 3. Clear error messages
@@ -216,6 +251,7 @@ export async function bulkImport(recipeIds: string[]) {
 6. Keyboard shortcuts
 
 ## Testing Requirements
+
 1. Unit tests for import logic
 2. Integration tests for workflows
 3. E2E tests for admin flows
@@ -223,13 +259,16 @@ export async function bulkImport(recipeIds: string[]) {
 5. Security testing
 
 ## Performance Targets
+
 - Search results in <2 seconds
 - Import 100 recipes in <30 seconds
 - Offline file update in <10 seconds
 - Dashboard load in <1 second
 
 ## Agent Instructions
+
 When implementing this MCP:
+
 1. Start with the basic admin layout and authentication
 2. Build the import dashboard with search functionality
 3. Implement preview and validation

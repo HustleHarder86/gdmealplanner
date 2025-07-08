@@ -64,13 +64,7 @@
         "sodium": 46
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "gluten-free",
-        "quick",
-        "mexican"
-      ],
+      "tags": ["breakfast", "vegetarian", "gluten-free", "quick", "mexican"],
       "imageUrl": "https://img.spoonacular.com/recipes/1018582-556x370.jpg",
       "source": "pinkwhen.com",
       "sourceUrl": "https://www.pinkwhen.com/delicious-mango-pineapple-smoothie-recipe/",
@@ -110,9 +104,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -224,11 +216,7 @@
         "sodium": 376
       },
       "carbChoices": 3,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "gluten-free"
-      ],
+      "tags": ["breakfast", "vegetarian", "gluten-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/1019171-556x370.jpg",
       "source": "Pink When",
       "sourceUrl": "https://www.pinkwhen.com/skinny-chocolate-banana-bread/",
@@ -268,9 +256,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": [
             "Consider batch cooking or meal prep for efficiency"
           ]
@@ -367,12 +353,7 @@
         "sodium": 211
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "gluten-free",
-        "30-minutes",
-        "eggs"
-      ],
+      "tags": ["breakfast", "gluten-free", "30-minutes", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/1021260-556x370.jpg",
       "source": "pinkwhen.com",
       "sourceUrl": "https://www.pinkwhen.com/simple-protein-pancakes-recipe/",
@@ -412,9 +393,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -500,12 +479,7 @@
         "sodium": 259
       },
       "carbChoices": 3,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "gluten-free",
-        "quick"
-      ],
+      "tags": ["breakfast", "vegetarian", "gluten-free", "quick"],
       "imageUrl": "https://img.spoonacular.com/recipes/157089-556x370.jpg",
       "source": "spoonacular.com",
       "sourceUrl": "http://spoonacular.com/-1381515569559",
@@ -545,9 +519,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -628,13 +600,7 @@
         "sodium": 429
       },
       "carbChoices": 3,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "gluten-free",
-        "quick",
-        "eggs"
-      ],
+      "tags": ["breakfast", "vegetarian", "gluten-free", "quick", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/157259-556x370.jpg",
       "source": "spoonacular.com",
       "sourceUrl": "http://spoonacular.com/-1383233228884",
@@ -674,9 +640,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -792,10 +756,7 @@
         "sodium": 316
       },
       "carbChoices": 3,
-      "tags": [
-        "breakfast",
-        "vegetarian"
-      ],
+      "tags": ["breakfast", "vegetarian"],
       "imageUrl": "https://img.spoonacular.com/recipes/1681417-556x370.jpg",
       "source": "blogspot.com",
       "sourceUrl": "http://thecuisine.blogspot.com/2016/07/quinoa-banana-almond-muffins.html",
@@ -835,9 +796,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": [
             "Consider batch cooking or meal prep for efficiency"
           ]
@@ -909,10 +868,7 @@
         "sodium": 372
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "gluten-free"
-      ],
+      "tags": ["breakfast", "gluten-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/511692-556x370.jpg",
       "source": "pickfreshfoods.com",
       "sourceUrl": "https://pickfreshfoods.com/awesome-antioxidant-smoothie/",
@@ -952,9 +908,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -1061,12 +1015,7 @@
         "sodium": 65
       },
       "carbChoices": 3,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "quick",
-        "american"
-      ],
+      "tags": ["breakfast", "vegetarian", "quick", "american"],
       "imageUrl": "https://img.spoonacular.com/recipes/632575-556x370.jpg",
       "source": "Foodista",
       "sourceUrl": "https://www.foodista.com/recipe/HJPJ6D56/apple-pie-smoothie",
@@ -1106,9 +1055,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -1212,11 +1159,7 @@
         "sodium": 1619
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "30-minutes",
-        "eggs"
-      ],
+      "tags": ["breakfast", "30-minutes", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/632928-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/SZT38TKR/asparagus-eggs-benedict",
@@ -1368,12 +1311,7 @@
         "sodium": 226
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "gluten-free",
-        "dairy-free",
-        "eggs"
-      ],
+      "tags": ["breakfast", "gluten-free", "dairy-free", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/633692-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "http://www.foodista.com/recipe/VS5TY2X2/baked-oatmeal-with-dried-cranberries",
@@ -1413,9 +1351,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -1563,11 +1499,7 @@
         "sodium": 47
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "gluten-free"
-      ],
+      "tags": ["breakfast", "vegetarian", "gluten-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/633751-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/2WQNX3LQ/baked-pumpkin-chocolate-chip-pancakes",
@@ -1607,9 +1539,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -1709,13 +1639,7 @@
         "sodium": 44
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "gluten-free",
-        "dairy-free",
-        "eggs"
-      ],
+      "tags": ["breakfast", "vegetarian", "gluten-free", "dairy-free", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/633998-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/K65SYB3F/banana-blueberry-pancakes",
@@ -1755,9 +1679,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -1833,10 +1755,7 @@
         "sodium": 55
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "gluten-free"
-      ],
+      "tags": ["breakfast", "gluten-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/634180-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/V8CXRW3X/banana-smoothie-boost",
@@ -1882,9 +1801,7 @@
           ],
           "recommendations": []
         },
-        "warnings": [
-          "Failed GD compliance validation"
-        ]
+        "warnings": ["Failed GD compliance validation"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T17:59:31.243Z",
@@ -2001,9 +1918,7 @@
         "sodium": 104
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast"
-      ],
+      "tags": ["breakfast"],
       "imageUrl": "https://img.spoonacular.com/recipes/635001-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/SL3J2KBN/birthday-pancakes",
@@ -2051,9 +1966,7 @@
             "Serve with high-fiber sides like vegetables or whole grains"
           ]
         },
-        "warnings": [
-          "Failed GD compliance validation"
-        ]
+        "warnings": ["Failed GD compliance validation"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T17:59:42.116Z",
@@ -2171,13 +2084,7 @@
         "sodium": 622
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "mediterranean",
-        "french",
-        "european",
-        "eggs"
-      ],
+      "tags": ["breakfast", "mediterranean", "french", "european", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/637042-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/S7XHL4C5/caramelised-onion-and-mushroom-quiche",
@@ -2217,9 +2124,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -2327,12 +2232,7 @@
         "sodium": 542
       },
       "carbChoices": 3,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "dairy-free",
-        "eggs"
-      ],
+      "tags": ["breakfast", "vegetarian", "dairy-free", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/637055-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/44ZRT4MN/caramelized-cranberries-coconut-pancakes",
@@ -2372,9 +2272,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -2551,11 +2449,7 @@
         "sodium": 234
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "eggs"
-      ],
+      "tags": ["breakfast", "vegetarian", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/637222-556x370.",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/LXQSTRQW/carrot-quinoa-muffins",
@@ -2595,9 +2489,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -2722,9 +2614,7 @@
         "sodium": 1018
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast"
-      ],
+      "tags": ["breakfast"],
       "imageUrl": "https://img.spoonacular.com/recipes/637645-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/87Y72MBD/cheesy-cauliflower-pancakes",
@@ -2764,14 +2654,10 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
-        "warnings": [
-          "Contains inappropriate content for pregnancy"
-        ]
+        "warnings": ["Contains inappropriate content for pregnancy"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T17:59:34.163Z",
@@ -2885,11 +2771,7 @@
         "sodium": 452
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "eggs"
-      ],
+      "tags": ["breakfast", "vegetarian", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/638775-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/C3X8BPKK/chive-and-dill-muffins",
@@ -2929,9 +2811,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -3018,11 +2898,7 @@
         "sodium": 20
       },
       "carbChoices": 3,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "gluten-free"
-      ],
+      "tags": ["breakfast", "vegetarian", "gluten-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/639120-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/CZNXJ7GX/chocolate-oatmeal",
@@ -3062,9 +2938,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -3173,10 +3047,7 @@
         "sodium": 163
       },
       "carbChoices": 4,
-      "tags": [
-        "breakfast",
-        "gluten-free"
-      ],
+      "tags": ["breakfast", "gluten-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/639131-556x370.jpg",
       "source": "Foodista",
       "sourceUrl": "https://www.foodista.com/recipe/B4X7Z5VV/chocolate-overnight-oats-berries",
@@ -3216,14 +3087,10 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
-        "warnings": [
-          "Failed GD compliance validation"
-        ]
+        "warnings": ["Failed GD compliance validation"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T17:59:05.409Z",
@@ -3311,10 +3178,7 @@
         "sodium": 151
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "gluten-free"
-      ],
+      "tags": ["breakfast", "gluten-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/639303-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/YTFKY5YF/chocolatey-overnight-oats-with-strawberries",
@@ -3435,11 +3299,7 @@
         "sodium": 498
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "dairy-free",
-        "eggs"
-      ],
+      "tags": ["breakfast", "dairy-free", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/639594-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/5VF7K8CP/eggs-benedict",
@@ -3479,9 +3339,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": [
             "Serve with high-fiber sides like vegetables or whole grains"
           ]
@@ -3557,10 +3415,7 @@
           "original": "2 tablespoons of Chia Seeds"
         }
       ],
-      "instructions": [
-        "1. Blend until smooth!",
-        "2. Serve and Enjoy"
-      ],
+      "instructions": ["1. Blend until smooth!", "2. Serve and Enjoy"],
       "nutrition": {
         "calories": 340,
         "carbohydrates": 29,
@@ -3572,13 +3427,7 @@
         "sodium": 16
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "vegan",
-        "gluten-free",
-        "dairy-free"
-      ],
+      "tags": ["breakfast", "vegetarian", "vegan", "gluten-free", "dairy-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/639728-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/X7QGVRXJ/coconut-bliss-smoothie",
@@ -3618,9 +3467,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -3748,11 +3595,7 @@
         "sodium": 2262
       },
       "carbChoices": 3,
-      "tags": [
-        "breakfast",
-        "30-minutes",
-        "eggs"
-      ],
+      "tags": ["breakfast", "30-minutes", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/640275-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/P53KDVS3/crab-cakes-eggs-benedict",
@@ -3795,9 +3638,7 @@
           "warnings": [],
           "recommendations": []
         },
-        "warnings": [
-          "Contains inappropriate content for pregnancy"
-        ]
+        "warnings": ["Contains inappropriate content for pregnancy"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T17:58:57.880Z",
@@ -3888,13 +3729,7 @@
         "sodium": 2345
       },
       "carbChoices": 3,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "vegan",
-        "gluten-free",
-        "dairy-free"
-      ],
+      "tags": ["breakfast", "vegetarian", "vegan", "gluten-free", "dairy-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/640443-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/HXWKCN44/cranberry-ginger-oatmeal-with-toasted-hazelnuts",
@@ -3934,9 +3769,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -4073,11 +3906,7 @@
         "sodium": 62
       },
       "carbChoices": 3,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "dairy-free"
-      ],
+      "tags": ["breakfast", "vegetarian", "dairy-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/641255-556x370.jpg",
       "source": "Foodista",
       "sourceUrl": "https://www.foodista.com/recipe/MZQWSJDM/dark-chocolate-chunk-quinoa-granola-bars",
@@ -4117,9 +3946,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -4239,11 +4066,7 @@
         "sodium": 51
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "gluten-free",
-        "dairy-free"
-      ],
+      "tags": ["breakfast", "gluten-free", "dairy-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/641411-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/Q2RCCTJP/delicious-raw-macadamia-zucchini-green-smoothie",
@@ -4289,9 +4112,7 @@
           ],
           "recommendations": []
         },
-        "warnings": [
-          "Failed GD compliance validation"
-        ]
+        "warnings": ["Failed GD compliance validation"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T17:59:42.563Z",
@@ -4396,10 +4217,7 @@
         "sodium": 143
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "dairy-free"
-      ],
+      "tags": ["breakfast", "dairy-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/642178-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/DL8G33VY/egg-and-dairy-free-pancakes",
@@ -4445,9 +4263,7 @@
           ],
           "recommendations": []
         },
-        "warnings": [
-          "Failed GD compliance validation"
-        ]
+        "warnings": ["Failed GD compliance validation"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T17:59:25.068Z",
@@ -4547,13 +4363,7 @@
         "sodium": 709
       },
       "carbChoices": 3,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "gluten-free",
-        "30-minutes",
-        "eggs"
-      ],
+      "tags": ["breakfast", "vegetarian", "gluten-free", "30-minutes", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/643143-556x370.jpg",
       "source": "Foodista",
       "sourceUrl": "https://www.foodista.com/recipe/NSGQNPY7/fluffy-citrus-coconut-pancakes",
@@ -4593,9 +4403,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -4690,12 +4498,7 @@
         "sodium": 129
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "gluten-free",
-        "quick"
-      ],
+      "tags": ["breakfast", "vegetarian", "gluten-free", "quick"],
       "imageUrl": "https://img.spoonacular.com/recipes/643241-556x370.jpg",
       "source": "Foodista",
       "sourceUrl": "https://www.foodista.com/recipe/445N2G3Y/four-berry-blast-fruit-smoothie",
@@ -4735,9 +4538,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -4846,11 +4647,7 @@
         "sodium": 525
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "gluten-free",
-        "eggs"
-      ],
+      "tags": ["breakfast", "gluten-free", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/643859-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/ZPHDGMDB/frittata-with-mushrooms-thyme-and-parmigiano-cheese",
@@ -5005,12 +4802,7 @@
         "sodium": 192
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "gluten-free",
-        "eggs"
-      ],
+      "tags": ["breakfast", "vegetarian", "gluten-free", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/644800-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/V3JWYJCL/gluten-free-blueberry-muffins",
@@ -5050,9 +4842,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -5169,12 +4959,7 @@
         "sodium": 61
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "gluten-free",
-        "eggs"
-      ],
+      "tags": ["breakfast", "vegetarian", "gluten-free", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/644848-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/GG6LGJS5/gluten-free-pancakes",
@@ -5214,9 +4999,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -5343,11 +5126,7 @@
         "sodium": 169
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "dairy-free",
-        "eggs"
-      ],
+      "tags": ["breakfast", "dairy-free", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/644867-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/V77VJRHB/gluten-free-baked-oatmeal",
@@ -5387,9 +5166,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -5500,11 +5277,7 @@
         "sodium": 358
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "gluten-free",
-        "eggs"
-      ],
+      "tags": ["breakfast", "gluten-free", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/644874-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/D7X8QLKD/gluten-freed-buckwheat-pancakes",
@@ -5544,9 +5317,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -5682,12 +5453,7 @@
         "sodium": 542
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "dairy-free",
-        "eggs"
-      ],
+      "tags": ["breakfast", "vegetarian", "dairy-free", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/644879-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/VTFWRZ64/gluten-free-coconut-flour-pancakes",
@@ -5727,9 +5493,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -5867,9 +5631,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -5952,11 +5714,7 @@
         "sodium": 25
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "gluten-free"
-      ],
+      "tags": ["breakfast", "vegetarian", "gluten-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/645530-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/MCHKDTHW/green-tea-fruit-medley-smoothie",
@@ -6004,9 +5762,7 @@
             "Serve with high-fiber sides like vegetables or whole grains"
           ]
         },
-        "warnings": [
-          "Failed GD compliance validation"
-        ]
+        "warnings": ["Failed GD compliance validation"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T17:59:24.452Z",
@@ -6101,11 +5857,7 @@
         "sodium": 23
       },
       "carbChoices": 3,
-      "tags": [
-        "breakfast",
-        "gluten-free",
-        "dairy-free"
-      ],
+      "tags": ["breakfast", "gluten-free", "dairy-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/646442-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/KHN7KKGJ/healthy-black-forest-baked-oatmeal",
@@ -6145,9 +5897,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -6231,12 +5981,7 @@
         "sodium": 708
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "gluten-free",
-        "quick"
-      ],
+      "tags": ["breakfast", "vegetarian", "gluten-free", "quick"],
       "imageUrl": "https://img.spoonacular.com/recipes/646515-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/JMV2JK3H/healthy-southwestern-oatmeal",
@@ -6420,9 +6165,7 @@
         "sodium": 195
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast"
-      ],
+      "tags": ["breakfast"],
       "imageUrl": "https://img.spoonacular.com/recipes/646906-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/T37VMRNN/homemade-apple-almond-granola-bars",
@@ -6462,9 +6205,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -6557,11 +6298,7 @@
         "sodium": 23
       },
       "carbChoices": 3,
-      "tags": [
-        "breakfast",
-        "gluten-free",
-        "dairy-free"
-      ],
+      "tags": ["breakfast", "gluten-free", "dairy-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/647261-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/F6QYB4D7/honey-nut-raspberry-baked-oatmeal",
@@ -6754,13 +6491,7 @@
         "sodium": 112
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "vegan",
-        "gluten-free",
-        "dairy-free"
-      ],
+      "tags": ["breakfast", "vegetarian", "vegan", "gluten-free", "dairy-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/648013-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/BXZSJKB5/iron-rich-gluten-free-vegan-muffins",
@@ -6800,9 +6531,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -6937,9 +6666,7 @@
         "sodium": 292
       },
       "carbChoices": 3,
-      "tags": [
-        "breakfast"
-      ],
+      "tags": ["breakfast"],
       "imageUrl": "https://img.spoonacular.com/recipes/649777-556x370.jpg",
       "source": "Foodista",
       "sourceUrl": "https://www.foodista.com/recipe/2W6B6BRZ/lemon-scented-polenta-pancakes-with-blueberry-thyme-syrup",
@@ -6979,9 +6706,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -7045,13 +6770,7 @@
         "sodium": 2
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "vegan",
-        "gluten-free",
-        "dairy-free"
-      ],
+      "tags": ["breakfast", "vegetarian", "vegan", "gluten-free", "dairy-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/650485-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/ZKLKH6FG/luscious-orange-cardamom-smoothie",
@@ -7091,9 +6810,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -7212,13 +6929,7 @@
         "sodium": 484
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "mediterranean",
-        "french",
-        "european",
-        "eggs"
-      ],
+      "tags": ["breakfast", "mediterranean", "french", "european", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/650650-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/SLFFTBGD/make-ahead-quiche",
@@ -7258,9 +6969,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": [
             "Serve with high-fiber sides like vegetables or whole grains"
           ]
@@ -7340,13 +7049,7 @@
         "sodium": 8
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "vegan",
-        "gluten-free",
-        "dairy-free"
-      ],
+      "tags": ["breakfast", "vegetarian", "vegan", "gluten-free", "dairy-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/650844-556x370.jpg",
       "source": "Foodista",
       "sourceUrl": "https://www.foodista.com/recipe/73XNKWLD/mango-berry-swirled-smoothies",
@@ -7386,9 +7089,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -7609,9 +7310,7 @@
           "warnings": [],
           "recommendations": []
         },
-        "warnings": [
-          "Contains inappropriate content for pregnancy"
-        ]
+        "warnings": ["Contains inappropriate content for pregnancy"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T17:59:05.957Z",
@@ -7678,11 +7377,7 @@
         "sodium": 35
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "gluten-free"
-      ],
+      "tags": ["breakfast", "vegetarian", "gluten-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/654274-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/7H4XQBD4/overnight-steel-cut-oatmeal",
@@ -7722,9 +7417,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -7798,9 +7491,7 @@
         "sodium": 101
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast"
-      ],
+      "tags": ["breakfast"],
       "imageUrl": "https://img.spoonacular.com/recipes/654485-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/RHSMN38H/pancake-bites",
@@ -7848,9 +7539,7 @@
             "Serve with high-fiber sides like vegetables or whole grains"
           ]
         },
-        "warnings": [
-          "Failed GD compliance validation"
-        ]
+        "warnings": ["Failed GD compliance validation"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T17:59:36.434Z",
@@ -7939,9 +7628,7 @@
         "sodium": 360
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast"
-      ],
+      "tags": ["breakfast"],
       "imageUrl": "https://img.spoonacular.com/recipes/654495-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/DKMDYNBT/pancakes",
@@ -7981,9 +7668,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": [
             "Serve with high-fiber sides like vegetables or whole grains"
           ]
@@ -8077,9 +7762,7 @@
         "sodium": 416
       },
       "carbChoices": 3,
-      "tags": [
-        "breakfast"
-      ],
+      "tags": ["breakfast"],
       "imageUrl": "https://img.spoonacular.com/recipes/655060-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/6X3T8N7B/peach-brown-sugar-pancakes",
@@ -8119,9 +7802,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -8197,11 +7878,7 @@
         "sodium": 60
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "gluten-free"
-      ],
+      "tags": ["breakfast", "vegetarian", "gluten-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/655195-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/4GQMWRFC/peachy-nananut-smoothie",
@@ -8241,14 +7918,10 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
-        "warnings": [
-          "Failed GD compliance validation"
-        ]
+        "warnings": ["Failed GD compliance validation"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T17:59:40.303Z",
@@ -8362,10 +8035,7 @@
         "sodium": 51
       },
       "carbChoices": 3,
-      "tags": [
-        "breakfast",
-        "vegetarian"
-      ],
+      "tags": ["breakfast", "vegetarian"],
       "imageUrl": "https://img.spoonacular.com/recipes/655212-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/TQ5LYYHT/peanut-butter-and-apple-oatmeal-breakfast-bars",
@@ -8405,9 +8075,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -8496,11 +8164,7 @@
         "sodium": 76
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "gluten-free",
-        "quick"
-      ],
+      "tags": ["breakfast", "gluten-free", "quick"],
       "imageUrl": "https://img.spoonacular.com/recipes/657359-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/DQ74XQZV/pumpkin-pie-smoothie",
@@ -8667,11 +8331,7 @@
         "sodium": 645
       },
       "carbChoices": 4,
-      "tags": [
-        "breakfast",
-        "gluten-free",
-        "eggs"
-      ],
+      "tags": ["breakfast", "gluten-free", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/657361-556x370.jpg",
       "source": "Foodista",
       "sourceUrl": "http://www.foodista.com/recipe/YX5D7SZP/pumpkin-praline-baked-oatmeal",
@@ -8711,14 +8371,10 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
-        "warnings": [
-          "Failed GD compliance validation"
-        ]
+        "warnings": ["Failed GD compliance validation"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T17:59:09.957Z",
@@ -8799,12 +8455,7 @@
         "sodium": 100
       },
       "carbChoices": 3,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "gluten-free",
-        "quick"
-      ],
+      "tags": ["breakfast", "vegetarian", "gluten-free", "quick"],
       "imageUrl": "https://img.spoonacular.com/recipes/657916-556x370.jpg",
       "source": "Foodista",
       "sourceUrl": "https://www.foodista.com/recipe/HDMKHGMR/raspberry-white-peach-smoothie",
@@ -8844,9 +8495,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -8942,13 +8591,7 @@
         "sodium": 7
       },
       "carbChoices": 3,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "vegan",
-        "gluten-free",
-        "dairy-free"
-      ],
+      "tags": ["breakfast", "vegetarian", "vegan", "gluten-free", "dairy-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/658624-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/2ZWYP8RM/roasted-plum-oatmeal",
@@ -8988,9 +8631,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -9169,9 +8810,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -9283,11 +8922,7 @@
         "sodium": 386
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "eggs"
-      ],
+      "tags": ["breakfast", "vegetarian", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/659465-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/ZFCFJDY7/savory-corn-and-chives-muffins",
@@ -9327,9 +8962,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -9405,10 +9038,7 @@
         "sodium": 397
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "gluten-free"
-      ],
+      "tags": ["breakfast", "gluten-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/660227-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/ZYDRZ3CV/skinny-green-monster-smoothie",
@@ -9571,10 +9201,7 @@
         "sodium": 1495
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "eggs"
-      ],
+      "tags": ["breakfast", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/660368-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/MZTVJFS5/smoked-salmon-eggs-benedict-with-lemon-dill-hollandaise",
@@ -9742,11 +9369,7 @@
         "sodium": 213
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "30-minutes"
-      ],
+      "tags": ["breakfast", "vegetarian", "30-minutes"],
       "imageUrl": "https://img.spoonacular.com/recipes/660985-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/N8NSPSVC/spiced-pumpkin-pancakes",
@@ -9786,9 +9409,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -9885,11 +9506,7 @@
         "sodium": 83
       },
       "carbChoices": 0,
-      "tags": [
-        "breakfast",
-        "eastern european",
-        "european"
-      ],
+      "tags": ["breakfast", "eastern european", "european"],
       "imageUrl": "https://img.spoonacular.com/recipes/661602-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/FR7746PB/sterling-cooper-blini-with-caviar",
@@ -9937,9 +9554,7 @@
             "Serve with high-fiber sides like vegetables or whole grains"
           ]
         },
-        "warnings": [
-          "Failed GD compliance validation"
-        ]
+        "warnings": ["Failed GD compliance validation"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T17:59:23.936Z",
@@ -9998,9 +9613,7 @@
           "original": "2 c spinach or mixed greens"
         }
       ],
-      "instructions": [
-        "1. Mix all ingredients into a blender and enjoy!"
-      ],
+      "instructions": ["1. Mix all ingredients into a blender and enjoy!"],
       "nutrition": {
         "calories": 215,
         "carbohydrates": 23,
@@ -10012,11 +9625,7 @@
         "sodium": 319
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "gluten-free",
-        "dairy-free"
-      ],
+      "tags": ["breakfast", "gluten-free", "dairy-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/663845-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/PJH3CT2M/tropical-banana-green-smoothie",
@@ -10157,13 +9766,7 @@
         "sodium": 51
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "vegan",
-        "gluten-free",
-        "dairy-free"
-      ],
+      "tags": ["breakfast", "vegetarian", "vegan", "gluten-free", "dairy-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/663853-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/JLYYQCYC/tropical-breakfast-quinoa",
@@ -10203,9 +9806,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -10282,13 +9883,7 @@
         "sodium": 4
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "vegan",
-        "gluten-free",
-        "dairy-free"
-      ],
+      "tags": ["breakfast", "vegetarian", "vegan", "gluten-free", "dairy-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/665040-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/LDFFHSFG/watermelon-kiwi-apple-and-frozen-banana-smoothie",
@@ -10328,9 +9923,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -10448,10 +10041,7 @@
         "sodium": 947
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "eggs"
-      ],
+      "tags": ["breakfast", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/667698-556x370.jpg",
       "source": "spoonacular.com",
       "sourceUrl": "https://spoonacular.com/-1436560650587",
@@ -10491,9 +10081,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": [
             "Consider batch cooking or meal prep for efficiency"
           ]
@@ -10591,11 +10179,7 @@
         "sodium": 304
       },
       "carbChoices": 3,
-      "tags": [
-        "breakfast",
-        "gluten-free",
-        "dairy-free"
-      ],
+      "tags": ["breakfast", "gluten-free", "dairy-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/673464-556x370.jpg",
       "source": "Pink When",
       "sourceUrl": "https://www.pinkwhen.com/pb-and-j-overnight-oatmeal/",
@@ -10635,9 +10219,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -10721,11 +10303,7 @@
         "sodium": 191
       },
       "carbChoices": 3,
-      "tags": [
-        "breakfast",
-        "gluten-free",
-        "quick"
-      ],
+      "tags": ["breakfast", "gluten-free", "quick"],
       "imageUrl": "https://img.spoonacular.com/recipes/704655-556x370.jpg",
       "source": "Pink When",
       "sourceUrl": "https://www.pinkwhen.com/triple-berry-limeade-smoothies/",
@@ -10765,14 +10343,10 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
-        "warnings": [
-          "Failed GD compliance validation"
-        ]
+        "warnings": ["Failed GD compliance validation"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T17:59:35.788Z",
@@ -10901,11 +10475,7 @@
         "sodium": 200
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "eggs"
-      ],
+      "tags": ["breakfast", "vegetarian", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/716211-556x370.jpg",
       "source": "foodandspice.com",
       "sourceUrl": "https://www.foodandspice.com/2009/07/cherry-blueberry-muffins.html",
@@ -10945,9 +10515,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -11077,9 +10645,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -11159,9 +10725,7 @@
           "original": "1/3 cup seeded, chopped tomato"
         }
       ],
-      "instructions": [
-        "Detailed instructions available at the source."
-      ],
+      "instructions": ["Detailed instructions available at the source."],
       "nutrition": {
         "calories": 655,
         "carbohydrates": 13,
@@ -11173,12 +10737,7 @@
         "sodium": 965
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "gluten-free",
-        "eggs"
-      ],
+      "tags": ["breakfast", "vegetarian", "gluten-free", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/716432-556x370.jpg",
       "source": "blogspot.com",
       "sourceUrl": "https://fullbellysisters.blogspot.com/2014/05/finger-foods-frittata-muffins.html",
@@ -11221,9 +10780,7 @@
           "warnings": [],
           "recommendations": []
         },
-        "warnings": [
-          "Missing cooking instructions"
-        ]
+        "warnings": ["Missing cooking instructions"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T17:58:59.014Z",
@@ -11343,11 +10900,7 @@
         "sodium": 341
       },
       "carbChoices": 3,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "gluten-free"
-      ],
+      "tags": ["breakfast", "vegetarian", "gluten-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/729532-556x370.jpg",
       "source": "Pink When",
       "sourceUrl": "https://www.pinkwhen.com/gluten-free-almond-blueberry-coffee-cake/",
@@ -11387,9 +10940,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": [
             "Consider batch cooking or meal prep for efficiency"
           ]
@@ -11492,12 +11043,7 @@
         "sodium": 253
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "gluten-free",
-        "dairy-free",
-        "quick"
-      ],
+      "tags": ["breakfast", "gluten-free", "dairy-free", "quick"],
       "imageUrl": "https://img.spoonacular.com/recipes/756814-556x370.jpg",
       "source": "Foodista",
       "sourceUrl": "https://www.foodista.com/blog/2015/05/17/powehouse-almond-matcha-superfood-smoothie",
@@ -11647,11 +11193,7 @@
         "sodium": 208
       },
       "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "30-minutes"
-      ],
+      "tags": ["breakfast", "vegetarian", "30-minutes"],
       "imageUrl": "https://img.spoonacular.com/recipes/775666-556x370.jpg",
       "source": "recipeoftoday.com",
       "sourceUrl": "https://www.recipeoftoday.com/2015/05/easy-homemade-apple-fritters.html?m=1",
@@ -11773,13 +11315,7 @@
         "sodium": 34
       },
       "carbChoices": 3,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "vegan",
-        "gluten-free",
-        "dairy-free"
-      ],
+      "tags": ["breakfast", "vegetarian", "vegan", "gluten-free", "dairy-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/794350-556x370.jpg",
       "source": "foodandspice.com",
       "sourceUrl": "https://www.foodandspice.com/2016/07/cherry-coconut-milk-smoothie.html",
@@ -11902,13 +11438,7 @@
         "sodium": 10
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "vegan",
-        "gluten-free",
-        "dairy-free"
-      ],
+      "tags": ["breakfast", "vegetarian", "vegan", "gluten-free", "dairy-free"],
       "imageUrl": "https://img.spoonacular.com/recipes/798956-556x370.jpg",
       "source": "foodandspice.com",
       "sourceUrl": "https://www.foodandspice.com/2016/08/mango-banana-coconut-smoothie.html",
@@ -11948,9 +11478,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -12018,9 +11546,7 @@
           "original": " fresh lime juice, to taste"
         }
       ],
-      "instructions": [
-        "Detailed instructions available at the source."
-      ],
+      "instructions": ["Detailed instructions available at the source."],
       "nutrition": {
         "calories": 326,
         "carbohydrates": 21,
@@ -12032,13 +11558,7 @@
         "sodium": 535
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "gluten-free",
-        "dairy-free",
-        "eggs"
-      ],
+      "tags": ["breakfast", "vegetarian", "gluten-free", "dairy-free", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/868800-556x370.png",
       "source": "Full Belly Sisters",
       "sourceUrl": "https://fullbellysisters.blogspot.com/2017/03/easy-avocado-egg-quinoa-blend-breakfast.html",
@@ -12078,14 +11598,10 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
-        "warnings": [
-          "Missing cooking instructions"
-        ]
+        "warnings": ["Missing cooking instructions"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T17:59:53.030Z",
@@ -12186,10 +11702,7 @@
         "sodium": 298
       },
       "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "vegetarian"
-      ],
+      "tags": ["breakfast", "vegetarian"],
       "imageUrl": "https://img.spoonacular.com/recipes/960469-556x370.jpg",
       "source": "pickfreshfoods.com",
       "sourceUrl": "https://pickfreshfoods.com/the-best-protein-pancakes/",
@@ -12229,9 +11742,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []

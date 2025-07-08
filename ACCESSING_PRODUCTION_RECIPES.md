@@ -1,6 +1,7 @@
 # Accessing Recipe Data from the Deployed Application
 
 ## Production URL
+
 The application is deployed at: **https://gdmealplanner.vercel.app**
 
 ## Available API Endpoints
@@ -8,11 +9,13 @@ The application is deployed at: **https://gdmealplanner.vercel.app**
 All API endpoints are publicly accessible without authentication:
 
 ### 1. List All Recipes
+
 **Endpoint:** `GET /api/recipes/list`
 
 Returns all recipes in the database with basic information.
 
 **Example Response:**
+
 ```json
 {
   "success": true,
@@ -25,10 +28,10 @@ Returns all recipes in the database with basic information.
       "nutrition": {
         "carbohydrates": 20,
         "protein": 8,
-        "fat": 9,
+        "fat": 9
         // ... more nutrition data
       },
-      "carbChoices": 1,
+      "carbChoices": 1
       // ... more fields
     }
   ],
@@ -38,11 +41,13 @@ Returns all recipes in the database with basic information.
 ```
 
 ### 2. Get Recipe Count
+
 **Endpoint:** `GET /api/recipes/count`
 
 Returns the total count of recipes, optionally broken down by category.
 
 ### 3. Get Individual Recipe
+
 **Endpoint:** `GET /api/recipes/[id]`
 
 Returns detailed information for a specific recipe.
@@ -50,6 +55,7 @@ Returns detailed information for a specific recipe.
 **Example:** `GET /api/recipes/spoonacular-1018582`
 
 ### 4. Export All Recipes (if available)
+
 **Endpoint:** `GET /api/recipes/export?format=json`
 
 Downloads all recipes as a JSON file with complete data.
@@ -57,10 +63,11 @@ Downloads all recipes as a JSON file with complete data.
 ## Recipe Data Statistics
 
 Based on the current production data:
+
 - **Total Recipes:** 242
 - **By Category:**
   - Breakfast: 81 recipes
-  - Lunch: 41 recipes  
+  - Lunch: 41 recipes
   - Dinner: 105 recipes
   - Snack: 15 recipes
 
@@ -73,6 +80,7 @@ Based on the current production data:
 ## Recipe Data Structure
 
 Each recipe contains:
+
 - `id`: Unique identifier (e.g., "spoonacular-1018582")
 - `title`: Recipe name
 - `description`: Brief description
@@ -91,18 +99,23 @@ Each recipe contains:
 ## Example Usage
 
 ### Fetch all recipes using JavaScript:
+
 ```javascript
-const response = await fetch('https://gdmealplanner.vercel.app/api/recipes/list');
+const response = await fetch(
+  "https://gdmealplanner.vercel.app/api/recipes/list",
+);
 const data = await response.json();
 console.log(`Found ${data.count} recipes`);
 ```
 
 ### Fetch all recipes using curl:
+
 ```bash
 curl https://gdmealplanner.vercel.app/api/recipes/list
 ```
 
 ### Download recipes using the provided script:
+
 ```bash
 node scripts/download-production-recipes.js
 ```

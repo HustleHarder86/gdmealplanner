@@ -11,6 +11,7 @@ After comprehensive analysis, Vercel remains the optimal platform for the Pregna
 ### Vercel (Recommended) ✅
 
 **Pros:**
+
 - Zero-configuration Next.js deployment
 - Free tier sufficient for first 100 users
 - Automatic HTTPS, CDN, and caching
@@ -20,6 +21,7 @@ After comprehensive analysis, Vercel remains the optimal platform for the Pregna
 - Direct integration with GitHub
 
 **Cons:**
+
 - Environment variable formatting quirks (one-time setup)
 - 10-second function timeout (not an issue for this app)
 
@@ -28,11 +30,13 @@ After comprehensive analysis, Vercel remains the optimal platform for the Pregna
 ### Railway ❌
 
 **Pros:**
+
 - Better for long-running processes (not needed)
 - PostgreSQL/Redis hosting (using Firebase instead)
 - Cron job support (not required - manual scripts only)
 
 **Cons:**
+
 - More complex setup for Next.js
 - Higher costs ($5+ per service)
 - No Next.js-specific optimizations
@@ -51,6 +55,7 @@ Not recommended - adds complexity without benefits. All services can run efficie
 
 **Issue:** Firestore API not enabled
 **Solution:**
+
 ```bash
 # Enable in Google Cloud Console
 # Project: gd-meal-planner
@@ -63,6 +68,7 @@ Not recommended - adds complexity without benefits. All services can run efficie
 
 **Issue:** Complex Firebase private key formatting
 **Solution:** Document exact formatting requirements:
+
 - Paste private key without quotes
 - Preserve actual newlines (not \n)
 - Use Vercel's web UI, not CLI
@@ -75,15 +81,17 @@ Not recommended - adds complexity without benefits. All services can run efficie
 ## Simplified Architecture for "Build Once"
 
 ### 1. Single Platform Strategy
+
 - **Everything on Vercel**: App, API routes, static assets
 - **Firebase for data**: Auth, Firestore, Storage
 - **No additional services needed**
 
 ### 2. Monitoring & Reliability
+
 ```javascript
 // Add to app/layout.tsx
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function RootLayout({ children }) {
   return (
@@ -99,6 +107,7 @@ export default function RootLayout({ children }) {
 ```
 
 ### 3. Error Tracking
+
 ```bash
 # Install Sentry
 npm install @sentry/nextjs
@@ -110,18 +119,21 @@ npx @sentry/wizard@latest -i nextjs
 ## Action Plan for Minimal Mistakes
 
 ### Phase 1: Fix Current Issues (Week 1)
+
 1. Enable Firestore API in Google Cloud Console
 2. Verify environment variables in Vercel dashboard
 3. Test all API endpoints with diagnostic tools
 4. Set up error tracking (Sentry)
 
 ### Phase 2: Production Hardening (Week 2)
+
 1. Add rate limiting to API routes
 2. Implement proper error boundaries
 3. Set up monitoring alerts
 4. Create backup strategy for Firestore
 
 ### Phase 3: Launch Preparation (Week 3)
+
 1. Load test with 100 concurrent users
 2. Optimize bundle size and performance
 3. Set up custom domain
@@ -130,6 +142,7 @@ npx @sentry/wizard@latest -i nextjs
 ## Cost Projections
 
 ### First 6 Months (100 users)
+
 - **Vercel Free Tier**: $0/month
   - 100GB bandwidth (plenty for 100 users)
   - 100GB-hours serverless functions
@@ -143,9 +156,10 @@ npx @sentry/wizard@latest -i nextjs
 **Total: $0/month** ✅
 
 ### Scaling to 1000 users
+
 - **Vercel Pro**: $20/month
 - **Firebase**: Still free tier
-**Total: $20/month**
+  **Total: $20/month**
 
 ## Why This Strategy Minimizes Mistakes
 
@@ -159,6 +173,7 @@ npx @sentry/wizard@latest -i nextjs
 ## Deployment Checklist
 
 ### Pre-Launch
+
 - [ ] Enable all required Google Cloud APIs
 - [ ] Verify environment variables in Vercel
 - [ ] Set up Sentry error tracking
@@ -168,6 +183,7 @@ npx @sentry/wizard@latest -i nextjs
 - [ ] Document all environment variables
 
 ### Per-Deployment
+
 - [ ] Run `npm run build` locally
 - [ ] Check TypeScript errors: `npm run typecheck`
 - [ ] Run linting: `npm run lint`
@@ -176,6 +192,7 @@ npx @sentry/wizard@latest -i nextjs
 - [ ] Check Sentry for new errors
 
 ### Post-Launch Monitoring
+
 - [ ] Daily: Check Vercel Analytics
 - [ ] Weekly: Review error logs
 - [ ] Monthly: Analyze performance metrics

@@ -11,7 +11,9 @@ async function runDailyImport() {
   // Check for API key
   const apiKey = process.env.SPOONACULAR_API_KEY;
   if (!apiKey) {
-    console.error("❌ Error: SPOONACULAR_API_KEY not found in environment variables");
+    console.error(
+      "❌ Error: SPOONACULAR_API_KEY not found in environment variables",
+    );
     console.log("\n📝 Please create a .env.local file with:");
     console.log("SPOONACULAR_API_KEY=your_api_key_here");
     process.exit(1);
@@ -23,7 +25,7 @@ async function runDailyImport() {
 
     // Create scheduler with campaign configuration
     const scheduler = new RecipeImportScheduler(apiKey, {
-      campaignStartDate: new Date().toISOString().split('T')[0], // Start today
+      campaignStartDate: new Date().toISOString().split("T")[0], // Start today
       totalDays: 20,
       dailyQuota: 100,
       minQualityScore: 50,
@@ -40,11 +42,15 @@ async function runDailyImport() {
     console.log("");
 
     // Confirmation prompt
-    console.log("⚠️  This will use up to 200 API calls (100 searches + 100 recipe details)");
-    console.log("   Continue? (Press Ctrl+C to cancel, or wait 5 seconds to proceed)");
-    
+    console.log(
+      "⚠️  This will use up to 200 API calls (100 searches + 100 recipe details)",
+    );
+    console.log(
+      "   Continue? (Press Ctrl+C to cancel, or wait 5 seconds to proceed)",
+    );
+
     // Wait 5 seconds for user to cancel
-    await new Promise(resolve => setTimeout(resolve, 5000));
+    await new Promise((resolve) => setTimeout(resolve, 5000));
 
     // Execute daily import
     console.log("\n🔄 Starting import process...\n");
@@ -57,7 +63,7 @@ async function runDailyImport() {
     console.log(`   Total Processed: ${report.recipesProcessed}`);
     console.log(`   Total Rejected: ${report.recipesRejected}`);
     console.log(`   API Calls Used: ${report.apiCallsUsed}`);
-    
+
     console.log("\n📂 Imported by Category:");
     Object.entries(report.categoryBreakdown).forEach(([category, count]) => {
       console.log(`   ${category}: ${count}`);
@@ -70,9 +76,8 @@ async function runDailyImport() {
 
     if (report.errors.length > 0) {
       console.log("\n⚠️  Errors encountered:");
-      report.errors.forEach(error => console.log(`   - ${error}`));
+      report.errors.forEach((error) => console.log(`   - ${error}`));
     }
-
   } catch (error) {
     console.error("\n❌ Import failed:", error);
     process.exit(1);
@@ -80,10 +85,12 @@ async function runDailyImport() {
 }
 
 // Run the import
-runDailyImport().then(() => {
-  console.log("\n✅ Daily import process complete!");
-  process.exit(0);
-}).catch(error => {
-  console.error("Fatal error:", error);
-  process.exit(1);
-});
+runDailyImport()
+  .then(() => {
+    console.log("\n✅ Daily import process complete!");
+    process.exit(0);
+  })
+  .catch((error) => {
+    console.error("Fatal error:", error);
+    process.exit(1);
+  });

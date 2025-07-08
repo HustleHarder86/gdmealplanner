@@ -28,10 +28,10 @@ export async function GET() {
       timestamp: new Date().toISOString(),
       test: true,
     });
-    
+
     // Clean up test document
     await testCollection.doc("connection-test").delete();
-    
+
     results.firestore = "✅ Connected and writable";
   } catch (error) {
     results.error = error instanceof Error ? error.message : "Unknown error";

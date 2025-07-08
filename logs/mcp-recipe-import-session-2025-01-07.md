@@ -3,6 +3,7 @@
 ## Session Summary
 
 ### Current Status
+
 - **Total Recipes**: 3 (1 snack, 2 lunch, 0 breakfast, 0 dinner)
 - **Target**: 400 recipes
 - **API Status**: Daily limit reached (150 points)
@@ -42,6 +43,7 @@
    - Continue through the breakfast list
 
 2. **Import tracking format**:
+
    ```
    Date: 2025-01-08
    Category: breakfast

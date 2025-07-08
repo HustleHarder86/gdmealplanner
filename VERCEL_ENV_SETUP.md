@@ -5,6 +5,7 @@
 You need to add the following environment variables in your Vercel project settings:
 
 ### 1. Firebase Client SDK Variables (Public)
+
 These are safe to expose in the browser and must be prefixed with `NEXT_PUBLIC_`:
 
 - `NEXT_PUBLIC_FIREBASE_API_KEY` - Your Firebase API key
@@ -15,6 +16,7 @@ These are safe to expose in the browser and must be prefixed with `NEXT_PUBLIC_`
 - `NEXT_PUBLIC_FIREBASE_APP_ID` - Your Firebase app ID
 
 ### 2. Keep Your Existing Variables
+
 These are already working, so keep them as-is:
 
 - `apiKey` - (keep this for backward compatibility)
@@ -38,6 +40,7 @@ These are already working, so keep them as-is:
 ## Example Values
 
 If your current `apiKey` variable has value `AIzaSyD...`, then:
+
 - `NEXT_PUBLIC_FIREBASE_API_KEY` should also be `AIzaSyD...`
 
 Do this for all 6 Firebase client variables.

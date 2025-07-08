@@ -2,27 +2,27 @@ export interface Recipe {
   id: string;
   title: string;
   description?: string;
-  category: 'breakfast' | 'lunch' | 'dinner' | 'snack';
+  category: "breakfast" | "lunch" | "dinner" | "snack";
   subcategory?: string;
   tags: string[];
-  
+
   // Timing
   prepTime: number; // minutes
   cookTime: number; // minutes
   totalTime: number; // minutes
-  
+
   // Servings
   servings: number;
-  
+
   // Ingredients
   ingredients: Ingredient[];
-  
+
   // Instructions
   instructions: string[];
-  
+
   // Nutrition (per serving)
   nutrition: Nutrition;
-  
+
   // GD-specific fields
   carbChoices: number;
   gdValidation?: {
@@ -31,25 +31,25 @@ export interface Recipe {
     details: any;
     warnings: string[];
   };
-  
+
   // Metadata
   source: string;
   sourceUrl?: string;
   imageUrl?: string;
   localImageUrl?: string;
-  
+
   // Import metadata
   importedFrom?: string;
   importedAt?: string;
   verified?: boolean;
   spoonacularId?: string;
-  
+
   // User engagement
   popularity?: number;
   userRatings?: any[];
   timesViewed?: number;
   timesAddedToPlan?: number;
-  
+
   // Timestamps
   createdAt?: any;
   updatedAt?: any;
@@ -75,7 +75,7 @@ export interface Nutrition {
   sugar?: number;
   sodium?: number;
   cholesterol?: number;
-  
+
   // Micronutrients important for pregnancy
   iron?: number;
   calcium?: number;

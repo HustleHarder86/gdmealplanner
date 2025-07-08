@@ -1,7 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { Search, Filter, Import, Loader2, CheckCircle, XCircle } from "lucide-react";
+import {
+  Search,
+  Filter,
+  Import,
+  Loader2,
+  CheckCircle,
+  XCircle,
+} from "lucide-react";
 import RecipePreviewModal from "@/components/admin/RecipePreviewModal";
 import { SpoonacularRecipe } from "@/src/types/spoonacular";
 
@@ -28,13 +35,17 @@ export default function RecipeImportPage() {
     maxReadyTime: 60,
     diet: "none",
   });
-  
+
   const [searchResults, setSearchResults] = useState<SpoonacularRecipe[]>([]);
-  const [selectedRecipes, setSelectedRecipes] = useState<Set<number>>(new Set());
+  const [selectedRecipes, setSelectedRecipes] = useState<Set<number>>(
+    new Set(),
+  );
   const [loading, setLoading] = useState(false);
   const [importing, setImporting] = useState(false);
   const [importResult, setImportResult] = useState<ImportResult | null>(null);
-  const [previewRecipe, setPreviewRecipe] = useState<SpoonacularRecipe | null>(null);
+  const [previewRecipe, setPreviewRecipe] = useState<SpoonacularRecipe | null>(
+    null,
+  );
 
   const mealTypes = [
     { value: "all", label: "All Types" },
@@ -55,7 +66,7 @@ export default function RecipeImportPage() {
   async function searchRecipes() {
     setLoading(true);
     setImportResult(null);
-    
+
     try {
       const params = new URLSearchParams({
         query: filters.query,
@@ -63,17 +74,19 @@ export default function RecipeImportPage() {
         maxReadyTime: filters.maxReadyTime.toString(),
         number: "20",
       });
-      
+
       if (filters.mealType !== "all") {
         params.append("type", filters.mealType);
       }
-      
+
       if (filters.diet !== "none") {
         params.append("diet", filters.diet);
       }
 
-      const response = await fetch(`/api/admin/recipes/search-spoonacular?${params}`);
-      
+      const response = await fetch(
+        `/api/admin/recipes/search-spoonacular?${params}`,
+      );
+
       if (!response.ok) {
         throw new Error("Failed to search recipes");
       }
@@ -100,7 +113,7 @@ export default function RecipeImportPage() {
 
     try {
       const recipeIds = Array.from(selectedRecipes);
-      
+
       const response = await fetch("/api/admin/recipes/bulk-import", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -108,17 +121,17 @@ export default function RecipeImportPage() {
       });
 
       const result = await response.json();
-      
+
       if (response.ok) {
         setImportResult({
           success: true,
           message: `Successfully imported ${result.imported} recipes!`,
           recipesImported: result.imported,
         });
-        
+
         // Clear selection after successful import
         setSelectedRecipes(new Set());
-        
+
         // Trigger offline file update
         await updateOfflineFiles();
       } else {
@@ -144,7 +157,7 @@ export default function RecipeImportPage() {
       const response = await fetch("/api/recipes/export-offline", {
         method: "POST",
       });
-      
+
       if (response.ok) {
         console.log("Offline files updated successfully");
       }
@@ -164,7 +177,7 @@ export default function RecipeImportPage() {
   }
 
   function selectAll() {
-    setSelectedRecipes(new Set(searchResults.map(r => r.id)));
+    setSelectedRecipes(new Set(searchResults.map((r) => r.id)));
   }
 
   function deselectAll() {
@@ -173,7 +186,9 @@ export default function RecipeImportPage() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">Import Recipes from Spoonacular</h1>
+      <h1 className="text-3xl font-bold text-gray-900 mb-8">
+        Import Recipes from Spoonacular
+      </h1>
 
       {/* Search Filters */}
       <div className="bg-white rounded-lg shadow p-6 mb-8">
@@ -181,7 +196,7 @@ export default function RecipeImportPage() {
           <Filter className="h-5 w-5 mr-2" />
           Search Filters
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -190,7 +205,9 @@ export default function RecipeImportPage() {
             <input
               type="text"
               value={filters.query}
-              onChange={(e) => setFilters({ ...filters, query: e.target.value })}
+              onChange={(e) =>
+                setFilters({ ...filters, query: e.target.value })
+              }
               placeholder="e.g., chicken, salad, soup"
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
             />
@@ -203,7 +220,12 @@ export default function RecipeImportPage() {
             <input
               type="number"
               value={filters.maxCarbs}
-              onChange={(e) => setFilters({ ...filters, maxCarbs: parseInt(e.target.value) || 45 })}
+              onChange={(e) =>
+                setFilters({
+                  ...filters,
+                  maxCarbs: parseInt(e.target.value) || 45,
+                })
+              }
               min="0"
               max="100"
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
@@ -216,7 +238,9 @@ export default function RecipeImportPage() {
             </label>
             <select
               value={filters.mealType}
-              onChange={(e) => setFilters({ ...filters, mealType: e.target.value })}
+              onChange={(e) =>
+                setFilters({ ...filters, mealType: e.target.value })
+              }
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
             >
               {mealTypes.map((type) => (
@@ -234,7 +258,12 @@ export default function RecipeImportPage() {
             <input
               type="number"
               value={filters.maxReadyTime}
-              onChange={(e) => setFilters({ ...filters, maxReadyTime: parseInt(e.target.value) || 60 })}
+              onChange={(e) =>
+                setFilters({
+                  ...filters,
+                  maxReadyTime: parseInt(e.target.value) || 60,
+                })
+              }
               min="5"
               max="180"
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
@@ -370,15 +399,17 @@ export default function RecipeImportPage() {
                       className="mt-1 h-4 w-4 text-green-600 rounded focus:ring-green-500"
                     />
                   </div>
-                  
+
                   <div className="text-sm text-gray-600 space-y-1">
                     <p>Ready in: {recipe.readyInMinutes} minutes</p>
                     <p>Servings: {recipe.servings}</p>
                     {recipe.nutrition?.nutrients && (
                       <p>
-                        Carbs: {
-                          recipe.nutrition.nutrients.find(n => n.name === "Carbohydrates")?.amount || "N/A"
-                        }g
+                        Carbs:{" "}
+                        {recipe.nutrition.nutrients.find(
+                          (n) => n.name === "Carbohydrates",
+                        )?.amount || "N/A"}
+                        g
                       </p>
                     )}
                   </div>

@@ -2,7 +2,7 @@
 
 /**
  * Quick Demo of Automated Recipe Import System
- * 
+ *
  * This demonstrates the system working without requiring API keys.
  * Shows all components functioning together.
  */
@@ -14,20 +14,20 @@ const mockApiResponses = {
       id: 1001,
       title: "Greek Yogurt Parfait with Berries",
       image: "greek-yogurt-parfait.jpg",
-      imageType: "jpg"
+      imageType: "jpg",
     },
     {
-      id: 1002, 
+      id: 1002,
       title: "Scrambled Eggs with Spinach",
       image: "scrambled-eggs-spinach.jpg",
-      imageType: "jpg"
+      imageType: "jpg",
     },
     {
       id: 1003,
-      title: "Overnight Oats with Chia Seeds", 
+      title: "Overnight Oats with Chia Seeds",
       image: "overnight-oats-chia.jpg",
-      imageType: "jpg"
-    }
+      imageType: "jpg",
+    },
   ],
   recipeDetails: {
     1001: {
@@ -37,24 +37,28 @@ const mockApiResponses = {
       servings: 1,
       sourceUrl: "https://example.com/recipe",
       image: "greek-yogurt-parfait.jpg",
-      imageType: "jpg", 
-      summary: "A delicious and healthy breakfast parfait perfect for gestational diabetes management.",
+      imageType: "jpg",
+      summary:
+        "A delicious and healthy breakfast parfait perfect for gestational diabetes management.",
       cuisines: ["Mediterranean"],
       dishTypes: ["breakfast"],
       diets: ["vegetarian"],
       occasions: ["morning"],
-      instructions: "Layer Greek yogurt with fresh berries and a sprinkle of nuts.",
-      analyzedInstructions: [{
-        steps: [
-          { number: 1, step: "Add Greek yogurt to a bowl" },
-          { number: 2, step: "Top with fresh berries" },
-          { number: 3, step: "Sprinkle with chopped nuts" }
-        ]
-      }],
+      instructions:
+        "Layer Greek yogurt with fresh berries and a sprinkle of nuts.",
+      analyzedInstructions: [
+        {
+          steps: [
+            { number: 1, step: "Add Greek yogurt to a bowl" },
+            { number: 2, step: "Top with fresh berries" },
+            { number: 3, step: "Sprinkle with chopped nuts" },
+          ],
+        },
+      ],
       extendedIngredients: [
         { nameClean: "greek yogurt", amount: 0.75, unit: "cup" },
         { nameClean: "mixed berries", amount: 0.5, unit: "cup" },
-        { nameClean: "chopped walnuts", amount: 2, unit: "tablespoons" }
+        { nameClean: "chopped walnuts", amount: 2, unit: "tablespoons" },
       ],
       nutrition: {
         nutrients: [
@@ -62,8 +66,8 @@ const mockApiResponses = {
           { name: "Protein", amount: 15, unit: "g" },
           { name: "Calories", amount: 180, unit: "cal" },
           { name: "Fiber", amount: 4, unit: "g" },
-          { name: "Sugar", amount: 16, unit: "g" }
-        ]
+          { name: "Sugar", amount: 16, unit: "g" },
+        ],
       },
       pricePerServing: 1.25,
       cheap: false,
@@ -78,7 +82,7 @@ const mockApiResponses = {
       vegetarian: true,
       vegan: false,
       glutenFree: true,
-      dairyFree: false
+      dairyFree: false,
     },
     1002: {
       id: 1002,
@@ -88,25 +92,28 @@ const mockApiResponses = {
       sourceUrl: "https://example.com/recipe2",
       image: "scrambled-eggs-spinach.jpg",
       imageType: "jpg",
-      summary: "Protein-rich scrambled eggs with nutritious spinach for a balanced breakfast.",
+      summary:
+        "Protein-rich scrambled eggs with nutritious spinach for a balanced breakfast.",
       cuisines: ["American"],
       dishTypes: ["breakfast"],
       diets: ["vegetarian"],
       occasions: ["morning"],
       instructions: "Sauté spinach, add beaten eggs, scramble until cooked.",
-      analyzedInstructions: [{
-        steps: [
-          { number: 1, step: "Heat oil in a pan" },
-          { number: 2, step: "Add spinach and cook until wilted" },
-          { number: 3, step: "Pour in beaten eggs" },
-          { number: 4, step: "Scramble until eggs are cooked" }
-        ]
-      }],
+      analyzedInstructions: [
+        {
+          steps: [
+            { number: 1, step: "Heat oil in a pan" },
+            { number: 2, step: "Add spinach and cook until wilted" },
+            { number: 3, step: "Pour in beaten eggs" },
+            { number: 4, step: "Scramble until eggs are cooked" },
+          ],
+        },
+      ],
       extendedIngredients: [
         { nameClean: "eggs", amount: 4, unit: "large" },
         { nameClean: "fresh spinach", amount: 2, unit: "cups" },
         { nameClean: "olive oil", amount: 1, unit: "tablespoon" },
-        { nameClean: "salt", amount: 0.25, unit: "teaspoon" }
+        { nameClean: "salt", amount: 0.25, unit: "teaspoon" },
       ],
       nutrition: {
         nutrients: [
@@ -114,8 +121,8 @@ const mockApiResponses = {
           { name: "Protein", amount: 24, unit: "g" },
           { name: "Calories", amount: 260, unit: "cal" },
           { name: "Fiber", amount: 2, unit: "g" },
-          { name: "Sugar", amount: 2, unit: "g" }
-        ]
+          { name: "Sugar", amount: 2, unit: "g" },
+        ],
       },
       pricePerServing: 0.85,
       cheap: true,
@@ -130,9 +137,9 @@ const mockApiResponses = {
       vegetarian: true,
       vegan: false,
       glutenFree: true,
-      dairyFree: true
-    }
-  }
+      dairyFree: true,
+    },
+  },
 };
 
 // Simulate the import system components
@@ -149,7 +156,7 @@ console.log("Strategy: Classic Breakfast (eggs, omelets, traditional)");
 console.log("Target: 20 recipes");
 console.log("");
 
-// 2. Recipe Search & Retrieval  
+// 2. Recipe Search & Retrieval
 console.log("🔍 2. RECIPE SEARCH & RETRIEVAL");
 console.log("-".repeat(30));
 console.log("Search Query: 'breakfast eggs omelet frittata scrambled'");
@@ -162,19 +169,30 @@ console.log("⭐ 3. QUALITY VALIDATION & SCORING");
 console.log("-".repeat(30));
 
 for (let i = 0; i < 2; i++) {
-  const recipe = mockApiResponses.recipeDetails[mockApiResponses.searchResults[i].id];
-  
+  const recipe =
+    mockApiResponses.recipeDetails[mockApiResponses.searchResults[i].id];
+
   // Calculate mock quality scores
-  const gdScore = recipe.nutrition.nutrients.find(n => n.name === "Carbohydrates").amount <= 25 ? 35 : 20;
+  const gdScore =
+    recipe.nutrition.nutrients.find((n) => n.name === "Carbohydrates").amount <=
+    25
+      ? 35
+      : 20;
   const practicalityScore = recipe.readyInMinutes <= 15 ? 28 : 22;
   const popularityScore = recipe.spoonacularScore >= 80 ? 25 : 15;
   const totalScore = gdScore + practicalityScore + popularityScore;
-  
+
   console.log(`Recipe: ${recipe.title}`);
   console.log(`  Quality Score: ${totalScore}/100`);
-  console.log(`  - GD Compliance: ${gdScore}/40 (${recipe.nutrition.nutrients.find(n => n.name === "Carbohydrates").amount}g carbs)`);
-  console.log(`  - Practicality: ${practicalityScore}/30 (${recipe.readyInMinutes} min prep)`);
-  console.log(`  - Popularity: ${popularityScore}/30 (${recipe.spoonacularScore} score)`);
+  console.log(
+    `  - GD Compliance: ${gdScore}/40 (${recipe.nutrition.nutrients.find((n) => n.name === "Carbohydrates").amount}g carbs)`,
+  );
+  console.log(
+    `  - Practicality: ${practicalityScore}/30 (${recipe.readyInMinutes} min prep)`,
+  );
+  console.log(
+    `  - Popularity: ${popularityScore}/30 (${recipe.spoonacularScore} score)`,
+  );
   console.log(`  Status: ${totalScore >= 50 ? "✅ ACCEPTED" : "❌ REJECTED"}`);
   console.log("");
 }
@@ -184,7 +202,9 @@ console.log("🏷️  4. AUTO-CATEGORIZATION");
 console.log("-".repeat(30));
 console.log("Recipe: Greek Yogurt Parfait with Berries");
 console.log("  Primary Category: breakfast (85% confidence)");
-console.log("  Reasoning: Contains breakfast keywords, 22g carbs in breakfast range, quick prep");
+console.log(
+  "  Reasoning: Contains breakfast keywords, 22g carbs in breakfast range, quick prep",
+);
 console.log("  Tags: breakfast, vegetarian, gluten-free, quick, healthy");
 console.log("");
 
@@ -194,7 +214,9 @@ console.log("-".repeat(30));
 console.log("Checking against existing 2,847 recipes...");
 console.log("Greek Yogurt Parfait with Berries: ✅ Unique");
 console.log("Scrambled Eggs with Spinach: ✅ Unique");
-console.log("Similar recipe found (82% match): 'Basic Scrambled Eggs' - Marked as variant");
+console.log(
+  "Similar recipe found (82% match): 'Basic Scrambled Eggs' - Marked as variant",
+);
 console.log("");
 
 // 6. Storage & Reporting

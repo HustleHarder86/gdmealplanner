@@ -1,6 +1,10 @@
 import { SpoonacularClient } from "../client";
 import { SpoonacularRecipeInfo } from "../types";
-import { getImportStrategiesForDay, getCurrentPhase, ImportStrategy } from "./import-strategies";
+import {
+  getImportStrategiesForDay,
+  getCurrentPhase,
+  ImportStrategy,
+} from "./import-strategies";
 import { validateRecipeForImport, ValidationResult } from "./quality-validator";
 import { RecipeDeduplicator, DeduplicationResult } from "./deduplicator";
 import { RecipeCategorizer, CategorizationResult } from "./categorizer";
@@ -60,16 +64,14 @@ export class RecipeImportScheduler {
   private config: ImportConfiguration;
   private currentSession: ImportSession | null = null;
 
-  constructor(
-    apiKey: string,
-    config: Partial<ImportConfiguration> = {}
-  ) {
+  constructor(apiKey: string, config: Partial<ImportConfiguration> = {}) {
     this.client = new SpoonacularClient(apiKey);
     this.deduplicator = new RecipeDeduplicator();
     this.categorizer = new RecipeCategorizer();
-    
+
     this.config = {
-      campaignStartDate: config.campaignStartDate || new Date().toISOString().split('T')[0],
+      campaignStartDate:
+        config.campaignStartDate || new Date().toISOString().split("T")[0],
       totalDays: config.totalDays || 20,
       dailyQuota: config.dailyQuota || 100,
       minQualityScore: config.minQualityScore || 50,
@@ -87,7 +89,9 @@ export class RecipeImportScheduler {
       const session = await this.initializeSession();
       this.currentSession = session;
 
-      console.log(`Starting import session ${session.sessionId} for day ${session.dayNumber}`);
+      console.log(
+        `Starting import session ${session.sessionId} for day ${session.dayNumber}`,
+      );
 
       // Load existing recipes for deduplication
       await this.loadExistingRecipes();
@@ -96,7 +100,9 @@ export class RecipeImportScheduler {
       const dayStrategy = getImportStrategiesForDay(session.dayOfCycle);
       const phase = getCurrentPhase(session.dayNumber);
 
-      console.log(`Day ${session.dayNumber}: ${dayStrategy.category} focus (${dayStrategy.strategies.length} strategies)`);
+      console.log(
+        `Day ${session.dayNumber}: ${dayStrategy.category} focus (${dayStrategy.strategies.length} strategies)`,
+      );
 
       // Execute import strategies
       const importedRecipes: ImportedRecipe[] = [];
@@ -108,8 +114,12 @@ export class RecipeImportScheduler {
         }
 
         const remaining = this.config.dailyQuota - importedRecipes.length;
-        const strategyResults = await this.executeStrategy(strategy, remaining, phase);
-        
+        const strategyResults = await this.executeStrategy(
+          strategy,
+          remaining,
+          phase,
+        );
+
         importedRecipes.push(...strategyResults.recipes);
         totalApiCalls += strategyResults.apiCalls;
 
@@ -130,16 +140,19 @@ export class RecipeImportScheduler {
       // Generate report
       const report = await generateDailyReport(session, importedRecipes);
 
-      console.log(`Import session completed: ${importedRecipes.length} recipes imported`);
+      console.log(
+        `Import session completed: ${importedRecipes.length} recipes imported`,
+      );
 
       return report;
-
     } catch (error) {
       console.error("Import session failed:", error);
-      
+
       if (this.currentSession) {
         this.currentSession.status = "failed";
-        this.currentSession.errors.push(error instanceof Error ? error.message : "Unknown error");
+        this.currentSession.errors.push(
+          error instanceof Error ? error.message : "Unknown error",
+        );
       }
 
       throw error;
@@ -152,15 +165,17 @@ export class RecipeImportScheduler {
   private async initializeSession(): Promise<ImportSession> {
     const today = new Date();
     const campaignStart = new Date(this.config.campaignStartDate);
-    const daysSinceStart = Math.floor((today.getTime() - campaignStart.getTime()) / (1000 * 60 * 60 * 24));
-    
+    const daysSinceStart = Math.floor(
+      (today.getTime() - campaignStart.getTime()) / (1000 * 60 * 60 * 24),
+    );
+
     const dayNumber = daysSinceStart + 1;
     const dayOfCycle = ((dayNumber - 1) % 7) + 1;
     const phase = getCurrentPhase(dayNumber);
 
     return {
-      sessionId: `import-${today.toISOString().split('T')[0]}-${Date.now()}`,
-      date: today.toISOString().split('T')[0],
+      sessionId: `import-${today.toISOString().split("T")[0]}-${Date.now()}`,
+      date: today.toISOString().split("T")[0],
       dayNumber,
       dayOfCycle,
       phase,
@@ -179,43 +194,52 @@ export class RecipeImportScheduler {
    */
   private async loadExistingRecipes(): Promise<void> {
     console.log("Loading existing recipes for deduplication...");
-    
+
     try {
       // Get all existing recipe IDs from Firebase
       const existingRecipeIds = await RecipeModel.getAllIds();
-      
+
       // Load a sample of recipes for content-based deduplication
       // We'll load recipes from each category to ensure good coverage
-      const categories = ['breakfast', 'lunch', 'dinner', 'snack'];
-      
+      const categories = ["breakfast", "lunch", "dinner", "snack"];
+
       for (const category of categories) {
         const categoryRecipes = await RecipeModel.getByCategory(category, 50);
-        
+
         // Add to deduplicator
         for (const recipe of categoryRecipes) {
           // Convert our Recipe format back to a minimal format for deduplication
           const minimalRecipe = {
-            id: parseInt(recipe.id.replace('sp-', '')),
+            id: parseInt(recipe.id.replace("sp-", "")),
             title: recipe.title,
             nutrition: {
               nutrients: [
-                { name: 'Carbohydrates', amount: recipe.nutrition.carbohydrates, unit: 'g' },
-                { name: 'Protein', amount: recipe.nutrition.protein, unit: 'g' },
-                { name: 'Fat', amount: recipe.nutrition.fat, unit: 'g' }
-              ]
+                {
+                  name: "Carbohydrates",
+                  amount: recipe.nutrition.carbohydrates,
+                  unit: "g",
+                },
+                {
+                  name: "Protein",
+                  amount: recipe.nutrition.protein,
+                  unit: "g",
+                },
+                { name: "Fat", amount: recipe.nutrition.fat, unit: "g" },
+              ],
             },
             extendedIngredients: recipe.ingredients.map((ing: any) => ({
               name: ing.name,
-              original: ing.original
-            }))
+              original: ing.original,
+            })),
           };
-          
+
           this.deduplicator.addRecipe(recipe.id, minimalRecipe as any);
         }
       }
-      
-      console.log(`Loaded ${existingRecipeIds.length} existing recipes for deduplication`);
-      
+
+      console.log(
+        `Loaded ${existingRecipeIds.length} existing recipes for deduplication`,
+      );
     } catch (error) {
       console.error("Error loading existing recipes:", error);
       // Continue with import even if loading fails
@@ -228,7 +252,7 @@ export class RecipeImportScheduler {
   private async executeStrategy(
     strategy: ImportStrategy,
     remainingQuota: number,
-    phase: 1 | 2 | 3
+    phase: 1 | 2 | 3,
   ): Promise<{
     recipes: ImportedRecipe[];
     apiCalls: number;
@@ -236,7 +260,7 @@ export class RecipeImportScheduler {
     rejected: number;
   }> {
     console.log(`Executing strategy: ${strategy.name}`);
-    
+
     const recipes: ImportedRecipe[] = [];
     let apiCalls = 0;
     let processed = 0;
@@ -267,7 +291,9 @@ export class RecipeImportScheduler {
 
         // Process each recipe
         for (const searchResult of response.results) {
-          if (recipes.length >= Math.min(strategy.targetCount, remainingQuota)) {
+          if (
+            recipes.length >= Math.min(strategy.targetCount, remainingQuota)
+          ) {
             break;
           }
 
@@ -279,10 +305,13 @@ export class RecipeImportScheduler {
           apiCalls++;
 
           // Check for duplicates
-          const duplicationResult = this.deduplicator.checkDuplicate(fullRecipe);
+          const duplicationResult =
+            this.deduplicator.checkDuplicate(fullRecipe);
           if (duplicationResult.isDuplicate) {
             rejected++;
-            console.log(`Duplicate detected: ${fullRecipe.title} (${duplicationResult.reason})`);
+            console.log(
+              `Duplicate detected: ${fullRecipe.title} (${duplicationResult.reason})`,
+            );
             continue;
           }
 
@@ -290,14 +319,20 @@ export class RecipeImportScheduler {
           const validation = validateRecipeForImport(fullRecipe);
           if (!validation.isValid) {
             rejected++;
-            console.log(`Recipe rejected: ${fullRecipe.title} - ${validation.rejectionReasons?.join(", ")}`);
+            console.log(
+              `Recipe rejected: ${fullRecipe.title} - ${validation.rejectionReasons?.join(", ")}`,
+            );
             continue;
           }
 
           // Check quality threshold
-          if (validation.qualityScore.totalScore < this.config.minQualityScore) {
+          if (
+            validation.qualityScore.totalScore < this.config.minQualityScore
+          ) {
             rejected++;
-            console.log(`Quality too low: ${fullRecipe.title} (${validation.qualityScore.totalScore})`);
+            console.log(
+              `Quality too low: ${fullRecipe.title} (${validation.qualityScore.totalScore})`,
+            );
             continue;
           }
 
@@ -320,11 +355,13 @@ export class RecipeImportScheduler {
           };
 
           recipes.push(importedRecipe);
-          
+
           // Add to deduplicator
           this.deduplicator.addRecipe(`sp-${fullRecipe.id}`, fullRecipe);
 
-          console.log(`✓ Imported: ${fullRecipe.title} (${categorization.primaryCategory}, score: ${validation.qualityScore.totalScore})`);
+          console.log(
+            `✓ Imported: ${fullRecipe.title} (${categorization.primaryCategory}, score: ${validation.qualityScore.totalScore})`,
+          );
         }
 
         // Move to next page
@@ -332,7 +369,6 @@ export class RecipeImportScheduler {
 
         // Reset retries on success
         retries = 0;
-
       } catch (error) {
         console.error(`Strategy execution error:`, error);
         retries++;
@@ -347,7 +383,9 @@ export class RecipeImportScheduler {
       }
     }
 
-    console.log(`Strategy completed: ${recipes.length} recipes imported, ${rejected} rejected`);
+    console.log(
+      `Strategy completed: ${recipes.length} recipes imported, ${rejected} rejected`,
+    );
 
     return {
       recipes,
@@ -360,7 +398,10 @@ export class RecipeImportScheduler {
   /**
    * Apply phase-specific modifications to strategy
    */
-  private applyPhaseModifications(strategy: ImportStrategy, phase: 1 | 2 | 3): ImportStrategy {
+  private applyPhaseModifications(
+    strategy: ImportStrategy,
+    phase: 1 | 2 | 3,
+  ): ImportStrategy {
     const modified = { ...strategy };
 
     switch (phase) {
@@ -405,52 +446,60 @@ export class RecipeImportScheduler {
     try {
       // Transform and batch save recipes
       const recipesToSave: Recipe[] = [];
-      
+
       for (const importedRecipe of recipes) {
         // Transform Spoonacular recipe to our Recipe format
         const recipe = transformSpoonacularRecipe(
           importedRecipe.spoonacularData,
-          importedRecipe.categorization.primaryCategory as Recipe['category']
+          importedRecipe.categorization.primaryCategory as Recipe["category"],
         );
-        
+
         // Enrich with import metadata and validation results
         const enrichedRecipe: Recipe = {
           ...recipe,
-          category: importedRecipe.categorization.primaryCategory as Recipe['category'],
+          category: importedRecipe.categorization
+            .primaryCategory as Recipe["category"],
           tags: importedRecipe.categorization.tags,
           gdValidation: {
             isValid: importedRecipe.validation.isValid,
             score: importedRecipe.validation.qualityScore.totalScore,
             details: importedRecipe.validation.qualityScore,
-            warnings: importedRecipe.validation.rejectionReasons || []
+            warnings: importedRecipe.validation.rejectionReasons || [],
           },
-          importedFrom: 'spoonacular',
+          importedFrom: "spoonacular",
           importedAt: importedRecipe.importMetadata.importDate,
           verified: false,
           popularity: 0,
           userRatings: [],
           timesViewed: 0,
-          timesAddedToPlan: 0
+          timesAddedToPlan: 0,
         };
-        
+
         recipesToSave.push(enrichedRecipe);
       }
-      
+
       // Batch save to Firebase
       await RecipeModel.batchSave(recipesToSave);
-      
-      // Log summary
-      const categoryCounts = recipes.reduce((acc, recipe) => {
-        const category = recipe.categorization.primaryCategory;
-        acc[category] = (acc[category] || 0) + 1;
-        return acc;
-      }, {} as Record<string, number>);
 
-      console.log("✅ Successfully stored recipes by category:", categoryCounts);
-      
+      // Log summary
+      const categoryCounts = recipes.reduce(
+        (acc, recipe) => {
+          const category = recipe.categorization.primaryCategory;
+          acc[category] = (acc[category] || 0) + 1;
+          return acc;
+        },
+        {} as Record<string, number>,
+      );
+
+      console.log(
+        "✅ Successfully stored recipes by category:",
+        categoryCounts,
+      );
     } catch (error) {
       console.error("❌ Error storing recipes in Firebase:", error);
-      throw new Error(`Failed to store recipes: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      throw new Error(
+        `Failed to store recipes: ${error instanceof Error ? error.message : "Unknown error"}`,
+      );
     }
   }
 
@@ -481,7 +530,9 @@ export class RecipeImportScheduler {
   }> {
     const today = new Date();
     const campaignStart = new Date(this.config.campaignStartDate);
-    const daysSinceStart = Math.floor((today.getTime() - campaignStart.getTime()) / (1000 * 60 * 60 * 24));
+    const daysSinceStart = Math.floor(
+      (today.getTime() - campaignStart.getTime()) / (1000 * 60 * 60 * 24),
+    );
     const currentDay = daysSinceStart + 1;
 
     // Get actual stats from Firebase
@@ -492,10 +543,10 @@ export class RecipeImportScheduler {
       dinner: 0,
       snack: 0,
     };
-    
+
     try {
       totalRecipesImported = await RecipeModel.getCount();
-      categoryBreakdown = await RecipeModel.getCountByCategory() as any;
+      categoryBreakdown = (await RecipeModel.getCountByCategory()) as any;
     } catch (error) {
       console.error("Error getting campaign stats from Firebase:", error);
     }
@@ -515,7 +566,7 @@ export class RecipeImportScheduler {
    */
   async manualImport(
     strategy: ImportStrategy,
-    limit: number = 20
+    limit: number = 20,
   ): Promise<ImportReport> {
     const session = await this.initializeSession();
     session.sessionId = `manual-${Date.now()}`;

@@ -1,11 +1,13 @@
 # Recipe Import System Debug Session - July 5, 2025
 
 ## Overview
+
 We built a recipe import system using the Spoonacular API to create a local recipe library for the gestational diabetes meal planner app. The goal is to build up a recipe database so the end users won't need API access.
 
 ## Current Status
 
 ### ✅ Completed
+
 - Recipe import system built and deployed on Vercel
 - Firebase Admin SDK initializes successfully with `FIREBASE_ADMIN_KEY`
 - All TypeScript and build errors resolved
@@ -13,17 +15,20 @@ We built a recipe import system using the Spoonacular API to create a local reci
 - Diagnostic endpoints created for troubleshooting
 
 ### ❌ Remaining Issue
+
 - Firestore connection fails with: `7 PERMISSION_DENIED: Cloud Firestore API has not been used in project gd-meal-planner before or it is disabled`
 
 ## Technical Details
 
 ### Environment Setup
+
 - **Deployment**: Vercel (https://gdmealplanner.vercel.app)
 - **Database**: Firebase Firestore
 - **API**: Spoonacular for recipe data
 - **Project ID**: gd-meal-planner
 
 ### Key Environment Variables in Vercel
+
 1. `FIREBASE_ADMIN_KEY` - Full service account JSON (working!)
 2. `SPOONACULAR_API_KEY` - For recipe API access
 3. Individual Firebase fields (as backup):
@@ -36,10 +41,12 @@ We built a recipe import system using the Spoonacular API to create a local reci
 ## Issues Fixed During Session
 
 ### 1. Import Path Errors
+
 - **Problem**: Module not found errors
 - **Solution**: Changed all imports from `@/services/` to `@/src/services/`
 
 ### 2. TypeScript Type Errors
+
 - **Problem**: Type mismatches in Recipe interface
 - **Solutions**:
   - Fixed `ImportReport` property access: `report.summary.recipesImported`
@@ -48,12 +55,14 @@ We built a recipe import system using the Spoonacular API to create a local reci
   - Fixed ingredient types
 
 ### 3. Firebase Initialization at Build Time
+
 - **Problem**: Firebase Admin was initializing during build
 - **Solution**: Made initialization lazy with getter functions
 
 ### 4. Private Key Decoding Error
+
 - **Problem**: `error:1E08010C:DECODER routines::unsupported`
-- **Solution**: 
+- **Solution**:
   - Removed quotes from private_key in Vercel
   - Added full service account JSON as `FIREBASE_ADMIN_KEY`
   - Enhanced private key formatting logic
@@ -101,13 +110,15 @@ We built a recipe import system using the Spoonacular API to create a local reci
 ## Recipe Import Features
 
 ### Filtering Criteria (Per MEDICAL_GUIDELINES.md)
+
 - **Breakfast**: 30g carbs max
-- **Lunch/Dinner**: 45g carbs max  
+- **Lunch/Dinner**: 45g carbs max
 - **Snacks**: 15-20g carbs
 - Validates all recipes meet GD requirements
 - Filters for balanced protein and fiber
 
 ### Import Options
+
 - Batch sizes: 10, 25, 50, 100 recipes
 - Filter by meal type
 - Automated deduplication
@@ -161,12 +172,13 @@ curl https://gdmealplanner.vercel.app/api/test-firebase
 
 ## Error Resolution Summary
 
-| Error | Solution |
-|-------|----------|
-| Module not found | Change imports to @/src/ |
-| Type errors | Update interfaces to match |
+| Error                     | Solution                              |
+| ------------------------- | ------------------------------------- |
+| Module not found          | Change imports to @/src/              |
+| Type errors               | Update interfaces to match            |
 | Private key decoder error | Remove quotes, use FIREBASE_ADMIN_KEY |
-| Permission denied | Enable Firestore & Firebase APIs |
+| Permission denied         | Enable Firestore & Firebase APIs      |
 
 ## Resume Point
+
 Once Firestore and Firebase Admin SDK APIs are enabled in Google Cloud Console, the system should be fully functional. Test with the diagnostic endpoints and then begin importing recipes to build the library.

@@ -13,9 +13,9 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
 
   const categoryEmojis = {
     breakfast: "🍳",
-    lunch: "🥗", 
+    lunch: "🥗",
     dinner: "🍽️",
-    snack: "🥜"
+    snack: "🥜",
   };
 
   return (
@@ -23,8 +23,8 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
       {/* Recipe Image with Fallback */}
       <div className="w-full h-48 bg-gradient-to-br from-primary-100 to-primary-200 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
         {(recipe.localImageUrl || recipe.imageUrl) && !imageError ? (
-          <img 
-            src={recipe.localImageUrl || recipe.imageUrl} 
+          <img
+            src={recipe.localImageUrl || recipe.imageUrl}
             alt={recipe.title}
             className="w-full h-full object-cover"
             onError={() => setImageError(true)}

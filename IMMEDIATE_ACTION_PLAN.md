@@ -1,6 +1,7 @@
 # Immediate Action Plan: Fix Deployment Issues
 
 ## Current Blocker
+
 Your app is deployed but Firebase Firestore is not accessible. This is a configuration issue, not a platform problem.
 
 ## Step 1: Enable Firestore API (5 minutes)
@@ -48,6 +49,7 @@ SPOONACULAR_API_KEY=your-api-key-here
 ```
 
 ### Critical for FIREBASE_ADMIN_KEY:
+
 - Paste the entire JSON as a single value
 - DO NOT add quotes around the JSON
 - The private_key must have REAL newlines (multi-line in the text box)
@@ -56,6 +58,7 @@ SPOONACULAR_API_KEY=your-api-key-here
 ## Step 3: Test the Fix (5 minutes)
 
 1. Trigger a redeployment:
+
 ```bash
 git commit --allow-empty -m "Force redeploy with fixed env vars"
 git push origin main
@@ -70,6 +73,7 @@ git push origin main
 ## Step 4: If Still Having Issues
 
 Run diagnostics:
+
 ```bash
 # Check which APIs are enabled
 gcloud services list --enabled --project=gd-meal-planner
@@ -79,6 +83,7 @@ curl https://gdmealplanner.vercel.app/api/debug-firebase
 ```
 
 Common issues:
+
 1. **Private key has \n instead of newlines**: Re-paste in Vercel UI
 2. **Wrong project ID**: Verify it's `gd-meal-planner` everywhere
 3. **APIs not enabled**: Double-check in Google Cloud Console
@@ -86,6 +91,7 @@ Common issues:
 ## What Success Looks Like
 
 When everything is working:
+
 - `/api/test-firebase` returns success
 - `/api/recipes/count` shows a number
 - `/admin/import-recipes` page loads without errors
@@ -101,12 +107,14 @@ Once Firebase is working:
    - Monitor for any issues
 
 2. **Set up monitoring**:
+
    ```bash
    npm install @sentry/nextjs
    npx @sentry/wizard@latest -i nextjs
    ```
 
 3. **Add analytics** (in app/layout.tsx):
+
    ```bash
    npm install @vercel/analytics
    ```
@@ -119,11 +127,13 @@ Once Firebase is working:
 ## Why Vercel is Still the Right Choice
 
 Your current issues are:
+
 - ✅ One-time configuration problems
 - ✅ Easily fixable
 - ✅ Won't recur once fixed
 
 They are NOT:
+
 - ❌ Platform limitations
 - ❌ Architectural problems
 - ❌ Scaling issues

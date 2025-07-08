@@ -12,7 +12,7 @@ export default function RecipeDetailPage({
   params: { id: string };
 }) {
   const [imageError, setImageError] = useState(false);
-  
+
   // Get recipe from the provider
   const { recipe, loading, error } = useRecipe(params.id);
 
@@ -40,9 +40,11 @@ export default function RecipeDetailPage({
         <div className="text-center">
           <div className="text-red-600 mb-4">
             <p className="text-lg font-semibold">Recipe not found</p>
-            <p className="text-sm">{error || 'The requested recipe could not be found.'}</p>
+            <p className="text-sm">
+              {error || "The requested recipe could not be found."}
+            </p>
           </div>
-          <Link 
+          <Link
             href="/recipes"
             className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
           >
@@ -108,8 +110,8 @@ export default function RecipeDetailPage({
           {/* Recipe Image */}
           <div className="aspect-video bg-neutral-100 rounded-lg mb-8 flex items-center justify-center overflow-hidden">
             {(recipe.localImageUrl || recipe.imageUrl) && !imageError ? (
-              <img 
-                src={recipe.localImageUrl || recipe.imageUrl} 
+              <img
+                src={recipe.localImageUrl || recipe.imageUrl}
                 alt={recipe.title}
                 className="w-full h-full object-cover"
                 onError={() => setImageError(true)}
@@ -121,7 +123,9 @@ export default function RecipeDetailPage({
                 {recipe.category === "lunch" && "🥗"}
                 {recipe.category === "dinner" && "🍽️"}
                 {recipe.category === "snack" && "🥜"}
-                {!["breakfast", "lunch", "dinner", "snack"].includes(recipe.category) && "🍽️"}
+                {!["breakfast", "lunch", "dinner", "snack"].includes(
+                  recipe.category,
+                ) && "🍽️"}
               </span>
             )}
           </div>
@@ -167,7 +171,9 @@ export default function RecipeDetailPage({
               </div>
               <div className="flex justify-between">
                 <span>Carbohydrates</span>
-                <span className="font-medium">{recipe.nutrition.carbohydrates}g</span>
+                <span className="font-medium">
+                  {recipe.nutrition.carbohydrates}g
+                </span>
               </div>
               <div className="flex justify-between">
                 <span>Carb Choices</span>

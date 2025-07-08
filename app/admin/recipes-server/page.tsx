@@ -7,24 +7,28 @@ async function getRecipes(): Promise<Recipe[]> {
   try {
     await initializeFirebaseAdmin();
     const db = adminDb();
-    
-    const recipesSnapshot = await db.collection('recipes').get();
-    
-    const recipes = recipesSnapshot.docs.map(doc => {
+
+    const recipesSnapshot = await db.collection("recipes").get();
+
+    const recipes = recipesSnapshot.docs.map((doc) => {
       const data = doc.data();
       // Convert Firestore timestamps to strings
       return {
         id: doc.id,
         ...data,
-        createdAt: data.createdAt?._seconds ? new Date(data.createdAt._seconds * 1000).toISOString() : null,
-        updatedAt: data.updatedAt?._seconds ? new Date(data.updatedAt._seconds * 1000).toISOString() : null,
+        createdAt: data.createdAt?._seconds
+          ? new Date(data.createdAt._seconds * 1000).toISOString()
+          : null,
+        updatedAt: data.updatedAt?._seconds
+          ? new Date(data.updatedAt._seconds * 1000).toISOString()
+          : null,
         importedAt: data.importedAt || null,
       };
     }) as Recipe[];
-    
+
     // Sort by title
     recipes.sort((a, b) => a.title.localeCompare(b.title));
-    
+
     return recipes;
   } catch (error) {
     console.error("Error loading recipes:", error);

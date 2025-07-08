@@ -38,11 +38,13 @@ FIREBASE_ADMIN_KEY={"type":"service_account",...entire JSON...}
 ### Option 1: Using the Web Interface (Easiest)
 
 1. Start the dev server:
+
    ```bash
    npm run dev
    ```
 
 2. Open your browser:
+
    ```
    http://localhost:3000/admin/import-recipes
    ```
@@ -55,6 +57,7 @@ FIREBASE_ADMIN_KEY={"type":"service_account",...entire JSON...}
 ### Option 2: Using the Test Script
 
 1. Make sure the dev server is running:
+
    ```bash
    npm run dev
    ```
@@ -82,6 +85,7 @@ curl -X POST http://localhost:3000/api/recipes/import-batch \
 ## Import Strategy
 
 The system will import recipes matching gestational diabetes guidelines:
+
 - **Breakfast**: Max 30g carbs
 - **Lunch/Dinner**: Max 45g carbs
 - **Snacks**: 15-20g carbs
@@ -89,19 +93,23 @@ The system will import recipes matching gestational diabetes guidelines:
 ## Troubleshooting
 
 ### "Spoonacular API key not configured"
+
 - Make sure `SPOONACULAR_API_KEY` is in `.env.local`
 
 ### "Failed to initialize Firebase Admin"
+
 - Make sure `FIREBASE_ADMIN_KEY` contains the complete service account JSON
 - The JSON should start with `{"type":"service_account"...`
 
 ### "Import failed"
+
 - Check the console for detailed error messages
 - Verify your Spoonacular API quota hasn't been exceeded
 
 ## Next Steps
 
 Once testing locally works:
+
 1. Deploy to Vercel: `git push`
 2. Use the production URL: `https://your-app.vercel.app/admin/import-recipes`
 3. Import recipes in batches until you reach 600 total

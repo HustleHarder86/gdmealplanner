@@ -13,7 +13,7 @@ export default function SignupPage() {
     name: "",
     email: "",
     password: "",
-    confirmPassword: ""
+    confirmPassword: "",
   });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -22,7 +22,7 @@ export default function SignupPage() {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -49,12 +49,12 @@ export default function SignupPage() {
       const userCredential = await createUserWithEmailAndPassword(
         auth,
         formData.email,
-        formData.password
+        formData.password,
       );
 
       // Update display name
       await updateProfile(userCredential.user, {
-        displayName: formData.name
+        displayName: formData.name,
       });
 
       // Create user profile in Firestore
@@ -67,13 +67,13 @@ export default function SignupPage() {
             breakfast: 30,
             lunch: 45,
             dinner: 45,
-            snack: 20
-          }
-        }
+            snack: 20,
+          },
+        },
       });
 
       // Redirect to home or dashboard
-      router.push('/');
+      router.push("/");
     } catch (error: any) {
       setError(error.message || "Failed to create account");
     } finally {
@@ -85,7 +85,9 @@ export default function SignupPage() {
     <div className="container py-12">
       <div className="max-w-md mx-auto">
         <div className="card">
-          <h1 className="text-2xl font-bold text-center mb-6">Create Account</h1>
+          <h1 className="text-2xl font-bold text-center mb-6">
+            Create Account
+          </h1>
 
           {error && (
             <div className="mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded">
@@ -174,8 +176,8 @@ export default function SignupPage() {
               />
             </div>
 
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               className="w-full btn-primary"
               disabled={loading}
             >
@@ -184,9 +186,7 @@ export default function SignupPage() {
           </form>
 
           <div className="mt-6 text-center text-sm">
-            <span className="text-neutral-600">
-              Already have an account?{" "}
-            </span>
+            <span className="text-neutral-600">Already have an account? </span>
             <Link
               href="/login"
               className="text-primary-600 hover:text-primary-700 font-medium"
@@ -197,7 +197,10 @@ export default function SignupPage() {
         </div>
 
         <div className="mt-6 text-center">
-          <Link href="/" className="text-sm text-neutral-600 hover:text-neutral-800">
+          <Link
+            href="/"
+            className="text-sm text-neutral-600 hover:text-neutral-800"
+          >
             ← Back to home
           </Link>
         </div>

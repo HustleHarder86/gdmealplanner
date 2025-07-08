@@ -19,7 +19,7 @@ const SIMPLE_QUERIES = {
     "quinoa breakfast",
     "chia pudding",
     "avocado toast",
-    "cottage cheese"
+    "cottage cheese",
   ],
   lunch: [
     "chicken salad",
@@ -31,7 +31,7 @@ const SIMPLE_QUERIES = {
     "chicken soup",
     "grain bowl",
     "mediterranean bowl",
-    "bean salad"
+    "bean salad",
   ],
   dinner: [
     "grilled chicken",
@@ -43,7 +43,7 @@ const SIMPLE_QUERIES = {
     "shrimp dinner",
     "pork tenderloin",
     "bean chili",
-    "cauliflower"
+    "cauliflower",
   ],
   snack: [
     "hummus",
@@ -55,35 +55,34 @@ const SIMPLE_QUERIES = {
     "hard boiled eggs",
     "protein balls",
     "cottage cheese snack",
-    "berries"
-  ]
+    "berries",
+  ],
 };
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { 
-      category = "breakfast", 
-      queryIndex = 0,
-      count = 5,
-    } = body;
+    const { category = "breakfast", queryIndex = 0, count = 5 } = body;
 
     // Validate category
     if (!SIMPLE_QUERIES[category as keyof typeof SIMPLE_QUERIES]) {
       return NextResponse.json(
         { error: "Invalid category. Use: breakfast, lunch, dinner, or snack" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
     // Get queries for category
-    const categoryQueries = SIMPLE_QUERIES[category as keyof typeof SIMPLE_QUERIES];
-    
+    const categoryQueries =
+      SIMPLE_QUERIES[category as keyof typeof SIMPLE_QUERIES];
+
     // Validate query index
     if (queryIndex >= categoryQueries.length) {
       return NextResponse.json(
-        { error: `Invalid query index. Maximum for ${category} is ${categoryQueries.length - 1}` },
-        { status: 400 }
+        {
+          error: `Invalid query index. Maximum for ${category} is ${categoryQueries.length - 1}`,
+        },
+        { status: 400 },
       );
     }
 
@@ -92,7 +91,7 @@ export async function POST(request: NextRequest) {
     if (!apiKey) {
       return NextResponse.json(
         { error: "Spoonacular API key not configured" },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
@@ -114,13 +113,18 @@ export async function POST(request: NextRequest) {
       addRecipeNutrition: true,
       addRecipeInformation: true,
       sort: "popularity" as const,
-      type: category === "snack" ? "snack,appetizer" : category === "breakfast" ? "breakfast" : "main course",
+      type:
+        category === "snack"
+          ? "snack,appetizer"
+          : category === "breakfast"
+            ? "breakfast"
+            : "main course",
       maxCarbs: category === "breakfast" ? 50 : category === "snack" ? 30 : 60,
     };
 
     // Search for recipes
     const searchResponse = await client.searchRecipes(searchParams);
-    
+
     if (!searchResponse.results || searchResponse.results.length === 0) {
       return NextResponse.json({
         success: true,
@@ -131,73 +135,73 @@ export async function POST(request: NextRequest) {
           imported: 0,
           processed: 0,
           rejected: 0,
-        }
+        },
       });
     }
 
     // Process recipes
     const importedRecipes: Recipe[] = [];
     const rejectedRecipes: any[] = [];
-    
+
     for (const searchResult of searchResponse.results) {
       try {
         // Get full recipe details
         const fullRecipe = await client.getRecipeInfo(searchResult.id);
-        
+
         // Validate recipe
         const validation = validateRecipeForImport(fullRecipe);
-        
+
         // Use relaxed validation - only reject if validation score is very low
         if (validation.qualityScore.totalScore < 30) {
           rejectedRecipes.push({
             id: fullRecipe.id,
             title: fullRecipe.title,
-            reason: validation.rejectionReasons?.join(", ") || "Low quality score",
-            score: validation.qualityScore.totalScore
+            reason:
+              validation.rejectionReasons?.join(", ") || "Low quality score",
+            score: validation.qualityScore.totalScore,
           });
           continue;
         }
 
         // Categorize recipe
         const categorization = await categorizer.categorizeRecipe(fullRecipe);
-        
+
         // Transform to our format
         const recipe = transformSpoonacularRecipe(
           fullRecipe,
-          categorization.primaryCategory as Recipe['category']
+          categorization.primaryCategory as Recipe["category"],
         );
 
         // Enrich with metadata
         const enrichedRecipe: Recipe = {
           ...recipe,
-          category: categorization.primaryCategory as Recipe['category'],
+          category: categorization.primaryCategory as Recipe["category"],
           tags: categorization.tags,
           gdValidation: {
             isValid: validation.isValid,
             score: validation.qualityScore.totalScore,
             details: validation.qualityScore,
-            warnings: validation.rejectionReasons || []
+            warnings: validation.rejectionReasons || [],
           },
-          importedFrom: 'spoonacular',
+          importedFrom: "spoonacular",
           importedAt: new Date().toISOString(),
           verified: false,
           popularity: 0,
           userRatings: [],
           timesViewed: 0,
-          timesAddedToPlan: 0
+          timesAddedToPlan: 0,
         };
 
         importedRecipes.push(enrichedRecipe);
-        
+
         // Add delay to avoid rate limiting
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        
+        await new Promise((resolve) => setTimeout(resolve, 1000));
       } catch (error) {
         console.error(`Error processing recipe ${searchResult.id}:`, error);
         rejectedRecipes.push({
           id: searchResult.id,
           title: searchResult.title,
-          reason: error instanceof Error ? error.message : "Processing error"
+          reason: error instanceof Error ? error.message : "Processing error",
         });
       }
     }
@@ -209,7 +213,10 @@ export async function POST(request: NextRequest) {
 
     // Get updated library stats
     const breakdown = await RecipeModel.getCountByCategory();
-    const total = Object.values(breakdown).reduce((sum, count) => sum + count, 0);
+    const total = Object.values(breakdown).reduce(
+      (sum, count) => sum + count,
+      0,
+    );
 
     return NextResponse.json({
       success: true,
@@ -219,22 +226,21 @@ export async function POST(request: NextRequest) {
         imported: importedRecipes.length,
         processed: searchResponse.results.length,
         rejected: rejectedRecipes.length,
-        rejectedDetails: rejectedRecipes
+        rejectedDetails: rejectedRecipes,
       },
       library: {
         total,
-        breakdown
-      }
+        breakdown,
+      },
     });
-
   } catch (error) {
     console.error("Import error:", error);
     return NextResponse.json(
-      { 
-        error: "Import failed", 
-        details: error instanceof Error ? error.message : "Unknown error" 
+      {
+        error: "Import failed",
+        details: error instanceof Error ? error.message : "Unknown error",
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -249,13 +255,13 @@ export async function GET() {
       body: {
         category: "breakfast|lunch|dinner|snack",
         queryIndex: "index of query to use (0-9 depending on category)",
-        count: "number of recipes to import (default: 5)"
+        count: "number of recipes to import (default: 5)",
       },
       example: {
         category: "breakfast",
         queryIndex: 0,
-        count: 5
-      }
-    }
+        count: 5,
+      },
+    },
   });
 }

@@ -1,6 +1,10 @@
 import { SpoonacularRecipeInfo } from "../types";
 // Use relaxed validators for import to get more recipes
-import { validateRecipeForGD, calculateGDScore, GD_REQUIREMENTS } from "../validators-relaxed";
+import {
+  validateRecipeForGD,
+  calculateGDScore,
+  GD_REQUIREMENTS,
+} from "../validators-relaxed";
 
 /**
  * Quality Validation System for Automated Recipe Import
@@ -57,23 +61,25 @@ export interface ValidationResult {
  */
 export function calculateQualityScore(
   recipe: SpoonacularRecipeInfo,
-  category: keyof typeof GD_REQUIREMENTS
+  category: keyof typeof GD_REQUIREMENTS,
 ): QualityScore {
   const warnings: string[] = [];
   const recommendations: string[] = [];
 
   // 1. GD Compliance Score (40 points max)
   const gdScore = calculateGDComplianceScore(recipe, category);
-  
+
   // 2. Practicality Score (30 points max)
   const practicalityScore = calculatePracticalityScore(recipe);
-  
+
   // 3. Popularity Score (30 points max)
   const popularityScore = calculatePopularityScore(recipe);
 
   // Add warnings based on scores
   if (gdScore.total < 20) {
-    warnings.push("Low GD compliance - may not be suitable for gestational diabetes");
+    warnings.push(
+      "Low GD compliance - may not be suitable for gestational diabetes",
+    );
   }
   if (practicalityScore.total < 15) {
     warnings.push("May be impractical for regular meal planning");
@@ -87,10 +93,13 @@ export function calculateQualityScore(
     recommendations.push("Consider batch cooking or meal prep for efficiency");
   }
   if (gdScore.details.fiberContent < 5) {
-    recommendations.push("Serve with high-fiber sides like vegetables or whole grains");
+    recommendations.push(
+      "Serve with high-fiber sides like vegetables or whole grains",
+    );
   }
 
-  const totalScore = gdScore.total + practicalityScore.total + popularityScore.total;
+  const totalScore =
+    gdScore.total + practicalityScore.total + popularityScore.total;
 
   return {
     totalScore: Math.round(totalScore),
@@ -124,11 +133,11 @@ export function calculateQualityScore(
  */
 function calculateGDComplianceScore(
   recipe: SpoonacularRecipeInfo,
-  category: keyof typeof GD_REQUIREMENTS
+  category: keyof typeof GD_REQUIREMENTS,
 ): { total: number; details: any } {
   const validation = validateRecipeForGD(recipe, category);
   const requirements = GD_REQUIREMENTS[category];
-  
+
   // Get nutrient values
   const nutrients = recipe.nutrition?.nutrients || [];
   const carbs = getNutrientValue(nutrients, "carbohydrates");
@@ -140,7 +149,10 @@ function calculateGDComplianceScore(
   let carbScore = 0;
   if (validation.carbsInRange) {
     carbScore = 20;
-  } else if (carbs >= requirements.minCarbs * 0.8 && carbs <= requirements.maxCarbs * 1.2) {
+  } else if (
+    carbs >= requirements.minCarbs * 0.8 &&
+    carbs <= requirements.maxCarbs * 1.2
+  ) {
     // Partial credit for being close
     carbScore = 10;
   }
@@ -187,7 +199,10 @@ function calculateGDComplianceScore(
 /**
  * Calculate practicality subscore (30 points max)
  */
-function calculatePracticalityScore(recipe: SpoonacularRecipeInfo): { total: number; details: any } {
+function calculatePracticalityScore(recipe: SpoonacularRecipeInfo): {
+  total: number;
+  details: any;
+} {
   // Cooking time (10 points)
   let timeScore = 10;
   if (recipe.readyInMinutes > 60) {
@@ -256,7 +271,10 @@ function calculatePracticalityScore(recipe: SpoonacularRecipeInfo): { total: num
 /**
  * Calculate popularity subscore (30 points max)
  */
-function calculatePopularityScore(recipe: SpoonacularRecipeInfo): { total: number; details: any } {
+function calculatePopularityScore(recipe: SpoonacularRecipeInfo): {
+  total: number;
+  details: any;
+} {
   // Spoonacular rating (15 points)
   let ratingScore = 0;
   const spoonacularScore = recipe.spoonacularScore || 0;
@@ -301,7 +319,7 @@ function calculatePopularityScore(recipe: SpoonacularRecipeInfo): { total: numbe
  */
 export function validateRecipeForImport(
   recipe: SpoonacularRecipeInfo,
-  category: keyof typeof GD_REQUIREMENTS | null = null
+  category: keyof typeof GD_REQUIREMENTS | null = null,
 ): ValidationResult {
   const rejectionReasons: string[] = [];
 
@@ -314,7 +332,10 @@ export function validateRecipeForImport(
     rejectionReasons.push("Missing nutrition information");
   }
 
-  if (!recipe.instructions && (!recipe.analyzedInstructions || recipe.analyzedInstructions.length === 0)) {
+  if (
+    !recipe.instructions &&
+    (!recipe.analyzedInstructions || recipe.analyzedInstructions.length === 0)
+  ) {
     rejectionReasons.push("Missing cooking instructions");
   }
 
@@ -341,13 +362,15 @@ export function validateRecipeForImport(
 
   // GD validation
   const gdValidation = validateRecipeForGD(recipe, detectedCategory);
-  
+
   // Calculate quality score
   const qualityScore = calculateQualityScore(recipe, detectedCategory);
 
   // Check minimum quality threshold - lowered for initial import
   if (qualityScore.totalScore < 30) {
-    rejectionReasons.push(`Quality score too low: ${qualityScore.totalScore}/100`);
+    rejectionReasons.push(
+      `Quality score too low: ${qualityScore.totalScore}/100`,
+    );
   }
 
   // Check GD compliance
@@ -374,7 +397,9 @@ export function validateRecipeForImport(
 /**
  * Detect meal category from recipe data
  */
-function detectMealCategory(recipe: SpoonacularRecipeInfo): keyof typeof GD_REQUIREMENTS | null {
+function detectMealCategory(
+  recipe: SpoonacularRecipeInfo,
+): keyof typeof GD_REQUIREMENTS | null {
   const title = recipe.title.toLowerCase();
   const dishTypes = recipe.dishTypes || [];
   const mealTypes = recipe.occasions || [];
@@ -382,19 +407,26 @@ function detectMealCategory(recipe: SpoonacularRecipeInfo): keyof typeof GD_REQU
   // Check dish types first
   if (dishTypes.includes("breakfast")) return "breakfast";
   if (dishTypes.includes("lunch")) return "lunch";
-  if (dishTypes.includes("dinner") || dishTypes.includes("main course")) return "dinner";
-  if (dishTypes.includes("snack") || dishTypes.includes("appetizer")) return "snack";
+  if (dishTypes.includes("dinner") || dishTypes.includes("main course"))
+    return "dinner";
+  if (dishTypes.includes("snack") || dishTypes.includes("appetizer"))
+    return "snack";
 
   // Check title keywords
-  if (title.includes("breakfast") || title.includes("morning")) return "breakfast";
+  if (title.includes("breakfast") || title.includes("morning"))
+    return "breakfast";
   if (title.includes("lunch")) return "lunch";
   if (title.includes("dinner") || title.includes("supper")) return "dinner";
   if (title.includes("snack")) return "snack";
 
   // Check ingredients for meal indicators
-  const ingredients = recipe.extendedIngredients?.map((i) => i.nameClean?.toLowerCase() || "") || [];
+  const ingredients =
+    recipe.extendedIngredients?.map((i) => i.nameClean?.toLowerCase() || "") ||
+    [];
   const hasBreakfastIngredients = ingredients.some((i) =>
-    ["oats", "cereal", "pancake", "waffle", "eggs", "bacon"].some((b) => i.includes(b))
+    ["oats", "cereal", "pancake", "waffle", "eggs", "bacon"].some((b) =>
+      i.includes(b),
+    ),
   );
   if (hasBreakfastIngredients) return "breakfast";
 
@@ -407,7 +439,7 @@ function detectMealCategory(recipe: SpoonacularRecipeInfo): keyof typeof GD_REQU
   const carbs = getNutrientValue(nutrients, "carbohydrates");
   if (carbs <= 20) return "snack";
   if (carbs <= 30) return "breakfast";
-  
+
   return "lunch"; // Default fallback
 }
 
@@ -416,12 +448,28 @@ function detectMealCategory(recipe: SpoonacularRecipeInfo): keyof typeof GD_REQU
  */
 function isInappropriateContent(recipe: SpoonacularRecipeInfo): boolean {
   const title = recipe.title.toLowerCase();
-  const ingredients = recipe.extendedIngredients?.map((i) => i.nameClean?.toLowerCase() || "") || [];
-  
+  const ingredients =
+    recipe.extendedIngredients?.map((i) => i.nameClean?.toLowerCase() || "") ||
+    [];
+
   // Alcohol
-  const alcoholKeywords = ["wine", "beer", "liquor", "vodka", "rum", "whiskey", "cocktail", "martini"];
+  const alcoholKeywords = [
+    "wine",
+    "beer",
+    "liquor",
+    "vodka",
+    "rum",
+    "whiskey",
+    "cocktail",
+    "martini",
+  ];
   if (alcoholKeywords.some((keyword) => title.includes(keyword))) return true;
-  if (ingredients.some((ing) => alcoholKeywords.some((keyword) => ing.includes(keyword)))) return true;
+  if (
+    ingredients.some((ing) =>
+      alcoholKeywords.some((keyword) => ing.includes(keyword)),
+    )
+  )
+    return true;
 
   // Raw/undercooked items
   const rawKeywords = ["sushi", "raw fish", "tartare", "ceviche", "carpaccio"];
@@ -429,11 +477,21 @@ function isInappropriateContent(recipe: SpoonacularRecipeInfo): boolean {
 
   // High mercury fish
   const highMercuryFish = ["swordfish", "shark", "king mackerel", "tilefish"];
-  if (ingredients.some((ing) => highMercuryFish.some((fish) => ing.includes(fish)))) return true;
+  if (
+    ingredients.some((ing) =>
+      highMercuryFish.some((fish) => ing.includes(fish)),
+    )
+  )
+    return true;
 
   // Unpasteurized items
   const unpasteurizedKeywords = ["unpasteurized", "raw milk", "soft cheese"];
-  if (ingredients.some((ing) => unpasteurizedKeywords.some((keyword) => ing.includes(keyword)))) return true;
+  if (
+    ingredients.some((ing) =>
+      unpasteurizedKeywords.some((keyword) => ing.includes(keyword)),
+    )
+  )
+    return true;
 
   return false;
 }
@@ -443,7 +501,7 @@ function isInappropriateContent(recipe: SpoonacularRecipeInfo): boolean {
  */
 function getNutrientValue(nutrients: any[], nutrientName: string): number {
   const nutrient = nutrients.find((n: any) =>
-    n.name.toLowerCase().includes(nutrientName.toLowerCase())
+    n.name.toLowerCase().includes(nutrientName.toLowerCase()),
   );
   return nutrient?.amount || 0;
 }

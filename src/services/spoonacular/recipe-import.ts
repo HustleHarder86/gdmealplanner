@@ -160,8 +160,8 @@ export class RecipeImportService {
               isValid: validation.isValid,
               score: 0, // We don't have a score from the old validator
               details: validation,
-              warnings: validation.adjustmentSuggestions || []
-            }
+              warnings: validation.adjustmentSuggestions || [],
+            };
 
             results.success.push(recipe);
             imported++;
@@ -250,13 +250,13 @@ export class RecipeImportService {
       if (validation.isValid || gdScore >= 65) {
         const recipe = transformSpoonacularRecipe(
           spoonacularRecipe,
-          mealType as Recipe["category"]
+          mealType as Recipe["category"],
         );
         recipe.gdValidation = {
           isValid: validation.isValid,
           score: gdScore,
           details: validation,
-          warnings: validation.adjustmentSuggestions || []
+          warnings: validation.adjustmentSuggestions || [],
         };
         validRecipes.push(recipe);
       }
@@ -300,7 +300,7 @@ export class RecipeImportService {
         isValid: validation.isValid,
         score: gdScore,
         details: validation,
-        warnings: validation.adjustmentSuggestions || []
+        warnings: validation.adjustmentSuggestions || [],
       };
 
       return { recipe };

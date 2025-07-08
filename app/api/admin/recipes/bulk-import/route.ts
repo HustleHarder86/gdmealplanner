@@ -14,11 +14,11 @@ export async function POST(request: NextRequest) {
 
     // Get recipe IDs from request body
     const { recipeIds } = await request.json();
-    
+
     if (!Array.isArray(recipeIds) || recipeIds.length === 0) {
       return NextResponse.json(
         { error: "Recipe IDs array is required" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
     if (!apiKey) {
       return NextResponse.json(
         { error: "Spoonacular API key not configured" },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
     const batchSize = 5;
     for (let i = 0; i < recipeIds.length; i += batchSize) {
       const batch = recipeIds.slice(i, i + batchSize);
-      
+
       // Process batch in parallel
       const batchResults = await Promise.allSettled(
         batch.map(async (recipeId) => {
@@ -64,7 +64,7 @@ export async function POST(request: NextRequest) {
 
             // Import recipe
             const result = await importer.importRecipe(recipeId.toString());
-            
+
             if (result.success) {
               importResults.imported++;
               return { id: recipeId, status: "imported" };
@@ -75,16 +75,17 @@ export async function POST(request: NextRequest) {
             }
           } catch (error) {
             importResults.failed++;
-            const errorMsg = error instanceof Error ? error.message : "Unknown error";
+            const errorMsg =
+              error instanceof Error ? error.message : "Unknown error";
             importResults.errors.push(`Recipe ${recipeId}: ${errorMsg}`);
             return { id: recipeId, status: "failed", error: errorMsg };
           }
-        })
+        }),
       );
 
       // Add delay between batches to respect rate limits
       if (i + batchSize < recipeIds.length) {
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, 2000));
       }
     }
 
@@ -119,15 +120,14 @@ export async function POST(request: NextRequest) {
       errors: importResults.errors.slice(0, 10), // Limit error messages
       message: `Successfully imported ${importResults.imported} recipes`,
     });
-
   } catch (error) {
     console.error("Bulk import error:", error);
     return NextResponse.json(
-      { 
-        error: "Import failed", 
-        details: error instanceof Error ? error.message : "Unknown error" 
+      {
+        error: "Import failed",
+        details: error instanceof Error ? error.message : "Unknown error",
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

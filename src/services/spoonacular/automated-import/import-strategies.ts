@@ -370,7 +370,7 @@ export function getImportStrategiesForDay(dayOfCycle: number): DayStrategy {
  * Get all strategies for a specific meal category
  */
 export function getStrategiesByCategory(
-  category: "breakfast" | "lunch" | "dinner" | "snack"
+  category: "breakfast" | "lunch" | "dinner" | "snack",
 ): ImportStrategy[] {
   switch (category) {
     case "breakfast":
@@ -391,7 +391,7 @@ export function getStrategiesByCategory(
  */
 export function applyPhaseFilters(
   strategy: ImportStrategy,
-  phase: 1 | 2 | 3
+  phase: 1 | 2 | 3,
 ): ImportStrategy {
   const modifiedStrategy = { ...strategy };
 

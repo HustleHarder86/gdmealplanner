@@ -93,10 +93,10 @@ export function validateRecipeForGDRelaxed(
   // Validate carbs (relaxed)
   const carbsInRange =
     carbs >= requirements.minCarbs && carbs <= requirements.maxCarbs;
-  
+
   // Validate protein (relaxed)
   const adequateProtein = protein >= requirements.minProtein;
-  
+
   // Validate fiber (relaxed)
   const adequateFiber = fiber >= requirements.minFiber;
 
@@ -108,7 +108,8 @@ export function validateRecipeForGDRelaxed(
   }
 
   // Determine overall validity - much more lenient
-  const isValid = carbsInRange || (adequateProtein && carbs <= requirements.maxCarbs);
+  const isValid =
+    carbsInRange || (adequateProtein && carbs <= requirements.maxCarbs);
 
   return {
     isValid,

@@ -162,13 +162,7 @@
         "sodium": 918
       },
       "carbChoices": 1,
-      "tags": [
-        "snack",
-        "gluten-free",
-        "dairy-free",
-        "american",
-        "chicken"
-      ],
+      "tags": ["snack", "gluten-free", "dairy-free", "american", "chicken"],
       "imageUrl": "https://img.spoonacular.com/recipes/631843-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/WM748VQ5/17-bean-white-chicken-chili",
@@ -208,9 +202,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -361,9 +353,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -504,9 +494,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -623,13 +611,7 @@
         "sodium": 284
       },
       "carbChoices": 1,
-      "tags": [
-        "snack",
-        "vegetarian",
-        "mediterranean",
-        "italian",
-        "european"
-      ],
+      "tags": ["snack", "vegetarian", "mediterranean", "italian", "european"],
       "imageUrl": "https://img.spoonacular.com/recipes/636962-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/W5MF623S/caprese-quick-bread",
@@ -669,9 +651,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -743,12 +723,7 @@
         "sodium": 353
       },
       "carbChoices": 1,
-      "tags": [
-        "snack",
-        "vegetarian",
-        "gluten-free",
-        "middle eastern"
-      ],
+      "tags": ["snack", "vegetarian", "gluten-free", "middle eastern"],
       "imageUrl": "https://img.spoonacular.com/recipes/637476-556x370.jpg",
       "source": "Foodista",
       "sourceUrl": "https://www.foodista.com/recipe/ZK7CTVNS/chavrie-hummus",
@@ -788,9 +763,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -945,9 +918,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -1047,13 +1018,7 @@
         "sodium": 451
       },
       "carbChoices": 1,
-      "tags": [
-        "snack",
-        "vegetarian",
-        "gluten-free",
-        "middle eastern",
-        "beans"
-      ],
+      "tags": ["snack", "vegetarian", "gluten-free", "middle eastern", "beans"],
       "imageUrl": "https://img.spoonacular.com/recipes/640834-556x370.jpg",
       "source": "Foodista",
       "sourceUrl": "https://www.foodista.com/recipe/GCVC5D7M/crispy-rosemary-hummus",
@@ -1093,9 +1058,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -1263,9 +1226,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -1401,9 +1362,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -1509,10 +1468,7 @@
         "sodium": 324
       },
       "carbChoices": 1,
-      "tags": [
-        "snack",
-        "vegetarian"
-      ],
+      "tags": ["snack", "vegetarian"],
       "imageUrl": "https://img.spoonacular.com/recipes/648339-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/Q5S66TH2/jalapeno-cheese-quick-bread",
@@ -1552,9 +1508,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -1659,11 +1613,7 @@
         "sodium": 56
       },
       "carbChoices": 0,
-      "tags": [
-        "snack",
-        "gluten-free",
-        "eggs"
-      ],
+      "tags": ["snack", "gluten-free", "eggs"],
       "imageUrl": "https://img.spoonacular.com/recipes/651958-556x370.jpg",
       "source": "foodista.com",
       "sourceUrl": "https://www.foodista.com/recipe/QQ7HS5BT/mini-frittatas-with-quinoa",
@@ -1711,9 +1661,7 @@
             "Serve with high-fiber sides like vegetables or whole grains"
           ]
         },
-        "warnings": [
-          "Failed GD compliance validation"
-        ]
+        "warnings": ["Failed GD compliance validation"]
       },
       "importedFrom": "spoonacular",
       "importedAt": "2025-07-07T17:59:47.326Z",
@@ -1840,9 +1788,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []
@@ -2150,9 +2096,7 @@
               }
             }
           },
-          "warnings": [
-            "Low popularity - consider user acceptance"
-          ],
+          "warnings": ["Low popularity - consider user acceptance"],
           "recommendations": []
         },
         "warnings": []

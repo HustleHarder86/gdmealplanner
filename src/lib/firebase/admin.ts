@@ -1,41 +1,50 @@
-import { initializeApp, getApps, cert } from 'firebase-admin/app';
-import { getFirestore } from 'firebase-admin/firestore';
-import { getStorage } from 'firebase-admin/storage';
-import { getAuth } from 'firebase-admin/auth';
-import type { ServiceAccount } from 'firebase-admin/app';
+import { initializeApp, getApps, cert } from "firebase-admin/app";
+import { getFirestore } from "firebase-admin/firestore";
+import { getStorage } from "firebase-admin/storage";
+import { getAuth } from "firebase-admin/auth";
+import type { ServiceAccount } from "firebase-admin/app";
 
 // Initialize Firebase Admin SDK
 const initializeAdmin = () => {
   if (getApps().length === 0) {
     // Check for service account credentials
     const serviceAccountKey = process.env.FIREBASE_ADMIN_KEY;
-    
+
     if (serviceAccountKey) {
       // Initialize with service account (production)
       try {
         // Extract values directly to avoid JSON parsing issues
         const extractField = (fieldName: string): string | null => {
-          const pattern = new RegExp(`"${fieldName}"\\s*:\\s*"([^"]*)"`, 's');
+          const pattern = new RegExp(`"${fieldName}"\\s*:\\s*"([^"]*)"`, "s");
           const match = serviceAccountKey.match(pattern);
           return match ? match[1] : null;
         };
-        
+
         // Extract the private key
-        const privateKeyStart = serviceAccountKey.indexOf('-----BEGIN PRIVATE KEY-----');
-        const privateKeyEnd = serviceAccountKey.indexOf('-----END PRIVATE KEY-----');
-        
+        const privateKeyStart = serviceAccountKey.indexOf(
+          "-----BEGIN PRIVATE KEY-----",
+        );
+        const privateKeyEnd = serviceAccountKey.indexOf(
+          "-----END PRIVATE KEY-----",
+        );
+
         let privateKey = null;
         if (privateKeyStart !== -1 && privateKeyEnd !== -1) {
-          privateKey = serviceAccountKey.substring(privateKeyStart, privateKeyEnd + 25);
+          privateKey = serviceAccountKey.substring(
+            privateKeyStart,
+            privateKeyEnd + 25,
+          );
         }
-        
-        const projectId = extractField('project_id');
-        const clientEmail = extractField('client_email');
-        
+
+        const projectId = extractField("project_id");
+        const clientEmail = extractField("client_email");
+
         if (!projectId || !clientEmail || !privateKey) {
-          throw new Error(`Firebase Admin initialization failed - missing required fields: projectId=${!!projectId}, clientEmail=${!!clientEmail}, privateKey=${!!privateKey}`);
+          throw new Error(
+            `Firebase Admin initialization failed - missing required fields: projectId=${!!projectId}, clientEmail=${!!clientEmail}, privateKey=${!!privateKey}`,
+          );
         }
-        
+
         const serviceAccount = {
           projectId,
           clientEmail,
@@ -44,13 +53,18 @@ const initializeAdmin = () => {
         initializeApp({
           credential: cert(serviceAccount),
           projectId: projectId,
-          storageBucket: `${projectId}.appspot.com`
+          storageBucket: `${projectId}.appspot.com`,
         });
-        console.log('Firebase Admin initialized with service account');
+        console.log("Firebase Admin initialized with service account");
       } catch (error) {
-        console.error('Failed to parse Firebase service account:', error);
-        console.error('First 100 chars of key:', serviceAccountKey.substring(0, 100));
-        throw new Error('Firebase Admin initialization failed - invalid service account JSON');
+        console.error("Failed to parse Firebase service account:", error);
+        console.error(
+          "First 100 chars of key:",
+          serviceAccountKey.substring(0, 100),
+        );
+        throw new Error(
+          "Firebase Admin initialization failed - invalid service account JSON",
+        );
       }
     } else {
       // Try to construct service account from individual environment variables
@@ -59,70 +73,83 @@ const initializeAdmin = () => {
       const clientEmail = process.env.client_email;
       const privateKeyId = process.env.private_key_id;
       const clientId = process.env.client_id;
-      
+
       if (projectId && privateKey && clientEmail) {
         try {
           // Handle various private key formats
           let formattedPrivateKey = privateKey;
-          
+
           // Remove surrounding quotes if present
-          if (formattedPrivateKey.startsWith('"') && formattedPrivateKey.endsWith('"')) {
+          if (
+            formattedPrivateKey.startsWith('"') &&
+            formattedPrivateKey.endsWith('"')
+          ) {
             formattedPrivateKey = formattedPrivateKey.slice(1, -1);
           }
-          if (formattedPrivateKey.startsWith("'") && formattedPrivateKey.endsWith("'")) {
+          if (
+            formattedPrivateKey.startsWith("'") &&
+            formattedPrivateKey.endsWith("'")
+          ) {
             formattedPrivateKey = formattedPrivateKey.slice(1, -1);
           }
-          
+
           // Handle different newline formats
-          if (!formattedPrivateKey.includes('\n')) {
+          if (!formattedPrivateKey.includes("\n")) {
             // No actual newlines, check for escaped ones
-            if (formattedPrivateKey.includes('\\n')) {
+            if (formattedPrivateKey.includes("\\n")) {
               // Replace escaped newlines with actual newlines
-              formattedPrivateKey = formattedPrivateKey.replace(/\\n/g, '\n');
-            } else if (formattedPrivateKey.includes('\\\\n')) {
+              formattedPrivateKey = formattedPrivateKey.replace(/\\n/g, "\n");
+            } else if (formattedPrivateKey.includes("\\\\n")) {
               // Handle double-escaped newlines
-              formattedPrivateKey = formattedPrivateKey.replace(/\\\\n/g, '\n');
+              formattedPrivateKey = formattedPrivateKey.replace(/\\\\n/g, "\n");
             }
           }
-          
+
           // Ensure proper formatting
-          if (!formattedPrivateKey.includes('-----BEGIN PRIVATE KEY-----')) {
-            throw new Error('Private key missing BEGIN marker');
+          if (!formattedPrivateKey.includes("-----BEGIN PRIVATE KEY-----")) {
+            throw new Error("Private key missing BEGIN marker");
           }
-          if (!formattedPrivateKey.includes('-----END PRIVATE KEY-----')) {
-            throw new Error('Private key missing END marker');
+          if (!formattedPrivateKey.includes("-----END PRIVATE KEY-----")) {
+            throw new Error("Private key missing END marker");
           }
-          
+
           // Log diagnostic info (safely)
-          console.log('Private key format check:', {
-            hasNewlines: formattedPrivateKey.includes('\n'),
-            lineCount: formattedPrivateKey.split('\n').length,
-            startsCorrectly: formattedPrivateKey.startsWith('-----BEGIN'),
-            endsCorrectly: formattedPrivateKey.includes('-----END'),
+          console.log("Private key format check:", {
+            hasNewlines: formattedPrivateKey.includes("\n"),
+            lineCount: formattedPrivateKey.split("\n").length,
+            startsCorrectly: formattedPrivateKey.startsWith("-----BEGIN"),
+            endsCorrectly: formattedPrivateKey.includes("-----END"),
           });
-          
+
           // Build the service account object with required fields
           const serviceAccount = {
             projectId: projectId,
             privateKey: formattedPrivateKey,
             clientEmail: clientEmail,
           };
-          
+
           initializeApp({
             credential: cert(serviceAccount),
             projectId: projectId,
-            storageBucket: `${projectId}.appspot.com`
+            storageBucket: `${projectId}.appspot.com`,
           });
-          console.log('Firebase Admin initialized with individual credentials');
+          console.log("Firebase Admin initialized with individual credentials");
         } catch (error) {
-          console.error('Failed to initialize with individual credentials:', error);
+          console.error(
+            "Failed to initialize with individual credentials:",
+            error,
+          );
           if (error instanceof Error) {
-            throw new Error(`Firebase Admin initialization failed: ${error.message}`);
+            throw new Error(
+              `Firebase Admin initialization failed: ${error.message}`,
+            );
           }
-          throw new Error('Firebase Admin initialization failed');
+          throw new Error("Firebase Admin initialization failed");
         }
       } else {
-        throw new Error('Firebase Admin credentials not configured. Please provide either FIREBASE_ADMIN_KEY or individual credentials (project_id, private_key, client_email)');
+        throw new Error(
+          "Firebase Admin credentials not configured. Please provide either FIREBASE_ADMIN_KEY or individual credentials (project_id, private_key, client_email)",
+        );
       }
     }
   }
@@ -164,7 +191,7 @@ export const adminStorage = () => {
 export const verifyAdminInitialized = () => {
   const apps = getApps();
   if (apps.length === 0) {
-    throw new Error('Firebase Admin SDK not initialized');
+    throw new Error("Firebase Admin SDK not initialized");
   }
   return true;
-};// Force redeploy: Sat Jul  5 20:18:17 EDT 2025
+}; // Force redeploy: Sat Jul  5 20:18:17 EDT 2025

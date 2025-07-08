@@ -24,7 +24,7 @@ export async function GET(request: NextRequest) {
     if (!apiKey) {
       return NextResponse.json(
         { error: "Spoonacular API key not configured" },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
@@ -52,12 +52,16 @@ export async function GET(request: NextRequest) {
 
     // Fetch from Spoonacular
     const response = await fetch(spoonacularUrl);
-    
+
     if (!response.ok) {
-      console.error("Spoonacular API error:", response.status, response.statusText);
+      console.error(
+        "Spoonacular API error:",
+        response.status,
+        response.statusText,
+      );
       return NextResponse.json(
         { error: "Failed to fetch recipes from Spoonacular" },
-        { status: response.status }
+        { status: response.status },
       );
     }
 
@@ -65,10 +69,11 @@ export async function GET(request: NextRequest) {
 
     // Add GD compliance check to each recipe
     const enrichedResults = data.results.map((recipe: any) => {
-      const carbs = recipe.nutrition?.nutrients?.find(
-        (n: any) => n.name === "Carbohydrates"
-      )?.amount || 0;
-      
+      const carbs =
+        recipe.nutrition?.nutrients?.find(
+          (n: any) => n.name === "Carbohydrates",
+        )?.amount || 0;
+
       return {
         ...recipe,
         gdCompliant: carbs >= 15 && carbs <= 45,
@@ -81,12 +86,11 @@ export async function GET(request: NextRequest) {
       totalResults: data.totalResults,
       offset: data.offset,
     });
-
   } catch (error) {
     console.error("Search API error:", error);
     return NextResponse.json(
       { error: "Internal server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

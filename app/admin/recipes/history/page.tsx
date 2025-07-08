@@ -30,12 +30,12 @@ export default function ImportHistoryPage() {
       const q = query(
         collection(db, "importHistory"),
         orderBy("timestamp", "desc"),
-        limit(50)
+        limit(50),
       );
-      
+
       const snapshot = await getDocs(q);
       const history: ImportSession[] = [];
-      
+
       snapshot.forEach((doc) => {
         const data = doc.data();
         history.push({
@@ -62,7 +62,9 @@ export default function ImportHistoryPage() {
   if (loading) {
     return (
       <div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">Import History</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-8">
+          Import History
+        </h1>
         <div className="animate-pulse">
           <div className="bg-white rounded-lg shadow p-6 mb-4">
             <div className="h-4 bg-gray-200 rounded w-1/4 mb-4"></div>
@@ -85,9 +87,12 @@ export default function ImportHistoryPage() {
       ) : (
         <div className="space-y-4">
           {sessions.map((session) => {
-            const successRate = session.totalProcessed > 0
-              ? Math.round((session.recipesImported / session.totalProcessed) * 100)
-              : 0;
+            const successRate =
+              session.totalProcessed > 0
+                ? Math.round(
+                    (session.recipesImported / session.totalProcessed) * 100,
+                  )
+                : 0;
 
             return (
               <div key={session.id} className="bg-white rounded-lg shadow p-6">
@@ -101,18 +106,22 @@ export default function ImportHistoryPage() {
                       </span>
                     </div>
                     <p className="text-sm text-gray-600">
-                      Type: <span className="font-medium">{session.importType}</span> |
-                      By: <span className="font-medium">{session.performedBy}</span>
+                      Type:{" "}
+                      <span className="font-medium">{session.importType}</span>{" "}
+                      | By:{" "}
+                      <span className="font-medium">{session.performedBy}</span>
                     </p>
                   </div>
-                  
-                  <div className={`flex items-center px-3 py-1 rounded-full text-sm ${
-                    successRate >= 80
-                      ? "bg-green-100 text-green-800"
-                      : successRate >= 50
-                      ? "bg-yellow-100 text-yellow-800"
-                      : "bg-red-100 text-red-800"
-                  }`}>
+
+                  <div
+                    className={`flex items-center px-3 py-1 rounded-full text-sm ${
+                      successRate >= 80
+                        ? "bg-green-100 text-green-800"
+                        : successRate >= 50
+                          ? "bg-yellow-100 text-yellow-800"
+                          : "bg-red-100 text-red-800"
+                    }`}
+                  >
                     {successRate >= 80 ? (
                       <CheckCircle className="h-4 w-4 mr-1" />
                     ) : (
@@ -152,11 +161,14 @@ export default function ImportHistoryPage() {
                 {session.errors.length > 0 && (
                   <details className="mt-4">
                     <summary className="text-sm text-gray-600 cursor-pointer hover:text-gray-800">
-                      View {session.errors.length} error{session.errors.length !== 1 ? "s" : ""}
+                      View {session.errors.length} error
+                      {session.errors.length !== 1 ? "s" : ""}
                     </summary>
                     <ul className="mt-2 text-sm text-red-600 space-y-1">
                       {session.errors.slice(0, 5).map((error, index) => (
-                        <li key={index} className="pl-4">• {error}</li>
+                        <li key={index} className="pl-4">
+                          • {error}
+                        </li>
                       ))}
                       {session.errors.length > 5 && (
                         <li className="pl-4 text-gray-500">

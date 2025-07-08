@@ -1,374 +1,386 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spoonacular API Test - GD Meal Planner</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #f5f5f5;
-            line-height: 1.6;
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #f5f5f5;
+        line-height: 1.6;
+      }
+
+      .container {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: #2c5530;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 30px;
+        font-style: italic;
+      }
+
+      .test-button {
+        display: block;
+        width: 300px;
+        margin: 20px auto;
+        padding: 15px 30px;
+        background: #28a745;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      .test-button:hover:not(:disabled) {
+        background: #218838;
+      }
+
+      .test-button:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+      }
+
+      .loading {
+        text-align: center;
+        margin: 20px 0;
+        display: none;
+      }
+
+      .spinner {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #2196f3;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 20px;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
         }
-        
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        100% {
+          transform: rotate(360deg);
         }
-        
-        h1 {
-            color: #2c5530;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        
-        .subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 30px;
-            font-style: italic;
-        }
-        
-        .test-button {
-            display: block;
-            width: 300px;
-            margin: 20px auto;
-            padding: 15px 30px;
-            background: #28a745;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        
-        .test-button:hover:not(:disabled) {
-            background: #218838;
-        }
-        
-        .test-button:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-        }
-        
-        .loading {
-            text-align: center;
-            margin: 20px 0;
-            display: none;
-        }
-        
-        .spinner {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #2196f3;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 20px;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .results {
-            margin: 20px 0;
-            display: none;
-        }
-        
-        .test-section {
-            background: #f8f9fa;
-            border: 1px solid #dee2e6;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 15px 0;
-        }
-        
-        .test-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        
-        .test-status {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            margin-right: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: white;
-        }
-        
-        .test-status.success {
-            background: #28a745;
-        }
-        
-        .test-status.error {
-            background: #dc3545;
-        }
-        
-        .test-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin: 0;
-        }
-        
-        .test-details {
-            background: white;
-            border: 1px solid #e9ecef;
-            border-radius: 6px;
-            padding: 15px;
-            margin-top: 10px;
-            font-family: monospace;
-            font-size: 14px;
-            overflow-x: auto;
-        }
-        
-        .recipe-card {
-            background: white;
-            border: 1px solid #e9ecef;
-            border-radius: 6px;
-            padding: 15px;
-            margin: 10px 0;
-        }
-        
-        .recipe-title {
-            font-weight: bold;
-            color: #2c5530;
-            margin-bottom: 5px;
-        }
-        
-        .recipe-info {
-            color: #666;
-            font-size: 14px;
-        }
-        
-        .nutrition-item {
-            display: inline-block;
-            margin: 5px 10px 5px 0;
-            padding: 5px 10px;
-            background: #e3f2fd;
-            border-radius: 4px;
-            font-size: 14px;
-        }
-        
-        .gd-validation {
-            background: #e8f5e8;
-            border: 1px solid #4caf50;
-            border-radius: 6px;
-            padding: 15px;
-            margin: 15px 0;
-        }
-        
-        .gd-validation.invalid {
-            background: #ffebee;
-            border-color: #f44336;
-        }
-        
-        .error-message {
-            background: #ffebee;
-            border: 1px solid #f44336;
-            color: #c62828;
-            padding: 15px;
-            border-radius: 6px;
-            margin: 20px 0;
-            display: none;
-        }
-        
-        pre {
-            margin: 0;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
+      }
+
+      .results {
+        margin: 20px 0;
+        display: none;
+      }
+
+      .test-section {
+        background: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 15px 0;
+      }
+
+      .test-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .test-status {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: white;
+      }
+
+      .test-status.success {
+        background: #28a745;
+      }
+
+      .test-status.error {
+        background: #dc3545;
+      }
+
+      .test-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .test-details {
+        background: white;
+        border: 1px solid #e9ecef;
+        border-radius: 6px;
+        padding: 15px;
+        margin-top: 10px;
+        font-family: monospace;
+        font-size: 14px;
+        overflow-x: auto;
+      }
+
+      .recipe-card {
+        background: white;
+        border: 1px solid #e9ecef;
+        border-radius: 6px;
+        padding: 15px;
+        margin: 10px 0;
+      }
+
+      .recipe-title {
+        font-weight: bold;
+        color: #2c5530;
+        margin-bottom: 5px;
+      }
+
+      .recipe-info {
+        color: #666;
+        font-size: 14px;
+      }
+
+      .nutrition-item {
+        display: inline-block;
+        margin: 5px 10px 5px 0;
+        padding: 5px 10px;
+        background: #e3f2fd;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      .gd-validation {
+        background: #e8f5e8;
+        border: 1px solid #4caf50;
+        border-radius: 6px;
+        padding: 15px;
+        margin: 15px 0;
+      }
+
+      .gd-validation.invalid {
+        background: #ffebee;
+        border-color: #f44336;
+      }
+
+      .error-message {
+        background: #ffebee;
+        border: 1px solid #f44336;
+        color: #c62828;
+        padding: 15px;
+        border-radius: 6px;
+        margin: 20px 0;
+        display: none;
+      }
+
+      pre {
+        margin: 0;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>🧪 Spoonacular API Test</h1>
-        <p class="subtitle">Test the Spoonacular Recipe API integration</p>
-        
-        <button id="test-button" class="test-button" onclick="runTests()">
-            🚀 Run API Tests
-        </button>
-        
-        <div id="loading" class="loading">
-            <div class="spinner"></div>
-            <p>Running API tests...</p>
+      <h1>🧪 Spoonacular API Test</h1>
+      <p class="subtitle">Test the Spoonacular Recipe API integration</p>
+
+      <button id="test-button" class="test-button" onclick="runTests()">
+        🚀 Run API Tests
+      </button>
+
+      <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p>Running API tests...</p>
+      </div>
+
+      <div id="error-message" class="error-message"></div>
+
+      <div id="results" class="results">
+        <h2>📊 Test Results</h2>
+
+        <!-- API Key Test -->
+        <div class="test-section">
+          <div class="test-header">
+            <div id="api-key-status" class="test-status">⏳</div>
+            <h3 class="test-title">API Key Configuration</h3>
+          </div>
+          <div id="api-key-details" class="test-details"></div>
         </div>
-        
-        <div id="error-message" class="error-message"></div>
-        
-        <div id="results" class="results">
-            <h2>📊 Test Results</h2>
-            
-            <!-- API Key Test -->
-            <div class="test-section">
-                <div class="test-header">
-                    <div id="api-key-status" class="test-status">⏳</div>
-                    <h3 class="test-title">API Key Configuration</h3>
-                </div>
-                <div id="api-key-details" class="test-details"></div>
-            </div>
-            
-            
-            <!-- Recipe Search Test -->
-            <div class="test-section">
-                <div class="test-header">
-                    <div id="search-status" class="test-status">⏳</div>
-                    <h3 class="test-title">Recipe Search (GD Filters)</h3>
-                </div>
-                <div id="search-details" class="test-details"></div>
-                <div id="search-recipes"></div>
-            </div>
-            
-            <!-- Recipe Details Test -->
-            <div class="test-section">
-                <div class="test-header">
-                    <div id="details-status" class="test-status">⏳</div>
-                    <h3 class="test-title">Recipe Details & Nutrition</h3>
-                </div>
-                <div id="details-content" class="test-details"></div>
-            </div>
-            
-            <!-- GD Validation Test -->
-            <div class="test-section">
-                <div class="test-header">
-                    <div id="validation-status" class="test-status">⏳</div>
-                    <h3 class="test-title">GD Compliance Validation</h3>
-                </div>
-                <div id="validation-content"></div>
-            </div>
+
+        <!-- Recipe Search Test -->
+        <div class="test-section">
+          <div class="test-header">
+            <div id="search-status" class="test-status">⏳</div>
+            <h3 class="test-title">Recipe Search (GD Filters)</h3>
+          </div>
+          <div id="search-details" class="test-details"></div>
+          <div id="search-recipes"></div>
         </div>
+
+        <!-- Recipe Details Test -->
+        <div class="test-section">
+          <div class="test-header">
+            <div id="details-status" class="test-status">⏳</div>
+            <h3 class="test-title">Recipe Details & Nutrition</h3>
+          </div>
+          <div id="details-content" class="test-details"></div>
+        </div>
+
+        <!-- GD Validation Test -->
+        <div class="test-section">
+          <div class="test-header">
+            <div id="validation-status" class="test-status">⏳</div>
+            <h3 class="test-title">GD Compliance Validation</h3>
+          </div>
+          <div id="validation-content"></div>
+        </div>
+      </div>
     </div>
 
     <script>
-        async function runTests() {
-            const button = document.getElementById('test-button');
-            const loading = document.getElementById('loading');
-            const results = document.getElementById('results');
-            const errorMsg = document.getElementById('error-message');
-            
-            // Reset UI
-            button.disabled = true;
-            loading.style.display = 'block';
-            results.style.display = 'none';
-            errorMsg.style.display = 'none';
-            
-            // Reset all test statuses
-            ['api-key', 'search', 'details', 'validation'].forEach(test => {
-                document.getElementById(`${test}-status`).textContent = '⏳';
-                document.getElementById(`${test}-status`).className = 'test-status';
-            });
-            
-            try {
-                const response = await fetch('/api/spoonacular/test');
-                const data = await response.json();
-                
-                if (!response.ok || !data.success) {
-                    throw new Error(data.error || 'API test failed');
-                }
-                
-                // Display results
-                results.style.display = 'block';
-                
-                // API Key Test
-                updateTestStatus('api-key', data.tests.apiKeyConfigured);
-                document.getElementById('api-key-details').innerHTML = 
-                    data.tests.apiKeyConfigured 
-                        ? '✅ API key is properly configured in environment variables'
-                        : '❌ API key is missing from environment variables';
-                
-                // Recipe Search Test
-                if (data.tests.recipeSearch) {
-                    updateTestStatus('search', data.tests.recipeSearch.success);
-                    document.getElementById('search-details').innerHTML = 
-                        `Found ${data.tests.recipeSearch.resultsFound} recipes with GD-friendly filters:
+      async function runTests() {
+        const button = document.getElementById("test-button");
+        const loading = document.getElementById("loading");
+        const results = document.getElementById("results");
+        const errorMsg = document.getElementById("error-message");
+
+        // Reset UI
+        button.disabled = true;
+        loading.style.display = "block";
+        results.style.display = "none";
+        errorMsg.style.display = "none";
+
+        // Reset all test statuses
+        ["api-key", "search", "details", "validation"].forEach((test) => {
+          document.getElementById(`${test}-status`).textContent = "⏳";
+          document.getElementById(`${test}-status`).className = "test-status";
+        });
+
+        try {
+          const response = await fetch("/api/spoonacular/test");
+          const data = await response.json();
+
+          if (!response.ok || !data.success) {
+            throw new Error(data.error || "API test failed");
+          }
+
+          // Display results
+          results.style.display = "block";
+
+          // API Key Test
+          updateTestStatus("api-key", data.tests.apiKeyConfigured);
+          document.getElementById("api-key-details").innerHTML = data.tests
+            .apiKeyConfigured
+            ? "✅ API key is properly configured in environment variables"
+            : "❌ API key is missing from environment variables";
+
+          // Recipe Search Test
+          if (data.tests.recipeSearch) {
+            updateTestStatus("search", data.tests.recipeSearch.success);
+            document.getElementById("search-details").innerHTML =
+              `Found ${data.tests.recipeSearch.resultsFound} recipes with GD-friendly filters:
                         • Carbs: 15-40g
                         • Protein: 8g+
                         • Fiber: 3g+`;
-                    
-                    // Display recipes
-                    if (data.tests.recipeSearch.firstThreeRecipes) {
-                        const recipesHtml = data.tests.recipeSearch.firstThreeRecipes.map(recipe => `
+
+            // Display recipes
+            if (data.tests.recipeSearch.firstThreeRecipes) {
+              const recipesHtml = data.tests.recipeSearch.firstThreeRecipes
+                .map(
+                  (recipe) => `
                             <div class="recipe-card">
                                 <div class="recipe-title">${recipe.title}</div>
                                 <div class="recipe-info">
-                                    ID: ${recipe.id} | Nutrition data: ${recipe.hasNutrition ? '✅ Available' : '❌ Not available'}
+                                    ID: ${recipe.id} | Nutrition data: ${recipe.hasNutrition ? "✅ Available" : "❌ Not available"}
                                 </div>
                             </div>
-                        `).join('');
-                        document.getElementById('search-recipes').innerHTML = recipesHtml;
-                    }
-                }
-                
-                // Recipe Details Test
-                if (data.tests.recipeDetails) {
-                    updateTestStatus('details', data.tests.recipeDetails.success);
-                    if (data.tests.recipeDetails.success) {
-                        const recipe = data.tests.recipeDetails.recipe;
-                        const nutritionHtml = recipe.nutrition.map(n => 
-                            `<span class="nutrition-item">${n.name}: ${n.amount}${n.unit}</span>`
-                        ).join('');
-                        
-                        document.getElementById('details-content').innerHTML = 
-                            `<strong>${recipe.title}</strong><br>
+                        `,
+                )
+                .join("");
+              document.getElementById("search-recipes").innerHTML = recipesHtml;
+            }
+          }
+
+          // Recipe Details Test
+          if (data.tests.recipeDetails) {
+            updateTestStatus("details", data.tests.recipeDetails.success);
+            if (data.tests.recipeDetails.success) {
+              const recipe = data.tests.recipeDetails.recipe;
+              const nutritionHtml = recipe.nutrition
+                .map(
+                  (n) =>
+                    `<span class="nutrition-item">${n.name}: ${n.amount}${n.unit}</span>`,
+                )
+                .join("");
+
+              document.getElementById("details-content").innerHTML =
+                `<strong>${recipe.title}</strong><br>
                             ${nutritionHtml}`;
-                    } else {
-                        document.getElementById('details-content').innerHTML = 
-                            data.tests.recipeDetails.message;
-                    }
-                }
-                
-                // GD Validation Test
-                if (data.tests.gdValidation) {
-                    const validation = data.tests.gdValidation;
-                    updateTestStatus('validation', validation.isValid || false);
-                    
-                    if (validation.isValid !== undefined) {
-                        const validationClass = validation.isValid ? 'gd-validation' : 'gd-validation invalid';
-                        document.getElementById('validation-content').innerHTML = `
+            } else {
+              document.getElementById("details-content").innerHTML =
+                data.tests.recipeDetails.message;
+            }
+          }
+
+          // GD Validation Test
+          if (data.tests.gdValidation) {
+            const validation = data.tests.gdValidation;
+            updateTestStatus("validation", validation.isValid || false);
+
+            if (validation.isValid !== undefined) {
+              const validationClass = validation.isValid
+                ? "gd-validation"
+                : "gd-validation invalid";
+              document.getElementById("validation-content").innerHTML = `
                             <div class="${validationClass}">
-                                <strong>${validation.isValid ? '✅ GD Compliant' : '❌ Not GD Compliant'}</strong><br>
+                                <strong>${validation.isValid ? "✅ GD Compliant" : "❌ Not GD Compliant"}</strong><br>
                                 Score: ${validation.score || 0}/100<br>
-                                ${validation.details ? validation.details.join('<br>') : ''}
-                                ${validation.suggestions ? '<br><strong>Suggestions:</strong><br>' + validation.suggestions.join('<br>') : ''}
+                                ${validation.details ? validation.details.join("<br>") : ""}
+                                ${validation.suggestions ? "<br><strong>Suggestions:</strong><br>" + validation.suggestions.join("<br>") : ""}
                             </div>
                         `;
-                    } else {
-                        document.getElementById('validation-content').innerHTML = 
-                            `<div class="test-details">${validation.message}</div>`;
-                    }
-                }
-                
-            } catch (error) {
-                errorMsg.style.display = 'block';
-                errorMsg.innerHTML = `
+            } else {
+              document.getElementById("validation-content").innerHTML =
+                `<div class="test-details">${validation.message}</div>`;
+            }
+          }
+        } catch (error) {
+          errorMsg.style.display = "block";
+          errorMsg.innerHTML = `
                     <strong>❌ Error:</strong> ${error.message}<br>
                     <small>Check the browser console for more details.</small>
                 `;
-                console.error('API test error:', error);
-            } finally {
-                loading.style.display = 'none';
-                button.disabled = false;
-            }
+          console.error("API test error:", error);
+        } finally {
+          loading.style.display = "none";
+          button.disabled = false;
         }
-        
-        function updateTestStatus(testId, success) {
-            const statusEl = document.getElementById(`${testId}-status`);
-            statusEl.textContent = success ? '✓' : '✗';
-            statusEl.className = `test-status ${success ? 'success' : 'error'}`;
-        }
+      }
+
+      function updateTestStatus(testId, success) {
+        const statusEl = document.getElementById(`${testId}-status`);
+        statusEl.textContent = success ? "✓" : "✗";
+        statusEl.className = `test-status ${success ? "success" : "error"}`;
+      }
     </script>
-</body>
+  </body>
 </html>

@@ -10,7 +10,7 @@ export default function RecipesPage() {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedTime, setSelectedTime] = useState("all");
   const [selectedCarbs, setSelectedCarbs] = useState("all");
-  
+
   // Get recipes from the provider
   const { recipes, loading, error } = useRecipes();
 
@@ -19,7 +19,9 @@ export default function RecipesPage() {
 
     // Filter by category
     if (selectedCategory !== "all") {
-      filteredList = filteredList.filter(recipe => recipe.category === selectedCategory);
+      filteredList = filteredList.filter(
+        (recipe) => recipe.category === selectedCategory,
+      );
     }
 
     // Filter by search term
@@ -27,7 +29,10 @@ export default function RecipesPage() {
       filteredList = filteredList.filter((recipe) => {
         const matchesSearch =
           recipe.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          (recipe.description?.toLowerCase().includes(searchTerm.toLowerCase()) ?? false) ||
+          (recipe.description
+            ?.toLowerCase()
+            .includes(searchTerm.toLowerCase()) ??
+            false) ||
           recipe.ingredients.some((ing) =>
             ing.name.toLowerCase().includes(searchTerm.toLowerCase()),
           );
@@ -90,13 +95,23 @@ export default function RecipesPage() {
       <div className="container py-8">
         <div className="text-center">
           <div className="text-red-600 mb-4">
-            <svg className="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.96-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+            <svg
+              className="w-12 h-12 mx-auto mb-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.96-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+              />
             </svg>
             <p className="text-lg font-semibold">Failed to load recipes</p>
             <p className="text-sm">{error}</p>
           </div>
-          <button 
+          <button
             onClick={() => window.location.reload()}
             className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700"
           >
@@ -112,7 +127,8 @@ export default function RecipesPage() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">GD-Friendly Recipes</h1>
         <p className="text-neutral-600">
-          Browse our collection of {recipes.length} gestational diabetes-friendly recipes from Spoonacular
+          Browse our collection of {recipes.length} gestational
+          diabetes-friendly recipes from Spoonacular
         </p>
       </div>
 
@@ -176,8 +192,10 @@ export default function RecipesPage() {
       {/* No results message */}
       {filteredRecipes.length === 0 && recipes.length > 0 && (
         <div className="text-center py-12">
-          <p className="text-neutral-600 text-lg">No recipes match your current filters.</p>
-          <button 
+          <p className="text-neutral-600 text-lg">
+            No recipes match your current filters.
+          </p>
+          <button
             onClick={() => {
               setSearchTerm("");
               setSelectedCategory("all");

@@ -1,7 +1,11 @@
 import { Recipe } from "@/src/types/recipe";
 import { SpoonacularClient } from "./client";
 import { transformSpoonacularRecipe } from "./transformers";
-import { validateRecipeForGD, calculateGDScore, GD_REQUIREMENTS } from "./validators";
+import {
+  validateRecipeForGD,
+  calculateGDScore,
+  GD_REQUIREMENTS,
+} from "./validators";
 import { adminDb } from "@/src/lib/firebase/admin";
 
 export class RecipeImporter {
@@ -21,11 +25,13 @@ export class RecipeImporter {
   }> {
     try {
       // Fetch recipe details from Spoonacular
-      const spoonacularRecipe = await this.client.getRecipeInfo(parseInt(recipeId));
+      const spoonacularRecipe = await this.client.getRecipeInfo(
+        parseInt(recipeId),
+      );
 
       // Determine category based on recipe type or meal types
       let category: Recipe["category"] = "dinner"; // default
-      
+
       if (spoonacularRecipe.dishTypes?.includes("breakfast")) {
         category = "breakfast";
       } else if (spoonacularRecipe.dishTypes?.includes("snack")) {
@@ -47,7 +53,7 @@ export class RecipeImporter {
         isValid: validation.isValid,
         score: gdScore,
         details: validation,
-        warnings: validation.adjustmentSuggestions || []
+        warnings: validation.adjustmentSuggestions || [],
       };
 
       // Add import metadata
@@ -84,7 +90,7 @@ export class RecipeImporter {
 
     for (const recipeId of recipeIds) {
       const result = await this.importRecipe(recipeId);
-      
+
       if (result.success && result.recipe) {
         imported.push(result.recipe);
       } else {
@@ -95,7 +101,7 @@ export class RecipeImporter {
       }
 
       // Add delay to respect rate limits
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise((resolve) => setTimeout(resolve, 1000));
     }
 
     return { imported, failed };

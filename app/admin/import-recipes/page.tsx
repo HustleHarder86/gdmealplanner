@@ -41,22 +41,22 @@ export default function ImportRecipesPage() {
   const fetchStatus = async () => {
     try {
       // Check Firebase connection first
-      const firebaseTest = await fetch('/api/test-firebase');
+      const firebaseTest = await fetch("/api/test-firebase");
       const firebaseData = await firebaseTest.json();
-      
-      if (!firebaseData.firestore.includes('✅')) {
+
+      if (!firebaseData.firestore.includes("✅")) {
         setFirestoreConnected(false);
         setError("Firestore is not connected. Please complete setup first.");
         return;
       }
-      
+
       setFirestoreConnected(true);
-      
+
       // Fetch recipe count
-      const countResponse = await fetch('/api/recipes/count');
+      const countResponse = await fetch("/api/recipes/count");
       const countData = await countResponse.json();
       setRecipeCount(countData.count || 0);
-      
+
       // Fetch import status
       const response = await fetch(`/api/recipes/import-batch`);
       if (response.ok) {
@@ -73,27 +73,27 @@ export default function ImportRecipesPage() {
 
   const checkFailedImports = async () => {
     try {
-      const response = await fetch('/api/recipes/retry-failed');
+      const response = await fetch("/api/recipes/retry-failed");
       if (response.ok) {
         const data = await response.json();
         setFailedImports(data);
       }
     } catch (err) {
-      console.error('Error checking failed imports:', err);
+      console.error("Error checking failed imports:", err);
     }
   };
 
   const retryFailedImports = async () => {
     setRetryLoading(true);
     setError("");
-    
+
     try {
-      const response = await fetch('/api/recipes/retry-failed', {
-        method: 'POST',
+      const response = await fetch("/api/recipes/retry-failed", {
+        method: "POST",
       });
-      
+
       const data = await response.json();
-      
+
       if (response.ok) {
         setImportResult(data);
         // Refresh status and failed imports
@@ -128,7 +128,7 @@ export default function ImportRecipesPage() {
       });
 
       const data = await response.json();
-      
+
       if (response.ok) {
         setImportResult(data);
         // Refresh status
@@ -162,7 +162,9 @@ export default function ImportRecipesPage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <span className="text-blue-800">Current Recipe Library:</span>
-              <span className="text-2xl font-bold text-blue-900">{recipeCount} recipes</span>
+              <span className="text-2xl font-bold text-blue-900">
+                {recipeCount} recipes
+              </span>
             </div>
             <a
               href="/admin/setup-verification"
@@ -200,31 +202,41 @@ export default function ImportRecipesPage() {
           <div className="mb-4">
             <div className="flex justify-between items-center mb-2">
               <span>Total Progress</span>
-              <span className="font-bold">{status.library.total} / 600 ({status.library.percentComplete}%)</span>
+              <span className="font-bold">
+                {status.library.total} / 600 ({status.library.percentComplete}%)
+              </span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-4">
-              <div 
+              <div
                 className="bg-green-600 h-4 rounded-full transition-all"
                 style={{ width: `${status.library.percentComplete}%` }}
               />
             </div>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="text-center">
-              <p className="text-2xl font-bold">{status.library.breakdown.breakfast}</p>
+              <p className="text-2xl font-bold">
+                {status.library.breakdown.breakfast}
+              </p>
               <p className="text-sm text-gray-600">Breakfast</p>
             </div>
             <div className="text-center">
-              <p className="text-2xl font-bold">{status.library.breakdown.lunch}</p>
+              <p className="text-2xl font-bold">
+                {status.library.breakdown.lunch}
+              </p>
               <p className="text-sm text-gray-600">Lunch</p>
             </div>
             <div className="text-center">
-              <p className="text-2xl font-bold">{status.library.breakdown.dinner}</p>
+              <p className="text-2xl font-bold">
+                {status.library.breakdown.dinner}
+              </p>
               <p className="text-sm text-gray-600">Dinner</p>
             </div>
             <div className="text-center">
-              <p className="text-2xl font-bold">{status.library.breakdown.snack}</p>
+              <p className="text-2xl font-bold">
+                {status.library.breakdown.snack}
+              </p>
               <p className="text-sm text-gray-600">Snack</p>
             </div>
           </div>
@@ -235,7 +247,7 @@ export default function ImportRecipesPage() {
       {status && firestoreConnected && (
         <div className="bg-white rounded-lg shadow p-6 mb-6">
           <h2 className="text-xl font-semibold mb-4">Import New Recipes</h2>
-          
+
           <div className="grid md:grid-cols-2 gap-4 mb-4">
             <div>
               <label className="block text-sm font-medium mb-2">Category</label>
@@ -255,7 +267,9 @@ export default function ImportRecipesPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-2">Number of Recipes</label>
+              <label className="block text-sm font-medium mb-2">
+                Number of Recipes
+              </label>
               <input
                 type="number"
                 value={count}
@@ -268,7 +282,9 @@ export default function ImportRecipesPage() {
           </div>
 
           <div className="mb-4">
-            <label className="block text-sm font-medium mb-2">Import Strategy</label>
+            <label className="block text-sm font-medium mb-2">
+              Import Strategy
+            </label>
             <select
               value={strategyIndex}
               onChange={(e) => setStrategyIndex(parseInt(e.target.value))}
@@ -296,7 +312,7 @@ export default function ImportRecipesPage() {
       {importResult && (
         <div className="bg-white rounded-lg shadow p-6">
           <h2 className="text-xl font-semibold mb-4">Import Results</h2>
-          
+
           <div className="grid md:grid-cols-2 gap-4">
             <div>
               <p className="text-sm text-gray-600">Strategy Used</p>
@@ -304,15 +320,21 @@ export default function ImportRecipesPage() {
             </div>
             <div>
               <p className="text-sm text-gray-600">Category</p>
-              <p className="font-semibold capitalize">{importResult.import.category}</p>
+              <p className="font-semibold capitalize">
+                {importResult.import.category}
+              </p>
             </div>
             <div>
               <p className="text-sm text-gray-600">Recipes Imported</p>
-              <p className="font-semibold text-green-600">{importResult.import.imported}</p>
+              <p className="font-semibold text-green-600">
+                {importResult.import.imported}
+              </p>
             </div>
             <div>
               <p className="text-sm text-gray-600">Recipes Rejected</p>
-              <p className="font-semibold text-red-600">{importResult.import.rejected}</p>
+              <p className="font-semibold text-red-600">
+                {importResult.import.rejected}
+              </p>
             </div>
             <div>
               <p className="text-sm text-gray-600">Total Processed</p>
@@ -337,7 +359,9 @@ export default function ImportRecipesPage() {
 
           <div className="mt-4 pt-4 border-t">
             <p className="text-sm text-gray-600">New Library Total</p>
-            <p className="text-2xl font-bold">{importResult.library.total} recipes</p>
+            <p className="text-2xl font-bold">
+              {importResult.library.total} recipes
+            </p>
           </div>
         </div>
       )}
@@ -345,8 +369,10 @@ export default function ImportRecipesPage() {
       {/* Failed Imports Recovery */}
       {failedImports && failedImports.hasFailures && (
         <div className="bg-orange-50 border border-orange-200 rounded-lg p-6 mt-6">
-          <h2 className="text-xl font-semibold mb-4 text-orange-900">Failed Import Recovery</h2>
-          
+          <h2 className="text-xl font-semibold mb-4 text-orange-900">
+            Failed Import Recovery
+          </h2>
+
           <div className="space-y-4">
             <div className="grid md:grid-cols-2 gap-4">
               <div>
@@ -365,30 +391,42 @@ export default function ImportRecipesPage() {
 
             {failedImports.failedSessions.length > 0 && (
               <div className="border-t border-orange-200 pt-4">
-                <h3 className="text-sm font-medium text-orange-900 mb-2">Recent Failed Sessions</h3>
+                <h3 className="text-sm font-medium text-orange-900 mb-2">
+                  Recent Failed Sessions
+                </h3>
                 <div className="space-y-2 max-h-40 overflow-y-auto">
-                  {failedImports.failedSessions.slice(0, 3).map((session: any) => (
-                    <div key={session.sessionId} className="text-sm bg-white p-2 rounded">
-                      <div className="flex justify-between">
-                        <span>{session.date}</span>
-                        <span className="text-orange-600">
-                          {session.recipesRejected} rejected, {session.errors} errors
-                        </span>
-                      </div>
-                      {session.retryCount > 0 && (
-                        <div className="text-xs text-gray-500">
-                          Retried {session.retryCount} time{session.retryCount > 1 ? 's' : ''}
+                  {failedImports.failedSessions
+                    .slice(0, 3)
+                    .map((session: any) => (
+                      <div
+                        key={session.sessionId}
+                        className="text-sm bg-white p-2 rounded"
+                      >
+                        <div className="flex justify-between">
+                          <span>{session.date}</span>
+                          <span className="text-orange-600">
+                            {session.recipesRejected} rejected, {session.errors}{" "}
+                            errors
+                          </span>
                         </div>
-                      )}
-                    </div>
-                  ))}
+                        {session.retryCount > 0 && (
+                          <div className="text-xs text-gray-500">
+                            Retried {session.retryCount} time
+                            {session.retryCount > 1 ? "s" : ""}
+                          </div>
+                        )}
+                      </div>
+                    ))}
                 </div>
               </div>
             )}
 
             <button
               onClick={retryFailedImports}
-              disabled={retryLoading || !failedImports.failedSessions.some((s: any) => s.canRetry)}
+              disabled={
+                retryLoading ||
+                !failedImports.failedSessions.some((s: any) => s.canRetry)
+              }
               className="w-full bg-orange-600 text-white py-2 px-4 rounded-md hover:bg-orange-700 disabled:bg-gray-400"
             >
               {retryLoading ? "Retrying..." : "Retry Failed Imports"}

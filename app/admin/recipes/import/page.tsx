@@ -420,7 +420,7 @@ export default function RecipeImportPage() {
               ))}
             </ul>
           )}
-          {importResult.success && importResult.recipesImported > 0 && !syncResult && (
+          {importResult.success && importResult.recipesImported && importResult.recipesImported > 0 && !syncResult && (
             <div className="mt-4 flex items-center justify-between">
               <p className="text-sm text-green-700">
                 To make these recipes available offline, sync the data:

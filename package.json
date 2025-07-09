@@ -15,7 +15,8 @@
     "recipes:import": "tsx scripts/run-daily-import.ts",
     "recipes:test": "tsx scripts/test-import-small.ts",
     "import": "tsx scripts/import-recipes-cli.ts",
-    "test:import": "tsx scripts/test-import-status.ts"
+    "test:import": "tsx scripts/test-import-status.ts",
+    "sync-recipes": "tsx scripts/sync-offline-recipes.ts"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.4",

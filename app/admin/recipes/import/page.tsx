@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Search,
   Filter,
@@ -8,9 +8,12 @@ import {
   Loader2,
   CheckCircle,
   XCircle,
+  Check,
 } from "lucide-react";
 import RecipePreviewModal from "@/components/admin/RecipePreviewModal";
 import { SpoonacularRecipe } from "@/src/types/spoonacular";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "@/src/lib/firebase/client";
 
 interface SearchFilters {
   query: string;
@@ -46,6 +49,10 @@ export default function RecipeImportPage() {
   const [previewRecipe, setPreviewRecipe] = useState<SpoonacularRecipe | null>(
     null,
   );
+  const [existingRecipeIds, setExistingRecipeIds] = useState<Set<string>>(
+    new Set(),
+  );
+  const [loadingExisting, setLoadingExisting] = useState(true);
 
   const mealTypes = [
     { value: "all", label: "All Types" },
@@ -62,6 +69,29 @@ export default function RecipeImportPage() {
     { value: "gluten free", label: "Gluten Free" },
     { value: "dairy free", label: "Dairy Free" },
   ];
+
+  // Load existing recipe IDs on mount
+  useEffect(() => {
+    async function loadExistingRecipes() {
+      try {
+        const recipesSnapshot = await getDocs(collection(db, "recipes"));
+        const ids = new Set<string>();
+        recipesSnapshot.docs.forEach((doc) => {
+          // Store both the full ID and just the numeric part for Spoonacular recipes
+          ids.add(doc.id);
+          if (doc.id.startsWith("spoonacular-")) {
+            ids.add(doc.id.replace("spoonacular-", ""));
+          }
+        });
+        setExistingRecipeIds(ids);
+      } catch (error) {
+        console.error("Error loading existing recipes:", error);
+      } finally {
+        setLoadingExisting(false);
+      }
+    }
+    loadExistingRecipes();
+  }, []);
 
   async function searchRecipes() {
     setLoading(true);
@@ -131,9 +161,17 @@ export default function RecipeImportPage() {
 
         // Clear selection after successful import
         setSelectedRecipes(new Set());
-
-        // Trigger offline file update
-        await updateOfflineFiles();
+        
+        // Refresh existing recipe IDs to mark newly imported ones
+        const recipesSnapshot = await getDocs(collection(db, "recipes"));
+        const ids = new Set<string>();
+        recipesSnapshot.docs.forEach((doc) => {
+          ids.add(doc.id);
+          if (doc.id.startsWith("spoonacular-")) {
+            ids.add(doc.id.replace("spoonacular-", ""));
+          }
+        });
+        setExistingRecipeIds(ids);
       } else {
         setImportResult({
           success: false,
@@ -152,21 +190,13 @@ export default function RecipeImportPage() {
     }
   }
 
-  async function updateOfflineFiles() {
-    try {
-      const response = await fetch("/api/recipes/export-offline", {
-        method: "POST",
-      });
-
-      if (response.ok) {
-        console.log("Offline files updated successfully");
-      }
-    } catch (error) {
-      console.error("Failed to update offline files:", error);
-    }
-  }
 
   function toggleRecipeSelection(recipeId: number) {
+    // Don't allow selection of recipes already in the library
+    if (existingRecipeIds.has(recipeId.toString())) {
+      return;
+    }
+    
     const newSelection = new Set(selectedRecipes);
     if (newSelection.has(recipeId)) {
       newSelection.delete(recipeId);
@@ -177,7 +207,13 @@ export default function RecipeImportPage() {
   }
 
   function selectAll() {
-    setSelectedRecipes(new Set(searchResults.map((r) => r.id)));
+    const newSelection = new Set<number>();
+    searchResults.forEach((recipe) => {
+      if (!existingRecipeIds.has(recipe.id.toString())) {
+        newSelection.add(recipe.id);
+      }
+    });
+    setSelectedRecipes(newSelection);
   }
 
   function deselectAll() {
@@ -309,6 +345,15 @@ export default function RecipeImportPage() {
         </div>
       </div>
 
+      {/* Help text about duplicates */}
+      {!loadingExisting && searchResults.length > 0 && (
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4 text-sm">
+          <p className="text-blue-800">
+            <span className="font-medium">💡 Tip:</span> Recipes with a blue background and "In Library" label are already imported and cannot be selected again.
+          </p>
+        </div>
+      )}
+
       {/* Import Result Alert */}
       {importResult && (
         <div
@@ -341,9 +386,16 @@ export default function RecipeImportPage() {
         <>
           <div className="bg-white rounded-lg shadow p-6 mb-4">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-lg font-semibold text-gray-900">
-                Search Results ({searchResults.length})
-              </h2>
+              <div>
+                <h2 className="text-lg font-semibold text-gray-900">
+                  Search Results ({searchResults.length})
+                </h2>
+                {!loadingExisting && (
+                  <p className="text-sm text-gray-600 mt-1">
+                    {searchResults.filter(r => existingRecipeIds.has(r.id.toString())).length} already in library
+                  </p>
+                )}
+              </div>
               <div className="flex items-center space-x-4">
                 <button
                   onClick={selectAll}
@@ -378,27 +430,38 @@ export default function RecipeImportPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {searchResults.map((recipe) => (
-                <div
-                  key={recipe.id}
-                  className={`border rounded-lg p-4 cursor-pointer transition-all ${
-                    selectedRecipes.has(recipe.id)
-                      ? "border-green-500 bg-green-50"
-                      : "border-gray-200 hover:border-gray-300"
-                  }`}
-                  onClick={() => toggleRecipeSelection(recipe.id)}
-                >
-                  <div className="flex items-start justify-between mb-2">
-                    <h3 className="font-medium text-gray-900 flex-1 pr-2">
-                      {recipe.title}
-                    </h3>
-                    <input
-                      type="checkbox"
-                      checked={selectedRecipes.has(recipe.id)}
-                      onChange={() => {}}
-                      className="mt-1 h-4 w-4 text-green-600 rounded focus:ring-green-500"
-                    />
-                  </div>
+              {searchResults.map((recipe) => {
+                const isInLibrary = existingRecipeIds.has(recipe.id.toString());
+                return (
+                  <div
+                    key={recipe.id}
+                    className={`border rounded-lg p-4 transition-all ${
+                      isInLibrary
+                        ? "border-blue-300 bg-blue-50 opacity-75"
+                        : selectedRecipes.has(recipe.id)
+                        ? "border-green-500 bg-green-50 cursor-pointer"
+                        : "border-gray-200 hover:border-gray-300 cursor-pointer"
+                    }`}
+                    onClick={() => !isInLibrary && toggleRecipeSelection(recipe.id)}
+                  >
+                    <div className="flex items-start justify-between mb-2">
+                      <h3 className="font-medium text-gray-900 flex-1 pr-2">
+                        {recipe.title}
+                      </h3>
+                      {isInLibrary ? (
+                        <div className="flex items-center text-blue-600">
+                          <Check className="h-4 w-4 mr-1" />
+                          <span className="text-xs font-medium">In Library</span>
+                        </div>
+                      ) : (
+                        <input
+                          type="checkbox"
+                          checked={selectedRecipes.has(recipe.id)}
+                          onChange={() => {}}
+                          className="mt-1 h-4 w-4 text-green-600 rounded focus:ring-green-500"
+                        />
+                      )}
+                    </div>
 
                   <div className="text-sm text-gray-600 space-y-1">
                     <p>Ready in: {recipe.readyInMinutes} minutes</p>
@@ -424,7 +487,8 @@ export default function RecipeImportPage() {
                     Preview Details
                   </button>
                 </div>
-              ))}
+              );
+              })}
             </div>
           </div>
         </>

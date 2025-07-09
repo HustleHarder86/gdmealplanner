@@ -349,7 +349,7 @@ export default function RecipeImportPage() {
       {!loadingExisting && searchResults.length > 0 && (
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4 text-sm">
           <p className="text-blue-800">
-            <span className="font-medium">💡 Tip:</span> Recipes with a blue background and "In Library" label are already imported and cannot be selected again.
+            <span className="font-medium">💡 Tip:</span> Recipes with a blue background and &quot;In Library&quot; label are already imported and cannot be selected again.
           </p>
         </div>
       )}

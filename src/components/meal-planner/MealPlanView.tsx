@@ -134,7 +134,7 @@ export function MealPlanView({
           {/* Day Summary */}
           <Card className="p-4 mb-6 bg-blue-50">
             <h3 className="font-semibold text-lg mb-2">
-              {selectedDay.charAt(0).toUpperCase() + selectedDay.slice(1)}'s Nutrition
+              {selectedDay.charAt(0).toUpperCase() + selectedDay.slice(1)}&apos;s Nutrition
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div>

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { initializeFirebaseAdmin, adminDb } from "@/src/lib/firebase/admin";
 import { RecipeImporter } from "@/src/services/spoonacular/recipe-importer";
-import { OfflineUpdater } from "@/src/services/offline-updater";
+import { OfflineUpdaterVercel } from "@/src/services/offline-updater-vercel";
 
 export async function POST(request: NextRequest) {
   try {
@@ -101,13 +101,19 @@ export async function POST(request: NextRequest) {
       performedBy: "admin",
     });
 
-    // Update offline files if any recipes were imported
+    // Update offline data in Firebase if any recipes were imported
     if (importResults.imported > 0) {
       try {
-        await OfflineUpdater.updateOfflineRecipes();
-        console.log("Offline files updated successfully");
+        // Get the updated recipe data
+        const offlineResult = await OfflineUpdaterVercel.getOfflineRecipeData();
+        
+        if (offlineResult.success && offlineResult.data) {
+          // Store in Firebase for later retrieval
+          await OfflineUpdaterVercel.storeOfflineDataInFirebase(offlineResult.data.export);
+          console.log("Offline data updated in Firebase successfully");
+        }
       } catch (error) {
-        console.error("Failed to update offline files:", error);
+        console.error("Failed to update offline data:", error);
         // Don't fail the import if offline update fails
       }
     }

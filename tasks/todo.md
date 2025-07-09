@@ -118,3 +118,162 @@ Build comprehensive nutrition tracking features integrated with meal plans for g
 - Clear visual feedback on targets
 - Healthcare provider-friendly reports
 - High user engagement with daily logging
+
+---
+
+# Automated Recipe Import Plan
+
+## Overview
+Automate the import of 200 additional recipes from Spoonacular API, validate them for gestational diabetes compliance, and update the local offline database.
+
+## Current Status
+- ✅ Existing import system already in place
+- ✅ 242 recipes currently imported
+- ✅ Quality validation system functional
+- ✅ Export to offline JSON working
+
+## Implementation Plan
+
+### Phase 1: Create Automated Import Script
+
+**Goal**: Build a script that automatically imports 200 recipes distributed across meal categories
+
+**Tasks**:
+- [ ] Create `scripts/auto-import-recipes.ts` script
+- [ ] Distribute 200 recipes across categories:
+  - Breakfast: 50 recipes (25%)
+  - Lunch: 50 recipes (25%)
+  - Dinner: 50 recipes (25%)
+  - Snacks: 50 recipes (25%)
+- [ ] Use existing RecipeImportScheduler
+- [ ] Apply all import strategies for variety
+- [ ] Handle API rate limiting (100 calls/day free tier)
+
+### Phase 2: Import Execution
+
+**Goal**: Run the import process with quality validation
+
+**Tasks**:
+- [ ] Check Spoonacular API key is configured
+- [ ] Run imports in batches to avoid rate limits
+- [ ] Validate each recipe for GD compliance (30+ score)
+- [ ] Skip duplicates using existing deduplicator
+- [ ] Store in Firebase with proper categorization
+- [ ] Log import statistics and any failures
+
+### Phase 3: Export to Local Database
+
+**Goal**: Update offline JSON files with new recipes
+
+**Tasks**:
+- [ ] Use `/api/recipes/prepare-offline` endpoint
+- [ ] Generate new production-recipes.json file
+- [ ] Update category-specific JSON files
+- [ ] Create backup of previous data
+- [ ] Verify JSON file integrity
+
+### Phase 4: Update Local Service
+
+**Goal**: Ensure LocalRecipeService uses new data
+
+**Tasks**:
+- [ ] Clear browser localStorage to force refresh
+- [ ] Test LocalRecipeService loads new recipes
+- [ ] Verify recipe counts match import
+- [ ] Test search and filter functionality
+- [ ] Confirm offline operation
+
+### Phase 5: Validation
+
+**Goal**: Ensure all imported recipes meet GD guidelines
+
+**Tasks**:
+- [ ] Run validation report on all recipes
+- [ ] Check carb distribution:
+  - Breakfast: 15-45g carbs
+  - Lunch/Dinner: 30-60g carbs
+  - Snacks: 15-30g carbs
+- [ ] Verify protein content adequate
+- [ ] Confirm fiber levels appropriate
+- [ ] Generate compliance report
+
+## Technical Implementation Details
+
+### 1. Auto Import Script Structure
+```typescript
+// scripts/auto-import-recipes.ts
+- Initialize Firebase Admin
+- Create RecipeImportScheduler instance
+- Define import configuration:
+  - categories with counts
+  - strategy rotation
+  - batch sizes for rate limiting
+- Execute imports with progress tracking
+- Generate summary report
+```
+
+### 2. API Rate Limit Management
+- Free tier: 100 calls/day
+- Import in batches of 20-25 recipes
+- Add delays between batches
+- Save progress to resume if interrupted
+- Consider running over multiple days if needed
+
+### 3. Quality Thresholds
+- Minimum score: 30/100 (current default)
+- Consider raising to 40/100 for better quality
+- Focus on recipes with:
+  - Clear nutritional data
+  - Reasonable cooking times (<60 min)
+  - Common ingredients
+
+### 4. Export Process
+- First export to Firebase offline collection
+- Then generate JSON files
+- Create timestamped backups
+- Update data/production-recipes.json
+- Clear CDN cache if applicable
+
+## Execution Timeline
+
+**Day 1**: 
+- Create auto-import script
+- Test with small batch (10 recipes)
+- Verify validation working
+
+**Day 2-3**: 
+- Run full import (may span multiple days due to rate limits)
+- Monitor for errors
+- Adjust strategies if needed
+
+**Day 4**: 
+- Export to offline JSON
+- Update local database
+- Run validation tests
+- Deploy updated data
+
+## Considerations
+
+1. **API Costs**: Stay within free tier limits or consider paid plan
+2. **Storage**: ~200 recipes will add ~2-3MB to JSON files
+3. **Performance**: LocalRecipeService handles 400+ recipes well
+4. **Variety**: Use multiple search strategies to ensure diverse recipes
+5. **Backup**: Keep current data backed up before import
+
+## Success Criteria
+
+- [ ] 200 new recipes imported successfully
+- [ ] All recipes score 30+ on GD validation
+- [ ] Proper distribution across meal categories
+- [ ] Offline JSON files updated and functional
+- [ ] LocalRecipeService loads all recipes
+- [ ] No duplicate recipes
+- [ ] Meal planner can use new recipes
+
+## Risk Mitigation
+
+1. **API Failures**: Save progress, resume capability
+2. **Bad Data**: Strict validation, manual review of outliers
+3. **Duplicates**: Existing deduplicator should catch these
+4. **Storage Issues**: Monitor Firebase usage, optimize if needed
+5. **Performance**: Test with full dataset before deploying

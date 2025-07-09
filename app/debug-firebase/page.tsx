@@ -46,7 +46,7 @@ export default function DebugFirebasePage() {
       <div className="bg-yellow-100 p-4 rounded-lg">
         <h2 className="font-semibold mb-2">Important:</h2>
         <p className="text-sm">
-          If authDomain shows as missing or incorrect, password reset won't
+          If authDomain shows as missing or incorrect, password reset won&apos;t
           work.
         </p>
         <p className="text-sm mt-2">

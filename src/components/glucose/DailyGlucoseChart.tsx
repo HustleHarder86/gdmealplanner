@@ -32,13 +32,6 @@ export default function DailyGlucoseChart({
   readings,
   unit,
 }: DailyGlucoseChartProps) {
-  if (readings.length === 0) {
-    return (
-      <div className="flex items-center justify-center h-64 bg-neutral-50 rounded-lg">
-        <p className="text-neutral-500">No readings for this day</p>
-      </div>
-    );
-  }
   const targets =
     unit === "mg/dL"
       ? DEFAULT_GLUCOSE_TARGETS_MGDL
@@ -97,6 +90,14 @@ export default function DailyGlucoseChart({
       return [2.2, 11.1];
     }
   }, [unit]);
+
+  if (readings.length === 0) {
+    return (
+      <div className="flex items-center justify-center h-64 bg-neutral-50 rounded-lg">
+        <p className="text-neutral-500">No readings for this day</p>
+      </div>
+    );
+  }
 
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {

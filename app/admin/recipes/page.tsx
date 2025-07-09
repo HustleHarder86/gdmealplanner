@@ -103,12 +103,20 @@ export default function AdminRecipesPage() {
     <div className="container mx-auto p-6">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold">Recipe Library</h1>
-        <Link
-          href="/admin/import-recipes"
-          className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
-        >
-          Import More Recipes
-        </Link>
+        <div className="flex gap-2">
+          <Link
+            href="/admin/import-recipes"
+            className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+          >
+            Import More Recipes
+          </Link>
+          <Link
+            href="/admin/export-recipes"
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          >
+            Export Offline Data
+          </Link>
+        </div>
       </div>
 
       <div className="mb-6">

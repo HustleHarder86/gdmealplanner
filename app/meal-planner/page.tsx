@@ -246,7 +246,7 @@ export default function MealPlannerPage() {
         <Card className="p-8 text-center">
           <h2 className="text-xl font-semibold mb-4">No Active Meal Plan</h2>
           <p className="text-gray-600 mb-6">
-            You don't have an active meal plan for this week. Generate one to get started!
+            You don&apos;t have an active meal plan for this week. Generate one to get started!
           </p>
           <Button
             onClick={() => setShowGenerateModal(true)}

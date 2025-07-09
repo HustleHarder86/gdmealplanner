@@ -26,6 +26,8 @@ import {
   MealCustomization,
   MealPlanRating,
   MealType,
+  MealAssignment,
+  DailyMealPlan,
 } from "@/src/types/meal-plan";
 import { LocalRecipeService } from "@/src/services/local-recipe-service";
 import { mealPlanAlgorithm } from "./meal-plan-algorithm";
@@ -474,7 +476,7 @@ export class MealPlanService {
 
   // Helper methods
 
-  private calculateDailyNutrition(meals: any[]): any {
+  private calculateDailyNutrition(meals: MealAssignment[]): DailyMealPlan["nutrition"] {
     let totalCalories = 0;
     let totalCarbs = 0;
     let totalProtein = 0;

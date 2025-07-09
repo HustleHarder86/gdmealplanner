@@ -483,7 +483,7 @@ export class UserPreferenceService {
   }
 
   private matchesCookingTime(recipe: Recipe, preference: string): boolean {
-    const timeMap = {
+    const timeMap: Record<string, number> = {
       "under-15": 15,
       "under-30": 30,
       "under-45": 45,

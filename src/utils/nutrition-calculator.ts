@@ -184,7 +184,12 @@ export class NutritionCalculator {
     }
 
     // Check macronutrient balance
-    const macros = this.calculateMacroPercentages(nutrition);
+    const macros = this.calculateMacroPercentages({
+      calories: nutrition.totalCalories,
+      carbohydrates: nutrition.totalCarbs,
+      protein: nutrition.totalProtein,
+      fat: nutrition.totalFat,
+    });
 
     if (macros.proteinPercentage < targets.dailyProtein.minPercentage) {
       warnings.push(

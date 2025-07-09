@@ -9,6 +9,8 @@ import {
   CheckCircle,
   XCircle,
   Check,
+  RefreshCw,
+  Cloud,
 } from "lucide-react";
 import RecipePreviewModal from "@/components/admin/RecipePreviewModal";
 import { SpoonacularRecipe } from "@/src/types/spoonacular";
@@ -45,6 +47,12 @@ export default function RecipeImportPage() {
   );
   const [loading, setLoading] = useState(false);
   const [importing, setImporting] = useState(false);
+  const [syncing, setSyncing] = useState(false);
+  const [syncResult, setSyncResult] = useState<{
+    success: boolean;
+    message: string;
+    recipeCount?: number;
+  } | null>(null);
   const [importResult, setImportResult] = useState<ImportResult | null>(null);
   const [previewRecipe, setPreviewRecipe] = useState<SpoonacularRecipe | null>(
     null,
@@ -220,6 +228,40 @@ export default function RecipeImportPage() {
     setSelectedRecipes(new Set());
   }
 
+  async function syncOfflineData() {
+    setSyncing(true);
+    setSyncResult(null);
+
+    try {
+      const response = await fetch("/api/admin/sync-offline-data", {
+        method: "POST",
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setSyncResult({
+          success: true,
+          message: result.message,
+          recipeCount: result.recipeCount,
+        });
+      } else {
+        setSyncResult({
+          success: false,
+          message: result.error || "Sync failed",
+        });
+      }
+    } catch (error) {
+      console.error("Sync error:", error);
+      setSyncResult({
+        success: false,
+        message: "Failed to sync offline data. Please try again.",
+      });
+    } finally {
+      setSyncing(false);
+    }
+  }
+
   return (
     <div>
       <h1 className="text-3xl font-bold text-gray-900 mb-8">
@@ -377,6 +419,55 @@ export default function RecipeImportPage() {
                 <li key={index}>{error}</li>
               ))}
             </ul>
+          )}
+          {importResult.success && importResult.recipesImported > 0 && !syncResult && (
+            <div className="mt-4 flex items-center justify-between">
+              <p className="text-sm text-green-700">
+                To make these recipes available offline, sync the data:
+              </p>
+              <button
+                onClick={syncOfflineData}
+                disabled={syncing}
+                className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {syncing ? (
+                  <>
+                    <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                    Syncing...
+                  </>
+                ) : (
+                  <>
+                    <Cloud className="h-4 w-4 mr-2" />
+                    Sync Offline Data
+                  </>
+                )}
+              </button>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Sync Result Alert */}
+      {syncResult && (
+        <div
+          className={`rounded-lg p-4 mb-6 ${
+            syncResult.success
+              ? "bg-blue-50 text-blue-800 border border-blue-200"
+              : "bg-red-50 text-red-800 border border-red-200"
+          }`}
+        >
+          <div className="flex items-center">
+            {syncResult.success ? (
+              <RefreshCw className="h-5 w-5 mr-2" />
+            ) : (
+              <XCircle className="h-5 w-5 mr-2" />
+            )}
+            <p className="font-medium">{syncResult.message}</p>
+          </div>
+          {syncResult.success && syncResult.recipeCount && (
+            <p className="mt-2 text-sm">
+              Total recipes now available offline: <strong>{syncResult.recipeCount}</strong>
+            </p>
           )}
         </div>
       )}

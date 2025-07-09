@@ -6,12 +6,19 @@ import { db } from "@/src/lib/firebase/client";
 import { Recipe } from "@/src/types/recipe";
 import Link from "next/link";
 import Image from "next/image";
+import { Cloud, Loader2, CheckCircle, XCircle } from "lucide-react";
 
 export default function AdminRecipesPage() {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [syncing, setSyncing] = useState(false);
+  const [syncResult, setSyncResult] = useState<{
+    success: boolean;
+    message: string;
+    recipeCount?: number;
+  } | null>(null);
 
   useEffect(() => {
     loadRecipes();
@@ -61,6 +68,40 @@ export default function AdminRecipesPage() {
     }
   }
 
+  async function syncOfflineData() {
+    setSyncing(true);
+    setSyncResult(null);
+
+    try {
+      const response = await fetch("/api/admin/sync-offline-data", {
+        method: "POST",
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setSyncResult({
+          success: true,
+          message: result.message,
+          recipeCount: result.recipeCount,
+        });
+      } else {
+        setSyncResult({
+          success: false,
+          message: result.error || "Sync failed",
+        });
+      }
+    } catch (error) {
+      console.error("Sync error:", error);
+      setSyncResult({
+        success: false,
+        message: "Failed to sync offline data. Please try again.",
+      });
+    } finally {
+      setSyncing(false);
+    }
+  }
+
   const filteredRecipes =
     selectedCategory === "all"
       ? recipes
@@ -105,19 +146,61 @@ export default function AdminRecipesPage() {
         <h1 className="text-3xl font-bold">Recipe Library</h1>
         <div className="flex gap-2">
           <Link
-            href="/admin/import-recipes"
+            href="/admin/recipes/import"
             className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
           >
             Import More Recipes
           </Link>
+          <button
+            onClick={syncOfflineData}
+            disabled={syncing}
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
+          >
+            {syncing ? (
+              <>
+                <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                Syncing...
+              </>
+            ) : (
+              <>
+                <Cloud className="h-4 w-4 mr-2" />
+                Sync Offline Data
+              </>
+            )}
+          </button>
           <Link
             href="/admin/export-recipes"
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700"
           >
-            Export Offline Data
+            Export JSON
           </Link>
         </div>
       </div>
+
+      {/* Sync Result Alert */}
+      {syncResult && (
+        <div
+          className={`rounded-lg p-4 mb-6 ${
+            syncResult.success
+              ? "bg-blue-50 text-blue-800 border border-blue-200"
+              : "bg-red-50 text-red-800 border border-red-200"
+          }`}
+        >
+          <div className="flex items-center">
+            {syncResult.success ? (
+              <CheckCircle className="h-5 w-5 mr-2" />
+            ) : (
+              <XCircle className="h-5 w-5 mr-2" />
+            )}
+            <p className="font-medium">{syncResult.message}</p>
+          </div>
+          {syncResult.success && syncResult.recipeCount && (
+            <p className="mt-2 text-sm">
+              Total recipes now available offline: <strong>{syncResult.recipeCount}</strong>
+            </p>
+          )}
+        </div>
+      )}
 
       <div className="mb-6">
         <p className="text-lg mb-4">Total Recipes: {recipes.length}</p>

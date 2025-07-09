@@ -3,6 +3,8 @@ import { NextResponse } from "next/server";
 const SPOONACULAR_API_KEY = process.env.SPOONACULAR_API_KEY;
 const BASE_URL = "https://api.spoonacular.com/recipes/complexSearch";
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   if (!SPOONACULAR_API_KEY) {
     return NextResponse.json({ error: "Spoonacular API key not configured" });

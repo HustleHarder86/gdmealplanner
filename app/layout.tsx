@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
-import { RecipeProvider } from "@/src/providers/recipe-provider";
+import { ClientProviders } from "@/src/providers/client-providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-neutral-50 text-neutral-900`}>
-        <RecipeProvider>
+        <ClientProviders>
           <Navigation />
           <main className="min-h-screen">{children}</main>
           <footer className="bg-white border-t border-neutral-200 mt-12">
@@ -41,7 +41,7 @@ export default function RootLayout({
               </p>
             </div>
           </footer>
-        </RecipeProvider>
+        </ClientProviders>
       </body>
     </html>
   );

@@ -1,0 +1,80 @@
+{
+  "timestamp": "2025-07-11T15:05:52.092Z",
+  "baseUrl": "http://localhost:3001",
+  "summary": {
+    "total": 9,
+    "passed": 6,
+    "failed": 3
+  },
+  "results": [
+    {
+      "name": "Home Page",
+      "path": "/",
+      "status": 200,
+      "passed": false,
+      "errors": [
+        "Expected page to contain element: nav"
+      ]
+    },
+    {
+      "name": "Recipes Page",
+      "path": "/recipes",
+      "status": 200,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "Education Page",
+      "path": "/education",
+      "status": 200,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "Login Page",
+      "path": "/login",
+      "status": 200,
+      "passed": false,
+      "errors": [
+        "Expected page to contain element: form"
+      ]
+    },
+    {
+      "name": "Signup Page",
+      "path": "/signup",
+      "status": 200,
+      "passed": false,
+      "errors": [
+        "Expected page to contain element: form"
+      ]
+    },
+    {
+      "name": "Meal Planner",
+      "path": "/meal-planner",
+      "status": 200,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "Glucose Tracking",
+      "path": "/tracking/glucose",
+      "status": 200,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "Admin Dashboard",
+      "path": "/admin",
+      "status": 200,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "name": "Recipe Count API",
+      "path": "/api/recipes/count",
+      "status": 200,
+      "passed": true,
+      "errors": []
+    }
+  ]
+}

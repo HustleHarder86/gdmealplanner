@@ -1,0 +1,169 @@
+
+> pregnancy-plate-planner@0.1.0 dev
+> next dev
+
+ ⚠ Port 3000 is in use, trying 3001 instead.
+ ⚠ Port 3001 is in use, trying 3002 instead.
+  ▲ Next.js 14.2.21
+  - Local:        http://localhost:3002
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 5.2s
+ ○ Compiling / ...
+ ✓ Compiled / in 11.5s (737 modules)
+ GET / 200 in 13201ms
+ ✓ Compiled in 1691ms (286 modules)
+ GET / 200 in 772ms
+ GET / 200 in 87ms
+ GET / 200 in 56ms
+ ○ Compiling /recipes ...
+ ✓ Compiled /recipes in 2.3s (880 modules)
+ GET /recipes 200 in 2750ms
+ ○ Compiling /education ...
+ ✓ Compiled /education in 548ms (884 modules)
+ GET /education 200 in 860ms
+ ✓ Compiled /login in 452ms (892 modules)
+ GET /login 200 in 677ms
+ ○ Compiling /signup ...
+ ✓ Compiled /signup in 575ms (898 modules)
+ GET /signup 200 in 837ms
+ ○ Compiling /meal-planner ...
+ ✓ Compiled /meal-planner in 1167ms (930 modules)
+ GET /meal-planner 200 in 1509ms
+ ○ Compiling /tracking/glucose ...
+ ✓ Compiled /tracking/glucose in 8.4s (2064 modules)
+ GET /tracking/glucose 200 in 8953ms
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 705ms (117 modules)
+ ○ Compiling /admin ...
+ ✓ Compiled /admin in 1168ms (2105 modules)
+ GET /admin 200 in 1587ms
+ ○ Compiling /api/recipes/count ...
+ ✓ Compiled /api/recipes/count in 1093ms (1181 modules)
+Failed to parse Firebase service account: FirebaseAppError: Failed to parse private key: Error: Invalid PEM formatted message.
+    at new ServiceAccount (/home/amy/dev/gdmealplanner/node_modules/firebase-admin/lib/app/credential-internal.js:182:19)
+    at new ServiceAccountCredential (/home/amy/dev/gdmealplanner/node_modules/firebase-admin/lib/app/credential-internal.js:118:15)
+    at cert (/home/amy/dev/gdmealplanner/node_modules/firebase-admin/lib/app/credential-factory.js:105:54)
+    at initializeAdmin (webpack-internal:///(rsc)/./src/lib/firebase/admin.ts:52:89)
+    at adminDb (webpack-internal:///(rsc)/./src/lib/firebase/admin.ts:138:9)
+    at GET (webpack-internal:///(rsc)/./app/api/recipes/count/route.ts:14:84)
+    at /home/amy/dev/gdmealplanner/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57234
+    at /home/amy/dev/gdmealplanner/node_modules/next/dist/server/lib/trace/tracer.js:140:36
+    at NoopContextManager.with (/home/amy/dev/gdmealplanner/node_modules/@opentelemetry/api/build/src/context/NoopContextManager.js:25:19)
+    at ContextAPI.with (/home/amy/dev/gdmealplanner/node_modules/@opentelemetry/api/build/src/api/context.js:60:46)
+    at NoopTracer.startActiveSpan (/home/amy/dev/gdmealplanner/node_modules/@opentelemetry/api/build/src/trace/NoopTracer.js:65:31)
+    at ProxyTracer.startActiveSpan (/home/amy/dev/gdmealplanner/node_modules/@opentelemetry/api/build/src/trace/ProxyTracer.js:36:24)
+    at /home/amy/dev/gdmealplanner/node_modules/next/dist/server/lib/trace/tracer.js:122:103
+    at NoopContextManager.with (/home/amy/dev/gdmealplanner/node_modules/@opentelemetry/api/build/src/context/NoopContextManager.js:25:19)
+    at ContextAPI.with (/home/amy/dev/gdmealplanner/node_modules/@opentelemetry/api/build/src/api/context.js:60:46)
+    at NextTracerImpl.trace (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/lib/trace/tracer.js:122:28)
+    at /home/amy/dev/gdmealplanner/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:48896
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at Object.wrap (/home/amy/dev/gdmealplanner/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:40958)
+    at /home/amy/dev/gdmealplanner/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:47472
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at Object.wrap (/home/amy/dev/gdmealplanner/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:38293)
+    at /home/amy/dev/gdmealplanner/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:47434
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at eT.execute (/home/amy/dev/gdmealplanner/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46881)
+    at eT.handle (/home/amy/dev/gdmealplanner/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58573)
+    at doRender (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/base-server.js:1353:60)
+    at cacheEntry.responseCache.get.routeKind (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/base-server.js:1575:34)
+    at ResponseCache.get (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/response-cache/index.js:49:26)
+    at DevServer.renderToResponseWithComponentsImpl (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/base-server.js:1483:53)
+    at /home/amy/dev/gdmealplanner/node_modules/next/dist/server/base-server.js:1003:121
+    at NextTracerImpl.trace (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/lib/trace/tracer.js:105:20)
+    at DevServer.renderToResponseWithComponents (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/base-server.js:1003:41)
+    at DevServer.renderPageComponent (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/base-server.js:1911:35)
+    at async DevServer.renderToResponseImpl (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/base-server.js:1949:32)
+    at async DevServer.pipeImpl (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/base-server.js:921:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/base-server.js:817:17)
+    at async /home/amy/dev/gdmealplanner/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/home/amy/dev/gdmealplanner/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/lib/router-server.js:173:21)
+    at async handleRequest (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/lib/router-server.js:350:24)
+    at async requestHandlerImpl (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/lib/router-server.js:374:13)
+    at async Server.requestListener (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/lib/start-server.js:141:13) {
+  errorInfo: {
+    code: 'app/invalid-credential',
+    message: 'Failed to parse private key: Error: Invalid PEM formatted message.'
+  },
+  codePrefix: 'app'
+}
+First 100 chars of key: {"type":"service_account","project_id":"gd-meal-planner","private_key_id":"18ce68a140bacfed922311b7b
+Error counting recipes: Error: Firebase Admin initialization failed - invalid service account JSON
+    at initializeAdmin (webpack-internal:///(rsc)/./src/lib/firebase/admin.ts:60:23)
+    at adminDb (webpack-internal:///(rsc)/./src/lib/firebase/admin.ts:138:9)
+    at GET (webpack-internal:///(rsc)/./app/api/recipes/count/route.ts:14:84)
+    at /home/amy/dev/gdmealplanner/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:57234
+    at /home/amy/dev/gdmealplanner/node_modules/next/dist/server/lib/trace/tracer.js:140:36
+    at NoopContextManager.with (/home/amy/dev/gdmealplanner/node_modules/@opentelemetry/api/build/src/context/NoopContextManager.js:25:19)
+    at ContextAPI.with (/home/amy/dev/gdmealplanner/node_modules/@opentelemetry/api/build/src/api/context.js:60:46)
+    at NoopTracer.startActiveSpan (/home/amy/dev/gdmealplanner/node_modules/@opentelemetry/api/build/src/trace/NoopTracer.js:65:31)
+    at ProxyTracer.startActiveSpan (/home/amy/dev/gdmealplanner/node_modules/@opentelemetry/api/build/src/trace/ProxyTracer.js:36:24)
+    at /home/amy/dev/gdmealplanner/node_modules/next/dist/server/lib/trace/tracer.js:122:103
+    at NoopContextManager.with (/home/amy/dev/gdmealplanner/node_modules/@opentelemetry/api/build/src/context/NoopContextManager.js:25:19)
+    at ContextAPI.with (/home/amy/dev/gdmealplanner/node_modules/@opentelemetry/api/build/src/api/context.js:60:46)
+    at NextTracerImpl.trace (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/lib/trace/tracer.js:122:28)
+    at /home/amy/dev/gdmealplanner/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:48896
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at Object.wrap (/home/amy/dev/gdmealplanner/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:40958)
+    at /home/amy/dev/gdmealplanner/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:47472
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at Object.wrap (/home/amy/dev/gdmealplanner/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:38293)
+    at /home/amy/dev/gdmealplanner/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:47434
+    at AsyncLocalStorage.run (node:async_hooks:338:14)
+    at eT.execute (/home/amy/dev/gdmealplanner/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:46881)
+    at eT.handle (/home/amy/dev/gdmealplanner/node_modules/next/dist/compiled/next-server/app-route.runtime.dev.js:6:58573)
+    at doRender (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/base-server.js:1353:60)
+    at cacheEntry.responseCache.get.routeKind (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/base-server.js:1575:34)
+    at ResponseCache.get (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/response-cache/index.js:49:26)
+    at DevServer.renderToResponseWithComponentsImpl (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/base-server.js:1483:53)
+    at /home/amy/dev/gdmealplanner/node_modules/next/dist/server/base-server.js:1003:121
+    at NextTracerImpl.trace (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/lib/trace/tracer.js:105:20)
+    at DevServer.renderToResponseWithComponents (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/base-server.js:1003:41)
+    at DevServer.renderPageComponent (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/base-server.js:1911:35)
+    at async DevServer.renderToResponseImpl (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/base-server.js:1949:32)
+    at async DevServer.pipeImpl (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/base-server.js:921:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/base-server.js:817:17)
+    at async /home/amy/dev/gdmealplanner/node_modules/next/dist/server/dev/next-dev-server.js:339:20
+    at async Span.traceAsyncFn (/home/amy/dev/gdmealplanner/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/lib/router-server.js:173:21)
+    at async handleRequest (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/lib/router-server.js:350:24)
+    at async requestHandlerImpl (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/lib/router-server.js:374:13)
+    at async Server.requestListener (/home/amy/dev/gdmealplanner/node_modules/next/dist/server/lib/start-server.js:141:13)
+ GET /api/recipes/count 200 in 2581ms
+ ✓ Compiled in 929ms (442 modules)
+ ✓ Compiled /api/recipes/count in 219ms (478 modules)
+Firebase Admin initialized with service account
+ GET / 200 in 652ms
+ GET /api/recipes/count 200 in 1558ms
+ GET /api/recipes/count 200 in 262ms
+ GET / 200 in 134ms
+ GET / 200 in 96ms
+ ○ Compiling /recipes ...
+ ✓ Compiled /recipes in 962ms (562 modules)
+ GET /recipes 200 in 1490ms
+ ✓ Compiled /education in 234ms (565 modules)
+ GET /education 200 in 482ms
+ ○ Compiling /login ...
+ ✓ Compiled /login in 812ms (570 modules)
+ GET /login 200 in 1159ms
+ ✓ Compiled /signup in 302ms (574 modules)
+ GET /signup 200 in 595ms
+ ✓ Compiled /meal-planner in 413ms (591 modules)
+ GET /meal-planner 200 in 776ms
+ ○ Compiling /tracking/glucose ...
+ ✓ Compiled /tracking/glucose in 1695ms (1159 modules)
+ GET /tracking/glucose 200 in 2407ms
+ ✓ Compiled /admin in 462ms (1181 modules)
+ GET /admin 200 in 728ms
+ GET /api/recipes/count 200 in 297ms
+ GET / 200 in 214ms
+   Reload env: .env.local
+[?25h

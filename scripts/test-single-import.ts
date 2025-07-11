@@ -19,7 +19,7 @@ async function testSingleImport() {
     console.log('   Making request to bulk import API...');
 
     // Call the bulk import API
-    const response = await fetch('http://localhost:3000/api/admin/recipes/bulk-import', {
+    const response = await fetch('http://localhost:3001/api/admin/recipes/bulk-import', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

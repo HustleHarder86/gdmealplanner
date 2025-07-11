@@ -13,47 +13,25 @@ const initializeAdmin = () => {
     if (serviceAccountKey) {
       // Initialize with service account (production)
       try {
-        // Extract values directly to avoid JSON parsing issues
-        const extractField = (fieldName: string): string | null => {
-          const pattern = new RegExp(`"${fieldName}"\\s*:\\s*"([^"]*)"`, "s");
-          const match = serviceAccountKey.match(pattern);
-          return match ? match[1] : null;
-        };
-
-        // Extract the private key
-        const privateKeyStart = serviceAccountKey.indexOf(
-          "-----BEGIN PRIVATE KEY-----",
-        );
-        const privateKeyEnd = serviceAccountKey.indexOf(
-          "-----END PRIVATE KEY-----",
-        );
-
-        let privateKey = null;
-        if (privateKeyStart !== -1 && privateKeyEnd !== -1) {
-          privateKey = serviceAccountKey.substring(
-            privateKeyStart,
-            privateKeyEnd + 25,
-          );
-        }
-
-        const projectId = extractField("project_id");
-        const clientEmail = extractField("client_email");
-
-        if (!projectId || !clientEmail || !privateKey) {
+        // Parse the JSON properly
+        const serviceAccount = JSON.parse(serviceAccountKey);
+        
+        // Verify required fields exist
+        if (!serviceAccount.project_id || !serviceAccount.client_email || !serviceAccount.private_key) {
           throw new Error(
-            `Firebase Admin initialization failed - missing required fields: projectId=${!!projectId}, clientEmail=${!!clientEmail}, privateKey=${!!privateKey}`,
+            `Firebase Admin initialization failed - missing required fields: projectId=${!!serviceAccount.project_id}, clientEmail=${!!serviceAccount.client_email}, privateKey=${!!serviceAccount.private_key}`,
           );
         }
 
-        const serviceAccount = {
-          projectId,
-          clientEmail,
-          privateKey,
-        };
+        // Initialize with the parsed service account
         initializeApp({
-          credential: cert(serviceAccount),
-          projectId: projectId,
-          storageBucket: `${projectId}.appspot.com`,
+          credential: cert({
+            projectId: serviceAccount.project_id,
+            clientEmail: serviceAccount.client_email,
+            privateKey: serviceAccount.private_key,
+          }),
+          projectId: serviceAccount.project_id,
+          storageBucket: `${serviceAccount.project_id}.appspot.com`,
         });
         console.log("Firebase Admin initialized with service account");
       } catch (error) {

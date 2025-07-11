@@ -158,6 +158,92 @@ export default function MealPlannerV2Page() {
     URL.revokeObjectURL(url);
   };
 
+  const swapMeal = async (dayIndex: number, mealType: string) => {
+    if (!mealPlan) return;
+    
+    try {
+      setGenerating(true);
+      setError(null);
+      
+      // Find a different recipe for this meal slot
+      const currentDayMeals = mealPlan.days[dayIndex].meals;
+      const currentMeal = (currentDayMeals as any)[mealType];
+      const categoryFilter = getMealCategoryFilter(mealType);
+      const carbDistribution = preferences?.carbDistribution as any;
+      const targetCarbs = carbDistribution?.[mealType] || 30;
+      
+      // Get suitable recipes excluding the current one
+      const allRecipes = LocalRecipeService.getAllRecipes();
+      const suitableRecipes = allRecipes.filter(recipe => {
+        if (recipe.id === currentMeal.recipeId) return false;
+        if (categoryFilter && recipe.category !== categoryFilter) return false;
+        
+        const carbDiff = Math.abs(recipe.nutrition.carbohydrates - targetCarbs);
+        return carbDiff <= targetCarbs * 0.4; // 40% tolerance
+      });
+      
+      if (suitableRecipes.length === 0) {
+        setError('No suitable alternative recipes found for this meal slot');
+        return;
+      }
+      
+      // Pick a random suitable recipe
+      const newRecipe = suitableRecipes[Math.floor(Math.random() * suitableRecipes.length)];
+      
+      // Update the meal plan
+      const updatedPlan = { ...mealPlan };
+      (updatedPlan.days[dayIndex].meals as any)[mealType] = {
+        recipeId: newRecipe.id,
+        recipeName: newRecipe.title,
+        servings: 1,
+        nutrition: {
+          calories: newRecipe.nutrition.calories,
+          carbohydrates: newRecipe.nutrition.carbohydrates,
+          protein: newRecipe.nutrition.protein,
+          fat: newRecipe.nutrition.fat,
+          fiber: newRecipe.nutrition.fiber
+        },
+        cookTime: newRecipe.totalTime,
+        category: newRecipe.category as 'breakfast' | 'lunch' | 'dinner' | 'snack'
+      };
+      
+      // Recalculate day nutrition
+      const dayMeals = Object.values(updatedPlan.days[dayIndex].meals);
+      updatedPlan.days[dayIndex].totalNutrition = {
+        calories: dayMeals.reduce((sum, meal) => sum + meal.nutrition.calories, 0),
+        carbohydrates: dayMeals.reduce((sum, meal) => sum + meal.nutrition.carbohydrates, 0),
+        protein: dayMeals.reduce((sum, meal) => sum + meal.nutrition.protein, 0),
+        fat: dayMeals.reduce((sum, meal) => sum + meal.nutrition.fat, 0),
+        fiber: dayMeals.reduce((sum, meal) => sum + meal.nutrition.fiber, 0),
+        mealsCount: dayMeals.filter(meal => !['morningSnack', 'afternoonSnack', 'eveningSnack'].includes(meal.category)).length,
+        snacksCount: dayMeals.filter(meal => ['morningSnack', 'afternoonSnack', 'eveningSnack'].includes(meal.category)).length
+      };
+      
+      updatedPlan.version += 1;
+      updatedPlan.updatedAt = new Date().toISOString();
+      
+      setMealPlan(updatedPlan);
+      
+      // Update shopping list
+      const shopping = ShoppingListGenerator.generateFromMealPlan(updatedPlan);
+      setShoppingList(shopping);
+      
+    } catch (err) {
+      console.error('[MEAL_PLANNER] Swap error:', err);
+      setError('Failed to swap meal. Please try again.');
+    } finally {
+      setGenerating(false);
+    }
+  };
+
+  const getMealCategoryFilter = (mealType: string): 'breakfast' | 'lunch' | 'dinner' | 'snack' | null => {
+    if (mealType === 'breakfast') return 'breakfast';
+    if (mealType === 'lunch') return 'lunch';
+    if (mealType === 'dinner') return 'dinner';
+    if (mealType.includes('snack') || mealType.includes('Snack')) return 'snack';
+    return null;
+  };
+
   const getNextMondayISOString = (): string => {
     const today = new Date();
     const daysUntilMonday = (1 + 7 - today.getDay()) % 7 || 7;
@@ -254,23 +340,60 @@ export default function MealPlannerV2Page() {
                     </h3>
                     
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                      {Object.entries(day.meals).map(([mealType, meal]) => (
-                        <div key={mealType} className="border rounded p-3">
-                          <div className="font-medium text-sm text-gray-600 mb-1 capitalize">
-                            {mealType.replace(/([A-Z])/g, ' $1').trim()}
-                          </div>
-                          {meal.recipeId ? (
-                            <div>
-                              <div className="font-medium">{meal.recipeName}</div>
-                              <div className="text-sm text-gray-600">
-                                {meal.nutrition.carbohydrates}g carbs • {meal.cookTime}min
-                              </div>
+                      {Object.entries(day.meals).map(([mealType, meal]) => {
+                        const recipe = meal.recipeId ? LocalRecipeService.getRecipeById(meal.recipeId) : null;
+                        
+                        return (
+                          <div key={mealType} className="border rounded-lg p-3 hover:shadow-md transition-shadow">
+                            <div className="font-medium text-sm text-gray-600 mb-2 capitalize">
+                              {mealType.replace(/([A-Z])/g, ' $1').trim()}
                             </div>
-                          ) : (
-                            <div className="text-gray-400 italic">No meal</div>
-                          )}
-                        </div>
-                      ))}
+                            {meal.recipeId && recipe ? (
+                              <div className="space-y-2">
+                                {/* Recipe Image */}
+                                <div className="relative h-24 w-full rounded overflow-hidden bg-gray-100">
+                                  <img
+                                    src={recipe.imageUrl || recipe.localImageUrl || '/api/placeholder/200/150'}
+                                    alt={recipe.title}
+                                    className="w-full h-full object-cover"
+                                    onError={(e) => {
+                                      e.currentTarget.src = '/api/placeholder/200/150';
+                                    }}
+                                  />
+                                </div>
+                                
+                                {/* Recipe Info */}
+                                <div>
+                                  <div className="font-medium text-sm leading-tight mb-1">{meal.recipeName}</div>
+                                  <div className="text-xs text-gray-600 mb-2">
+                                    {meal.nutrition.carbohydrates}g carbs • {meal.cookTime}min • {meal.nutrition.calories} cal
+                                  </div>
+                                  
+                                  {/* Action Buttons */}
+                                  <div className="flex gap-2">
+                                    <button
+                                      onClick={() => window.open(`/recipes/${recipe.id}`, '_blank')}
+                                      className="flex-1 bg-green-600 text-white text-xs py-1.5 px-2 rounded hover:bg-green-700 transition-colors"
+                                    >
+                                      View Recipe
+                                    </button>
+                                    <button
+                                      onClick={() => swapMeal(index, mealType)}
+                                      disabled={generating}
+                                      className="bg-blue-600 text-white text-xs py-1.5 px-2 rounded hover:bg-blue-700 transition-colors disabled:opacity-50"
+                                      title="Swap with another recipe"
+                                    >
+                                      🔄
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            ) : (
+                              <div className="text-gray-400 italic text-center py-8">No meal</div>
+                            )}
+                          </div>
+                        );
+                      })}
                     </div>
                     
                     {/* Daily totals */}
@@ -291,21 +414,27 @@ export default function MealPlannerV2Page() {
               onClick={() => setShowShoppingList(!showShoppingList)}
               variant="primary"
             >
-              {showShoppingList ? 'Hide' : 'Show'} Shopping List
+              🛒 {showShoppingList ? 'Hide' : 'Show'} Shopping List
             </Button>
             <Button
               onClick={updateWithNewRecipes}
               disabled={generating}
               variant="secondary"
             >
-              {generating ? 'Updating...' : 'Update with New Recipes'}
+              {generating ? '🔄 Updating...' : '✨ Update with New Recipes'}
             </Button>
             <Button
               onClick={generateMealPlan}
               disabled={generating}
               variant="outline"
             >
-              Generate New Plan
+              {generating ? '🧠 Generating...' : '🎲 Generate New Plan'}
+            </Button>
+            <Button
+              onClick={() => window.print()}
+              variant="outline"
+            >
+              🖨️ Print Plan
             </Button>
           </div>
 

@@ -1,0 +1,12 @@
+{
+  "exportDate": "2025-07-11T16:24:15.928Z",
+  "recipeCount": 397,
+  "categoryBreakdown": {
+    "breakfast": 90,
+    "dinner": 218,
+    "lunch": 56,
+    "snack": 33
+  },
+  "source": "Firebase Production Database",
+  "message": "Full recipe data split into category files for better performance"
+}

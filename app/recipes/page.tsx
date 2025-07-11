@@ -128,8 +128,15 @@ export default function RecipesPage() {
         <h1 className="text-3xl font-bold mb-2">GD-Friendly Recipes</h1>
         <p className="text-neutral-600">
           Browse our collection of {recipes.length} gestational
-          diabetes-friendly recipes from Spoonacular
+          diabetes-friendly recipes
         </p>
+        <div className="mt-2 flex items-center gap-2 text-sm text-green-600">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span>Offline Mode - No internet required</span>
+        </div>
       </div>
 
       {/* Search and Filters */}

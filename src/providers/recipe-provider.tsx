@@ -43,20 +43,25 @@ export function RecipeProvider({ children }: { children: React.ReactNode }) {
   const [error, setError] = useState<string | null>(null);
   const [initialized, setInitialized] = useState(false);
 
-  // Load recipes on mount
+  // Load recipes on mount - OFFLINE ONLY
   useEffect(() => {
     async function loadRecipes() {
       try {
         setLoading(true);
         setError(null);
 
-        // Try to load from the static JSON file
+        // Load from the static JSON file - NO API CALLS
         const response = await fetch("/data/production-recipes.json");
         if (!response.ok) {
           throw new Error(`Failed to load recipes: ${response.statusText}`);
         }
 
         const data = await response.json();
+
+        // Validate the data
+        if (!data.recipes || !Array.isArray(data.recipes)) {
+          throw new Error("Invalid recipe data format");
+        }
 
         // Initialize LocalRecipeService with the loaded data
         await LocalRecipeService.initialize(data.recipes);
@@ -66,22 +71,35 @@ export function RecipeProvider({ children }: { children: React.ReactNode }) {
         setRecipes(loadedRecipes);
         setInitialized(true);
 
-        console.log(`Loaded ${loadedRecipes.length} recipes from static file`);
+        console.log(`[OFFLINE] Loaded ${loadedRecipes.length} recipes from static file`);
+        console.log(`[OFFLINE] Categories: ${JSON.stringify(data.categoryBreakdown || {})}`);
+        
+        // Store in localStorage for future offline use
+        if (loadedRecipes.length > 0) {
+          try {
+            localStorage.setItem("recipes_data", JSON.stringify(loadedRecipes));
+            localStorage.setItem("recipes_count", loadedRecipes.length.toString());
+            localStorage.setItem("recipes_last_updated", new Date().toISOString());
+          } catch (storageErr) {
+            console.warn("Failed to cache recipes:", storageErr);
+          }
+        }
       } catch (err) {
-        console.error("Error loading recipes:", err);
+        console.error("[OFFLINE] Error loading recipes:", err);
         setError(err instanceof Error ? err.message : "Failed to load recipes");
 
-        // Try to fall back to local storage
+        // Try to fall back to local storage cache
         try {
+          const cachedCount = localStorage.getItem("recipes_count");
           await LocalRecipeService.initialize();
           const cachedRecipes = LocalRecipeService.getAllRecipes();
           if (cachedRecipes.length > 0) {
             setRecipes(cachedRecipes);
             setInitialized(true);
-            console.log(`Loaded ${cachedRecipes.length} recipes from cache`);
+            console.log(`[OFFLINE] Loaded ${cachedRecipes.length} recipes from localStorage cache`);
           }
         } catch (cacheErr) {
-          console.error("Failed to load from cache:", cacheErr);
+          console.error("[OFFLINE] Failed to load from cache:", cacheErr);
         }
       } finally {
         setLoading(false);

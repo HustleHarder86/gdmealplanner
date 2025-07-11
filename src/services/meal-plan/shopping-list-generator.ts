@@ -220,7 +220,9 @@ export class ShoppingListGenerator {
         'oil', 'vinegar', 'salt', 'pepper', 'spice', 'sauce', 'paste',
         'stock', 'broth', 'can', 'jar', 'bottle', 'extract', 'vanilla',
         'sugar', 'honey', 'syrup', 'baking', 'powder', 'soda', 'nuts',
-        'seeds', 'nut', 'almond', 'walnut', 'peanut'
+        'seeds', 'nut', 'almond', 'walnut', 'peanut', 'tahini', 'cocoa',
+        'condiment', 'mayonnaise', 'ketchup', 'mustard', 'hot sauce',
+        'asian sauce', 'soy', 'salsa'
       ]],
       ['Frozen', [
         'frozen', 'ice', 'cream'
@@ -240,7 +242,9 @@ export class ShoppingListGenerator {
   private static shouldSkipIngredient(normalizedName: string): boolean {
     const skipList = [
       'water', 'ice', 'salt and pepper', 'to taste', 'as needed',
-      'for serving', 'for garnish', 'optional', '', ' '
+      'for serving', 'for garnish', 'optional', '', ' ', 'serving',
+      'the', 'and', 'or', 'of', 'a', 'an', 'servings', 'serving size',
+      'additional', 'toppings', 'garnish', 'decoration'
     ];
     
     return skipList.includes(normalizedName) || normalizedName.length < 2;
@@ -466,16 +470,17 @@ export class ShoppingListGenerator {
       // All citrus
       'lemon': 'lemons',
       'lime': 'limes', 
-      'orange': 'oranges',
       'lemon juice': 'lemons',
       'lime juice': 'limes',
       'lemon zest': 'lemons',
       
-      // All herbs as "fresh herbs"
+      // All herbs as "fresh herbs" or "spices"
       'basil': 'fresh herbs',
       'cilantro': 'fresh herbs',
       'parsley': 'fresh herbs',
       'mint': 'fresh herbs',
+      'chives': 'fresh herbs',
+      'dill': 'fresh herbs',
       'thyme': 'spices',
       'oregano': 'spices',
       'rosemary': 'spices',
@@ -483,10 +488,18 @@ export class ShoppingListGenerator {
       'paprika': 'spices',
       'chili powder': 'spices',
       'curry powder': 'spices',
+      'curry': 'spices',
       'garam masala': 'spices',
+      'masala': 'spices',
       'coriander': 'spices',
       'cinnamon': 'spices',
       'turmeric': 'spices',
+      'cayenne': 'spices',
+      'nutmeg': 'spices',
+      'ginger powder': 'spices',
+      'garlic powder': 'spices',
+      'onion powder': 'spices',
+      'seasoning': 'spices',
       
       // All oils
       'olive oil': 'cooking oil',
@@ -520,8 +533,86 @@ export class ShoppingListGenerator {
       'rice': 'rice',
       'quinoa': 'quinoa',
       'oats': 'oats',
+      'oatmeal': 'oats',
       'pasta': 'pasta',
-      'bread': 'bread'
+      'bread': 'bread',
+      'vanilla': 'vanilla extract',
+      'vanilla extract': 'vanilla extract',
+      'baking powder': 'baking powder',
+      'baking soda': 'baking soda',
+      'cocoa': 'cocoa powder',
+      'cocoa powder': 'cocoa powder',
+      
+      // Nuts and seeds
+      'almonds': 'nuts',
+      'walnuts': 'nuts',
+      'cashews': 'nuts',
+      'peanuts': 'nuts',
+      'pecans': 'nuts',
+      'pistachios': 'nuts',
+      'nuts': 'nuts',
+      'chia seeds': 'seeds',
+      'flax seeds': 'seeds',
+      'flax': 'seeds',
+      'sunflower seeds': 'seeds',
+      'pumpkin seeds': 'seeds',
+      'seeds': 'seeds',
+      
+      // Berries
+      'blueberries': 'mixed berries',
+      'strawberries': 'mixed berries',
+      'raspberries': 'mixed berries',
+      'blackberries': 'mixed berries',
+      'berries': 'mixed berries',
+      'berry blend': 'mixed berries',
+      
+      // Sauces and condiments
+      'soy sauce': 'asian sauces',
+      'teriyaki sauce': 'asian sauces',
+      'hoisin sauce': 'asian sauces',
+      'tahini': 'tahini',
+      'salsa': 'salsa',
+      'hot sauce': 'hot sauce',
+      'tabasco': 'hot sauce',
+      'mayonnaise': 'mayonnaise',
+      'ketchup': 'condiments',
+      'mustard': 'condiments',
+      'bbq sauce': 'condiments',
+      'sauce': 'condiments',
+      
+      // Other produce
+      'apple': 'apples',
+      'apples': 'apples',
+      'banana': 'bananas',
+      'bananas': 'bananas',
+      'orange': 'oranges',
+      'oranges': 'oranges',
+      'ginger': 'fresh ginger',
+      'jalapeno': 'jalapenos',
+      'jalapenos': 'jalapenos',
+      'chilies': 'chilies',
+      'chiles': 'chilies',
+      'scallions': 'scallions',
+      'shallots': 'shallots',
+      
+      // Proteins
+      'bacon': 'bacon',
+      'ham': 'deli meat',
+      'deli': 'deli meat',
+      
+      // Other
+      'chips': 'chips',
+      'tortilla chips': 'chips',
+      'pita': 'pita bread',
+      'pitas': 'pita bread',
+      'tortilla': 'tortillas',
+      'tortillas': 'tortillas',
+      'stock': 'broth',
+      'broth': 'broth',
+      'vegetable stock': 'broth',
+      'vegetable broth': 'broth',
+      'chicken stock': 'broth',
+      'chicken broth': 'broth'
     };
     
     // Clean up whitespace first
@@ -721,6 +812,94 @@ export class ShoppingListGenerator {
     
     if (lowerName.includes('pepper')) {
       return { amount: '1 container', unit: 'black pepper (check pantry first)' };
+    }
+    
+    // Nuts and seeds
+    if (lowerName.includes('nut') || lowerName.includes('almond') || lowerName.includes('walnut') || lowerName.includes('cashew')) {
+      return { amount: '1 package', unit: 'mixed nuts' };
+    }
+    
+    if (lowerName.includes('seed')) {
+      return { amount: '1 package', unit: 'seeds' };
+    }
+    
+    // Berries
+    if (lowerName.includes('berr')) {
+      return { amount: '1 container', unit: 'mixed berries' };
+    }
+    
+    // Fresh produce
+    if (lowerName.includes('apple')) {
+      return { amount: '3-4', unit: 'apples' };
+    }
+    
+    if (lowerName.includes('banana')) {
+      return { amount: '1 bunch', unit: 'bananas' };
+    }
+    
+    if (lowerName.includes('ginger') && !lowerName.includes('powder')) {
+      return { amount: '1 piece', unit: 'fresh ginger' };
+    }
+    
+    // Condiments and sauces
+    if (lowerName.includes('tahini')) {
+      return { amount: '1 jar', unit: 'tahini' };
+    }
+    
+    if (lowerName.includes('salsa')) {
+      return { amount: '1 jar', unit: 'salsa' };
+    }
+    
+    if (lowerName.includes('mayonnaise')) {
+      return { amount: '1 jar', unit: 'mayonnaise' };
+    }
+    
+    if (lowerName.includes('hot sauce') || lowerName.includes('tabasco')) {
+      return { amount: '1 bottle', unit: 'hot sauce' };
+    }
+    
+    if (lowerName.includes('asian sauce') || lowerName.includes('soy')) {
+      return { amount: '1 bottle', unit: 'soy sauce' };
+    }
+    
+    if (lowerName.includes('condiment') || lowerName.includes('ketchup') || lowerName.includes('mustard')) {
+      return { amount: '1 bottle', unit: 'condiments' };
+    }
+    
+    // Baking items
+    if (lowerName.includes('vanilla')) {
+      return { amount: '1 bottle', unit: 'vanilla extract' };
+    }
+    
+    if (lowerName.includes('baking powder')) {
+      return { amount: '1 container', unit: 'baking powder' };
+    }
+    
+    if (lowerName.includes('baking soda')) {
+      return { amount: '1 box', unit: 'baking soda' };
+    }
+    
+    if (lowerName.includes('cocoa')) {
+      return { amount: '1 container', unit: 'cocoa powder' };
+    }
+    
+    // Broth
+    if (lowerName.includes('broth') || lowerName.includes('stock')) {
+      return { amount: '2-3 cartons', unit: 'broth' };
+    }
+    
+    // Chips
+    if (lowerName.includes('chip')) {
+      return { amount: '1 bag', unit: 'chips' };
+    }
+    
+    // Pita/tortillas
+    if (lowerName.includes('pita')) {
+      return { amount: '1 package', unit: 'pita bread' };
+    }
+    
+    if (lowerName.includes('tortilla')) {
+      return { amount: '1 package', unit: 'tortillas' };
     }
     
     // Default conversion for remaining items

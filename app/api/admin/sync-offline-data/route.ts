@@ -41,19 +41,10 @@ export async function POST(request: NextRequest) {
       return (a.title || '').localeCompare(b.title || '');
     });
 
-    // Calculate recipe breakdown by category and meal type
+    // Calculate recipe breakdown by category
     const categoryBreakdown = recipes.reduce((acc, recipe) => {
       const category = recipe.category || 'uncategorized';
       acc[category] = (acc[category] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
-
-    const mealTypeBreakdown = recipes.reduce((acc, recipe) => {
-      if (recipe.mealTypes && Array.isArray(recipe.mealTypes)) {
-        recipe.mealTypes.forEach(type => {
-          acc[type] = (acc[type] || 0) + 1;
-        });
-      }
       return acc;
     }, {} as Record<string, number>);
 
@@ -63,7 +54,6 @@ export async function POST(request: NextRequest) {
       exportDate: new Date().toISOString(),
       recipeCount: recipes.length,
       categoryBreakdown: categoryBreakdown,
-      mealTypeBreakdown: mealTypeBreakdown,
       recipes: recipes,
       source: 'Firebase Production Database',
     };

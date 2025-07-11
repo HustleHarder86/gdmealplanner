@@ -24,6 +24,8 @@ export default function MealPlannerV2Page() {
   const [mealPlan, setMealPlan] = useState<MealPlan | null>(null);
   const [shoppingList, setShoppingList] = useState<ShoppingList | null>(null);
   const [showShoppingList, setShowShoppingList] = useState(false);
+  const [activeTab, setActiveTab] = useState<'meal-plan' | 'shopping-list'>('meal-plan');
+  const [expandedDays, setExpandedDays] = useState<number[]>([0]); // Only first day expanded by default
   const [preferences, setPreferences] = useState<MealPlanPreferences | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -314,136 +316,190 @@ export default function MealPlannerV2Page() {
         </Card>
       ) : (
         <>
-          {/* Meal Plan Display */}
-          <Card className="mb-6">
-            <div className="p-6 border-b">
-              <div className="flex justify-between items-center">
-                <div>
-                  <h2 className="text-xl font-semibold">{mealPlan.name}</h2>
-                  <p className="text-gray-600">
-                    Week of {new Date(mealPlan.weekStartDate).toLocaleDateString()}
-                  </p>
-                </div>
-                <div className="text-sm text-gray-500">
-                  Version {mealPlan.version}
-                </div>
-              </div>
+          {/* Sticky Tab Navigation */}
+          <div className="sticky top-0 z-10 bg-white border-b mb-6 -mx-4 px-4">
+            <div className="flex gap-4">
+              <button
+                onClick={() => setActiveTab('meal-plan')}
+                className={`py-3 px-6 font-medium border-b-2 transition-colors ${
+                  activeTab === 'meal-plan' 
+                    ? 'border-green-600 text-green-600' 
+                    : 'border-transparent text-gray-600 hover:text-gray-900'
+                }`}
+              >
+                📅 Meal Plan
+              </button>
+              <button
+                onClick={() => setActiveTab('shopping-list')}
+                className={`py-3 px-6 font-medium border-b-2 transition-colors ${
+                  activeTab === 'shopping-list' 
+                    ? 'border-green-600 text-green-600' 
+                    : 'border-transparent text-gray-600 hover:text-gray-900'
+                }`}
+              >
+                🛒 Shopping List {shoppingList && `(${shoppingList.totalItems} items)`}
+              </button>
             </div>
-            
-            {/* Days */}
-            <div className="p-6">
-              <div className="space-y-6">
-                {mealPlan.days.map((day, index) => (
-                  <div key={day.date} className="border rounded-lg p-4">
-                    <h3 className="font-semibold text-lg mb-3">
-                      {new Date(day.date).toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}
-                    </h3>
-                    
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                      {Object.entries(day.meals).map(([mealType, meal]) => {
-                        const recipe = meal.recipeId ? LocalRecipeService.getRecipeById(meal.recipeId) : null;
-                        
-                        return (
-                          <div key={mealType} className="border rounded-lg p-3 hover:shadow-md transition-shadow">
-                            <div className="font-medium text-sm text-gray-600 mb-2 capitalize">
-                              {mealType.replace(/([A-Z])/g, ' $1').trim()}
-                            </div>
-                            {meal.recipeId && recipe ? (
-                              <div className="space-y-2">
-                                {/* Recipe Image */}
-                                <div className="relative h-24 w-full rounded overflow-hidden bg-gray-100">
-                                  <img
-                                    src={recipe.imageUrl || recipe.localImageUrl || '/api/placeholder/200/150'}
-                                    alt={recipe.title}
-                                    className="w-full h-full object-cover"
-                                    onError={(e) => {
-                                      e.currentTarget.src = '/api/placeholder/200/150';
-                                    }}
-                                  />
-                                </div>
-                                
-                                {/* Recipe Info */}
-                                <div>
-                                  <div className="font-medium text-sm leading-tight mb-1">{meal.recipeName}</div>
-                                  <div className="text-xs text-gray-600 mb-2">
-                                    {meal.nutrition.carbohydrates}g carbs • {meal.cookTime}min • {meal.nutrition.calories} cal
-                                  </div>
-                                  
-                                  {/* Action Buttons */}
-                                  <div className="flex gap-2">
-                                    <button
-                                      onClick={() => window.open(`/recipes/${recipe.id}`, '_blank')}
-                                      className="flex-1 bg-green-600 text-white text-xs py-1.5 px-2 rounded hover:bg-green-700 transition-colors"
-                                    >
-                                      View Recipe
-                                    </button>
-                                    <button
-                                      onClick={() => swapMeal(index, mealType)}
-                                      disabled={generating}
-                                      className="bg-blue-600 text-white text-xs py-1.5 px-2 rounded hover:bg-blue-700 transition-colors disabled:opacity-50"
-                                      title="Swap with another recipe"
-                                    >
-                                      🔄
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                            ) : (
-                              <div className="text-gray-400 italic text-center py-8">No meal</div>
-                            )}
-                          </div>
-                        );
-                      })}
-                    </div>
-                    
-                    {/* Daily totals */}
-                    <div className="mt-3 p-3 bg-gray-50 rounded">
-                      <div className="text-sm text-gray-600">
-                        <strong>Daily totals:</strong> {day.totalNutrition.calories} calories • {day.totalNutrition.carbohydrates}g carbs • {day.totalNutrition.protein}g protein • {day.totalNutrition.fiber}g fiber
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </Card>
-
-          {/* Action Buttons */}
-          <div className="flex flex-wrap gap-4 mb-6">
-            <Button
-              onClick={() => setShowShoppingList(!showShoppingList)}
-              variant="primary"
-            >
-              🛒 {showShoppingList ? 'Hide' : 'Show'} Shopping List
-            </Button>
-            <Button
-              onClick={updateWithNewRecipes}
-              disabled={generating}
-              variant="secondary"
-            >
-              {generating ? '🔄 Updating...' : '✨ Update with New Recipes'}
-            </Button>
-            <Button
-              onClick={generateMealPlan}
-              disabled={generating}
-              variant="outline"
-            >
-              {generating ? '🧠 Generating...' : '🎲 Generate New Plan'}
-            </Button>
-            <Button
-              onClick={() => window.print()}
-              variant="outline"
-            >
-              🖨️ Print Plan
-            </Button>
           </div>
 
-          {/* Shopping List */}
-          {showShoppingList && shoppingList && (
-            <Card className="mb-6">
+          {/* Tab Content */}
+          {activeTab === 'meal-plan' ? (
+            /* Meal Plan Tab */
+            <div>
+              {/* Plan Header */}
+              <Card className="mb-4 p-4">
+                <div className="flex flex-wrap justify-between items-center gap-4">
+                  <div>
+                    <h2 className="text-xl font-semibold">{mealPlan.name}</h2>
+                    <p className="text-gray-600">
+                      Week of {new Date(mealPlan.weekStartDate).toLocaleDateString()}
+                    </p>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    <Button
+                      onClick={() => setExpandedDays(expandedDays.length === 7 ? [] : [0,1,2,3,4,5,6])}
+                      variant="outline"
+                      size="sm"
+                    >
+                      {expandedDays.length === 7 ? '➖ Collapse All' : '➕ Expand All'}
+                    </Button>
+                    <Button
+                      onClick={updateWithNewRecipes}
+                      disabled={generating}
+                      variant="secondary"
+                      size="sm"
+                    >
+                      {generating ? '🔄 Updating...' : '✨ Update Recipes'}
+                    </Button>
+                    <Button
+                      onClick={generateMealPlan}
+                      disabled={generating}
+                      variant="outline"
+                      size="sm"
+                    >
+                      {generating ? '🧠 Generating...' : '🎲 New Plan'}
+                    </Button>
+                    <Button
+                      onClick={() => window.print()}
+                      variant="outline"
+                      size="sm"
+                    >
+                      🖨️ Print
+                    </Button>
+                  </div>
+                </div>
+              </Card>
+              
+              {/* Days - Collapsible */}
+              <div className="space-y-3">
+                {mealPlan.days.map((day, index) => {
+                  const isExpanded = expandedDays.includes(index);
+                  const dayDate = new Date(day.date);
+                  const isToday = new Date().toDateString() === dayDate.toDateString();
+                  
+                  return (
+                    <Card key={day.date} className={`overflow-hidden ${isToday ? 'ring-2 ring-green-500' : ''}`}>
+                      {/* Day Header - Always Visible */}
+                      <div 
+                        className="p-4 bg-gray-50 cursor-pointer hover:bg-gray-100 transition-colors"
+                        onClick={() => {
+                          setExpandedDays(isExpanded 
+                            ? expandedDays.filter(d => d !== index)
+                            : [...expandedDays, index]
+                          );
+                        }}
+                      >
+                        <div className="flex justify-between items-center">
+                          <div className="flex items-center gap-3">
+                            <span className="text-2xl">{isExpanded ? '▼' : '▶'}</span>
+                            <div>
+                              <h3 className="font-semibold text-lg">
+                                {dayDate.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}
+                                {isToday && <span className="ml-2 text-green-600 text-sm">(Today)</span>}
+                              </h3>
+                              <p className="text-sm text-gray-600">
+                                {day.totalNutrition.carbohydrates}g carbs • {day.totalNutrition.calories} cal • {day.totalNutrition.protein}g protein
+                              </p>
+                            </div>
+                          </div>
+                          <div className="text-sm text-gray-500">
+                            {Object.values(day.meals).filter(m => m.recipeId).length} meals planned
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Day Content - Collapsible */}
+                      {isExpanded && (
+                        <div className="p-4">
+                          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+                            {Object.entries(day.meals).map(([mealType, meal]) => {
+                              const recipe = meal.recipeId ? LocalRecipeService.getRecipeById(meal.recipeId) : null;
+                              
+                              return (
+                                <div key={mealType} className="border rounded-lg p-3 hover:shadow-md transition-shadow">
+                                  <div className="font-medium text-sm text-gray-600 mb-2 capitalize">
+                                    {mealType.replace(/([A-Z])/g, ' $1').trim()}
+                                  </div>
+                                  {meal.recipeId && recipe ? (
+                                    <div className="space-y-2">
+                                      {/* Recipe Image */}
+                                      <div className="relative h-20 w-full rounded overflow-hidden bg-gray-100">
+                                        <img
+                                          src={recipe.imageUrl || recipe.localImageUrl || '/api/placeholder/200/150'}
+                                          alt={recipe.title}
+                                          className="w-full h-full object-cover"
+                                          onError={(e) => {
+                                            e.currentTarget.src = '/api/placeholder/200/150';
+                                          }}
+                                        />
+                                      </div>
+                                      
+                                      {/* Recipe Info */}
+                                      <div>
+                                        <div className="font-medium text-sm leading-tight mb-1 line-clamp-2" title={meal.recipeName}>{meal.recipeName}</div>
+                                        <div className="text-xs text-gray-600 mb-2">
+                                          {meal.nutrition.carbohydrates}g carbs • {meal.cookTime}min
+                                        </div>
+                                        
+                                        {/* Action Buttons */}
+                                        <div className="flex gap-2">
+                                          <button
+                                            onClick={() => window.open(`/recipes/${recipe.id}`, '_blank')}
+                                            className="flex-1 bg-green-600 text-white text-xs py-1 px-2 rounded hover:bg-green-700 transition-colors"
+                                          >
+                                            View
+                                          </button>
+                                          <button
+                                            onClick={() => swapMeal(index, mealType)}
+                                            disabled={generating}
+                                            className="bg-blue-600 text-white text-xs py-1 px-2 rounded hover:bg-blue-700 transition-colors disabled:opacity-50"
+                                            title="Swap"
+                                          >
+                                            🔄
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  ) : (
+                                    <div className="text-gray-400 italic text-center py-6 text-sm">No meal</div>
+                                  )}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      )}
+                    </Card>
+                  );
+                })}
+              </div>
+            </div>
+          ) : (
+            /* Shopping List Tab */
+            <Card>
               <div className="p-6 border-b">
                 <div className="flex justify-between items-center">
-                  <h3 className="text-lg font-semibold">Interactive Shopping List</h3>
+                  <h3 className="text-lg font-semibold">Shopping List</h3>
                   <div className="flex gap-2">
                     <Button
                       onClick={() => {
@@ -465,16 +521,56 @@ export default function MealPlannerV2Page() {
                     </Button>
                   </div>
                 </div>
-                <p className="text-gray-600">
-                  {shoppingList.totalItems} items for week of {new Date(shoppingList.weekStartDate).toLocaleDateString()}
+                <p className="text-gray-600 mt-1">
+                  {shoppingList?.totalItems} items for week of {shoppingList && new Date(shoppingList.weekStartDate).toLocaleDateString()}
                 </p>
               </div>
               
               <div className="p-6">
+                {/* Quick Actions */}
+                <div className="flex flex-wrap gap-2 mb-4 pb-4 border-b">
+                  <button
+                    onClick={() => {
+                      document.querySelectorAll('input[type="checkbox"]').forEach((cb: any) => {
+                        cb.checked = true;
+                        const itemText = cb.nextElementSibling as HTMLElement;
+                        itemText.classList.add('line-through', 'text-gray-400');
+                      });
+                    }}
+                    className="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors"
+                  >
+                    ✅ Check All
+                  </button>
+                  <button
+                    onClick={() => {
+                      document.querySelectorAll('input[type="checkbox"]').forEach((cb: any) => {
+                        cb.checked = false;
+                        const itemText = cb.nextElementSibling as HTMLElement;
+                        itemText.classList.remove('line-through', 'text-gray-400');
+                      });
+                    }}
+                    className="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors"
+                  >
+                    🔄 Uncheck All
+                  </button>
+                  <button
+                    onClick={() => {
+                      const checkedItems = document.querySelectorAll('input[type="checkbox"]:checked');
+                      checkedItems.forEach((cb: any) => {
+                        cb.closest('label').style.display = 'none';
+                      });
+                    }}
+                    className="text-xs bg-red-100 hover:bg-red-200 px-3 py-1 rounded transition-colors"
+                  >
+                    🗑️ Hide Checked
+                  </button>
+                </div>
+                
+                {/* Shopping List Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {shoppingList.categories.map(category => (
+                  {shoppingList?.categories.map(category => (
                     <div key={category.name} className="space-y-3">
-                      <h4 className="font-semibold text-gray-900 mb-3 text-base">{category.name}</h4>
+                      <h4 className="font-semibold text-gray-900 mb-3 text-base sticky top-0 bg-white py-1">{category.name}</h4>
                       <div className="space-y-2">
                         {category.items.map((item, index) => (
                           <label 
@@ -505,58 +601,19 @@ export default function MealPlannerV2Page() {
                     </div>
                   ))}
                 </div>
-                
-                {/* Quick Actions */}
-                <div className="mt-6 pt-4 border-t">
-                  <div className="flex flex-wrap gap-2">
-                    <button
-                      onClick={() => {
-                        document.querySelectorAll('input[type="checkbox"]').forEach((cb: any) => {
-                          cb.checked = true;
-                          const itemText = cb.nextElementSibling as HTMLElement;
-                          itemText.classList.add('line-through', 'text-gray-400');
-                        });
-                      }}
-                      className="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors"
-                    >
-                      ✅ Check All
-                    </button>
-                    <button
-                      onClick={() => {
-                        document.querySelectorAll('input[type="checkbox"]').forEach((cb: any) => {
-                          cb.checked = false;
-                          const itemText = cb.nextElementSibling as HTMLElement;
-                          itemText.classList.remove('line-through', 'text-gray-400');
-                        });
-                      }}
-                      className="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors"
-                    >
-                      🔄 Uncheck All
-                    </button>
-                    <button
-                      onClick={() => {
-                        const checkedItems = document.querySelectorAll('input[type="checkbox"]:checked');
-                        checkedItems.forEach((cb: any) => {
-                          cb.closest('label').style.display = 'none';
-                        });
-                      }}
-                      className="text-xs bg-red-100 hover:bg-red-200 px-3 py-1 rounded transition-colors"
-                    >
-                      🗑️ Hide Checked
-                    </button>
-                  </div>
-                </div>
               </div>
             </Card>
           )}
-
-          {/* Medical Guidelines */}
-          <div className="p-4 bg-blue-50 rounded-lg">
-            <p className="text-sm text-blue-800">
-              <strong>Medical Note:</strong> This meal plan follows gestational diabetes guidelines with target daily intake of 175-200g carbohydrates distributed across 3 meals and 3 snacks. Evening snacks include protein for blood sugar stability. Always consult with your healthcare provider.
-            </p>
-          </div>
         </>
+      )}
+      
+      {/* Medical Guidelines - Outside tabs, always visible when meal plan exists */}
+      {mealPlan && (
+        <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+          <p className="text-sm text-blue-800">
+            <strong>Medical Note:</strong> This meal plan follows gestational diabetes guidelines with target daily intake of 175-200g carbohydrates distributed across 3 meals and 3 snacks. Evening snacks include protein for blood sugar stability. Always consult with your healthcare provider.
+          </p>
+        </div>
       )}
     </div>
   );

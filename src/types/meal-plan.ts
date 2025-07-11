@@ -1,181 +1,128 @@
-/**
- * Meal plan types for gestational diabetes management
- */
-
-import { Recipe } from "./recipe";
-
-export type MealType =
-  | "breakfast"
-  | "morningSnack"
-  | "lunch"
-  | "afternoonSnack"
-  | "dinner"
-  | "eveningSnack";
-
-export type DayOfWeek =
-  | "monday"
-  | "tuesday"
-  | "wednesday"
-  | "thursday"
-  | "friday"
-  | "saturday"
-  | "sunday";
-
-export interface MealAssignment {
-  mealType: MealType;
-  recipeId: string;
-  recipe?: Recipe; // Populated when loaded
-  servings: number;
-  notes?: string;
-}
-
-export interface DailyMealPlan {
-  date: Date;
-  dayOfWeek: DayOfWeek;
-  meals: MealAssignment[];
-
-  // Daily nutrition summary
-  nutrition: {
-    totalCalories: number;
-    totalCarbs: number;
-    totalProtein: number;
-    totalFat: number;
-    totalFiber: number;
-    carbDistribution: {
-      breakfast: number;
-      morningSnack: number;
-      lunch: number;
-      afternoonSnack: number;
-      dinner: number;
-      eveningSnack: number;
-    };
-  };
-
-  // Prep notes
-  prepNotes?: string[];
-
-  // User feedback
-  completed?: boolean;
-  rating?: number; // 1-5
-  notes?: string;
-}
-
-export interface WeeklyMealPlan {
-  id?: string;
+export interface MealPlan {
+  id: string;
   userId: string;
-  weekStartDate: Date;
-
-  // 7 days of meals
-  days: DailyMealPlan[];
-
-  // Weekly summary
-  summary: {
-    avgDailyCalories: number;
-    avgDailyCarbs: number;
-    avgDailyProtein: number;
-    avgDailyFat: number;
-    avgDailyFiber: number;
-
-    totalUniqueRecipes: number;
-    totalPrepTime: number;
-    estimatedCost?: number;
-  };
-
-  // User customizations
-  customizations: MealCustomization[];
-
-  // Metadata
-  generatedAt: Date;
-  lastModified?: Date;
-  basedOnPreferencesVersion?: string;
-
-  // Status
-  status: "draft" | "active" | "completed" | "archived";
+  name: string;
+  weekStartDate: string; // ISO date string
+  days: DayMealPlan[];
+  preferences: MealPlanPreferences;
+  createdAt: string;
+  updatedAt: string;
+  version: number; // For tracking when recipes are updated
 }
 
-export interface MealCustomization {
-  dayIndex: number;
-  mealType: MealType;
-  originalRecipeId: string;
-  newRecipeId: string;
-  reason?: string;
-  customizedAt: Date;
+export interface DayMealPlan {
+  date: string; // ISO date string
+  meals: {
+    breakfast: MealSlot;
+    morningSnack: MealSlot;
+    lunch: MealSlot;
+    afternoonSnack: MealSlot;
+    dinner: MealSlot;
+    eveningSnack: MealSlot;
+  };
+  totalNutrition: DayNutrition;
+}
+
+export interface MealSlot {
+  recipeId: string;
+  recipeName: string;
+  servings: number;
+  nutrition: MealNutrition;
+  cookTime: number;
+  category: 'breakfast' | 'lunch' | 'dinner' | 'snack';
+  isBackup?: boolean; // If this recipe was auto-substituted
+}
+
+export interface MealNutrition {
+  calories: number;
+  carbohydrates: number;
+  protein: number;
+  fat: number;
+  fiber: number;
+  sugar?: number;
+  sodium?: number;
+}
+
+export interface DayNutrition {
+  calories: number;
+  carbohydrates: number;
+  protein: number;
+  fat: number;
+  fiber: number;
+  mealsCount: number;
+  snacksCount: number;
+}
+
+export interface MealPlanPreferences {
+  dietaryRestrictions: string[]; // ['vegetarian', 'gluten-free', 'dairy-free', etc.]
+  allergies: string[]; // ['nuts', 'shellfish', 'eggs', etc.]
+  dislikedIngredients: string[];
+  preferredCookTime: 'quick' | 'medium' | 'any'; // <= 15, <= 30, any
+  mealPrepFriendly: boolean;
+  familySize: number;
+  
+  // GD-specific preferences
+  carbDistribution: {
+    breakfast: number; // target carbs for breakfast (25-35g)
+    lunch: number; // target carbs for lunch (40-50g)  
+    dinner: number; // target carbs for dinner (40-50g)
+    morningSnack: number; // 15-30g
+    afternoonSnack: number; // 15-30g
+    eveningSnack: number; // 14-16g with protein
+  };
+  
+  // Meal timing preferences
+  skipMorningSnack?: boolean;
+  skipAfternoonSnack?: boolean;
+  requireEveningSnack: boolean; // Usually true for GD
 }
 
 export interface MealPlanGenerationOptions {
-  startDate: Date;
-  userPreferencesId: string;
+  startDate: string; // ISO date
+  daysToGenerate: number; // Usually 7
+  useExistingPlan?: MealPlan; // For updating existing plans
+  prioritizeNew: boolean; // Prefer newly added recipes
+  avoidRecentMeals: boolean; // Don't repeat recent meals
+  maxRecipeRepeats: number; // Max times a recipe can appear in the plan
+}
 
-  // Optional constraints
-  reuseRecipesFromPlanId?: string; // Copy recipes from another plan
-  excludeRecipeIds?: string[]; // Don't use these recipes
-  includeFavorites?: boolean; // Prioritize favorite recipes
-
-  // Meal complexity distribution
-  complexityDistribution?: {
-    simple: number; // percentage
-    moderate: number;
-    complex: number;
+export interface MealPlanStats {
+  totalRecipes: number;
+  uniqueRecipes: number;
+  recipesByCategory: Record<string, number>;
+  nutritionAverages: DayNutrition;
+  gdCompliance: {
+    daysInRange: number;
+    totalDays: number;
+    issues: string[];
   };
-
-  // Special requirements
-  quickBreakfasts?: boolean; // All breakfasts under 15 min
-  mealPrepFriendly?: boolean; // Optimize for batch cooking
-  budgetLimit?: number; // Target cost per week
+  variety: {
+    cuisineTypes: string[];
+    cookingMethods: string[];
+    proteinSources: string[];
+  };
 }
 
-export interface MealSwapOptions {
-  planId: string;
-  dayIndex: number;
-  mealType: MealType;
-
-  // Constraints for the new recipe
-  maintainNutrition?: boolean; // Keep similar carb/protein levels
-  maintainComplexity?: boolean; // Keep similar prep time
-  excludeCurrentRecipe?: boolean; // Don't suggest the same recipe
+export interface ShoppingList {
+  mealPlanId: string;
+  weekStartDate: string;
+  categories: ShoppingCategory[];
+  totalItems: number;
+  estimatedCost?: number;
+  generatedAt: string;
 }
 
-export interface MealPlanTemplate {
-  id: string;
+export interface ShoppingCategory {
+  name: string; // 'Produce', 'Proteins', 'Dairy', etc.
+  items: ShoppingItem[];
+}
+
+export interface ShoppingItem {
   name: string;
-  description: string;
-
-  // Template meals (recipe IDs)
-  meals: {
-    [key in DayOfWeek]: {
-      [key in MealType]: string;
-    };
-  };
-
-  // Metadata
-  tags: string[];
-  season?: "spring" | "summer" | "fall" | "winter" | "any";
-  createdBy: "system" | "user";
-  createdAt: Date;
-
-  // Usage stats
-  timesUsed?: number;
-  avgRating?: number;
-}
-
-export interface MealPlanRating {
-  planId: string;
-  userId: string;
-
-  overallRating: number; // 1-5
-
-  // Detailed ratings
-  varietyRating: number;
-  tasteRating: number;
-  easeOfPrepRating: number;
-  glucoseControlRating: number;
-
-  // Feedback
-  favoriteRecipes: string[];
-  dislikedRecipes: string[];
-  comments?: string;
-
-  wouldUseAgain: boolean;
-
-  createdAt: Date;
+  amount: number;
+  unit: string;
+  recipes: string[]; // Which recipes use this ingredient
+  isOptional: boolean;
+  estimatedCost?: number;
+  notes?: string; // e.g., "organic preferred", "any brand"
 }

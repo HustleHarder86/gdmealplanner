@@ -2,156 +2,90 @@
 
 import { useState, useEffect } from "react";
 import { useAuth } from "@/src/contexts/AuthContext";
-import { MealPlanAlgorithm } from "@/src/lib/meal-planning/meal-plan-algorithm";
 import { ShoppingListGenerator } from "@/src/services/meal-plan/shopping-list-generator";
 import { LocalRecipeService } from "@/src/services/local-recipe-service";
-import { 
-  MealPlan, 
-  MealPlanPreferences, 
-  MealPlanGenerationOptions,
-  ShoppingList 
-} from "@/src/types/meal-plan";
+import { ShoppingList } from "@/src/types/meal-plan";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
 
+// Import refactored components
+import MealPlanDisplay from "./components/MealPlanDisplay";
+import ShoppingListView from "./components/ShoppingListView";
+import TabNavigation from "./components/TabNavigation";
+import { useMealPlan } from "./hooks/useMealPlan";
+
 export default function MealPlannerV2Page() {
   const { user } = useAuth();
   
-  // State
+  // Use custom hooks
+  const { 
+    mealPlan, 
+    generating, 
+    error, 
+    generateMealPlan, 
+    updateWithNewRecipes, 
+    swapMeal 
+  } = useMealPlan(user?.uid);
+  
+  // Local state
   const [loading, setLoading] = useState(true);
-  const [generating, setGenerating] = useState(false);
-  const [mealPlan, setMealPlan] = useState<MealPlan | null>(null);
   const [shoppingList, setShoppingList] = useState<ShoppingList | null>(null);
-  const [showShoppingList, setShowShoppingList] = useState(false);
   const [activeTab, setActiveTab] = useState<'meal-plan' | 'shopping-list'>('meal-plan');
-  const [expandedDays, setExpandedDays] = useState<number[]>([0]); // Only first day expanded by default
-  const [shoppingProgress, setShoppingProgress] = useState({ checked: 0, total: 0 });
-  const [preferences, setPreferences] = useState<MealPlanPreferences | null>(null);
-  const [error, setError] = useState<string | null>(null);
 
   // Initialize
   useEffect(() => {
+    const initializePage = async () => {
+      try {
+        setLoading(true);
+        const allRecipes = LocalRecipeService.getAllRecipes();
+        console.log(`[MEAL_PLANNER] Found ${allRecipes.length} recipes available`);
+      } catch (err) {
+        console.error('[MEAL_PLANNER] Initialization error:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
     initializePage();
   }, []);
 
-  // Update shopping progress when switching tabs
+  // Generate shopping list when meal plan changes
   useEffect(() => {
-    if (activeTab === 'shopping-list') {
-      // Small delay to ensure DOM is updated
-      setTimeout(updateShoppingProgress, 100);
+    if (mealPlan) {
+      const shopping = ShoppingListGenerator.generateFromMealPlan(mealPlan);
+      setShoppingList(shopping);
     }
-  }, [activeTab]);
+  }, [mealPlan]);
 
-  const initializePage = async () => {
-    try {
-      setLoading(true);
-      
-      // Initialize LocalRecipeService if needed
-      const allRecipes = LocalRecipeService.getAllRecipes();
-      console.log(`[MEAL_PLANNER] Found ${allRecipes.length} recipes available`);
-      
-      // Set default preferences
-      const defaultPrefs: MealPlanPreferences = {
-        dietaryRestrictions: [],
-        allergies: [],
-        dislikedIngredients: [],
-        preferredCookTime: 'any',
-        mealPrepFriendly: false,
-        familySize: 1,
-        carbDistribution: {
-          breakfast: 30,        // 25-35g
-          lunch: 45,           // 40-50g
-          dinner: 45,          // 40-50g
-          morningSnack: 20,    // 15-30g
-          afternoonSnack: 20,  // 15-30g
-          eveningSnack: 15     // 14-16g with protein
-        },
-        skipMorningSnack: false,
-        skipAfternoonSnack: false,
-        requireEveningSnack: true
-      };
-      
-      setPreferences(defaultPrefs);
-      
-    } catch (err) {
-      console.error('[MEAL_PLANNER] Initialization error:', err);
-      setError('Failed to initialize meal planner');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const generateMealPlan = async () => {
-    if (!preferences) return;
-    
-    try {
-      setGenerating(true);
-      setError(null);
-      
-      // Generation options
-      const options: MealPlanGenerationOptions = {
-        startDate: getNextMondayISOString(),
-        daysToGenerate: 7,
-        prioritizeNew: true,
-        avoidRecentMeals: true,
-        maxRecipeRepeats: 2
-      };
-      
-      console.log('[MEAL_PLANNER] Generating meal plan...');
-      const plan = await MealPlanAlgorithm.generateMealPlan(preferences, options);
-      
-      // Add user ID
-      plan.userId = user?.uid || 'demo-user';
-      
-      setMealPlan(plan);
-      
-      // Generate shopping list
+  // Handle meal plan generation
+  const handleGenerateMealPlan = async () => {
+    const plan = await generateMealPlan();
+    if (plan) {
       const shopping = ShoppingListGenerator.generateFromMealPlan(plan);
       setShoppingList(shopping);
-      
-      console.log('[MEAL_PLANNER] Meal plan generated successfully');
-      
-    } catch (err) {
-      console.error('[MEAL_PLANNER] Generation error:', err);
-      setError('Failed to generate meal plan. Please try again.');
-    } finally {
-      setGenerating(false);
     }
   };
 
-  const updateWithNewRecipes = async () => {
-    if (!mealPlan) return;
-    
-    try {
-      setGenerating(true);
-      setError(null);
-      
-      console.log('[MEAL_PLANNER] Updating meal plan with new recipes...');
-      const updatedPlan = await MealPlanAlgorithm.updateMealPlanWithNewRecipes(
-        mealPlan, 
-        { 
-          replacePercentage: 30,
-          prioritizeNewRecipes: true 
-        }
-      );
-      
-      setMealPlan(updatedPlan);
-      
-      // Update shopping list
+  // Handle meal updates
+  const handleUpdateRecipes = async () => {
+    const updatedPlan = await updateWithNewRecipes();
+    if (updatedPlan) {
       const shopping = ShoppingListGenerator.generateFromMealPlan(updatedPlan);
       setShoppingList(shopping);
-      
-      console.log('[MEAL_PLANNER] Meal plan updated with new recipes');
-      
-    } catch (err) {
-      console.error('[MEAL_PLANNER] Update error:', err);
-      setError('Failed to update meal plan. Please try again.');
-    } finally {
-      setGenerating(false);
     }
   };
 
+  // Handle meal swap
+  const handleSwapMeal = async (dayIndex: number, mealType: string) => {
+    const updatedPlan = await swapMeal(dayIndex, mealType);
+    if (updatedPlan) {
+      const shopping = ShoppingListGenerator.generateFromMealPlan(updatedPlan);
+      setShoppingList(shopping);
+    }
+  };
+
+  // Export shopping list
   const exportShoppingListText = () => {
     if (!shoppingList) return;
     
@@ -167,106 +101,6 @@ export default function MealPlannerV2Page() {
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-  };
-
-  const swapMeal = async (dayIndex: number, mealType: string) => {
-    if (!mealPlan) return;
-    
-    try {
-      setGenerating(true);
-      setError(null);
-      
-      // Find a different recipe for this meal slot
-      const currentDayMeals = mealPlan.days[dayIndex].meals;
-      const currentMeal = (currentDayMeals as any)[mealType];
-      const categoryFilter = getMealCategoryFilter(mealType);
-      const carbDistribution = preferences?.carbDistribution as any;
-      const targetCarbs = carbDistribution?.[mealType] || 30;
-      
-      // Get suitable recipes excluding the current one
-      const allRecipes = LocalRecipeService.getAllRecipes();
-      const suitableRecipes = allRecipes.filter(recipe => {
-        if (recipe.id === currentMeal.recipeId) return false;
-        if (categoryFilter && recipe.category !== categoryFilter) return false;
-        
-        const carbDiff = Math.abs(recipe.nutrition.carbohydrates - targetCarbs);
-        return carbDiff <= targetCarbs * 0.4; // 40% tolerance
-      });
-      
-      if (suitableRecipes.length === 0) {
-        setError('No suitable alternative recipes found for this meal slot');
-        return;
-      }
-      
-      // Pick a random suitable recipe
-      const newRecipe = suitableRecipes[Math.floor(Math.random() * suitableRecipes.length)];
-      
-      // Update the meal plan
-      const updatedPlan = { ...mealPlan };
-      (updatedPlan.days[dayIndex].meals as any)[mealType] = {
-        recipeId: newRecipe.id,
-        recipeName: newRecipe.title,
-        servings: 1,
-        nutrition: {
-          calories: newRecipe.nutrition.calories,
-          carbohydrates: newRecipe.nutrition.carbohydrates,
-          protein: newRecipe.nutrition.protein,
-          fat: newRecipe.nutrition.fat,
-          fiber: newRecipe.nutrition.fiber
-        },
-        cookTime: newRecipe.totalTime,
-        category: newRecipe.category as 'breakfast' | 'lunch' | 'dinner' | 'snack'
-      };
-      
-      // Recalculate day nutrition
-      const dayMeals = Object.values(updatedPlan.days[dayIndex].meals);
-      updatedPlan.days[dayIndex].totalNutrition = {
-        calories: dayMeals.reduce((sum, meal) => sum + meal.nutrition.calories, 0),
-        carbohydrates: dayMeals.reduce((sum, meal) => sum + meal.nutrition.carbohydrates, 0),
-        protein: dayMeals.reduce((sum, meal) => sum + meal.nutrition.protein, 0),
-        fat: dayMeals.reduce((sum, meal) => sum + meal.nutrition.fat, 0),
-        fiber: dayMeals.reduce((sum, meal) => sum + meal.nutrition.fiber, 0),
-        mealsCount: dayMeals.filter(meal => !['morningSnack', 'afternoonSnack', 'eveningSnack'].includes(meal.category)).length,
-        snacksCount: dayMeals.filter(meal => ['morningSnack', 'afternoonSnack', 'eveningSnack'].includes(meal.category)).length
-      };
-      
-      updatedPlan.version += 1;
-      updatedPlan.updatedAt = new Date().toISOString();
-      
-      setMealPlan(updatedPlan);
-      
-      // Update shopping list
-      const shopping = ShoppingListGenerator.generateFromMealPlan(updatedPlan);
-      setShoppingList(shopping);
-      
-    } catch (err) {
-      console.error('[MEAL_PLANNER] Swap error:', err);
-      setError('Failed to swap meal. Please try again.');
-    } finally {
-      setGenerating(false);
-    }
-  };
-
-  const getMealCategoryFilter = (mealType: string): 'breakfast' | 'lunch' | 'dinner' | 'snack' | null => {
-    if (mealType === 'breakfast') return 'breakfast';
-    if (mealType === 'lunch') return 'lunch';
-    if (mealType === 'dinner') return 'dinner';
-    if (mealType.includes('snack') || mealType.includes('Snack')) return 'snack';
-    return null;
-  };
-
-  const updateShoppingProgress = () => {
-    const allCheckboxes = document.querySelectorAll('.shopping-item input[type="checkbox"]');
-    const checkedBoxes = document.querySelectorAll('.shopping-item input[type="checkbox"]:checked');
-    setShoppingProgress({ checked: checkedBoxes.length, total: allCheckboxes.length });
-  };
-
-  const getNextMondayISOString = (): string => {
-    const today = new Date();
-    const daysUntilMonday = (1 + 7 - today.getDay()) % 7 || 7;
-    const nextMonday = new Date(today);
-    nextMonday.setDate(today.getDate() + daysUntilMonday);
-    return nextMonday.toISOString().split('T')[0];
   };
 
   if (loading) {
@@ -287,7 +121,7 @@ export default function MealPlannerV2Page() {
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">
-          GD Meal Planner v2
+          GD Meal Planner
         </h1>
         <p className="text-gray-600">
           AI-powered meal planning with {LocalRecipeService.getAllRecipes().length} GD-friendly recipes
@@ -313,7 +147,7 @@ export default function MealPlannerV2Page() {
         </div>
       </Card>
 
-      {/* Generate Section */}
+      {/* Generate Section or Meal Plan Display */}
       {!mealPlan ? (
         <Card className="p-8 text-center">
           <h2 className="text-xl font-semibold mb-4">Generate Your Meal Plan</h2>
@@ -321,7 +155,7 @@ export default function MealPlannerV2Page() {
             Create a personalized 7-day meal plan using our GD-friendly recipe library
           </p>
           <Button
-            onClick={generateMealPlan}
+            onClick={handleGenerateMealPlan}
             disabled={generating}
             variant="primary"
             size="lg"
@@ -331,387 +165,32 @@ export default function MealPlannerV2Page() {
         </Card>
       ) : (
         <>
-          {/* Sticky Tab Navigation */}
-          <div className="sticky top-0 z-10 bg-white border-b mb-6 -mx-4 px-4">
-            <div className="flex gap-4">
-              <button
-                onClick={() => setActiveTab('meal-plan')}
-                className={`py-3 px-6 font-medium border-b-2 transition-colors ${
-                  activeTab === 'meal-plan' 
-                    ? 'border-green-600 text-green-600' 
-                    : 'border-transparent text-gray-600 hover:text-gray-900'
-                }`}
-              >
-                📅 Meal Plan
-              </button>
-              <button
-                onClick={() => setActiveTab('shopping-list')}
-                className={`py-3 px-6 font-medium border-b-2 transition-colors ${
-                  activeTab === 'shopping-list' 
-                    ? 'border-green-600 text-green-600' 
-                    : 'border-transparent text-gray-600 hover:text-gray-900'
-                }`}
-              >
-                🛒 Shopping List {shoppingList && `(${shoppingList.totalItems} items)`}
-              </button>
-            </div>
-          </div>
+          {/* Tab Navigation */}
+          <TabNavigation 
+            activeTab={activeTab}
+            onTabChange={setActiveTab}
+            shoppingItemCount={shoppingList?.totalItems}
+          />
 
           {/* Tab Content */}
           {activeTab === 'meal-plan' ? (
-            /* Meal Plan Tab */
-            <div>
-              {/* Plan Header */}
-              <Card className="mb-4 p-4">
-                <div className="flex flex-wrap justify-between items-center gap-4">
-                  <div>
-                    <h2 className="text-xl font-semibold">{mealPlan.name}</h2>
-                    <p className="text-gray-600">
-                      Week of {new Date(mealPlan.weekStartDate).toLocaleDateString()}
-                    </p>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    <Button
-                      onClick={() => setExpandedDays(expandedDays.length === 7 ? [] : [0,1,2,3,4,5,6])}
-                      variant="outline"
-                      size="sm"
-                    >
-                      {expandedDays.length === 7 ? '➖ Collapse All' : '➕ Expand All'}
-                    </Button>
-                    <Button
-                      onClick={updateWithNewRecipes}
-                      disabled={generating}
-                      variant="secondary"
-                      size="sm"
-                    >
-                      {generating ? '🔄 Updating...' : '✨ Update Recipes'}
-                    </Button>
-                    <Button
-                      onClick={generateMealPlan}
-                      disabled={generating}
-                      variant="outline"
-                      size="sm"
-                    >
-                      {generating ? '🧠 Generating...' : '🎲 New Plan'}
-                    </Button>
-                    <Button
-                      onClick={() => window.print()}
-                      variant="outline"
-                      size="sm"
-                    >
-                      🖨️ Print
-                    </Button>
-                  </div>
-                </div>
-              </Card>
-              
-              {/* Days - Collapsible */}
-              <div className="space-y-3">
-                {mealPlan.days.map((day, index) => {
-                  const isExpanded = expandedDays.includes(index);
-                  const dayDate = new Date(day.date);
-                  const isToday = new Date().toDateString() === dayDate.toDateString();
-                  
-                  return (
-                    <Card key={day.date} className={`overflow-hidden ${isToday ? 'ring-2 ring-green-500' : ''}`}>
-                      {/* Day Header - Always Visible */}
-                      <div 
-                        className="p-4 bg-gray-50 cursor-pointer hover:bg-gray-100 transition-colors"
-                        onClick={() => {
-                          setExpandedDays(isExpanded 
-                            ? expandedDays.filter(d => d !== index)
-                            : [...expandedDays, index]
-                          );
-                        }}
-                      >
-                        <div className="flex justify-between items-center">
-                          <div className="flex items-center gap-3">
-                            <span className="text-2xl">{isExpanded ? '▼' : '▶'}</span>
-                            <div>
-                              <h3 className="font-semibold text-lg">
-                                {dayDate.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })}
-                                {isToday && <span className="ml-2 text-green-600 text-sm">(Today)</span>}
-                              </h3>
-                              <p className="text-sm text-gray-600">
-                                {day.totalNutrition.carbohydrates}g carbs • {day.totalNutrition.calories} cal • {day.totalNutrition.protein}g protein
-                              </p>
-                            </div>
-                          </div>
-                          <div className="text-sm text-gray-500">
-                            {Object.values(day.meals).filter(m => m.recipeId).length} meals planned
-                          </div>
-                        </div>
-                      </div>
-                      
-                      {/* Day Content - Collapsible */}
-                      {isExpanded && (
-                        <div className="p-4">
-                          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
-                            {Object.entries(day.meals).map(([mealType, meal]) => {
-                              const recipe = meal.recipeId ? LocalRecipeService.getRecipeById(meal.recipeId) : null;
-                              
-                              return (
-                                <div key={mealType} className="border rounded-lg p-3 hover:shadow-md transition-shadow">
-                                  <div className="font-medium text-sm text-gray-600 mb-2 capitalize">
-                                    {mealType.replace(/([A-Z])/g, ' $1').trim()}
-                                  </div>
-                                  {meal.recipeId && recipe ? (
-                                    <div className="space-y-2">
-                                      {/* Recipe Image */}
-                                      <div className="relative h-20 w-full rounded overflow-hidden bg-gray-100">
-                                        <img
-                                          src={recipe.imageUrl || recipe.localImageUrl || '/api/placeholder/200/150'}
-                                          alt={recipe.title}
-                                          className="w-full h-full object-cover"
-                                          onError={(e) => {
-                                            e.currentTarget.src = '/api/placeholder/200/150';
-                                          }}
-                                        />
-                                      </div>
-                                      
-                                      {/* Recipe Info */}
-                                      <div>
-                                        <div className="font-medium text-sm leading-tight mb-1 line-clamp-2" title={meal.recipeName}>{meal.recipeName}</div>
-                                        <div className="text-xs text-gray-600 mb-2">
-                                          {meal.nutrition.carbohydrates}g carbs • {meal.cookTime}min
-                                        </div>
-                                        
-                                        {/* Action Buttons */}
-                                        <div className="flex gap-2">
-                                          <button
-                                            onClick={() => window.open(`/recipes/${recipe.id}`, '_blank')}
-                                            className="flex-1 bg-green-600 text-white text-xs py-1 px-2 rounded hover:bg-green-700 transition-colors"
-                                          >
-                                            View
-                                          </button>
-                                          <button
-                                            onClick={() => swapMeal(index, mealType)}
-                                            disabled={generating}
-                                            className="bg-blue-600 text-white text-xs py-1 px-2 rounded hover:bg-blue-700 transition-colors disabled:opacity-50"
-                                            title="Swap"
-                                          >
-                                            🔄
-                                          </button>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  ) : (
-                                    <div className="text-gray-400 italic text-center py-6 text-sm">No meal</div>
-                                  )}
-                                </div>
-                              );
-                            })}
-                          </div>
-                        </div>
-                      )}
-                    </Card>
-                  );
-                })}
-              </div>
-            </div>
+            <MealPlanDisplay
+              mealPlan={mealPlan}
+              onSwapMeal={handleSwapMeal}
+              onUpdateRecipes={handleUpdateRecipes}
+              onGenerateNew={handleGenerateMealPlan}
+              isGenerating={generating}
+            />
           ) : (
-            /* Shopping List Tab */
-            <div className="space-y-4">
-              {/* Header Card */}
-              <Card className="p-4">
-                <div className="flex flex-wrap justify-between items-center gap-4">
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold">Shopping List</h3>
-                    <p className="text-gray-600 mb-2">
-                      {shoppingList?.totalItems} items • Week of {shoppingList && new Date(shoppingList.weekStartDate).toLocaleDateString()}
-                    </p>
-                    {/* Progress Bar */}
-                    {shoppingProgress.total > 0 && (
-                      <div className="mt-2">
-                        <div className="flex justify-between text-sm text-gray-600 mb-1">
-                          <span>{shoppingProgress.checked} of {shoppingProgress.total} items</span>
-                          <span>{Math.round((shoppingProgress.checked / shoppingProgress.total) * 100)}% complete</span>
-                        </div>
-                        <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
-                          <div 
-                            className="bg-green-600 h-2 transition-all duration-300 ease-out"
-                            style={{ width: `${(shoppingProgress.checked / shoppingProgress.total) * 100}%` }}
-                          />
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    <Button
-                      onClick={() => {
-                        const checked = document.querySelectorAll('input[type="checkbox"]:checked').length;
-                        const total = document.querySelectorAll('input[type="checkbox"]').length;
-                        const percentage = Math.round(checked/total*100);
-                        alert(`Shopping Progress:\n\n✅ ${checked} of ${total} items checked\n📊 ${percentage}% complete`);
-                      }}
-                      variant="outline"
-                      size="sm"
-                    >
-                      📊 Progress
-                    </Button>
-                    <Button
-                      onClick={exportShoppingListText}
-                      variant="outline"
-                      size="sm"
-                    >
-                      📄 Download
-                    </Button>
-                    <Button
-                      onClick={() => window.print()}
-                      variant="outline"
-                      size="sm"
-                    >
-                      🖨️ Print
-                    </Button>
-                  </div>
-                </div>
-                
-                {/* Quick Actions */}
-                <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t">
-                  <button
-                    onClick={() => {
-                      document.querySelectorAll('input[type="checkbox"]').forEach((cb: any) => {
-                        cb.checked = true;
-                        const itemText = cb.nextElementSibling as HTMLElement;
-                        itemText.classList.add('line-through', 'text-gray-400');
-                        cb.closest('.shopping-item')?.classList.add('bg-gray-50');
-                      });
-                      updateShoppingProgress();
-                    }}
-                    className="text-xs bg-green-100 hover:bg-green-200 px-3 py-1.5 rounded-full transition-colors"
-                  >
-                    ✅ Check All
-                  </button>
-                  <button
-                    onClick={() => {
-                      document.querySelectorAll('input[type="checkbox"]').forEach((cb: any) => {
-                        cb.checked = false;
-                        const itemText = cb.nextElementSibling as HTMLElement;
-                        itemText.classList.remove('line-through', 'text-gray-400');
-                        cb.closest('.shopping-item')?.classList.remove('bg-gray-50');
-                      });
-                      updateShoppingProgress();
-                    }}
-                    className="text-xs bg-blue-100 hover:bg-blue-200 px-3 py-1.5 rounded-full transition-colors"
-                  >
-                    🔄 Clear All
-                  </button>
-                  <button
-                    onClick={() => {
-                      const checkedItems = document.querySelectorAll('input[type="checkbox"]:checked');
-                      if (checkedItems.length === 0) {
-                        alert('No items checked to hide');
-                        return;
-                      }
-                      if (confirm(`Hide ${checkedItems.length} checked items?`)) {
-                        checkedItems.forEach((cb: any) => {
-                          cb.closest('.shopping-item').style.display = 'none';
-                        });
-                      }
-                    }}
-                    className="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-full transition-colors"
-                  >
-                    👁️ Hide Checked
-                  </button>
-                  <button
-                    onClick={() => {
-                      document.querySelectorAll('.shopping-item').forEach((item: any) => {
-                        item.style.display = 'flex';
-                      });
-                    }}
-                    className="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-full transition-colors"
-                  >
-                    👁️ Show All
-                  </button>
-                </div>
-              </Card>
-              
-              {/* Shopping Categories */}
-              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                {shoppingList?.categories.map(category => {
-                  const categoryIcons: Record<string, string> = {
-                    'Produce': '🥬',
-                    'Proteins': '🥩',
-                    'Dairy': '🥛',
-                    'Grains & Bread': '🍞',
-                    'Pantry': '🥫',
-                    'Frozen': '❄️',
-                    'Snacks': '🍿',
-                    'Beverages': '🥤',
-                    'Other': '📦'
-                  };
-                  
-                  return (
-                    <Card key={category.name} className="overflow-hidden">
-                      <div className="bg-gray-50 px-4 py-3 border-b">
-                        <h4 className="font-semibold text-base flex items-center gap-2">
-                          <span className="text-xl">{categoryIcons[category.name] || '🛒'}</span>
-                          {category.name}
-                          <span className="text-sm font-normal text-gray-500 ml-auto">
-                            ({category.items.length} items)
-                          </span>
-                        </h4>
-                      </div>
-                      <div className="p-4 space-y-1">
-                        {category.items.map((item, index) => (
-                          <label 
-                            key={index} 
-                            className="shopping-item flex items-start gap-3 p-2.5 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors border border-transparent hover:border-gray-200"
-                          >
-                            <input
-                              type="checkbox"
-                              className="mt-0.5 h-5 w-5 text-green-600 focus:ring-green-500 border-gray-300 rounded cursor-pointer"
-                              onChange={(e) => {
-                                const itemText = e.target.nextElementSibling as HTMLElement;
-                                if (e.target.checked) {
-                                  itemText.classList.add('line-through', 'text-gray-400');
-                                  e.target.closest('.shopping-item')?.classList.add('bg-gray-50');
-                                } else {
-                                  itemText.classList.remove('line-through', 'text-gray-400');
-                                  e.target.closest('.shopping-item')?.classList.remove('bg-gray-50');
-                                }
-                                updateShoppingProgress();
-                              }}
-                            />
-                            <span className="text-sm flex-1 transition-all leading-relaxed">
-                              <span className="font-medium text-gray-900">
-                                {typeof item.amount === 'string' ? item.amount : `${item.amount} ${item.unit}`}
-                              </span>
-                              <span className="text-gray-700 ml-1">
-                                {item.name}
-                              </span>
-                              {item.notes && (
-                                <span className="text-gray-500 block text-xs mt-0.5 italic">
-                                  {item.notes}
-                                </span>
-                              )}
-                            </span>
-                          </label>
-                        ))}
-                      </div>
-                    </Card>
-                  );
-                })}
-              </div>
-              
-              {/* Shopping Tips */}
-              <Card className="p-4 bg-green-50 border-green-200">
-                <h4 className="font-semibold text-green-900 mb-2 flex items-center gap-2">
-                  <span>💡</span> Shopping Tips
-                </h4>
-                <ul className="text-sm text-green-800 space-y-1">
-                  <li>• Shop the perimeter of the store first for fresh produce and proteins</li>
-                  <li>• Check your pantry for spices and condiments before shopping</li>
-                  <li>• Consider buying proteins in bulk and freezing portions</li>
-                  <li>• Fresh herbs can be substituted with dried (use 1/3 the amount)</li>
-                </ul>
-              </Card>
-            </div>
+            <ShoppingListView
+              shoppingList={shoppingList}
+              onExportText={exportShoppingListText}
+            />
           )}
         </>
       )}
       
-      {/* Medical Guidelines - Outside tabs, always visible when meal plan exists */}
+      {/* Medical Guidelines - Always visible when meal plan exists */}
       {mealPlan && (
         <div className="mt-6 p-4 bg-blue-50 rounded-lg">
           <p className="text-sm text-blue-800">

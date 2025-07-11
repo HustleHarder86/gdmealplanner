@@ -50,29 +50,62 @@ export function RecipeProvider({ children }: { children: React.ReactNode }) {
         setLoading(true);
         setError(null);
 
-        // Load from the static JSON file - NO API CALLS
-        const response = await fetch("/data/production-recipes.json");
-        if (!response.ok) {
-          throw new Error(`Failed to load recipes: ${response.statusText}`);
+        // Load from multiple category files - NO API CALLS
+        console.log("[OFFLINE] Loading recipes from category files...");
+        
+        const categories = ['breakfast', 'lunch', 'dinner', 'snack'];
+        const allRecipes: any[] = [];
+        let totalLoaded = 0;
+        
+        // Load each category file
+        for (const category of categories) {
+          try {
+            const response = await fetch(`/data/recipes-${category}.json`);
+            if (response.ok) {
+              const categoryData = await response.json();
+              if (categoryData.recipes && Array.isArray(categoryData.recipes)) {
+                allRecipes.push(...categoryData.recipes);
+                totalLoaded += categoryData.recipes.length;
+                console.log(`[OFFLINE] Loaded ${categoryData.recipes.length} ${category} recipes`);
+              }
+            } else {
+              console.warn(`[OFFLINE] Failed to load ${category} recipes: ${response.statusText}`);
+            }
+          } catch (error) {
+            console.error(`[OFFLINE] Error loading ${category} recipes:`, error);
+          }
+        }
+        
+        // Fallback to main file if category files failed
+        if (allRecipes.length === 0) {
+          console.log("[OFFLINE] Fallback to main production file...");
+          const response = await fetch("/data/production-recipes.json");
+          if (!response.ok) {
+            throw new Error(`Failed to load recipes: ${response.statusText}`);
+          }
+
+          const data = await response.json();
+          if (data.recipes && Array.isArray(data.recipes)) {
+            allRecipes.push(...data.recipes);
+            totalLoaded = data.recipes.length;
+            console.log(`[OFFLINE] Fallback loaded ${totalLoaded} recipes`);
+          }
         }
 
-        const data = await response.json();
-
-        // Validate the data
-        if (!data.recipes || !Array.isArray(data.recipes)) {
-          throw new Error("Invalid recipe data format");
+        // Validate we have recipes
+        if (allRecipes.length === 0) {
+          throw new Error("No recipes found in any source");
         }
 
         // Initialize LocalRecipeService with the loaded data
-        await LocalRecipeService.initialize(data.recipes);
+        await LocalRecipeService.initialize(allRecipes);
 
         // Get all recipes from the service
         const loadedRecipes = LocalRecipeService.getAllRecipes();
         setRecipes(loadedRecipes);
         setInitialized(true);
 
-        console.log(`[OFFLINE] Loaded ${loadedRecipes.length} recipes from static file`);
-        console.log(`[OFFLINE] Categories: ${JSON.stringify(data.categoryBreakdown || {})}`);
+        console.log(`[OFFLINE] Total loaded: ${loadedRecipes.length} recipes from category files`);
         
         // Store in localStorage for future offline use
         if (loadedRecipes.length > 0) {
@@ -80,6 +113,7 @@ export function RecipeProvider({ children }: { children: React.ReactNode }) {
             localStorage.setItem("recipes_data", JSON.stringify(loadedRecipes));
             localStorage.setItem("recipes_count", loadedRecipes.length.toString());
             localStorage.setItem("recipes_last_updated", new Date().toISOString());
+            console.log(`[OFFLINE] Cached ${loadedRecipes.length} recipes in localStorage`);
           } catch (storageErr) {
             console.warn("Failed to cache recipes:", storageErr);
           }

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
+import { useAuth } from "@/src/contexts/AuthContext";
 import {
   format,
   startOfMonth,
@@ -16,16 +17,25 @@ import WeeklyTrendChart from "@/src/components/glucose/WeeklyTrendChart";
 
 export default function GlucoseHistoryPage() {
   const router = useRouter();
+  const { user, loading: authLoading } = useAuth();
   const [selectedMonth, setSelectedMonth] = useState(new Date());
   const [monthReadings, setMonthReadings] = useState<GlucoseReading[]>([]);
   const [monthStats, setMonthStats] = useState<GlucoseStatistics | null>(null);
   const [loading, setLoading] = useState(true);
   const [selectedUnit, setSelectedUnit] = useState<"mg/dL" | "mmol/L">("mg/dL");
 
-  // Mock user ID for now
-  const userId = "mock-user-id";
+  // Use actual user ID from auth context
+  const userId = user?.uid || null;
+
+  // Redirect to login if not authenticated
+  useEffect(() => {
+    if (!authLoading && !user) {
+      router.push("/login");
+    }
+  }, [authLoading, user, router]);
 
   const loadMonthData = useCallback(async () => {
+    if (!userId) return;
     try {
       setLoading(true);
 
@@ -34,7 +44,7 @@ export default function GlucoseHistoryPage() {
 
       // Load month's readings
       const readings = await GlucoseService.getReadingsByDateRange(
-        userId,
+        userId!,
         start,
         end,
       );
@@ -42,7 +52,7 @@ export default function GlucoseHistoryPage() {
 
       // Calculate month statistics
       const stats = await GlucoseService.calculateStatistics(
-        userId,
+        userId!,
         start,
         end,
         selectedUnit,
@@ -65,11 +75,13 @@ export default function GlucoseHistoryPage() {
     setSelectedMonth(newMonth);
   };
 
-  if (loading) {
+  if (authLoading || loading) {
     return (
       <div className="container py-8">
         <div className="flex justify-center items-center h-64">
-          <div className="text-lg text-neutral-600">Loading history...</div>
+          <div className="text-lg text-neutral-600">
+            {authLoading ? "Checking authentication..." : "Loading history..."}
+          </div>
         </div>
       </div>
     );

@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { format } from "date-fns";
+import { useAuth } from "@/src/contexts/AuthContext";
 import { GlucoseReading, GlucoseStatistics } from "@/src/types/glucose";
 import { GlucoseService } from "@/src/services/glucose/glucose-service";
 import GlucoseEntryForm from "@/src/components/glucose/GlucoseEntryForm";
@@ -12,6 +13,7 @@ import RecentReadings from "@/src/components/glucose/RecentReadings";
 
 export default function GlucoseTrackingPage() {
   const router = useRouter();
+  const { user, loading: authLoading } = useAuth();
   const [todayReadings, setTodayReadings] = useState<GlucoseReading[]>([]);
   const [weekStats, setWeekStats] = useState<GlucoseStatistics | null>(null);
   const [loading, setLoading] = useState(true);
@@ -22,15 +24,23 @@ export default function GlucoseTrackingPage() {
   );
   const [quickEntryValue, setQuickEntryValue] = useState<number | null>(null);
 
-  // Mock user ID for now - will be replaced with actual auth
-  const userId = "mock-user-id";
+  // Use actual user ID from auth context
+  const userId = user?.uid || null;
+
+  // Redirect to login if not authenticated
+  useEffect(() => {
+    if (!authLoading && !user) {
+      router.push("/login");
+    }
+  }, [authLoading, user, router]);
 
   const loadData = useCallback(async () => {
+    if (!userId) return;
     try {
       setLoading(true);
 
       // Load today's readings
-      const readings = await GlucoseService.getTodayReadings(userId);
+      const readings = await GlucoseService.getTodayReadings(userId!);
       setTodayReadings(readings);
 
       // Calculate week statistics
@@ -39,7 +49,7 @@ export default function GlucoseTrackingPage() {
       startDate.setDate(startDate.getDate() - 7);
 
       const stats = await GlucoseService.calculateStatistics(
-        userId,
+        userId!,
         startDate,
         endDate,
         selectedUnit,
@@ -97,12 +107,12 @@ export default function GlucoseTrackingPage() {
     }
   };
 
-  if (loading) {
+  if (authLoading || loading) {
     return (
       <div className="container py-8">
         <div className="flex justify-center items-center h-64">
           <div className="text-lg text-neutral-600">
-            Loading glucose data...
+            {authLoading ? "Checking authentication..." : "Loading glucose data..."}
           </div>
         </div>
       </div>
@@ -297,7 +307,7 @@ export default function GlucoseTrackingPage() {
                 </button>
               </div>
               <GlucoseEntryForm
-                userId={userId}
+                userId={userId!}
                 defaultUnit={selectedUnit}
                 onSubmit={handleNewReading}
                 onCancel={() => {

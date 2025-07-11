@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { useAuth } from "@/src/contexts/AuthContext";
 import { format, subDays } from "date-fns";
 import { GlucoseService } from "@/src/services/glucose/glucose-service";
 import ReportGenerator from "@/src/components/glucose/ReportGenerator";
@@ -16,10 +17,18 @@ import {
 
 export default function GlucoseReportsPage() {
   const router = useRouter();
+  const { user, loading: authLoading } = useAuth();
   const [generating, setGenerating] = useState(false);
 
-  // Mock user ID for now
-  const userId = "mock-user-id";
+  // Use actual user ID from auth context
+  const userId = user?.uid || null;
+
+  // Redirect to login if not authenticated
+  useEffect(() => {
+    if (!authLoading && !user) {
+      router.push("/login");
+    }
+  }, [authLoading, user, router]);
 
   const handleGenerateReport = async (
     startDate: Date,
@@ -29,6 +38,11 @@ export default function GlucoseReportsPage() {
     includeStats: boolean,
     includeNotes: boolean,
   ) => {
+    if (!userId) {
+      alert("Please log in to generate reports");
+      return;
+    }
+
     try {
       setGenerating(true);
 

@@ -42,40 +42,52 @@ export class ShoppingListGenerator {
         // Process each ingredient
         recipe.ingredients.forEach(ingredient => {
           const normalizedName = this.normalizeIngredientName(ingredient.name);
+          
+          // Skip ingredients that are too generic or unhelpful
+          if (this.shouldSkipIngredient(normalizedName)) {
+            return;
+          }
+          
           const scaledAmount = (ingredient.amount || 0) * meal.servings;
+          const normalizedUnit = this.normalizeUnit(ingredient.unit);
           
           const existing = ingredientMap.get(normalizedName);
           if (existing) {
             // Try to combine similar units
-            const combinedUnit = this.combineUnits(existing.unit, ingredient.unit, existing.amount, scaledAmount);
+            const combinedUnit = this.combineUnits(existing.unit, normalizedUnit, existing.amount, scaledAmount);
             if (combinedUnit) {
               existing.amount = combinedUnit.amount;
               existing.unit = combinedUnit.unit;
-            } else if (existing.unit === ingredient.unit) {
+            } else if (existing.unit === normalizedUnit) {
               // Same unit, just add amounts
               existing.amount += scaledAmount;
             } else {
-              // Different incompatible units - create separate entry
-              const compoundKey = `${normalizedName}_${ingredient.unit}`;
-              ingredientMap.set(compoundKey, {
-                amount: scaledAmount,
-                unit: ingredient.unit,
-                recipes: [recipe.title],
-                isOptional: false
-              });
-              return;
+              // For very similar ingredients, force combine even with different units
+              if (this.canForceCombine(existing.unit, normalizedUnit)) {
+                existing.amount += scaledAmount; // Just add the amounts
+                existing.unit = this.getBetterUnit(existing.unit, normalizedUnit);
+              } else {
+                // Different incompatible units - still combine but note both units
+                existing.amount += scaledAmount;
+                if (!existing.unit.includes(normalizedUnit) && normalizedUnit !== 'piece' && normalizedUnit !== 'item') {
+                  existing.unit = `${existing.unit} + ${normalizedUnit}`;
+                }
+              }
             }
             
             if (!existing.recipes.includes(recipe.title)) {
               existing.recipes.push(recipe.title);
             }
           } else {
-            ingredientMap.set(normalizedName, {
-              amount: scaledAmount,
-              unit: ingredient.unit,
-              recipes: [recipe.title],
-              isOptional: false
-            });
+            // Only add if amount is meaningful
+            if (scaledAmount > 0 || normalizedUnit === 'piece' || normalizedUnit === 'item') {
+              ingredientMap.set(normalizedName, {
+                amount: scaledAmount,
+                unit: normalizedUnit,
+                recipes: [recipe.title],
+                isOptional: false
+              });
+            }
           }
         });
       });
@@ -220,6 +232,87 @@ export class ShoppingListGenerator {
   }
   
   /**
+   * Check if ingredient should be skipped
+   */
+  private static shouldSkipIngredient(normalizedName: string): boolean {
+    const skipList = [
+      'water', 'ice', 'salt and pepper', 'to taste', 'as needed',
+      'for serving', 'for garnish', 'optional', '', ' '
+    ];
+    
+    return skipList.includes(normalizedName) || normalizedName.length < 2;
+  }
+
+  /**
+   * Normalize unit names
+   */
+  private static normalizeUnit(unit: string): string {
+    if (!unit || unit.trim() === '') return 'piece';
+    
+    const unitMappings: Record<string, string> = {
+      'cups': 'cup',
+      'tablespoons': 'tbsp',
+      'tablespoon': 'tbsp',
+      'teaspoons': 'tsp',
+      'teaspoon': 'tsp',
+      'pounds': 'lb',
+      'pound': 'lb',
+      'ounces': 'oz',
+      'ounce': 'oz',
+      'pieces': 'piece',
+      'items': 'piece',
+      'cloves': 'clove',
+      'stalks': 'stalk',
+      'slices': 'slice'
+    };
+    
+    const normalized = unit.toLowerCase().trim();
+    return unitMappings[normalized] || normalized;
+  }
+
+  /**
+   * Check if units can be force combined
+   */
+  private static canForceCombine(unit1: string, unit2: string): boolean {
+    // Force combine these similar units
+    const similarUnits = [
+      ['piece', 'clove', 'stalk', 'slice'],
+      ['cup', 'tbsp', 'tsp'],
+      ['lb', 'oz']
+    ];
+    
+    for (const group of similarUnits) {
+      if (group.includes(unit1) && group.includes(unit2)) {
+        return true;
+      }
+    }
+    
+    return false;
+  }
+
+  /**
+   * Get the better unit between two units
+   */
+  private static getBetterUnit(unit1: string, unit2: string): string {
+    const unitPriority: Record<string, number> = {
+      'cup': 3,
+      'tbsp': 2,
+      'tsp': 1,
+      'lb': 3,
+      'oz': 2,
+      'piece': 1,
+      'clove': 1,
+      'stalk': 1,
+      'slice': 1
+    };
+    
+    const priority1 = unitPriority[unit1] || 0;
+    const priority2 = unitPriority[unit2] || 0;
+    
+    return priority1 >= priority2 ? unit1 : unit2;
+  }
+
+  /**
    * Combine similar units and amounts
    */
   private static combineUnits(unit1: string, unit2: string, amount1: number, amount2: number): { amount: number; unit: string } | null {
@@ -273,19 +366,142 @@ export class ShoppingListGenerator {
   }
 
   /**
-   * Normalize ingredient names for better aggregation
+   * Aggressively normalize ingredient names for better aggregation
    */
   private static normalizeIngredientName(name: string): string {
-    return name
-      .toLowerCase()
-      .replace(/\s*\([^)]*\)/g, '') // Remove parenthetical content
-      .replace(/,.*$/, '') // Remove everything after comma
-      .replace(/\s*(fresh|dried|ground|chopped|diced|sliced|minced|raw|cooked|frozen|canned)\s*/g, ' ') // Remove common descriptors
-      .replace(/\s*(large|medium|small|extra)\s*/g, ' ') // Remove size descriptors
-      .replace(/\s*(boneless|skinless|lean|organic)\s*/g, ' ') // Remove quality descriptors
-      .replace(/\s*-\s*/g, ' ') // Replace dashes with spaces
-      .replace(/\s+/g, ' ') // Normalize whitespace
-      .trim();
+    let normalized = name.toLowerCase().trim();
+    
+    // Remove everything in parentheses
+    normalized = normalized.replace(/\s*\([^)]*\)/g, '');
+    
+    // Remove everything after comma
+    normalized = normalized.replace(/,.*$/, '');
+    
+    // Remove common descriptors and preparation methods
+    const descriptorsToRemove = [
+      'fresh', 'dried', 'ground', 'chopped', 'diced', 'sliced', 'minced', 'raw', 'cooked', 'frozen', 'canned',
+      'large', 'medium', 'small', 'extra', 'jumbo', 'baby', 'young',
+      'boneless', 'skinless', 'lean', 'organic', 'free-range', 'grass-fed', 'wild-caught',
+      'whole', 'halved', 'quartered', 'crushed', 'mashed', 'grated', 'shredded',
+      'unsalted', 'salted', 'low-fat', 'non-fat', 'reduced-fat', 'light',
+      'extra-virgin', 'virgin', 'pure', 'natural', 'artificial',
+      'white', 'brown', 'red', 'green', 'yellow', 'black',
+      'sweet', 'hot', 'spicy', 'mild',
+      'to taste', 'as needed', 'for serving', 'for garnish'
+    ];
+    
+    descriptorsToRemove.forEach(descriptor => {
+      const regex = new RegExp(`\\b${descriptor}\\b`, 'g');
+      normalized = normalized.replace(regex, ' ');
+    });
+    
+    // Normalize common ingredient variations
+    const ingredientMappings: Record<string, string> = {
+      // Proteins
+      'chicken breast': 'chicken breast',
+      'chicken breasts': 'chicken breast',
+      'chicken thigh': 'chicken thigh',
+      'chicken thighs': 'chicken thigh',
+      'ground beef': 'ground beef',
+      'beef': 'beef',
+      'salmon fillet': 'salmon',
+      'salmon fillets': 'salmon',
+      'tuna': 'tuna',
+      'eggs': 'eggs',
+      'egg': 'eggs',
+      
+      // Vegetables
+      'onion': 'onion',
+      'onions': 'onion',
+      'garlic': 'garlic',
+      'garlic cloves': 'garlic',
+      'garlic clove': 'garlic',
+      'tomato': 'tomato',
+      'tomatoes': 'tomato',
+      'bell pepper': 'bell pepper',
+      'bell peppers': 'bell pepper',
+      'carrot': 'carrot',
+      'carrots': 'carrot',
+      'celery': 'celery',
+      'celery stalks': 'celery',
+      'spinach': 'spinach',
+      'lettuce': 'lettuce',
+      'cucumber': 'cucumber',
+      'cucumbers': 'cucumber',
+      'broccoli': 'broccoli',
+      'mushroom': 'mushrooms',
+      'mushrooms': 'mushrooms',
+      
+      // Pantry items
+      'olive oil': 'olive oil',
+      'cooking oil': 'cooking oil',
+      'vegetable oil': 'cooking oil',
+      'canola oil': 'cooking oil',
+      'salt': 'salt',
+      'pepper': 'black pepper',
+      'black pepper': 'black pepper',
+      'flour': 'flour',
+      'all purpose flour': 'flour',
+      'sugar': 'sugar',
+      'brown sugar': 'brown sugar',
+      'honey': 'honey',
+      'butter': 'butter',
+      'milk': 'milk',
+      'cheese': 'cheese',
+      'yogurt': 'yogurt',
+      'greek yogurt': 'greek yogurt',
+      
+      // Grains and starches
+      'rice': 'rice',
+      'brown rice': 'brown rice',
+      'quinoa': 'quinoa',
+      'pasta': 'pasta',
+      'bread': 'bread',
+      'whole wheat bread': 'whole wheat bread',
+      'oats': 'oats',
+      'oatmeal': 'oats',
+      
+      // Herbs and spices
+      'basil': 'basil',
+      'oregano': 'oregano',
+      'thyme': 'thyme',
+      'rosemary': 'rosemary',
+      'parsley': 'parsley',
+      'cilantro': 'cilantro',
+      'paprika': 'paprika',
+      'cumin': 'cumin',
+      'garlic powder': 'garlic powder',
+      'onion powder': 'onion powder'
+    };
+    
+    // Clean up whitespace
+    normalized = normalized.replace(/\s+/g, ' ').trim();
+    
+    // Apply ingredient mappings
+    for (const [pattern, replacement] of Object.entries(ingredientMappings)) {
+      if (normalized.includes(pattern)) {
+        normalized = replacement;
+        break;
+      }
+    }
+    
+    // If still no match, try to extract the main ingredient
+    const words = normalized.split(' ');
+    if (words.length > 1) {
+      // For compound ingredients, try to find the main noun
+      const mainIngredients = ['chicken', 'beef', 'pork', 'fish', 'salmon', 'tuna', 'turkey',
+                               'onion', 'garlic', 'tomato', 'pepper', 'carrot', 'celery', 'spinach',
+                               'cheese', 'milk', 'butter', 'oil', 'flour', 'sugar', 'rice', 'pasta'];
+      
+      for (const main of mainIngredients) {
+        if (words.includes(main)) {
+          normalized = main;
+          break;
+        }
+      }
+    }
+    
+    return normalized;
   }
   
   /**

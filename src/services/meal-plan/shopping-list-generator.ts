@@ -369,28 +369,33 @@ export class ShoppingListGenerator {
   }
 
   /**
-   * Aggressively normalize ingredient names for better aggregation
+   * Ultra-aggressive ingredient normalization for maximum consolidation
    */
   private static normalizeIngredientName(name: string): string {
     let normalized = name.toLowerCase().trim();
     
-    // Remove everything in parentheses
+    // Remove everything in parentheses and after commas
     normalized = normalized.replace(/\s*\([^)]*\)/g, '');
-    
-    // Remove everything after comma
     normalized = normalized.replace(/,.*$/, '');
+    normalized = normalized.replace(/\*.*$/, ''); // Remove asterisks and everything after
+    normalized = normalized.replace(/-.*$/, ''); // Remove dashes and everything after
     
-    // Remove common descriptors and preparation methods
+    // Remove ALL descriptors - be very aggressive
     const descriptorsToRemove = [
       'fresh', 'dried', 'ground', 'chopped', 'diced', 'sliced', 'minced', 'raw', 'cooked', 'frozen', 'canned',
-      'large', 'medium', 'small', 'extra', 'jumbo', 'baby', 'young',
+      'large', 'medium', 'small', 'extra', 'jumbo', 'baby', 'young', 'tiny', 'huge', 'mini',
       'boneless', 'skinless', 'lean', 'organic', 'free-range', 'grass-fed', 'wild-caught',
-      'whole', 'halved', 'quartered', 'crushed', 'mashed', 'grated', 'shredded',
-      'unsalted', 'salted', 'low-fat', 'non-fat', 'reduced-fat', 'light',
-      'extra-virgin', 'virgin', 'pure', 'natural', 'artificial',
-      'white', 'brown', 'red', 'green', 'yellow', 'black',
-      'sweet', 'hot', 'spicy', 'mild',
-      'to taste', 'as needed', 'for serving', 'for garnish'
+      'whole', 'halved', 'quartered', 'crushed', 'mashed', 'grated', 'shredded', 'julienned',
+      'unsalted', 'salted', 'low-fat', 'non-fat', 'reduced-fat', 'light', 'heavy', 'thick', 'thin',
+      'extra-virgin', 'virgin', 'pure', 'natural', 'artificial', 'processed',
+      'white', 'brown', 'red', 'green', 'yellow', 'black', 'orange', 'purple', 'pink',
+      'sweet', 'hot', 'spicy', 'mild', 'sour', 'bitter', 'tangy',
+      'to taste', 'as needed', 'for serving', 'for garnish', 'optional',
+      'juice of', 'zest of', 'leaves', 'bunch', 'head', 'stalk', 'clove', 'piece',
+      'finely', 'roughly', 'coarsely', 'thinly', 'thickly',
+      'roasted', 'toasted', 'grilled', 'baked', 'steamed', 'sauteed',
+      'concentrated', 'extract', 'powder', 'granulated', 'liquid',
+      'additional', 'extra', 'more', 'some', 'few', 'several'
     ];
     
     descriptorsToRemove.forEach(descriptor => {
@@ -398,109 +403,159 @@ export class ShoppingListGenerator {
       normalized = normalized.replace(regex, ' ');
     });
     
-    // Normalize common ingredient variations
-    const ingredientMappings: Record<string, string> = {
-      // Proteins
-      'chicken breast': 'chicken breast',
-      'chicken breasts': 'chicken breast',
-      'chicken thigh': 'chicken thigh',
-      'chicken thighs': 'chicken thigh',
+    // Ultra-aggressive ingredient consolidation
+    const ultraConsolidationMap: Record<string, string> = {
+      // All proteins become just the main protein
+      'chicken breast': 'chicken',
+      'chicken breasts': 'chicken',
+      'chicken thigh': 'chicken', 
+      'chicken thighs': 'chicken',
+      'chicken': 'chicken',
       'ground beef': 'ground beef',
-      'beef': 'beef',
-      'salmon fillet': 'salmon',
-      'salmon fillets': 'salmon',
-      'tuna': 'tuna',
-      'eggs': 'eggs',
+      'beef': 'ground beef', // Most beef in recipes is ground
+      'pork': 'pork',
+      'turkey': 'turkey',
+      'salmon': 'fish',
+      'tuna': 'fish',
+      'fish': 'fish',
+      'shrimp': 'shrimp',
+      'tofu': 'tofu',
       'egg': 'eggs',
+      'eggs': 'eggs',
       
-      // Vegetables
-      'onion': 'onion',
-      'onions': 'onion',
+      // All beans become just "beans"
+      'black beans': 'beans',
+      'kidney beans': 'beans', 
+      'cannellini beans': 'beans',
+      'garbanzo beans': 'beans',
+      'chickpeas': 'beans',
+      'pinto beans': 'beans',
+      'navy beans': 'beans',
+      'beans': 'beans',
+      'lentils': 'beans',
+      'sprouted mung beans': 'beans',
+      
+      // All vegetables simplified
+      'onion': 'onions',
+      'onions': 'onions',
       'garlic': 'garlic',
-      'garlic cloves': 'garlic',
-      'garlic clove': 'garlic',
-      'tomato': 'tomato',
-      'tomatoes': 'tomato',
-      'bell pepper': 'bell pepper',
-      'bell peppers': 'bell pepper',
-      'carrot': 'carrot',
-      'carrots': 'carrot',
+      'tomato': 'tomatoes',
+      'tomatoes': 'tomatoes',
+      'bell pepper': 'bell peppers',
+      'carrot': 'carrots',
+      'carrots': 'carrots',
       'celery': 'celery',
-      'celery stalks': 'celery',
-      'spinach': 'spinach',
-      'lettuce': 'lettuce',
+      'spinach': 'leafy greens',
+      'lettuce': 'leafy greens',
+      'kale': 'leafy greens',
+      'arugula': 'leafy greens',
+      'swiss chard': 'leafy greens',
+      'greens': 'leafy greens',
+      'salad': 'leafy greens',
       'cucumber': 'cucumber',
-      'cucumbers': 'cucumber',
       'broccoli': 'broccoli',
+      'cauliflower': 'cauliflower',
       'mushroom': 'mushrooms',
       'mushrooms': 'mushrooms',
+      'avocado': 'avocados',
+      'avocados': 'avocados',
+      'zucchini': 'zucchini',
+      'corn': 'corn',
+      'peas': 'peas',
       
-      // Pantry items
-      'olive oil': 'olive oil',
-      'cooking oil': 'cooking oil',
+      // All citrus
+      'lemon': 'lemons',
+      'lime': 'limes', 
+      'orange': 'oranges',
+      'lemon juice': 'lemons',
+      'lime juice': 'limes',
+      'lemon zest': 'lemons',
+      
+      // All herbs as "fresh herbs"
+      'basil': 'fresh herbs',
+      'cilantro': 'fresh herbs',
+      'parsley': 'fresh herbs',
+      'mint': 'fresh herbs',
+      'thyme': 'spices',
+      'oregano': 'spices',
+      'rosemary': 'spices',
+      'cumin': 'spices',
+      'paprika': 'spices',
+      'chili powder': 'spices',
+      'curry powder': 'spices',
+      'garam masala': 'spices',
+      'coriander': 'spices',
+      'cinnamon': 'spices',
+      'turmeric': 'spices',
+      
+      // All oils
+      'olive oil': 'cooking oil',
       'vegetable oil': 'cooking oil',
       'canola oil': 'cooking oil',
+      'coconut oil': 'cooking oil',
+      'oil': 'cooking oil',
+      
+      // All vinegars
+      'balsamic vinegar': 'vinegar',
+      'apple cider vinegar': 'vinegar',
+      'white vinegar': 'vinegar',
+      'vinegar': 'vinegar',
+      
+      // All cheese
+      'cheddar cheese': 'cheese',
+      'mozzarella': 'cheese',
+      'parmesan': 'cheese',
+      'feta': 'cheese',
+      'cheese': 'cheese',
+      
+      // Pantry staples
       'salt': 'salt',
       'pepper': 'black pepper',
-      'black pepper': 'black pepper',
       'flour': 'flour',
-      'all purpose flour': 'flour',
       'sugar': 'sugar',
-      'brown sugar': 'brown sugar',
-      'honey': 'honey',
       'butter': 'butter',
       'milk': 'milk',
-      'cheese': 'cheese',
       'yogurt': 'yogurt',
-      'greek yogurt': 'greek yogurt',
-      
-      // Grains and starches
+      'honey': 'honey',
       'rice': 'rice',
-      'brown rice': 'brown rice',
       'quinoa': 'quinoa',
-      'pasta': 'pasta',
-      'bread': 'bread',
-      'whole wheat bread': 'whole wheat bread',
       'oats': 'oats',
-      'oatmeal': 'oats',
-      
-      // Herbs and spices
-      'basil': 'basil',
-      'oregano': 'oregano',
-      'thyme': 'thyme',
-      'rosemary': 'rosemary',
-      'parsley': 'parsley',
-      'cilantro': 'cilantro',
-      'paprika': 'paprika',
-      'cumin': 'cumin',
-      'garlic powder': 'garlic powder',
-      'onion powder': 'onion powder'
+      'pasta': 'pasta',
+      'bread': 'bread'
     };
     
-    // Clean up whitespace
+    // Clean up whitespace first
     normalized = normalized.replace(/\s+/g, ' ').trim();
     
-    // Apply ingredient mappings
-    for (const [pattern, replacement] of Object.entries(ingredientMappings)) {
+    // Try exact matches first
+    if (ultraConsolidationMap[normalized]) {
+      return ultraConsolidationMap[normalized];
+    }
+    
+    // Try partial matches for compound ingredients
+    for (const [pattern, replacement] of Object.entries(ultraConsolidationMap)) {
       if (normalized.includes(pattern)) {
-        normalized = replacement;
-        break;
+        return replacement;
       }
     }
     
-    // If still no match, try to extract the main ingredient
+    // Extract main ingredient from compound names
     const words = normalized.split(' ');
     if (words.length > 1) {
-      // For compound ingredients, try to find the main noun
-      const mainIngredients = ['chicken', 'beef', 'pork', 'fish', 'salmon', 'tuna', 'turkey',
-                               'onion', 'garlic', 'tomato', 'pepper', 'carrot', 'celery', 'spinach',
-                               'cheese', 'milk', 'butter', 'oil', 'flour', 'sugar', 'rice', 'pasta'];
+      const keyIngredients = ['chicken', 'beef', 'pork', 'fish', 'beans', 'onion', 'garlic', 'tomato', 
+                             'pepper', 'carrot', 'cheese', 'milk', 'butter', 'oil', 'flour', 'rice'];
       
-      for (const main of mainIngredients) {
-        if (words.includes(main)) {
-          normalized = main;
-          break;
+      for (const key of keyIngredients) {
+        if (words.includes(key)) {
+          return ultraConsolidationMap[key] || key;
         }
+      }
+      
+      // Use the last meaningful word (usually the noun)
+      const meaningfulWords = words.filter(w => w.length > 2 && !['the', 'and', 'or', 'of'].includes(w));
+      if (meaningfulWords.length > 0) {
+        const lastWord = meaningfulWords[meaningfulWords.length - 1];
+        return ultraConsolidationMap[lastWord] || lastWord;
       }
     }
     
@@ -508,143 +563,164 @@ export class ShoppingListGenerator {
   }
   
   /**
-   * Convert to realistic shopping quantities
+   * Convert to realistic shopping quantities with caps to prevent unrealistic amounts
    */
   private static convertToShoppingQuantity(amount: number, unit: string, ingredientName: string): { amount: number | string; unit: string } {
-    // Handle specific ingredients with realistic shopping conversions
     const lowerName = ingredientName.toLowerCase();
     
-    // Proteins - convert to realistic portions
-    if (lowerName.includes('chicken') || lowerName.includes('beef') || lowerName.includes('pork') || lowerName.includes('turkey')) {
-      if (unit === 'piece' || unit === 'lb' || unit === 'oz') {
-        const totalOz = unit === 'lb' ? amount * 16 : (unit === 'oz' ? amount : amount * 6); // assume 6oz per piece
-        if (totalOz <= 16) return { amount: '1 lb', unit: '' };
-        if (totalOz <= 32) return { amount: '2 lbs', unit: '' };
-        return { amount: Math.ceil(totalOz / 16) + ' lbs', unit: '' };
-      }
+    // HARD CAPS - prevent ridiculous quantities regardless of ingredient
+    if (amount > 100 && ['piece', 'cup', 'tbsp', 'tsp'].includes(unit)) {
+      amount = Math.min(amount, 10); // Cap at 10 for most cooking units
     }
     
-    // Fish - similar to proteins
-    if (lowerName.includes('salmon') || lowerName.includes('tuna') || lowerName.includes('fish')) {
-      if (unit === 'piece' || unit === 'lb' || unit === 'oz') {
-        const totalOz = unit === 'lb' ? amount * 16 : (unit === 'oz' ? amount : amount * 6);
-        if (totalOz <= 12) return { amount: '1 lb', unit: '' };
-        return { amount: Math.ceil(totalOz / 16) + ' lbs', unit: '' };
-      }
-    }
-    
-    // Eggs
-    if (lowerName.includes('egg')) {
-      const totalEggs = Math.ceil(amount);
-      if (totalEggs <= 12) return { amount: '1 dozen', unit: '' };
-      return { amount: Math.ceil(totalEggs / 12) + ' dozen', unit: '' };
-    }
-    
-    // Vegetables and produce
+    // Ultra-aggressive consolidation for common problem ingredients
     if (lowerName.includes('onion')) {
-      return { amount: Math.ceil(amount), unit: amount > 1 ? 'onions' : 'onion' };
-    }
-    
-    if (lowerName.includes('garlic')) {
-      if (amount <= 6) return { amount: '1 head', unit: '' };
-      return { amount: Math.ceil(amount / 6) + ' heads', unit: '' };
+      return { amount: '1 bag', unit: '(3 lbs)' };
     }
     
     if (lowerName.includes('tomato')) {
-      return { amount: Math.ceil(amount), unit: amount > 1 ? 'tomatoes' : 'tomato' };
+      return { amount: '1 container', unit: '(cherry tomatoes)' };
+    }
+    
+    if (lowerName.includes('beans') || lowerName.includes('chickpea') || lowerName.includes('lentil')) {
+      return { amount: '2-3 cans', unit: 'or 1 bag dried' };
     }
     
     if (lowerName.includes('pepper') || lowerName.includes('bell')) {
-      return { amount: Math.ceil(amount), unit: amount > 1 ? 'bell peppers' : 'bell pepper' };
+      return { amount: '1 bag', unit: '(mixed peppers)' };
     }
     
     if (lowerName.includes('carrot')) {
-      if (amount <= 6) return { amount: '1 bag', unit: '' };
-      return { amount: Math.ceil(amount / 6) + ' bags', unit: '' };
+      return { amount: '1 bag', unit: '(2 lbs)' };
     }
     
-    if (lowerName.includes('spinach') || lowerName.includes('lettuce') || lowerName.includes('salad')) {
-      return { amount: Math.ceil(amount), unit: amount > 1 ? 'bags' : 'bag' };
+    if (lowerName.includes('leafy') || lowerName.includes('spinach') || lowerName.includes('lettuce') || lowerName.includes('salad')) {
+      return { amount: '1-2 bags', unit: 'leafy greens' };
     }
     
-    // Oils and liquids
-    if (lowerName.includes('oil') || lowerName.includes('vinegar')) {
-      if (unit === 'cup' || unit === 'tbsp' || unit === 'tsp') {
-        if (amount < 0.5) return { amount: '1 bottle', unit: '(small)' };
-        return { amount: '1 bottle', unit: '' };
-      }
+    if (lowerName.includes('fresh herbs') || lowerName.includes('cilantro') || lowerName.includes('parsley') || lowerName.includes('basil')) {
+      return { amount: '1 package', unit: 'fresh herbs' };
+    }
+    
+    if (lowerName.includes('spices') || lowerName.includes('cumin') || lowerName.includes('paprika')) {
+      return { amount: '1 container', unit: 'spice blend' };
+    }
+    
+    // Proteins - convert to realistic portions
+    if (lowerName.includes('chicken') || lowerName.includes('beef') || lowerName.includes('pork') || lowerName.includes('turkey')) {
+      // Cap protein at reasonable amounts for weekly shopping
+      const maxProteinOz = 64; // 4 lbs max
+      const totalOz = unit === 'lb' ? amount * 16 : (unit === 'oz' ? amount : amount * 6);
+      const cappedOz = Math.min(totalOz, maxProteinOz);
+      
+      if (cappedOz <= 16) return { amount: '1 lb', unit: '' };
+      if (cappedOz <= 32) return { amount: '2 lbs', unit: '' };
+      return { amount: '3-4 lbs', unit: '' };
+    }
+    
+    // Fish - capped and simplified
+    if (lowerName.includes('fish')) {
+      return { amount: '1-2 lbs', unit: 'fresh fish' };
+    }
+    
+    if (lowerName.includes('shrimp')) {
+      return { amount: '1 lb', unit: 'shrimp' };
+    }
+    
+    // Eggs - reasonable caps
+    if (lowerName.includes('egg')) {
+      const totalEggs = Math.min(Math.ceil(amount), 24); // Cap at 2 dozen
+      if (totalEggs <= 12) return { amount: '1 dozen', unit: '' };
+      return { amount: '2 dozen', unit: '' };
+    }
+    
+    // Garlic - simplified
+    if (lowerName.includes('garlic')) {
+      return { amount: '1 head', unit: 'garlic' };
+    }
+    
+    // Avocados - capped
+    if (lowerName.includes('avocado')) {
+      return { amount: '3-4', unit: 'avocados' };
+    }
+    
+    // Citrus - simplified
+    if (lowerName.includes('lemon')) {
+      return { amount: '2-3', unit: 'lemons' };
+    }
+    
+    if (lowerName.includes('lime')) {
+      return { amount: '2-3', unit: 'limes' };
+    }
+    
+    // Basic produce - already handled above with consolidated names
+    
+    // Oils and liquids - simplified
+    if (lowerName.includes('oil')) {
+      return { amount: '1 bottle', unit: 'cooking oil' };
+    }
+    
+    if (lowerName.includes('vinegar')) {
+      return { amount: '1 bottle', unit: 'vinegar' };
     }
     
     if (lowerName.includes('milk')) {
-      if (unit === 'cup') {
-        if (amount <= 4) return { amount: '1 quart', unit: '' };
-        if (amount <= 8) return { amount: '1/2 gallon', unit: '' };
-        return { amount: '1 gallon', unit: '' };
-      }
+      return { amount: '1/2 gallon', unit: 'milk' };
     }
     
     if (lowerName.includes('butter')) {
-      if (unit === 'cup' || unit === 'tbsp') {
-        if (amount <= 1) return { amount: '1 stick', unit: '' };
-        if (amount <= 4) return { amount: '1 pack', unit: '(4 sticks)' };
-        return { amount: '2 packs', unit: '' };
-      }
+      return { amount: '1 pack', unit: 'butter (4 sticks)' };
     }
     
-    // Cheese
+    if (lowerName.includes('yogurt')) {
+      return { amount: '1 large container', unit: 'yogurt' };
+    }
+    
+    // Cheese - simplified
     if (lowerName.includes('cheese')) {
-      if (unit === 'cup' || unit === 'oz') {
-        const ozAmount = unit === 'cup' ? amount * 4 : amount; // ~4oz per cup shredded
-        if (ozAmount <= 8) return { amount: '1 package', unit: '(8oz)' };
-        return { amount: Math.ceil(ozAmount / 8) + ' packages', unit: '' };
-      }
+      return { amount: '1-2 packages', unit: 'cheese' };
     }
     
-    // Pantry staples
+    // Pantry staples - simplified with reasonable caps
     if (lowerName.includes('flour')) {
-      if (unit === 'cup') {
-        if (amount <= 8) return { amount: '1 bag', unit: '(5 lbs)' };
-        return { amount: '1 large bag', unit: '(10 lbs)' };
-      }
+      return { amount: '1 bag', unit: 'flour (5 lbs)' };
     }
     
     if (lowerName.includes('sugar')) {
-      if (unit === 'cup') {
-        if (amount <= 4) return { amount: '1 bag', unit: '(2 lbs)' };
-        return { amount: '1 large bag', unit: '(4 lbs)' };
-      }
+      return { amount: '1 bag', unit: 'sugar (2 lbs)' };
     }
     
     if (lowerName.includes('rice')) {
-      if (unit === 'cup') {
-        if (amount <= 2) return { amount: '1 bag', unit: '(2 lbs)' };
-        return { amount: '1 large bag', unit: '(5 lbs)' };
-      }
+      return { amount: '1 bag', unit: 'rice (2 lbs)' };
+    }
+    
+    if (lowerName.includes('quinoa')) {
+      return { amount: '1 bag', unit: 'quinoa (1 lb)' };
+    }
+    
+    if (lowerName.includes('oats')) {
+      return { amount: '1 container', unit: 'oats' };
     }
     
     if (lowerName.includes('pasta')) {
-      if (unit === 'cup' || unit === 'oz') {
-        const ozAmount = unit === 'cup' ? amount * 2 : amount;
-        if (ozAmount <= 16) return { amount: '1 box', unit: '(1 lb)' };
-        return { amount: Math.ceil(ozAmount / 16) + ' boxes', unit: '' };
-      }
+      return { amount: '1-2 boxes', unit: 'pasta' };
     }
     
-    // Spices and herbs
-    if (lowerName.includes('salt') || lowerName.includes('pepper') || lowerName.includes('spice') || 
-        lowerName.includes('oregano') || lowerName.includes('basil') || lowerName.includes('cumin') ||
-        lowerName.includes('paprika') || lowerName.includes('thyme') || lowerName.includes('rosemary')) {
-      return { amount: '1 container', unit: '' };
-    }
-    
-    // Canned goods
-    if (lowerName.includes('beans') || lowerName.includes('tomato') && (lowerName.includes('can') || lowerName.includes('sauce'))) {
-      return { amount: Math.ceil(amount), unit: amount > 1 ? 'cans' : 'can' };
-    }
-    
-    // Bread
     if (lowerName.includes('bread')) {
-      return { amount: '1 loaf', unit: '' };
+      return { amount: '1 loaf', unit: 'bread' };
+    }
+    
+    if (lowerName.includes('honey')) {
+      return { amount: '1 jar', unit: 'honey' };
+    }
+    
+    // Salt and pepper - check pantry first
+    if (lowerName.includes('salt')) {
+      return { amount: '1 container', unit: 'salt (check pantry first)' };
+    }
+    
+    if (lowerName.includes('pepper')) {
+      return { amount: '1 container', unit: 'black pepper (check pantry first)' };
     }
     
     // Default conversion for remaining items
@@ -665,49 +741,58 @@ export class ShoppingListGenerator {
   }
 
   /**
-   * Default unit conversion for remaining items
+   * Default unit conversion for remaining items with caps
    */
   private static convertDefaultUnits(amount: number, unit: string): { amount: number | string; unit: string } {
+    // Apply hard caps to prevent ridiculous amounts
+    const cappedAmount = Math.min(amount, 50); // Never more than 50 of anything in default
+    
     switch (unit.toLowerCase()) {
       case 'cup':
       case 'cups':
-        if (amount < 0.25) return { amount: '2 tbsp', unit: '' };
-        if (amount < 0.5) return { amount: '1/4 cup', unit: '' };
-        if (amount < 0.75) return { amount: '1/2 cup', unit: '' };
-        if (amount < 1) return { amount: '3/4 cup', unit: '' };
-        if (amount < 1.5) return { amount: '1 cup', unit: '' };
-        if (amount < 2) return { amount: '1 1/2 cups', unit: '' };
-        return { amount: Math.ceil(amount), unit: amount > 1 ? 'cups' : 'cup' };
+        if (cappedAmount < 0.25) return { amount: '2 tbsp', unit: '' };
+        if (cappedAmount < 0.5) return { amount: '1/4 cup', unit: '' };
+        if (cappedAmount < 0.75) return { amount: '1/2 cup', unit: '' };
+        if (cappedAmount < 1) return { amount: '3/4 cup', unit: '' };
+        if (cappedAmount < 1.5) return { amount: '1 cup', unit: '' };
+        if (cappedAmount < 2) return { amount: '1 1/2 cups', unit: '' };
+        if (cappedAmount > 8) return { amount: '1 container', unit: '' }; // Cap large amounts
+        return { amount: Math.ceil(cappedAmount), unit: cappedAmount > 1 ? 'cups' : 'cup' };
         
       case 'tbsp':
       case 'tablespoon':
       case 'tablespoons':
-        if (amount < 0.5) return { amount: '1 tsp', unit: '' };
-        if (amount < 1) return { amount: '1/2 tbsp', unit: '' };
-        if (amount < 1.5) return { amount: '1 tbsp', unit: '' };
-        return { amount: Math.ceil(amount), unit: 'tbsp' };
+        if (cappedAmount < 0.5) return { amount: '1 tsp', unit: '' };
+        if (cappedAmount < 1) return { amount: '1/2 tbsp', unit: '' };
+        if (cappedAmount < 1.5) return { amount: '1 tbsp', unit: '' };
+        if (cappedAmount > 16) return { amount: '1 container', unit: '' }; // Cap large amounts
+        return { amount: Math.ceil(cappedAmount), unit: 'tbsp' };
         
       case 'tsp':
       case 'teaspoon':
       case 'teaspoons':
-        if (amount < 0.5) return { amount: 'pinch', unit: '' };
-        if (amount < 1) return { amount: '1/2 tsp', unit: '' };
-        if (amount < 1.5) return { amount: '1 tsp', unit: '' };
-        return { amount: Math.ceil(amount), unit: 'tsp' };
+        if (cappedAmount < 0.5) return { amount: 'pinch', unit: '' };
+        if (cappedAmount < 1) return { amount: '1/2 tsp', unit: '' };
+        if (cappedAmount < 1.5) return { amount: '1 tsp', unit: '' };
+        if (cappedAmount > 48) return { amount: '1 container', unit: '' }; // Cap large amounts
+        return { amount: Math.ceil(cappedAmount), unit: 'tsp' };
         
       case 'lb':
       case 'lbs':
       case 'pound':
       case 'pounds':
-        if (amount < 0.5) return { amount: '1/2 lb', unit: '' };
-        if (amount < 1) return { amount: '3/4 lb', unit: '' };
-        return { amount: Math.ceil(amount), unit: amount > 1 ? 'lbs' : 'lb' };
+        if (cappedAmount < 0.5) return { amount: '1/2 lb', unit: '' };
+        if (cappedAmount < 1) return { amount: '3/4 lb', unit: '' };
+        if (cappedAmount > 10) return { amount: '1 large bag', unit: '' }; // Cap at 10 lbs
+        return { amount: Math.ceil(cappedAmount), unit: cappedAmount > 1 ? 'lbs' : 'lb' };
         
       case 'oz':
       case 'ounce':
       case 'ounces':
-        if (amount <= 8) return { amount: Math.ceil(amount), unit: 'oz' };
-        return { amount: Math.ceil(amount / 16), unit: amount > 16 ? 'lbs' : 'lb' };
+        if (cappedAmount <= 8) return { amount: Math.ceil(cappedAmount), unit: 'oz' };
+        const lbs = Math.ceil(cappedAmount / 16);
+        if (lbs > 5) return { amount: '1 large package', unit: '' }; // Cap large amounts
+        return { amount: lbs, unit: lbs > 1 ? 'lbs' : 'lb' };
         
       case 'piece':
       case 'pieces':
@@ -715,10 +800,28 @@ export class ShoppingListGenerator {
       case 'cloves':
       case 'stalk':
       case 'stalks':
-        return { amount: Math.ceil(amount), unit: '' };
+        if (cappedAmount > 20) return { amount: '1 package', unit: '' }; // Cap large counts
+        return { amount: Math.ceil(cappedAmount), unit: '' };
+        
+      case 'g':
+      case 'gr':
+      case 'gram':
+      case 'grams':
+        if (cappedAmount > 1000) return { amount: '1 large package', unit: '' };
+        if (cappedAmount < 50) return { amount: '1 small package', unit: '' };
+        return { amount: '1 package', unit: '' };
+        
+      case 'ml':
+      case 'milliliter':
+      case 'milliliters':
+        if (cappedAmount > 500) return { amount: '1 bottle', unit: '' };
+        if (cappedAmount < 100) return { amount: '1 small bottle', unit: '' };
+        return { amount: '1 bottle', unit: '' };
         
       default:
-        return { amount: Math.ceil(amount * 100) / 100, unit: unit };
+        // For unknown units, just cap and return
+        if (cappedAmount > 10) return { amount: '1 package', unit: unit };
+        return { amount: Math.ceil(cappedAmount), unit: unit };
     }
   }
   

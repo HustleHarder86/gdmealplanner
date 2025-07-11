@@ -494,7 +494,9 @@ export default function MealPlannerV2Page() {
                               }}
                             />
                             <span className="text-sm flex-1 transition-all">
-                              <span className="font-medium">{item.amount} {item.unit}</span> {item.name}
+                              <span className="font-medium">
+                                {typeof item.amount === 'string' ? item.amount : `${item.amount} ${item.unit}`}
+                              </span> {item.name}
                               {item.notes && <span className="text-gray-500 block text-xs">({item.notes})</span>}
                             </span>
                           </label>

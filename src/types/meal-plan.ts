@@ -119,7 +119,7 @@ export interface ShoppingCategory {
 
 export interface ShoppingItem {
   name: string;
-  amount: number;
+  amount: number | string; // Allow realistic shopping quantities like "1 dozen", "2 lbs"
   unit: string;
   recipes: string[]; // Which recipes use this ingredient
   isOptional: boolean;

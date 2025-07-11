@@ -136,10 +136,13 @@ export class ShoppingListGenerator {
       // Clean up the ingredient name (remove unit suffixes)
       const cleanName = ingredientName.replace(/_[a-z]+$/, '');
       
+      // Convert to realistic shopping quantities
+      const realisticQuantity = this.convertToShoppingQuantity(data.amount, data.unit, cleanName);
+      
       const item: ShoppingItem = {
         name: this.capitalizeFirst(cleanName),
-        amount: this.roundAmount(data.amount),
-        unit: data.unit,
+        amount: realisticQuantity.amount,
+        unit: realisticQuantity.unit,
         recipes: data.recipes,
         isOptional: data.isOptional,
         notes: this.generateItemNotes(cleanName, data.unit)
@@ -354,11 +357,11 @@ export class ShoppingListGenerator {
       
       // Use the larger unit if the total is large enough
       if (u2 === 'cup' || u2 === 'cups') {
-        return { amount: this.roundAmount(totalAmount), unit: totalAmount > 1 ? 'cups' : 'cup' };
+        return { amount: Math.round(totalAmount * 4) / 4, unit: totalAmount > 1 ? 'cups' : 'cup' }; // Round to quarter
       } else if (u2 === 'pound' || u2 === 'pounds' || u2 === 'lb' || u2 === 'lbs') {
-        return { amount: this.roundAmount(totalAmount), unit: totalAmount > 1 ? 'lbs' : 'lb' };
+        return { amount: Math.round(totalAmount * 4) / 4, unit: totalAmount > 1 ? 'lbs' : 'lb' }; // Round to quarter
       } else {
-        return { amount: this.roundAmount(totalAmount), unit: unit2 };
+        return { amount: Math.round(totalAmount * 100) / 100, unit: unit2 }; // Round to hundredth
       }
     }
     
@@ -505,15 +508,217 @@ export class ShoppingListGenerator {
   }
   
   /**
-   * Round amounts to reasonable precision
+   * Convert to realistic shopping quantities
+   */
+  private static convertToShoppingQuantity(amount: number, unit: string, ingredientName: string): { amount: number | string; unit: string } {
+    // Handle specific ingredients with realistic shopping conversions
+    const lowerName = ingredientName.toLowerCase();
+    
+    // Proteins - convert to realistic portions
+    if (lowerName.includes('chicken') || lowerName.includes('beef') || lowerName.includes('pork') || lowerName.includes('turkey')) {
+      if (unit === 'piece' || unit === 'lb' || unit === 'oz') {
+        const totalOz = unit === 'lb' ? amount * 16 : (unit === 'oz' ? amount : amount * 6); // assume 6oz per piece
+        if (totalOz <= 16) return { amount: '1 lb', unit: '' };
+        if (totalOz <= 32) return { amount: '2 lbs', unit: '' };
+        return { amount: Math.ceil(totalOz / 16) + ' lbs', unit: '' };
+      }
+    }
+    
+    // Fish - similar to proteins
+    if (lowerName.includes('salmon') || lowerName.includes('tuna') || lowerName.includes('fish')) {
+      if (unit === 'piece' || unit === 'lb' || unit === 'oz') {
+        const totalOz = unit === 'lb' ? amount * 16 : (unit === 'oz' ? amount : amount * 6);
+        if (totalOz <= 12) return { amount: '1 lb', unit: '' };
+        return { amount: Math.ceil(totalOz / 16) + ' lbs', unit: '' };
+      }
+    }
+    
+    // Eggs
+    if (lowerName.includes('egg')) {
+      const totalEggs = Math.ceil(amount);
+      if (totalEggs <= 12) return { amount: '1 dozen', unit: '' };
+      return { amount: Math.ceil(totalEggs / 12) + ' dozen', unit: '' };
+    }
+    
+    // Vegetables and produce
+    if (lowerName.includes('onion')) {
+      return { amount: Math.ceil(amount), unit: amount > 1 ? 'onions' : 'onion' };
+    }
+    
+    if (lowerName.includes('garlic')) {
+      if (amount <= 6) return { amount: '1 head', unit: '' };
+      return { amount: Math.ceil(amount / 6) + ' heads', unit: '' };
+    }
+    
+    if (lowerName.includes('tomato')) {
+      return { amount: Math.ceil(amount), unit: amount > 1 ? 'tomatoes' : 'tomato' };
+    }
+    
+    if (lowerName.includes('pepper') || lowerName.includes('bell')) {
+      return { amount: Math.ceil(amount), unit: amount > 1 ? 'bell peppers' : 'bell pepper' };
+    }
+    
+    if (lowerName.includes('carrot')) {
+      if (amount <= 6) return { amount: '1 bag', unit: '' };
+      return { amount: Math.ceil(amount / 6) + ' bags', unit: '' };
+    }
+    
+    if (lowerName.includes('spinach') || lowerName.includes('lettuce') || lowerName.includes('salad')) {
+      return { amount: Math.ceil(amount), unit: amount > 1 ? 'bags' : 'bag' };
+    }
+    
+    // Oils and liquids
+    if (lowerName.includes('oil') || lowerName.includes('vinegar')) {
+      if (unit === 'cup' || unit === 'tbsp' || unit === 'tsp') {
+        if (amount < 0.5) return { amount: '1 bottle', unit: '(small)' };
+        return { amount: '1 bottle', unit: '' };
+      }
+    }
+    
+    if (lowerName.includes('milk')) {
+      if (unit === 'cup') {
+        if (amount <= 4) return { amount: '1 quart', unit: '' };
+        if (amount <= 8) return { amount: '1/2 gallon', unit: '' };
+        return { amount: '1 gallon', unit: '' };
+      }
+    }
+    
+    if (lowerName.includes('butter')) {
+      if (unit === 'cup' || unit === 'tbsp') {
+        if (amount <= 1) return { amount: '1 stick', unit: '' };
+        if (amount <= 4) return { amount: '1 pack', unit: '(4 sticks)' };
+        return { amount: '2 packs', unit: '' };
+      }
+    }
+    
+    // Cheese
+    if (lowerName.includes('cheese')) {
+      if (unit === 'cup' || unit === 'oz') {
+        const ozAmount = unit === 'cup' ? amount * 4 : amount; // ~4oz per cup shredded
+        if (ozAmount <= 8) return { amount: '1 package', unit: '(8oz)' };
+        return { amount: Math.ceil(ozAmount / 8) + ' packages', unit: '' };
+      }
+    }
+    
+    // Pantry staples
+    if (lowerName.includes('flour')) {
+      if (unit === 'cup') {
+        if (amount <= 8) return { amount: '1 bag', unit: '(5 lbs)' };
+        return { amount: '1 large bag', unit: '(10 lbs)' };
+      }
+    }
+    
+    if (lowerName.includes('sugar')) {
+      if (unit === 'cup') {
+        if (amount <= 4) return { amount: '1 bag', unit: '(2 lbs)' };
+        return { amount: '1 large bag', unit: '(4 lbs)' };
+      }
+    }
+    
+    if (lowerName.includes('rice')) {
+      if (unit === 'cup') {
+        if (amount <= 2) return { amount: '1 bag', unit: '(2 lbs)' };
+        return { amount: '1 large bag', unit: '(5 lbs)' };
+      }
+    }
+    
+    if (lowerName.includes('pasta')) {
+      if (unit === 'cup' || unit === 'oz') {
+        const ozAmount = unit === 'cup' ? amount * 2 : amount;
+        if (ozAmount <= 16) return { amount: '1 box', unit: '(1 lb)' };
+        return { amount: Math.ceil(ozAmount / 16) + ' boxes', unit: '' };
+      }
+    }
+    
+    // Spices and herbs
+    if (lowerName.includes('salt') || lowerName.includes('pepper') || lowerName.includes('spice') || 
+        lowerName.includes('oregano') || lowerName.includes('basil') || lowerName.includes('cumin') ||
+        lowerName.includes('paprika') || lowerName.includes('thyme') || lowerName.includes('rosemary')) {
+      return { amount: '1 container', unit: '' };
+    }
+    
+    // Canned goods
+    if (lowerName.includes('beans') || lowerName.includes('tomato') && (lowerName.includes('can') || lowerName.includes('sauce'))) {
+      return { amount: Math.ceil(amount), unit: amount > 1 ? 'cans' : 'can' };
+    }
+    
+    // Bread
+    if (lowerName.includes('bread')) {
+      return { amount: '1 loaf', unit: '' };
+    }
+    
+    // Default conversion for remaining items
+    return this.convertDefaultUnits(amount, unit);
+  }
+  
+  /**
+   * Round amount to reasonable precision
    */
   private static roundAmount(amount: number): number {
     if (amount < 1) {
-      return Math.round(amount * 100) / 100; // 2 decimal places for small amounts
+      return Math.round(amount * 100) / 100; // Round to 2 decimal places for small amounts
     } else if (amount < 10) {
-      return Math.round(amount * 10) / 10; // 1 decimal place
+      return Math.round(amount * 10) / 10; // Round to 1 decimal place
     } else {
-      return Math.round(amount); // Whole numbers for large amounts
+      return Math.round(amount); // Round to whole numbers for larger amounts
+    }
+  }
+
+  /**
+   * Default unit conversion for remaining items
+   */
+  private static convertDefaultUnits(amount: number, unit: string): { amount: number | string; unit: string } {
+    switch (unit.toLowerCase()) {
+      case 'cup':
+      case 'cups':
+        if (amount < 0.25) return { amount: '2 tbsp', unit: '' };
+        if (amount < 0.5) return { amount: '1/4 cup', unit: '' };
+        if (amount < 0.75) return { amount: '1/2 cup', unit: '' };
+        if (amount < 1) return { amount: '3/4 cup', unit: '' };
+        if (amount < 1.5) return { amount: '1 cup', unit: '' };
+        if (amount < 2) return { amount: '1 1/2 cups', unit: '' };
+        return { amount: Math.ceil(amount), unit: amount > 1 ? 'cups' : 'cup' };
+        
+      case 'tbsp':
+      case 'tablespoon':
+      case 'tablespoons':
+        if (amount < 0.5) return { amount: '1 tsp', unit: '' };
+        if (amount < 1) return { amount: '1/2 tbsp', unit: '' };
+        if (amount < 1.5) return { amount: '1 tbsp', unit: '' };
+        return { amount: Math.ceil(amount), unit: 'tbsp' };
+        
+      case 'tsp':
+      case 'teaspoon':
+      case 'teaspoons':
+        if (amount < 0.5) return { amount: 'pinch', unit: '' };
+        if (amount < 1) return { amount: '1/2 tsp', unit: '' };
+        if (amount < 1.5) return { amount: '1 tsp', unit: '' };
+        return { amount: Math.ceil(amount), unit: 'tsp' };
+        
+      case 'lb':
+      case 'lbs':
+      case 'pound':
+      case 'pounds':
+        if (amount < 0.5) return { amount: '1/2 lb', unit: '' };
+        if (amount < 1) return { amount: '3/4 lb', unit: '' };
+        return { amount: Math.ceil(amount), unit: amount > 1 ? 'lbs' : 'lb' };
+        
+      case 'oz':
+      case 'ounce':
+      case 'ounces':
+        if (amount <= 8) return { amount: Math.ceil(amount), unit: 'oz' };
+        return { amount: Math.ceil(amount / 16), unit: amount > 16 ? 'lbs' : 'lb' };
+        
+      case 'piece':
+      case 'pieces':
+      case 'clove':
+      case 'cloves':
+      case 'stalk':
+      case 'stalks':
+        return { amount: Math.ceil(amount), unit: '' };
+        
+      default:
+        return { amount: Math.ceil(amount * 100) / 100, unit: unit };
     }
   }
   

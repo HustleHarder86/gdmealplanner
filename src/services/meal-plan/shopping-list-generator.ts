@@ -46,11 +46,16 @@ export class ShoppingListGenerator {
           
           const existing = ingredientMap.get(normalizedName);
           if (existing) {
-            // Aggregate if same unit, otherwise keep separate entries
-            if (existing.unit === ingredient.unit) {
+            // Try to combine similar units
+            const combinedUnit = this.combineUnits(existing.unit, ingredient.unit, existing.amount, scaledAmount);
+            if (combinedUnit) {
+              existing.amount = combinedUnit.amount;
+              existing.unit = combinedUnit.unit;
+            } else if (existing.unit === ingredient.unit) {
+              // Same unit, just add amounts
               existing.amount += scaledAmount;
             } else {
-              // Create a compound key for different units
+              // Different incompatible units - create separate entry
               const compoundKey = `${normalizedName}_${ingredient.unit}`;
               ingredientMap.set(compoundKey, {
                 amount: scaledAmount,
@@ -215,6 +220,59 @@ export class ShoppingListGenerator {
   }
   
   /**
+   * Combine similar units and amounts
+   */
+  private static combineUnits(unit1: string, unit2: string, amount1: number, amount2: number): { amount: number; unit: string } | null {
+    const normalizeUnit = (unit: string) => unit.toLowerCase().trim();
+    const u1 = normalizeUnit(unit1);
+    const u2 = normalizeUnit(unit2);
+    
+    // Direct matches
+    if (u1 === u2) {
+      return { amount: amount1 + amount2, unit: unit1 };
+    }
+    
+    // Common unit conversions
+    const conversions: Record<string, Record<string, number>> = {
+      // Volume conversions
+      'cup': { 'cups': 1, 'tablespoon': 16, 'tablespoons': 16, 'tbsp': 16, 'teaspoon': 48, 'teaspoons': 48, 'tsp': 48 },
+      'cups': { 'cup': 1, 'tablespoon': 16, 'tablespoons': 16, 'tbsp': 16, 'teaspoon': 48, 'teaspoons': 48, 'tsp': 48 },
+      'tablespoon': { 'cup': 1/16, 'cups': 1/16, 'tablespoons': 1, 'tbsp': 1, 'teaspoon': 3, 'teaspoons': 3, 'tsp': 3 },
+      'tablespoons': { 'cup': 1/16, 'cups': 1/16, 'tablespoon': 1, 'tbsp': 1, 'teaspoon': 3, 'teaspoons': 3, 'tsp': 3 },
+      'tbsp': { 'cup': 1/16, 'cups': 1/16, 'tablespoon': 1, 'tablespoons': 1, 'teaspoon': 3, 'teaspoons': 3, 'tsp': 3 },
+      'teaspoon': { 'cup': 1/48, 'cups': 1/48, 'tablespoon': 1/3, 'tablespoons': 1/3, 'tbsp': 1/3, 'teaspoons': 1, 'tsp': 1 },
+      'teaspoons': { 'cup': 1/48, 'cups': 1/48, 'tablespoon': 1/3, 'tablespoons': 1/3, 'tbsp': 1/3, 'teaspoon': 1, 'tsp': 1 },
+      'tsp': { 'cup': 1/48, 'cups': 1/48, 'tablespoon': 1/3, 'tablespoons': 1/3, 'tbsp': 1/3, 'teaspoon': 1, 'teaspoons': 1 },
+      
+      // Weight conversions
+      'pound': { 'pounds': 1, 'lb': 1, 'lbs': 1, 'ounce': 16, 'ounces': 16, 'oz': 16 },
+      'pounds': { 'pound': 1, 'lb': 1, 'lbs': 1, 'ounce': 16, 'ounces': 16, 'oz': 16 },
+      'lb': { 'pound': 1, 'pounds': 1, 'lbs': 1, 'ounce': 16, 'ounces': 16, 'oz': 16 },
+      'lbs': { 'pound': 1, 'pounds': 1, 'lb': 1, 'ounce': 16, 'ounces': 16, 'oz': 16 },
+      'ounce': { 'pound': 1/16, 'pounds': 1/16, 'lb': 1/16, 'lbs': 1/16, 'ounces': 1, 'oz': 1 },
+      'ounces': { 'pound': 1/16, 'pounds': 1/16, 'lb': 1/16, 'lbs': 1/16, 'ounce': 1, 'oz': 1 },
+      'oz': { 'pound': 1/16, 'pounds': 1/16, 'lb': 1/16, 'lbs': 1/16, 'ounce': 1, 'ounces': 1 }
+    };
+    
+    if (conversions[u1] && conversions[u1][u2]) {
+      const conversionFactor = conversions[u1][u2];
+      const convertedAmount1 = amount1 * conversionFactor;
+      const totalAmount = convertedAmount1 + amount2;
+      
+      // Use the larger unit if the total is large enough
+      if (u2 === 'cup' || u2 === 'cups') {
+        return { amount: this.roundAmount(totalAmount), unit: totalAmount > 1 ? 'cups' : 'cup' };
+      } else if (u2 === 'pound' || u2 === 'pounds' || u2 === 'lb' || u2 === 'lbs') {
+        return { amount: this.roundAmount(totalAmount), unit: totalAmount > 1 ? 'lbs' : 'lb' };
+      } else {
+        return { amount: this.roundAmount(totalAmount), unit: unit2 };
+      }
+    }
+    
+    return null; // Can't combine these units
+  }
+
+  /**
    * Normalize ingredient names for better aggregation
    */
   private static normalizeIngredientName(name: string): string {
@@ -222,7 +280,10 @@ export class ShoppingListGenerator {
       .toLowerCase()
       .replace(/\s*\([^)]*\)/g, '') // Remove parenthetical content
       .replace(/,.*$/, '') // Remove everything after comma
-      .replace(/\s*(fresh|dried|ground|chopped|diced|sliced|minced)\s*/g, ' ') // Remove common descriptors
+      .replace(/\s*(fresh|dried|ground|chopped|diced|sliced|minced|raw|cooked|frozen|canned)\s*/g, ' ') // Remove common descriptors
+      .replace(/\s*(large|medium|small|extra)\s*/g, ' ') // Remove size descriptors
+      .replace(/\s*(boneless|skinless|lean|organic)\s*/g, ' ') // Remove quality descriptors
+      .replace(/\s*-\s*/g, ' ') // Replace dashes with spaces
       .replace(/\s+/g, ' ') // Normalize whitespace
       .trim();
   }

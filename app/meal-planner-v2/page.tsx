@@ -443,14 +443,27 @@ export default function MealPlannerV2Page() {
             <Card className="mb-6">
               <div className="p-6 border-b">
                 <div className="flex justify-between items-center">
-                  <h3 className="text-lg font-semibold">Shopping List</h3>
-                  <Button
-                    onClick={exportShoppingListText}
-                    variant="outline"
-                    size="sm"
-                  >
-                    Download as Text
-                  </Button>
+                  <h3 className="text-lg font-semibold">Interactive Shopping List</h3>
+                  <div className="flex gap-2">
+                    <Button
+                      onClick={() => {
+                        const checked = document.querySelectorAll('input[type="checkbox"]:checked').length;
+                        const total = document.querySelectorAll('input[type="checkbox"]').length;
+                        alert(`Shopping Progress: ${checked}/${total} items checked off (${Math.round(checked/total*100)}%)`);
+                      }}
+                      variant="outline"
+                      size="sm"
+                    >
+                      📊 Progress
+                    </Button>
+                    <Button
+                      onClick={exportShoppingListText}
+                      variant="outline"
+                      size="sm"
+                    >
+                      📄 Download
+                    </Button>
+                  </div>
                 </div>
                 <p className="text-gray-600">
                   {shoppingList.totalItems} items for week of {new Date(shoppingList.weekStartDate).toLocaleDateString()}
@@ -460,18 +473,76 @@ export default function MealPlannerV2Page() {
               <div className="p-6">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {shoppingList.categories.map(category => (
-                    <div key={category.name}>
-                      <h4 className="font-semibold text-gray-900 mb-3">{category.name}</h4>
-                      <ul className="space-y-1">
+                    <div key={category.name} className="space-y-3">
+                      <h4 className="font-semibold text-gray-900 mb-3 text-base">{category.name}</h4>
+                      <div className="space-y-2">
                         {category.items.map((item, index) => (
-                          <li key={index} className="text-sm">
-                            <span className="font-medium">{item.amount} {item.unit}</span> {item.name}
-                            {item.notes && <span className="text-gray-500"> ({item.notes})</span>}
-                          </li>
+                          <label 
+                            key={index} 
+                            className="flex items-start gap-3 p-2 rounded hover:bg-gray-50 cursor-pointer group"
+                          >
+                            <input
+                              type="checkbox"
+                              className="mt-0.5 h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded"
+                              onChange={(e) => {
+                                const itemText = e.target.nextElementSibling as HTMLElement;
+                                if (e.target.checked) {
+                                  itemText.classList.add('line-through', 'text-gray-400');
+                                } else {
+                                  itemText.classList.remove('line-through', 'text-gray-400');
+                                }
+                              }}
+                            />
+                            <span className="text-sm flex-1 transition-all">
+                              <span className="font-medium">{item.amount} {item.unit}</span> {item.name}
+                              {item.notes && <span className="text-gray-500 block text-xs">({item.notes})</span>}
+                            </span>
+                          </label>
                         ))}
-                      </ul>
+                      </div>
                     </div>
                   ))}
+                </div>
+                
+                {/* Quick Actions */}
+                <div className="mt-6 pt-4 border-t">
+                  <div className="flex flex-wrap gap-2">
+                    <button
+                      onClick={() => {
+                        document.querySelectorAll('input[type="checkbox"]').forEach((cb: any) => {
+                          cb.checked = true;
+                          const itemText = cb.nextElementSibling as HTMLElement;
+                          itemText.classList.add('line-through', 'text-gray-400');
+                        });
+                      }}
+                      className="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors"
+                    >
+                      ✅ Check All
+                    </button>
+                    <button
+                      onClick={() => {
+                        document.querySelectorAll('input[type="checkbox"]').forEach((cb: any) => {
+                          cb.checked = false;
+                          const itemText = cb.nextElementSibling as HTMLElement;
+                          itemText.classList.remove('line-through', 'text-gray-400');
+                        });
+                      }}
+                      className="text-xs bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded transition-colors"
+                    >
+                      🔄 Uncheck All
+                    </button>
+                    <button
+                      onClick={() => {
+                        const checkedItems = document.querySelectorAll('input[type="checkbox"]:checked');
+                        checkedItems.forEach((cb: any) => {
+                          cb.closest('label').style.display = 'none';
+                        });
+                      }}
+                      className="text-xs bg-red-100 hover:bg-red-200 px-3 py-1 rounded transition-colors"
+                    >
+                      🗑️ Hide Checked
+                    </button>
+                  </div>
                 </div>
               </div>
             </Card>

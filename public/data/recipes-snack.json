@@ -1,6 +1,6 @@
 {
   "category": "snack",
-  "recipeCount": 33,
+  "recipeCount": 35,
   "recipes": [
     {
       "id": "spoonacular-631843",
@@ -331,6 +331,116 @@
       },
       "importedAt": "2025-07-09T02:10:38.809Z",
       "spoonacularId": "716406"
+    },
+    {
+      "id": "spoonacular-651840",
+      "title": "Bacon And Bleu Table-For-Two Salad",
+      "description": "Bacon And Bleu Table-For-Two Salad could be just the gluten free and primal recipe you've been looking for.  One portion of this dish contains around 10g of protein, 32g of fat, and a total of 386 calories.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Baby Spinach Leaves",
+          "amount": 2,
+          "unit": "handfuls",
+          "original": "2 handfuls baby spinach leaves"
+        },
+        {
+          "name": "Balsamic Vinegar",
+          "amount": 3,
+          "unit": "Tbsps",
+          "original": "3 tablespoons balsamic vinegar"
+        },
+        {
+          "name": "Bleu Cheese",
+          "amount": 56.699,
+          "unit": "g",
+          "original": "2 ounces bleu cheese, crumbled"
+        },
+        {
+          "name": "Bacon",
+          "amount": 2,
+          "unit": "slice",
+          "original": "2 slices bacon, cooked and crumbled"
+        },
+        {
+          "name": "Extra Virgin Olive Oil",
+          "amount": 3,
+          "unit": "Tbsps",
+          "original": "3 tablespoons extra virgin olive oil"
+        },
+        {
+          "name": "Granny Smith Apple",
+          "amount": 0.5,
+          "unit": "",
+          "original": "1/2 Granny Smith apple, cubed"
+        },
+        {
+          "name": "Pepper",
+          "amount": 2,
+          "unit": "servings",
+          "original": "freshly ground pepper to taste"
+        },
+        {
+          "name": "Purple Onion",
+          "amount": 4,
+          "unit": "slice",
+          "original": "4 slices purple onion, halved"
+        }
+      ],
+      "instructions": [
+        "1. Plate two generous servings of baby spinach.Top each salad with onion, apple, bacon and bleu cheese.",
+        "2. Drizzle olive oil and balsamic vinegar.Season with freshly ground pepper."
+      ],
+      "nutrition": {
+        "calories": 386,
+        "carbohydrates": 15,
+        "fiber": 2,
+        "sugar": 10,
+        "protein": 10,
+        "fat": 32,
+        "saturatedFat": 9,
+        "sodium": 492
+      },
+      "carbChoices": 1,
+      "tags": [
+        "gluten-free",
+        "low-carb",
+        "side-dish",
+        "snack",
+        "appetizer"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/651840-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/GXS2HNK8/midnightsushis-signature-bacon-and-bleu-table-for-two-salad-of-perfection",
+      "gdValidation": {
+        "isValid": false,
+        "score": 95,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": true,
+          "adequateFiber": true,
+          "warnings": [
+            "High sugar content: 9.78g (66% of carbs)",
+            "High saturated fat: 9.2g",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Choose options with less added sugar",
+            "Choose leaner protein sources or reduce cheese/butter"
+          ]
+        },
+        "warnings": [
+          "Choose options with less added sugar",
+          "Choose leaner protein sources or reduce cheese/butter"
+        ]
+      },
+      "importedAt": "2025-07-11T17:39:44.123Z",
+      "spoonacularId": "651840"
     },
     {
       "id": "spoonacular-633330",
@@ -2043,6 +2153,134 @@
         "_seconds": 1751903312,
         "_nanoseconds": 429000000
       }
+    },
+    {
+      "id": "spoonacular-641128",
+      "title": "Curry Mussels",
+      "description": "Curry Mussels is a gluten free, primal, and pescatarian hor d'oeuvre.  One portion of this dish contains around 64g of protein, 33g of fat, and a total of 743 calories.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Mussels",
+          "amount": 2,
+          "unit": "kg",
+          "original": "Mussels, 2kg"
+        },
+        {
+          "name": "Onion",
+          "amount": 1,
+          "unit": "",
+          "original": "Onion (chopped), 1"
+        },
+        {
+          "name": "Wine",
+          "amount": 150,
+          "unit": "ml",
+          "original": "Dry white wine, 150ml"
+        },
+        {
+          "name": "Crème Fraiche",
+          "amount": 150,
+          "unit": "ml",
+          "original": "Crème fraiche, 150ml"
+        },
+        {
+          "name": "Curry Powder",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "tablespoon Curry powder, 1"
+        },
+        {
+          "name": "Cayenne Pepper",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "teaspoon Cayenne pepper, 1"
+        },
+        {
+          "name": "Parsley",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "tablespoon Parsley (chopped), 1"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "tablespoon Olive oil, 1"
+        },
+        {
+          "name": "Salt And Pepper",
+          "amount": 2,
+          "unit": "servings",
+          "original": "Salt and pepper to taste."
+        }
+      ],
+      "instructions": [
+        "1. In a big pot or cocotte, put in olive oil and onion. Fry the onions until soft but not brown.",
+        "2. Then, put in white wine, parseley, salt, pepper, and cayenne pepper.",
+        "3. Stir for a few minutes before putting the mussels in the pot.",
+        "4. Put the lid on and cook the mussels for about 2-3 minutes, shaking the pan occasionally.",
+        "5. Use tongs to lift out the mussels as they open, putting them into a warm dish. Throw away any mussels that havent opened after 3 minutes.",
+        "6. Strain the liquid through a fine sieve into a clean saucepan, leaving behind any grit or sand.",
+        "7. Bring to the boil and  boil for 2 minutes.",
+        "8. Add the curry powder and crme fraiche, stir. Reheat the sauce without boiling and let the sauce thicken.",
+        "9. Serve the mussels in individual bowls with the sauce poured over.",
+        "10. Sprinkle with some parsley."
+      ],
+      "nutrition": {
+        "calories": 743,
+        "carbohydrates": 32,
+        "fiber": 2,
+        "sugar": 6,
+        "protein": 64,
+        "fat": 33,
+        "saturatedFat": 11,
+        "sodium": 1684
+      },
+      "carbChoices": 2,
+      "tags": [
+        "gluten-free",
+        "high-protein",
+        "lunch",
+        "snack",
+        "appetizer",
+        "dinner",
+        "indian",
+        "asian",
+        "very-healthy"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/641128-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/4ZL4SYFD/curry-mussels",
+      "gdValidation": {
+        "isValid": false,
+        "score": 60,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": true,
+          "warnings": [
+            "Carbs too high: 31.75g (max: 20g)",
+            "High saturated fat: 10.62g",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Reduce portion size or remove some carb sources",
+            "Choose leaner protein sources or reduce cheese/butter"
+          ]
+        },
+        "warnings": [
+          "Reduce portion size or remove some carb sources",
+          "Choose leaner protein sources or reduce cheese/butter"
+        ]
+      },
+      "importedAt": "2025-07-11T17:37:55.362Z",
+      "spoonacularId": "641128"
     },
     {
       "id": "spoonacular-641653",

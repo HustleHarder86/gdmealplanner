@@ -50,6 +50,16 @@ export function RecipeProvider({ children }: { children: React.ReactNode }) {
         setLoading(true);
         setError(null);
 
+        // Clear old localStorage cache to prevent conflicts
+        try {
+          localStorage.removeItem("recipes_data");
+          localStorage.removeItem("recipes_count");
+          localStorage.removeItem("recipes_last_updated");
+          console.log("[OFFLINE] Cleared old recipe cache");
+        } catch (e) {
+          console.warn("Failed to clear cache:", e);
+        }
+
         // Load from multiple category files - NO API CALLS
         console.log("[OFFLINE] Loading recipes from category files...");
         

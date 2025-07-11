@@ -1,6 +1,6 @@
 {
   "category": "dinner",
-  "recipeCount": 218,
+  "recipeCount": 254,
   "recipes": [
     {
       "id": "spoonacular-631863",
@@ -902,6 +902,165 @@
       },
       "importedAt": "2025-07-11T15:59:39.349Z",
       "spoonacularId": "632749"
+    },
+    {
+      "id": "spoonacular-631748",
+      "title": "Asian Shrimp Stir-Fry",
+      "description": "Asian Shrimp Stir-Fry takes about 45 minutes from beginning to end.  This recipe makes 4 servings with 201 calories, 24g of protein, and 8g of fat each.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Canola Oil",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons canola oil"
+        },
+        {
+          "name": "Shrimp",
+          "amount": 453.592,
+          "unit": "g",
+          "original": "1 pound uncooked large shrimp (20/25 count per pound), peeled and deveined"
+        },
+        {
+          "name": "Bell Pepper",
+          "amount": 149,
+          "unit": "g",
+          "original": "1 red bell pepper, sliced (about 1 cup)"
+        },
+        {
+          "name": "Onion",
+          "amount": 160,
+          "unit": "g",
+          "original": "1 large yellow onion, sliced (about 1 cup)"
+        },
+        {
+          "name": "Garlic",
+          "amount": 2,
+          "unit": "cloves",
+          "original": "2 cloves garlic, minced"
+        },
+        {
+          "name": "Ginger Root",
+          "amount": 1,
+          "unit": "inch",
+          "original": "1 (1-inch) piece fresh ginger root, peeled and minced (about 1 tablespoon)"
+        },
+        {
+          "name": "Pepper",
+          "amount": 0.25,
+          "unit": "tsps",
+          "original": "1/4 teaspoon crushed red pepper"
+        },
+        {
+          "name": "Flavor Concentrated Seafood Broth",
+          "amount": 1,
+          "unit": "pkt",
+          "original": "1 packet Swanson® Flavor Concentrated Seafood Broth"
+        },
+        {
+          "name": "Soy Sauce",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon soy sauce"
+        },
+        {
+          "name": "Sugar",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon sugar"
+        },
+        {
+          "name": "Water",
+          "amount": 59.147,
+          "unit": "ml",
+          "original": "1/4 cup water"
+        },
+        {
+          "name": "Sesame Oil",
+          "amount": 0.25,
+          "unit": "tsps",
+          "original": "1/4 teaspoon sesame oil"
+        },
+        {
+          "name": "Sesame Seeds",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon sesame seeds"
+        },
+        {
+          "name": "Green Onion",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "1 green onion, sliced (about 2 tablespoons)"
+        }
+      ],
+      "instructions": [
+        "1. Heat the oil in a 12-inch skillet over medium-high heat.",
+        "2. Add the shrimp and stir-fry for 3 minutes or until cooked through.",
+        "3. Remove the shrimp from the skillet.",
+        "4. Add the red bell pepper and yellow onion to the skillet and stir-fry for 2 minutes or until the vegetables are tender-crisp.",
+        "5. Add the garlic, ginger root and crushed red pepper to the skillet and stir-fry for 30 seconds. Return the shrimp to the skillet. Stir in the concentrated broth, soy sauce, sugar and water and cook for 1 minute or until the mixture is hot.",
+        "6. Remove the skillet from the heat and stir in the sesame oil.",
+        "7. Sprinkle the shrimp mixture with the sesame seeds and green onion."
+      ],
+      "nutrition": {
+        "calories": 201,
+        "carbohydrates": 8,
+        "fiber": 2,
+        "sugar": 4,
+        "protein": 24,
+        "fat": 8,
+        "saturatedFat": 1,
+        "sodium": 394
+      },
+      "carbChoices": 1,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "high-protein",
+        "low-carb",
+        "lunch",
+        "dinner",
+        "asian"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/631748-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/GK6SWY26/asian-shrimp-stir-fry",
+      "gdValidation": {
+        "isValid": false,
+        "score": 40,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 8.44g (min: 30g)",
+            "Fiber too low: 1.75g (min: 5g)",
+            "High sugar content: 4.46g (53% of carbs)",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Choose options with less added sugar",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Choose options with less added sugar",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:39:34.205Z",
+      "spoonacularId": "631748"
     },
     {
       "id": "spoonacular-631748",
@@ -2548,6 +2707,236 @@
       }
     },
     {
+      "id": "spoonacular-633518",
+      "title": "Baked Chicken Breasts",
+      "description": "Baked Chicken Breasts is a gluten free recipe with 5 servings.  This main course has 225 calories, 25g of protein, and 9g of fat per serving.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 5,
+      "ingredients": [
+        {
+          "name": "Butter",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon Butter, melted"
+        },
+        {
+          "name": "Chicken Breast Halves Boned And Skinned",
+          "amount": 5,
+          "unit": "",
+          "original": "5 chicken breast halves boned and skinned"
+        },
+        {
+          "name": "Cream Of Chicken Soup Condensed",
+          "amount": 304.757,
+          "unit": "g",
+          "original": "10 3/4 ounces cream of chicken soup condensed - (or cream<"
+        },
+        {
+          "name": "Sherry",
+          "amount": 120,
+          "unit": "ml",
+          "original": "1/2 cup dry sherry"
+        },
+        {
+          "name": "Garlic 8 Ounces Mushrooms",
+          "amount": 0.25,
+          "unit": "tsps",
+          "original": "1/4 teaspoon garlic powder or garlic 8 ounces canned mushrooms drained"
+        },
+        {
+          "name": "Rosemary Leaves",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon tarragon or rosemary leaves (I like 1 teaspoon Worcestershire sauce"
+        }
+      ],
+      "instructions": [
+        "1. Rinse chicken breasts and pat dry; place in Crock-Pot. In a saucepan, combine remaining ingredients and heat until smooth and hot.",
+        "2. Pour over chicken breasts. Cover and cook on low setting for 8 to 10 hours.(I did it on higher heat to speed things up. I added boiled potatoes and some paprika towards the end.) For the first time ever, I used those frozen boneless skinless bags of chicken. NOT BAD! Also, I have never been one to cook with soups before: have learned my lesson. Once cooked in this recipe, you cannot tell there is canned soup as base for sauce.NOTES : I think this could be made in oven or on top of stove. Hint: Rival's recipe called for 4 ounces of mushrooms, but I doubled the quantity. You could leave them out if you don't like mushrooms. I had no Cream of Chicken soup and sub'd Cream of Celery. It was so good that I think I'll just stick with Celery in the future!!"
+      ],
+      "nutrition": {
+        "calories": 225,
+        "carbohydrates": 5,
+        "fiber": 0,
+        "sugar": 1,
+        "protein": 25,
+        "fat": 9,
+        "saturatedFat": 3,
+        "sodium": 594
+      },
+      "carbChoices": 0,
+      "tags": [
+        "gluten-free",
+        "high-protein",
+        "low-carb",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/633518-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/R756B6BD/baked-chicken-breasts",
+      "gdValidation": {
+        "isValid": false,
+        "score": 40,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 5.27g (min: 30g)",
+            "Fiber too low: 0g (min: 5g)",
+            "No whole grains detected",
+            "Limited vegetables detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Serve with whole grain bread or brown rice",
+            "Add a side salad or steamed vegetables"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Serve with whole grain bread or brown rice",
+          "Add a side salad or steamed vegetables"
+        ]
+      },
+      "importedAt": "2025-07-11T17:37:25.634Z",
+      "spoonacularId": "633518"
+    },
+    {
+      "id": "spoonacular-633521",
+      "title": "Baked Chicken In Avocado Boat - Featured In Group",
+      "description": "If you want to add more gluten free recipes to your recipe box, Baked Chicken In Avocado Boat - Featured In Group might be a recipe you should try.  For $7.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Butter",
+          "amount": 56.75,
+          "unit": "g",
+          "original": "1/4 cup butter"
+        },
+        {
+          "name": "Cabbage",
+          "amount": 140,
+          "unit": "g",
+          "original": "2 cups thinly sliced cabbage"
+        },
+        {
+          "name": "Chicken Breast Meat",
+          "amount": 2,
+          "unit": "",
+          "original": "2 chicken breast meat diced"
+        },
+        {
+          "name": "Avacados Half Lengthwise",
+          "amount": 2,
+          "unit": "large",
+          "original": "2 large avacados half lengthwise"
+        },
+        {
+          "name": "Lemon Juice",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon lemon juice"
+        },
+        {
+          "name": "Oyster Sauce",
+          "amount": 3,
+          "unit": "Tbsps",
+          "original": "3 tablespoons oyster sauce"
+        },
+        {
+          "name": "Shallots",
+          "amount": 5,
+          "unit": "",
+          "original": "5 shallots thinly sliced"
+        },
+        {
+          "name": "Whiskey",
+          "amount": 236,
+          "unit": "ml",
+          "original": "cup whiskey"
+        },
+        {
+          "name": "Onion",
+          "amount": 0.25,
+          "unit": "medium size",
+          "original": "1/4 medium size white onion thinly sliced"
+        }
+      ],
+      "instructions": [
+        "1. Preheat oven at 350 degrees F/175 degrees C. Fried shallots till golden brown.",
+        "2. Drain all the oil and set aside.",
+        "3. Place diced chicken meat in a baking dish, season with salt and pepper and add whiskey.",
+        "4. Mix well and then spread out diced chicken meat evenly and top with sliced onion. Dot the the dish with butter.",
+        "5. Bake for 30 minutes.  Half lengthwise the avacados and discard the skin. Slice a little off the bottom of the avocado so that it can stand nicely on the plate.  Gently rub avacados with lemon juice and place cut side up in t"
+      ],
+      "nutrition": {
+        "calories": 841,
+        "carbohydrates": 19,
+        "fiber": 4,
+        "sugar": 8,
+        "protein": 51,
+        "fat": 29,
+        "saturatedFat": 16,
+        "sodium": 1203
+      },
+      "carbChoices": 1,
+      "tags": [
+        "gluten-free",
+        "high-protein",
+        "low-carb",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/633521-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/N8VQMWS3/baked-chicken-in-avocado-boat-featured-in-group-recipes",
+      "gdValidation": {
+        "isValid": false,
+        "score": 40,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 19.48g (min: 30g)",
+            "Fiber too low: 4.09g (min: 5g)",
+            "High saturated fat: 15.99g",
+            "No whole grains detected",
+            "Limited vegetables detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice",
+            "Add a side salad or steamed vegetables"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice",
+          "Add a side salad or steamed vegetables"
+        ]
+      },
+      "importedAt": "2025-07-11T17:39:34.129Z",
+      "spoonacularId": "633521"
+    },
+    {
       "id": "spoonacular-633624",
       "title": "Baked Fried Chicken With Cauliflower Mash",
       "description": "If you want to add more Southern recipes to your recipe box, Baked Fried Chicken With Cauliflower Mash might be a recipe you should try.  This recipe makes 6 servings with 662 calories, 66g of protein, and 29g of fat each.",
@@ -2769,6 +3158,275 @@
       }
     },
     {
+      "id": "spoonacular-633672",
+      "title": "Baked Macaroni With Bolognese Sauce",
+      "description": "Baked Macaroni With Bolognese Sauce might be just the main course you are searching for.  One serving contains 583 calories, 27g of protein, and 31g of fat.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 3,
+      "ingredients": [
+        {
+          "name": "Oil",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons oil"
+        },
+        {
+          "name": "Garlic",
+          "amount": 2,
+          "unit": "cloves",
+          "original": "2 cloves of garlic, minced"
+        },
+        {
+          "name": "Herbs",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon mixed dried herbs (optional)"
+        },
+        {
+          "name": "Beef",
+          "amount": 200,
+          "unit": "g",
+          "original": "200 grams minced beef"
+        },
+        {
+          "name": "Tomato",
+          "amount": 1,
+          "unit": "small",
+          "original": "1 tomato, chopped into small chunks"
+        },
+        {
+          "name": "Ready-made Pasta Sauce",
+          "amount": 367.5,
+          "unit": "ml",
+          "original": "1 1/2 cups ready-made pasta sauce"
+        },
+        {
+          "name": "Salt",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon salt (adjust according to taste)"
+        },
+        {
+          "name": "Freshly Grounded Pepper",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon freshly grounded black pepper"
+        },
+        {
+          "name": "Sugar",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon sugar"
+        },
+        {
+          "name": "Parsley",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon dried parsley (optional)"
+        },
+        {
+          "name": "Macaroni",
+          "amount": 150,
+          "unit": "g",
+          "original": "150 grams macaroni"
+        },
+        {
+          "name": "Mozzarella Cheese",
+          "amount": 100,
+          "unit": "g",
+          "original": "100 grams shredded mozzarella cheese"
+        }
+      ],
+      "instructions": [
+        "1. Preheat the oven to 190C. Lightly grease (I used olive oil) an ovenproof dish.",
+        "2. Heat the oil in a frying pan and add the garlic.",
+        "3. Let it cook on low heat for 1 minute.",
+        "4. Add the dried mixed herbs (if using). Cook for another 1 minute.",
+        "5. Add the minced beef and cook for 5 minutes, breaking up lumps as it cooks, until well browned.",
+        "6. Add in the tomatoes, stir and cook for 1 minute.",
+        "7. Add the pasta sauce. Bring to the boil, reduce the heat slightly and simmer for 5 minutes. Season to taste with salt, pepper, sugar and dried parsley (if using).",
+        "8. In the meantime, cook the macaroni in salted boiling water until al dente.",
+        "9. Drain well.",
+        "10. Spread half of the cooked macaroni evenly into the prepared dish. Top with half of the bolognese sauce, then the remaining macaroni, followed by the remaining sauce.",
+        "11. Sprinkle the top with some extra dried parsley, if desired. Top with shredded cheese and bake for 15~20 minutes, until the top turns brown and bubbly.",
+        "12. Serve warm."
+      ],
+      "nutrition": {
+        "calories": 583,
+        "carbohydrates": 48,
+        "fiber": 4,
+        "sugar": 8,
+        "protein": 27,
+        "fat": 31,
+        "saturatedFat": 10,
+        "sodium": 1227
+      },
+      "carbChoices": 3,
+      "tags": [
+        "high-protein",
+        "side-dish",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/633672-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/3Q7NMKKP/baked-macaroni-with-bolognese-sauce",
+      "gdValidation": {
+        "isValid": false,
+        "score": 35,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too high: 48.4g (max: 45g)",
+            "Fiber too low: 4.14g (min: 5g)",
+            "High saturated fat: 10.4g",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Reduce portion size or remove some carb sources",
+            "Add vegetables, whole grains, or beans",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Reduce portion size or remove some carb sources",
+          "Add vegetables, whole grains, or beans",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:37:35.561Z",
+      "spoonacularId": "633672"
+    },
+    {
+      "id": "spoonacular-633779",
+      "title": "Baked Salmon With Lime",
+      "description": "If you want to add more gluten free and pescatarian recipes to your recipe box, Baked Salmon With Lime might be a recipe you should try.  For $7.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Salmon Cutlet",
+          "amount": 350,
+          "unit": "g",
+          "original": "350 grams Salmon Cutlet"
+        },
+        {
+          "name": "Spring Onion",
+          "amount": 1,
+          "unit": "stalk",
+          "original": "1 stalk of Spring Onion, cut into sections"
+        },
+        {
+          "name": "Ginger",
+          "amount": 5,
+          "unit": "g",
+          "original": "5 grams Of Shredded Ginger"
+        },
+        {
+          "name": "Chili",
+          "amount": 1,
+          "unit": "",
+          "original": "1 Chili, deseed and cut into strips (optional)"
+        },
+        {
+          "name": "Cooking Wine",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon of Cooking Wine"
+        },
+        {
+          "name": "Rind Of Lime",
+          "amount": 1,
+          "unit": "",
+          "original": "1 Rind of Lime"
+        },
+        {
+          "name": "Lime Juice",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon of Lime Juice"
+        },
+        {
+          "name": "Peppercorns",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon Black Peppercorns, lightly crashed"
+        },
+        {
+          "name": "Butter",
+          "amount": 5,
+          "unit": "g",
+          "original": "5 grams of Butter, cubes"
+        }
+      ],
+      "instructions": [
+        "1. Clean, remove all the scales and pad dry the cutlet with paper towel and place it on baking tray or foil.",
+        "2. Season the fish all around with cooking wine, lime rind and lime juice then top it evenly with crashed peppercorns, shredded ginger, chili, spring onion and butter cubes.",
+        "3. You can either baked it in a pre-heated oven at 200 degree for 12 minutes or you can toast it in the oven toaster for 15 - 18 minutes depend on the thickness and how well you want it to be cooked."
+      ],
+      "nutrition": {
+        "calories": 296,
+        "carbohydrates": 8,
+        "fiber": 2,
+        "sugar": 2,
+        "protein": 36,
+        "fat": 13,
+        "saturatedFat": 3,
+        "sodium": 98
+      },
+      "carbChoices": 1,
+      "tags": [
+        "gluten-free",
+        "high-protein",
+        "low-carb",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/633779-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/ZMQQY5TD/baked-salmon-with-lime",
+      "gdValidation": {
+        "isValid": false,
+        "score": 45,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 7.79g (min: 30g)",
+            "Fiber too low: 1.79g (min: 5g)",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:37:25.544Z",
+      "spoonacularId": "633779"
+    },
+    {
       "id": "spoonacular-633779",
       "title": "Baked Salmon With Lime",
       "description": "If you want to add more gluten free and pescatarian recipes to your recipe box, Baked Salmon With Lime might be a recipe you should try.  For $7.",
@@ -2916,6 +3574,165 @@
         "_seconds": 1751910585,
         "_nanoseconds": 311000000
       }
+    },
+    {
+      "id": "spoonacular-633921",
+      "title": "Balsamic & Honey Glazed Salmon with Lemony Asparagus",
+      "description": "If you want to add more gluten free, dairy free, and pescatarian recipes to your recipe box, Balsamic & Honey Glazed Salmon with Lemony Asparagus might be a recipe you should try.  For $4.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 50,
+      "totalTime": 60,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Apple Cider Vinegar",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons apple cider vinegar"
+        },
+        {
+          "name": "Asparagus",
+          "amount": 12,
+          "unit": "stalks",
+          "original": "12 stalks asparagus"
+        },
+        {
+          "name": "Balsamic Vinegar",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon balsamic vinegar"
+        },
+        {
+          "name": "Dill",
+          "amount": 0.125,
+          "unit": "tsps",
+          "original": "2 pinches (1/8 teaspoon) dried dill"
+        },
+        {
+          "name": "Garlic",
+          "amount": 3,
+          "unit": "cloves",
+          "original": "3 cloves garlic, minced"
+        },
+        {
+          "name": "Grapeseed Oil",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon grapeseed oil"
+        },
+        {
+          "name": "Herbs De Provence",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon herbs de Provence"
+        },
+        {
+          "name": "Honey",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon honey"
+        },
+        {
+          "name": "Juice Of Lemon",
+          "amount": 2,
+          "unit": "",
+          "original": "Juice of half a lemon"
+        },
+        {
+          "name": "Lemon Zest",
+          "amount": 1,
+          "unit": "",
+          "original": "Zest of 1 lemon"
+        },
+        {
+          "name": "Salmon Fillet",
+          "amount": 226.796,
+          "unit": "g",
+          "original": "0.5 pound salmon fillet"
+        },
+        {
+          "name": "Salt And Pepper",
+          "amount": 2,
+          "unit": "servings",
+          "original": "Salt and pepper"
+        },
+        {
+          "name": "Vegetable Stock",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons vegetable stock"
+        }
+      ],
+      "instructions": [
+        "1. In a small mixing bowl or blender, combine all of the ingredients for the balsamic marinade except for the lemon juice (balsamic vinegar, apple cider vinegar, 1 tbsp grapeseed oil, honey, dried dill, herbs de provence, salt and pepper).",
+        "2. Whisk or blend until oil and vinegar are well incorporated and no longer separate.",
+        "3. Place salmon fillet in a baking dish (I use a small casserole dish).",
+        "4. Pour the marinade over the salmon and allow it to marinate for at least 15 minutes (or up to 24 hours covered in the refrigerator).  Turn your oven on high broil. Just before putting the salmon in the oven, drizzle the lemon juice over the fish.",
+        "5. Bake for 10 to 12 minutes on the top rack or until salmon is glazed, browned and sizzling.While the salmon is baking, prepare the asparagus.  Wash the asparagus and cut off the bottom inch and a half of each stalk and discard.",
+        "6. Spread the asparagus on in a large skillet.",
+        "7. Drizzle the grapeseed oil over the asparagus and spread the oil on the asparagus with your hands so that all stalks are completely coated.",
+        "8. Sprinkle asparagus with desired amount of salt and pepper.",
+        "9. Saute over medium heat for 5 minutes.",
+        "10. Add the two tablespoons of vegetable stock and cover the skillet.",
+        "11. Saute 4 minutes.",
+        "12. Remove lid and add the minced garlic.",
+        "13. Place cover back over the asparagus. Continue cooking an additional 3 to 5 minutes until asparagus is cooked but not too soft.  Grate lemon zest over the top of the asparagus."
+      ],
+      "nutrition": {
+        "calories": 301,
+        "carbohydrates": 18,
+        "fiber": 3,
+        "sugar": 13,
+        "protein": 25,
+        "fat": 14,
+        "saturatedFat": 2,
+        "sodium": 310
+      },
+      "carbChoices": 1,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "high-protein",
+        "low-carb",
+        "lunch",
+        "dinner",
+        "very-healthy"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/633921-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/CK5NCLGT/balsamic-honey-glazed-salmon-with-lemony-asparagus",
+      "gdValidation": {
+        "isValid": false,
+        "score": 35,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 18.46g (min: 30g)",
+            "Fiber too low: 2.73g (min: 5g)",
+            "High sugar content: 12.74g (69% of carbs)",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Choose options with less added sugar",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Choose options with less added sugar",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:37:25.560Z",
+      "spoonacularId": "633921"
     },
     {
       "id": "spoonacular-633932",
@@ -3975,6 +4792,323 @@
         "_seconds": 1751911252,
         "_nanoseconds": 958000000
       }
+    },
+    {
+      "id": "spoonacular-157991",
+      "title": "Best Minestrone Soup Recipe",
+      "description": "Forget going out to eat or ordering takeout every time you crave Mediterranean food.  Try making Best Minestrone Soup Recipe at home.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 90,
+      "totalTime": 100,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Add 1 Teaspoon Bay",
+          "amount": 1,
+          "unit": "Leaf",
+          "original": "Add 1 teaspoon crushed Bay Leaf"
+        },
+        {
+          "name": "Pepper",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon Black Pepper"
+        },
+        {
+          "name": "Celery Seed",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon Celery Seed"
+        },
+        {
+          "name": "Extra Virgin Olive Oil",
+          "amount": 5,
+          "unit": "Tbsps",
+          "original": "5 Tablespoons of extra Virgin Olive Oil"
+        },
+        {
+          "name": "Garlic",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons crushed Garlic"
+        },
+        {
+          "name": "Kale",
+          "amount": 31.5,
+          "unit": "g",
+          "original": "1 1/2 cup of Kale"
+        },
+        {
+          "name": "Oregano",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon Oregano"
+        },
+        {
+          "name": "Parmesan Cheese",
+          "amount": 6,
+          "unit": "servings",
+          "original": "Parmesan Grated Cheese"
+        },
+        {
+          "name": "Salt",
+          "amount": 6,
+          "unit": "servings",
+          "original": "Salt to taste"
+        },
+        {
+          "name": "Tomato Pealed",
+          "amount": 4,
+          "unit": "",
+          "original": "4 Italian fresh tomato pealed and chopped"
+        },
+        {
+          "name": "Kidney Beans",
+          "amount": 202,
+          "unit": "g",
+          "original": "1 cup of Dried White Kidney Beans"
+        },
+        {
+          "name": "Onion",
+          "amount": 1,
+          "unit": "",
+          "original": "1 White Onion"
+        },
+        {
+          "name": "Potatoes",
+          "amount": 2,
+          "unit": "",
+          "original": "2 cut White Potatoes"
+        },
+        {
+          "name": "Ziti Pasta",
+          "amount": 60,
+          "unit": "g",
+          "original": "1 cup of Ziti Pasta"
+        },
+        {
+          "name": "Zucchini Squash",
+          "amount": 1,
+          "unit": "",
+          "original": "1 Zucchini Squash"
+        }
+      ],
+      "instructions": [
+        "1. Soak  16 oz.  White Kidney Beans In water over night.In a 5 quart stock Pot add 5 tablespoons Olive oil",
+        "2. To the oil add 1 Bay leaf1 Teaspoon Celery Seed",
+        "3. Add 1 White Onion",
+        "4. Cut up",
+        "5. Add 4 Fresh Tomatoes cut up1 7 oz. can tomato paste",
+        "6. Add 16 oz. Beef stock and bring to a boil add the Kidney Beans",
+        "7. Bring mixture to boil for 1 hour",
+        "8. Add the cut White Potato , oregano, and garlic.cook for 20 minutes and add the zucchini squash, 1 cup of Ziti, kale, and salt to taste pour in bowl and add Parmesan Cheese."
+      ],
+      "nutrition": {
+        "calories": 452,
+        "carbohydrates": 47,
+        "fiber": 9,
+        "sugar": 6,
+        "protein": 23,
+        "fat": 20,
+        "saturatedFat": 7,
+        "sodium": 696
+      },
+      "carbChoices": 3,
+      "tags": [
+        "high-protein",
+        "high-fiber",
+        "lunch",
+        "dinner",
+        "mediterranean",
+        "italian",
+        "european",
+        "healthy"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/157991-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "http://spoonacular.com/-1390324684768",
+      "gdValidation": {
+        "isValid": false,
+        "score": 60,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": true,
+          "warnings": [
+            "Carbs too high: 46.68g (max: 45g)",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Reduce portion size or remove some carb sources",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Reduce portion size or remove some carb sources",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:37:44.453Z",
+      "spoonacularId": "157991"
+    },
+    {
+      "id": "spoonacular-635601",
+      "title": "Boiled Egg Curry",
+      "description": "You can never have too many main course recipes, so give Boiled Egg Curry a try.  This recipe serves 2.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Canola Oil",
+          "amount": 4,
+          "unit": "Tbsps",
+          "original": "4 tablespoons canola oil, divided"
+        },
+        {
+          "name": "Chilli Powder",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon red chilli powder"
+        },
+        {
+          "name": "Hardboiled Eggs",
+          "amount": 4,
+          "unit": "",
+          "original": "4 hard boiled eggs"
+        },
+        {
+          "name": "Coriander To Garnish",
+          "amount": 1,
+          "unit": "leaf",
+          "original": "Chopped fresh coriander leaves to garnish"
+        },
+        {
+          "name": "Ginger",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons fresh ginger, grated"
+        },
+        {
+          "name": "Garam Masala",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon garam masala"
+        },
+        {
+          "name": "Garlic Cloves",
+          "amount": 2,
+          "unit": "",
+          "original": "2 garlic cloves, minced"
+        },
+        {
+          "name": "Chillies",
+          "amount": 2,
+          "unit": "",
+          "original": "2 green chillies (or just one for the faint hearted)"
+        },
+        {
+          "name": "Ground Coriander",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons ground coriander"
+        },
+        {
+          "name": "Ground Cumin",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon ground cumin"
+        },
+        {
+          "name": "Onions",
+          "amount": 2,
+          "unit": "",
+          "original": "2 onions, roughly chopped"
+        },
+        {
+          "name": "Salt",
+          "amount": 2,
+          "unit": "servings",
+          "original": "Salt to taste"
+        },
+        {
+          "name": "Big Tomatoes",
+          "amount": 3,
+          "unit": "",
+          "original": "3 big tomatoes, roughly chopped"
+        },
+        {
+          "name": "Turmeric Powder",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon turmeric powder"
+        }
+      ],
+      "instructions": [
+        "1. Boil 4 eggs in boiling water for about 10 minutes.",
+        "2. Heat 2 tablespoons canola oil in a deep pan over medium heat.",
+        "3. Add the chopped onions and fry until golden. Take off the heat.",
+        "4. Transfer the fried onions from the pan to a food processor. Grind the onions, tomatoes, green chillies into a smooth paste.",
+        "5. Heat the remaining 2 tablespoons of canola oil in the same pan over medium heat.",
+        "6. Add the onion paste. Fry for 2-3 minutes. Stir in ginger and garlic and all the dry spices. Fry until the oil begins to separate from the onion tomato mixture.",
+        "7. Add 2 cups of water bring to a boil on a medium flame.",
+        "8. Cut the boiled eggs into halves lengthside and add them to the gravy. Simmer for 10 minutes or till the gravy is thickened/ reduced to about 3/4 of the original quantity after you added the water",
+        "9. Garnish with coriander leaves.",
+        "10. Serve hot with rice or flatbread."
+      ],
+      "nutrition": {
+        "calories": 515,
+        "carbohydrates": 25,
+        "fiber": 7,
+        "sugar": 12,
+        "protein": 16,
+        "fat": 40,
+        "saturatedFat": 6,
+        "sodium": 494
+      },
+      "carbChoices": 2,
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "dairy-free",
+        "high-fiber",
+        "lunch",
+        "dinner",
+        "indian",
+        "asian"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/635601-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/64SQ5YPT/boiled-egg-curry",
+      "gdValidation": {
+        "isValid": false,
+        "score": 70,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": true,
+          "warnings": [
+            "Carbs too low: 25.49g (min: 30g)",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:37:55.244Z",
+      "spoonacularId": "635601"
     },
     {
       "id": "spoonacular-635601",
@@ -5078,6 +6212,123 @@
       },
       "importedAt": "2025-07-11T16:00:33.952Z",
       "spoonacularId": "662244"
+    },
+    {
+      "id": "spoonacular-637643",
+      "title": "Cheesy Chicken Noodles",
+      "description": "Cheesy Chicken Noodles requires about 45 minutes from start to finish.  For $1.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Basil",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "½ teaspoon Dry Basil"
+        },
+        {
+          "name": "Broccoli Cheese Soup",
+          "amount": 304.757,
+          "unit": "g",
+          "original": "2 Cans ( 10 ¾ oz) - Broccoli Cheese Soup"
+        },
+        {
+          "name": "Pasta",
+          "amount": 6,
+          "unit": "servings",
+          "original": "Cooked Pasta"
+        },
+        {
+          "name": "Garlic",
+          "amount": 1.5,
+          "unit": "Tbs",
+          "original": "1½ Tbs. Chopped Garlic"
+        },
+        {
+          "name": "Heavy Cream",
+          "amount": 238,
+          "unit": "ml",
+          "original": "1 cup Heavy Cream"
+        },
+        {
+          "name": "Milk",
+          "amount": 244,
+          "unit": "ml",
+          "original": "1 cup Milk-"
+        },
+        {
+          "name": "Onion",
+          "amount": 80,
+          "unit": "g",
+          "original": "½ cup Diced Onion"
+        },
+        {
+          "name": "Salt & Pepper",
+          "amount": 6,
+          "unit": "servings",
+          "original": "Salt & Pepper to taste"
+        },
+        {
+          "name": "Chicken Breast",
+          "amount": 6,
+          "unit": "",
+          "original": "6 Boneless, Skinless Chicken Breast"
+        }
+      ],
+      "instructions": [
+        "1. Place the chicken into a greased crock pot. In a bowl combine the remaining items other than the pasta and pour it over the chicken. Cover and cook on high for 1 hour then reduce heat to low and cook for another 5-6 hours.",
+        "2. Serve the chicken and sauce over the cooked pasta."
+      ],
+      "nutrition": {
+        "calories": 472,
+        "carbohydrates": 36,
+        "fiber": 2,
+        "sugar": 5,
+        "protein": 32,
+        "fat": 21,
+        "saturatedFat": 12,
+        "sodium": 619
+      },
+      "carbChoices": 2,
+      "tags": [
+        "high-protein",
+        "side-dish",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/637643-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/QJZBWGKC/cheesy-chicken-noodles",
+      "gdValidation": {
+        "isValid": false,
+        "score": 75,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Fiber too low: 2.21g (min: 5g)",
+            "High saturated fat: 11.5g",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add vegetables, whole grains, or beans",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add vegetables, whole grains, or beans",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:37:26.071Z",
+      "spoonacularId": "637643"
     },
     {
       "id": "spoonacular-637671",
@@ -9087,6 +10338,131 @@
       "spoonacularId": "639850"
     },
     {
+      "id": "spoonacular-639855",
+      "title": "Codfish Salad",
+      "description": "Codfish Salad might be just the main course you are searching for.  For $2.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Bell Pepper",
+          "amount": 6,
+          "unit": "servings",
+          "original": "Black pepper"
+        },
+        {
+          "name": "Mazola Cooking Oil",
+          "amount": 3,
+          "unit": "Tbsps",
+          "original": "3 tablespoons Mazola cooking oil"
+        },
+        {
+          "name": "Garlic Clove",
+          "amount": 1,
+          "unit": "",
+          "original": "1 garlic clove"
+        },
+        {
+          "name": "Peppers",
+          "amount": 37.25,
+          "unit": "g",
+          "original": "1/4 cup diced green peppers"
+        },
+        {
+          "name": "Hardboiled Eggs",
+          "amount": 3,
+          "unit": "",
+          "original": "3 hard-boiled eggs (optional)"
+        },
+        {
+          "name": "Onion",
+          "amount": 1,
+          "unit": "",
+          "original": "1 onion"
+        },
+        {
+          "name": "Peppers",
+          "amount": 37.25,
+          "unit": "g",
+          "original": "1/4 cup diced red peppers"
+        },
+        {
+          "name": "Cod Fish",
+          "amount": 453.592,
+          "unit": "g",
+          "original": "1 pound salted cod fish"
+        },
+        {
+          "name": "Tomato",
+          "amount": 1,
+          "unit": "",
+          "original": "1 . tomato, firm"
+        }
+      ],
+      "instructions": [
+        "1. Soak codfish in water to cover overnight. Change water twice. Scald in boiling water and drain. Strip fish in small pieces and set aside in dish. Slice garlic clove and brown in oil.",
+        "2. Add onions and saute until just tender.",
+        "3. Add peppers and tomatoes, saute a little more and mix contents with codfish and, if desired, diced eggs.",
+        "4. Serve on a bed of leaf lettuce. Good with biscuits."
+      ],
+      "nutrition": {
+        "calories": 335,
+        "carbohydrates": 4,
+        "fiber": 1,
+        "sugar": 2,
+        "protein": 51,
+        "fat": 12,
+        "saturatedFat": 2,
+        "sodium": 5348
+      },
+      "carbChoices": 0,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "high-protein",
+        "low-carb",
+        "side-dish",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/639855-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/CXK6TBP5/codfish-salad",
+      "gdValidation": {
+        "isValid": false,
+        "score": 45,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 3.68g (min: 30g)",
+            "Fiber too low: 0.83g (min: 5g)",
+            "High sugar content: 2.01g (55% of carbs)",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Choose options with less added sugar",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Choose options with less added sugar",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:39:34.215Z",
+      "spoonacularId": "639855"
+    },
+    {
       "id": "spoonacular-640266",
       "title": "Crab and Shrimp Burgers With Garlic Grits Fries",
       "description": "The recipe Crab and Shrimp Burgers With Garlic Grits Fries can be made in about 45 minutes.  This recipe makes 8 servings with 368 calories, 24g of protein, and 11g of fat each.",
@@ -9666,6 +11042,119 @@
       }
     },
     {
+      "id": "spoonacular-640676",
+      "title": "Creamy Polenta with Egg, Arrabiata & Bacon",
+      "description": "If you have roughly 45 minutes to spend in the kitchen, Creamy Polenta with Egg, Arrabiata & Bacon might be an outstanding gluten free recipe to try.  For $2.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Bacon",
+          "amount": 8,
+          "unit": "slice",
+          "original": "8 slices of thick cut bacon"
+        },
+        {
+          "name": "Cream Cheese",
+          "amount": 56.699,
+          "unit": "g",
+          "original": "2 oz. cream cheese"
+        },
+        {
+          "name": "Eggs",
+          "amount": 4,
+          "unit": "",
+          "original": "4 eggs"
+        },
+        {
+          "name": "Parsley",
+          "amount": 4,
+          "unit": "servings",
+          "original": "fresh parsley for garnish"
+        },
+        {
+          "name": "Goat Cheese",
+          "amount": 113.398,
+          "unit": "g",
+          "original": "4 oz. goat cheese"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon olive oil"
+        },
+        {
+          "name": "Polenta",
+          "amount": 159,
+          "unit": "g",
+          "original": "1 cup polenta"
+        },
+        {
+          "name": "Salt & Pepper",
+          "amount": 4,
+          "unit": "servings",
+          "original": "salt & black pepper"
+        }
+      ],
+      "instructions": [
+        "1. Preheat the oven to 425 degrees F.Bring 4 cups of water to a boil in a medium saucepan. Slowly whisk in the polenta, whisking continuously until there are no lumps and it begins to thicken slightly. Reduce the heat to medium-low and allow the polenta to simmer for 30 minutes, stirring occasionally to keep it from overcooking.When the polenta has thickened and become tender, stir in the goat cheese and cream cheese. Stir until the cheese are melted and fully incorporated into the polenta.",
+        "2. Add salt and pepper to taste.Meanwhile, place the bacon on a parchment-lined baking sheet and place in the preheated oven on the middle rack. Roast for 15-18 minutes or until the bacon is golden and crisp. When it is done, remove it from the oven and place the bacon strips on a paper towel-lined plate. Set aside.In a small saucepan or in the microwave, heat the marinara sauce until just simmering. Keep warm until you are ready to assemble your bowls.In a large non-stick skillet, heat the 1 T olive oil over medium heat. If your pan is large enough, add the four eggs and allow them to cook until the whites are opaque but still a bit runny on the top. Put a lid over the pan and turn off the heat. Allow the eggs to continue cooking under the lid until the whites are set but the yolk is still runny. If your pan is small, fry the eggs in batches.To assemble the bowls, spoon even amounts of polenta in each bowl. Top with a spoonful of the arrabiata, 1 egg and 2 slices of bacon.",
+        "3. Garnish with chopped thyme or parsley leaves.",
+        "4. Serve immediately."
+      ],
+      "nutrition": {
+        "calories": 667,
+        "carbohydrates": 34,
+        "fiber": 1,
+        "sugar": 1,
+        "protein": 24,
+        "fat": 48,
+        "saturatedFat": 19,
+        "sodium": 884
+      },
+      "carbChoices": 2,
+      "tags": [
+        "gluten-free",
+        "high-protein",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/640676-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "http://www.foodista.com/recipe/WPBY4PQQ/creamy-polenta-with-egg-arrabiata-bacon",
+      "gdValidation": {
+        "isValid": false,
+        "score": 75,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Fiber too low: 0.77g (min: 5g)",
+            "High saturated fat: 18.5g",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add vegetables, whole grains, or beans",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add vegetables, whole grains, or beans",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:39:24.914Z",
+      "spoonacularId": "640676"
+    },
+    {
       "id": "spoonacular-640700",
       "title": "Creamy Shrimp Bisque",
       "description": "Creamy Shrimp Bisque is a main course that serves 4.  For $3.",
@@ -9848,6 +11337,171 @@
         "_seconds": 1751910605,
         "_nanoseconds": 500000000
       }
+    },
+    {
+      "id": "spoonacular-640798",
+      "title": "Crisp Winter Salad with Maple Gorgonzola Dressing",
+      "description": "Crisp Winter Salad with Maple Gorgonzola Dressing takes about 45 minutes from beginning to end.  This main course has 679 calories, 21g of protein, and 56g of fat per serving.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Broccoli Stems",
+          "amount": 44,
+          "unit": "g",
+          "original": "½ cup peeled, julienned broccoli stems (1 inch long)"
+        },
+        {
+          "name": "Celery",
+          "amount": 101,
+          "unit": "g",
+          "original": "1 cup julienned celery (1 inch long)"
+        },
+        {
+          "name": "Cider Vinegar",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons cider vinegar"
+        },
+        {
+          "name": "Dijon Mustard",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons Dijon mustard"
+        },
+        {
+          "name": "Gorgonzola Cheese",
+          "amount": 226.796,
+          "unit": "g",
+          "original": "8 ounces gorgonzola cheese, crumbled and partially chunky"
+        },
+        {
+          "name": "Jicama",
+          "amount": 130,
+          "unit": "g",
+          "original": "1 cup peeled, julienned jicama (1 inch long)"
+        },
+        {
+          "name": "Kosher Salt",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon kosher salt"
+        },
+        {
+          "name": "Cream",
+          "amount": 230,
+          "unit": "ml",
+          "original": "1 cup sour cream, low-fat or non-fat"
+        },
+        {
+          "name": "Maple Syrup",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons maple syrup, grade B preferred"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 4,
+          "unit": "servings",
+          "original": "Olive oil"
+        },
+        {
+          "name": "Radishes",
+          "amount": 116,
+          "unit": "g",
+          "original": "1 cup julienned radishes (about 1 small bag or 10 radishes)"
+        },
+        {
+          "name": "Apple",
+          "amount": 125,
+          "unit": "g",
+          "original": "1 cup julienned apple (about 2 apples, red and green)"
+        },
+        {
+          "name": "Romaine Lettuce",
+          "amount": 94,
+          "unit": "g",
+          "original": "2 cups thinly sliced romaine lettuce"
+        },
+        {
+          "name": "Savoy Cabbage",
+          "amount": 140,
+          "unit": "g",
+          "original": "2 cups julienned savoy cabbage"
+        },
+        {
+          "name": "Walnuts",
+          "amount": 117,
+          "unit": "g",
+          "original": "1 cup toasted chopped walnuts, optional"
+        },
+        {
+          "name": "Pepper",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon freshly ground white pepper"
+        }
+      ],
+      "instructions": [
+        "1. In a large bowl, toss the salad ingredients.In a medium bowl, whisk the sour cream, oil, vinegar, mustard, maple syrup, salt, and pepper until smooth.",
+        "2. Add the cheese and mix with a fork to combine without mashing the cheese. There should be visible chunks in the dressing.",
+        "3. Add the walnuts to the salad, then add the dressing and toss to combine.",
+        "4. Serve."
+      ],
+      "nutrition": {
+        "calories": 679,
+        "carbohydrates": 29,
+        "fiber": 7,
+        "sugar": 13,
+        "protein": 21,
+        "fat": 56,
+        "saturatedFat": 18,
+        "sodium": 1359
+      },
+      "carbChoices": 2,
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "high-protein",
+        "high-fiber",
+        "side-dish",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/640798-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/GFW8V24K/crisp-winter-salad-with-maple-gorgonzola-dressing",
+      "gdValidation": {
+        "isValid": false,
+        "score": 60,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": true,
+          "warnings": [
+            "Carbs too low: 29.25g (min: 30g)",
+            "High saturated fat: 18.19g",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:37:35.569Z",
+      "spoonacularId": "640798"
     },
     {
       "id": "spoonacular-640851",
@@ -10131,6 +11785,160 @@
       },
       "importedAt": "2025-07-11T15:57:23.503Z",
       "spoonacularId": "640859"
+    },
+    {
+      "id": "spoonacular-735820",
+      "title": "Crock-Pot: Asian-Style Country Ribs with Black Bean Garlic Sauce",
+      "description": "Crock-Pot: Asian-Style Country Ribs with Black Bean Garlic Sauce could be just the dairy free and ketogenic recipe you've been looking for.  One serving contains 732 calories, 39g of protein, and 58g of fat.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Black Bean Garlic Sauce From A Jar",
+          "amount": 3,
+          "unit": "Tbsps",
+          "original": "3 tablespoons prepared black bean garlic sauce from a jar (i.e. Lee Kum Kee)"
+        },
+        {
+          "name": "Chicken Stock",
+          "amount": 60,
+          "unit": "ml",
+          "original": "1/4 cup mirin or chicken stock"
+        },
+        {
+          "name": "Cornstarch",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon cornstarch"
+        },
+        {
+          "name": "Country",
+          "amount": 4,
+          "unit": "servings",
+          "original": "Asian-Style Country Ribs with Black Bean Garlic Sauce"
+        },
+        {
+          "name": "Sesame Oil",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons dark sesame oil"
+        },
+        {
+          "name": "Garlic",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon coarsely chopped fresh garlic"
+        },
+        {
+          "name": "Ginger Root",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon freshly grated ginger root"
+        },
+        {
+          "name": "Honey",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon honey"
+        },
+        {
+          "name": "Coarsely Cracked Pepper",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon coarsely cracked black pepper"
+        },
+        {
+          "name": "Pork Ribs",
+          "amount": 952.544,
+          "unit": "g",
+          "original": "3 to 4 pounds boneless country-style pork ribs, cross cut in 1-1/2-inch pieces"
+        },
+        {
+          "name": "Soy Salt",
+          "amount": 73,
+          "unit": "g",
+          "original": "1/4 cup low-sodium soy salt"
+        },
+        {
+          "name": "Tablespoons Scallions",
+          "amount": 25,
+          "unit": "g",
+          "original": "1/4 cup + 2 tablespoons chopped scallions (white and tender green)"
+        }
+      ],
+      "instructions": [
+        "1. This crock-pot entre is really, really good. It takes 10 minutes to prepare, is made from ingredients that are readily available and is a bargain when you consider the number of servings it provides.  One caution -  you'll have mush with  Asian flavor if you cook this for more than 5 to 6 hours. The recipe is adapted from \"Slow Cooker Recipes for All Occasions\",  a Rival Crock-Pot publication.",
+        "2. Served with rice and snow peas you have the makings of a minor feast that you'll repeat often. My family loves this dish. I think yours will, too. This, by the way, is a wonderful recipe for novice cooks. If you have a willing teen, let them have a go at it.Asian-Style Country Ribs with Black Bean Garlic Sauce",
+        "**Ingredients3 to 4 pounds boneless country-style pork ribs, cross cut in 1-1/2-inch pieces3 tablespoons prepared black bean garlic sauce from a jar (i.e. Lee Kum Kee)1/4 cup low-sodium soy salt1/4 cup mirin or chicken stock1 tablespoon honey1 tablespoon freshly grated ginger root1 tablespoon coarsely chopped fresh garlic1/2 teaspoon coarsely cracked black pepper1 tablespoon cornstarch2 teaspoons dark sesame oil1/4 cup + 2 tablespoons chopped scallions (white and tender green)Directions**",
+        "1. Spray interior of slow cooker with nonstick cooking spray.",
+        "2. Place pork cubes in slow cooker.",
+        "3. Combine black bean garlic sauce, soy sauce, mirin, honey, ginger, garlic, pepper and cornstarch in a small bowl; stir to dissolve cornstarch.",
+        "4. Pour over ribs.",
+        "5. Cook, covered, on LOW setting for 5 to 6 hours until ribs are tender but still hold their shape.",
+        "6. Transfer ribs to a rimmed serving platter; tent with foil to keep warm. Strain liquid into a small pan. Bring liquid to a boil over medium-high heat; cook until mixture begins to thicken and is reduced by half. Stir in sesame oil.",
+        "7. Add sauce and 1/4 cup scallions to pork cubes.",
+        "8. Mix well.",
+        "9. Garnish with reserved 2 tablespoons scallions."
+      ],
+      "nutrition": {
+        "calories": 732,
+        "carbohydrates": 11,
+        "fiber": 1,
+        "sugar": 6,
+        "protein": 39,
+        "fat": 58,
+        "saturatedFat": 18,
+        "sodium": 7291
+      },
+      "carbChoices": 1,
+      "tags": [
+        "dairy-free",
+        "high-protein",
+        "low-carb",
+        "lunch",
+        "dinner",
+        "asian"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/735820-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "http://oneperfectbite.blogspot.com/2008/10/crock-pot-asian-style-country-ribs-with.html",
+      "gdValidation": {
+        "isValid": false,
+        "score": 30,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 11.17g (min: 30g)",
+            "Fiber too low: 1.03g (min: 5g)",
+            "High sugar content: 6.04g (54% of carbs)",
+            "High saturated fat: 18.28g",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Choose options with less added sugar",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Choose options with less added sugar",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:37:55.384Z",
+      "spoonacularId": "735820"
     },
     {
       "id": "spoonacular-735820",
@@ -12855,6 +14663,134 @@
       "spoonacularId": "642998"
     },
     {
+      "id": "spoonacular-643061",
+      "title": "Flank Steak with Herbed Salsa",
+      "description": "Flank Steak with Herbed Salsan is a gluten free, dairy free, paleolithic, and primal recipe with 4 servings.  One serving contains 301 calories, 25g of protein, and 20g of fat.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Cilantro",
+          "amount": 16,
+          "unit": "g",
+          "original": "1 cup cilantro, finely chopped"
+        },
+        {
+          "name": "Extra Virgin Olive Oil",
+          "amount": 4,
+          "unit": "servings",
+          "original": "Extra virgin olive oil"
+        },
+        {
+          "name": "Flank Steak",
+          "amount": 453.592,
+          "unit": "g",
+          "original": "1 1 pound flank steak"
+        },
+        {
+          "name": "Garlic Clove",
+          "amount": 3,
+          "unit": "",
+          "original": "3 garlic clove, minced"
+        },
+        {
+          "name": "Jalapeno",
+          "amount": 0.5,
+          "unit": "large",
+          "original": "½ large jalapeno, seeded and minced ( whole 1 if brave)"
+        },
+        {
+          "name": "Juice Of Lemon",
+          "amount": 0.5,
+          "unit": "",
+          "original": "1/2 Lemon, juice of"
+        },
+        {
+          "name": "Juice Of Lime",
+          "amount": 0.5,
+          "unit": "",
+          "original": "Juice of large ½ lime"
+        },
+        {
+          "name": "Salt And Pepper",
+          "amount": 4,
+          "unit": "servings",
+          "original": "Salt and pepper"
+        },
+        {
+          "name": "Scallions",
+          "amount": 4,
+          "unit": "",
+          "original": "4 scallions, white only finely chopped"
+        },
+        {
+          "name": "Tomatoes",
+          "amount": 2,
+          "unit": "medium",
+          "original": "2 medium tomatoes, finely chopped"
+        }
+      ],
+      "instructions": [
+        "1. Preheat a grill pan or light a grill.In a medium bowl, combine the tomatoes with the scallions, cilantro, Jalapeno, garlic and lemon  lime juice. Season the salsa with salt and freshly ground pepper.Season with salt and pepper the flank steak.Using a grill pan brush a shadow of oil on the bottom of it.",
+        "2. Place the pan over high heat and when hot add the flank steak. Cook until nicely charred outside and medium rare inside. About 3 minutes per side.",
+        "3. Transfer the steak to a carving board and let rest for 5 minutes.Thinly slice the steak across the grain and serve with the herbed salsa."
+      ],
+      "nutrition": {
+        "calories": 301,
+        "carbohydrates": 5,
+        "fiber": 1,
+        "sugar": 2,
+        "protein": 25,
+        "fat": 20,
+        "saturatedFat": 4,
+        "sodium": 262
+      },
+      "carbChoices": 0,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "high-protein",
+        "low-carb",
+        "lunch",
+        "dinner",
+        "mexican"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/643061-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/GJV558KY/flank-steak-with-herbed-salsa",
+      "gdValidation": {
+        "isValid": false,
+        "score": 45,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 4.85g (min: 30g)",
+            "Fiber too low: 1.28g (min: 5g)",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:37:35.523Z",
+      "spoonacularId": "643061"
+    },
+    {
       "id": "spoonacular-1697639",
       "title": "Foolproof Cooking Method to Make the Juiciest Chicken Breast",
       "description": "You can never have too many main course recipes, so give Foolproof Cooking Method to Make the Juiciest Chicken Breast a try.  This recipe serves 2.",
@@ -13237,6 +15173,252 @@
       },
       "importedAt": "2025-07-11T16:02:13.201Z",
       "spoonacularId": "643564"
+    },
+    {
+      "id": "spoonacular-644167",
+      "title": "Garam Masala Pork Chops with Mint Yogurt and Spiced Couscous",
+      "description": "Garam Masala Pork Chops with Mint Yogurt and Spiced Couscous might be just the Indian recipe you are searching for.  For $4.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Cayenne Pepper",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon Cayenne pepper, ground"
+        },
+        {
+          "name": "Chicken Broth",
+          "amount": 313.333,
+          "unit": "ml",
+          "original": "1 1/3 cup chicken broth"
+        },
+        {
+          "name": "Couscous",
+          "amount": 115.333,
+          "unit": "ml",
+          "original": "2/3 cup couscous"
+        },
+        {
+          "name": "Mint Leaves",
+          "amount": 10,
+          "unit": "",
+          "original": "10 fresh mint leaves"
+        },
+        {
+          "name": "Garam Masala Spices",
+          "amount": 4,
+          "unit": "Tbsps",
+          "original": "4 tbsp. garam masala spices*"
+        },
+        {
+          "name": "Ground Cumin",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 tsp. ground cumin"
+        },
+        {
+          "name": "Pork Loin Chops",
+          "amount": 680.389,
+          "unit": "g",
+          "original": "4 6-oz. lean pork loin chops"
+        },
+        {
+          "name": "Lemon",
+          "amount": 1,
+          "unit": "",
+          "original": "1 lemon"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons olive oil"
+        },
+        {
+          "name": "Raisins",
+          "amount": 4,
+          "unit": "tsps",
+          "original": "4 tsp. raisins"
+        },
+        {
+          "name": "Salt",
+          "amount": 4,
+          "unit": "servings",
+          "original": "Salt to taste"
+        },
+        {
+          "name": "Sesame Seeds",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 tsp. sesame seeds"
+        },
+        {
+          "name": "Yogurt",
+          "amount": 100,
+          "unit": "ml",
+          "original": "1/2 cup Greek style yogurt"
+        }
+      ],
+      "instructions": [
+        "1. Chops:Trim pork chops of excess fat. Rub garam masala into chops (both sides).",
+        "2. Place on a plate, cover and refrigerate for 6-8 hours, to allow flavors to penetrate.Chop the mint and stir into the yogurt and refrigerate for the same period as the pork chops.Preheat broiler. Spray broiler rack with nonstick cooking spray. Broil chops for about 5 minutes each side. Alternately, grill chops over direct heat until well marked on both sides, move to indirect heat, cover loosely in foil, and cook until internal temp reaches 145F.",
+        "3. Remove from heat and allow to rest 3 minutes.",
+        "4. Serve with mint yogurt.Note: *Garam Masala is available in specialty stores and many larger grocery stores.Spiced Couscous:In a medium saucepan bring the broth, raisins, olive oil, cumin, cayenne and salt to a boil. Stir in the couscous, bring back to a boil, cover and remove from the heat. Set aside for 5 minutes.Juice the lemon and stir into the couscous with the sesame seeds.",
+        "5. Serve."
+      ],
+      "nutrition": {
+        "calories": 461,
+        "carbohydrates": 34,
+        "fiber": 4,
+        "sugar": 2,
+        "protein": 47,
+        "fat": 15,
+        "saturatedFat": 3,
+        "sodium": 587
+      },
+      "carbChoices": 2,
+      "tags": [
+        "high-protein",
+        "lunch",
+        "dinner",
+        "indian",
+        "asian"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/644167-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "http://www.foodista.com/recipe/6247HX8F/garam-masala-pork-chops-with-mint-yogurt-and-spiced-couscous",
+      "gdValidation": {
+        "isValid": false,
+        "score": 75,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Fiber too low: 4.14g (min: 5g)",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add vegetables, whole grains, or beans",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add vegetables, whole grains, or beans",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:39:24.698Z",
+      "spoonacularId": "644167"
+    },
+    {
+      "id": "spoonacular-1095689",
+      "title": "Garlic Oregano Olive Tapenade",
+      "description": "Garlic Oregano Olive Tapenade takes about 45 minutes from beginning to end.  This recipe serves 2 and costs $2.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Olives",
+          "amount": 135,
+          "unit": "ml",
+          "original": "1 cup (approx. 5 oz or 140 g) pitted olives"
+        },
+        {
+          "name": "Oregano Leaves",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 Tablespoon fresh oregano leaves"
+        },
+        {
+          "name": "Garlic",
+          "amount": 2,
+          "unit": "cloves",
+          "original": "2 cloves garlic (add more if you like it really garlicky)"
+        },
+        {
+          "name": "Extra Virgin Olive Oil",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 Tablespoons extra virgin olive oil"
+        },
+        {
+          "name": "Zucchini",
+          "amount": 1,
+          "unit": "",
+          "original": "1-2 zucchini"
+        },
+        {
+          "name": "Sardines",
+          "amount": 2,
+          "unit": "cans",
+          "original": "2 cans sardines"
+        }
+      ],
+      "instructions": [
+        "1. Place all the ingredients into a blender and blend really well.",
+        "2. To serve, shred the zucchini and divide between two bowls. Top with the tapenade and sardines."
+      ],
+      "nutrition": {
+        "calories": 509,
+        "carbohydrates": 8,
+        "fiber": 4,
+        "sugar": 3,
+        "protein": 33,
+        "fat": 39,
+        "saturatedFat": 5,
+        "sodium": 1446
+      },
+      "carbChoices": 1,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "high-protein",
+        "low-carb"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/1095689-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/P47LT3HY/garlic-oregano-olive-tapenade-recipe-paleo-aip-keto",
+      "gdValidation": {
+        "isValid": false,
+        "score": 40,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 8.36g (min: 30g)",
+            "Fiber too low: 4.33g (min: 5g)",
+            "No whole grains detected",
+            "No lean protein source detected",
+            "Limited vegetables detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Serve with whole grain bread or brown rice",
+            "Add a side salad or steamed vegetables"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Serve with whole grain bread or brown rice",
+          "Add a side salad or steamed vegetables"
+        ]
+      },
+      "importedAt": "2025-07-11T17:39:43.985Z",
+      "spoonacularId": "1095689"
     },
     {
       "id": "spoonacular-644387",
@@ -19238,6 +21420,168 @@
       }
     },
     {
+      "id": "spoonacular-648479",
+      "title": "Japanese Mabo Tofu With Eggplant",
+      "description": "You can never have too many main course recipes, so give Japanese Mabo Tofu With Eggplant a try.  One portion of this dish contains about 20g of protein, 28g of fat, and a total of 397 calories.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Japanese Rice",
+          "amount": 4,
+          "unit": "servings",
+          "original": "Japanese rice"
+        },
+        {
+          "name": "Eggplant",
+          "amount": 1,
+          "unit": "small",
+          "original": "1 Chinese eggplant (smaller than regular eggplant)"
+        },
+        {
+          "name": "Onion",
+          "amount": 1,
+          "unit": "medium size",
+          "original": "1 medium size onion, finely chopped"
+        },
+        {
+          "name": "Ginger",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon fresh ginger, finely chopped"
+        },
+        {
+          "name": "Garlic Cloves",
+          "amount": 2,
+          "unit": "",
+          "original": "2 garlic cloves, finely chopped"
+        },
+        {
+          "name": "Ground Beef",
+          "amount": 340.194,
+          "unit": "g",
+          "original": "3/4 pound ground beef (or pork)"
+        },
+        {
+          "name": "Spring Onions",
+          "amount": 4,
+          "unit": "",
+          "original": "4 spring onions, finely chopped"
+        },
+        {
+          "name": "Oil",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons neutral oil (canola, grapeseed)"
+        },
+        {
+          "name": "Sesame Oil",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon sesame oil"
+        },
+        {
+          "name": "Soy Sauce",
+          "amount": 6,
+          "unit": "Tbsps",
+          "original": "6 tablespoons soy sauce"
+        },
+        {
+          "name": "Cooking Sake",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons cooking sake"
+        },
+        {
+          "name": "Sugar",
+          "amount": 1.5,
+          "unit": "tsps",
+          "original": "1 1/2 teaspoons sugar"
+        },
+        {
+          "name": "Water",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons water"
+        },
+        {
+          "name": "To-ban-jan",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon to-ban-jan (Korean red chili paste)"
+        }
+      ],
+      "instructions": [
+        "1. Cook rice according to directions on package (I like to use Nishiki rice).",
+        "2. Slice eggplant lengthwise into 4 strips. Slice horizontally into quarters. Set aside.",
+        "3. In a pan over medium/high heat, add 2 tbsp oil, garlic, ginger, onions and half of the spring onions. Cook for 3 to 4 minutes, until onions are translucent.",
+        "4. Add ground beef and season with a bit of salt & pepper. When the meat is cooked, add to-ban-jan and stir.",
+        "5. Add sesame oil and eggplant and cook for 5 to 7 minutes, until the strips are soft and cooked through.",
+        "6. Add tofu and delicately break it up while mixing it in.",
+        "7. Add sake, sugar, water, 4 tbsp soy sauce, stir and cook for a couple of minutes.",
+        "8. Add the remaining 2 tbsp soy sauce and spring onions, stir and turn the heat off.",
+        "9. Serve over rice."
+      ],
+      "nutrition": {
+        "calories": 397,
+        "carbohydrates": 16,
+        "fiber": 5,
+        "sugar": 8,
+        "protein": 20,
+        "fat": 28,
+        "saturatedFat": 8,
+        "sodium": 1604
+      },
+      "carbChoices": 1,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "high-protein",
+        "high-fiber",
+        "low-carb",
+        "lunch",
+        "dinner",
+        "asian",
+        "japanese"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/648479-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/7GMSDHPD/japanese-mabo-tofu-with-eggplant",
+      "gdValidation": {
+        "isValid": false,
+        "score": 60,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": true,
+          "warnings": [
+            "Carbs too low: 16.16g (min: 30g)",
+            "High saturated fat: 7.65g",
+            "No whole grains detected",
+            "Limited vegetables detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice",
+            "Add a side salad or steamed vegetables"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice",
+          "Add a side salad or steamed vegetables"
+        ]
+      },
+      "importedAt": "2025-07-11T17:37:55.405Z",
+      "spoonacularId": "648479"
+    },
+    {
       "id": "spoonacular-648774",
       "title": "Kashmiri Rogan Josh",
       "description": "You can never have too many main course recipes, so give Kashmiri Rogan Josh a try.  This recipe serves 6 and costs $4.",
@@ -19404,6 +21748,123 @@
         "_seconds": 1751910604,
         "_nanoseconds": 642000000
       }
+    },
+    {
+      "id": "spoonacular-648895",
+      "title": "Kielbasa With Brussels Sprouts In Mustard Cream Sauce",
+      "description": "The recipe Kielbasa With Brussels Sprouts In Mustard Cream Sauce can be made in about 45 minutes.  This gluten free recipe serves 4 and costs $2.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Brussels Sprouts",
+          "amount": 680.389,
+          "unit": "g",
+          "original": "1 1/2 pounds brussels sprouts"
+        },
+        {
+          "name": "Kidney Beans",
+          "amount": 0.667,
+          "unit": "can",
+          "original": "2/3 can white kidney beans"
+        },
+        {
+          "name": "Coarse Mustard",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons coarse mustard"
+        },
+        {
+          "name": "Extra Virgin Olive Oil",
+          "amount": 4,
+          "unit": "servings",
+          "original": "extra virgin olive oil, kosher salt, and freshly-ground blac"
+        },
+        {
+          "name": "Garlic",
+          "amount": 4,
+          "unit": "large cloves",
+          "original": "4 large cloves garlic"
+        },
+        {
+          "name": "Heavy Cream",
+          "amount": 59.5,
+          "unit": "ml",
+          "original": "1/4 cup heavy cream"
+        },
+        {
+          "name": "Kielbasa",
+          "amount": 453.592,
+          "unit": "g",
+          "original": "1 pound kielbasa"
+        },
+        {
+          "name": "Shallot",
+          "amount": 1,
+          "unit": "medium",
+          "original": "1 medium shallot"
+        }
+      ],
+      "instructions": [
+        "1. Peel the shallot and cut into quarters.  Make a small pouch out of aluminum foil (2 layers thick) and place inside the shallot and garlic.  Coat with olive oil and a generous pinch of salt.  Seal the pouch tightly and place in the oven (I recommend the toaster oven) at 400F for 30 minutes.Rinse and pick clean the Brussels sprouts.",
+        "2. Cut each sprout in half, discarding any wilted outer leaves.  Steam the Brussels sprouts until tender when pierced with a fork.  Set aside.Rinse and drain the beans.  Since, 1 can is a little too bean-heavy, save about 1/3 of the beans for something else.Slice the kielbasa on a steep bias into 1/4 slices.",
+        "3. Heat 1 tsp. of olive oil in a large, heavy bottomed non-nonstick skillet over medium high heat.  Arrange the kielbasa slices and fry until crispy on each side, about 3 minutes per side. Set aside on paper towels to drain.",
+        "4. Add a generous tablespoon of good olive oil and keep the heat at medium high.  Unwrap the garlic and shallot and smash them using the flat side of your knife.  They should be very soft.",
+        "5. Add them to the skillet and cook for about 1 minute.",
+        "6. Add the mustard and cream to the skillet and stir to combine.  Reduce the heat to medium low and add the brussels sprouts and beans (as many as you want to use).  Toss everything together to coat, then season to taste with a generous amount of salt and black pepper.Plate the kielbasa on top of your brussels sprouts and beans in a large bowl to serve."
+      ],
+      "nutrition": {
+        "calories": 692,
+        "carbohydrates": 31,
+        "fiber": 11,
+        "sugar": 6,
+        "protein": 27,
+        "fat": 53,
+        "saturatedFat": 17,
+        "sodium": 1317
+      },
+      "carbChoices": 2,
+      "tags": [
+        "gluten-free",
+        "high-protein",
+        "high-fiber",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/648895-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "http://www.foodista.com/recipe/77ZSLL4Y/kielbasa-with-brussels-sprouts-in-mustard-cream-sauce",
+      "gdValidation": {
+        "isValid": false,
+        "score": 90,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": true,
+          "adequateFiber": true,
+          "warnings": [
+            "High saturated fat: 17.25g",
+            "No whole grains detected",
+            "No lean protein source detected",
+            "Limited vegetables detected"
+          ],
+          "adjustmentSuggestions": [
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice",
+            "Add a side salad or steamed vegetables"
+          ]
+        },
+        "warnings": [
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice",
+          "Add a side salad or steamed vegetables"
+        ]
+      },
+      "importedAt": "2025-07-11T17:39:24.872Z",
+      "spoonacularId": "648895"
     },
     {
       "id": "spoonacular-157834",
@@ -19651,6 +22112,261 @@
       },
       "importedAt": "2025-07-11T16:02:04.346Z",
       "spoonacularId": "649195"
+    },
+    {
+      "id": "spoonacular-716338",
+      "title": "Lamb Coconut Tomato Curry Sauce",
+      "description": "If you want to add more gluten free, dairy free, paleolithic, and primal recipes to your collection, Lamb Coconut Tomato Curry Sauce might be a recipe you should try.  This recipe makes 3 servings with 674 calories, 31g of protein, and 53g of fat each.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 3,
+      "ingredients": [
+        {
+          "name": "Coconut Milk",
+          "amount": 226,
+          "unit": "ml",
+          "original": "1 cup of coconut milk"
+        },
+        {
+          "name": "Curry Powder",
+          "amount": 4,
+          "unit": "Tbsps",
+          "original": "4 tablespoons of curry powder"
+        },
+        {
+          "name": "Garlic",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon of garlic"
+        },
+        {
+          "name": "Ginger",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon of ginger"
+        },
+        {
+          "name": "Seasoning Cubes",
+          "amount": 3,
+          "unit": "servings",
+          "original": "Seasoning cubes"
+        },
+        {
+          "name": "Lamb",
+          "amount": 453.592,
+          "unit": "g",
+          "original": "1 pound of Lamb"
+        },
+        {
+          "name": "Blended Onions",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons of blended onions"
+        },
+        {
+          "name": "Vegetables",
+          "amount": 3,
+          "unit": "servings",
+          "original": "Vegetables."
+        },
+        {
+          "name": "Blended Tomato",
+          "amount": 10,
+          "unit": "Tbsps",
+          "original": "10 tablespoons of blended tomato (already boiled)"
+        },
+        {
+          "name": "Water",
+          "amount": 236.588,
+          "unit": "ml",
+          "original": "1 cup of water"
+        },
+        {
+          "name": "Bell Pepper",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon of pepper (I used Cameroonian yellow pepper)"
+        },
+        {
+          "name": "Garnishing",
+          "amount": 3,
+          "unit": "servings",
+          "original": "Garnishing"
+        },
+        {
+          "name": "Garnishing",
+          "amount": 3,
+          "unit": "servings",
+          "original": "Garnishing"
+        }
+      ],
+      "instructions": [
+        "1. Wash your lamb and season with seasoning cubes, the blended onions, pepper, ginger and garlic and allow to marinate for at least an hour.In a pot on low heat, pour in your coconut milk, water, blended tomato, curry powder and bring to boil.",
+        "2. Pour in the lamb and marinade juice into the pot and leave on low heat to continue to stew till the lamb is cooked.If you want your lamb falling off the bones, you can choose to cook longer and pour more water if needed.Taste to make sure it has enough seasoning and serve with Rice.",
+        "3.  Fun Health fact: A lamb curry can provide up to 50% of the iron a woman needs in a day."
+      ],
+      "nutrition": {
+        "calories": 674,
+        "carbohydrates": 22,
+        "fiber": 7,
+        "sugar": 2,
+        "protein": 31,
+        "fat": 53,
+        "saturatedFat": 30,
+        "sodium": 166
+      },
+      "carbChoices": 1,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "high-protein",
+        "high-fiber",
+        "indian",
+        "asian"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/716338-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.afrolems.com/2015/04/01/lamb-coconut-tomato-curry-sauce-recipe/",
+      "gdValidation": {
+        "isValid": false,
+        "score": 60,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": true,
+          "warnings": [
+            "Carbs too low: 22.16g (min: 30g)",
+            "High saturated fat: 29.94g",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:37:55.237Z",
+      "spoonacularId": "716338"
+    },
+    {
+      "id": "spoonacular-649293",
+      "title": "Lasagne, Marietta-Style",
+      "description": "Lasagne, Marietta-Style requires about 45 minutes from start to finish.  This recipe serves 12 and costs 93 cents per serving.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 12,
+      "ingredients": [
+        {
+          "name": "Egg",
+          "amount": 1,
+          "unit": "large",
+          "original": "1 large uncooked egg"
+        },
+        {
+          "name": "Garlic Powder",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons garlic powder"
+        },
+        {
+          "name": "Hardboiled Eggs",
+          "amount": 2,
+          "unit": "large",
+          "original": "2 larges hard-boiled eggs, chopped"
+        },
+        {
+          "name": "Sausage",
+          "amount": 226.796,
+          "unit": "g",
+          "original": "1/2 pound sweet Italian sausage"
+        },
+        {
+          "name": "Lasagne Noodles",
+          "amount": 453.592,
+          "unit": "g",
+          "original": "1 pound lasagne noodles"
+        },
+        {
+          "name": "Ricotta",
+          "amount": 453.592,
+          "unit": "g",
+          "original": "1 pound ricotta"
+        },
+        {
+          "name": "Mozzarella Cheese",
+          "amount": 224,
+          "unit": "g",
+          "original": "2 cups shredded mozzarella cheese"
+        }
+      ],
+      "instructions": [
+        "1. Preheat oven to 350 degree F.Boil lasagne noodles according to package directions.In a skillet over medium heat, brown the sausage for 10-15 minutes, then cut  into bite-size pieces.Roughly chop the hard-boiled eggs. In a separate bowl, mix together the ricotta, garlic powder, and the one uncooked egg.In a 9x13\" glass baking dish, layer the ingredients:    1/3 of the sauce    1 layer of noodles, placed lengthwise    1/2 of the sausage and 1/2 of the hard-boiled eggs    1/2 of the ricotta    1/2 of the mozzarella    1/3 of the sauce    1 layer of noodles, placed crosswise    remainder of the sausage and hard-boiled eggs    remainder of the ricotta    remainder of the mozzarella    1 layer of noodles, placed lengthwise    remainder of the sauce",
+        "2. Bake for 45 minutes, remove from oven, and let stand 15 minutes.",
+        "3. Serve, sprinkled with grated cheese, if desired."
+      ],
+      "nutrition": {
+        "calories": 348,
+        "carbohydrates": 30,
+        "fiber": 1,
+        "sugar": 1,
+        "protein": 18,
+        "fat": 17,
+        "saturatedFat": 8,
+        "sodium": 306
+      },
+      "carbChoices": 2,
+      "tags": [
+        "lunch",
+        "dinner",
+        "mediterranean",
+        "italian",
+        "european"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/649293-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "http://www.foodista.com/recipe/SCV8TQV2/lasagne-marietta-style",
+      "gdValidation": {
+        "isValid": false,
+        "score": 70,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Fiber too low: 1.25g (min: 5g)",
+            "High saturated fat: 8.23g",
+            "No whole grains detected",
+            "Limited vegetables detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add vegetables, whole grains, or beans",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice",
+            "Add a side salad or steamed vegetables"
+          ]
+        },
+        "warnings": [
+          "Add vegetables, whole grains, or beans",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice",
+          "Add a side salad or steamed vegetables"
+        ]
+      },
+      "importedAt": "2025-07-11T17:37:44.449Z",
+      "spoonacularId": "649293"
     },
     {
       "id": "spoonacular-649405",
@@ -20095,6 +22811,172 @@
         "_seconds": 1751910570,
         "_nanoseconds": 879000000
       }
+    },
+    {
+      "id": "spoonacular-649886",
+      "title": "Lemony Greek Lentil Soup",
+      "description": "Lemony Greek Lentil Soup is a Mediterranean main course.  One serving contains 368 calories, 23g of protein, and 4g of fat.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Brown Lentils",
+          "amount": 453.592,
+          "unit": "g",
+          "original": "1 pound brown lentils"
+        },
+        {
+          "name": "Carrot",
+          "amount": 340.194,
+          "unit": "g",
+          "original": "12 ounces scrubbed and chopped carrot"
+        },
+        {
+          "name": "Water",
+          "amount": 2.839,
+          "unit": "L",
+          "original": "3 quarts cold water"
+        },
+        {
+          "name": "Thyme",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon dried thyme"
+        },
+        {
+          "name": "Lemon Juice",
+          "amount": 61,
+          "unit": "ml",
+          "original": "1/4 cup lemon juice"
+        },
+        {
+          "name": "Basil",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons dried basil"
+        },
+        {
+          "name": "Thyme",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons fresh thyme"
+        },
+        {
+          "name": "Oregano",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon dried oregano"
+        },
+        {
+          "name": "Pepper",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon freshly ground black pepper"
+        },
+        {
+          "name": "Salt",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons salt"
+        },
+        {
+          "name": "Onion",
+          "amount": 1,
+          "unit": "medium",
+          "original": "1 medium onion, finely chopped"
+        },
+        {
+          "name": "Garlic",
+          "amount": 3,
+          "unit": "cloves",
+          "original": "3 cloves garlic, finely chopped"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon olive oil"
+        },
+        {
+          "name": "Canned Tomatoes",
+          "amount": 793.787,
+          "unit": "g",
+          "original": "28 ounces can whole tomatoes"
+        },
+        {
+          "name": "Teaspoon",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "teaspoon (if none available, add 1 more dried)"
+        }
+      ],
+      "instructions": [
+        "1. Put the lentils, water, carrot and 1 teaspoon dried thyme into an 8-quart stockpot, cover and set over medium heat.",
+        "2. After 15 minutes, lower the heat somewhat and gently bring the water to a simmer, which should take another half an hour or so.",
+        "3. Once the lentils have reached the boiling point, turn off the burner and let them sit for 1 hour.",
+        "4. After the hour, bring the soup back to a simmer and add the lemon juice, dry basil, fresh thyme, oregano, pepper and salt and simmer for 1 hour.",
+        "5. Now, slowly saut the onion and garlic in the olive oil until the onion is tender.",
+        "6. Coarsely chop the tomatoes (I do this with kitchen scissors right in the can), and add them and the onion mixture to the soup. Adjust the salt to taste.",
+        "7. Bring everything back to the boiling point and simmer for another hour.  After this point, you can turn your burner to its lowest setting, and this soup will happily sit steaming with its lid cocked for several hours until you are ready to enjoy it.",
+        "8. Add more water if necessary.",
+        "9. Serve with crusty bread and a soft cheese like St. Andre or Cambazola"
+      ],
+      "nutrition": {
+        "calories": 368,
+        "carbohydrates": 64,
+        "fiber": 28,
+        "sugar": 11,
+        "protein": 23,
+        "fat": 4,
+        "saturatedFat": 1,
+        "sodium": 1019
+      },
+      "carbChoices": 4,
+      "tags": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "dairy-free",
+        "high-protein",
+        "high-fiber",
+        "lunch",
+        "dinner",
+        "mediterranean",
+        "european",
+        "greek",
+        "very-healthy"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/649886-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/KV6GLYDK/lemony-greek-lentil-soup",
+      "gdValidation": {
+        "isValid": false,
+        "score": 60,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": true,
+          "warnings": [
+            "Carbs too high: 64.17g (max: 45g)",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Reduce portion size or remove some carb sources",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Reduce portion size or remove some carb sources",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:37:44.435Z",
+      "spoonacularId": "649886"
     },
     {
       "id": "spoonacular-649886",
@@ -21078,6 +23960,142 @@
         "_seconds": 1751911234,
         "_nanoseconds": 316000000
       }
+    },
+    {
+      "id": "spoonacular-650014",
+      "title": "Light Cream Of Broccoli Soup With Cheddar Cheese",
+      "description": "Light Cream Of Broccoli Soup With Cheddar Cheese requires approximately 45 minutes from start to finish.  For $1.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Broccoli Slaw",
+          "amount": 1,
+          "unit": "pkg",
+          "original": "1 package broccoli slaw"
+        },
+        {
+          "name": "Garlic",
+          "amount": 1,
+          "unit": "clove",
+          "original": "1 clove garlic, chopped"
+        },
+        {
+          "name": "Lemon Juice",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon lemon juice"
+        },
+        {
+          "name": "Buttermilk",
+          "amount": 240,
+          "unit": "ml",
+          "original": "1 cup low fat buttermilk"
+        },
+        {
+          "name": "Cheddar Cheese",
+          "amount": 113,
+          "unit": "g",
+          "original": "1 cup low fat cheddar cheese, shredded"
+        },
+        {
+          "name": "Chicken Broth",
+          "amount": 946.353,
+          "unit": "ml",
+          "original": "1 quart low sodium free range chicken broth"
+        },
+        {
+          "name": "Onion",
+          "amount": 1,
+          "unit": "small",
+          "original": "1 small onion chopped"
+        },
+        {
+          "name": "Parsley",
+          "amount": 4,
+          "unit": "Tbsps",
+          "original": "4 tablespoons parsley, minced"
+        },
+        {
+          "name": "Spinach",
+          "amount": 30,
+          "unit": "g",
+          "original": "1 cup spinach"
+        },
+        {
+          "name": "Thyme",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon thyme, minced"
+        },
+        {
+          "name": "Water",
+          "amount": 236.588,
+          "unit": "ml",
+          "original": "1 cup Water"
+        },
+        {
+          "name": "Yukon Gold Potatoes",
+          "amount": 2,
+          "unit": "large",
+          "original": "2 large yukon gold potatoes cut into 1\" pieces"
+        }
+      ],
+      "instructions": [
+        "1. Combine all ingredients except cheddar cheese, buttermilk and parsley in a large dutch oven, and simmer over medium heat for 1 hour until vegetables are tender.Using and immersion blender, or a blender, puree soup until creamy. If you use a blender, be sure to puree in batches with care to keep soup from exploding from your blender.",
+        "2. Add cheese and buttermilk and blend well.Top with parsley and a sprinkle of cheddar cheese."
+      ],
+      "nutrition": {
+        "calories": 190,
+        "carbohydrates": 24,
+        "fiber": 3,
+        "sugar": 5,
+        "protein": 16,
+        "fat": 4,
+        "saturatedFat": 2,
+        "sodium": 350
+      },
+      "carbChoices": 2,
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/650014-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/MHVG57WR/light-cream-of-broccoli-soup-with-cheddar-cheese",
+      "gdValidation": {
+        "isValid": false,
+        "score": 40,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 24.21g (min: 30g)",
+            "Fiber too low: 2.74g (min: 5g)",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:39:53.272Z",
+      "spoonacularId": "650014"
     },
     {
       "id": "spoonacular-1098350",
@@ -22594,6 +25612,173 @@
       },
       "carbChoices": 2,
       "tags": [
+        "high-protein",
+        "high-fiber",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/1098393-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/VWTYGML5/shrimp-touff-e-mardi-gras-eats",
+      "gdValidation": {
+        "isValid": false,
+        "score": 40,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 24.98g (min: 30g)",
+            "Fiber too low: 4.67g (min: 5g)",
+            "High saturated fat: 11.33g",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:37:44.357Z",
+      "spoonacularId": "1098393"
+    },
+    {
+      "id": "spoonacular-1098393",
+      "title": "Mardi Gras Shrimp Étouffée",
+      "description": "Mardi Gras Shrimp Étouffée takes around 1 hour and 30 minutes from beginning to end.  One portion of this dish contains about 40g of protein, 20g of fat, and a total of 420 calories.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 80,
+      "totalTime": 90,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Butter",
+          "amount": 5,
+          "unit": "Tbsps",
+          "original": "5 Tbsp butter"
+        },
+        {
+          "name": "Flour",
+          "amount": 5,
+          "unit": "Tbsps",
+          "original": "5 Tbsp flour"
+        },
+        {
+          "name": "Bell Peppers",
+          "amount": 2,
+          "unit": "small",
+          "original": "2 green bell peppers, small dice"
+        },
+        {
+          "name": "Celery Stalks",
+          "amount": 2,
+          "unit": "small",
+          "original": "2 celery stalks, small dice"
+        },
+        {
+          "name": "Onion",
+          "amount": 1,
+          "unit": "small",
+          "original": "1 yellow onion, small dice"
+        },
+        {
+          "name": "Garlic Cloves",
+          "amount": 4,
+          "unit": "",
+          "original": "4 garlic cloves, minced"
+        },
+        {
+          "name": "Thyme",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 Tbsp dried thyme"
+        },
+        {
+          "name": "Tomato Paste",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 heaping Tbsp tomato paste"
+        },
+        {
+          "name": "Worcestershire Sauce",
+          "amount": 1.5,
+          "unit": "Tbsps",
+          "original": "1 1/2 Tbsp Worcestershire sauce"
+        },
+        {
+          "name": "Creole Seasoning",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 Tbsp creole seasoning"
+        },
+        {
+          "name": "Chicken Broth",
+          "amount": 940,
+          "unit": "ml",
+          "original": "4 cups chicken broth"
+        },
+        {
+          "name": "Shrimp",
+          "amount": 680.389,
+          "unit": "g",
+          "original": "1 1/2 lbs peeled and deveined shrimp"
+        },
+        {
+          "name": "Butter",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 Tbsp butter"
+        },
+        {
+          "name": "Scallions",
+          "amount": 4,
+          "unit": "servings",
+          "original": "scallions"
+        },
+        {
+          "name": "Tomato",
+          "amount": 4,
+          "unit": "servings",
+          "original": "diced fresh tomato for garnish"
+        },
+        {
+          "name": "Rice",
+          "amount": 4,
+          "unit": "servings",
+          "original": "rice"
+        }
+      ],
+      "instructions": [
+        "1. Heat up a heavy pot over low heat.",
+        "2. Add in the butter and cook for about 10-12 minutes until a light golden brown. Be sure to stir around a few times to prevent burning.",
+        "3. Whisk in the flour until smooth and cook again for about 8 minutes on low. It should look like a slightly loose peanut butter when its ready.",
+        "4. Add in the bell peppers, celery and onion. Stir and coat the veggies with the roux. Cook for another 10-15 minutes, until the veggies are softened.Stir in the garlic and thyme and cook for a minute, until the garlic is fragrant.",
+        "5. Add in the tomato paste, Worcestershire sauce, creole seasoning and broth. Simmer on low for 30-40 minutes until slightly thickened. Stir occasionally.Stir in the shrimp, shut the heat and put the lid on. Allow to cook for about 5-8 minutes or until cooked through. Stir in a Tbsp of butter right at the end.",
+        "6. Serve over rice and garnish with sliced scallion and fresh diced tomato."
+      ],
+      "nutrition": {
+        "calories": 421,
+        "carbohydrates": 25,
+        "fiber": 5,
+        "sugar": 9,
+        "protein": 40,
+        "fat": 20,
+        "saturatedFat": 11,
+        "sodium": 1372
+      },
+      "carbChoices": 2,
+      "tags": [
         "dinner",
         "chicken"
       ],
@@ -22660,6 +25845,192 @@
         "_seconds": 1751910605,
         "_nanoseconds": 500000000
       }
+    },
+    {
+      "id": "spoonacular-651076",
+      "title": "Marinated Souvlaki",
+      "description": "Marinated Souvlaki might be just the main course you are searching for.  This recipe serves 6.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Lamb",
+          "amount": 907.185,
+          "unit": "g",
+          "original": "2 pounds Tender meat (pork, veal, beef or lamb, or boned"
+        },
+        {
+          "name": "Onion",
+          "amount": 85.049,
+          "unit": "g",
+          "original": "3 ounces Onion, sliced"
+        },
+        {
+          "name": "Carrot",
+          "amount": 28.35,
+          "unit": "g",
+          "original": "1 ounce Carrot, sliced"
+        },
+        {
+          "name": "Celery",
+          "amount": 28.35,
+          "unit": "g",
+          "original": "1 ounce Celery"
+        },
+        {
+          "name": "Garlic Clove",
+          "amount": 2,
+          "unit": "",
+          "original": "2 Garlic clove, crushed"
+        },
+        {
+          "name": "Pch Thyme",
+          "amount": 1,
+          "unit": "",
+          "original": "1 pch Thyme"
+        },
+        {
+          "name": "Pch Rosemary",
+          "amount": 1,
+          "unit": "",
+          "original": "1 pch Rosemary"
+        },
+        {
+          "name": "Pch Coriander",
+          "amount": 1,
+          "unit": "",
+          "original": "1 pch Coriander"
+        },
+        {
+          "name": "Pch Cloves",
+          "amount": 2,
+          "unit": "",
+          "original": "2 pch Cloves"
+        },
+        {
+          "name": "Pch Pepper",
+          "amount": 4,
+          "unit": "",
+          "original": "4 pch Black pepper"
+        },
+        {
+          "name": "Bay Leaf",
+          "amount": 1,
+          "unit": "",
+          "original": "1 Bay leaf"
+        },
+        {
+          "name": "Parsley",
+          "amount": 6,
+          "unit": "servings",
+          "original": "Parsley, chopped"
+        },
+        {
+          "name": "Lemon Zest",
+          "amount": 1,
+          "unit": "of",
+          "original": "Zest of 1/2 lemon"
+        },
+        {
+          "name": "Salt",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons Salt"
+        },
+        {
+          "name": "Lemon Juice",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons Lemon juice"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 85.049,
+          "unit": "g",
+          "original": "3 ounces Olive oil"
+        },
+        {
+          "name": "Wine",
+          "amount": 113.398,
+          "unit": "g",
+          "original": "4 ounces Wine, white"
+        },
+        {
+          "name": "Pch Or",
+          "amount": 4,
+          "unit": "",
+          "original": "4 pch Or,gano"
+        },
+        {
+          "name": "Pch Or",
+          "amount": 4,
+          "unit": "",
+          "original": "4 pch Or,gano"
+        }
+      ],
+      "instructions": [
+        "1. Cut the meat into small cubes. In a bowl, preferably earthenware, mix the marinade ingredients well and add the meat, mix again, cover and leave to marinate for 24 to 48 hours. (He doesn't say to refrigerate but I would certainly do so. For the curious, the recipe actually calls for marinating in a*kioupi* or earthenware storage jar rather than a bowl. This would probably keep the ingredients cooler.) When ready to cook, thread the meat on 18 to 24 skewers. Grill over embers of vine branches (!).",
+        "2. Serve hot."
+      ],
+      "nutrition": {
+        "calories": 553,
+        "carbohydrates": 4,
+        "fiber": 1,
+        "sugar": 1,
+        "protein": 26,
+        "fat": 46,
+        "saturatedFat": 14,
+        "sodium": 872
+      },
+      "carbChoices": 0,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "high-protein",
+        "low-carb",
+        "lunch",
+        "dinner",
+        "mediterranean",
+        "european",
+        "greek"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/651076-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/6JYDP72Z/marinated-souvlaki",
+      "gdValidation": {
+        "isValid": false,
+        "score": 40,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 3.93g (min: 30g)",
+            "Fiber too low: 0.87g (min: 5g)",
+            "High saturated fat: 13.89g",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:37:44.362Z",
+      "spoonacularId": "651076"
     },
     {
       "id": "spoonacular-651911",
@@ -24051,6 +27422,274 @@
         "_seconds": 1751910585,
         "_nanoseconds": 311000000
       }
+    },
+    {
+      "id": "spoonacular-654409",
+      "title": "Pan Fried Rainbow Trout",
+      "description": "Need a gluten free, primal, fodmap friendly, and pescatarian main course.  Pan Fried Rainbow Trout could be a tremendous recipe to try.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Pepper",
+          "amount": 4,
+          "unit": "servings",
+          "original": "Freshly-ground black pepper to taste"
+        },
+        {
+          "name": "Butter",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons Butter"
+        },
+        {
+          "name": "Butterflied",
+          "amount": 4,
+          "unit": "servings",
+          "original": "butterflied, skin on, bones removed"
+        },
+        {
+          "name": "Cherry Tomatoes",
+          "amount": 0.526,
+          "unit": "pts",
+          "original": "1/2 pint Cherry tomatoes washed, cut"
+        },
+        {
+          "name": "Tarragon",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons Chopped fresh tarragon"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons Olive oil"
+        },
+        {
+          "name": "Rainbow Trout",
+          "amount": 4,
+          "unit": "",
+          "original": "4 Rainbow trout - (abt 12 oz ea) whole, and"
+        },
+        {
+          "name": "Salt",
+          "amount": 4,
+          "unit": "servings",
+          "original": "Salt"
+        },
+        {
+          "name": "Inch Through The Center Two",
+          "amount": 1,
+          "unit": "inch",
+          "original": "inch through the center two"
+        },
+        {
+          "name": "Through The Center Two",
+          "amount": 1,
+          "unit": "inch",
+          "original": "inch through the center two"
+        }
+      ],
+      "instructions": [
+        "1. Wash the trout in cold water and pat dry to remove any tiny stray bones. Season the trout with salt and pepper, heat the olive oil in a large saute pan over medium heat and cook the fish skin-side down. Cook the trout in batches of 1 or 2 at a time. Cook the skin side for 2 to 3 minutes before turning with a spatula to cook the flesh side. Cook for an additional 2 to 3 minutes or until fully cooked but be careful of overcooking as the fish are thin and cook quickly.As the trout are finishing, add the butter to the pan and allow to bubble before adding the tomatoes. Cook for 2 minutes, add the tarragon and remove from the heat.",
+        "2. Serve immediately with fiddlehead ferns.This recipe yields 4 servings."
+      ],
+      "nutrition": {
+        "calories": 386,
+        "carbohydrates": 4,
+        "fiber": 1,
+        "sugar": 1,
+        "protein": 37,
+        "fat": 24,
+        "saturatedFat": 7,
+        "sodium": 336
+      },
+      "carbChoices": 0,
+      "tags": [
+        "gluten-free",
+        "high-protein",
+        "low-carb",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/654409-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/3KKJ7Q3T/pan-fried-rainbow-trout",
+      "gdValidation": {
+        "isValid": false,
+        "score": 45,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 4.2g (min: 30g)",
+            "Fiber too low: 0.7g (min: 5g)",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:39:34.255Z",
+      "spoonacularId": "654409"
+    },
+    {
+      "id": "spoonacular-654475",
+      "title": "Pan-Seared Salmon With Orange-Miso Reduction",
+      "description": "Pan-Seared Salmon With Orange-Miso Reduction might be a good recipe to expand your main course recipe box.  This recipe makes 4 servings with 361 calories, 25g of protein, and 22g of fat each.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Chicken Stock",
+          "amount": 120,
+          "unit": "ml",
+          "original": "1/2 cup chicken stock"
+        },
+        {
+          "name": "Garlic",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons minced Garlic"
+        },
+        {
+          "name": "Ginger",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon grated ginger"
+        },
+        {
+          "name": "Honey",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons honey"
+        },
+        {
+          "name": "Juice Of Orange",
+          "amount": 1,
+          "unit": "",
+          "original": "1 Juice of orange"
+        },
+        {
+          "name": "Mirin",
+          "amount": 3,
+          "unit": "Tbsps",
+          "original": "3 tablespoons mirin"
+        },
+        {
+          "name": "Miso Paste",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon white miso paste"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 4,
+          "unit": "servings",
+          "original": "Olive oil"
+        },
+        {
+          "name": "Rice Wine Vinegar",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons rice wine vinegar"
+        },
+        {
+          "name": "Salmon Filets",
+          "amount": 453.592,
+          "unit": "g",
+          "original": "4 salmon filets (4 oz each)"
+        },
+        {
+          "name": "Salt And Pepper",
+          "amount": 1,
+          "unit": "",
+          "original": "1 salt and pepper"
+        },
+        {
+          "name": "Soy Sauce",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons yellow miso* or soy sauce"
+        }
+      ],
+      "instructions": [
+        "1. In a large skillet, heat some olive oil over med-high heat.Season salmon fillets on each side with salt and pepper.Pan-sear salmon on each side for 3-4 minutes.In a medium saucepan, heat some olive oil over med-high heat.",
+        "2. Add garlic and ginger and saute until soft.Stir in all the liquids (next 5 ingredients); bring to a boil.",
+        "3. Add miso paste and honey; whisk until well incorporated.Reduce heat and let simmer uncovered until reduced by half and the sauce has a thick syrup-like consistency.Salt and pepper to taste.",
+        "4. Drizzle reduction over each salmon fillets.Optional: serve over sauteed leeks."
+      ],
+      "nutrition": {
+        "calories": 361,
+        "carbohydrates": 15,
+        "fiber": 1,
+        "sugar": 8,
+        "protein": 25,
+        "fat": 22,
+        "saturatedFat": 3,
+        "sodium": 667
+      },
+      "carbChoices": 1,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "high-protein",
+        "low-carb",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/654475-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/NJBR3H7R/pan-seared-salmon-with-orange-miso-reduction",
+      "gdValidation": {
+        "isValid": false,
+        "score": 35,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 14.58g (min: 30g)",
+            "Fiber too low: 0.77g (min: 5g)",
+            "High sugar content: 8.42g (58% of carbs)",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Choose options with less added sugar",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Choose options with less added sugar",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:37:25.528Z",
+      "spoonacularId": "654475"
     },
     {
       "id": "spoonacular-654532",
@@ -26625,6 +30264,372 @@
       "spoonacularId": "658270"
     },
     {
+      "id": "spoonacular-658295",
+      "title": "Rice-less Spicy Tuna Hand Rolls",
+      "description": "Rice-less Spicy Tuna Hand Rolls takes roughly 45 minutes from beginning to end.  Watching your figure.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Persian Cucumber",
+          "amount": 0.5,
+          "unit": "",
+          "original": "•1/2 Persian Cucumber sliced into thin strips."
+        },
+        {
+          "name": "Pickled Ginger",
+          "amount": 6,
+          "unit": "servings",
+          "original": "•pickled ginger for garnish"
+        },
+        {
+          "name": "Reduced Fat Mayonnaise",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "•1-2 tablespoon reduced fat Mayonnaise"
+        },
+        {
+          "name": "Reduced Sodium Soy Sauce",
+          "amount": 6,
+          "unit": "servings",
+          "original": "•reduced sodium soy sauce for dipping"
+        },
+        {
+          "name": "Scallion Into Pieces",
+          "amount": 1,
+          "unit": "small",
+          "original": "•1 scallion chopped into small pieces"
+        },
+        {
+          "name": "Sriracha Chili Sauce",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "•1-2 teaspoon Sriracha chili sauce (depending upon how spicy you like)"
+        },
+        {
+          "name": "Sushi Nori",
+          "amount": 3,
+          "unit": "sheets",
+          "original": "•3 sheets sushi nori; (seaweed) cut in half (Find in Whole Foods, Fairway or any local specialty market)"
+        },
+        {
+          "name": "Sashimi Grade Tuna",
+          "amount": 907.185,
+          "unit": "g",
+          "original": "/2 lb fresh sashimi grade Tuna diced finely (It's raw; get the freshest fish you could possible find.)"
+        }
+      ],
+      "instructions": [
+        "1. ) In a small bowl mix together mayo and chili sauce until thoroughly combined. (Reserve a tad to use as glue to secure the hand roll.)2.)",
+        "2. Add in diced tuna and scallions. Stir all together until the tuna is nice and coated.3.) Now take the Nori and lie it flatly on the counter. Take a couple tablespoons of the spicy tuna mixture and spread it on 1 side of the Nori Wrapper.4.)",
+        "3. Place cucumber slices on top of the tuna in a diagonal form since you will be making a cone shape.5.) Carefully roll into a cone and place a dab of the reserved may on the edge of the nori to glue it all together.6.)",
+        "4. Serve with wasabi, ginger & soy sauce. Enjoy!!!"
+      ],
+      "nutrition": {
+        "calories": 145,
+        "carbohydrates": 1,
+        "fiber": 0,
+        "sugar": 0,
+        "protein": 29,
+        "fat": 2,
+        "saturatedFat": 0,
+        "sodium": 405
+      },
+      "carbChoices": 0,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "high-protein",
+        "low-carb"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/658295-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/55G2QSXT/rice-less-spicy-tuna-hand-rolls",
+      "gdValidation": {
+        "isValid": false,
+        "score": 35,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 0.88g (min: 30g)",
+            "Fiber too low: 0g (min: 5g)",
+            "No whole grains detected",
+            "No lean protein source detected",
+            "Limited vegetables detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Serve with whole grain bread or brown rice",
+            "Add a side salad or steamed vegetables"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Serve with whole grain bread or brown rice",
+          "Add a side salad or steamed vegetables"
+        ]
+      },
+      "importedAt": "2025-07-11T17:39:34.099Z",
+      "spoonacularId": "658295"
+    },
+    {
+      "id": "spoonacular-658453",
+      "title": "Roast Pork Florentine With Pomegranate Sauce",
+      "description": "If you want to add more gluten free recipes to your recipe box, Roast Pork Florentine With Pomegranate Sauce might be a recipe you should try.  This recipe serves 6.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Chicken Broth",
+          "amount": 352.5,
+          "unit": "ml",
+          "original": "1 1/2 cups chicken broth"
+        },
+        {
+          "name": "Cornstarch",
+          "amount": 1.5,
+          "unit": "tsps",
+          "original": "1 1/2 teaspoons cornstarch"
+        },
+        {
+          "name": "Garlic",
+          "amount": 2,
+          "unit": "cloves",
+          "original": "2 cloves garlic, minced"
+        },
+        {
+          "name": "Honey",
+          "amount": 169.5,
+          "unit": "ml",
+          "original": "1/2 cup honey"
+        },
+        {
+          "name": "Pork Tenderloins",
+          "amount": 2,
+          "unit": "",
+          "original": "2 pork tenderloins (trimmed and cut open flat)"
+        },
+        {
+          "name": "Marjoram",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon marjoram"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 3,
+          "unit": "Tbsps",
+          "original": "3 tablespoons olive oil"
+        },
+        {
+          "name": "Parmesan Cheese",
+          "amount": 25,
+          "unit": "g",
+          "original": "1/4 cup parmesan cheese, shredded"
+        },
+        {
+          "name": "Pomegranate Juice",
+          "amount": 249,
+          "unit": "ml",
+          "original": "1 cup pomegranate juice"
+        },
+        {
+          "name": "Bell Pepper",
+          "amount": 37.25,
+          "unit": "g",
+          "original": "1/4 cup red pepper, chopped"
+        },
+        {
+          "name": "Salt And Pepper",
+          "amount": 6,
+          "unit": "servings",
+          "original": "salt and pepper to taste"
+        },
+        {
+          "name": "Spinach",
+          "amount": 90,
+          "unit": "g",
+          "original": "3 cups chopped spinach"
+        },
+        {
+          "name": "Water",
+          "amount": 6,
+          "unit": "servings",
+          "original": "Water to cover"
+        }
+      ],
+      "instructions": [
+        "1. Pre-heat oven to 425F. In a skillet, cook garlic in oil until tender, stir in spinach, marjoram, salt and pepper to taste. Cook for 3 minutes till spinach is wilted and set aside.",
+        "2. Place the cut meat flat on a piece of plastic wrap. Using a mallet, pound the pork to an even 1/2 inch thickness.",
+        "3. Remove the plastic wrap. Using a spatula, spread the filling evenly on the pork leaving a 1-inch border on all sides; sprinkle cheese on top.Starting at the edge, roll up the roast tightly to completely enclosing the filling. Rub the pork with salt and pepper. Tie the roast at 2 inch intervals with kitchen strings.",
+        "4. Place the roast seam-side down on a baking rack. (I've added a bed of kale drizzled with olive oil) Roast until a meat thermometer inserted in the center registers 155F.",
+        "5. Transfer pork to a clean cutting board, tent with foil and let rest for about 10 minutes.For the sauce, combine the ingredients to a pot and bring to a boil over medium heat. Scrape remaining juices from baking pan to pot. Reduce mixture to about 1 cup. Thicken sauce with cornstarch and water, whisking till slightly thickened.",
+        "6. Remove string and slice roast into 3/4 inch thick slices.",
+        "7. Serve with sauce."
+      ],
+      "nutrition": {
+        "calories": 382,
+        "carbohydrates": 31,
+        "fiber": 1,
+        "sugar": 29,
+        "protein": 38,
+        "fat": 12,
+        "saturatedFat": 3,
+        "sodium": 597
+      },
+      "carbChoices": 2,
+      "tags": [
+        "gluten-free",
+        "high-protein"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/658453-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/TN7TMSRF/roast-pork-florentine-with-pomegranate-sauce",
+      "gdValidation": {
+        "isValid": false,
+        "score": 70,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Fiber too low: 0.59g (min: 5g)",
+            "High sugar content: 29.04g (94% of carbs)",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add vegetables, whole grains, or beans",
+            "Choose options with less added sugar",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add vegetables, whole grains, or beans",
+          "Choose options with less added sugar",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:39:53.215Z",
+      "spoonacularId": "658453"
+    },
+    {
+      "id": "spoonacular-658483",
+      "title": "Roasted Alaskan Salmon with Cherries",
+      "description": "Roasted Alaskan Salmon with Cherries is a gluten free, dairy free, paleolithic, and primal recipe with 4 servings.  For $3.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Cherries",
+          "amount": 414,
+          "unit": "g",
+          "original": "¾ pound (about 3 cups) cherries, pitted and halved"
+        },
+        {
+          "name": "Thyme",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons chopped fresh thyme (or 1 teaspoon dried)"
+        },
+        {
+          "name": "Honey",
+          "amount": 1.5,
+          "unit": "Tbsps",
+          "original": "1 ½ tablespoons honey"
+        },
+        {
+          "name": "Lemon Juice",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons lemon juice"
+        },
+        {
+          "name": "Alaskan Salmon Fillets",
+          "amount": 453.592,
+          "unit": "g",
+          "original": "4 (4-6 oz.) wild Alaskan salmon fillets"
+        },
+        {
+          "name": "Sea Salt And Pepper",
+          "amount": 4,
+          "unit": "servings",
+          "original": "Sea salt and freshly ground black pepper"
+        }
+      ],
+      "instructions": [
+        "1. Preheat the oven to 350F.In a large bowl, toss together cherries, lemon juice, honey and thyme. Arrange salmon skin-side down on a large parchment or foil-lined baking sheet, sprinkle with a pinch of sea salt and black pepper. Scatter cherry mixture over and around salmon and bake 12-15 minutes. Switch oven to broil and cook an additional 3 minutes until salmon is just cooked through and cherries are juicy and caramelized, (you want the thickest part of the fish to reach an internal temperature of 131 degrees F on an instant-read thermometer).",
+        "2. Remove the salmon from the oven and allow to rest, uncovered, for 5 minutes."
+      ],
+      "nutrition": {
+        "calories": 253,
+        "carbohydrates": 24,
+        "fiber": 2,
+        "sugar": 20,
+        "protein": 24,
+        "fat": 7,
+        "saturatedFat": 1,
+        "sodium": 51
+      },
+      "carbChoices": 2,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "high-protein",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/658483-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/TNW2S4NB/roasted-alaskan-salmon-with-cherries",
+      "gdValidation": {
+        "isValid": false,
+        "score": 35,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 23.95g (min: 30g)",
+            "Fiber too low: 2.42g (min: 5g)",
+            "High sugar content: 19.91g (83% of carbs)",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Choose options with less added sugar",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Choose options with less added sugar",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:37:15.044Z",
+      "spoonacularId": "658483"
+    },
+    {
       "id": "spoonacular-658541",
       "title": "Roasted Cauliflower with Tahini Sauce",
       "description": "Roasted Cauliflower with Tahini Sauce could be just the gluten free, dairy free, paleolithic, and lacto ovo vegetarian recipe you've been looking for.  For $1.",
@@ -27431,6 +31436,265 @@
         "_seconds": 1751910605,
         "_nanoseconds": 500000000
       }
+    },
+    {
+      "id": "spoonacular-659058",
+      "title": "Salmon Burgers With Roasted Red Pepper Aioli",
+      "description": "You can never have too many main course recipes, so give Salmon Burgers With Roasted Red Pepper Aioli a try.  This recipe serves 2.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Mayonnaise",
+          "amount": 56,
+          "unit": "ml",
+          "original": "1/4 cup mayonnaise"
+        },
+        {
+          "name": "Roasted Peppers",
+          "amount": 35,
+          "unit": "g",
+          "original": "1/4 cup roasted red peppers"
+        },
+        {
+          "name": "Garlic",
+          "amount": 1,
+          "unit": "clove",
+          "original": "1 clove garlic"
+        },
+        {
+          "name": "Salmon",
+          "amount": 340.194,
+          "unit": "g",
+          "original": "12 ounces of salmon, chopped with a sharp knife"
+        },
+        {
+          "name": "Onion",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons finely diced red onion"
+        },
+        {
+          "name": "Green Onion",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons diced green onion"
+        },
+        {
+          "name": "Roasted Peppers",
+          "amount": 35,
+          "unit": "g",
+          "original": "1/4 cup finely diced roasted red peppers"
+        },
+        {
+          "name": "Garlic",
+          "amount": 2,
+          "unit": "cloves",
+          "original": "2 cloves of garlic, minced"
+        },
+        {
+          "name": "Egg",
+          "amount": 1,
+          "unit": "",
+          "original": "1 egg"
+        },
+        {
+          "name": "Very Bread Crumbs",
+          "amount": 27,
+          "unit": "ml",
+          "original": "1/4 cup very dry bread crumbs (or more as needed to shape patties)"
+        },
+        {
+          "name": "Parsley",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons minced fresh parsley or cilantro"
+        },
+        {
+          "name": "Salt And Pepper",
+          "amount": 2,
+          "unit": "servings",
+          "original": "salt and pepper"
+        }
+      ],
+      "instructions": [
+        "1. Mix the mayonnzise, roasted red peppers and a clove of garlic in a food processor until creamy to make the aoili and set aside.",
+        "2. Mix together all remaining ingredients except the salmon, then gently fold in the salmon and shape into patties.",
+        "3. Pan sear patties in a non-stick skillet on medium heat until lightly browned on one side, then turn the burgers, lower the heat to medium low, cover, and cook until done, about 5 minutes more.",
+        "4. Serve the salmon burgers without a bun with a healthy dollop of the Roasted Red Pepper Aioli and a mound of shredded cucumber on top or serve on a traditional bun with condiments of your choice."
+      ],
+      "nutrition": {
+        "calories": 537,
+        "carbohydrates": 15,
+        "fiber": 2,
+        "sugar": 2,
+        "protein": 40,
+        "fat": 35,
+        "saturatedFat": 6,
+        "sodium": 1060
+      },
+      "carbChoices": 1,
+      "tags": [
+        "dairy-free",
+        "high-protein",
+        "low-carb",
+        "lunch",
+        "dinner",
+        "american"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/659058-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/CB5TXT5P/salmon-burgers-with-roasted-red-pepper-aioli",
+      "gdValidation": {
+        "isValid": false,
+        "score": 45,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 14.52g (min: 30g)",
+            "Fiber too low: 1.58g (min: 5g)",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:39:44.064Z",
+      "spoonacularId": "659058"
+    },
+    {
+      "id": "spoonacular-659056",
+      "title": "Salmon Butternut Squash Corn Chowder",
+      "description": "Salmon Butternut Squash Corn Chowder might be just the main course you are searching for.  This gluten free and pescatarian recipe serves 4 and costs $3.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Butternut Squash",
+          "amount": 1,
+          "unit": "",
+          "original": "1 butternut squash, peeled and cut up into squares"
+        },
+        {
+          "name": "Carrot",
+          "amount": 1,
+          "unit": "large",
+          "original": "1 large carrot, cut up"
+        },
+        {
+          "name": "Ears Of Corn",
+          "amount": 3,
+          "unit": "",
+          "original": "3 ears of corn"
+        },
+        {
+          "name": "Dill",
+          "amount": 1,
+          "unit": "bunch",
+          "original": "1 bunch of fresh dill"
+        },
+        {
+          "name": "Heavy Cream",
+          "amount": 59.5,
+          "unit": "ml",
+          "original": "1/4 cup of heavy cream"
+        },
+        {
+          "name": "Onion",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons finely diced red onion"
+        },
+        {
+          "name": "Salmon",
+          "amount": 340.194,
+          "unit": "g",
+          "original": "12 ounces of salmon, chopped with a sharp knife"
+        },
+        {
+          "name": "Salt And Pepper",
+          "amount": 4,
+          "unit": "servings",
+          "original": "salt and pepper"
+        },
+        {
+          "name": "Scallions",
+          "amount": 3,
+          "unit": "sprigs",
+          "original": "3 sprigs of scallions, cut up"
+        },
+        {
+          "name": "Water",
+          "amount": 59.147,
+          "unit": "ml",
+          "original": "1/4 cup water"
+        }
+      ],
+      "instructions": [
+        "1. Pour water into a medium-size soup pot and start boiling on a low flame. Chop up the onions, butternut squash, carrots, corn, along with the scallions and dill and add them to the pot. Cover and let cook on a low flame for 30 minutes. Taste and add salt and pepper.",
+        "2. Cut up the salmon and add it to the soup, along with the cream.",
+        "3. Let cook for another 20 minutes, taste again and enjoy!"
+      ],
+      "nutrition": {
+        "calories": 326,
+        "carbohydrates": 38,
+        "fiber": 6,
+        "sugar": 10,
+        "protein": 22,
+        "fat": 12,
+        "saturatedFat": 5,
+        "sodium": 268
+      },
+      "carbChoices": 3,
+      "tags": [
+        "gluten-free",
+        "high-protein",
+        "high-fiber",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/659056-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/QMRHYRGG/salmon-butternut-squash-corn-chowder",
+      "gdValidation": {
+        "isValid": true,
+        "score": 100,
+        "details": {
+          "isValid": true,
+          "carbsInRange": true,
+          "adequateProtein": true,
+          "adequateFiber": true,
+          "warnings": [
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:37:14.941Z",
+      "spoonacularId": "659056"
     },
     {
       "id": "spoonacular-659081",
@@ -28930,6 +33194,171 @@
         "_seconds": 1751911252,
         "_nanoseconds": 958000000
       }
+    },
+    {
+      "id": "spoonacular-660257",
+      "title": "Slow Braised Spicy Pork",
+      "description": "Slow Braised Spicy Pork is a gluten free and dairy free recipe with 4 servings.  This main course has 296 calories, 28g of protein, and 10g of fat per serving.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": ".8 Lb. Pork Shoulder",
+          "amount": 800,
+          "unit": "gr",
+          "original": "800gr / 1.8 lb. pork shoulder, cubed"
+        },
+        {
+          "name": "Tbsp Sunflower Oil",
+          "amount": 2,
+          "unit": "",
+          "original": "2 x tbsp sunflower oil"
+        },
+        {
+          "name": "Onion",
+          "amount": 1,
+          "unit": "large",
+          "original": "1 x large onion chopped finely"
+        },
+        {
+          "name": "Cloves Of Garlic",
+          "amount": 4,
+          "unit": "",
+          "original": "4 x cloves of garlic, chopped finely"
+        },
+        {
+          "name": "Carrot",
+          "amount": 1,
+          "unit": "large",
+          "original": "1 x large carrot sliced into thin strips"
+        },
+        {
+          "name": "Peppers",
+          "amount": 2,
+          "unit": "",
+          "original": "2 x red peppers sliced into strips"
+        },
+        {
+          "name": ".5 Oz. Ginger",
+          "amount": 100,
+          "unit": "gr",
+          "original": "About 100gr / 3.5 oz. ginger peeled and cut into matchsticks or very finely chopped"
+        },
+        {
+          "name": "Chili's",
+          "amount": 2,
+          "unit": "",
+          "original": "2 x red chili's chopped finely"
+        },
+        {
+          "name": "Juice Of Lime",
+          "amount": 1,
+          "unit": "",
+          "original": "Juice of 1 lime"
+        },
+        {
+          "name": "Tomatoes",
+          "amount": 6,
+          "unit": "medium",
+          "original": "6 x medium tomatoes, quartered"
+        },
+        {
+          "name": "Tsp Coriander",
+          "amount": 2,
+          "unit": "",
+          "original": "2 x tsp coriander"
+        },
+        {
+          "name": "Tsp All Spice",
+          "amount": 2,
+          "unit": "",
+          "original": "2 x tsp all spice (piment)"
+        },
+        {
+          "name": "Tsp Cardamom",
+          "amount": 2,
+          "unit": "",
+          "original": "2 x tsp cardamom"
+        },
+        {
+          "name": "Tbsp Of Honey",
+          "amount": 2,
+          "unit": "",
+          "original": "2 x tbsp of honey"
+        },
+        {
+          "name": ".5 Fl. Oz. Water",
+          "amount": 50,
+          "unit": "ml",
+          "original": "50ml / 1.5 fl. oz. water"
+        },
+        {
+          "name": "Salt",
+          "amount": 4,
+          "unit": "servings",
+          "original": "Salt to taste"
+        }
+      ],
+      "instructions": [
+        "1. Heat the oil (on a high heat) in a high sided, heavy bottomed pan  make sure the pan you use is one that you can cover with a good fitting lid.",
+        "2. When the oil is hot add the meat, it should sizzle  thats good. Leave it to brown on one side and then turn it with your spoon so that it browns. If you stir or move it too soon it will stick.",
+        "3. Add the onion, carrot, ginger, garlic and chili. Turn the heat to medium, cover the pan and allow to sweat for a couple of minutes. You will notice that this process creates steam which lifts off the colour at the bottom of the pan  this is what you want because that colour is flavour.",
+        "4. Add the rest of the ingredients, bring to a good simmer, then turn down the heat to a medium/low, cover your pan.",
+        "5. I like to stay around for a little while to check that it is simmering gently. The reason being if the heat is too low it will not cook and if it is too high the meat will not tenderize.",
+        "6. Once you get it to a gentle simmer, cook until the meat is soft, checking only occasionally to make sure its not drying out. If it does, this probably means that your heat is too high  add a little water and adjust the temperature.",
+        "7. Check for seasoning before serving."
+      ],
+      "nutrition": {
+        "calories": 296,
+        "carbohydrates": 25,
+        "fiber": 6,
+        "sugar": 12,
+        "protein": 28,
+        "fat": 10,
+        "saturatedFat": 3,
+        "sodium": 319
+      },
+      "carbChoices": 2,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "high-protein",
+        "high-fiber",
+        "lunch",
+        "dinner",
+        "very-healthy"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/660257-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/ZL6TJYVQ/slow-braised-spicy-pork",
+      "gdValidation": {
+        "isValid": false,
+        "score": 65,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": true,
+          "warnings": [
+            "Carbs too low: 25.21g (min: 30g)",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:39:24.621Z",
+      "spoonacularId": "660257"
     },
     {
       "id": "spoonacular-660273",
@@ -30471,6 +34900,130 @@
       "spoonacularId": "660926"
     },
     {
+      "id": "spoonacular-661117",
+      "title": "Spicy Korean Bbq Pork",
+      "description": "The recipe Spicy Korean Bbq Pork is ready in roughly 45 minutes and is definitely a spectacular gluten free and dairy free option for lovers of Korean food.  For $1.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 10,
+      "ingredients": [
+        {
+          "name": "Pork Loin",
+          "amount": 907.185,
+          "unit": "g",
+          "original": "2 pounds boneless pork loin"
+        },
+        {
+          "name": "Brown Sugar",
+          "amount": 55,
+          "unit": "g",
+          "original": "1/4 cup brown sugar"
+        },
+        {
+          "name": "Chili Garlic Sauce",
+          "amount": 3,
+          "unit": "tsps",
+          "original": "3 teaspoons chili garlic sauce"
+        },
+        {
+          "name": "Ginger",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons fresh ginger, minced"
+        },
+        {
+          "name": "Garlic Cloves",
+          "amount": 6,
+          "unit": "",
+          "original": "6 garlic cloves, minced"
+        },
+        {
+          "name": "Rice Vinegar",
+          "amount": 10,
+          "unit": "servings",
+          "original": "rice vinegar"
+        },
+        {
+          "name": "Sesame Oil",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons sesame oil"
+        },
+        {
+          "name": "Soy Sauce",
+          "amount": 58,
+          "unit": "ml",
+          "original": "1/4 cup soy sauce"
+        }
+      ],
+      "instructions": [
+        "1. Mix the marinade ingredients (brown sugar, soy sauce, ginger, sesame oil, chili garlic sauce, and ginger).",
+        "2. Pour over your sliced pork.Marinate no less then 4 hours; overnight is recommended.Preheat your grill to high.",
+        "3. Place pork on grill and grill each side 3 minutes or until cooked through.If you want a sauce to pour over your meat, boil your leftover marinade in a sauce pan for a few minutes until it boils down and thickens. You can then add rice vinegar to taste to thin it and decrease the sweetness.",
+        "4. Pour sauce over meat."
+      ],
+      "nutrition": {
+        "calories": 157,
+        "carbohydrates": 7,
+        "fiber": 0,
+        "sugar": 6,
+        "protein": 21,
+        "fat": 5,
+        "saturatedFat": 1,
+        "sodium": 444
+      },
+      "carbChoices": 0,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "high-protein",
+        "low-carb",
+        "lunch",
+        "dinner",
+        "korean",
+        "asian"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/661117-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/6C67RJHP/spicy-korean-bbq-pork",
+      "gdValidation": {
+        "isValid": false,
+        "score": 30,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 6.73g (min: 30g)",
+            "Fiber too low: 0g (min: 5g)",
+            "High sugar content: 5.72g (85% of carbs)",
+            "No whole grains detected",
+            "No lean protein source detected",
+            "Limited vegetables detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Choose options with less added sugar",
+            "Serve with whole grain bread or brown rice",
+            "Add a side salad or steamed vegetables"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Choose options with less added sugar",
+          "Serve with whole grain bread or brown rice",
+          "Add a side salad or steamed vegetables"
+        ]
+      },
+      "importedAt": "2025-07-11T17:38:04.158Z",
+      "spoonacularId": "661117"
+    },
+    {
       "id": "spoonacular-661224",
       "title": "Spicy Turkey Meatballs with Veggies",
       "description": "The recipe Spicy Turkey Meatballs with Veggies can be made in approximately 45 minutes.  This recipe serves 4.",
@@ -31213,6 +35766,136 @@
       },
       "importedAt": "2025-07-09T20:54:24.559Z",
       "spoonacularId": "716361"
+    },
+    {
+      "id": "spoonacular-662087",
+      "title": "Stuffed Salmon With Tomato-Olive Tapenade",
+      "description": "The recipe Stuffed Salmon With Tomato-Olive Tapenade can be made in approximately 45 minutes.  Watching your figure.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Brie Cheese",
+          "amount": 2,
+          "unit": "servings",
+          "original": "Brie Cheese, to taste"
+        },
+        {
+          "name": "Dill Weed",
+          "amount": 2,
+          "unit": "servings",
+          "original": "Dill weed, to taste"
+        },
+        {
+          "name": "Garlic",
+          "amount": 6,
+          "unit": "cloves",
+          "original": "6 cloves of minced garlic"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 2,
+          "unit": "servings",
+          "original": "Olive oil, to taste"
+        },
+        {
+          "name": "Olives",
+          "amount": 135,
+          "unit": "ml",
+          "original": "1 cup olives"
+        },
+        {
+          "name": "Onion",
+          "amount": 1,
+          "unit": "",
+          "original": "1 onion chopped"
+        },
+        {
+          "name": "Salmon Filets",
+          "amount": 2,
+          "unit": "",
+          "original": "2 salmon filets"
+        },
+        {
+          "name": "Salt And Pepper",
+          "amount": 2,
+          "unit": "servings",
+          "original": "Salt and pepper"
+        },
+        {
+          "name": "Spinach",
+          "amount": 30,
+          "unit": "g",
+          "original": "1 cup chopped spinach"
+        },
+        {
+          "name": "Tomatoes",
+          "amount": 2,
+          "unit": "large",
+          "original": "2 large tomatoes"
+        }
+      ],
+      "instructions": [
+        "1. Preheat oven to 350F.Pound salmon fillets and rub with olive oil and dill.In bowl, combine chopped spinach, onions, and garlic. Season with salt.",
+        "2. Spread spinach mixture on salmon fillet. Slice brie and add on top. Carefully roll salmon and tie with string.",
+        "3. Bake for about 15-18 minutes.Chop olives in food processor.",
+        "4. Add chopped tomatoes and blend.",
+        "5. Spread on top of salmon."
+      ],
+      "nutrition": {
+        "calories": 635,
+        "carbohydrates": 18,
+        "fiber": 6,
+        "sugar": 8,
+        "protein": 44,
+        "fat": 44,
+        "saturatedFat": 10,
+        "sodium": 1535
+      },
+      "carbChoices": 1,
+      "tags": [
+        "gluten-free",
+        "high-protein",
+        "high-fiber",
+        "low-carb",
+        "lunch",
+        "dinner",
+        "very-healthy"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/662087-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/CNBXP6TH/stuffed-salmon-with-tomato-olive-tapenade",
+      "gdValidation": {
+        "isValid": false,
+        "score": 60,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": true,
+          "warnings": [
+            "Carbs too low: 18.47g (min: 30g)",
+            "High saturated fat: 10.28g",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:37:14.849Z",
+      "spoonacularId": "662087"
     },
     {
       "id": "spoonacular-662291",
@@ -32229,6 +36912,147 @@
         "_seconds": 1751910604,
         "_nanoseconds": 642000000
       }
+    },
+    {
+      "id": "spoonacular-663149",
+      "title": "Thai Sausage Salad",
+      "description": "Thai Sausage Salad could be just the gluten free and dairy free recipe you've been looking for.  This recipe serves 2.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Sausages",
+          "amount": 6,
+          "unit": "",
+          "original": "6 Chinese sausages"
+        },
+        {
+          "name": "Cucumbers",
+          "amount": 2,
+          "unit": "large",
+          "original": "2 large cucumbers"
+        },
+        {
+          "name": "Bean Sprouts",
+          "amount": 104,
+          "unit": "ml",
+          "original": "1 cup fresh bean sprouts"
+        },
+        {
+          "name": "Green Onions",
+          "amount": 4,
+          "unit": "",
+          "original": "4 green onions"
+        },
+        {
+          "name": "Cilantro Leaves",
+          "amount": 1,
+          "unit": "leaf",
+          "original": "Fresh flat leaf parsley or cilantro leaves for garnish"
+        },
+        {
+          "name": "Chili Pepper",
+          "amount": 1,
+          "unit": "",
+          "original": "1 thinly sliced hot, fresh red chili pepper (optional)"
+        },
+        {
+          "name": "Jasmine Rice",
+          "amount": 2,
+          "unit": "servings",
+          "original": "Cooked jasmine rice"
+        },
+        {
+          "name": "Lime Juice",
+          "amount": 121,
+          "unit": "ml",
+          "original": "1/2 cup fresh lime juice"
+        },
+        {
+          "name": "Granulated Sugar",
+          "amount": 3,
+          "unit": "tsps",
+          "original": "3 teaspoons granulated sugar"
+        },
+        {
+          "name": "Thai Fish Sauce",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons Thai fish sauce"
+        },
+        {
+          "name": "Soy Sauce",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon soy sauce"
+        }
+      ],
+      "instructions": [
+        "1. In a small bowl, combine the dressing ingredients and stir until the sugar has dissolved. Taste and adjust with more sugar or fish sauce if needed (some limes are more tart than others). Set aside.",
+        "2. Slice the sausage thinly on the diagonal.",
+        "3. Place in a non stick skillet over medium heat and saut until the edges are slightly browned and sausage is cooked thru, about 5 minutes. Dont over cook. Set aside to cool",
+        "4. Peel the cucumbers, slice thinly and place in a large bowl. Thinly slice the green onions on the diagonal and add to the bowl.",
+        "5. Add the bean sprouts, cooked sausage and the dressing. Lightly toss and serve on plates with jasmine rice on the same plate.",
+        "6. Garnish with a few slivers of sliced hot chili pepper, if desired, and a few leaves of fresh parsley or cilantro.",
+        "7. Serves 2 as a main course salad."
+      ],
+      "nutrition": {
+        "calories": 990,
+        "carbohydrates": 47,
+        "fiber": 4,
+        "sugar": 16,
+        "protein": 46,
+        "fat": 69,
+        "saturatedFat": 23,
+        "sodium": 3219
+      },
+      "carbChoices": 3,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "high-protein",
+        "side-dish",
+        "lunch",
+        "dinner",
+        "thai",
+        "asian"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/663149-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/L22RPP5R/thai-sausage-salad",
+      "gdValidation": {
+        "isValid": false,
+        "score": 40,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too high: 47.05g (max: 45g)",
+            "Fiber too low: 4.45g (min: 5g)",
+            "High saturated fat: 22.57g",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Reduce portion size or remove some carb sources",
+            "Add vegetables, whole grains, or beans",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Reduce portion size or remove some carb sources",
+          "Add vegetables, whole grains, or beans",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:37:35.449Z",
+      "spoonacularId": "663149"
     },
     {
       "id": "spoonacular-663227",
@@ -33544,6 +38368,159 @@
         "_seconds": 1751911234,
         "_nanoseconds": 316000000
       }
+    },
+    {
+      "id": "spoonacular-663822",
+      "title": "Trinidad Callaloo Soup",
+      "description": "Trinidad Callaloo Soup is a Central American main course.  One portion of this dish contains approximately 19g of protein, 42g of fat, and a total of 583 calories.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Onion",
+          "amount": 80,
+          "unit": "g",
+          "original": "1/2 cup chopped onion"
+        },
+        {
+          "name": "Okra",
+          "amount": 10,
+          "unit": "",
+          "original": "10 fresh okra, chopped"
+        },
+        {
+          "name": "Salt Pork",
+          "amount": 42.524,
+          "unit": "g",
+          "original": "1 1/2 ounces salt pork or bacon, chopped"
+        },
+        {
+          "name": "Thyme",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 tsp. fresh thyme"
+        },
+        {
+          "name": "Garlic",
+          "amount": 2,
+          "unit": "cloves",
+          "original": "2 cloves garlic, chopped"
+        },
+        {
+          "name": "Habanero Chile",
+          "amount": 1,
+          "unit": "",
+          "original": "1 fresh habanero chile, seeds removed and chopped"
+        },
+        {
+          "name": "Scallions",
+          "amount": 100,
+          "unit": "g",
+          "original": "1 cup chopped scallions"
+        },
+        {
+          "name": "Coconut Oil",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tbsp. coconut oil"
+        },
+        {
+          "name": "Baby Spinach Leaves",
+          "amount": 226.796,
+          "unit": "g",
+          "original": "8 ounces fresh callaloo leaves, Swiss chard, or baby spinach leaves"
+        },
+        {
+          "name": "Chicken Stock",
+          "amount": 480,
+          "unit": "ml",
+          "original": "2 cups chicken stock"
+        },
+        {
+          "name": "Salt And Pepper",
+          "amount": 4,
+          "unit": "servings",
+          "original": "salt and pepper to taste"
+        },
+        {
+          "name": "Coconut Milk",
+          "amount": 452,
+          "unit": "ml",
+          "original": "2 cups coconut milk"
+        },
+        {
+          "name": "Crab Meat",
+          "amount": 170.097,
+          "unit": "g",
+          "original": "6 ounces fresh crab meat, picked over for shell bits"
+        },
+        {
+          "name": "Rice",
+          "amount": 4,
+          "unit": "servings",
+          "original": "cooked long grain rice or prepared foo-foo (plantain)"
+        }
+      ],
+      "instructions": [
+        "1. Saute onion, okra, salt pork, thyme, garlic, habanero and scallions until the okra and onions brown.",
+        "2. Stir in the callaloo with the chicken stock and simmer until the callaloo is tender.",
+        "3. Puree with a stick blender. Adjust seasoning to taste with salt and pepper.",
+        "4. Stir in coconut milk and crab, then warm gently.",
+        "5. Serve with rice."
+      ],
+      "nutrition": {
+        "calories": 583,
+        "carbohydrates": 38,
+        "fiber": 4,
+        "sugar": 4,
+        "protein": 19,
+        "fat": 42,
+        "saturatedFat": 31,
+        "sodium": 1074
+      },
+      "carbChoices": 3,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "lunch",
+        "dinner",
+        "central american",
+        "caribbean"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/663822-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/YPSCBJTN/trinidad-callaloo-soup",
+      "gdValidation": {
+        "isValid": false,
+        "score": 65,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Fiber too low: 3.61g (min: 5g)",
+            "High saturated fat: 30.65g",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add vegetables, whole grains, or beans",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add vegetables, whole grains, or beans",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:39:53.235Z",
+      "spoonacularId": "663822"
     },
     {
       "id": "spoonacular-664025",

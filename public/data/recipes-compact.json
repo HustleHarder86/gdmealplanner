@@ -1,12 +1,12 @@
 {
-  "exportDate": "2025-07-11T16:24:15.928Z",
+  "exportDate": "2025-07-11T17:55:51.096Z",
   "source": "Firebase Production Database",
-  "recipeCount": 397,
+  "recipeCount": 440,
   "categoryBreakdown": {
-    "breakfast": 90,
-    "dinner": 218,
-    "lunch": 56,
-    "snack": 33
+    "breakfast": 92,
+    "dinner": 254,
+    "lunch": 59,
+    "snack": 35
   },
   "mealTypeBreakdown": {},
   "recipes": [
@@ -977,6 +977,20 @@
       }
     },
     {
+      "id": "spoonacular-656481",
+      "title": "Poached Egg With Spinach and Tomato",
+      "category": "breakfast",
+      "totalTime": 20,
+      "servings": 2,
+      "imageUrl": "https://img.spoonacular.com/recipes/656481-556x370.jpg",
+      "nutrition": {
+        "calories": 314,
+        "carbohydrates": 22,
+        "protein": 15,
+        "fiber": 6
+      }
+    },
+    {
       "id": "spoonacular-756814",
       "title": "Powerhouse Almond Matcha Superfood Smoothie",
       "category": "breakfast",
@@ -1187,6 +1201,20 @@
       }
     },
     {
+      "id": "spoonacular-661249",
+      "title": "Spinach & Ham Quiche",
+      "category": "breakfast",
+      "totalTime": 45,
+      "servings": 8,
+      "imageUrl": "https://img.spoonacular.com/recipes/661249-556x370.jpg",
+      "nutrition": {
+        "calories": 305,
+        "carbohydrates": 21,
+        "protein": 10,
+        "fiber": 1
+      }
+    },
+    {
       "id": "spoonacular-661602",
       "title": "Sterling Cooper Blini with Caviar",
       "category": "breakfast",
@@ -1369,6 +1397,20 @@
       }
     },
     {
+      "id": "spoonacular-631748",
+      "title": "Asian Shrimp Stir-Fry",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 4,
+      "imageUrl": "https://img.spoonacular.com/recipes/631748-556x370.jpg",
+      "nutrition": {
+        "calories": 201,
+        "carbohydrates": 8,
+        "protein": 24,
+        "fiber": 2
+      }
+    },
+    {
       "id": "spoonacular-632901",
       "title": "Asian-Braised Lamb Shanks",
       "category": "dinner",
@@ -1495,6 +1537,34 @@
       }
     },
     {
+      "id": "spoonacular-633518",
+      "title": "Baked Chicken Breasts",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 5,
+      "imageUrl": "https://img.spoonacular.com/recipes/633518-556x370.jpg",
+      "nutrition": {
+        "calories": 225,
+        "carbohydrates": 5,
+        "protein": 25,
+        "fiber": 0
+      }
+    },
+    {
+      "id": "spoonacular-633521",
+      "title": "Baked Chicken In Avocado Boat - Featured In Group",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 2,
+      "imageUrl": "https://img.spoonacular.com/recipes/633521-556x370.jpg",
+      "nutrition": {
+        "calories": 841,
+        "carbohydrates": 19,
+        "protein": 51,
+        "fiber": 4
+      }
+    },
+    {
       "id": "spoonacular-633624",
       "title": "Baked Fried Chicken With Cauliflower Mash",
       "category": "dinner",
@@ -1509,6 +1579,20 @@
       }
     },
     {
+      "id": "spoonacular-633672",
+      "title": "Baked Macaroni With Bolognese Sauce",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 3,
+      "imageUrl": "https://img.spoonacular.com/recipes/633672-556x370.jpg",
+      "nutrition": {
+        "calories": 583,
+        "carbohydrates": 48,
+        "protein": 27,
+        "fiber": 4
+      }
+    },
+    {
       "id": "spoonacular-633779",
       "title": "Baked Salmon With Lime",
       "category": "dinner",
@@ -1520,6 +1604,34 @@
         "carbohydrates": 8,
         "protein": 36,
         "fiber": 2
+      }
+    },
+    {
+      "id": "spoonacular-633779",
+      "title": "Baked Salmon With Lime",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 2,
+      "imageUrl": "https://img.spoonacular.com/recipes/633779-556x370.jpg",
+      "nutrition": {
+        "calories": 296,
+        "carbohydrates": 8,
+        "protein": 36,
+        "fiber": 2
+      }
+    },
+    {
+      "id": "spoonacular-633921",
+      "title": "Balsamic & Honey Glazed Salmon with Lemony Asparagus",
+      "category": "dinner",
+      "totalTime": 60,
+      "servings": 2,
+      "imageUrl": "https://img.spoonacular.com/recipes/633921-556x370.jpg",
+      "nutrition": {
+        "calories": 301,
+        "carbohydrates": 18,
+        "protein": 25,
+        "fiber": 3
       }
     },
     {
@@ -1621,6 +1733,34 @@
       }
     },
     {
+      "id": "spoonacular-157991",
+      "title": "Best Minestrone Soup Recipe",
+      "category": "dinner",
+      "totalTime": 100,
+      "servings": 6,
+      "imageUrl": "https://img.spoonacular.com/recipes/157991-556x370.jpg",
+      "nutrition": {
+        "calories": 452,
+        "carbohydrates": 47,
+        "protein": 23,
+        "fiber": 9
+      }
+    },
+    {
+      "id": "spoonacular-635601",
+      "title": "Boiled Egg Curry",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 2,
+      "imageUrl": "https://img.spoonacular.com/recipes/635601-556x370.jpg",
+      "nutrition": {
+        "calories": 515,
+        "carbohydrates": 25,
+        "protein": 16,
+        "fiber": 7
+      }
+    },
+    {
       "id": "spoonacular-635601",
       "title": "Boiled Egg Curry",
       "category": "dinner",
@@ -1715,6 +1855,20 @@
         "calories": 309,
         "carbohydrates": 10,
         "protein": 17,
+        "fiber": 2
+      }
+    },
+    {
+      "id": "spoonacular-637643",
+      "title": "Cheesy Chicken Noodles",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 6,
+      "imageUrl": "https://img.spoonacular.com/recipes/637643-556x370.jpg",
+      "nutrition": {
+        "calories": 472,
+        "carbohydrates": 36,
+        "protein": 32,
         "fiber": 2
       }
     },
@@ -2041,6 +2195,20 @@
       }
     },
     {
+      "id": "spoonacular-639855",
+      "title": "Codfish Salad",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 6,
+      "imageUrl": "https://img.spoonacular.com/recipes/639855-556x370.jpg",
+      "nutrition": {
+        "calories": 335,
+        "carbohydrates": 4,
+        "protein": 51,
+        "fiber": 1
+      }
+    },
+    {
       "id": "spoonacular-640266",
       "title": "Crab and Shrimp Burgers With Garlic Grits Fries",
       "category": "dinner",
@@ -2083,6 +2251,20 @@
       }
     },
     {
+      "id": "spoonacular-640676",
+      "title": "Creamy Polenta with Egg, Arrabiata & Bacon",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 4,
+      "imageUrl": "https://img.spoonacular.com/recipes/640676-556x370.jpg",
+      "nutrition": {
+        "calories": 667,
+        "carbohydrates": 34,
+        "protein": 24,
+        "fiber": 1
+      }
+    },
+    {
       "id": "spoonacular-640700",
       "title": "Creamy Shrimp Bisque",
       "category": "dinner",
@@ -2094,6 +2276,20 @@
         "carbohydrates": 36,
         "protein": 29,
         "fiber": 4
+      }
+    },
+    {
+      "id": "spoonacular-640798",
+      "title": "Crisp Winter Salad with Maple Gorgonzola Dressing",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 4,
+      "imageUrl": "https://img.spoonacular.com/recipes/640798-556x370.jpg",
+      "nutrition": {
+        "calories": 679,
+        "carbohydrates": 29,
+        "protein": 21,
+        "fiber": 7
       }
     },
     {
@@ -2122,6 +2318,20 @@
         "carbohydrates": 17,
         "protein": 29,
         "fiber": 4
+      }
+    },
+    {
+      "id": "spoonacular-735820",
+      "title": "Crock-Pot: Asian-Style Country Ribs with Black Bean Garlic Sauce",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 4,
+      "imageUrl": "https://img.spoonacular.com/recipes/735820-556x370.jpg",
+      "nutrition": {
+        "calories": 732,
+        "carbohydrates": 11,
+        "protein": 39,
+        "fiber": 1
       }
     },
     {
@@ -2377,6 +2587,20 @@
       }
     },
     {
+      "id": "spoonacular-643061",
+      "title": "Flank Steak with Herbed Salsa",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 4,
+      "imageUrl": "https://img.spoonacular.com/recipes/643061-556x370.jpg",
+      "nutrition": {
+        "calories": 301,
+        "carbohydrates": 5,
+        "protein": 25,
+        "fiber": 1
+      }
+    },
+    {
       "id": "spoonacular-1697639",
       "title": "Foolproof Cooking Method to Make the Juiciest Chicken Breast",
       "category": "dinner",
@@ -2416,6 +2640,34 @@
         "carbohydrates": 23,
         "protein": 21,
         "fiber": 2
+      }
+    },
+    {
+      "id": "spoonacular-644167",
+      "title": "Garam Masala Pork Chops with Mint Yogurt and Spiced Couscous",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 4,
+      "imageUrl": "https://img.spoonacular.com/recipes/644167-556x370.jpg",
+      "nutrition": {
+        "calories": 461,
+        "carbohydrates": 34,
+        "protein": 47,
+        "fiber": 4
+      }
+    },
+    {
+      "id": "spoonacular-1095689",
+      "title": "Garlic Oregano Olive Tapenade",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 2,
+      "imageUrl": "https://img.spoonacular.com/recipes/1095689-556x370.jpg",
+      "nutrition": {
+        "calories": 509,
+        "carbohydrates": 8,
+        "protein": 33,
+        "fiber": 4
       }
     },
     {
@@ -2937,6 +3189,20 @@
       }
     },
     {
+      "id": "spoonacular-648479",
+      "title": "Japanese Mabo Tofu With Eggplant",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 4,
+      "imageUrl": "https://img.spoonacular.com/recipes/648479-556x370.jpg",
+      "nutrition": {
+        "calories": 397,
+        "carbohydrates": 16,
+        "protein": 20,
+        "fiber": 5
+      }
+    },
+    {
       "id": "spoonacular-648774",
       "title": "Kashmiri Rogan Josh",
       "category": "dinner",
@@ -2948,6 +3214,20 @@
         "carbohydrates": 8,
         "protein": 44,
         "fiber": 1
+      }
+    },
+    {
+      "id": "spoonacular-648895",
+      "title": "Kielbasa With Brussels Sprouts In Mustard Cream Sauce",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 4,
+      "imageUrl": "https://img.spoonacular.com/recipes/648895-556x370.jpg",
+      "nutrition": {
+        "calories": 692,
+        "carbohydrates": 31,
+        "protein": 27,
+        "fiber": 11
       }
     },
     {
@@ -2976,6 +3256,34 @@
         "carbohydrates": 32,
         "protein": 38,
         "fiber": 2
+      }
+    },
+    {
+      "id": "spoonacular-716338",
+      "title": "Lamb Coconut Tomato Curry Sauce",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 3,
+      "imageUrl": "https://img.spoonacular.com/recipes/716338-556x370.jpg",
+      "nutrition": {
+        "calories": 674,
+        "carbohydrates": 22,
+        "protein": 31,
+        "fiber": 7
+      }
+    },
+    {
+      "id": "spoonacular-649293",
+      "title": "Lasagne, Marietta-Style",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 12,
+      "imageUrl": "https://img.spoonacular.com/recipes/649293-556x370.jpg",
+      "nutrition": {
+        "calories": 348,
+        "carbohydrates": 30,
+        "protein": 18,
+        "fiber": 1
       }
     },
     {
@@ -3018,6 +3326,20 @@
         "carbohydrates": 2,
         "protein": 36,
         "fiber": 0
+      }
+    },
+    {
+      "id": "spoonacular-649886",
+      "title": "Lemony Greek Lentil Soup",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 6,
+      "imageUrl": "https://img.spoonacular.com/recipes/649886-556x370.jpg",
+      "nutrition": {
+        "calories": 368,
+        "carbohydrates": 64,
+        "protein": 23,
+        "fiber": 28
       }
     },
     {
@@ -3102,6 +3424,20 @@
         "carbohydrates": 42,
         "protein": 13,
         "fiber": 10
+      }
+    },
+    {
+      "id": "spoonacular-650014",
+      "title": "Light Cream Of Broccoli Soup With Cheddar Cheese",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 4,
+      "imageUrl": "https://img.spoonacular.com/recipes/650014-556x370.jpg",
+      "nutrition": {
+        "calories": 190,
+        "carbohydrates": 24,
+        "protein": 16,
+        "fiber": 3
       }
     },
     {
@@ -3231,6 +3567,34 @@
       }
     },
     {
+      "id": "spoonacular-1098393",
+      "title": "Mardi Gras Shrimp Étouffée",
+      "category": "dinner",
+      "totalTime": 90,
+      "servings": 4,
+      "imageUrl": "https://img.spoonacular.com/recipes/1098393-556x370.jpg",
+      "nutrition": {
+        "calories": 421,
+        "carbohydrates": 25,
+        "protein": 40,
+        "fiber": 5
+      }
+    },
+    {
+      "id": "spoonacular-651076",
+      "title": "Marinated Souvlaki",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 6,
+      "imageUrl": "https://img.spoonacular.com/recipes/651076-556x370.jpg",
+      "nutrition": {
+        "calories": 553,
+        "carbohydrates": 4,
+        "protein": 26,
+        "fiber": 1
+      }
+    },
+    {
       "id": "spoonacular-651911",
       "title": "Minced Beef Curry",
       "category": "dinner",
@@ -3340,6 +3704,34 @@
         "carbohydrates": 17,
         "protein": 30,
         "fiber": 4
+      }
+    },
+    {
+      "id": "spoonacular-654409",
+      "title": "Pan Fried Rainbow Trout",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 4,
+      "imageUrl": "https://img.spoonacular.com/recipes/654409-556x370.jpg",
+      "nutrition": {
+        "calories": 386,
+        "carbohydrates": 4,
+        "protein": 37,
+        "fiber": 1
+      }
+    },
+    {
+      "id": "spoonacular-654475",
+      "title": "Pan-Seared Salmon With Orange-Miso Reduction",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 4,
+      "imageUrl": "https://img.spoonacular.com/recipes/654475-556x370.jpg",
+      "nutrition": {
+        "calories": 361,
+        "carbohydrates": 15,
+        "protein": 25,
+        "fiber": 1
       }
     },
     {
@@ -3567,6 +3959,48 @@
       }
     },
     {
+      "id": "spoonacular-658295",
+      "title": "Rice-less Spicy Tuna Hand Rolls",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 6,
+      "imageUrl": "https://img.spoonacular.com/recipes/658295-556x370.jpg",
+      "nutrition": {
+        "calories": 145,
+        "carbohydrates": 1,
+        "protein": 29,
+        "fiber": 0
+      }
+    },
+    {
+      "id": "spoonacular-658453",
+      "title": "Roast Pork Florentine With Pomegranate Sauce",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 6,
+      "imageUrl": "https://img.spoonacular.com/recipes/658453-556x370.jpg",
+      "nutrition": {
+        "calories": 382,
+        "carbohydrates": 31,
+        "protein": 38,
+        "fiber": 1
+      }
+    },
+    {
+      "id": "spoonacular-658483",
+      "title": "Roasted Alaskan Salmon with Cherries",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 4,
+      "imageUrl": "https://img.spoonacular.com/recipes/658483-556x370.jpg",
+      "nutrition": {
+        "calories": 253,
+        "carbohydrates": 24,
+        "protein": 24,
+        "fiber": 2
+      }
+    },
+    {
       "id": "spoonacular-658541",
       "title": "Roasted Cauliflower with Tahini Sauce",
       "category": "dinner",
@@ -3634,6 +4068,34 @@
         "carbohydrates": 24,
         "protein": 83,
         "fiber": 2
+      }
+    },
+    {
+      "id": "spoonacular-659058",
+      "title": "Salmon Burgers With Roasted Red Pepper Aioli",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 2,
+      "imageUrl": "https://img.spoonacular.com/recipes/659058-556x370.jpg",
+      "nutrition": {
+        "calories": 537,
+        "carbohydrates": 15,
+        "protein": 40,
+        "fiber": 2
+      }
+    },
+    {
+      "id": "spoonacular-659056",
+      "title": "Salmon Butternut Squash Corn Chowder",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 4,
+      "imageUrl": "https://img.spoonacular.com/recipes/659056-556x370.jpg",
+      "nutrition": {
+        "calories": 326,
+        "carbohydrates": 38,
+        "protein": 22,
+        "fiber": 6
       }
     },
     {
@@ -3773,6 +4235,20 @@
         "calories": 761,
         "carbohydrates": 58,
         "protein": 31,
+        "fiber": 6
+      }
+    },
+    {
+      "id": "spoonacular-660257",
+      "title": "Slow Braised Spicy Pork",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 4,
+      "imageUrl": "https://img.spoonacular.com/recipes/660257-556x370.jpg",
+      "nutrition": {
+        "calories": 296,
+        "carbohydrates": 25,
+        "protein": 28,
         "fiber": 6
       }
     },
@@ -3931,6 +4407,20 @@
       }
     },
     {
+      "id": "spoonacular-661117",
+      "title": "Spicy Korean Bbq Pork",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 10,
+      "imageUrl": "https://img.spoonacular.com/recipes/661117-556x370.jpg",
+      "nutrition": {
+        "calories": 157,
+        "carbohydrates": 7,
+        "protein": 21,
+        "fiber": 0
+      }
+    },
+    {
       "id": "spoonacular-661224",
       "title": "Spicy Turkey Meatballs with Veggies",
       "category": "dinner",
@@ -3998,6 +4488,20 @@
         "carbohydrates": 85,
         "protein": 58,
         "fiber": 7
+      }
+    },
+    {
+      "id": "spoonacular-662087",
+      "title": "Stuffed Salmon With Tomato-Olive Tapenade",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 2,
+      "imageUrl": "https://img.spoonacular.com/recipes/662087-556x370.jpg",
+      "nutrition": {
+        "calories": 635,
+        "carbohydrates": 18,
+        "protein": 44,
+        "fiber": 6
       }
     },
     {
@@ -4082,6 +4586,20 @@
         "carbohydrates": 30,
         "protein": 20,
         "fiber": 3
+      }
+    },
+    {
+      "id": "spoonacular-663149",
+      "title": "Thai Sausage Salad",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 2,
+      "imageUrl": "https://img.spoonacular.com/recipes/663149-556x370.jpg",
+      "nutrition": {
+        "calories": 990,
+        "carbohydrates": 47,
+        "protein": 46,
+        "fiber": 4
       }
     },
     {
@@ -4194,6 +4712,20 @@
         "carbohydrates": 51,
         "protein": 18,
         "fiber": 23
+      }
+    },
+    {
+      "id": "spoonacular-663822",
+      "title": "Trinidad Callaloo Soup",
+      "category": "dinner",
+      "totalTime": 45,
+      "servings": 4,
+      "imageUrl": "https://img.spoonacular.com/recipes/663822-556x370.jpg",
+      "nutrition": {
+        "calories": 583,
+        "carbohydrates": 38,
+        "protein": 19,
+        "fiber": 4
       }
     },
     {
@@ -4813,6 +5345,20 @@
       }
     },
     {
+      "id": "spoonacular-645384",
+      "title": "Greek Yogurt Chicken Salad",
+      "category": "lunch",
+      "totalTime": 30,
+      "servings": 4,
+      "imageUrl": "https://img.spoonacular.com/recipes/645384-556x370.jpg",
+      "nutrition": {
+        "calories": 334,
+        "carbohydrates": 16,
+        "protein": 41,
+        "fiber": 1
+      }
+    },
+    {
       "id": "spoonacular-716408",
       "title": "Greek-Style Baked Fish: Fresh, Simple, and Delicious",
       "category": "lunch",
@@ -4950,6 +5496,20 @@
         "carbohydrates": 17,
         "protein": 30,
         "fiber": 4
+      }
+    },
+    {
+      "id": "spoonacular-654435",
+      "title": "Pan Seared Salmon",
+      "category": "lunch",
+      "totalTime": 25,
+      "servings": 2,
+      "imageUrl": "https://img.spoonacular.com/recipes/654435-556x370.jpg",
+      "nutrition": {
+        "calories": 485,
+        "carbohydrates": 1,
+        "protein": 34,
+        "fiber": 0
       }
     },
     {
@@ -5107,6 +5667,20 @@
       }
     },
     {
+      "id": "spoonacular-664975",
+      "title": "Wasabi & Honey Glazed-Salmon",
+      "category": "lunch",
+      "totalTime": 20,
+      "servings": 2,
+      "imageUrl": "https://img.spoonacular.com/recipes/664975-556x370.jpg",
+      "nutrition": {
+        "calories": 341,
+        "carbohydrates": 21,
+        "protein": 35,
+        "fiber": 1
+      }
+    },
+    {
       "id": "spoonacular-631843",
       "title": "17 Bean White Chicken Chili",
       "category": "snack",
@@ -5132,6 +5706,20 @@
         "carbohydrates": 29,
         "protein": 11,
         "fiber": 11
+      }
+    },
+    {
+      "id": "spoonacular-651840",
+      "title": "Bacon And Bleu Table-For-Two Salad",
+      "category": "snack",
+      "totalTime": 45,
+      "servings": 2,
+      "imageUrl": "https://img.spoonacular.com/recipes/651840-556x370.jpg",
+      "nutrition": {
+        "calories": 386,
+        "carbohydrates": 15,
+        "protein": 10,
+        "fiber": 2
       }
     },
     {
@@ -5314,6 +5902,20 @@
         "carbohydrates": 13,
         "protein": 6,
         "fiber": 4
+      }
+    },
+    {
+      "id": "spoonacular-641128",
+      "title": "Curry Mussels",
+      "category": "snack",
+      "totalTime": 45,
+      "servings": 2,
+      "imageUrl": "https://img.spoonacular.com/recipes/641128-556x370.jpg",
+      "nutrition": {
+        "calories": 743,
+        "carbohydrates": 32,
+        "protein": 64,
+        "fiber": 2
       }
     },
     {

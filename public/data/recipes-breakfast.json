@@ -1,6 +1,6 @@
 {
   "category": "breakfast",
-  "recipeCount": 90,
+  "recipeCount": 92,
   "recipes": [
     {
       "id": "spoonacular-157089",
@@ -10282,6 +10282,122 @@
       }
     },
     {
+      "id": "spoonacular-656481",
+      "title": "Poached Egg With Spinach and Tomato",
+      "description": "Poached Egg With Spinach and Tomato is a dairy free and lacto ovo vegetarian recipe with 2 servings.  One portion of this dish contains roughly 15g of protein, 20g of fat, and a total of 314 calories.",
+      "category": "breakfast",
+      "prepTime": 10,
+      "cookTime": 10,
+      "totalTime": 20,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Grain Bread",
+          "amount": 2,
+          "unit": "slice",
+          "original": "2 slices whole grain bread"
+        },
+        {
+          "name": "Eggs",
+          "amount": 2,
+          "unit": "",
+          "original": "2 eggs"
+        },
+        {
+          "name": "Vinegar",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon white vinegar"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 2,
+          "unit": "servings",
+          "original": "olive oil"
+        },
+        {
+          "name": "Garlic",
+          "amount": 2,
+          "unit": "cloves",
+          "original": "2 cloves of garlic, sliced finely"
+        },
+        {
+          "name": "Chilli Flakes",
+          "amount": 1,
+          "unit": "pinch",
+          "original": "pinch of dried chilli flakes"
+        },
+        {
+          "name": "Spinach Leaves",
+          "amount": 1,
+          "unit": "bunch",
+          "original": "1 bunch fresh spinach leaves, chopped roughly"
+        },
+        {
+          "name": "Salt And Pepper",
+          "amount": 2,
+          "unit": "servings",
+          "original": "salt and pepper to taste"
+        },
+        {
+          "name": "Tomato",
+          "amount": 1,
+          "unit": "",
+          "original": "1 tomato, sliced finely into rounds"
+        }
+      ],
+      "instructions": [
+        "1. Take a wide skillet and fill it with enough water so the eggs can be submerged. Bring it up to a steady boil and then drop the temperature so it's at a steady simmer.",
+        "2. Add the vinegar.Break one egg into a bowl and slowly pour into the boiling water. Do the same with the second egg.",
+        "3. Let it cook until the white is cooked around the yolk, about two to three minutes.In the meanwhile, heat another wide frying pan and add some olive oil.",
+        "4. Add the garlic and chilli and saut for about a minute until fragrant.",
+        "5. Add the spinach, mix gently and cover. Cook for a minute and shut off the heat. Season to taste with salt and pepper. Separate amidst the two slices of toast and add some slices of tomato.Top each bed of vegetables with a poached egg. Season with some salt and pepper.",
+        "6. Serve immediately."
+      ],
+      "nutrition": {
+        "calories": 314,
+        "carbohydrates": 22,
+        "fiber": 6,
+        "sugar": 4,
+        "protein": 15,
+        "fat": 20,
+        "saturatedFat": 4,
+        "sodium": 521
+      },
+      "carbChoices": 1,
+      "tags": [
+        "vegetarian",
+        "dairy-free",
+        "quick",
+        "high-fiber",
+        "breakfast"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/656481-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/YYK36BYD/poached-egg-with-spinach-and-tomato",
+      "gdValidation": {
+        "isValid": true,
+        "score": 100,
+        "details": {
+          "isValid": true,
+          "carbsInRange": true,
+          "adequateProtein": true,
+          "adequateFiber": true,
+          "warnings": [
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:39:44.075Z",
+      "spoonacularId": "656481"
+    },
+    {
       "id": "spoonacular-756814",
       "title": "Powerhouse Almond Matcha Superfood Smoothie",
       "description": "Powerhouse Almond Matcha Superfood Smoothie is a breakfast that serves 2.  One serving contains 289 calories, 11g of protein, and 13g of fat.",
@@ -12498,6 +12614,145 @@
         "_seconds": 1751911184,
         "_nanoseconds": 520000000
       }
+    },
+    {
+      "id": "spoonacular-661249",
+      "title": "Spinach & Ham Quiche",
+      "description": "You can never have too many hor d'oeuvre recipes, so give Spinach & Ham Quiche a try.  This recipe serves 8 and costs 54 cents per serving.",
+      "category": "breakfast",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "Butter",
+          "amount": 100,
+          "unit": "g",
+          "original": "100 grams Cold butter"
+        },
+        {
+          "name": "Cheddar Cheese",
+          "amount": 50,
+          "unit": "g",
+          "original": "50 grams Cheddar cheese- grated"
+        },
+        {
+          "name": "Eggs",
+          "amount": 2,
+          "unit": "",
+          "original": "2 Large eggs"
+        },
+        {
+          "name": "Picnic Ham",
+          "amount": 125,
+          "unit": "g",
+          "original": "125 grams Chicken or Picnic Ham (shredded)"
+        },
+        {
+          "name": "Ice Water",
+          "amount": 5,
+          "unit": "Tbsps",
+          "original": "5 tablespoons Ice water"
+        },
+        {
+          "name": "Milk",
+          "amount": 80,
+          "unit": "ml",
+          "original": "80 milliliters milk"
+        },
+        {
+          "name": "Pepper",
+          "amount": 1,
+          "unit": "dash",
+          "original": "dash of white pepper"
+        },
+        {
+          "name": "Flour",
+          "amount": 200,
+          "unit": "g",
+          "original": "200 grams Plain flour"
+        },
+        {
+          "name": "Salt",
+          "amount": 0.125,
+          "unit": "tsps",
+          "original": "1/8 teaspoon salt"
+        },
+        {
+          "name": "Shallots",
+          "amount": 0.5,
+          "unit": "Tbsps",
+          "original": "1/2 tablespoon Shallots (sliced)"
+        },
+        {
+          "name": "Spinach",
+          "amount": 125,
+          "unit": "g",
+          "original": "125 grams Spinach (wash& drain well, shredded)"
+        },
+        {
+          "name": "Whipping Cream",
+          "amount": 80,
+          "unit": "ml",
+          "original": "80 milliliters Whipping cream"
+        }
+      ],
+      "instructions": [
+        "1. With little oil, fry shallot till fragrant and golden brown.",
+        "2. Add ham fry for a while and add spinach and fry till spinach cooked, dish up and set aside.Measure whipping cream and milk together in measuring cup (you can omit whipping cream and use all 160ml milk) add eggs, lightly beaten and pinch of salt, mix well.",
+        "3. Spread ham spinach and cheddar cheese evenly over the bottom of the prepared tart pan, add a dash of pepper then gently pour egg mixture over it.",
+        "4. Bake at preheated 180C for 40 mins and serve hot or warm."
+      ],
+      "nutrition": {
+        "calories": 305,
+        "carbohydrates": 21,
+        "fiber": 1,
+        "sugar": 1,
+        "protein": 10,
+        "fat": 20,
+        "saturatedFat": 11,
+        "sodium": 379
+      },
+      "carbChoices": 1,
+      "tags": [
+        "snack",
+        "appetizer",
+        "breakfast",
+        "mediterranean",
+        "french",
+        "european"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/661249-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/Z7KLXBR8/spinach-ham-quiche",
+      "gdValidation": {
+        "isValid": false,
+        "score": 70,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Fiber too low: 1.07g (min: 3g)",
+            "High saturated fat: 11.46g",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add vegetables, whole grains, or beans",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add vegetables, whole grains, or beans",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-11T17:39:53.310Z",
+      "spoonacularId": "661249"
     },
     {
       "id": "spoonacular-661602",

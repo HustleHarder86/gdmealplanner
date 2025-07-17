@@ -60,35 +60,52 @@ export function RecipeProvider({ children }: { children: React.ReactNode }) {
           console.warn("Failed to clear cache:", e);
         }
 
-        // Load from multiple category files - NO API CALLS
-        console.log("[OFFLINE] Loading recipes from category files...");
+        // Load from single optimized file for better performance - NO API CALLS
+        console.log("[OFFLINE] Loading recipes from optimized file...");
         
-        const categories = ['breakfast', 'lunch', 'dinner', 'snack'];
-        const allRecipes: any[] = [];
+        let allRecipes: any[] = [];
         let totalLoaded = 0;
         
-        // Load each category file
-        for (const category of categories) {
-          try {
-            const response = await fetch(`/data/recipes-${category}.json`);
-            if (response.ok) {
-              const categoryData = await response.json();
-              if (categoryData.recipes && Array.isArray(categoryData.recipes)) {
-                allRecipes.push(...categoryData.recipes);
-                totalLoaded += categoryData.recipes.length;
-                console.log(`[OFFLINE] Loaded ${categoryData.recipes.length} ${category} recipes`);
-              }
-            } else {
-              console.warn(`[OFFLINE] Failed to load ${category} recipes: ${response.statusText}`);
+        try {
+          // Try to load the optimized single file first
+          const response = await fetch("/data/all-recipes.min.json");
+          if (response.ok) {
+            const data = await response.json();
+            if (data.recipes && Array.isArray(data.recipes)) {
+              allRecipes = data.recipes;
+              totalLoaded = data.recipes.length;
+              console.log(`[OFFLINE] Loaded ${totalLoaded} recipes from optimized file`);
             }
-          } catch (error) {
-            console.error(`[OFFLINE] Error loading ${category} recipes:`, error);
+          }
+        } catch (error) {
+          console.warn("[OFFLINE] Failed to load optimized file, trying fallback...", error);
+        }
+        
+        // Fallback to category files if optimized file fails
+        if (allRecipes.length === 0) {
+          console.log("[OFFLINE] Fallback to category files...");
+          const categories = ['breakfast', 'lunch', 'dinner', 'snack'];
+          
+          for (const category of categories) {
+            try {
+              const response = await fetch(`/data/recipes-${category}.json`);
+              if (response.ok) {
+                const categoryData = await response.json();
+                if (categoryData.recipes && Array.isArray(categoryData.recipes)) {
+                  allRecipes.push(...categoryData.recipes);
+                  totalLoaded += categoryData.recipes.length;
+                  console.log(`[OFFLINE] Loaded ${categoryData.recipes.length} ${category} recipes`);
+                }
+              }
+            } catch (error) {
+              console.error(`[OFFLINE] Error loading ${category} recipes:`, error);
+            }
           }
         }
         
-        // Fallback to main file if category files failed
+        // Final fallback to production file
         if (allRecipes.length === 0) {
-          console.log("[OFFLINE] Fallback to main production file...");
+          console.log("[OFFLINE] Final fallback to production file...");
           const response = await fetch("/data/production-recipes.json");
           if (!response.ok) {
             throw new Error(`Failed to load recipes: ${response.statusText}`);
@@ -96,7 +113,7 @@ export function RecipeProvider({ children }: { children: React.ReactNode }) {
 
           const data = await response.json();
           if (data.recipes && Array.isArray(data.recipes)) {
-            allRecipes.push(...data.recipes);
+            allRecipes = data.recipes;
             totalLoaded = data.recipes.length;
             console.log(`[OFFLINE] Fallback loaded ${totalLoaded} recipes`);
           }

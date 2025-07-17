@@ -16,7 +16,15 @@
     "recipes:test": "tsx scripts/test-import-small.ts",
     "import": "tsx scripts/import-recipes-cli.ts",
     "test:import": "tsx scripts/test-import-status.ts",
-    "sync-recipes": "tsx scripts/sync-offline-recipes.ts"
+    "sync-recipes": "tsx scripts/sync-offline-recipes.ts",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:dietary": "playwright test dietary-restrictions.spec.ts",
+    "test:e2e:visual": "playwright test visual-regression.spec.ts",
+    "test:e2e:performance": "playwright test performance-monitoring.spec.ts",
+    "test:e2e:update-snapshots": "playwright test visual-regression.spec.ts --update-snapshots",
+    "test:e2e:report": "playwright show-report",
+    "test:e2e:full": "./tests/e2e/run-tests.sh"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.4",
@@ -30,6 +38,7 @@
     "recharts": "^2.10.4"
   },
   "devDependencies": {
+    "@playwright/test": "^1.54.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -37,6 +46,7 @@
     "dotenv": "^16.4.5",
     "eslint": "^8",
     "eslint-config-next": "14.2.21",
+    "playwright": "^1.54.1",
     "postcss": "^8",
     "prettier": "^3.3.3",
     "tailwindcss": "^3.4.1",

@@ -475,7 +475,9 @@ test.describe('Performance Tests', () => {
     for (let i = 0; i < 3; i++) {
       const startTime = Date.now();
       
-      await page.locator('button:has-text("Generate").or(page.locator("button:has-text("Generate New"))).click();
+      await page.locator('button:has-text("Generate")')
+        .or(page.locator('button:has-text("Generate New")'))
+        .click();
       await page.waitForSelector('text=GD Meal Plan - Week of', { timeout: 60000 });
       
       const endTime = Date.now();

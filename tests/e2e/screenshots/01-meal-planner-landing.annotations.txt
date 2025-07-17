@@ -1,0 +1,2 @@
+Initial meal planner page load
+Check for clear CTA and explanatory text

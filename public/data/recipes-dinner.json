@@ -1,6 +1,8 @@
 {
+  "exportDate": "2025-07-16T16:58:55.941Z",
+  "source": "Firebase Production Database",
   "category": "dinner",
-  "recipeCount": 254,
+  "recipeCount": 275,
   "recipes": [
     {
       "id": "spoonacular-631863",
@@ -309,7 +311,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:23.201Z",
-      "spoonacularId": "631863"
+      "spoonacularId": "631863",
+      "createdAt": "2025-07-16T16:58:55.926Z",
+      "updatedAt": "2025-07-16T16:58:55.926Z"
     },
     {
       "id": "spoonacular-631868",
@@ -614,7 +618,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:56.986Z",
-      "spoonacularId": "632299"
+      "spoonacularId": "632299",
+      "createdAt": "2025-07-16T16:58:55.926Z",
+      "updatedAt": "2025-07-16T16:58:55.926Z"
     },
     {
       "id": "spoonacular-632502",
@@ -734,7 +740,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:17:16.393Z",
-      "spoonacularId": "632502"
+      "spoonacularId": "632502",
+      "createdAt": "2025-07-16T16:58:55.900Z",
+      "updatedAt": "2025-07-16T16:58:55.900Z"
     },
     {
       "id": "spoonacular-632749",
@@ -901,7 +909,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:39.349Z",
-      "spoonacularId": "632749"
+      "spoonacularId": "632749",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-631748",
@@ -1060,7 +1070,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:39:34.205Z",
-      "spoonacularId": "631748"
+      "spoonacularId": "631748",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-631748",
@@ -1247,6 +1259,174 @@
       }
     },
     {
+      "id": "spoonacular-632903",
+      "title": "Asian Vegetable Stir Fry With Ground Beef",
+      "description": "Forget going out to eat or ordering takeout every time you crave Asian food.  Try making Asian Vegetable Stir Fry With Ground Beef at home.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 9,
+      "ingredients": [
+        {
+          "name": "Broccoli",
+          "amount": 1,
+          "unit": "head",
+          "original": "1 head broccoli, cut into flowerets"
+        },
+        {
+          "name": "Brown Onion",
+          "amount": 1,
+          "unit": "",
+          "original": "1 Brown onion, cut into large chunks"
+        },
+        {
+          "name": "Carrots",
+          "amount": 128,
+          "unit": "g",
+          "original": "2 Carrots, cut on an angle (about 1 cup)"
+        },
+        {
+          "name": "Cooking Oil",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon cooking oil"
+        },
+        {
+          "name": "Cornstarch",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon cornstarch with 1 tablespoon water mixed together"
+        },
+        {
+          "name": "Eggplant",
+          "amount": 123,
+          "unit": "g",
+          "original": "1 Eggplant, skinless and diced (about 1 1/2 cups)"
+        },
+        {
+          "name": "Garlic",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons minced garlic"
+        },
+        {
+          "name": "Ginger",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons chopped ginger"
+        },
+        {
+          "name": "Ground Beef",
+          "amount": 453.592,
+          "unit": "g",
+          "original": "1 pound of ground beef"
+        },
+        {
+          "name": "Kosher Salt And Pepper",
+          "amount": 9,
+          "unit": "servings",
+          "original": "Kosher salt and freshly ground black pepper"
+        },
+        {
+          "name": "Naturally Rice Vinegar",
+          "amount": 63.75,
+          "unit": "ml",
+          "original": "1/4 cup naturally brewed rice vinegar"
+        },
+        {
+          "name": "Naturally Soy Sauce",
+          "amount": 116,
+          "unit": "ml",
+          "original": "1/2 cup naturally brewed dark soy sauce"
+        },
+        {
+          "name": "Mexican Squash",
+          "amount": 280,
+          "unit": "g",
+          "original": "3 Mexican squash, sliced and quartered (about 2 cups)"
+        },
+        {
+          "name": "Sugar",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon sugar"
+        },
+        {
+          "name": "Sambal Oelek",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon sambal oelek (if you like it spicy, add 2 tablespoons)"
+        },
+        {
+          "name": "Sambal Oelek",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon sambal oelek (if you like it spicy, add 2 tablespoons)"
+        }
+      ],
+      "instructions": [
+        "1. Prepare all the vegetables and place in a bowl.In a large nonstick wok or skillet, turn the heat on to medium and add the ground beef. Use a wooden spoon, break up the meat into little chunks and season with salt and pepper. Cook meat until no longer pink inside.",
+        "2. Put the meat in a bowl and reserve.While the meat is cooking, heat 1 tablespoon of cooking oil in a small sauce pan and add the minced garlic and ginger. Cook until fragrant and add the sambal, soy sauce, sugar and vinegar. Bring to a simmer and add the cornstarch. Stir until sauce is thick, taste and adjust flavors if necessary. If the sauce is to your liking, turn the heat off and remove the sauce pan. Reserve for later use.",
+        "3. Add all the vegetables to the pan the pork was cooking in and saute until vegetables are cooked to your liking. Some people like it crunchy and some like it soft. I prefer my vegetables to have a nice crunch.",
+        "4. Add the reserved sauce and meat to the vegetables and mix until blended and everything is heated through.Turn off the heat and serve vegetables over brown rice"
+      ],
+      "nutrition": {
+        "calories": 214,
+        "carbohydrates": 15,
+        "fiber": 4,
+        "sugar": 5,
+        "protein": 13,
+        "fat": 12,
+        "saturatedFat": 4,
+        "sodium": 788
+      },
+      "carbChoices": 1,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "low-carb",
+        "lunch",
+        "dinner",
+        "asian"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/632903-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/SN5JWR58/asian-vegetable-stir-fry-with-ground-beef",
+      "gdValidation": {
+        "isValid": false,
+        "score": 25,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": false,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 15.02g (min: 30g)",
+            "Protein too low: 12.76g (min: 15g)",
+            "Fiber too low: 3.58g (min: 5g)",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add lean meat, eggs, Greek yogurt, or legumes",
+            "Add vegetables, whole grains, or beans",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add lean meat, eggs, Greek yogurt, or legumes",
+          "Add vegetables, whole grains, or beans",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:31.396Z",
+      "spoonacularId": "632903",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
+    },
+    {
       "id": "spoonacular-632901",
       "title": "Asian-Braised Lamb Shanks",
       "description": "Asian-Braised Lamb Shanks takes roughly 45 minutes from beginning to end.  One serving contains 353 calories, 46g of protein, and 8g of fat.",
@@ -1418,7 +1598,119 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:01.702Z",
-      "spoonacularId": "632901"
+      "spoonacularId": "632901",
+      "createdAt": "2025-07-16T16:58:55.889Z",
+      "updatedAt": "2025-07-16T16:58:55.889Z"
+    },
+    {
+      "id": "spoonacular-632944",
+      "title": "Asparagus Soup",
+      "description": "Asparagus Soup might be just the main course you are searching for.  This recipe serves 4.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Asparagus",
+          "amount": 1.134,
+          "unit": "kgs",
+          "original": "2 1/2 pounds asparagus"
+        },
+        {
+          "name": "Butter",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons butter"
+        },
+        {
+          "name": "Chicken Bouillon Cubes",
+          "amount": 2,
+          "unit": "",
+          "original": "2 chicken bouillon cubes"
+        },
+        {
+          "name": "Croutons",
+          "amount": 4,
+          "unit": "servings",
+          "original": "croutons, for garnish"
+        },
+        {
+          "name": "Flour",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons flour"
+        },
+        {
+          "name": "Milk",
+          "amount": 1.416,
+          "unit": "L",
+          "original": "6 cups low-fat milk"
+        },
+        {
+          "name": "Salt And Papper",
+          "amount": 4,
+          "unit": "servings",
+          "original": "salt and papper, to taste"
+        }
+      ],
+      "instructions": [
+        "1. Snap tough ends off asparagus and discard.",
+        "2. Place cleaned asparagus in saucepan along with the milk.Crumble in the stock cubes and bring slowly to the boil.Simmer uncovered for 10-15 minutes  until asparagus is just tender.Process in a food processor or blender until chunky.Melt butter in large saucepan.",
+        "3. Add flour and cook until pale golden.",
+        "4. Add soup and stir until it comes back to the boil.",
+        "5. Serve garnished with the croutons."
+      ],
+      "nutrition": {
+        "calories": 282,
+        "carbohydrates": 33,
+        "fiber": 6,
+        "sugar": 23,
+        "protein": 19,
+        "fat": 10,
+        "saturatedFat": 6,
+        "sodium": 867
+      },
+      "carbChoices": 2,
+      "tags": [
+        "high-fiber",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/632944-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/YJT7PLYP/asparagus-soup",
+      "gdValidation": {
+        "isValid": false,
+        "score": 90,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": true,
+          "adequateFiber": true,
+          "warnings": [
+            "High sugar content: 23.25g (70% of carbs)",
+            "No whole grains detected",
+            "No lean protein source detected",
+            "Limited vegetables detected"
+          ],
+          "adjustmentSuggestions": [
+            "Choose options with less added sugar",
+            "Serve with whole grain bread or brown rice",
+            "Add a side salad or steamed vegetables"
+          ]
+        },
+        "warnings": [
+          "Choose options with less added sugar",
+          "Serve with whole grain bread or brown rice",
+          "Add a side salad or steamed vegetables"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:23.519Z",
+      "spoonacularId": "632944",
+      "createdAt": "2025-07-16T16:58:55.888Z",
+      "updatedAt": "2025-07-16T16:58:55.888Z"
     },
     {
       "id": "spoonacular-632983",
@@ -1601,7 +1893,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:25.929Z",
-      "spoonacularId": "632983"
+      "spoonacularId": "632983",
+      "createdAt": "2025-07-16T16:58:55.885Z",
+      "updatedAt": "2025-07-16T16:58:55.885Z"
     },
     {
       "id": "spoonacular-632983",
@@ -1996,7 +2290,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:44.041Z",
-      "spoonacularId": "633071"
+      "spoonacularId": "633071",
+      "createdAt": "2025-07-16T16:58:55.886Z",
+      "updatedAt": "2025-07-16T16:58:55.886Z"
     },
     {
       "id": "spoonacular-633068",
@@ -2138,7 +2434,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:06.396Z",
-      "spoonacularId": "633068"
+      "spoonacularId": "633068",
+      "createdAt": "2025-07-16T16:58:55.901Z",
+      "updatedAt": "2025-07-16T16:58:55.901Z"
     },
     {
       "id": "spoonacular-633088",
@@ -2433,7 +2731,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:30.634Z",
-      "spoonacularId": "633264"
+      "spoonacularId": "633264",
+      "createdAt": "2025-07-16T16:58:55.885Z",
+      "updatedAt": "2025-07-16T16:58:55.885Z"
     },
     {
       "id": "spoonacular-633265",
@@ -2533,7 +2833,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:21.476Z",
-      "spoonacularId": "633265"
+      "spoonacularId": "633265",
+      "createdAt": "2025-07-16T16:58:55.927Z",
+      "updatedAt": "2025-07-16T16:58:55.927Z"
     },
     {
       "id": "spoonacular-633263",
@@ -2807,7 +3109,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:37:25.634Z",
-      "spoonacularId": "633518"
+      "spoonacularId": "633518",
+      "createdAt": "2025-07-16T16:58:55.902Z",
+      "updatedAt": "2025-07-16T16:58:55.902Z"
     },
     {
       "id": "spoonacular-633521",
@@ -2934,7 +3238,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:39:34.129Z",
-      "spoonacularId": "633521"
+      "spoonacularId": "633521",
+      "createdAt": "2025-07-16T16:58:55.927Z",
+      "updatedAt": "2025-07-16T16:58:55.927Z"
     },
     {
       "id": "spoonacular-633624",
@@ -3304,7 +3610,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:37:35.561Z",
-      "spoonacularId": "633672"
+      "spoonacularId": "633672",
+      "createdAt": "2025-07-16T16:58:55.905Z",
+      "updatedAt": "2025-07-16T16:58:55.905Z"
     },
     {
       "id": "spoonacular-633779",
@@ -3424,7 +3732,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:37:25.544Z",
-      "spoonacularId": "633779"
+      "spoonacularId": "633779",
+      "createdAt": "2025-07-16T16:58:55.889Z",
+      "updatedAt": "2025-07-16T16:58:55.889Z"
     },
     {
       "id": "spoonacular-633779",
@@ -3732,7 +4042,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:37:25.560Z",
-      "spoonacularId": "633921"
+      "spoonacularId": "633921",
+      "createdAt": "2025-07-16T16:58:55.902Z",
+      "updatedAt": "2025-07-16T16:58:55.902Z"
     },
     {
       "id": "spoonacular-633932",
@@ -3875,7 +4187,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:04.329Z",
-      "spoonacularId": "633932"
+      "spoonacularId": "633932",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-730914",
@@ -3983,7 +4297,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:48.553Z",
-      "spoonacularId": "730914"
+      "spoonacularId": "730914",
+      "createdAt": "2025-07-16T16:58:55.887Z",
+      "updatedAt": "2025-07-16T16:58:55.887Z"
     },
     {
       "id": "spoonacular-634434",
@@ -4238,7 +4554,159 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:39.488Z",
-      "spoonacularId": "634511"
+      "spoonacularId": "634511",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
+    },
+    {
+      "id": "spoonacular-634710",
+      "title": "Beef Teriyaki Stir Fry",
+      "description": "If you want to add more gluten free and dairy free recipes to your repertoire, Beef Teriyaki Stir Fry might be a recipe you should try.  One portion of this dish contains roughly 33g of protein, 21g of fat, and a total of 414 calories.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Broccoli Florets",
+          "amount": 182,
+          "unit": "g",
+          "original": "2 cups broccoli florets"
+        },
+        {
+          "name": "Brown Sugar",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon brown sugar"
+        },
+        {
+          "name": "Cornstarch",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon cornstarch"
+        },
+        {
+          "name": "Sesame Oil",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon dark sesame oil"
+        },
+        {
+          "name": "Flank Steak",
+          "amount": 226.796,
+          "unit": "g",
+          "original": "1/2 pound beef sirloin or flank steak, cut into ½\" strips"
+        },
+        {
+          "name": "Garlic",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon garlic, minced"
+        },
+        {
+          "name": "Ginger",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon ginger, peeled and minced"
+        },
+        {
+          "name": "Mushrooms",
+          "amount": 96,
+          "unit": "ml",
+          "original": "1 cup chopped mushrooms"
+        },
+        {
+          "name": "Oil",
+          "amount": 6,
+          "unit": "tsps",
+          "original": "6 teaspoons Oil"
+        },
+        {
+          "name": "Bell Pepper",
+          "amount": 149,
+          "unit": "g",
+          "original": "1 cup sliced red bell pepper"
+        },
+        {
+          "name": "Scallions",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons chopped scallions"
+        },
+        {
+          "name": "Sesame Seeds",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons sesame seeds, toasted"
+        },
+        {
+          "name": "Soy Sauce",
+          "amount": 58,
+          "unit": "ml",
+          "original": "1/4 cup soy sauce"
+        }
+      ],
+      "instructions": [
+        "1. Whisk ingredients together in a small bowl and refrigerate for at least 30 minutes.",
+        "2. Heat oil in a large frying pan over medium heat.",
+        "3. Add beef and saut for 3-4 minutes just to brown it on all sides.",
+        "4. Remove from pan and set aside.",
+        "5. Add vegetables and saut for 5 minutes more, until beginning to soften.Stir in teriyaki sauce and allow mixture to come to a simmer.",
+        "6. Add beef and any drippings that have accumulated on the plate. Cook for 5 minutes, stirring occasionally.In a small bowl, combine cornstarch with 2 tsp cold water to dissolve. Stir into the pan of beef and vegetables. Allow the mixture to simmer and thicken for 2 minutes. Toss to evenly coat vegetables and beef in teriyaki sauce.",
+        "7. Serve."
+      ],
+      "nutrition": {
+        "calories": 414,
+        "carbohydrates": 25,
+        "fiber": 5,
+        "sugar": 12,
+        "protein": 33,
+        "fat": 21,
+        "saturatedFat": 4,
+        "sodium": 1719
+      },
+      "carbChoices": 2,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "high-protein",
+        "high-fiber",
+        "lunch",
+        "dinner",
+        "japanese",
+        "asian"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/634710-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/WCTVNX24/beef-teriyaki-stir-fry",
+      "gdValidation": {
+        "isValid": false,
+        "score": 65,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": true,
+          "warnings": [
+            "Carbs too low: 25.28g (min: 30g)",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:34.075Z",
+      "spoonacularId": "634710",
+      "createdAt": "2025-07-16T16:58:55.905Z",
+      "updatedAt": "2025-07-16T16:58:55.905Z"
     },
     {
       "id": "spoonacular-634779",
@@ -4422,7 +4890,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:23.222Z",
-      "spoonacularId": "634779"
+      "spoonacularId": "634779",
+      "createdAt": "2025-07-16T16:58:55.887Z",
+      "updatedAt": "2025-07-16T16:58:55.887Z"
     },
     {
       "id": "spoonacular-634779",
@@ -4952,7 +5422,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:37:44.453Z",
-      "spoonacularId": "157991"
+      "spoonacularId": "157991",
+      "createdAt": "2025-07-16T16:58:55.902Z",
+      "updatedAt": "2025-07-16T16:58:55.902Z"
     },
     {
       "id": "spoonacular-635601",
@@ -5108,7 +5580,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:37:55.244Z",
-      "spoonacularId": "635601"
+      "spoonacularId": "635601",
+      "createdAt": "2025-07-16T16:58:55.886Z",
+      "updatedAt": "2025-07-16T16:58:55.886Z"
     },
     {
       "id": "spoonacular-635601",
@@ -5612,7 +6086,151 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:01.759Z",
-      "spoonacularId": "636096"
+      "spoonacularId": "636096",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
+    },
+    {
+      "id": "spoonacular-636118",
+      "title": "Brined Chicken Breast with Sautéed Onion Dipping Sauce",
+      "description": "The recipe Brined Chicken Breast with Sautéed Onion Dipping Sauce can be made in approximately 45 minutes.  For $1.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Pepper",
+          "amount": 6,
+          "unit": "servings",
+          "original": "Freshly-ground black pepper to taste"
+        },
+        {
+          "name": "Chicken Breast",
+          "amount": 907.185,
+          "unit": "g",
+          "original": "2-3 lbs. boneless chicken breast"
+        },
+        {
+          "name": "Cumin",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 tsp. cumin"
+        },
+        {
+          "name": "Juice Of Lime",
+          "amount": 1,
+          "unit": "",
+          "original": "Juice of 1 lime"
+        },
+        {
+          "name": "Lemon Juice",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 tsp. lemon juice"
+        },
+        {
+          "name": "Oregano",
+          "amount": 1,
+          "unit": "Tbs",
+          "original": "1 Tbs. dried oregano"
+        },
+        {
+          "name": "Salt",
+          "amount": 6,
+          "unit": "servings",
+          "original": "Salt to taste"
+        },
+        {
+          "name": "Sugar",
+          "amount": 3,
+          "unit": "Tbsps",
+          "original": "3 tablespoons sugar"
+        },
+        {
+          "name": "Onion",
+          "amount": 1,
+          "unit": "",
+          "original": "1 sweet onion – sliced"
+        },
+        {
+          "name": "Vinegar",
+          "amount": 3,
+          "unit": "Tbs",
+          "original": "3 Tbs. vinegar"
+        },
+        {
+          "name": "Water",
+          "amount": 828.058,
+          "unit": "ml",
+          "original": "3 1/2 cups water"
+        }
+      ],
+      "instructions": [
+        "1. For the Dipping Sauce:Saut the onion in a tablespoon of olive oil until transparent.",
+        "2. Let the onion cool.",
+        "3. Place the onion in a food processor and add the rest of the ingredients.  Give a few good chops until the desired consistency is reached.",
+        "**Place in a container and refrigerate.For the Chicken Breast**",
+        "1. Combine all of the above in a pot; add the chicken and cover in the refrigerator for a few hours or overnight.",
+        "2. Remove from the brine and cut the chicken into desired sized pieces.",
+        "3. Heat a 10 inch frying pan with 2 tablespoons of olive oil.If the chicken is cut into  to  inch thickness it should take about 6 to 10 minutes over medium heat; turning the chicken pieces occasionally to saut evenly.  Do not overcrowd the pan.",
+        "4. Serve with the onion dipping sauce."
+      ],
+      "nutrition": {
+        "calories": 220,
+        "carbohydrates": 11,
+        "fiber": 1,
+        "sugar": 9,
+        "protein": 33,
+        "fat": 4,
+        "saturatedFat": 1,
+        "sodium": 382
+      },
+      "carbChoices": 1,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "high-protein",
+        "low-carb",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/636118-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/HNZLCVCN/brined-chicken-breast-with-saut-ed-onion-dipping-sauce",
+      "gdValidation": {
+        "isValid": false,
+        "score": 40,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 11.41g (min: 30g)",
+            "Fiber too low: 0.93g (min: 5g)",
+            "High sugar content: 8.91g (78% of carbs)",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Choose options with less added sugar",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Choose options with less added sugar",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:28.773Z",
+      "spoonacularId": "636118",
+      "createdAt": "2025-07-16T16:58:55.886Z",
+      "updatedAt": "2025-07-16T16:58:55.886Z"
     },
     {
       "id": "spoonacular-636177",
@@ -5766,7 +6384,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:17:16.478Z",
-      "spoonacularId": "636177"
+      "spoonacularId": "636177",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-636599",
@@ -5942,7 +6562,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:15.765Z",
-      "spoonacularId": "636599"
+      "spoonacularId": "636599",
+      "createdAt": "2025-07-16T16:58:55.885Z",
+      "updatedAt": "2025-07-16T16:58:55.885Z"
     },
     {
       "id": "spoonacular-636787",
@@ -6081,7 +6703,9 @@
         ]
       },
       "importedAt": "2025-07-09T20:54:21.709Z",
-      "spoonacularId": "636787"
+      "spoonacularId": "636787",
+      "createdAt": "2025-07-16T16:58:55.902Z",
+      "updatedAt": "2025-07-16T16:58:55.902Z"
     },
     {
       "id": "spoonacular-662244",
@@ -6211,7 +6835,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:33.952Z",
-      "spoonacularId": "662244"
+      "spoonacularId": "662244",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-637643",
@@ -6328,7 +6954,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:37:26.071Z",
-      "spoonacularId": "637643"
+      "spoonacularId": "637643",
+      "createdAt": "2025-07-16T16:58:55.888Z",
+      "updatedAt": "2025-07-16T16:58:55.888Z"
     },
     {
       "id": "spoonacular-637671",
@@ -6485,7 +7113,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:13.152Z",
-      "spoonacularId": "637671"
+      "spoonacularId": "637671",
+      "createdAt": "2025-07-16T16:58:55.927Z",
+      "updatedAt": "2025-07-16T16:58:55.927Z"
     },
     {
       "id": "spoonacular-637684",
@@ -6746,7 +7376,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:57.086Z",
-      "spoonacularId": "637684"
+      "spoonacularId": "637684",
+      "createdAt": "2025-07-16T16:58:55.886Z",
+      "updatedAt": "2025-07-16T16:58:55.886Z"
     },
     {
       "id": "spoonacular-637690",
@@ -7041,7 +7673,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:46.521Z",
-      "spoonacularId": "637902"
+      "spoonacularId": "637902",
+      "createdAt": "2025-07-16T16:58:55.888Z",
+      "updatedAt": "2025-07-16T16:58:55.888Z"
     },
     {
       "id": "spoonacular-637932",
@@ -7251,6 +7885,304 @@
       }
     },
     {
+      "id": "spoonacular-638002",
+      "title": "Chicken Cacciatore",
+      "description": "Chicken Cacciatore is a Mediterranean recipe that serves 6.  For $2.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Chicken Breasts",
+          "amount": 2,
+          "unit": "",
+          "original": "2 chicken breasts"
+        },
+        {
+          "name": "Chicken Thighs",
+          "amount": 4,
+          "unit": "",
+          "original": "4 chicken thighs, bone in"
+        },
+        {
+          "name": "Salt",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons Salt, or to taste"
+        },
+        {
+          "name": "Pepper",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon pepper, or to taste"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons olive oil, plus more if needed"
+        },
+        {
+          "name": "Flour",
+          "amount": 62.5,
+          "unit": "g",
+          "original": "1/2 cup flour"
+        },
+        {
+          "name": "Onion",
+          "amount": 1,
+          "unit": "large",
+          "original": "1 large onion, chopped"
+        },
+        {
+          "name": "Bell Pepper",
+          "amount": 1,
+          "unit": "large",
+          "original": "1 large red bell pepper, chopped"
+        },
+        {
+          "name": "Garlic",
+          "amount": 6,
+          "unit": "cloves",
+          "original": "6 cloves garlic, crushed"
+        },
+        {
+          "name": "Mushrooms",
+          "amount": 10,
+          "unit": "",
+          "original": "10 fresh mushrooms, quartered"
+        },
+        {
+          "name": "Canned Tomatoes",
+          "amount": 793.787,
+          "unit": "g",
+          "original": "1 (28 ounce) can tomatoes, drained and coarsely chopped"
+        },
+        {
+          "name": "Wine",
+          "amount": 120,
+          "unit": "ml",
+          "original": "1/2 cup dry white wine"
+        },
+        {
+          "name": "Oregano",
+          "amount": 1.5,
+          "unit": "tsps",
+          "original": "1 1/2 teaspoons dried oregano"
+        },
+        {
+          "name": "Parmesan Cheese",
+          "amount": 6,
+          "unit": "servings",
+          "original": "Parmesan cheese, to taste"
+        },
+        {
+          "name": "Basil Leaves",
+          "amount": 6,
+          "unit": "g",
+          "original": "1/4 cup Fresh basil leaves, coarsely chopped"
+        }
+      ],
+      "instructions": [
+        "1. In a medium-sized bowl, mix salt, pepper and flour together.",
+        "2. Wash chicken and remove excess skin. Dredge in flour mixture and shake off excess.",
+        "3. Heat oil is a large non-stick skillet over medium-high heat.",
+        "4. Add chicken and brown on all sides.",
+        "5. Remove from the pan and drain on paper towels.",
+        "6. To the same skillet add the onion and garlic and stir until onion is soft, but not browned. Next, add red pepper and mushrooms; cook, stirring occasionally until softened.",
+        "7. Add tomatoes, white wine and oregano and cook until alcohol has burned off; 3-5 minutes.",
+        "8. Return chicken to skillet, cover and simmer on low for one hour."
+      ],
+      "nutrition": {
+        "calories": 584,
+        "carbohydrates": 26,
+        "fiber": 5,
+        "sugar": 9,
+        "protein": 48,
+        "fat": 31,
+        "saturatedFat": 10,
+        "sodium": 1598
+      },
+      "carbChoices": 2,
+      "tags": [
+        "high-protein",
+        "high-fiber",
+        "lunch",
+        "dinner",
+        "mediterranean",
+        "italian",
+        "european"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/638002-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/7M55MLHY/chicken-cacciatore",
+      "gdValidation": {
+        "isValid": false,
+        "score": 45,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 25.97g (min: 30g)",
+            "Fiber too low: 4.5g (min: 5g)",
+            "High saturated fat: 10.44g",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:28.781Z",
+      "spoonacularId": "638002",
+      "createdAt": "2025-07-16T16:58:55.905Z",
+      "updatedAt": "2025-07-16T16:58:55.905Z"
+    },
+    {
+      "id": "spoonacular-638035",
+      "title": "Chicken Cordon Bleu",
+      "description": "Chicken Cordon Bleu might be a good recipe to expand your main course repertoire.  For $1.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Deli Ham",
+          "amount": 6,
+          "unit": "slice",
+          "original": "6 slices deli ham"
+        },
+        {
+          "name": "Eggs",
+          "amount": 2,
+          "unit": "",
+          "original": "2 eggs"
+        },
+        {
+          "name": "Flour",
+          "amount": 31.25,
+          "unit": "g",
+          "original": "1/4 cup flour"
+        },
+        {
+          "name": "Thyme Leaves",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons fresh thyme leaves"
+        },
+        {
+          "name": "Kosher Salt And Pepper",
+          "amount": 6,
+          "unit": "servings",
+          "original": "kosher salt and freshly ground black pepper"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon olive oil"
+        },
+        {
+          "name": "Panko Bread Crumbs",
+          "amount": 60,
+          "unit": "g",
+          "original": "1 cup panko bread crumbs"
+        },
+        {
+          "name": "Chicken Breasts",
+          "amount": 6,
+          "unit": "",
+          "original": "6 boneless, skinless chicken breasts"
+        },
+        {
+          "name": "Swiss Cheese",
+          "amount": 12,
+          "unit": "slice",
+          "original": "12 slices Gruyere or Swiss cheese"
+        },
+        {
+          "name": "Water",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 tsps water"
+        }
+      ],
+      "instructions": [
+        "1. Preheat oven to 350 degrees F.Butterfly the chicken breasts by slicing half lengthwise but not cutting all the way through.",
+        "2. Lay the halved breasts between 2 pieces of plastic wrap. Using the flat side of a meat mallet, gently pound the chicken to 1/4-inch thickness, taking care to not tear or create holes in the meat.",
+        "3. Lay 2 slices of cheese on each breast, followed by 2 slices of ham, and 2 more of cheese; leaving a 1/2-inch margin on all sides to help seal the roll. Tuck in the sides of the breast and roll up tight like a jellyroll. Squeeze the log gently to seal.Season the flour with salt and pepper; spread out on waxed paper or in a flat dish.",
+        "4. Mix the breadcrumbs with thyme, kosher salt, pepper, and oil. The oil will help the crust brown. Beat together the eggs and water, the mixture should be fluid. Lightly dust the chicken with flour, then dip in the egg mixture. Gently coat in the bread crumbs.Carefully transfer the roulades to a baking pan and bake for 20 minutes until browned and cooked through.",
+        "5. Serve whole or cut into pinwheels."
+      ],
+      "nutrition": {
+        "calories": 417,
+        "carbohydrates": 12,
+        "fiber": 1,
+        "sugar": 1,
+        "protein": 43,
+        "fat": 21,
+        "saturatedFat": 9,
+        "sodium": 621
+      },
+      "carbChoices": 1,
+      "tags": [
+        "high-protein",
+        "low-carb",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/638035-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/KFDCB2XH/chicken-cordon-bleu",
+      "gdValidation": {
+        "isValid": false,
+        "score": 40,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 11.99g (min: 30g)",
+            "Fiber too low: 0.71g (min: 5g)",
+            "High saturated fat: 9.19g",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:31.356Z",
+      "spoonacularId": "638035",
+      "createdAt": "2025-07-16T16:58:55.902Z",
+      "updatedAt": "2025-07-16T16:58:55.902Z"
+    },
+    {
       "id": "spoonacular-715394",
       "title": "Chicken Enchilada Casserole",
       "description": "Chicken Enchilada Casserole might be just the main course you are searching for.  This recipe makes 8 servings with 325 calories, 26g of protein, and 12g of fat each.",
@@ -7360,7 +8292,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:48.456Z",
-      "spoonacularId": "715394"
+      "spoonacularId": "715394",
+      "createdAt": "2025-07-16T16:58:55.888Z",
+      "updatedAt": "2025-07-16T16:58:55.888Z"
     },
     {
       "id": "spoonacular-638073",
@@ -7725,6 +8659,262 @@
         "_seconds": 1751911253,
         "_nanoseconds": 398000000
       }
+    },
+    {
+      "id": "spoonacular-638218",
+      "title": "Chicken Orange Skewers",
+      "description": "Chicken Orange Skewers takes about 45 minutes from beginning to end.  This main course has 182 calories, 14g of protein, and 9g of fat per serving.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Chicken Breasts",
+          "amount": 2,
+          "unit": "",
+          "original": "2 boneless skinless chicken breasts"
+        },
+        {
+          "name": "Onion",
+          "amount": 0.75,
+          "unit": "",
+          "original": "¾ red onion"
+        },
+        {
+          "name": "Navel Orange",
+          "amount": 1,
+          "unit": "",
+          "original": "1 navel orange"
+        },
+        {
+          "name": "Zucchini",
+          "amount": 1,
+          "unit": "medium",
+          "original": "1 medium zucchini"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 TBSP Olive Oil"
+        },
+        {
+          "name": "Tsp Garlic Powder",
+          "amount": 1,
+          "unit": "",
+          "original": "1 TSP Garlic Powder"
+        },
+        {
+          "name": "Tsp Onion Powder",
+          "amount": 1,
+          "unit": "",
+          "original": "1 TSP Onion Powder"
+        },
+        {
+          "name": "Tsp Pepper",
+          "amount": 1,
+          "unit": "",
+          "original": "1 TSP Pepper"
+        },
+        {
+          "name": "Tsp Salt",
+          "amount": 1,
+          "unit": "",
+          "original": "1 TSP Salt"
+        },
+        {
+          "name": "Tsp Chili Powder",
+          "amount": 1,
+          "unit": "",
+          "original": "1 TSP Chili Powder"
+        },
+        {
+          "name": "Tsp Paprika",
+          "amount": 1,
+          "unit": "",
+          "original": "1 TSP Paprika"
+        },
+        {
+          "name": "Juice Of Orange",
+          "amount": 0.5,
+          "unit": "",
+          "original": "½ navel orange, juiced"
+        },
+        {
+          "name": "Orange Zest",
+          "amount": 1,
+          "unit": "",
+          "original": "1 TSP Orange Zest"
+        }
+      ],
+      "instructions": [
+        "1. Preheat broiler.Slice zucchini into  inch pieces.Peel orange and slice orange into bite sized pieces. Slice red onion into small wedges.Slice chicken breasts into  inch slices and then slice those pieces in half.",
+        "**Assemble skewers**",
+        "1. Add onion, zucchini, chicken, orange and then repeat, having a total of 3 pieces of chicken per skewer. This should make a total of 8 skewers. If you have more chicken and veggies, add it onto the end of the skewers.",
+        "2. Place skewers on baking sheet.",
+        "**Make glaze**",
+        "1. Add ingredients together and mix.",
+        "2. Brush glaze over skewers. Move oven shelf to highest position.",
+        "3. Place skewers under broiler and cook for 20 minutes, flipping the skewers over after 10 minutes.",
+        "4. Serve and enjoy!"
+      ],
+      "nutrition": {
+        "calories": 182,
+        "carbohydrates": 13,
+        "fiber": 3,
+        "sugar": 8,
+        "protein": 14,
+        "fat": 9,
+        "saturatedFat": 1,
+        "sodium": 73
+      },
+      "carbChoices": 1,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "low-carb",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/638218-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/DFB4VHMG/chicken-orange-skewers",
+      "gdValidation": {
+        "isValid": false,
+        "score": 20,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": false,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 13.13g (min: 30g)",
+            "Protein too low: 13.73g (min: 15g)",
+            "Fiber too low: 3.07g (min: 5g)",
+            "High sugar content: 7.84g (60% of carbs)",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add lean meat, eggs, Greek yogurt, or legumes",
+            "Add vegetables, whole grains, or beans",
+            "Choose options with less added sugar",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add lean meat, eggs, Greek yogurt, or legumes",
+          "Add vegetables, whole grains, or beans",
+          "Choose options with less added sugar",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:31.388Z",
+      "spoonacularId": "638218",
+      "createdAt": "2025-07-16T16:58:55.890Z",
+      "updatedAt": "2025-07-16T16:58:55.890Z"
+    },
+    {
+      "id": "spoonacular-638231",
+      "title": "Chicken Parmayonnaise",
+      "description": "Chicken Parmayonnaise is a main course that serves 6.  One portion of this dish contains approximately 27g of protein, 19g of fat, and a total of 289 calories.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Kosher Salt And Coarse Pepper",
+          "amount": 6,
+          "unit": "servings",
+          "original": "kosher salt and coarse pepper"
+        },
+        {
+          "name": "Herbs",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon Italian Herbs"
+        },
+        {
+          "name": "Mayonnaise",
+          "amount": 112,
+          "unit": "ml",
+          "original": "1/2 cup mayonnaise"
+        },
+        {
+          "name": "Parmesan",
+          "amount": 50,
+          "unit": "g",
+          "original": "1/2 cup Parmesan, grated"
+        },
+        {
+          "name": "Chicken Breasts",
+          "amount": 6,
+          "unit": "",
+          "original": "6 boneless skinless chicken breasts"
+        }
+      ],
+      "instructions": [
+        "1. Oven to 375.Lightly pound breasts to uniform thickness ( not thin).",
+        "2. Combine ingredients.",
+        "3. Place chicken in baking dish.",
+        "4. Spread mix evenly over chicken.",
+        "5. Bake 25-30 minutes until top starts to brown."
+      ],
+      "nutrition": {
+        "calories": 289,
+        "carbohydrates": 1,
+        "fiber": 0,
+        "sugar": 0,
+        "protein": 27,
+        "fat": 19,
+        "saturatedFat": 4,
+        "sodium": 577
+      },
+      "carbChoices": 0,
+      "tags": [
+        "gluten-free",
+        "high-protein",
+        "low-carb",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/638231-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/K6D2PK26/chicken-parmayonnaise-3-ingredients-for-an-easy-night-in",
+      "gdValidation": {
+        "isValid": false,
+        "score": 45,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 0.6g (min: 30g)",
+            "Fiber too low: 0g (min: 5g)",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:31.364Z",
+      "spoonacularId": "638231",
+      "createdAt": "2025-07-16T16:58:55.900Z",
+      "updatedAt": "2025-07-16T16:58:55.900Z"
     },
     {
       "id": "spoonacular-638235",
@@ -8590,7 +9780,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:48.516Z",
-      "spoonacularId": "638409"
+      "spoonacularId": "638409",
+      "createdAt": "2025-07-16T16:58:55.888Z",
+      "updatedAt": "2025-07-16T16:58:55.888Z"
     },
     {
       "id": "spoonacular-638464",
@@ -8743,7 +9935,330 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:43.980Z",
-      "spoonacularId": "638464"
+      "spoonacularId": "638464",
+      "createdAt": "2025-07-16T16:58:55.901Z",
+      "updatedAt": "2025-07-16T16:58:55.901Z"
+    },
+    {
+      "id": "spoonacular-638549",
+      "title": "Chili and Garlic Spiced Beef and Broccoli Stir Fry",
+      "description": "Chili and Garlic Spiced Beef and Broccoli Stir Fry is a gluten free and dairy free recipe with 4 servings.  For $2.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Beef Steak",
+          "amount": 340.194,
+          "unit": "g",
+          "original": "12 ounces beef steak, very thinly sliced"
+        },
+        {
+          "name": "Broccoli Florets",
+          "amount": 364,
+          "unit": "g",
+          "original": "4 cups broccoli florets"
+        },
+        {
+          "name": "Coconut Oil",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon coconut oil"
+        },
+        {
+          "name": "Chicken Broth",
+          "amount": 176.25,
+          "unit": "ml",
+          "original": "3/4 cup low fat chicken broth"
+        },
+        {
+          "name": "Cornstarch",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon cornstarch"
+        },
+        {
+          "name": "Soy Sauce",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons soy sauce"
+        },
+        {
+          "name": "Rice Vinegar",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons rice vinegar"
+        },
+        {
+          "name": "Mirin",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons mirin"
+        },
+        {
+          "name": "Sesame Oil",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon sesame oil"
+        },
+        {
+          "name": "Sugar",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon sugar"
+        },
+        {
+          "name": "Asian Chili Sauce",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons Asian Chili sauce"
+        },
+        {
+          "name": "Brown Rice",
+          "amount": 390,
+          "unit": "g",
+          "original": "2 cups brown rice, cooked"
+        }
+      ],
+      "instructions": [
+        "1. Combine chicken broth, cornstarch, soy sauce, rice vinegar, Mirin, sesame oil, sugar and Asian chili sauce in a small bowl.",
+        "2. Preheat non-skillet over medium high heat with 1/2 tablespoon coconut oil.",
+        "3. Add beef and stir fry until beef is cooked through, 3  4 minutes.",
+        "4. Remove from pan.",
+        "5. Add remaining coconut oil and saute broccoli for 3  4 minutes until crisp-tender.",
+        "6. Add chicken broth or water as needed to keep pan from becoming too dry.",
+        "7. Add beef and sauce into the pan with the broccoli and stir until sauce thickens, 4  5 minutes.",
+        "8. Serve over rice."
+      ],
+      "nutrition": {
+        "calories": 394,
+        "carbohydrates": 39,
+        "fiber": 4,
+        "sugar": 7,
+        "protein": 23,
+        "fat": 17,
+        "saturatedFat": 9,
+        "sodium": 840
+      },
+      "carbChoices": 3,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "high-protein",
+        "lunch",
+        "dinner",
+        "american"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/638549-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/4HJ5M7RQ/chili-and-garlic-spiced-beef-and-broccoli-stir-fry",
+      "gdValidation": {
+        "isValid": false,
+        "score": 75,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Fiber too low: 4.27g (min: 5g)",
+            "High saturated fat: 8.58g",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add vegetables, whole grains, or beans",
+            "Choose leaner protein sources or reduce cheese/butter"
+          ]
+        },
+        "warnings": [
+          "Add vegetables, whole grains, or beans",
+          "Choose leaner protein sources or reduce cheese/butter"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:34.041Z",
+      "spoonacularId": "638549",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
+    },
+    {
+      "id": "spoonacular-638586",
+      "title": "Chili-Garlic Stir Fry",
+      "description": "Chili-Garlic Stir Fry is a gluten free and dairy free recipe with 6 servings.  One serving contains 147 calories, 15g of protein, and 4g of fat.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Sesame Oil",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons sesame oil, divided"
+        },
+        {
+          "name": "Chicken Breast",
+          "amount": 340.194,
+          "unit": "g",
+          "original": "12 ounces boneless, skinless chicken breast, cubed"
+        },
+        {
+          "name": "Bok Choy",
+          "amount": 4,
+          "unit": "large stalks",
+          "original": "4 large stalks bok choy, chopped (stalk and leaf divided)"
+        },
+        {
+          "name": "Snow Peas",
+          "amount": 226.796,
+          "unit": "g",
+          "original": "8 ounces snow peas"
+        },
+        {
+          "name": "Carrots",
+          "amount": 3,
+          "unit": "medium",
+          "original": "3 mediums carrots, peeled and chopped"
+        },
+        {
+          "name": "Bell Pepper",
+          "amount": 1,
+          "unit": "",
+          "original": "1 yellow pepper, sliced"
+        },
+        {
+          "name": "Orange Pepper",
+          "amount": 1,
+          "unit": "",
+          "original": "1 orange pepper, sliced"
+        },
+        {
+          "name": "Green Onions",
+          "amount": 3,
+          "unit": "medium",
+          "original": "3 mediums green onions, white and green parts, chopped"
+        },
+        {
+          "name": "Sauce",
+          "amount": 6,
+          "unit": "servings",
+          "original": "Sauce"
+        },
+        {
+          "name": "Chicken Broth",
+          "amount": 177,
+          "unit": "ml",
+          "original": "3/4 cup low sodium chicken broth"
+        },
+        {
+          "name": "Cooking Sherry",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons cooking sherry"
+        },
+        {
+          "name": "Cornstarch",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons cornstarch"
+        },
+        {
+          "name": "Sriracha",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons Sriracha or other chili-garlic sauce"
+        },
+        {
+          "name": "Garlic",
+          "amount": 6,
+          "unit": "cloves",
+          "original": "6 cloves garlic, minced"
+        },
+        {
+          "name": "Sesame Oil",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon sesame oil"
+        },
+        {
+          "name": "Stir Fry",
+          "amount": 1,
+          "unit": "serving",
+          "original": "Stir fry"
+        },
+        {
+          "name": "Stir Fry",
+          "amount": 6,
+          "unit": "servings",
+          "original": "Stir fry"
+        }
+      ],
+      "instructions": [
+        "1. I a wok or large skillet, heat 1 teaspoon sesame oil over medium-high heat.",
+        "2. Add chicken and saute until cooked through. Set aside and cover.",
+        "3. In the same pan, heat 1 teaspoon sesame oil over medium-high heat.",
+        "4. Add bok choy stalks (not the leaves), carrots and snow peas and saute until just tender. Set aside and cover.",
+        "5. Meanwhile, in a medium bowl, combine broth, sherry, cornstarch and Sriracha.",
+        "6. Heat final teaspoon sesame oil over medium high heat and add garlic.",
+        "7. Saute until fragrant, 30 seconds to 1 minute.",
+        "8. Add sauce and bring to a boil. Stir until it thickens then add chicken, veggies, bok choy leaves and green onion. Stir until all are coated and heated through."
+      ],
+      "nutrition": {
+        "calories": 147,
+        "carbohydrates": 12,
+        "fiber": 3,
+        "sugar": 5,
+        "protein": 15,
+        "fat": 4,
+        "saturatedFat": 1,
+        "sodium": 391
+      },
+      "carbChoices": 1,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "low-carb",
+        "lunch",
+        "dinner",
+        "american"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/638586-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/7B6SJL27/chili-garlic-stir-fry",
+      "gdValidation": {
+        "isValid": false,
+        "score": 25,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": false,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 12.47g (min: 30g)",
+            "Protein too low: 14.72g (min: 15g)",
+            "Fiber too low: 2.93g (min: 5g)",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add lean meat, eggs, Greek yogurt, or legumes",
+            "Add vegetables, whole grains, or beans",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add lean meat, eggs, Greek yogurt, or legumes",
+          "Add vegetables, whole grains, or beans",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:31.377Z",
+      "spoonacularId": "638586",
+      "createdAt": "2025-07-16T16:58:55.884Z",
+      "updatedAt": "2025-07-16T16:58:55.884Z"
     },
     {
       "id": "spoonacular-638642",
@@ -8962,7 +10477,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:25.941Z",
-      "spoonacularId": "638642"
+      "spoonacularId": "638642",
+      "createdAt": "2025-07-16T16:58:55.887Z",
+      "updatedAt": "2025-07-16T16:58:55.887Z"
     },
     {
       "id": "spoonacular-638668",
@@ -9119,7 +10636,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:33.958Z",
-      "spoonacularId": "638668"
+      "spoonacularId": "638668",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-638722",
@@ -9307,7 +10826,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:34.061Z",
-      "spoonacularId": "638722"
+      "spoonacularId": "638722",
+      "createdAt": "2025-07-16T16:58:55.888Z",
+      "updatedAt": "2025-07-16T16:58:55.888Z"
     },
     {
       "id": "spoonacular-638772",
@@ -9454,7 +10975,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:24.668Z",
-      "spoonacularId": "638772"
+      "spoonacularId": "638772",
+      "createdAt": "2025-07-16T16:58:55.927Z",
+      "updatedAt": "2025-07-16T16:58:55.927Z"
     },
     {
       "id": "spoonacular-639569",
@@ -10335,7 +11858,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:15.595Z",
-      "spoonacularId": "639850"
+      "spoonacularId": "639850",
+      "createdAt": "2025-07-16T16:58:55.900Z",
+      "updatedAt": "2025-07-16T16:58:55.900Z"
     },
     {
       "id": "spoonacular-639855",
@@ -10460,7 +11985,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:39:34.215Z",
-      "spoonacularId": "639855"
+      "spoonacularId": "639855",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-640266",
@@ -11152,7 +12679,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:39:24.914Z",
-      "spoonacularId": "640676"
+      "spoonacularId": "640676",
+      "createdAt": "2025-07-16T16:58:55.888Z",
+      "updatedAt": "2025-07-16T16:58:55.888Z"
     },
     {
       "id": "spoonacular-640700",
@@ -11501,7 +13030,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:37:35.569Z",
-      "spoonacularId": "640798"
+      "spoonacularId": "640798",
+      "createdAt": "2025-07-16T16:58:55.905Z",
+      "updatedAt": "2025-07-16T16:58:55.905Z"
     },
     {
       "id": "spoonacular-640851",
@@ -11639,7 +13170,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:57:23.564Z",
-      "spoonacularId": "640851"
+      "spoonacularId": "640851",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
     },
     {
       "id": "spoonacular-640859",
@@ -11784,7 +13317,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:57:23.503Z",
-      "spoonacularId": "640859"
+      "spoonacularId": "640859",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
     },
     {
       "id": "spoonacular-735820",
@@ -11938,7 +13473,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:37:55.384Z",
-      "spoonacularId": "735820"
+      "spoonacularId": "735820",
+      "createdAt": "2025-07-16T16:58:55.887Z",
+      "updatedAt": "2025-07-16T16:58:55.887Z"
     },
     {
       "id": "spoonacular-735820",
@@ -12119,6 +13656,152 @@
       }
     },
     {
+      "id": "spoonacular-641036",
+      "title": "Cumin-Scented Stir Fry",
+      "description": "Cumin-Scented Stir Fry requires about 45 minutes from start to finish.  This gluten free and dairy free recipe serves 1 and costs $3.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 1,
+      "ingredients": [
+        {
+          "name": "Chicken Breast",
+          "amount": 226.796,
+          "unit": "g",
+          "original": "1/2 pound boneless skinless, chicken breast, thinly sliced"
+        },
+        {
+          "name": "Soy Sauce",
+          "amount": 63.75,
+          "unit": "ml",
+          "original": "1/4 cup reduced-sodium soy sauce, divided"
+        },
+        {
+          "name": "Cornstarch",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons cornstarch, divided"
+        },
+        {
+          "name": "A Mixture Of Rice Vinegar And Sugar",
+          "amount": 3,
+          "unit": "Tbsps",
+          "original": "3 tablespoons medium-dry Sherry or a mixture of rice vinegar and sugar"
+        },
+        {
+          "name": "Vegetable Oil",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons vegetable oil, divided"
+        },
+        {
+          "name": "Ginger",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons minced peeled ginger, divided"
+        },
+        {
+          "name": "Garlic",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons minced garlic"
+        },
+        {
+          "name": "Cumin Seeds",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon cumin seeds"
+        },
+        {
+          "name": "Red-pepper Flakes",
+          "amount": 0.125,
+          "unit": "tsps",
+          "original": "1/8 teaspoon hot red-pepper flakes, or more to taste"
+        },
+        {
+          "name": "Celery Ribs",
+          "amount": 4,
+          "unit": "inches",
+          "original": "4 inches celery ribs, sliced diagonally ¼ thick, leaves chopped and reserved separately"
+        },
+        {
+          "name": "Carrots",
+          "amount": 2,
+          "unit": "",
+          "original": "2 carrots, peeled and sliced"
+        },
+        {
+          "name": "Broccoli Florets",
+          "amount": 45.5,
+          "unit": "g",
+          "original": "1/2 cup broccoli florets, steamed or frozen"
+        },
+        {
+          "name": "Onion",
+          "amount": 0.5,
+          "unit": "",
+          "original": "1/2 white onion"
+        }
+      ],
+      "instructions": [
+        "1. Slice chicken across the grain about 1/8 inch thick.  Toss chicken with 2 tablespoons soy sauce, 1 teaspoon cornstarch, 1 teaspoon garlic, 1 teaspoon ginger and a pinch of salt.  Allow to marinate while you chop the veggies.",
+        "2. Stir together rice wine, remaining soy sauce, and remaining 1/4 teaspoon cornstarch.",
+        "3. Heat wok over high heat until smoking, then pour 1 tablespoon oil down side and swirl to coat.",
+        "4. Add chicken in 1 layer and cook, turning occasionally, until browned, less than 1 minute.",
+        "5. Transfer to a bowl.",
+        "6. Add remaining oil to wok, then add ginger, garlic, cumin, and red-pepper flakes and stir-fry 15 seconds.",
+        "7. Add celery, onion, broccoli and carrots then stir-fry 3 minutes, then add chicken and juices and stir-fry 3 minutes. Stir rice-wine mixture, then pour into wok and stir-fry until sauce is bubbling, about 2 minutes.",
+        "8. Remove from heat and stir in celery leaves.",
+        "9. Serve on a bed of steamed rice or brown rice."
+      ],
+      "nutrition": {
+        "calories": 673,
+        "carbohydrates": 32,
+        "fiber": 7,
+        "sugar": 10,
+        "protein": 58,
+        "fat": 34,
+        "saturatedFat": 6,
+        "sodium": 2678
+      },
+      "carbChoices": 2,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "high-protein",
+        "high-fiber",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/641036-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/FYM45RF3/cumin-scented-stir-fry",
+      "gdValidation": {
+        "isValid": true,
+        "score": 100,
+        "details": {
+          "isValid": true,
+          "carbsInRange": true,
+          "adequateProtein": true,
+          "adequateFiber": true,
+          "warnings": [
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:33.947Z",
+      "spoonacularId": "641036",
+      "createdAt": "2025-07-16T16:58:55.887Z",
+      "updatedAt": "2025-07-16T16:58:55.887Z"
+    },
+    {
       "id": "spoonacular-641079",
       "title": "Curried Lamb Tarts",
       "description": "Curried Lamb Tarts takes approximately 45 minutes from beginning to end.  For $2.",
@@ -12269,7 +13952,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:04.351Z",
-      "spoonacularId": "641079"
+      "spoonacularId": "641079",
+      "createdAt": "2025-07-16T16:58:55.886Z",
+      "updatedAt": "2025-07-16T16:58:55.886Z"
     },
     {
       "id": "spoonacular-641093",
@@ -12408,7 +14093,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:33.952Z",
-      "spoonacularId": "641093"
+      "spoonacularId": "641093",
+      "createdAt": "2025-07-16T16:58:55.902Z",
+      "updatedAt": "2025-07-16T16:58:55.902Z"
     },
     {
       "id": "spoonacular-641093",
@@ -12705,7 +14392,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:30.674Z",
-      "spoonacularId": "641200"
+      "spoonacularId": "641200",
+      "createdAt": "2025-07-16T16:58:55.927Z",
+      "updatedAt": "2025-07-16T16:58:55.927Z"
     },
     {
       "id": "spoonacular-641836",
@@ -12816,7 +14505,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:17:16.378Z",
-      "spoonacularId": "641836"
+      "spoonacularId": "641836",
+      "createdAt": "2025-07-16T16:58:55.901Z",
+      "updatedAt": "2025-07-16T16:58:55.901Z"
     },
     {
       "id": "spoonacular-1506695",
@@ -12958,7 +14649,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:13.135Z",
-      "spoonacularId": "1506695"
+      "spoonacularId": "1506695",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-641893",
@@ -13175,6 +14868,116 @@
       }
     },
     {
+      "id": "spoonacular-641974",
+      "title": "Easy Gift Lasagna",
+      "description": "Easy Gift Lasagnan is a main course that serves 12.  One serving contains 307 calories, 17g of protein, and 18g of fat.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 12,
+      "ingredients": [
+        {
+          "name": "Lasagna Noodles - According To Package Instructions",
+          "amount": 9,
+          "unit": "",
+          "original": "9 Lasagna noodles – cooked according to package instructions"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 Tbsp. olive oil"
+        },
+        {
+          "name": "Parmesan Cheese",
+          "amount": 100,
+          "unit": "g",
+          "original": "1 cup fresh grated Parmesan cheese"
+        },
+        {
+          "name": "Ricotta Cheese",
+          "amount": 1,
+          "unit": "small container",
+          "original": "1 small container Ricotta Cheese"
+        },
+        {
+          "name": "Mozzarella Cheese",
+          "amount": 448,
+          "unit": "g",
+          "original": "4 cups shredded Mozzarella Cheese"
+        },
+        {
+          "name": "Batch Of “best Ever Spaghetti Sauce",
+          "amount": 1,
+          "unit": "",
+          "original": "1 batch of “Best Ever Spaghetti Sauce”"
+        }
+      ],
+      "instructions": [
+        "1. Prepare Sauce according to instructions and set aside.Prepare Lasagna noodles according to package instructions be sure to salt the water. After drained, toss with olive oil to help prevent sticking",
+        "2. Cut Lasagna noodles to the required length to fit in the pan. Save the smaller pieces as you may need to piece them together while making the lasagna.Set your containers out in a row in front of you. Coat the bottom of each pan with one large spoonful of sauce. Then begin to layer noodles, Spoonfulls of ricotta cheese that are sufficient to coat the noodles, several spoonfuls of sauce to make a layer over the ricotta, shredded mozzarella to cover the sauce then repeat starting with the noodles again. Should make 2-3 layers depending on depth of pan. End with layer of Mozzarella cheese and sprinkle the parmesan over the top.Cover with the included top and label with a sharpie marker  name of dish, instructions for preparation and date of preparation. Use by date."
+      ],
+      "nutrition": {
+        "calories": 307,
+        "carbohydrates": 19,
+        "fiber": 1,
+        "sugar": 1,
+        "protein": 17,
+        "fat": 18,
+        "saturatedFat": 10,
+        "sodium": 411
+      },
+      "carbChoices": 1,
+      "tags": [
+        "low-carb",
+        "lunch",
+        "dinner",
+        "mediterranean",
+        "italian",
+        "european"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/641974-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/6V6DRX5X/easy-gift-lasagna",
+      "gdValidation": {
+        "isValid": false,
+        "score": 30,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 18.61g (min: 30g)",
+            "Fiber too low: 0.67g (min: 5g)",
+            "High saturated fat: 9.52g",
+            "No whole grains detected",
+            "No lean protein source detected",
+            "Limited vegetables detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice",
+            "Add a side salad or steamed vegetables"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice",
+          "Add a side salad or steamed vegetables"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:28.715Z",
+      "spoonacularId": "641974",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
+    },
+    {
       "id": "spoonacular-716627",
       "title": "Easy Homemade Rice and Beans",
       "description": "Easy Homemade Rice and Beans is a main course that serves 2.  One serving contains 446 calories, 19g of protein, and 4g of fat.",
@@ -13300,7 +15103,9 @@
         ]
       },
       "importedAt": "2025-07-09T20:54:16.578Z",
-      "spoonacularId": "716627"
+      "spoonacularId": "716627",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
     },
     {
       "id": "spoonacular-642096",
@@ -13736,7 +15541,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:57.063Z",
-      "spoonacularId": "642147"
+      "spoonacularId": "642147",
+      "createdAt": "2025-07-16T16:58:55.899Z",
+      "updatedAt": "2025-07-16T16:58:55.900Z"
     },
     {
       "id": "spoonacular-642230",
@@ -14007,7 +15814,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:21.332Z",
-      "spoonacularId": "642332"
+      "spoonacularId": "642332",
+      "createdAt": "2025-07-16T16:58:55.889Z",
+      "updatedAt": "2025-07-16T16:58:55.889Z"
     },
     {
       "id": "spoonacular-642468",
@@ -14477,7 +16286,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:56.908Z",
-      "spoonacularId": "642640"
+      "spoonacularId": "642640",
+      "createdAt": "2025-07-16T16:58:55.902Z",
+      "updatedAt": "2025-07-16T16:58:55.902Z"
     },
     {
       "id": "spoonacular-642998",
@@ -14660,7 +16471,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:15.747Z",
-      "spoonacularId": "642998"
+      "spoonacularId": "642998",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-643061",
@@ -14788,7 +16601,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:37:35.523Z",
-      "spoonacularId": "643061"
+      "spoonacularId": "643061",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
     },
     {
       "id": "spoonacular-1697639",
@@ -14894,7 +16709,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:48.574Z",
-      "spoonacularId": "1697639"
+      "spoonacularId": "1697639",
+      "createdAt": "2025-07-16T16:58:55.890Z",
+      "updatedAt": "2025-07-16T16:58:55.890Z"
     },
     {
       "id": "spoonacular-643330",
@@ -15172,7 +16989,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:13.201Z",
-      "spoonacularId": "643564"
+      "spoonacularId": "643564",
+      "createdAt": "2025-07-16T16:58:55.901Z",
+      "updatedAt": "2025-07-16T16:58:55.901Z"
     },
     {
       "id": "spoonacular-644167",
@@ -15315,7 +17134,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:39:24.698Z",
-      "spoonacularId": "644167"
+      "spoonacularId": "644167",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-1095689",
@@ -15418,7 +17239,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:39:43.985Z",
-      "spoonacularId": "1095689"
+      "spoonacularId": "1095689",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-644387",
@@ -15520,7 +17343,9 @@
         ]
       },
       "importedAt": "2025-07-09T02:10:38.860Z",
-      "spoonacularId": "644387"
+      "spoonacularId": "644387",
+      "createdAt": "2025-07-16T16:58:55.886Z",
+      "updatedAt": "2025-07-16T16:58:55.886Z"
     },
     {
       "id": "spoonacular-645443",
@@ -15661,7 +17486,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:06.431Z",
-      "spoonacularId": "645443"
+      "spoonacularId": "645443",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-645541",
@@ -15847,7 +17674,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:25.948Z",
-      "spoonacularId": "645541"
+      "spoonacularId": "645541",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
     },
     {
       "id": "spoonacular-645541",
@@ -17056,7 +18885,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:56.901Z",
-      "spoonacularId": "645732"
+      "spoonacularId": "645732",
+      "createdAt": "2025-07-16T16:58:55.889Z",
+      "updatedAt": "2025-07-16T16:58:55.889Z"
     },
     {
       "id": "spoonacular-645812",
@@ -17366,7 +19197,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:15.603Z",
-      "spoonacularId": "645849"
+      "spoonacularId": "645849",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-646043",
@@ -17682,7 +19515,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:54.926Z",
-      "spoonacularId": "646302"
+      "spoonacularId": "646302",
+      "createdAt": "2025-07-16T16:58:55.887Z",
+      "updatedAt": "2025-07-16T16:58:55.887Z"
     },
     {
       "id": "spoonacular-646358",
@@ -17857,7 +19692,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:36.696Z",
-      "spoonacularId": "646358"
+      "spoonacularId": "646358",
+      "createdAt": "2025-07-16T16:58:55.886Z",
+      "updatedAt": "2025-07-16T16:58:55.886Z"
     },
     {
       "id": "spoonacular-646358",
@@ -18032,7 +19869,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:36.668Z",
-      "spoonacularId": "646358"
+      "spoonacularId": "646358",
+      "createdAt": "2025-07-16T16:58:55.890Z",
+      "updatedAt": "2025-07-16T16:58:55.890Z"
     },
     {
       "id": "spoonacular-646358",
@@ -18411,7 +20250,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:33.894Z",
-      "spoonacularId": "646575"
+      "spoonacularId": "646575",
+      "createdAt": "2025-07-16T16:58:55.885Z",
+      "updatedAt": "2025-07-16T16:58:55.885Z"
     },
     {
       "id": "spoonacular-646589",
@@ -18758,7 +20599,9 @@
         ]
       },
       "importedAt": "2025-07-09T02:10:44.044Z",
-      "spoonacularId": "646738"
+      "spoonacularId": "646738",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-646870",
@@ -18895,7 +20738,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:17:19.050Z",
-      "spoonacularId": "646870"
+      "spoonacularId": "646870",
+      "createdAt": "2025-07-16T16:58:55.926Z",
+      "updatedAt": "2025-07-16T16:58:55.926Z"
     },
     {
       "id": "spoonacular-647119",
@@ -19063,7 +20908,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:04.474Z",
-      "spoonacularId": "647119"
+      "spoonacularId": "647119",
+      "createdAt": "2025-07-16T16:58:55.885Z",
+      "updatedAt": "2025-07-16T16:58:55.885Z"
     },
     {
       "id": "spoonacular-647311",
@@ -19364,7 +21211,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:39.506Z",
-      "spoonacularId": "647311"
+      "spoonacularId": "647311",
+      "createdAt": "2025-07-16T16:58:55.926Z",
+      "updatedAt": "2025-07-16T16:58:55.926Z"
     },
     {
       "id": "spoonacular-647577",
@@ -19886,7 +21735,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:46.548Z",
-      "spoonacularId": "1066893"
+      "spoonacularId": "1066893",
+      "createdAt": "2025-07-16T16:58:55.926Z",
+      "updatedAt": "2025-07-16T16:58:55.926Z"
     },
     {
       "id": "spoonacular-647634",
@@ -20574,7 +22425,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:57.045Z",
-      "spoonacularId": "648176"
+      "spoonacularId": "648176",
+      "createdAt": "2025-07-16T16:58:55.889Z",
+      "updatedAt": "2025-07-16T16:58:55.889Z"
     },
     {
       "id": "spoonacular-648176",
@@ -20887,7 +22740,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:17:19.084Z",
-      "spoonacularId": "648257"
+      "spoonacularId": "648257",
+      "createdAt": "2025-07-16T16:58:55.901Z",
+      "updatedAt": "2025-07-16T16:58:55.901Z"
     },
     {
       "id": "spoonacular-648300",
@@ -21002,7 +22857,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:44.251Z",
-      "spoonacularId": "648300"
+      "spoonacularId": "648300",
+      "createdAt": "2025-07-16T16:58:55.885Z",
+      "updatedAt": "2025-07-16T16:58:55.885Z"
     },
     {
       "id": "spoonacular-648320",
@@ -21142,7 +22999,9 @@
         ]
       },
       "importedAt": "2025-07-09T02:10:46.463Z",
-      "spoonacularId": "648320"
+      "spoonacularId": "648320",
+      "createdAt": "2025-07-16T16:58:55.885Z",
+      "updatedAt": "2025-07-16T16:58:55.885Z"
     },
     {
       "id": "spoonacular-648368",
@@ -21239,7 +23098,169 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:33.976Z",
-      "spoonacularId": "648368"
+      "spoonacularId": "648368",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
+    },
+    {
+      "id": "spoonacular-648430",
+      "title": "Jambalaya Soup",
+      "description": "Jambalaya Soup is a Cajun main course.  This recipe makes 8 servings with 293 calories, 26g of protein, and 12g of fat each.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "Andouille Or",
+          "amount": 85.049,
+          "unit": "g",
+          "original": "3 ounces fully cooked andouille or"
+        },
+        {
+          "name": "Brown Rice",
+          "amount": 126.667,
+          "unit": "g",
+          "original": "2/3 cup long-grain brown rice"
+        },
+        {
+          "name": "Canned Tomatoes",
+          "amount": 411.068,
+          "unit": "g",
+          "original": "1 14.5-oz. can fire-roasted diced tomatoes, no salt added"
+        },
+        {
+          "name": "Cayenne Pepper",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon cayenne pepper"
+        },
+        {
+          "name": "Thinly- Celery",
+          "amount": 101,
+          "unit": "g",
+          "original": "1 cup thinly-sliced celery"
+        },
+        {
+          "name": "Chicken Broth",
+          "amount": 85.049,
+          "unit": "g",
+          "original": "3 ounces can chicken broth - (14 ½ ea)"
+        },
+        {
+          "name": "Chicken Drumsticks Skinned",
+          "amount": 8,
+          "unit": "",
+          "original": "8 chicken drumsticks skinned"
+        },
+        {
+          "name": "Chorizo Sausage",
+          "amount": 8,
+          "unit": "servings",
+          "original": "chorizo sausage diced"
+        },
+        {
+          "name": "Marjoram",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon dried marjoram"
+        },
+        {
+          "name": "Thyme",
+          "amount": 0.25,
+          "unit": "tsps",
+          "original": "1/4 tsp. dried thyme"
+        },
+        {
+          "name": "Garlic Cloves",
+          "amount": 4,
+          "unit": "",
+          "original": "4 garlic cloves crushed"
+        },
+        {
+          "name": "Okra Cut",
+          "amount": 226.796,
+          "unit": "g",
+          "original": "1/2 pound fresh okra cut ½\" slices"
+        },
+        {
+          "name": "Onion",
+          "amount": 120,
+          "unit": "g",
+          "original": "3/4 cup onion, chopped"
+        },
+        {
+          "name": "Bell Pepper",
+          "amount": 1,
+          "unit": "",
+          "original": "1 red bell pepper diced"
+        },
+        {
+          "name": "Shrimp",
+          "amount": 226.796,
+          "unit": "g",
+          "original": "1/2 pound medium shrimp peeled, deveined"
+        }
+      ],
+      "instructions": [
+        "1. In saucepan, bring broth, tomatoes, garlic, herbs and pepper to a boil. In 5- or 6-quart slow cooker, mix onion, celery, rice and sausage.",
+        "2. Add broth. Tuck in drumsticks, meaty-sides down, to cover. Cover; cook on LOW 7 to 8 hours, or on HIGH 2 1/2 to 3 hours, until rice has softened and chicken is tender.Uncover; turn to HIGH.",
+        "3. Add shrimp and okra; cover. Simmer 5 minutes, until shrimp are cooked and okra is crisp-tender.",
+        "4. Remove drumsticks; remove bones, if desired. Ladle soup into bowls; add chicken to each serving.Stovetop Method: In 5- or 6-quart covered Dutch oven, simmer all ingredients except shrimp and okra, 1 hour and 10 minutes.",
+        "5. Add shrimp and okra; simmer 5 to 8 minutes.This recipe yields 8 servings."
+      ],
+      "nutrition": {
+        "calories": 293,
+        "carbohydrates": 20,
+        "fiber": 3,
+        "sugar": 3,
+        "protein": 26,
+        "fat": 12,
+        "saturatedFat": 3,
+        "sodium": 344
+      },
+      "carbChoices": 1,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "high-protein",
+        "low-carb",
+        "lunch",
+        "dinner",
+        "cajun",
+        "creole"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/648430-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/25VNNKMX/jambalaya-soup",
+      "gdValidation": {
+        "isValid": false,
+        "score": 45,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 20.15g (min: 30g)",
+            "Fiber too low: 2.7g (min: 5g)",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:23.532Z",
+      "spoonacularId": "648430",
+      "createdAt": "2025-07-16T16:58:55.926Z",
+      "updatedAt": "2025-07-16T16:58:55.926Z"
     },
     {
       "id": "spoonacular-648432",
@@ -21579,7 +23600,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:37:55.405Z",
-      "spoonacularId": "648479"
+      "spoonacularId": "648479",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-648774",
@@ -21864,7 +23887,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:39:24.872Z",
-      "spoonacularId": "648895"
+      "spoonacularId": "648895",
+      "createdAt": "2025-07-16T16:58:55.885Z",
+      "updatedAt": "2025-07-16T16:58:55.885Z"
     },
     {
       "id": "spoonacular-157834",
@@ -21980,7 +24005,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:04.460Z",
-      "spoonacularId": "157834"
+      "spoonacularId": "157834",
+      "createdAt": "2025-07-16T16:58:55.900Z",
+      "updatedAt": "2025-07-16T16:58:55.900Z"
     },
     {
       "id": "spoonacular-649195",
@@ -22111,7 +24138,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:04.346Z",
-      "spoonacularId": "649195"
+      "spoonacularId": "649195",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
     },
     {
       "id": "spoonacular-716338",
@@ -22256,7 +24285,368 @@
         ]
       },
       "importedAt": "2025-07-11T17:37:55.237Z",
-      "spoonacularId": "716338"
+      "spoonacularId": "716338",
+      "createdAt": "2025-07-16T16:58:55.888Z",
+      "updatedAt": "2025-07-16T16:58:55.888Z"
+    },
+    {
+      "id": "spoonacular-649225",
+      "title": "Lamb Moussaka",
+      "description": "You can never have too many main course recipes, so give Lamb Moussakan a try.  This recipe serves 12.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 12,
+      "ingredients": [
+        {
+          "name": "All Purpose Flour",
+          "amount": 62.5,
+          "unit": "g",
+          "original": "1/2 cup all purpose flour"
+        },
+        {
+          "name": "Canned Tomatoes",
+          "amount": 1,
+          "unit": "can",
+          "original": "1 can diced tomatoes, undrained"
+        },
+        {
+          "name": "Margarine",
+          "amount": 227,
+          "unit": "ml",
+          "original": "cup margarine"
+        },
+        {
+          "name": "Wine",
+          "amount": 120,
+          "unit": "ml",
+          "original": "1/2 cup dry red wine, optional"
+        },
+        {
+          "name": "Egg",
+          "amount": 4,
+          "unit": "",
+          "original": "4 egg, beaten"
+        },
+        {
+          "name": "Eggplant",
+          "amount": 1.134,
+          "unit": "kgs",
+          "original": "2 1/2 pounds eggplant, (3 large)"
+        },
+        {
+          "name": "Natrel Lactose Free Milk",
+          "amount": 980,
+          "unit": "ml",
+          "original": "4 cups Natrel Lactose Free Milk"
+        },
+        {
+          "name": "Lactose Free Mozzarella Cheese",
+          "amount": 339,
+          "unit": "g",
+          "original": "3 cups lactose free mozzarella cheese, shredded"
+        },
+        {
+          "name": "Parsley",
+          "amount": 30,
+          "unit": "g",
+          "original": "1/2 cup chopped fresh parsley"
+        },
+        {
+          "name": "Clv Garlic",
+          "amount": 2,
+          "unit": "",
+          "original": "2 clv garlic, chopped"
+        },
+        {
+          "name": "Ground Lamb",
+          "amount": 907.185,
+          "unit": "g",
+          "original": "2 pounds ground lamb"
+        },
+        {
+          "name": "Sauce",
+          "amount": 12,
+          "unit": "servings",
+          "original": "White Sauce"
+        },
+        {
+          "name": "Meat Sauce",
+          "amount": 12,
+          "unit": "servings",
+          "original": "Meat Sauce"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 54,
+          "unit": "ml",
+          "original": "1/4 cup olive oil"
+        },
+        {
+          "name": "Onion",
+          "amount": 2,
+          "unit": "medium",
+          "original": "2 mediums Onion, chopped"
+        },
+        {
+          "name": "Oregano Leaves",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon dried oregano leaves"
+        },
+        {
+          "name": "Salt",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon salt"
+        },
+        {
+          "name": "Salt",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon salt"
+        },
+        {
+          "name": "Salt And Pepper",
+          "amount": 1,
+          "unit": "",
+          "original": "1 salt and pepper, to taste"
+        },
+        {
+          "name": "Tomato Paste",
+          "amount": 1,
+          "unit": "can",
+          "original": "1 can Tomato paste"
+        },
+        {
+          "name": "Zucchini",
+          "amount": 3,
+          "unit": "",
+          "original": "3 zucchini, sliced, 1/4 inch thick"
+        }
+      ],
+      "instructions": [
+        "1. CUT eggplant into 1/4\" (5mm) thick slices.",
+        "2. Layer in colander, sprinkling each layer with salt.",
+        "3. Let stand 30 minutes.RINSE eggplant; pat dry.",
+        "4. Place in single layer on baking sheet.",
+        "5. Brush with olive oil. Broil, turning once for 4 to 6 minutes on each side, until golden and softened. Set aside. Repeat until all eggplants are cooked.SAUTE zucchini in large oiled frying pan until tender-crisp. Set aside.Meat Sauce:COOK lamb in large saucepan on high heat, breaking up with spoon, for 5 minutes.",
+        "6. Drain off fat.",
+        "7. Add onions, garlic and oregano. Cook on medium for 5 minutes.",
+        "8. Add tomatoes, tomato paste and wine. Simmer 10 minutes, or until mixture starts to thicken. Stir in parsley, salt and pepper. Set aside.White Sauce:MELT margarine in large saucepan.",
+        "9. Add flour, mixing until smooth. Gradually add milk. Cook, stirring constantly until mixture comes to a boil and is thickened.",
+        "10. Add salt and nutmeg.",
+        "**Add a bit of hot mixture to beaten eggs then return to saucepan and cook 2 minutes longer, stirring occasionally.To AssembleTips**",
+        "1. Place pan on a baking sheet or piece of foil to catch any drips that may boil over.MAKE-AHEAD: After assembling, cool completely, uncovered in refrigerator. Cover with plastic wrap and refrigerate for 1 day or overwrap with heavy foil and freeze up to 3 weeks. Thaw in refrigerator 48 hours before baking.Replace lamb with beef.A thin bottom layer of sauteed sliced potatoes can be added.A make-ahead layered Greek casserole that's ideal for potlucks and family reunions."
+      ],
+      "nutrition": {
+        "calories": 828,
+        "carbohydrates": 24,
+        "fiber": 6,
+        "sugar": 13,
+        "protein": 78,
+        "fat": 45,
+        "saturatedFat": 13,
+        "sodium": 1635
+      },
+      "carbChoices": 2,
+      "tags": [
+        "high-protein",
+        "high-fiber",
+        "lunch",
+        "dinner",
+        "mediterranean",
+        "european",
+        "greek"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/649225-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/RSSXNKVB/lamb-moussaka",
+      "gdValidation": {
+        "isValid": false,
+        "score": 60,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": true,
+          "warnings": [
+            "Carbs too low: 24.17g (min: 30g)",
+            "High sugar content: 13.24g (55% of carbs)",
+            "High saturated fat: 13.39g",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Choose options with less added sugar",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Choose options with less added sugar",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:26.128Z",
+      "spoonacularId": "649225",
+      "createdAt": "2025-07-16T16:58:55.887Z",
+      "updatedAt": "2025-07-16T16:58:55.887Z"
+    },
+    {
+      "id": "spoonacular-649280",
+      "title": "Lasagna Silvia",
+      "description": "The recipe Lasagna Silvian is ready in around 45 minutes and is definitely an amazing gluten free option for lovers of Mediterranean food.  This recipe serves 8 and costs $2.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "Onion",
+          "amount": 1,
+          "unit": "medium",
+          "original": "1 medium sweet onion finely chopped"
+        },
+        {
+          "name": "Virgin Olive Oil",
+          "amount": 4,
+          "unit": "Tbsps",
+          "original": "4 tablespoons virgin olive oil"
+        },
+        {
+          "name": "Portabella Mushroom",
+          "amount": 226.796,
+          "unit": "g",
+          "original": "8 ounces portabella mushroom sliced"
+        },
+        {
+          "name": "Butter",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons butter"
+        },
+        {
+          "name": "Spinach",
+          "amount": 453.592,
+          "unit": "g",
+          "original": "16 ounces frozen spinach thawed and drained well"
+        },
+        {
+          "name": "Zucchini",
+          "amount": 3,
+          "unit": "",
+          "original": "3 zucchini"
+        },
+        {
+          "name": "Ricotta Cheese",
+          "amount": 850.486,
+          "unit": "g",
+          "original": "30 ounces ricotta cheese"
+        },
+        {
+          "name": "Eggs",
+          "amount": 2,
+          "unit": "",
+          "original": "2 eggs"
+        },
+        {
+          "name": "Mozzarella Cheese",
+          "amount": 224,
+          "unit": "g",
+          "original": "2 cups mozzarella cheese"
+        },
+        {
+          "name": "Parmesan",
+          "amount": 50,
+          "unit": "g",
+          "original": "1/2 cup grated parmesan"
+        },
+        {
+          "name": "Pacific Natural Foods Creamy Tomato Soup",
+          "amount": 946.353,
+          "unit": "ml",
+          "original": "1 quart Pacific Natural Foods Organic Creamy Tomato Soup"
+        }
+      ],
+      "instructions": [
+        "1. Pre heat oven to 350 degrees",
+        "2. Coat a 9X12 Lasagna pan with non stick spray",
+        "3. Drain ricotta cheese in a sieve while preparing onions and mushrooms.",
+        "4. On medium heat, saut onion on  in 2 tablespoons virgin olive oil until translucent; about 10 minutes.",
+        "5. Transfer to large mixing bowl.",
+        "6. In a large frying pan over medium/high heat saut portabella mushrooms in 2 tablespoons butter and 2 tablespoons olive oil until softened; about 5 minutes.",
+        "7. Add to the onions.",
+        "8. Beat the two eggs and mix with the ricotta cheese.",
+        "9. Mix the ricotta egg mixture into, onions and mushrooms and then the well drained spinach.",
+        "10. Thinly slice 3 zucchini lengthwise to create noodles.",
+        "11. Cover the bottom of the lasagna pan with 1/4th of the Pacific Natural Foods Organic Creamy Tomato Soup.",
+        "12. Place a layer of zucchini noodles in the lasagna pan, slightly overlapping them.",
+        "13. Spread 1/3 of the ricotta, mushroom, spinach mixture across the zucchini.",
+        "14. Sprinkle with 1/4 of the mozzarella cheese.",
+        "15. Repeat the layers two more times.",
+        "16. Top with the tomato soup and sprinkle the last of the mozzarella across the lasagna.",
+        "17. Finish by topping the lasagna with the parmesan cheese; you will have a 2 cheese top.",
+        "18. Coat aluminum foil with non stick spray and cover the lasagna to keep the cheese from getting too dark.",
+        "19. Bake for 1 hour, then uncover and bake for 15 minutes more.",
+        "20. Let lasagna rest for 15 to 20 minutes prior to serving."
+      ],
+      "nutrition": {
+        "calories": 523,
+        "carbohydrates": 31,
+        "fiber": 4,
+        "sugar": 15,
+        "protein": 27,
+        "fat": 34,
+        "saturatedFat": 17,
+        "sodium": 903
+      },
+      "carbChoices": 2,
+      "tags": [
+        "gluten-free",
+        "high-protein",
+        "lunch",
+        "dinner",
+        "mediterranean",
+        "italian",
+        "european"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/649280-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/5CWM5FKL/lasagna-silvia",
+      "gdValidation": {
+        "isValid": false,
+        "score": 75,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Fiber too low: 4.42g (min: 5g)",
+            "High saturated fat: 16.87g",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add vegetables, whole grains, or beans",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add vegetables, whole grains, or beans",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:26.120Z",
+      "spoonacularId": "649280",
+      "createdAt": "2025-07-16T16:58:55.902Z",
+      "updatedAt": "2025-07-16T16:58:55.902Z"
     },
     {
       "id": "spoonacular-649293",
@@ -22366,7 +24756,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:37:44.449Z",
-      "spoonacularId": "649293"
+      "spoonacularId": "649293",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-649405",
@@ -22669,7 +25061,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:25.865Z",
-      "spoonacularId": "649405"
+      "spoonacularId": "649405",
+      "createdAt": "2025-07-16T16:58:55.926Z",
+      "updatedAt": "2025-07-16T16:58:55.926Z"
     },
     {
       "id": "spoonacular-649479",
@@ -22976,7 +25370,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:37:44.435Z",
-      "spoonacularId": "649886"
+      "spoonacularId": "649886",
+      "createdAt": "2025-07-16T16:58:55.902Z",
+      "updatedAt": "2025-07-16T16:58:55.902Z"
     },
     {
       "id": "spoonacular-649886",
@@ -23308,7 +25704,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:17:16.435Z",
-      "spoonacularId": "631754"
+      "spoonacularId": "631754",
+      "createdAt": "2025-07-16T16:58:55.886Z",
+      "updatedAt": "2025-07-16T16:58:55.886Z"
     },
     {
       "id": "spoonacular-649926",
@@ -23438,7 +25836,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:34.029Z",
-      "spoonacularId": "649926"
+      "spoonacularId": "649926",
+      "createdAt": "2025-07-16T16:58:55.888Z",
+      "updatedAt": "2025-07-16T16:58:55.888Z"
     },
     {
       "id": "spoonacular-649933",
@@ -24095,7 +26495,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:39:53.272Z",
-      "spoonacularId": "650014"
+      "spoonacularId": "650014",
+      "createdAt": "2025-07-16T16:58:55.900Z",
+      "updatedAt": "2025-07-16T16:58:55.900Z"
     },
     {
       "id": "spoonacular-1098350",
@@ -24979,7 +27381,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:44.013Z",
-      "spoonacularId": "650654"
+      "spoonacularId": "650654",
+      "createdAt": "2025-07-16T16:58:55.902Z",
+      "updatedAt": "2025-07-16T16:58:55.902Z"
     },
     {
       "id": "spoonacular-650654",
@@ -25483,7 +27887,9 @@
         ]
       },
       "importedAt": "2025-07-09T20:54:21.937Z",
-      "spoonacularId": "716311"
+      "spoonacularId": "716311",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-1098393",
@@ -25650,7 +28056,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:37:44.357Z",
-      "spoonacularId": "1098393"
+      "spoonacularId": "1098393",
+      "createdAt": "2025-07-16T16:58:55.885Z",
+      "updatedAt": "2025-07-16T16:58:55.885Z"
     },
     {
       "id": "spoonacular-1098393",
@@ -26030,7 +28438,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:37:44.362Z",
-      "spoonacularId": "651076"
+      "spoonacularId": "651076",
+      "createdAt": "2025-07-16T16:58:55.902Z",
+      "updatedAt": "2025-07-16T16:58:55.902Z"
     },
     {
       "id": "spoonacular-651911",
@@ -26192,7 +28602,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:57.032Z",
-      "spoonacularId": "651911"
+      "spoonacularId": "651911",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-651911",
@@ -26741,7 +29153,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:54.911Z",
-      "spoonacularId": "651977"
+      "spoonacularId": "651977",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-652359",
@@ -27083,6 +29497,146 @@
         "_seconds": 1751911234,
         "_nanoseconds": 316000000
       }
+    },
+    {
+      "id": "spoonacular-654125",
+      "title": "Osso Buco",
+      "description": "Osso Buco is a Mediterranean main course.  This dairy free recipe serves 6 and costs $7.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Veal Shanks",
+          "amount": 6,
+          "unit": "",
+          "original": "6 veal shanks"
+        },
+        {
+          "name": "Parsley",
+          "amount": 4,
+          "unit": "Tbsps",
+          "original": "4 tablespoons chopped parsley"
+        },
+        {
+          "name": "Rind Lemon",
+          "amount": 1,
+          "unit": "of",
+          "original": "Grated rind of 1/2 lemon"
+        },
+        {
+          "name": "Flour",
+          "amount": 6,
+          "unit": "servings",
+          "original": "Flour, salt"
+        },
+        {
+          "name": "Bell Pepper",
+          "amount": 6,
+          "unit": "servings",
+          "original": "pepper for dredging"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 4,
+          "unit": "Tbsps",
+          "original": "4 tablespoons olive oil"
+        },
+        {
+          "name": "Garlic",
+          "amount": 3,
+          "unit": "cloves",
+          "original": "3 cloves garlic, finely chopped"
+        },
+        {
+          "name": "Onion",
+          "amount": 1,
+          "unit": "",
+          "original": "1 onion, finely chopped"
+        },
+        {
+          "name": "Chicken Stock",
+          "amount": 240,
+          "unit": "ml",
+          "original": "1 cup chicken stock, boiling"
+        },
+        {
+          "name": "Wine",
+          "amount": 240,
+          "unit": "ml",
+          "original": "1 cup dry white wine"
+        },
+        {
+          "name": "Tomato Sauce",
+          "amount": 4,
+          "unit": "Tbsps",
+          "original": "4 tablespoons tomato sauce"
+        }
+      ],
+      "instructions": [
+        "1. Dredge veal in seasoned flour and saute in olive oil until lightly browned on all sides.",
+        "2. Add garlic and onion.",
+        "3. Pour boiling stock, white wine and tomato sauce over meat. Cover pan and simmer 1 1/2 hours or until meat is tender.",
+        "4. Add parsley and grated lemon rind.",
+        "5. Serve over saffron rice."
+      ],
+      "nutrition": {
+        "calories": 445,
+        "carbohydrates": 16,
+        "fiber": 2,
+        "sugar": 5,
+        "protein": 46,
+        "fat": 18,
+        "saturatedFat": 4,
+        "sodium": 302
+      },
+      "carbChoices": 1,
+      "tags": [
+        "dairy-free",
+        "high-protein",
+        "low-carb",
+        "lunch",
+        "dinner",
+        "mediterranean",
+        "italian",
+        "european",
+        "healthy"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/654125-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/8J6ZKVBH/osso-buco",
+      "gdValidation": {
+        "isValid": false,
+        "score": 45,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 15.6g (min: 30g)",
+            "Fiber too low: 2.37g (min: 5g)",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:26.115Z",
+      "spoonacularId": "654125",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
     },
     {
       "id": "spoonacular-654177",
@@ -27546,7 +30100,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:39:34.255Z",
-      "spoonacularId": "654409"
+      "spoonacularId": "654409",
+      "createdAt": "2025-07-16T16:58:55.886Z",
+      "updatedAt": "2025-07-16T16:58:55.886Z"
     },
     {
       "id": "spoonacular-654475",
@@ -27689,7 +30245,127 @@
         ]
       },
       "importedAt": "2025-07-11T17:37:25.528Z",
-      "spoonacularId": "654475"
+      "spoonacularId": "654475",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
+    },
+    {
+      "id": "spoonacular-654523",
+      "title": "Paneer & Fig Pizza",
+      "description": "Paneer & Fig Pizzan is a Mediterranean main course.  One portion of this dish contains about 16g of protein, 23g of fat, and a total of 363 calories.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Basil Leaves",
+          "amount": 8,
+          "unit": "",
+          "original": "8 to 10 basil leaves"
+        },
+        {
+          "name": "Figs",
+          "amount": 8,
+          "unit": "",
+          "original": "8 to 10 very ripe figs, trimmed and thinly sliced"
+        },
+        {
+          "name": "Ground Pepper",
+          "amount": 0.125,
+          "unit": "tsps",
+          "original": "1/8 teaspoon ground white pepper"
+        },
+        {
+          "name": "Paneer",
+          "amount": 225,
+          "unit": "g",
+          "original": "1 cup crumbled or grated paneer"
+        },
+        {
+          "name": "Pizza Dough",
+          "amount": 12,
+          "unit": "inches",
+          "original": "12 inches packaged pizza dough or homemade pizza dough"
+        },
+        {
+          "name": "Ricotta Cheese",
+          "amount": 248,
+          "unit": "g",
+          "original": "1 cup ricotta cheese"
+        },
+        {
+          "name": "Salt",
+          "amount": 4,
+          "unit": "servings",
+          "original": "Salt to taste"
+        }
+      ],
+      "instructions": [
+        "1. Preheat the oven to 35",
+        "2. Spray the dough with nonstick cooking spray.In a bowl, combine the paneer and ricotta and mix well.",
+        "3. Spread the cheese mixture evenly over the crust. Top with the figs, and sprinkle with salt and pepper.",
+        "4. Bake according to the directions given with the dough, usually about 10-12 minutes. The cheese will brown a little, but it is not a melting cheese so don't expect it to bubble.",
+        "5. Serve topped with fresh basil leaves. If your figs are really ripe, this will taste like a dessert.For a savory version, combine the paneer with some minced cilantro, diced red onions and diced bell peppers."
+      ],
+      "nutrition": {
+        "calories": 364,
+        "carbohydrates": 26,
+        "fiber": 3,
+        "sugar": 17,
+        "protein": 16,
+        "fat": 23,
+        "saturatedFat": 14,
+        "sodium": 316
+      },
+      "carbChoices": 2,
+      "tags": [
+        "lunch",
+        "dinner",
+        "mediterranean",
+        "italian",
+        "european"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/654523-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/4FXMWQVY/paneer-fig-pizza",
+      "gdValidation": {
+        "isValid": false,
+        "score": 30,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 25.91g (min: 30g)",
+            "Fiber too low: 3.04g (min: 5g)",
+            "High sugar content: 16.94g (65% of carbs)",
+            "High saturated fat: 13.7g",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Choose options with less added sugar",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Choose options with less added sugar",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:28.759Z",
+      "spoonacularId": "654523",
+      "createdAt": "2025-07-16T16:58:55.888Z",
+      "updatedAt": "2025-07-16T16:58:55.888Z"
     },
     {
       "id": "spoonacular-654532",
@@ -28031,7 +30707,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:21.495Z",
-      "spoonacularId": "654663"
+      "spoonacularId": "654663",
+      "createdAt": "2025-07-16T16:58:55.889Z",
+      "updatedAt": "2025-07-16T16:58:55.889Z"
     },
     {
       "id": "spoonacular-654879",
@@ -28154,7 +30832,146 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:13.126Z",
-      "spoonacularId": "654879"
+      "spoonacularId": "654879",
+      "createdAt": "2025-07-16T16:58:55.886Z",
+      "updatedAt": "2025-07-16T16:58:55.886Z"
+    },
+    {
+      "id": "spoonacular-654967",
+      "title": "Pastel Caprese",
+      "description": "If you want to add more lacto ovo vegetarian recipes to your recipe box, Pastel Caprese might be a recipe you should try.  One portion of this dish contains approximately 12g of protein, 20g of fat, and a total of 375 calories.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Beef Tomato",
+          "amount": 6,
+          "unit": "servings",
+          "original": "Beef tomato"
+        },
+        {
+          "name": "Egg",
+          "amount": 1,
+          "unit": "",
+          "original": "1 egg, lightly beaten"
+        },
+        {
+          "name": "Mozzarella",
+          "amount": 6,
+          "unit": "servings",
+          "original": "Fresh mozzarella"
+        },
+        {
+          "name": "Oil",
+          "amount": 6,
+          "unit": "servings",
+          "original": "Oil for frying"
+        },
+        {
+          "name": "Pesto",
+          "amount": 6,
+          "unit": "servings",
+          "original": "Pesto"
+        },
+        {
+          "name": "Flour",
+          "amount": 250,
+          "unit": "g",
+          "original": "2 cups of plain flour"
+        },
+        {
+          "name": "Salt",
+          "amount": 0.25,
+          "unit": "tsps",
+          "original": "1/4 teaspoon salt"
+        },
+        {
+          "name": "Vegetable Oil",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tbsp vegetable oil"
+        },
+        {
+          "name": "Vodka",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tbsp vodka"
+        },
+        {
+          "name": "Warm Water",
+          "amount": 118.294,
+          "unit": "ml",
+          "original": "½ cup warm water"
+        },
+        {
+          "name": "White Wine Vinegar",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1tbsp white wine vinegar"
+        }
+      ],
+      "instructions": [
+        "1. Mix all ingredients in a bowl until it forms an elastic dough",
+        "2. On a floured surface knead the dough hard for a few minutes then let it cool in the fridge",
+        "3. Stretch the dough with a rolling pin and cut into 10 squares (around 5x5)",
+        "4. Place the mozzarella pieces on with a teaspoon of pesto and topped off with a slice of tomato and brush the edges with the egg. Cover with another square of dough and press the sides with a fork to join the two together.",
+        "5. Fry in hot oil until golden in colour"
+      ],
+      "nutrition": {
+        "calories": 375,
+        "carbohydrates": 34,
+        "fiber": 1,
+        "sugar": 1,
+        "protein": 12,
+        "fat": 20,
+        "saturatedFat": 6,
+        "sodium": 425
+      },
+      "carbChoices": 2,
+      "tags": [
+        "vegetarian",
+        "side-dish",
+        "lunch",
+        "dinner",
+        "mediterranean",
+        "italian",
+        "european"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/654967-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/TLTFLF2H/pastel-caprese",
+      "gdValidation": {
+        "isValid": false,
+        "score": 50,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": false,
+          "adequateFiber": false,
+          "warnings": [
+            "Protein too low: 12.17g (min: 15g)",
+            "Fiber too low: 1.38g (min: 5g)",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add lean meat, eggs, Greek yogurt, or legumes",
+            "Add vegetables, whole grains, or beans",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add lean meat, eggs, Greek yogurt, or legumes",
+          "Add vegetables, whole grains, or beans",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:26.089Z",
+      "spoonacularId": "654967",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-655771",
@@ -28277,7 +31094,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:01.841Z",
-      "spoonacularId": "655771"
+      "spoonacularId": "655771",
+      "createdAt": "2025-07-16T16:58:55.885Z",
+      "updatedAt": "2025-07-16T16:58:55.885Z"
     },
     {
       "id": "spoonacular-655890",
@@ -28406,7 +31225,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:57:33.390Z",
-      "spoonacularId": "655890"
+      "spoonacularId": "655890",
+      "createdAt": "2025-07-16T16:58:55.885Z",
+      "updatedAt": "2025-07-16T16:58:55.885Z"
     },
     {
       "id": "spoonacular-656972",
@@ -28936,6 +31757,144 @@
       }
     },
     {
+      "id": "spoonacular-657379",
+      "title": "Pumpkin Soup",
+      "description": "Pumpkin Soup might be just the main course you are searching for.  This gluten free and lacto ovo vegetarian recipe serves 4 and costs $2.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Pumpkin Pulp",
+          "amount": 464,
+          "unit": "g",
+          "original": "4 cups diced peeled pumpkin pulp"
+        },
+        {
+          "name": "Milk",
+          "amount": 4,
+          "unit": "servings",
+          "original": "Boiling milk"
+        },
+        {
+          "name": "Pepper",
+          "amount": 4,
+          "unit": "servings",
+          "original": "Pepper freshly ground to taste"
+        },
+        {
+          "name": "Carrots",
+          "amount": 3,
+          "unit": "",
+          "original": "3 carrots, diced"
+        },
+        {
+          "name": "Celery",
+          "amount": 3,
+          "unit": "ribs",
+          "original": "3 ribs celery, diced"
+        },
+        {
+          "name": "Onion",
+          "amount": 1,
+          "unit": "",
+          "original": "1 onion, finely chopped"
+        },
+        {
+          "name": "Bay Leaf",
+          "amount": 1,
+          "unit": "",
+          "original": "1 bay leaf"
+        },
+        {
+          "name": "Chicken Broth",
+          "amount": 1.41,
+          "unit": "L",
+          "original": "6 cups chicken broth"
+        },
+        {
+          "name": "Heavy Cream",
+          "amount": 238,
+          "unit": "ml",
+          "original": "1 cup heavy cream"
+        },
+        {
+          "name": "Nutmeg",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon nutmeg"
+        },
+        {
+          "name": "Sugar",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon sugar"
+        }
+      ],
+      "instructions": [
+        "1. Place pumpkin, carrots, celery and onion in large kettle.",
+        "2. Add the bay leaf and broth. Bring to a boil. Cover and simmer about 1 hour or until pumpkin is tender. Put mixture in blender and return to the kettle. Stir in the remaining ingredients except the milk. Adjust the consistency with the milk."
+      ],
+      "nutrition": {
+        "calories": 447,
+        "carbohydrates": 33,
+        "fiber": 3,
+        "sugar": 25,
+        "protein": 14,
+        "fat": 30,
+        "saturatedFat": 18,
+        "sodium": 1474
+      },
+      "carbChoices": 2,
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/657379-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/W8LCKK5N/pumpkin-soup",
+      "gdValidation": {
+        "isValid": false,
+        "score": 35,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": false,
+          "adequateFiber": false,
+          "warnings": [
+            "Protein too low: 14.07g (min: 15g)",
+            "Fiber too low: 2.89g (min: 5g)",
+            "High sugar content: 24.99g (75% of carbs)",
+            "High saturated fat: 18.44g",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add lean meat, eggs, Greek yogurt, or legumes",
+            "Add vegetables, whole grains, or beans",
+            "Choose options with less added sugar",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add lean meat, eggs, Greek yogurt, or legumes",
+          "Add vegetables, whole grains, or beans",
+          "Choose options with less added sugar",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:23.500Z",
+      "spoonacularId": "657379",
+      "createdAt": "2025-07-16T16:58:55.902Z",
+      "updatedAt": "2025-07-16T16:58:55.902Z"
+    },
+    {
       "id": "spoonacular-1426885",
       "title": "Quick and Easy No-Boil Lasagna",
       "description": "Quick and Easy No-Boil Lasagna requires around 1 hour from start to finish.  This main course has 690 calories, 44g of protein, and 38g of fat per serving.",
@@ -29064,7 +32023,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:23.276Z",
-      "spoonacularId": "1426885"
+      "spoonacularId": "1426885",
+      "createdAt": "2025-07-16T16:58:55.926Z",
+      "updatedAt": "2025-07-16T16:58:55.926Z"
     },
     {
       "id": "spoonacular-657556",
@@ -29368,7 +32329,9 @@
         ]
       },
       "importedAt": "2025-07-09T20:54:16.606Z",
-      "spoonacularId": "716004"
+      "spoonacularId": "716004",
+      "createdAt": "2025-07-16T16:58:55.901Z",
+      "updatedAt": "2025-07-16T16:58:55.901Z"
     },
     {
       "id": "spoonacular-782601",
@@ -29555,7 +32518,9 @@
         ]
       },
       "importedAt": "2025-07-09T02:10:39.155Z",
-      "spoonacularId": "782601"
+      "spoonacularId": "782601",
+      "createdAt": "2025-07-16T16:58:55.885Z",
+      "updatedAt": "2025-07-16T16:58:55.885Z"
     },
     {
       "id": "spoonacular-782601",
@@ -29922,7 +32887,9 @@
         ]
       },
       "importedAt": "2025-07-09T02:10:39.053Z",
-      "spoonacularId": "715415"
+      "spoonacularId": "715415",
+      "createdAt": "2025-07-16T16:58:55.901Z",
+      "updatedAt": "2025-07-16T16:58:55.901Z"
     },
     {
       "id": "spoonacular-715415",
@@ -30261,7 +33228,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:15.788Z",
-      "spoonacularId": "658270"
+      "spoonacularId": "658270",
+      "createdAt": "2025-07-16T16:58:55.890Z",
+      "updatedAt": "2025-07-16T16:58:55.890Z"
     },
     {
       "id": "spoonacular-658295",
@@ -30378,7 +33347,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:39:34.099Z",
-      "spoonacularId": "658295"
+      "spoonacularId": "658295",
+      "createdAt": "2025-07-16T16:58:55.900Z",
+      "updatedAt": "2025-07-16T16:58:55.900Z"
     },
     {
       "id": "spoonacular-658453",
@@ -30523,7 +33494,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:39:53.215Z",
-      "spoonacularId": "658453"
+      "spoonacularId": "658453",
+      "createdAt": "2025-07-16T16:58:55.887Z",
+      "updatedAt": "2025-07-16T16:58:55.887Z"
     },
     {
       "id": "spoonacular-658483",
@@ -30627,7 +33600,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:37:15.044Z",
-      "spoonacularId": "658483"
+      "spoonacularId": "658483",
+      "createdAt": "2025-07-16T16:58:55.901Z",
+      "updatedAt": "2025-07-16T16:58:55.901Z"
     },
     {
       "id": "spoonacular-658541",
@@ -30748,7 +33723,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:33.865Z",
-      "spoonacularId": "658541"
+      "spoonacularId": "658541",
+      "createdAt": "2025-07-16T16:58:55.900Z",
+      "updatedAt": "2025-07-16T16:58:55.900Z"
     },
     {
       "id": "spoonacular-658546",
@@ -31209,7 +34186,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:24.708Z",
-      "spoonacularId": "658661"
+      "spoonacularId": "658661",
+      "createdAt": "2025-07-16T16:58:55.888Z",
+      "updatedAt": "2025-07-16T16:58:55.888Z"
     },
     {
       "id": "spoonacular-659042",
@@ -31574,7 +34553,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:39:44.064Z",
-      "spoonacularId": "659058"
+      "spoonacularId": "659058",
+      "createdAt": "2025-07-16T16:58:55.905Z",
+      "updatedAt": "2025-07-16T16:58:55.905Z"
     },
     {
       "id": "spoonacular-659056",
@@ -31694,7 +34675,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:37:14.941Z",
-      "spoonacularId": "659056"
+      "spoonacularId": "659056",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
     },
     {
       "id": "spoonacular-659081",
@@ -31955,7 +34938,9 @@
         ]
       },
       "importedAt": "2025-07-09T20:54:24.588Z",
-      "spoonacularId": "659135"
+      "spoonacularId": "659135",
+      "createdAt": "2025-07-16T16:58:55.905Z",
+      "updatedAt": "2025-07-16T16:58:55.905Z"
     },
     {
       "id": "spoonacular-659834",
@@ -32122,7 +35107,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:06.401Z",
-      "spoonacularId": "659834"
+      "spoonacularId": "659834",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-1044252",
@@ -32209,7 +35196,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:57:33.266Z",
-      "spoonacularId": "1044252"
+      "spoonacularId": "1044252",
+      "createdAt": "2025-07-16T16:58:55.902Z",
+      "updatedAt": "2025-07-16T16:58:55.902Z"
     },
     {
       "id": "spoonacular-659907",
@@ -32557,7 +35546,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:15.576Z",
-      "spoonacularId": "659909"
+      "spoonacularId": "659909",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
     },
     {
       "id": "spoonacular-659909",
@@ -33358,7 +36349,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:39:24.621Z",
-      "spoonacularId": "660257"
+      "spoonacularId": "660257",
+      "createdAt": "2025-07-16T16:58:55.888Z",
+      "updatedAt": "2025-07-16T16:58:55.888Z"
     },
     {
       "id": "spoonacular-660273",
@@ -33499,7 +36492,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:57:23.418Z",
-      "spoonacularId": "660273"
+      "spoonacularId": "660273",
+      "createdAt": "2025-07-16T16:58:55.905Z",
+      "updatedAt": "2025-07-16T16:58:55.905Z"
     },
     {
       "id": "spoonacular-660275",
@@ -33624,7 +36619,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:17:19.011Z",
-      "spoonacularId": "660275"
+      "spoonacularId": "660275",
+      "createdAt": "2025-07-16T16:58:55.902Z",
+      "updatedAt": "2025-07-16T16:58:55.902Z"
     },
     {
       "id": "spoonacular-715446",
@@ -33746,7 +36743,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:57:23.470Z",
-      "spoonacularId": "715446"
+      "spoonacularId": "715446",
+      "createdAt": "2025-07-16T16:58:55.902Z",
+      "updatedAt": "2025-07-16T16:58:55.902Z"
     },
     {
       "id": "spoonacular-715446",
@@ -34505,7 +37504,9 @@
         ]
       },
       "importedAt": "2025-07-09T02:10:41.689Z",
-      "spoonacularId": "660306"
+      "spoonacularId": "660306",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-660493",
@@ -34657,7 +37658,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:13.047Z",
-      "spoonacularId": "660493"
+      "spoonacularId": "660493",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
     },
     {
       "id": "spoonacular-660490",
@@ -34779,7 +37782,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:15.640Z",
-      "spoonacularId": "660490"
+      "spoonacularId": "660490",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
     },
     {
       "id": "spoonacular-660926",
@@ -34897,7 +37902,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:24.745Z",
-      "spoonacularId": "660926"
+      "spoonacularId": "660926",
+      "createdAt": "2025-07-16T16:58:55.889Z",
+      "updatedAt": "2025-07-16T16:58:55.889Z"
     },
     {
       "id": "spoonacular-661117",
@@ -35021,7 +38028,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:38:04.158Z",
-      "spoonacularId": "661117"
+      "spoonacularId": "661117",
+      "createdAt": "2025-07-16T16:58:55.902Z",
+      "updatedAt": "2025-07-16T16:58:55.902Z"
     },
     {
       "id": "spoonacular-661224",
@@ -35317,7 +38326,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:06.235Z",
-      "spoonacularId": "661259"
+      "spoonacularId": "661259",
+      "createdAt": "2025-07-16T16:58:55.885Z",
+      "updatedAt": "2025-07-16T16:58:55.885Z"
     },
     {
       "id": "spoonacular-661340",
@@ -35460,7 +38471,321 @@
         ]
       },
       "importedAt": "2025-07-09T20:54:24.597Z",
-      "spoonacularId": "661340"
+      "spoonacularId": "661340",
+      "createdAt": "2025-07-16T16:58:55.889Z",
+      "updatedAt": "2025-07-16T16:58:55.889Z"
+    },
+    {
+      "id": "spoonacular-661392",
+      "title": "Split Pea Soup With Honey-Baked Ham, Cabbage and Roasted Red Pepper",
+      "description": "Split Pea Soup With Honey-Baked Ham, Cabbage and Roasted Red Pepper might be just the main course you are searching for.  This recipe serves 8.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "Peas",
+          "amount": 453.592,
+          "unit": "g",
+          "original": "1 pound split peas, rinsed (do not soak)"
+        },
+        {
+          "name": "Celery Stalks",
+          "amount": 3,
+          "unit": "",
+          "original": "3 celery stalks, finely diced"
+        },
+        {
+          "name": "Carrots",
+          "amount": 2,
+          "unit": "large",
+          "original": "2 large carrots, finely diced"
+        },
+        {
+          "name": "Onion",
+          "amount": 1,
+          "unit": "",
+          "original": "1 yellow onion, finely diced"
+        },
+        {
+          "name": "Garlic",
+          "amount": 6,
+          "unit": "cloves",
+          "original": "6 cloves garlic, minced"
+        },
+        {
+          "name": "Bell Pepper",
+          "amount": 1,
+          "unit": "",
+          "original": "1 red bell pepper"
+        },
+        {
+          "name": "Fennel Bulb And Fronds",
+          "amount": 65.25,
+          "unit": "g",
+          "original": "3/4 cup fennel bulb and fronds, finely diced"
+        },
+        {
+          "name": "Cabbage",
+          "amount": 0.5,
+          "unit": "head",
+          "original": "1/2 head cabbage, finely diced"
+        },
+        {
+          "name": "Ham",
+          "amount": 169.5,
+          "unit": "g",
+          "original": "1 1/2 cups cooked ham, diced into ½″ chunks (save the ham hock and bone)"
+        },
+        {
+          "name": "Monterey Jack Cheese",
+          "amount": 56.5,
+          "unit": "g",
+          "original": "1/2 cup Monterey Jack cheese, shredded"
+        },
+        {
+          "name": "Chicken Broth",
+          "amount": 1.88,
+          "unit": "L",
+          "original": "8 cups vegetable or chicken broth"
+        },
+        {
+          "name": "Butter",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons unsalted butter"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons olive oil"
+        },
+        {
+          "name": "Ground Cayenne Pepper",
+          "amount": 0.25,
+          "unit": "tsps",
+          "original": "1/4 teaspoon ground cayenne pepper, or to taste"
+        },
+        {
+          "name": "Salt",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon salt, or to taste"
+        },
+        {
+          "name": "Pepper",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons black pepper, or to taste"
+        }
+      ],
+      "instructions": [
+        "1. Roast the red pepper in the oven under the broiler on each side until pepper begins to blacken, about 3-4 minutes. (Be sure to watch closely to ensure it doesnt get too burnt.)",
+        "2. Remove from oven, place in a bowl and cover with plastic wrap. Once cool, remove skin, seeds and dice flesh into small pieces.",
+        "3. Heat oil and butter over medium heat in a large pot. Cook carrots, onions, and celery for about 4 minutes, then add in cabbage, fennel, bell pepper, and garlic. Cook vegetables for an additional 6 minutes, or until they begin to become soft, mixing occasionally.",
+        "4. Stir in ham meat, bone and peas and cook for an additional 2 minutes. Then pour enough broth to cover the mixture a few inches. Bring to a light simmer, cover pot and reduce heat to low.",
+        "5. Cook for 50-55 minutes, or until peas begin to fall apart.",
+        "6. Remove from heat. Discard bones and any extra fat.",
+        "7. Mix in cheese, then stir in cayenne, salt and pepper to taste."
+      ],
+      "nutrition": {
+        "calories": 360,
+        "carbohydrates": 44,
+        "fiber": 17,
+        "sugar": 10,
+        "protein": 23,
+        "fat": 11,
+        "saturatedFat": 4,
+        "sodium": 2070
+      },
+      "carbChoices": 3,
+      "tags": [
+        "gluten-free",
+        "high-protein",
+        "high-fiber",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/661392-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/DNLG78DS/split-pea-soup-with-honey-baked-ham-cabbage-and-roasted-red-pepper",
+      "gdValidation": {
+        "isValid": true,
+        "score": 100,
+        "details": {
+          "isValid": true,
+          "carbsInRange": true,
+          "adequateProtein": true,
+          "adequateFiber": true,
+          "warnings": [
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:26.079Z",
+      "spoonacularId": "661392",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
+    },
+    {
+      "id": "spoonacular-661395",
+      "title": "Split-Pea Soup",
+      "description": "If you have around 45 minutes to spend in the kitchen, Split-Pea Soup might be a tremendous gluten free recipe to try.  This main course has 724 calories, 48g of protein, and 35g of fat per serving.",
+      "category": "dinner",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Bay Leaves",
+          "amount": 3,
+          "unit": "",
+          "original": "3 bay leaves"
+        },
+        {
+          "name": "Pepper",
+          "amount": 6,
+          "unit": "servings",
+          "original": "Freshly-ground black pepper to taste"
+        },
+        {
+          "name": "Butter",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tbsp. butter"
+        },
+        {
+          "name": "Carrots",
+          "amount": 2,
+          "unit": "",
+          "original": "2 carrots peeled, and"
+        },
+        {
+          "name": "Celery Stalk",
+          "amount": 1,
+          "unit": "",
+          "original": "1 celery stalk chopped"
+        },
+        {
+          "name": "Garlic Cloves",
+          "amount": 3,
+          "unit": "",
+          "original": "3 garlic cloves crushed"
+        },
+        {
+          "name": "Chicken Stock",
+          "amount": 1.42,
+          "unit": "L",
+          "original": "1 1/2 quarts low-sodium chicken stock"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon olive oil"
+        },
+        {
+          "name": "Onions",
+          "amount": 2,
+          "unit": "medium",
+          "original": "2 mediums onions finely chopped"
+        },
+        {
+          "name": "Salt",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon salt"
+        },
+        {
+          "name": "Ham Hock",
+          "amount": 453.592,
+          "unit": "g",
+          "original": "1 smoked ham hock - (about 1 lb)"
+        },
+        {
+          "name": "Peas",
+          "amount": 453.592,
+          "unit": "g",
+          "original": "1 pound dried split peas"
+        },
+        {
+          "name": "Bacon",
+          "amount": 4,
+          "unit": "slice",
+          "original": "4 slices thick-cut smoked bacon"
+        }
+      ],
+      "instructions": [
+        "1. * Note: Although this is an easy, straightforward recipe, be sure to use the ham hock or ham bone. I have tested this soup without it and find that without the bone and the meat, it is not really worth making. If you cannot find a smoked ham hock (usually found in the freezer section) and you do not have any cooked ham available, use bone-in smoked ham. (If you want a really meaty soup, use 2 pounds instead of 1.)Cook the bacon in 6-quart stock pot or Dutch oven and drain on paper towels.",
+        "2. Remove all but 1 tablespoon of bacon fat and then add the olive oil and butter. Over medium heat, cook until foam subsides and then add the onion and cook over medium-low heat, stirring frequently for 15 to 20 minutes until onions are dark brown and have caramelized.",
+        "3. Add the garlic, celery and carrots and cook, stirring frequently, for 5 minutes or until carrots have softened.",
+        "4. Add the remaining ingredients except the salt and pepper and bring to a simmer over high heat. Reduce heat to low, cover, and simmer gently for about 1 1/2 hours, until peas fall apart and soup is thick.",
+        "5. Remove and discard the bay leaf.",
+        "6. Remove the ham bones, trim off any meat, and return the meat to the pot, discarding the bones.",
+        "7. Whisk soup until smooth. Taste and adjust seasonings. (The ham is salty and therefore it is unlikely you will need to add salt.) Crumble bacon and sprinkle on individual servings.This recipe yields 6 to 8 servings."
+      ],
+      "nutrition": {
+        "calories": 724,
+        "carbohydrates": 55,
+        "fiber": 21,
+        "sugar": 9,
+        "protein": 48,
+        "fat": 35,
+        "saturatedFat": 13,
+        "sodium": 865
+      },
+      "carbChoices": 4,
+      "tags": [
+        "gluten-free",
+        "high-protein",
+        "high-fiber",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/661395-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/JR68TQXN/split-pea-soup",
+      "gdValidation": {
+        "isValid": false,
+        "score": 60,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": true,
+          "warnings": [
+            "Carbs too high: 54.78g (max: 45g)",
+            "High saturated fat: 12.94g",
+            "No whole grains detected",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Reduce portion size or remove some carb sources",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Reduce portion size or remove some carb sources",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:23.525Z",
+      "spoonacularId": "661395",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
     },
     {
       "id": "spoonacular-661460",
@@ -35765,7 +39090,9 @@
         ]
       },
       "importedAt": "2025-07-09T20:54:24.559Z",
-      "spoonacularId": "716361"
+      "spoonacularId": "716361",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-662087",
@@ -35895,7 +39222,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:37:14.849Z",
-      "spoonacularId": "662087"
+      "spoonacularId": "662087",
+      "createdAt": "2025-07-16T16:58:55.927Z",
+      "updatedAt": "2025-07-16T16:58:55.927Z"
     },
     {
       "id": "spoonacular-662291",
@@ -36437,7 +39766,9 @@
         ]
       },
       "importedAt": "2025-07-09T02:10:44.090Z",
-      "spoonacularId": "662670"
+      "spoonacularId": "662670",
+      "createdAt": "2025-07-16T16:58:55.901Z",
+      "updatedAt": "2025-07-16T16:58:55.901Z"
     },
     {
       "id": "spoonacular-663033",
@@ -36596,7 +39927,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:57:33.318Z",
-      "spoonacularId": "663033"
+      "spoonacularId": "663033",
+      "createdAt": "2025-07-16T16:58:55.887Z",
+      "updatedAt": "2025-07-16T16:58:55.887Z"
     },
     {
       "id": "spoonacular-663074",
@@ -36752,7 +40085,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:39.376Z",
-      "spoonacularId": "663074"
+      "spoonacularId": "663074",
+      "createdAt": "2025-07-16T16:58:55.886Z",
+      "updatedAt": "2025-07-16T16:58:55.886Z"
     },
     {
       "id": "spoonacular-663144",
@@ -37052,7 +40387,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:37:35.449Z",
-      "spoonacularId": "663149"
+      "spoonacularId": "663149",
+      "createdAt": "2025-07-16T16:58:55.885Z",
+      "updatedAt": "2025-07-16T16:58:55.885Z"
     },
     {
       "id": "spoonacular-663227",
@@ -37437,7 +40774,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:30.769Z",
-      "spoonacularId": "663252"
+      "spoonacularId": "663252",
+      "createdAt": "2025-07-16T16:58:55.905Z",
+      "updatedAt": "2025-07-16T16:58:55.905Z"
     },
     {
       "id": "spoonacular-1052360",
@@ -37572,7 +40911,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:01.743Z",
-      "spoonacularId": "1052360"
+      "spoonacularId": "1052360",
+      "createdAt": "2025-07-16T16:58:55.889Z",
+      "updatedAt": "2025-07-16T16:58:55.889Z"
     },
     {
       "id": "spoonacular-663357",
@@ -37721,7 +41062,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:17:19.101Z",
-      "spoonacularId": "663357"
+      "spoonacularId": "663357",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
     },
     {
       "id": "spoonacular-663535",
@@ -37928,7 +41271,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:39.537Z",
-      "spoonacularId": "663535"
+      "spoonacularId": "663535",
+      "createdAt": "2025-07-16T16:58:55.902Z",
+      "updatedAt": "2025-07-16T16:58:55.902Z"
     },
     {
       "id": "spoonacular-663545",
@@ -38082,7 +41427,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:48.523Z",
-      "spoonacularId": "663545"
+      "spoonacularId": "663545",
+      "createdAt": "2025-07-16T16:58:55.901Z",
+      "updatedAt": "2025-07-16T16:58:55.901Z"
     },
     {
       "id": "spoonacular-663559",
@@ -38210,7 +41557,9 @@
         ]
       },
       "importedAt": "2025-07-09T02:10:44.039Z",
-      "spoonacularId": "663559"
+      "spoonacularId": "663559",
+      "createdAt": "2025-07-16T16:58:55.905Z",
+      "updatedAt": "2025-07-16T16:58:55.905Z"
     },
     {
       "id": "spoonacular-663559",
@@ -38520,7 +41869,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:39:53.235Z",
-      "spoonacularId": "663822"
+      "spoonacularId": "663822",
+      "createdAt": "2025-07-16T16:58:55.890Z",
+      "updatedAt": "2025-07-16T16:58:55.890Z"
     },
     {
       "id": "spoonacular-664025",
@@ -38720,7 +42071,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:44.279Z",
-      "spoonacularId": "664025"
+      "spoonacularId": "664025",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-1095992",
@@ -39032,7 +42385,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:15:36.637Z",
-      "spoonacularId": "664090"
+      "spoonacularId": "664090",
+      "createdAt": "2025-07-16T16:58:55.888Z",
+      "updatedAt": "2025-07-16T16:58:55.888Z"
     },
     {
       "id": "spoonacular-664147",
@@ -39147,7 +42502,9 @@
         ]
       },
       "importedAt": "2025-07-09T02:10:41.641Z",
-      "spoonacularId": "664147"
+      "spoonacularId": "664147",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
     },
     {
       "id": "spoonacular-664726",
@@ -39421,7 +42778,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:23.350Z",
-      "spoonacularId": "665344"
+      "spoonacularId": "665344",
+      "createdAt": "2025-07-16T16:58:55.900Z",
+      "updatedAt": "2025-07-16T16:58:55.900Z"
     },
     {
       "id": "spoonacular-665550",
@@ -39537,7 +42896,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:01.677Z",
-      "spoonacularId": "665550"
+      "spoonacularId": "665550",
+      "createdAt": "2025-07-16T16:58:55.889Z",
+      "updatedAt": "2025-07-16T16:58:55.889Z"
     },
     {
       "id": "spoonacular-715957",
@@ -39675,7 +43036,9 @@
         ]
       },
       "importedAt": "2025-07-09T02:10:46.416Z",
-      "spoonacularId": "715957"
+      "spoonacularId": "715957",
+      "createdAt": "2025-07-16T16:58:55.890Z",
+      "updatedAt": "2025-07-16T16:58:55.890Z"
     },
     {
       "id": "spoonacular-665781",
@@ -39795,7 +43158,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:36.658Z",
-      "spoonacularId": "665781"
+      "spoonacularId": "665781",
+      "createdAt": "2025-07-16T16:58:55.887Z",
+      "updatedAt": "2025-07-16T16:58:55.887Z"
     }
   ]
 }

@@ -1,6 +1,8 @@
 {
+  "exportDate": "2025-07-16T16:58:55.941Z",
+  "source": "Firebase Production Database",
   "category": "breakfast",
-  "recipeCount": 92,
+  "recipeCount": 103,
   "recipes": [
     {
       "id": "spoonacular-157089",
@@ -134,6 +136,128 @@
         "_seconds": 1751911204,
         "_nanoseconds": 902000000
       }
+    },
+    {
+      "id": "spoonacular-632577",
+      "title": "Apple Pie Pancakes",
+      "description": "If you want to add more dairy free recipes to your repertoire, Apple Pie Pancakes might be a recipe you should try.  This recipe serves 4.",
+      "category": "breakfast",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Tsp All Spice",
+          "amount": 1,
+          "unit": "",
+          "original": "1 TSP All Spice"
+        },
+        {
+          "name": "Tsp Brown Sugar",
+          "amount": 2,
+          "unit": "",
+          "original": "2 TSP Brown Sugar"
+        },
+        {
+          "name": "Cinnamon",
+          "amount": 0.75,
+          "unit": "tsps",
+          "original": "3/4 teaspoon cinnamon"
+        },
+        {
+          "name": "Tsp Cinnamon",
+          "amount": 2,
+          "unit": "",
+          "original": "2 TSP Cinnamon"
+        },
+        {
+          "name": "Granny Smith Apples",
+          "amount": 2,
+          "unit": "",
+          "original": "2 granny smith apples"
+        },
+        {
+          "name": "Pancake Mix",
+          "amount": 10,
+          "unit": "",
+          "original": "Pancake Mix ( Make a 10-12 pancake batch)"
+        },
+        {
+          "name": "Tsp Vanilla Extract",
+          "amount": 1,
+          "unit": "",
+          "original": "1 TSP Vanilla Extract"
+        },
+        {
+          "name": "Whipped Cream",
+          "amount": 4,
+          "unit": "servings",
+          "original": "Whipped Cream"
+        }
+      ],
+      "instructions": [
+        "1. Preheat Oven to 400 degrees Fahrenheit.Peel Green Apples. Core apple and thinly slice apple in  inch slices.",
+        "2. Place on baking sheet.",
+        "3. Sprinkle with brown sugar and cinnamon.",
+        "4. Place in oven and bake for 10 minutes.",
+        "5. Heat frying pan to ,medium high.Meanwhile follow instructions on box to make pancake batter, to make about 10-12 pancakes.",
+        "6. Add 1 TSP vanilla extract, 2 TSP cinnamon and all spice and mix together. Scoop about  cup batter onto frying pan and quickly place 2 slices of apple onto pancake.Cook pancake until golden brown, about 30 seconds. Flip over and cook until golden brown on the other side.",
+        "7. Serve and garnish with more cinnamon and whipped cream."
+      ],
+      "nutrition": {
+        "calories": 76,
+        "carbohydrates": 16,
+        "fiber": 3,
+        "sugar": 11,
+        "protein": 1,
+        "fat": 2,
+        "saturatedFat": 1,
+        "sodium": 14
+      },
+      "carbChoices": 1,
+      "tags": [
+        "dairy-free",
+        "low-carb",
+        "breakfast",
+        "american"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/632577-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/TNLH8XSQ/apple-pie-pancakes",
+      "gdValidation": {
+        "isValid": false,
+        "score": 60,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": false,
+          "adequateFiber": true,
+          "warnings": [
+            "Protein too low: 0.71g (min: 7g)",
+            "High sugar content: 10.51g (65% of carbs)",
+            "No whole grains detected",
+            "No lean protein source detected",
+            "Limited vegetables detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add lean meat, eggs, Greek yogurt, or legumes",
+            "Choose options with less added sugar",
+            "Serve with whole grain bread or brown rice",
+            "Add a side salad or steamed vegetables"
+          ]
+        },
+        "warnings": [
+          "Add lean meat, eggs, Greek yogurt, or legumes",
+          "Choose options with less added sugar",
+          "Serve with whole grain bread or brown rice",
+          "Add a side salad or steamed vegetables"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:20.938Z",
+      "spoonacularId": "632577",
+      "createdAt": "2025-07-16T16:58:55.926Z",
+      "updatedAt": "2025-07-16T16:58:55.926Z"
     },
     {
       "id": "spoonacular-632575",
@@ -838,7 +962,133 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:21.447Z",
-      "spoonacularId": "633594"
+      "spoonacularId": "633594",
+      "createdAt": "2025-07-16T16:58:55.886Z",
+      "updatedAt": "2025-07-16T16:58:55.886Z"
+    },
+    {
+      "id": "spoonacular-633595",
+      "title": "Baked Eggs With Asparagus and Sun Dried Tomatoes",
+      "description": "Need a gluten free and primal main course.  Baked Eggs With Asparagus and Sun Dried Tomatoes could be a super recipe to try.",
+      "category": "breakfast",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Eggs",
+          "amount": 2,
+          "unit": "large",
+          "original": "2 large eggs"
+        },
+        {
+          "name": "Egg Whites",
+          "amount": 2,
+          "unit": "large",
+          "original": "2 large egg whites"
+        },
+        {
+          "name": "Sun Tomato",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons sun dried tomato, finely chopped"
+        },
+        {
+          "name": "Onion",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons onion , finely chopped"
+        },
+        {
+          "name": "Thyme",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon thyme, minced"
+        },
+        {
+          "name": "Quark",
+          "amount": 125,
+          "unit": "ml",
+          "original": "1/2 cup quark (a creamy cheese that can be found in your grocery dairy section)"
+        },
+        {
+          "name": "Parmesan Cheese",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons parmesan cheese , shredded"
+        },
+        {
+          "name": "Spinach",
+          "amount": 8,
+          "unit": "small",
+          "original": "8 smalls spinach or asparagus"
+        }
+      ],
+      "instructions": [
+        "1. Preheat oven to 37",
+        "2. Steam asparagus until tender.",
+        "3. Whip eggs with quark, thyme and salt and pepper to your taste.",
+        "4. Heat non-stick skillet over medium heat and spray with cooking spray.",
+        "5. Saute onion and tomato for 4 minutes until onion is translucent.",
+        "6. Spray small baking dish with cooking spray and add onion and tomato.",
+        "7. Add eggs. Top with spinach or asparagus and parmesan cheese.",
+        "8. Bake for 10 - 15 minutes until egg is set."
+      ],
+      "nutrition": {
+        "calories": 178,
+        "carbohydrates": 9,
+        "fiber": 2,
+        "sugar": 6,
+        "protein": 21,
+        "fat": 7,
+        "saturatedFat": 3,
+        "sodium": 275
+      },
+      "carbChoices": 1,
+      "tags": [
+        "gluten-free",
+        "high-protein",
+        "low-carb",
+        "lunch",
+        "breakfast",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/633595-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/B5DH4SJK/baked-eggs-with-asparagus-and-sun-dried-tomatoes",
+      "gdValidation": {
+        "isValid": false,
+        "score": 45,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 9.09g (min: 15g)",
+            "Fiber too low: 1.93g (min: 3g)",
+            "High sugar content: 6.17g (68% of carbs)",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Choose options with less added sugar",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Choose options with less added sugar",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:18.162Z",
+      "spoonacularId": "633595",
+      "createdAt": "2025-07-16T16:58:55.900Z",
+      "updatedAt": "2025-07-16T16:58:55.900Z"
     },
     {
       "id": "spoonacular-633692",
@@ -1635,6 +1885,101 @@
       }
     },
     {
+      "id": "spoonacular-636458",
+      "title": "Bunny Eggs Kids Breakfast",
+      "description": "Bunny Eggs Kids Breakfast could be just the gluten free and primal recipe you've been looking for.  One serving contains 213 calories, 8g of protein, and 19g of fat.",
+      "category": "breakfast",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Bacon",
+          "amount": 12,
+          "unit": "slice",
+          "original": "12 slices bacon"
+        },
+        {
+          "name": "Blueberries",
+          "amount": 12,
+          "unit": "",
+          "original": "12 fresh blueberries"
+        },
+        {
+          "name": "Eggs",
+          "amount": 2,
+          "unit": "extra large",
+          "original": "2 extra large eggs"
+        },
+        {
+          "name": "Mild Cheddar Cheese",
+          "amount": 2,
+          "unit": "large slices",
+          "original": "2 large slices mild cheddar cheese, cut into thin strips"
+        }
+      ],
+      "instructions": [
+        "1. Cook bacon in large skillet until crisp.",
+        "2. Remove bacon from skillet, reserving 1 tablespoon drippings in skillet.",
+        "3. Drain bacon on paper towels.",
+        "4. Add 3 eggs to reserved drippings; cover. Cook 4 to 6 minutes or until whites are opaque and completely set and yolks are beginning to thicken around edges.",
+        "5. Remove eggs to individual serving plates; keep warm. Repeat with remaining eggs.For each bunny, place 2 bacon strips on egg for ears.",
+        "6. Cut cheese strips in half to create whiskers; add blueberries for eyes."
+      ],
+      "nutrition": {
+        "calories": 213,
+        "carbohydrates": 1,
+        "fiber": 0,
+        "sugar": 0,
+        "protein": 8,
+        "fat": 19,
+        "saturatedFat": 7,
+        "sodium": 320
+      },
+      "carbChoices": 0,
+      "tags": [
+        "gluten-free",
+        "low-carb",
+        "breakfast"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/636458-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/3CWLHXBM/bunny-eggs",
+      "gdValidation": {
+        "isValid": false,
+        "score": 40,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 1.08g (min: 15g)",
+            "Fiber too low: 0g (min: 3g)",
+            "No whole grains detected",
+            "Limited vegetables detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Serve with whole grain bread or brown rice",
+            "Add a side salad or steamed vegetables"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Serve with whole grain bread or brown rice",
+          "Add a side salad or steamed vegetables"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:18.085Z",
+      "spoonacularId": "636458",
+      "createdAt": "2025-07-16T16:58:55.905Z",
+      "updatedAt": "2025-07-16T16:58:55.905Z"
+    },
+    {
       "id": "spoonacular-636589",
       "title": "Butternut Squash Frittata",
       "description": "The recipe Butternut Squash Frittata can be made in approximately 45 minutes.  This recipe serves 1.",
@@ -1731,7 +2076,9 @@
         ]
       },
       "importedAt": "2025-07-09T20:54:19.214Z",
-      "spoonacularId": "636589"
+      "spoonacularId": "636589",
+      "createdAt": "2025-07-16T16:58:55.889Z",
+      "updatedAt": "2025-07-16T16:58:55.889Z"
     },
     {
       "id": "spoonacular-637042",
@@ -3310,7 +3657,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:57:23.377Z",
-      "spoonacularId": "639303"
+      "spoonacularId": "639303",
+      "createdAt": "2025-07-16T16:58:55.889Z",
+      "updatedAt": "2025-07-16T16:58:55.889Z"
     },
     {
       "id": "spoonacular-639303",
@@ -4773,6 +5122,115 @@
       }
     },
     {
+      "id": "spoonacular-641700",
+      "title": "Duck Egg Omelette With Caviar and Sour Cream",
+      "description": "Need a gluten free, primal, pescatarian, and ketogenic main course.  Duck Egg Omelette With Caviar and Sour Cream could be an amazing recipe to try.",
+      "category": "breakfast",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Arënkha Msc",
+          "amount": 0.75,
+          "unit": "g",
+          "original": "3/4 gram jar Arënkha MSC (see About section above)"
+        },
+        {
+          "name": "Butter",
+          "amount": 1,
+          "unit": "large knob",
+          "original": "large knob of butter"
+        },
+        {
+          "name": "Tblsp Cream",
+          "amount": 2,
+          "unit": "",
+          "original": "2 tblsp sour cream"
+        },
+        {
+          "name": "Duck Eggs",
+          "amount": 4,
+          "unit": "",
+          "original": "4 duck eggs"
+        },
+        {
+          "name": "Salt & Pepper",
+          "amount": 2,
+          "unit": "servings",
+          "original": "salt & freshly ground black pepper"
+        },
+        {
+          "name": "Tblsp Water",
+          "amount": 2,
+          "unit": "",
+          "original": "2 tblsp water"
+        }
+      ],
+      "instructions": [
+        "1. An omelette pan with a 15cm (6\") base.Make the omelettes one at a time.",
+        "2. Mix 2 eggs in a bowl with half the water, salt & pepper & beat lightly.Melt some butter in pan over moderately high heat.",
+        "3. Add eggs when it is foaming.Leave for a few seconds, then tilt pan & with a fork draw the egg from the edges into the centre so that the liquid egg flows into the space.Continue for about 30 seconds until almost all the liquid egg has gone.Then roll the omelette rather like a spring roll, tipping it onto a warm dinner plate.Using a small sharp knife, make a slit down the centre of the omelette, spoon over some of the sour cream, top with half of the Arnkha MSC, scatter with a little dill and serve immediately.Make the 2nd omelette in the same way."
+      ],
+      "nutrition": {
+        "calories": 337,
+        "carbohydrates": 2,
+        "fiber": 0,
+        "sugar": 1,
+        "protein": 18,
+        "fat": 28,
+        "saturatedFat": 11,
+        "sodium": 274
+      },
+      "carbChoices": 0,
+      "tags": [
+        "gluten-free",
+        "low-carb",
+        "lunch",
+        "breakfast",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/641700-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/V4WWB2B2/duck-egg-omelette-with-arenkha-msc-and-sour-cream",
+      "gdValidation": {
+        "isValid": false,
+        "score": 35,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 2.15g (min: 15g)",
+            "Fiber too low: 0g (min: 3g)",
+            "High sugar content: 1.34g (62% of carbs)",
+            "High saturated fat: 10.66g",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Choose options with less added sugar",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Choose options with less added sugar",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:18.119Z",
+      "spoonacularId": "641700",
+      "createdAt": "2025-07-16T16:58:55.890Z",
+      "updatedAt": "2025-07-16T16:58:55.890Z"
+    },
+    {
       "id": "spoonacular-868800",
       "title": "Easy Avocado Egg Quinoa Breakfast Bowl",
       "description": "Easy Avocado Egg Quinoa Breakfast Bowl is a gluten free, dairy free, and lacto ovo vegetarian recipe with 2 servings.  For $2.",
@@ -5061,6 +5519,131 @@
         "_seconds": 1751911159,
         "_nanoseconds": 911000000
       }
+    },
+    {
+      "id": "spoonacular-1459207",
+      "title": "Easy Sheet Pan Pancakes",
+      "description": "Need a lacto ovo vegetarian breakfast.  Easy Sheet Pan Pancakes could be an excellent recipe to try.",
+      "category": "breakfast",
+      "prepTime": 10,
+      "cookTime": 20,
+      "totalTime": 30,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Flour",
+          "amount": 187.5,
+          "unit": "g",
+          "original": "1 1/2 cups all-purpose flour"
+        },
+        {
+          "name": "Baking Powder",
+          "amount": 3.5,
+          "unit": "tsps",
+          "original": "3 1/2 tsp baking powder"
+        },
+        {
+          "name": "Salt",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 tsp salt"
+        },
+        {
+          "name": "Sugar",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tbsp white sugar"
+        },
+        {
+          "name": "Milk",
+          "amount": 305,
+          "unit": "ml",
+          "original": "1 1/4 cups milk"
+        },
+        {
+          "name": "Egg",
+          "amount": 1,
+          "unit": "",
+          "original": "1 egg"
+        },
+        {
+          "name": "Butter",
+          "amount": 3,
+          "unit": "Tbsps",
+          "original": "3 tbsp butter, melted"
+        },
+        {
+          "name": "Cinnamon",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 tsp cinnamon"
+        },
+        {
+          "name": "Vanilla Flavoring",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 tsp vanilla flavoring"
+        }
+      ],
+      "instructions": [
+        "1. Heat oven to 42",
+        "2. Add all ingredients for the pancake mix and stir well. Allow sitting for about 5 minutes.",
+        "3. Spread onto a prepared cookie sheet. Make sure to spread the pancake mixture evenly. ",
+        "4. Add toppings such as blueberries, chocolate chips, strawberries, or your favorite pancake toppings. ",
+        "5. Bake in the oven for 15 minutes.",
+        "6. Remove, allow to slightly cool, then cut into squares and serve. "
+      ],
+      "nutrition": {
+        "calories": 218,
+        "carbohydrates": 29,
+        "fiber": 1,
+        "sugar": 5,
+        "protein": 6,
+        "fat": 8,
+        "saturatedFat": 5,
+        "sodium": 748
+      },
+      "carbChoices": 2,
+      "tags": [
+        "vegetarian",
+        "quick",
+        "breakfast"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/1459207-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.pinkwhen.com/easy-sheet-pan-pancakes/",
+      "gdValidation": {
+        "isValid": false,
+        "score": 45,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": false,
+          "adequateFiber": false,
+          "warnings": [
+            "Protein too low: 5.9g (min: 7g)",
+            "Fiber too low: 1.08g (min: 3g)",
+            "No whole grains detected",
+            "Limited vegetables detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add lean meat, eggs, Greek yogurt, or legumes",
+            "Add vegetables, whole grains, or beans",
+            "Serve with whole grain bread or brown rice",
+            "Add a side salad or steamed vegetables"
+          ]
+        },
+        "warnings": [
+          "Add lean meat, eggs, Greek yogurt, or legumes",
+          "Add vegetables, whole grains, or beans",
+          "Serve with whole grain bread or brown rice",
+          "Add a side salad or steamed vegetables"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:23.485Z",
+      "spoonacularId": "1459207",
+      "createdAt": "2025-07-16T16:58:55.885Z",
+      "updatedAt": "2025-07-16T16:58:55.885Z"
     },
     {
       "id": "spoonacular-642178",
@@ -5490,7 +6073,9 @@
         ]
       },
       "importedAt": "2025-07-09T02:10:46.466Z",
-      "spoonacularId": "716432"
+      "spoonacularId": "716432",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-716432",
@@ -5783,6 +6368,136 @@
         "_seconds": 1751911184,
         "_nanoseconds": 520000000
       }
+    },
+    {
+      "id": "spoonacular-643153",
+      "title": "Fluffy Spelt Pancakes",
+      "description": "If you want to add more lacto ovo vegetarian recipes to your recipe box, Fluffy Spelt Pancakes might be a recipe you should try.  This breakfast has 145 calories, 5g of protein, and 4g of fat per serving.",
+      "category": "breakfast",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Spelt Flour",
+          "amount": 120,
+          "unit": "g",
+          "original": "1 cup organic spelt flour"
+        },
+        {
+          "name": "Wheat Bran",
+          "amount": 14.5,
+          "unit": "ml",
+          "original": "1/4 cup wheat bran"
+        },
+        {
+          "name": "Baking Powder",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon baking powder"
+        },
+        {
+          "name": "Baking Soda",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon baking soda"
+        },
+        {
+          "name": "Salt",
+          "amount": 0.25,
+          "unit": "tsps",
+          "original": "1/4 teaspoon salt"
+        },
+        {
+          "name": "Honey",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon honey"
+        },
+        {
+          "name": "Egg",
+          "amount": 1,
+          "unit": "",
+          "original": "1 egg"
+        },
+        {
+          "name": "Soy Milk",
+          "amount": 236,
+          "unit": "ml",
+          "original": "1 cup soy milk or low fat milk"
+        },
+        {
+          "name": "Butter",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon melted butter"
+        },
+        {
+          "name": "Vanilla Extract",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons vanilla extract"
+        }
+      ],
+      "instructions": [
+        "**Sift the below ingredients into a big bowl**",
+        "1. Cup organic spelt flour",
+        "2. Cup wheat bran",
+        "3. Tbs baking powder",
+        "4. Tsp baking soda",
+        "5. Tsp salt",
+        "6. Add in 1 egg, 1 cup soy milk or low fat milk, 1 tbs melted butter, honey and 2 tsp vanilla extract into the dry ingredients.",
+        "7. Heat dry flat non-stick pan, no need to oil it.",
+        "8. Spoon 1/4 cup batter. A min or two on each side."
+      ],
+      "nutrition": {
+        "calories": 145,
+        "carbohydrates": 22,
+        "fiber": 4,
+        "sugar": 5,
+        "protein": 5,
+        "fat": 4,
+        "saturatedFat": 2,
+        "sodium": 442
+      },
+      "carbChoices": 1,
+      "tags": [
+        "vegetarian",
+        "breakfast"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/643153-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/KXMR3GGX/fluffy-spelt-pancakes",
+      "gdValidation": {
+        "isValid": false,
+        "score": 70,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": false,
+          "adequateFiber": true,
+          "warnings": [
+            "Protein too low: 5.33g (min: 7g)",
+            "No whole grains detected",
+            "Limited vegetables detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add lean meat, eggs, Greek yogurt, or legumes",
+            "Serve with whole grain bread or brown rice",
+            "Add a side salad or steamed vegetables"
+          ]
+        },
+        "warnings": [
+          "Add lean meat, eggs, Greek yogurt, or legumes",
+          "Serve with whole grain bread or brown rice",
+          "Add a side salad or steamed vegetables"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:20.888Z",
+      "spoonacularId": "643153",
+      "createdAt": "2025-07-16T16:58:55.901Z",
+      "updatedAt": "2025-07-16T16:58:55.901Z"
     },
     {
       "id": "spoonacular-643241",
@@ -7207,7 +7922,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:34.131Z",
-      "spoonacularId": "644914"
+      "spoonacularId": "644914",
+      "createdAt": "2025-07-16T16:58:55.887Z",
+      "updatedAt": "2025-07-16T16:58:55.887Z"
     },
     {
       "id": "spoonacular-645315",
@@ -8063,7 +8780,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:23.300Z",
-      "spoonacularId": "676630"
+      "spoonacularId": "676630",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-647261",
@@ -8581,6 +9300,254 @@
         "_seconds": 1751911184,
         "_nanoseconds": 520000000
       }
+    },
+    {
+      "id": "spoonacular-650239",
+      "title": "Loaded Veggie Omelet",
+      "description": "Need a gluten free, primal, and ketogenic main course.  Loaded Veggie Omelet could be an awesome recipe to try.",
+      "category": "breakfast",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Shallot",
+          "amount": 1,
+          "unit": "small",
+          "original": "1 small shallot chopped"
+        },
+        {
+          "name": "Garlic",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon chopped garlic"
+        },
+        {
+          "name": "Mushrooms",
+          "amount": 4,
+          "unit": "",
+          "original": "4 mushrooms sliced"
+        },
+        {
+          "name": "Cherry Tomatoes",
+          "amount": 8,
+          "unit": "",
+          "original": "8 cherry tomatoes sliced"
+        },
+        {
+          "name": "Basil",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon fresh chopped basil"
+        },
+        {
+          "name": "Spinach",
+          "amount": 15,
+          "unit": "g",
+          "original": "1/2 cup fresh spinach chopped"
+        },
+        {
+          "name": "Eggs Whisked",
+          "amount": 4,
+          "unit": "",
+          "original": "4 eggs whisked"
+        },
+        {
+          "name": "Cheese",
+          "amount": 56.5,
+          "unit": "g",
+          "original": "1/2 cup white cheese"
+        },
+        {
+          "name": "Drizzle Of Olive Oil",
+          "amount": 2,
+          "unit": "servings",
+          "original": "Drizzle of olive oil"
+        }
+      ],
+      "instructions": [
+        "1. Preheat the oven to warm or 170 degrees. Bring a small saute pan or small omelet pan to a warm.",
+        "2. Saute the veggies using the olive oil starting with the shallot and garlic, adding the mushrooms until they are tender. Toss in the tomatoes and spinach and remove the pan from the heat.",
+        "3. Pour a layer of the egg into a small omelet pan or small saute pan. As the egg starts to cook run a spatula around the edge to loosen the egg. Once the egg is almost cooked (slightly runny on the top) sprinkle half the basil, cheese, and sauteed veggies on to one side of the egg. Gently fold the egg over the filling.",
+        "4. Slide the omelet onto a small oven safe plate and put it in the oven.",
+        "5. Repeat for the second omelet!"
+      ],
+      "nutrition": {
+        "calories": 399,
+        "carbohydrates": 8,
+        "fiber": 1,
+        "sugar": 4,
+        "protein": 20,
+        "fat": 32,
+        "saturatedFat": 10,
+        "sodium": 327
+      },
+      "carbChoices": 1,
+      "tags": [
+        "gluten-free",
+        "high-protein",
+        "low-carb",
+        "lunch",
+        "breakfast",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/650239-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/MTFXZNRX/loaded-veggie-omelet",
+      "gdValidation": {
+        "isValid": false,
+        "score": 45,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 8.25g (min: 15g)",
+            "Fiber too low: 1.49g (min: 3g)",
+            "High saturated fat: 10.15g",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:20.802Z",
+      "spoonacularId": "650239",
+      "createdAt": "2025-07-16T16:58:55.901Z",
+      "updatedAt": "2025-07-16T16:58:55.901Z"
+    },
+    {
+      "id": "spoonacular-1957598",
+      "title": "Low Carb Keto Pancakes",
+      "description": "Low Carb Keto Pancakes is a gluten free, lacto ovo vegetarian, and ketogenic recipe with 2 servings.  One serving contains 405 calories, 16g of protein, and 33g of fat.",
+      "category": "breakfast",
+      "prepTime": 5,
+      "cookTime": 10,
+      "totalTime": 15,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Eggs",
+          "amount": 2,
+          "unit": "large",
+          "original": "2 large eggs"
+        },
+        {
+          "name": "Water",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon water"
+        },
+        {
+          "name": "Cream Cheese",
+          "amount": 56.699,
+          "unit": "g",
+          "original": "2 oz cream cheese, cubed"
+        },
+        {
+          "name": "Almond Flour",
+          "amount": 74.667,
+          "unit": "g",
+          "original": "⅔ cup almond flour"
+        },
+        {
+          "name": "Baking Powder",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon baking powder"
+        },
+        {
+          "name": "Vanilla Extract",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons vanilla extract"
+        },
+        {
+          "name": "Cinnamon",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "½ teaspoon cinnamon"
+        },
+        {
+          "name": "Stevia",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "½ teaspoon Stevia"
+        },
+        {
+          "name": "Syrup",
+          "amount": 2,
+          "unit": "servings",
+          "original": "sugar free syrup"
+        }
+      ],
+      "instructions": [
+        "1. Place all the ingredients in a blender, beginning with the eggs, water, and cream cheese to avoid sticking at the bottom.Blend until the mixture is smooth, occasionally scraping down the sides if necessary.Allow the batter to rest for 2 minutes.Warm a non-stick skillet over medium heat.",
+        "2. Pour 3 to 4 tablespoons of the batter onto the skillet for each pancake.When bubbles start to appear, flip the pancake and cook until it is browned on both sides.Repeat this process until all the batter is used up.Top the pancakes with sugar-free syrup and serve.Makes 6 pancakes, serving size 3 pancakes."
+      ],
+      "nutrition": {
+        "calories": 405,
+        "carbohydrates": 16,
+        "fiber": 4,
+        "sugar": 3,
+        "protein": 16,
+        "fat": 33,
+        "saturatedFat": 9,
+        "sodium": 458
+      },
+      "carbChoices": 1,
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "quick",
+        "15-minutes",
+        "low-carb",
+        "breakfast"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/1957598-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://spoonacular.com/site-1721579912124",
+      "gdValidation": {
+        "isValid": false,
+        "score": 95,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": true,
+          "adequateFiber": true,
+          "warnings": [
+            "High saturated fat: 8.6g",
+            "No whole grains detected",
+            "Limited vegetables detected"
+          ],
+          "adjustmentSuggestions": [
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice",
+            "Add a side salad or steamed vegetables"
+          ]
+        },
+        "warnings": [
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice",
+          "Add a side salad or steamed vegetables"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:17.520Z",
+      "spoonacularId": "1957598",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-650485",
@@ -10395,7 +11362,165 @@
         ]
       },
       "importedAt": "2025-07-11T17:39:44.075Z",
-      "spoonacularId": "656481"
+      "spoonacularId": "656481",
+      "createdAt": "2025-07-16T16:58:55.905Z",
+      "updatedAt": "2025-07-16T16:58:55.905Z"
+    },
+    {
+      "id": "spoonacular-656486",
+      "title": "Poached eggs in tomatoes",
+      "description": "You can never have too many breakfast recipes, so give Poached eggs in tomatoes a try.  For $1.",
+      "category": "breakfast",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 3,
+      "ingredients": [
+        {
+          "name": "Onion",
+          "amount": 1,
+          "unit": "small",
+          "original": "1 small onion, cut in half and thinly sliced"
+        },
+        {
+          "name": "A Pepper",
+          "amount": 0.5,
+          "unit": "",
+          "original": "1/2 a pepper (I used a yellow one for colour)"
+        },
+        {
+          "name": "Garlic Cloves",
+          "amount": 2,
+          "unit": "",
+          "original": "2 garlic cloves, finely chopped"
+        },
+        {
+          "name": "Chorizo Sausage",
+          "amount": 100,
+          "unit": "g",
+          "original": "100 g chorizo sausage, chopped"
+        },
+        {
+          "name": "Canned Tomatoes",
+          "amount": 400,
+          "unit": "g",
+          "original": "400 g can of plum tomatoes in juice"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 tsp olive oil"
+        },
+        {
+          "name": "Cumin",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 tsp cumin"
+        },
+        {
+          "name": "Thyme",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 tsp fresh thyme"
+        },
+        {
+          "name": "Coriander",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tbsp coriander, chopped"
+        },
+        {
+          "name": "Paprika",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 tsp smoked paprika"
+        },
+        {
+          "name": "Eggs",
+          "amount": 3,
+          "unit": "",
+          "original": "3 eggs"
+        },
+        {
+          "name": "Salt",
+          "amount": 3,
+          "unit": "servings",
+          "original": "Salt, as required"
+        },
+        {
+          "name": "Feta Cheese",
+          "amount": 3,
+          "unit": "servings",
+          "original": "Feta cheese"
+        },
+        {
+          "name": "Crusty Bread To Serve",
+          "amount": 3,
+          "unit": "servings",
+          "original": "Crusty bread to serve"
+        }
+      ],
+      "instructions": [
+        "1. Heat a tsp of olive oil in a frying pan (Preferably one you can also use to serve at the table).",
+        "2. Add the cumin seeds and let them sputter. Toss in the garlic and cook for a minute.",
+        "3. Add the chorizo and cook further for 2-3 minutes.",
+        "4. Add the onion and pepper and cook for 5-7 minutes.",
+        "5. Pour in the can of tomatoes with the chopped thyme and coriander (leave some thyme and coriander for garnish). Stir in the paprika, add some water if the sauce seems to be drying out. Season with salt and cover and cook over medium heat for 15 minutes.",
+        "6. Gently break the eggs into the pan, over the tomato sauce and let them cook on a low flame.",
+        "7. Once the eggs are cooked, sprinkle over the rest of the coriander and thyme, and crumble some feta cheese on top. Cook for a couple of minutes.",
+        "8. Serve with some crusty bread."
+      ],
+      "nutrition": {
+        "calories": 228,
+        "carbohydrates": 5,
+        "fiber": 1,
+        "sugar": 1,
+        "protein": 13,
+        "fat": 17,
+        "saturatedFat": 8,
+        "sodium": 607
+      },
+      "carbChoices": 0,
+      "tags": [
+        "low-carb",
+        "breakfast"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/656486-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/LZZWD647/poached-eggs-in-tomatoes",
+      "gdValidation": {
+        "isValid": false,
+        "score": 40,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 5.41g (min: 15g)",
+            "Fiber too low: 0.73g (min: 3g)",
+            "High saturated fat: 8.29g",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:20.916Z",
+      "spoonacularId": "656486",
+      "createdAt": "2025-07-16T16:58:55.888Z",
+      "updatedAt": "2025-07-16T16:58:55.888Z"
     },
     {
       "id": "spoonacular-756814",
@@ -10518,7 +11643,9 @@
         ]
       },
       "importedAt": "2025-07-09T02:10:41.671Z",
-      "spoonacularId": "756814"
+      "spoonacularId": "756814",
+      "createdAt": "2025-07-16T16:58:55.888Z",
+      "updatedAt": "2025-07-16T16:58:55.888Z"
     },
     {
       "id": "spoonacular-756814",
@@ -11106,6 +12233,103 @@
       }
     },
     {
+      "id": "spoonacular-658134",
+      "title": "Redneck Breakfast on a Croissant",
+      "description": "You can never have too many breakfast recipes, so give Redneck Breakfast on a Croissant a try.  For $1.",
+      "category": "breakfast",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 1,
+      "ingredients": [
+        {
+          "name": "Croissant",
+          "amount": 1,
+          "unit": "",
+          "original": "1 croissant"
+        },
+        {
+          "name": "Corned Beef Hash",
+          "amount": 28.25,
+          "unit": "g",
+          "original": "1/4 cup canned corned beef hash"
+        },
+        {
+          "name": "Egg",
+          "amount": 1,
+          "unit": "",
+          "original": "1 egg"
+        },
+        {
+          "name": "Butter",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon butter"
+        },
+        {
+          "name": "Kosher Salt And Pepper",
+          "amount": 1,
+          "unit": "serving",
+          "original": "Kosher salt and freshly ground black pepper"
+        }
+      ],
+      "instructions": [
+        "1. Split the croissant in half and toast.",
+        "2. Heat a non stick pan over medium high heat, add the corned beef hash.  Cook the has until it is brown and crisp on one side (3 to 5 minutes), then flip with a turner and cook the other side until it is crisps and browns, another 3 to 5 minutes.  Note: While cooking the has push it together and flatten it so it makes a little patty, its much easier to flip and serve that way.",
+        "3. Place the corned beef hash patty on the bottom half of the toasted croissant.",
+        "4. In the same pan, melt the butter and add the egg, fry according to taste.",
+        "5. Sprinkle the egg with a little salt and pepper and place on top of the corned beef hash patty.  On the top side of the croissant, squeeze a layer of canned cheese over it.",
+        "6. Place the top layer over the bottom half.",
+        "7. Serve immediately."
+      ],
+      "nutrition": {
+        "calories": 368,
+        "carbohydrates": 27,
+        "fiber": 2,
+        "sugar": 7,
+        "protein": 14,
+        "fat": 22,
+        "saturatedFat": 11,
+        "sodium": 641
+      },
+      "carbChoices": 2,
+      "tags": [
+        "breakfast"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/658134-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/T58SBZQ4/redneck-breakfast-on-a-croissant",
+      "gdValidation": {
+        "isValid": false,
+        "score": 75,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Fiber too low: 1.51g (min: 3g)",
+            "High saturated fat: 10.67g",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add vegetables, whole grains, or beans",
+            "Choose leaner protein sources or reduce cheese/butter",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add vegetables, whole grains, or beans",
+          "Choose leaner protein sources or reduce cheese/butter",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:20.854Z",
+      "spoonacularId": "658134",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
+    },
+    {
       "id": "spoonacular-658624",
       "title": "Roasted Plum Oatmeal",
       "description": "Roasted Plum Oatmeal is a breakfast that serves 4.  Watching your figure.",
@@ -11587,6 +12811,113 @@
         "_seconds": 1751911204,
         "_nanoseconds": 902000000
       }
+    },
+    {
+      "id": "spoonacular-1697715",
+      "title": "Shirred Eggs - My Favorite Breakfast Mini-Meal with Maximum Flavor and Minimal Effort",
+      "description": "Shirred Eggs - My Favorite Breakfast Mini-Meal with Maximum Flavor and Minimal Effort takes roughly 20 minutes from beginning to end.  One serving contains 142 calories, 8g of protein, and 12g of fat.",
+      "category": "breakfast",
+      "prepTime": 5,
+      "cookTime": 15,
+      "totalTime": 20,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Eggs",
+          "amount": 2,
+          "unit": "large",
+          "original": "2 large eggs"
+        },
+        {
+          "name": "Butter",
+          "amount": 0.5,
+          "unit": "Tbsps",
+          "original": "1/2 Tbsp butter"
+        },
+        {
+          "name": "Heavy Cream",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 Tbsp heavy cream"
+        },
+        {
+          "name": "Pecorino Romano",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 Tbsp Pecorino Romano"
+        },
+        {
+          "name": "Chives",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 Tbsp chives, chopped"
+        },
+        {
+          "name": "Salt & Pepper",
+          "amount": 2,
+          "unit": "servings",
+          "original": "Salt &amp; pepper"
+        }
+      ],
+      "instructions": [
+        "1. Preheat toaster oven to 350℉.",
+        "2. Butter the dish and add the heavy cream. Crack an egg into it and make sure the yolk doesn’t touch the sides.",
+        "3. Sprinkle cheese and chives on top, add salt and pepper and put into toaster oven.",
+        "4. When the white just barely sets, about 15 minutes, remove from oven (warning: ramekins will be hot).",
+        "5. Serve &amp; enjoy!"
+      ],
+      "nutrition": {
+        "calories": 142,
+        "carbohydrates": 1,
+        "fiber": 0,
+        "sugar": 0,
+        "protein": 8,
+        "fat": 12,
+        "saturatedFat": 6,
+        "sodium": 350
+      },
+      "carbChoices": 0,
+      "tags": [
+        "gluten-free",
+        "quick",
+        "low-carb",
+        "breakfast"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/1697715-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://maplewoodroad.com/shirred-eggs/",
+      "gdValidation": {
+        "isValid": false,
+        "score": 40,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 0.82g (min: 15g)",
+            "Fiber too low: 0g (min: 3g)",
+            "High sugar content: 0.47g (57% of carbs)",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Choose options with less added sugar",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Choose options with less added sugar",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:18.099Z",
+      "spoonacularId": "1697715",
+      "createdAt": "2025-07-16T16:58:55.901Z",
+      "updatedAt": "2025-07-16T16:58:55.901Z"
     },
     {
       "id": "spoonacular-1021260",
@@ -12273,7 +13604,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:30.684Z",
-      "spoonacularId": "660368"
+      "spoonacularId": "660368",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-660368",
@@ -12752,7 +14085,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:39:53.310Z",
-      "spoonacularId": "661249"
+      "spoonacularId": "661249",
+      "createdAt": "2025-07-16T16:58:55.886Z",
+      "updatedAt": "2025-07-16T16:58:55.886Z"
     },
     {
       "id": "spoonacular-661602",
@@ -13599,7 +14934,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:21.464Z",
-      "spoonacularId": "665776"
+      "spoonacularId": "665776",
+      "createdAt": "2025-07-16T16:58:55.901Z",
+      "updatedAt": "2025-07-16T16:58:55.901Z"
     }
   ]
 }

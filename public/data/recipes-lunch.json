@@ -1,6 +1,8 @@
 {
+  "exportDate": "2025-07-16T16:58:55.941Z",
+  "source": "Firebase Production Database",
   "category": "lunch",
-  "recipeCount": 59,
+  "recipeCount": 60,
   "recipes": [
     {
       "id": "spoonacular-632209",
@@ -638,7 +640,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:24.620Z",
-      "spoonacularId": "632874"
+      "spoonacularId": "632874",
+      "createdAt": "2025-07-16T16:58:55.887Z",
+      "updatedAt": "2025-07-16T16:58:55.887Z"
     },
     {
       "id": "spoonacular-633132",
@@ -1700,7 +1704,9 @@
         ]
       },
       "importedAt": "2025-07-09T02:10:41.654Z",
-      "spoonacularId": "715769"
+      "spoonacularId": "715769",
+      "createdAt": "2025-07-16T16:58:55.887Z",
+      "updatedAt": "2025-07-16T16:58:55.887Z"
     },
     {
       "id": "spoonacular-636742",
@@ -2038,7 +2044,128 @@
         ]
       },
       "importedAt": "2025-07-09T02:10:46.449Z",
-      "spoonacularId": "715421"
+      "spoonacularId": "715421",
+      "createdAt": "2025-07-16T16:58:55.888Z",
+      "updatedAt": "2025-07-16T16:58:55.888Z"
+    },
+    {
+      "id": "spoonacular-638086",
+      "title": "Chicken Fingers",
+      "description": "Chicken Fingers might be just the main course you are searching for.  One serving contains 347 calories, 52g of protein, and 6g of fat.",
+      "category": "lunch",
+      "prepTime": 10,
+      "cookTime": 20,
+      "totalTime": 30,
+      "servings": 2,
+      "ingredients": [
+        {
+          "name": "Cayenne Pepper",
+          "amount": 1,
+          "unit": "dash",
+          "original": "1 dash Cayenne Pepper"
+        },
+        {
+          "name": "Chicken Breasts",
+          "amount": 453.592,
+          "unit": "g",
+          "original": "1 pound Boneless Chicken Breasts"
+        },
+        {
+          "name": "Cornflakes",
+          "amount": 42,
+          "unit": "g",
+          "original": "1 1/2 cup Cornflakes,crushed"
+        },
+        {
+          "name": "Egg White",
+          "amount": 1,
+          "unit": "",
+          "original": "1 whole Egg White"
+        },
+        {
+          "name": "Seasoning",
+          "amount": 0.25,
+          "unit": "tsps",
+          "original": "1/4 teaspoons Italian Seasoning"
+        },
+        {
+          "name": "Paprika",
+          "amount": 0.25,
+          "unit": "tsps",
+          "original": "1/4 teaspoons Paprika"
+        },
+        {
+          "name": "Parmesan Cheese",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons Parmesan Cheese"
+        },
+        {
+          "name": "Water",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 Tablespoon Water"
+        }
+      ],
+      "instructions": [
+        "1. Preheat oven to 400 degrees",
+        "2. Line a baking sheet with parchment paper or line the bottom with foil and place a cookie rack on top and spray with cooking spray, set aside",
+        "3. In a shallow bowl add egg whites and water",
+        "4. In another shallow bowl add cornflakes, cheese, and seasonings, stir until combined",
+        "5. Cut chicken breasts horizontally and then cut into strips.Dredge the chicken in egg whites, then dip into cornflake mixture.",
+        "6. Place on baking sheet. Do the same for all the chicken.",
+        "7. Bake for 18 minutes or until chicken is done."
+      ],
+      "nutrition": {
+        "calories": 347,
+        "carbohydrates": 18,
+        "fiber": 1,
+        "sugar": 2,
+        "protein": 52,
+        "fat": 6,
+        "saturatedFat": 1,
+        "sodium": 458
+      },
+      "carbChoices": 1,
+      "tags": [
+        "quick",
+        "high-protein",
+        "low-carb",
+        "lunch",
+        "dinner"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/638086-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/6GVTWWJ6/chicken-fingers",
+      "gdValidation": {
+        "isValid": false,
+        "score": 45,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 18.14g (min: 30g)",
+            "Fiber too low: 0.9g (min: 5g)",
+            "No whole grains detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Serve with whole grain bread or brown rice"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Serve with whole grain bread or brown rice"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:28.765Z",
+      "spoonacularId": "638086",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
     },
     {
       "id": "spoonacular-638488",
@@ -2435,7 +2562,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:59:30.610Z",
-      "spoonacularId": "639320"
+      "spoonacularId": "639320",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
     },
     {
       "id": "spoonacular-639620",
@@ -3155,7 +3284,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:46.536Z",
-      "spoonacularId": "640607"
+      "spoonacularId": "640607",
+      "createdAt": "2025-07-16T16:58:55.905Z",
+      "updatedAt": "2025-07-16T16:58:55.905Z"
     },
     {
       "id": "spoonacular-640941",
@@ -3270,7 +3401,9 @@
         ]
       },
       "importedAt": "2025-07-09T02:10:41.675Z",
-      "spoonacularId": "640941"
+      "spoonacularId": "640941",
+      "createdAt": "2025-07-16T16:58:55.888Z",
+      "updatedAt": "2025-07-16T16:58:55.888Z"
     },
     {
       "id": "spoonacular-650378",
@@ -3712,7 +3845,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:44.298Z",
-      "spoonacularId": "1697649"
+      "spoonacularId": "1697649",
+      "createdAt": "2025-07-16T16:58:55.926Z",
+      "updatedAt": "2025-07-16T16:58:55.926Z"
     },
     {
       "id": "spoonacular-1096010",
@@ -5086,7 +5221,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:17:19.075Z",
-      "spoonacularId": "157021"
+      "spoonacularId": "157021",
+      "createdAt": "2025-07-16T16:58:55.887Z",
+      "updatedAt": "2025-07-16T16:58:55.887Z"
     },
     {
       "id": "spoonacular-645265",
@@ -5346,7 +5483,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:38:04.200Z",
-      "spoonacularId": "645384"
+      "spoonacularId": "645384",
+      "createdAt": "2025-07-16T16:58:55.901Z",
+      "updatedAt": "2025-07-16T16:58:55.901Z"
     },
     {
       "id": "spoonacular-645384",
@@ -5630,7 +5769,9 @@
         ]
       },
       "importedAt": "2025-07-09T20:54:24.541Z",
-      "spoonacularId": "716408"
+      "spoonacularId": "716408",
+      "createdAt": "2025-07-16T16:58:55.927Z",
+      "updatedAt": "2025-07-16T16:58:55.927Z"
     },
     {
       "id": "spoonacular-651726",
@@ -6604,7 +6745,9 @@
         ]
       },
       "importedAt": "2025-07-09T20:54:21.952Z",
-      "spoonacularId": "652417"
+      "spoonacularId": "652417",
+      "createdAt": "2025-07-16T16:58:55.889Z",
+      "updatedAt": "2025-07-16T16:58:55.889Z"
     },
     {
       "id": "spoonacular-652594",
@@ -7115,7 +7258,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:57:33.326Z",
-      "spoonacularId": "1697621"
+      "spoonacularId": "1697621",
+      "createdAt": "2025-07-16T16:58:55.926Z",
+      "updatedAt": "2025-07-16T16:58:55.926Z"
     },
     {
       "id": "spoonacular-654435",
@@ -7235,7 +7380,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:37:14.983Z",
-      "spoonacularId": "654435"
+      "spoonacularId": "654435",
+      "createdAt": "2025-07-16T16:58:55.887Z",
+      "updatedAt": "2025-07-16T16:58:55.887Z"
     },
     {
       "id": "spoonacular-655822",
@@ -7343,7 +7490,9 @@
         ]
       },
       "importedAt": "2025-07-11T15:17:16.427Z",
-      "spoonacularId": "655822"
+      "spoonacularId": "655822",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
     },
     {
       "id": "spoonacular-656688",
@@ -7736,19 +7885,19 @@
         "warnings": []
       },
       "importedFrom": "spoonacular",
-      "importedAt": "2025-07-07T12:58:54.777Z",
+      "importedAt": "2025-07-16T14:13:13.209Z",
       "verified": false,
       "popularity": 0,
       "userRatings": [],
       "timesViewed": 0,
       "timesAddedToPlan": 0,
       "createdAt": {
-        "_seconds": 1751893143,
-        "_nanoseconds": 518000000
+        "_seconds": 1752675202,
+        "_nanoseconds": 183000000
       },
       "updatedAt": {
-        "_seconds": 1751893143,
-        "_nanoseconds": 518000000
+        "_seconds": 1752675202,
+        "_nanoseconds": 183000000
       }
     },
     {
@@ -7870,7 +8019,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:24.638Z",
-      "spoonacularId": "1697751"
+      "spoonacularId": "1697751",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
     },
     {
       "id": "spoonacular-13073",
@@ -8639,7 +8790,9 @@
         ]
       },
       "importedAt": "2025-07-09T20:54:24.422Z",
-      "spoonacularId": "157344"
+      "spoonacularId": "157344",
+      "createdAt": "2025-07-16T16:58:55.901Z",
+      "updatedAt": "2025-07-16T16:58:55.901Z"
     },
     {
       "id": "spoonacular-663050",
@@ -8780,7 +8933,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:06.259Z",
-      "spoonacularId": "663050"
+      "spoonacularId": "663050",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-664090",
@@ -9101,7 +9256,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:39:44.010Z",
-      "spoonacularId": "664975"
+      "spoonacularId": "664975",
+      "createdAt": "2025-07-16T16:58:55.886Z",
+      "updatedAt": "2025-07-16T16:58:55.886Z"
     }
   ]
 }

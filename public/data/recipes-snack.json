@@ -1,6 +1,8 @@
 {
+  "exportDate": "2025-07-16T16:58:55.941Z",
+  "source": "Firebase Production Database",
   "category": "snack",
-  "recipeCount": 35,
+  "recipeCount": 51,
   "recipes": [
     {
       "id": "spoonacular-631843",
@@ -330,7 +332,9 @@
         ]
       },
       "importedAt": "2025-07-09T02:10:38.809Z",
-      "spoonacularId": "716406"
+      "spoonacularId": "716406",
+      "createdAt": "2025-07-16T16:58:55.887Z",
+      "updatedAt": "2025-07-16T16:58:55.887Z"
     },
     {
       "id": "spoonacular-651840",
@@ -440,7 +444,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:39:44.123Z",
-      "spoonacularId": "651840"
+      "spoonacularId": "651840",
+      "createdAt": "2025-07-16T16:58:55.884Z",
+      "updatedAt": "2025-07-16T16:58:55.884Z"
     },
     {
       "id": "spoonacular-633330",
@@ -546,7 +552,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:57.324Z",
-      "spoonacularId": "633330"
+      "spoonacularId": "633330",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
     },
     {
       "id": "spoonacular-634431",
@@ -702,6 +710,373 @@
       }
     },
     {
+      "id": "spoonacular-634816",
+      "title": "Beignets",
+      "description": "Beignets takes roughly 45 minutes from beginning to end.  One portion of this dish contains approximately 1g of protein, 11g of fat, and a total of 144 calories.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 24,
+      "ingredients": [
+        {
+          "name": "Butter",
+          "amount": 227,
+          "unit": "g",
+          "original": "cup butter"
+        },
+        {
+          "name": "Eggs",
+          "amount": 4,
+          "unit": "",
+          "original": "4 eggs"
+        },
+        {
+          "name": "Flour",
+          "amount": 45,
+          "unit": "gr",
+          "original": "45 gr flour"
+        },
+        {
+          "name": "Nutmeg",
+          "amount": 0.25,
+          "unit": "tsps",
+          "original": "1/4 teaspoon nutmeg"
+        },
+        {
+          "name": "Oil",
+          "amount": 24,
+          "unit": "servings",
+          "original": "Oil for frying"
+        },
+        {
+          "name": "Salt",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon salt"
+        },
+        {
+          "name": "Sugar",
+          "amount": 250,
+          "unit": "ml",
+          "original": "1 cup (250 mL) sugar"
+        },
+        {
+          "name": "Vanilla Extract",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon vanilla extract"
+        },
+        {
+          "name": "Water",
+          "amount": 236.588,
+          "unit": "ml",
+          "original": "1 cup water or milk"
+        }
+      ],
+      "instructions": [
+        "1. In a large heavy skillet or deep-fat fryer, heat 3 inches oil to 350 degrees.Meanwhile, combine flour, sugar and nutmeg, set aside. In medium saucepan heat water or milk, butter and salt over medium heat until boiling and butter is melted.",
+        "2. Add vanilla, then add flour mixture all at once. Stir briskly with a wooden spoon until mixture leaves sides of pan and forms a ball. Continue stirring a few minutes more to dry.",
+        "3. Remove from heat and beat until slightly cooled.",
+        "4. Add eggs, one at a time, beating well after each addition.Using 2 spoons, shape a generous tablespoon dough into an oblong and drop into hot oil. Fry 3 or 4 at a time, turning beignets as they rise to the surface. Fry 3 to 4 minutes, until golden brown.",
+        "5. Drain on paper towels and sprinkle immediately with sifted confectioners' sugar. Repeat with remaining batter."
+      ],
+      "nutrition": {
+        "calories": 144,
+        "carbohydrates": 10,
+        "fiber": 0,
+        "sugar": 9,
+        "protein": 1,
+        "fat": 11,
+        "saturatedFat": 5,
+        "sodium": 120
+      },
+      "carbChoices": 1,
+      "tags": [
+        "vegetarian",
+        "low-carb",
+        "snack",
+        "appetizer"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/634816-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/LBXNPWKM/beignets",
+      "gdValidation": {
+        "isValid": false,
+        "score": 50,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": false,
+          "adequateFiber": false,
+          "warnings": [
+            "Protein too low: 1.2g (min: 5g)",
+            "Fiber too low: 0g (min: 2g)",
+            "High sugar content: 8.85g (86% of carbs)"
+          ],
+          "adjustmentSuggestions": [
+            "Add lean meat, eggs, Greek yogurt, or legumes",
+            "Add vegetables, whole grains, or beans",
+            "Choose options with less added sugar"
+          ]
+        },
+        "warnings": [
+          "Add lean meat, eggs, Greek yogurt, or legumes",
+          "Add vegetables, whole grains, or beans",
+          "Choose options with less added sugar"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:36.600Z",
+      "spoonacularId": "634816",
+      "createdAt": "2025-07-16T16:58:55.905Z",
+      "updatedAt": "2025-07-16T16:58:55.905Z"
+    },
+    {
+      "id": "spoonacular-635684",
+      "title": "Borscht",
+      "description": "You can never have too many Eastern European recipes, so give Borscht a try.  For 29 cents per serving, this recipe covers 2% of your daily requirements of vitamins and minerals.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Bay Leaf",
+          "amount": 1,
+          "unit": "",
+          "original": "1 bay leaf"
+        },
+        {
+          "name": "Pepper",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon freshly ground black pepper"
+        },
+        {
+          "name": "Garlic",
+          "amount": 1,
+          "unit": "clove",
+          "original": "1 clove garlic, finely minced"
+        },
+        {
+          "name": "Lowfat Yogurt",
+          "amount": 122.5,
+          "unit": "ml",
+          "original": "1/2 cup sour cream or lowfat yogurt"
+        },
+        {
+          "name": "Sugar Added Shoestring 3 Cups Water",
+          "amount": 1,
+          "unit": "can",
+          "original": "1 can 16 oz. no salt or sugar added canned shoestring 3 cups water"
+        },
+        {
+          "name": "Onions",
+          "amount": 80,
+          "unit": "g",
+          "original": "1/2 cup chopped onions"
+        },
+        {
+          "name": "Red Wine Vinegar",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons red wine vinegar"
+        },
+        {
+          "name": "Thyme",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon thyme"
+        },
+        {
+          "name": "Butter",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon unsalted butter"
+        }
+      ],
+      "instructions": [
+        "1. Melt butter in saucepan; add onions and garlic.",
+        "2. Saute until tender, about 6 minutes.",
+        "3. Add bay leaf, thyme, pepper, vinegar, beets with their liquid and water. Bring to boil; reduce heat and simmer 45 minutes.Stir in sour cream.",
+        "4. Serve hot or chilled.\\"
+      ],
+      "nutrition": {
+        "calories": 56,
+        "carbohydrates": 5,
+        "fiber": 0,
+        "sugar": 3,
+        "protein": 2,
+        "fat": 3,
+        "saturatedFat": 2,
+        "sodium": 23
+      },
+      "carbChoices": 0,
+      "tags": [
+        "vegetarian",
+        "gluten-free",
+        "low-carb",
+        "snack",
+        "appetizer",
+        "eastern european",
+        "european"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/635684-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/2Z7PLPGX/borscht",
+      "gdValidation": {
+        "isValid": false,
+        "score": 10,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": false,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 4.55g (min: 10g)",
+            "Protein too low: 1.95g (min: 5g)",
+            "Fiber too low: 0.46g (min: 2g)",
+            "High sugar content: 3.03g (67% of carbs)",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add lean meat, eggs, Greek yogurt, or legumes",
+            "Add vegetables, whole grains, or beans",
+            "Choose options with less added sugar"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add lean meat, eggs, Greek yogurt, or legumes",
+          "Add vegetables, whole grains, or beans",
+          "Choose options with less added sugar"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:33.965Z",
+      "spoonacularId": "635684",
+      "createdAt": "2025-07-16T16:58:55.887Z",
+      "updatedAt": "2025-07-16T16:58:55.887Z"
+    },
+    {
+      "id": "spoonacular-1697759",
+      "title": "Buffalo Chicken Dip - Enough Said",
+      "description": "Need a gluten free and ketogenic hor d'oeuvre.  Buffalo Chicken Dip - Enough Said could be a great recipe to try.",
+      "category": "snack",
+      "prepTime": 15,
+      "cookTime": 20,
+      "totalTime": 35,
+      "servings": 3,
+      "ingredients": [
+        {
+          "name": "Chicken Thighs",
+          "amount": 283.495,
+          "unit": "g",
+          "original": "10 oz boneless, skinless chicken thighs, (cut in small cubes)"
+        },
+        {
+          "name": "Butter",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 Tbsp butter"
+        },
+        {
+          "name": "Favorite Hot Sauce",
+          "amount": 120,
+          "unit": "ml",
+          "original": "1/2 cup favorite hot sauce"
+        },
+        {
+          "name": "Philadelphia Cream Cheese",
+          "amount": 226.796,
+          "unit": "g",
+          "original": "8 oz Philadelphia cream cheese"
+        },
+        {
+          "name": "Cheddar Cheese",
+          "amount": 113,
+          "unit": "g",
+          "original": "1 cup cheddar cheese, (shredded)"
+        },
+        {
+          "name": "Ranch Dressing",
+          "amount": 120,
+          "unit": "ml",
+          "original": "1/2 cup ranch dressing"
+        },
+        {
+          "name": "Salt & Pepper",
+          "amount": 3,
+          "unit": "servings",
+          "original": "Salt &amp; pepper"
+        }
+      ],
+      "instructions": [
+        "1. Trim fat off chicken thighs and cut&nbsp; into small pieces...no need to shred.&nbsp; Season with salt &amp; pepper.",
+        "2. In a pan, melt butter over medium heat.&nbsp;",
+        "3. Add the chicken when the butter starts to sizzle but doesn’t turn brown yet.",
+        "4. Add your favorite hot sauce and cook until the chicken is cooked through.&nbsp;",
+        "5. Reduce heat and add cream cheese, cheddar cheese, and ranch dressing.",
+        "6. Let the low heat work its magic until everything is melted into the perfect, spicy, tangy deliciousness.",
+        "7. Serve with chips, celery, bread, or crackers."
+      ],
+      "nutrition": {
+        "calories": 741,
+        "carbohydrates": 8,
+        "fiber": 0,
+        "sugar": 5,
+        "protein": 32,
+        "fat": 64,
+        "saturatedFat": 29,
+        "sodium": 2210
+      },
+      "carbChoices": 1,
+      "tags": [
+        "gluten-free",
+        "high-protein",
+        "low-carb",
+        "snack",
+        "appetizer"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/1697759-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://maplewoodroad.com/buffalo-chicken-dip/",
+      "gdValidation": {
+        "isValid": false,
+        "score": 35,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 8.15g (min: 10g)",
+            "Fiber too low: 0g (min: 2g)",
+            "High sugar content: 5.35g (66% of carbs)",
+            "High saturated fat: 28.71g",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Choose options with less added sugar",
+            "Choose leaner protein sources or reduce cheese/butter"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Choose options with less added sugar",
+          "Choose leaner protein sources or reduce cheese/butter"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:41.857Z",
+      "spoonacularId": "1697759",
+      "createdAt": "2025-07-16T16:58:55.905Z",
+      "updatedAt": "2025-07-16T16:58:55.905Z"
+    },
+    {
       "id": "spoonacular-715432",
       "title": "Buffalo Ranch Chicken Dip",
       "description": "Buffalo Ranch Chicken Dip is a gluten free and ketogenic hor d'oeuvre.  This recipe makes 7 servings with 799 calories, 40g of protein, and 66g of fat each.",
@@ -808,7 +1183,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:56.891Z",
-      "spoonacularId": "715432"
+      "spoonacularId": "715432",
+      "createdAt": "2025-07-16T16:58:55.905Z",
+      "updatedAt": "2025-07-16T16:58:55.905Z"
     },
     {
       "id": "spoonacular-636422",
@@ -952,6 +1329,104 @@
         "_seconds": 1751903312,
         "_nanoseconds": 429000000
       }
+    },
+    {
+      "id": "spoonacular-636898",
+      "title": "Cannellini Bean Dip",
+      "description": "The recipe Cannellini Bean Dip can be made in approximately 45 minutes.  This recipe serves 10.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 10,
+      "ingredients": [
+        {
+          "name": "Cannellini Beans",
+          "amount": 453.592,
+          "unit": "g",
+          "original": "1 pound 13oz. can of white cannellini beans"
+        },
+        {
+          "name": "Garlic",
+          "amount": 4,
+          "unit": "cloves",
+          "original": "4 cloves garlic"
+        },
+        {
+          "name": "Lemon",
+          "amount": 0.25,
+          "unit": "",
+          "original": "1/4 of lemon with skin"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 4,
+          "unit": "Tbsps",
+          "original": "4 tablespoons olive oil"
+        },
+        {
+          "name": "Pepper Flakes",
+          "amount": 0.25,
+          "unit": "tsps",
+          "original": "1/4 teaspoon red pepper flakes"
+        },
+        {
+          "name": "Basil",
+          "amount": 12,
+          "unit": "g",
+          "original": "1/2 cup fresh basil"
+        }
+      ],
+      "instructions": [
+        "1. Combine all of the above in a food processor and process until smooth."
+      ],
+      "nutrition": {
+        "calories": 104,
+        "carbohydrates": 10,
+        "fiber": 2,
+        "sugar": 0,
+        "protein": 3,
+        "fat": 6,
+        "saturatedFat": 1,
+        "sodium": 4
+      },
+      "carbChoices": 1,
+      "tags": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "dairy-free",
+        "low-carb",
+        "snack",
+        "appetizer"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/636898-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/S3WNCTPX/cannellini-bean-dip",
+      "gdValidation": {
+        "isValid": false,
+        "score": 75,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": false,
+          "adequateFiber": true,
+          "warnings": [
+            "Protein too low: 3.44g (min: 5g)",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add lean meat, eggs, Greek yogurt, or legumes"
+          ]
+        },
+        "warnings": [
+          "Add lean meat, eggs, Greek yogurt, or legumes"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:41.865Z",
+      "spoonacularId": "636898",
+      "createdAt": "2025-07-16T16:58:55.888Z",
+      "updatedAt": "2025-07-16T16:58:55.888Z"
     },
     {
       "id": "spoonacular-636962",
@@ -1266,7 +1741,9 @@
         ]
       },
       "importedAt": "2025-07-09T02:10:39.168Z",
-      "spoonacularId": "716426"
+      "spoonacularId": "716426",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-637476",
@@ -1470,7 +1947,108 @@
         ]
       },
       "importedAt": "2025-07-11T15:57:42.273Z",
-      "spoonacularId": "637476"
+      "spoonacularId": "637476",
+      "createdAt": "2025-07-16T16:58:55.926Z",
+      "updatedAt": "2025-07-16T16:58:55.926Z"
+    },
+    {
+      "id": "spoonacular-637876",
+      "title": "Chicken 65",
+      "description": "Chicken 65 could be just the gluten free recipe you've been looking for.  This hor d'oeuvre has 121 calories, 19g of protein, and 3g of fat per serving.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Chicken Breast",
+          "amount": 500,
+          "unit": "g",
+          "original": "500 grams boneless chicken breast"
+        },
+        {
+          "name": "Chili Powder",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2-3 tsp chili powder"
+        },
+        {
+          "name": "Ginger And Garlic Paste",
+          "amount": 4,
+          "unit": "Tbsps",
+          "original": "4 tbsp Ginger and Garlic paste"
+        },
+        {
+          "name": "Salt",
+          "amount": 0.5,
+          "unit": "Tbsps",
+          "original": "½ tbsp. salt"
+        },
+        {
+          "name": "Turmeric Powder",
+          "amount": 0.25,
+          "unit": "tsps",
+          "original": "1/4 tsp Turmeric powder"
+        },
+        {
+          "name": "Yogurt",
+          "amount": 4,
+          "unit": "Tbsps",
+          "original": "4 tbsp yogurt"
+        }
+      ],
+      "instructions": [
+        "1. Take a large bowl mix in the ginger and garlic paste, yogurt, red chilly powder, turmeric powder, and salt.",
+        "2. Mix well to from smooth and thick paste, add the chicken pieces to the masala paste and  marinaded for 4 hours.",
+        "3. Heat enough oil in a pan to deep fry the marinaded chicken pieces. Deep fry the chicken pieces in batches till crisp and golden color.Note: The taste of the Chicken 65 depends mainly on the amount of time it gets marinated in the masala, it is best to marinate the chicken pieces the day before."
+      ],
+      "nutrition": {
+        "calories": 121,
+        "carbohydrates": 4,
+        "fiber": 1,
+        "sugar": 1,
+        "protein": 19,
+        "fat": 3,
+        "saturatedFat": 1,
+        "sodium": 701
+      },
+      "carbChoices": 0,
+      "tags": [
+        "gluten-free",
+        "low-carb",
+        "snack",
+        "appetizer"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/637876-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/G4XPLKBW/chicken-65-chicken-marinaded-in-traditional-indian-spices-and-deep-fried",
+      "gdValidation": {
+        "isValid": false,
+        "score": 50,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 4.44g (min: 10g)",
+            "Fiber too low: 0.54g (min: 2g)"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:39.259Z",
+      "spoonacularId": "637876",
+      "createdAt": "2025-07-16T16:58:55.901Z",
+      "updatedAt": "2025-07-16T16:58:55.901Z"
     },
     {
       "id": "spoonacular-639410",
@@ -1762,7 +2340,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:36.684Z",
-      "spoonacularId": "639825"
+      "spoonacularId": "639825",
+      "createdAt": "2025-07-16T16:58:55.902Z",
+      "updatedAt": "2025-07-16T16:58:55.902Z"
     },
     {
       "id": "spoonacular-640062",
@@ -1868,7 +2448,9 @@
         ]
       },
       "importedAt": "2025-07-09T02:10:44.077Z",
-      "spoonacularId": "640062"
+      "spoonacularId": "640062",
+      "createdAt": "2025-07-16T16:58:55.888Z",
+      "updatedAt": "2025-07-16T16:58:55.888Z"
     },
     {
       "id": "spoonacular-640077",
@@ -2004,7 +2586,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:33.922Z",
-      "spoonacularId": "640077"
+      "spoonacularId": "640077",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-640834",
@@ -2280,7 +2864,9 @@
         ]
       },
       "importedAt": "2025-07-11T17:37:55.362Z",
-      "spoonacularId": "641128"
+      "spoonacularId": "641128",
+      "createdAt": "2025-07-16T16:58:55.887Z",
+      "updatedAt": "2025-07-16T16:58:55.887Z"
     },
     {
       "id": "spoonacular-641653",
@@ -2396,7 +2982,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:44.181Z",
-      "spoonacularId": "641653"
+      "spoonacularId": "641653",
+      "createdAt": "2025-07-16T16:58:55.926Z",
+      "updatedAt": "2025-07-16T16:58:55.926Z"
     },
     {
       "id": "spoonacular-642129",
@@ -2554,7 +3142,9 @@
         ]
       },
       "importedAt": "2025-07-09T02:10:44.048Z",
-      "spoonacularId": "642129"
+      "spoonacularId": "642129",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
     },
     {
       "id": "spoonacular-642169",
@@ -2871,7 +3461,438 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:15.732Z",
-      "spoonacularId": "644205"
+      "spoonacularId": "644205",
+      "createdAt": "2025-07-16T16:58:55.890Z",
+      "updatedAt": "2025-07-16T16:58:55.890Z"
+    },
+    {
+      "id": "spoonacular-644674",
+      "title": "Gingerbread",
+      "description": "Gingerbread might be just the hor d'oeuvre you are searching for.  This lacto ovo vegetarian recipe serves 24 and costs 38 cents per serving.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 24,
+      "ingredients": [
+        {
+          "name": "Baking Powder",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 Tsp. Baking powder"
+        },
+        {
+          "name": "Baking Soda",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 Tsp. Baking soda"
+        },
+        {
+          "name": "Un-packed Brown Sugar",
+          "amount": 110,
+          "unit": "g",
+          "original": "1/2 c. Un-Packed brown sugar (add 1/4 cup more if you like sweet bread)"
+        },
+        {
+          "name": "Butter",
+          "amount": 75.667,
+          "unit": "g",
+          "original": "1/3 c. Butter (I used Earth Balance)"
+        },
+        {
+          "name": "Pumpkin",
+          "amount": 245,
+          "unit": "g",
+          "original": "1 c. Canned pumpkin"
+        },
+        {
+          "name": "Eggs",
+          "amount": 2,
+          "unit": "",
+          "original": "2 Eggs or Substitute"
+        },
+        {
+          "name": "Pastry",
+          "amount": 473.176,
+          "unit": "g",
+          "original": "2 c. Whole Wheat pastry divided"
+        },
+        {
+          "name": "Ground Cinnamon",
+          "amount": 1.5,
+          "unit": "tsps",
+          "original": "1 1/2 Tsp. Ground cinnamon"
+        },
+        {
+          "name": "Ground Cloves",
+          "amount": 0.25,
+          "unit": "tsps",
+          "original": "1/4 teaspoon ground cloves"
+        },
+        {
+          "name": "Ground Ginger",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons ground ginger"
+        },
+        {
+          "name": "Honey",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 Tbsp. Honey"
+        },
+        {
+          "name": "Molasses",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon molasses"
+        },
+        {
+          "name": "Turbinado Sugar",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 Tbsp. Turbinado Sugar for sprinkling on top"
+        },
+        {
+          "name": "Water",
+          "amount": 6,
+          "unit": "Tbsps",
+          "original": "6 tablespoons water"
+        }
+      ],
+      "instructions": [
+        "1. Preheat oven to 350Spray 4 Mini Loaf pans with non-cooking spray, set a side",
+        "2. Stir together 1 cup of flour, brown sugar, baking powder, cinnamon, ginger, cloves and baking soda.",
+        "3. Add the pumpkin, molasses, eggs, honey, water and butter.Beat with an electric mixer on low to medium speed until combined, about 30 seconds.Beat on medium to high speed for 2 minutes, scraping the sides of the bowl occasionally.",
+        "**Add the remaining flour; beat for 2 minutes or until mixed.Divide the batter evenly among the prepared pans.For the topping, sprinkle Turbinado Sugar evenly over all the batter in the pans. Optional Toppings**",
+        "1. Sprinkle Crystalized Ginger and Walnuts over other loafs",
+        "2. Bake in a 350 F oven for 35-40 minutes or until a wooden pick inserted near the center of each loaf comes out clean.Cool the loaves in the pans on wire racks for 10 minutes.",
+        "**Remove the loaves from the pans. Cool thoroughly on the wire racks.If you want a frosting on the bread (Recipe from Oh She Glows)**",
+        "1. Mix 1 3/4 cups powdered sugar,  1/2 Cups of butter, 1 tsp vanilla, 1 Tbsp of Pumpkin Spice.  Beat together in a bowl until it is the mixture you like.  If it is to thick add milk to water it down.  I served the frosting as a side, for those who are watching there calories.  he heServing Size: 4 Mini Loafs",
+        "2. Number of Servings: 24 (6 slices per loaf)Calories per serving:  85,  Fat:  2.6,  Sodium:  84,  Potassium:  119,  Carbs:  15,  Fiber:  2,  Sugar:  6.6,  Protein:  2"
+      ],
+      "nutrition": {
+        "calories": 168,
+        "carbohydrates": 17,
+        "fiber": 1,
+        "sugar": 7,
+        "protein": 2,
+        "fat": 10,
+        "saturatedFat": 4,
+        "sodium": 144
+      },
+      "carbChoices": 1,
+      "tags": [
+        "vegetarian",
+        "low-carb",
+        "snack",
+        "appetizer"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/644674-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/76DG8T7W/gingerbread",
+      "gdValidation": {
+        "isValid": false,
+        "score": 55,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": false,
+          "adequateFiber": false,
+          "warnings": [
+            "Protein too low: 2.07g (min: 5g)",
+            "Fiber too low: 0.71g (min: 2g)"
+          ],
+          "adjustmentSuggestions": [
+            "Add lean meat, eggs, Greek yogurt, or legumes",
+            "Add vegetables, whole grains, or beans"
+          ]
+        },
+        "warnings": [
+          "Add lean meat, eggs, Greek yogurt, or legumes",
+          "Add vegetables, whole grains, or beans"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:39.318Z",
+      "spoonacularId": "644674",
+      "createdAt": "2025-07-16T16:58:55.889Z",
+      "updatedAt": "2025-07-16T16:58:55.889Z"
+    },
+    {
+      "id": "spoonacular-645988",
+      "title": "Guacamole",
+      "description": "Guacamole takes roughly 45 minutes from beginning to end.  Watching your figure.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Haas Avocados",
+          "amount": 2,
+          "unit": "large",
+          "original": "2 large ripe Haas avocados"
+        },
+        {
+          "name": "Onion",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons finely chopped onion"
+        },
+        {
+          "name": "Jalapeno Pepper",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon finely chopped jalapeno pepper (seeds removed)"
+        },
+        {
+          "name": "Cilantro",
+          "amount": 4,
+          "unit": "g",
+          "original": "1/4 cup chopped fresh cilantro"
+        },
+        {
+          "name": "Salt",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon salt"
+        },
+        {
+          "name": "Pepper",
+          "amount": 0.125,
+          "unit": "tsps",
+          "original": "1/8 teaspoon freshly ground black pepper"
+        },
+        {
+          "name": "Lime Juice",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "tablespoon fresh lime juice"
+        },
+        {
+          "name": "Basil",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon chopped fresh basil"
+        },
+        {
+          "name": "Oregano",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon chopped fresh oregano"
+        }
+      ],
+      "instructions": [
+        "1. Cut the avocados in half lengthwise. Drive chef's knife into large pit and twist to remove.  Scoop the avocado out from the skin into a bowl.",
+        "2. Mash the avocado with a fork, add in onion and cilantro, oregano and basil..",
+        "3. Mix to incorporate.",
+        "4. Season to taste with salt, pepper and lime juice.",
+        "5. Serve immediately or chill.  If you are not going to eat the guacamole immediately, store in refrigerator with plastic film wrap pressed onto the guacamole."
+      ],
+      "nutrition": {
+        "calories": 167,
+        "carbohydrates": 10,
+        "fiber": 7,
+        "sugar": 1,
+        "protein": 2,
+        "fat": 15,
+        "saturatedFat": 2,
+        "sodium": 299
+      },
+      "carbChoices": 1,
+      "tags": [
+        "vegetarian",
+        "vegan",
+        "gluten-free",
+        "dairy-free",
+        "high-fiber",
+        "low-carb",
+        "snack",
+        "appetizer",
+        "mexican"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/645988-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/X55JHXYZ/guacamole",
+      "gdValidation": {
+        "isValid": false,
+        "score": 75,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": false,
+          "adequateFiber": true,
+          "warnings": [
+            "Protein too low: 2.19g (min: 5g)",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add lean meat, eggs, Greek yogurt, or legumes"
+          ]
+        },
+        "warnings": [
+          "Add lean meat, eggs, Greek yogurt, or legumes"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:36.595Z",
+      "spoonacularId": "645988",
+      "createdAt": "2025-07-16T16:58:55.889Z",
+      "updatedAt": "2025-07-16T16:58:55.889Z"
+    },
+    {
+      "id": "spoonacular-703177",
+      "title": "Hoagie Slider Dip",
+      "description": "Hoagie Slider Dip might be a good recipe to expand your hor d'oeuvre collection.  This recipe serves 6 and costs $2.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 6,
+      "ingredients": [
+        {
+          "name": "Basil",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "½ tsp. basil"
+        },
+        {
+          "name": "Deli Ham",
+          "amount": 226.796,
+          "unit": "g",
+          "original": "½ lb deli sliced ham"
+        },
+        {
+          "name": "Deli Provolone",
+          "amount": 226.796,
+          "unit": "g",
+          "original": "½ lb deli sliced provolone"
+        },
+        {
+          "name": "Deli Turkey",
+          "amount": 226.796,
+          "unit": "g",
+          "original": "½ lb deli sliced turkey"
+        },
+        {
+          "name": "A Head Of Lettuce",
+          "amount": 0.5,
+          "unit": "",
+          "original": "½ a head of lettuce, diced"
+        },
+        {
+          "name": "Mayonnaise",
+          "amount": 168,
+          "unit": "ml",
+          "original": "¾ cup mayonnaise"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 54,
+          "unit": "ml",
+          "original": "¼ cup olive oil"
+        },
+        {
+          "name": "Onion",
+          "amount": 1,
+          "unit": "small",
+          "original": "1 onion, diced small"
+        },
+        {
+          "name": "Oregano",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "½ tsp. oregano"
+        },
+        {
+          "name": "Peppers",
+          "amount": 226.796,
+          "unit": "g",
+          "original": "8 oz. of sweet and hot peppers (pickled)"
+        },
+        {
+          "name": "Pepper Flakes",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "½ tsp. red pepper flakes"
+        },
+        {
+          "name": "Deli Genoa Salami",
+          "amount": 226.796,
+          "unit": "g",
+          "original": "½ lb deli sliced genoa salami"
+        },
+        {
+          "name": "I Of Hoagie Buns",
+          "amount": 1,
+          "unit": "bag",
+          "original": "i bag of hoagie buns, cut into slider sized pieces"
+        },
+        {
+          "name": "Tomato",
+          "amount": 1,
+          "unit": "",
+          "original": "1 tomato, diced"
+        }
+      ],
+      "instructions": [
+        "1. Dice your meats and cheese into small bite size pieces and add to a large mixing bowl.",
+        "2. Add the rest of the ingredients (except for the buns) and mix well until everything is evenly distributed.Cover and refrigerate until serving.",
+        "3. Serve cold with hoagie slider pieces on the side.Recipe adapted from: Mary Ellen's Hoagie Dip"
+      ],
+      "nutrition": {
+        "calories": 679,
+        "carbohydrates": 8,
+        "fiber": 2,
+        "sugar": 4,
+        "protein": 32,
+        "fat": 57,
+        "saturatedFat": 14,
+        "sodium": 2282
+      },
+      "carbChoices": 1,
+      "tags": [
+        "dairy-free",
+        "high-protein",
+        "low-carb",
+        "snack",
+        "appetizer"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/703177-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.pinkwhen.com/hoagie-dip/",
+      "gdValidation": {
+        "isValid": false,
+        "score": 45,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 8.41g (min: 10g)",
+            "Fiber too low: 1.68g (min: 2g)",
+            "High sugar content: 4.45g (53% of carbs)",
+            "High saturated fat: 13.92g"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Choose options with less added sugar",
+            "Choose leaner protein sources or reduce cheese/butter"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Choose options with less added sugar",
+          "Choose leaner protein sources or reduce cheese/butter"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:41.872Z",
+      "spoonacularId": "703177",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
     },
     {
       "id": "spoonacular-1697547",
@@ -3040,7 +4061,124 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:15.782Z",
-      "spoonacularId": "1697547"
+      "spoonacularId": "1697547",
+      "createdAt": "2025-07-16T16:58:55.927Z",
+      "updatedAt": "2025-07-16T16:58:55.927Z"
+    },
+    {
+      "id": "spoonacular-631751",
+      "title": "Hot Crab Dip",
+      "description": "Hot Crab Dip takes about 45 minutes from beginning to end.  For $1.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Cream Cheese",
+          "amount": 226.796,
+          "unit": "g",
+          "original": "8 ounces pkg cream cheese, softened"
+        },
+        {
+          "name": "Milk",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon milk"
+        },
+        {
+          "name": "Crabmeat",
+          "amount": 1,
+          "unit": "can",
+          "original": "1 can crabmeat, flaked"
+        },
+        {
+          "name": "Onion",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons finely chopped onion"
+        },
+        {
+          "name": "Horseradish",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon horseradish"
+        },
+        {
+          "name": "Breadcrumbs",
+          "amount": 13.5,
+          "unit": "ml",
+          "original": "1/8 cup breadcrumbs"
+        },
+        {
+          "name": "Butter",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons butter, cut into small bits"
+        },
+        {
+          "name": "Salt",
+          "amount": 4,
+          "unit": "servings",
+          "original": "salt, pepper"
+        }
+      ],
+      "instructions": [
+        "1. Add all ingredients to softened cream cheese, mix with fork",
+        "2. Place in small casserole dish",
+        "3. Cover with breadcrumbs and butter",
+        "4. Bake 375 for 15 minutes"
+      ],
+      "nutrition": {
+        "calories": 293,
+        "carbohydrates": 6,
+        "fiber": 0,
+        "sugar": 3,
+        "protein": 10,
+        "fat": 26,
+        "saturatedFat": 15,
+        "sodium": 428
+      },
+      "carbChoices": 0,
+      "tags": [
+        "low-carb",
+        "snack",
+        "appetizer"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/631751-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/5FF8FJ23/holiday-hot-crabmeat-dip",
+      "gdValidation": {
+        "isValid": false,
+        "score": 40,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 6.34g (min: 10g)",
+            "Fiber too low: 0.28g (min: 2g)",
+            "High saturated fat: 15.23g",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans",
+            "Choose leaner protein sources or reduce cheese/butter"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans",
+          "Choose leaner protein sources or reduce cheese/butter"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:39.279Z",
+      "spoonacularId": "631751",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
     },
     {
       "id": "spoonacular-647636",
@@ -3319,7 +4457,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:43.953Z",
-      "spoonacularId": "1454187"
+      "spoonacularId": "1454187",
+      "createdAt": "2025-07-16T16:58:55.927Z",
+      "updatedAt": "2025-07-16T16:58:55.927Z"
     },
     {
       "id": "spoonacular-648339",
@@ -3471,6 +4611,366 @@
         "_seconds": 1751911159,
         "_nanoseconds": 911000000
       }
+    },
+    {
+      "id": "spoonacular-648677",
+      "title": "Kadaifi",
+      "description": "Kadaifi might be just the hor d'oeuvre you are searching for.  One serving contains 336 calories, 3g of protein, and 27g of fat.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 24,
+      "ingredients": [
+        {
+          "name": "Brandy",
+          "amount": 3,
+          "unit": "Tbsps",
+          "original": "3 tbsp brandy"
+        },
+        {
+          "name": "Breadcrumbs",
+          "amount": 36,
+          "unit": "ml",
+          "original": "1/3 cup. breadcrumbs"
+        },
+        {
+          "name": "Butter",
+          "amount": 250,
+          "unit": "g",
+          "original": "250 grams butter"
+        },
+        {
+          "name": "Cinnamon",
+          "amount": 1.5,
+          "unit": "tsps",
+          "original": "1 1/2 tsp cinnamon"
+        },
+        {
+          "name": "Kantaifi Pastry",
+          "amount": 500,
+          "unit": "gr",
+          "original": "500 gr. kantaifi pastry"
+        },
+        {
+          "name": "Glucose",
+          "amount": 200,
+          "unit": "ml",
+          "original": "1/2 cup. glucose"
+        },
+        {
+          "name": "Lemon Zest",
+          "amount": 1,
+          "unit": "",
+          "original": "zest of 1 lemon"
+        },
+        {
+          "name": "Margarine",
+          "amount": 150,
+          "unit": "g",
+          "original": "150 g. margarine"
+        },
+        {
+          "name": "Sugar",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon Sugar"
+        },
+        {
+          "name": "Walnuts",
+          "amount": 200,
+          "unit": "g",
+          "original": "200 grams crushed walnuts"
+        },
+        {
+          "name": "Water",
+          "amount": 473.176,
+          "unit": "ml",
+          "original": "2 cups water"
+        }
+      ],
+      "instructions": [
+        "1. Divide kantaifi with our fingers very well, do not let knots, and leave it spread on a surface for 20-30 minutes, until you prepare the filling.",
+        "2. Cut into chunks or chopped the nuts in multy and mix well all the filling ingredients and set aside.",
+        "3. Spread in pan (round, 30 cm) the half of kantaifi pastry, trim on top the filling and spread evenly. On top of the filling spread the remaining half kantaifi. Melt the butter with margarine and pour over the cake evenly wet everywhere.Cover the pan with foil and place in preheated oven.",
+        "4. Bake at 175 degrees for half an hour, then remove the foil and bake for another half hour. Kantaifi should be well browned, otherwise it becomes like mud when you put up the syrup.Shortly before removing the cake from the oven prepare the syrup. Boil all ingredients for the syrup for about 8 minutes and using a ladle pour the syrup on the cake just out of the ove. Both kantaifi and syrup should be hot.Allow the cake several hours to drink all the syrup and then remove to a platter. Do not cover it to remain crisp."
+      ],
+      "nutrition": {
+        "calories": 336,
+        "carbohydrates": 21,
+        "fiber": 1,
+        "sugar": 4,
+        "protein": 3,
+        "fat": 27,
+        "saturatedFat": 9,
+        "sodium": 201
+      },
+      "carbChoices": 1,
+      "tags": [
+        "snack",
+        "appetizer"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/648677-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/LKK4YVLR/kadaifi",
+      "gdValidation": {
+        "isValid": false,
+        "score": 10,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": false,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too high: 20.85g (max: 20g)",
+            "Protein too low: 3.14g (min: 5g)",
+            "Fiber too low: 1.05g (min: 2g)",
+            "High saturated fat: 8.94g",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Reduce portion size or remove some carb sources",
+            "Add lean meat, eggs, Greek yogurt, or legumes",
+            "Add vegetables, whole grains, or beans",
+            "Choose leaner protein sources or reduce cheese/butter"
+          ]
+        },
+        "warnings": [
+          "Reduce portion size or remove some carb sources",
+          "Add lean meat, eggs, Greek yogurt, or legumes",
+          "Add vegetables, whole grains, or beans",
+          "Choose leaner protein sources or reduce cheese/butter"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:34.047Z",
+      "spoonacularId": "648677",
+      "createdAt": "2025-07-16T16:58:55.905Z",
+      "updatedAt": "2025-07-16T16:58:55.905Z"
+    },
+    {
+      "id": "spoonacular-649012",
+      "title": "Kolaches",
+      "description": "You can never have too many hor d'oeuvre recipes, so give Kolaches a try.  One portion of this dish contains roughly 1g of protein, 7g of fat, and a total of 113 calories.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 48,
+      "ingredients": [
+        {
+          "name": "Butter",
+          "amount": 226.796,
+          "unit": "g",
+          "original": "1/2 pound Butter (at room temperature)"
+        },
+        {
+          "name": "Egg Yolks",
+          "amount": 2,
+          "unit": "",
+          "original": "2 egg yolks, slightly-beaten"
+        },
+        {
+          "name": "Flour",
+          "amount": 375,
+          "unit": "g",
+          "original": "3 cups Flour"
+        },
+        {
+          "name": "Milk",
+          "amount": 488,
+          "unit": "ml",
+          "original": "2 cups milk"
+        },
+        {
+          "name": "Poppy-seed Filling",
+          "amount": 1,
+          "unit": "can",
+          "original": "1 can jam, fruit or poppy-seed filling"
+        },
+        {
+          "name": "Salt",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons salt"
+        },
+        {
+          "name": "Shortening",
+          "amount": 102.5,
+          "unit": "g",
+          "original": "1/2 cup shortening"
+        },
+        {
+          "name": "Sugar",
+          "amount": 283.495,
+          "unit": "g",
+          "original": "10 ounces sugar"
+        },
+        {
+          "name": "Warm Water",
+          "amount": 118.294,
+          "unit": "ml",
+          "original": "1/2 cup warm water"
+        },
+        {
+          "name": "Packas Yeast",
+          "amount": 2,
+          "unit": "",
+          "original": "2 packas yeast"
+        }
+      ],
+      "instructions": [
+        "1. Sprinkle 1 tablespoon sugar over the yeast and dissolve in lukewarm water. Set aside.",
+        "2. Heat the milk in a small saucepan and dissolve the shortening in it. Cool to lukewarm; then add salt, egg yolks, and sugar.",
+        "3. Combine milk/egg mixture and yeast mixture.",
+        "4. Add flour gradually andwork dough by hand or with a mixer until glossy.  Keep it a little sticky, if possible.Cover, place in a warm, draft-free place, and let rise until doublein size, 45 minutes to one hour.After the dough has risen, punch it down and knead lightly. Divide into egg-sized portions with a spoon and form balls.",
+        "5. Place on well-oiled baking pans about an inch apart and butter well.",
+        "6. Let rise  about 15 minutes, then make indentations in the dough balls for the filling. Fill each indention with a large teaspoon filling. Make the Popsika with by combining 1/2 cup sugar, 1/4 cup flour, 1 teaspoon cinnamon, and 2 tablespoons of melted butter until the mixture resembles crumbs.",
+        "7. Sprinkle the Popsika over the filling.",
+        "8. Place pans of kolache in a warm, draft free place, and allow todouble in size again, about 45 minutes to one hour.",
+        "9. Place in an oven preheated to 375 degrees.",
+        "10. Bake until golden brown, then remove the kolaches from the oven. Cool slightly, remove from pans, and cool on wire racks."
+      ],
+      "nutrition": {
+        "calories": 113,
+        "carbohydrates": 12,
+        "fiber": 0,
+        "sugar": 6,
+        "protein": 1,
+        "fat": 7,
+        "saturatedFat": 3,
+        "sodium": 132
+      },
+      "carbChoices": 1,
+      "tags": [
+        "low-carb",
+        "snack",
+        "appetizer"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/649012-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/4KCQQTMJ/kolaches",
+      "gdValidation": {
+        "isValid": false,
+        "score": 50,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": false,
+          "adequateFiber": false,
+          "warnings": [
+            "Protein too low: 1.32g (min: 5g)",
+            "Fiber too low: 0g (min: 2g)",
+            "High sugar content: 6.41g (52% of carbs)"
+          ],
+          "adjustmentSuggestions": [
+            "Add lean meat, eggs, Greek yogurt, or legumes",
+            "Add vegetables, whole grains, or beans",
+            "Choose options with less added sugar"
+          ]
+        },
+        "warnings": [
+          "Add lean meat, eggs, Greek yogurt, or legumes",
+          "Add vegetables, whole grains, or beans",
+          "Choose options with less added sugar"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:36.904Z",
+      "spoonacularId": "649012",
+      "createdAt": "2025-07-16T16:58:55.888Z",
+      "updatedAt": "2025-07-16T16:58:55.888Z"
+    },
+    {
+      "id": "spoonacular-1697761",
+      "title": "Last-Second Dip That Everyone Will Crave",
+      "description": "Last-Second Dip That Everyone Will Crave is a gluten free hor d'oeuvre.  For $2.",
+      "category": "snack",
+      "prepTime": 5,
+      "cookTime": 0,
+      "totalTime": 5,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Cheddar Cheese",
+          "amount": 226.796,
+          "unit": "g",
+          "original": "8 oz cheddar cheese (shredded)"
+        },
+        {
+          "name": "Bacon Bits",
+          "amount": 118.294,
+          "unit": "ml",
+          "original": "1/2 cup bacon bits (crumbled)"
+        },
+        {
+          "name": "Green Onions",
+          "amount": 100,
+          "unit": "g",
+          "original": "1 cup green onions (chopped)"
+        },
+        {
+          "name": "Mayonnaise",
+          "amount": 336,
+          "unit": "ml",
+          "original": "1-1/2 cups mayonnaise"
+        },
+        {
+          "name": "Almonds",
+          "amount": 71.5,
+          "unit": "g",
+          "original": "1/2 cup almonds (sliced)"
+        }
+      ],
+      "instructions": [
+        "1. Put everything in a bowl and mix.   Done. "
+      ],
+      "nutrition": {
+        "calories": 1055,
+        "carbohydrates": 16,
+        "fiber": 6,
+        "sugar": 2,
+        "protein": 28,
+        "fat": 99,
+        "saturatedFat": 23,
+        "sodium": 1432
+      },
+      "carbChoices": 1,
+      "tags": [
+        "gluten-free",
+        "quick",
+        "15-minutes",
+        "high-protein",
+        "high-fiber",
+        "low-carb",
+        "snack",
+        "appetizer"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/1697761-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://maplewoodroad.com/last-second-dip/",
+      "gdValidation": {
+        "isValid": true,
+        "score": 100,
+        "details": {
+          "isValid": true,
+          "carbsInRange": true,
+          "adequateProtein": true,
+          "adequateFiber": true,
+          "warnings": [
+            "High saturated fat: 22.6g",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Choose leaner protein sources or reduce cheese/butter"
+          ]
+        },
+        "warnings": [
+          "Choose leaner protein sources or reduce cheese/butter"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:41.819Z",
+      "spoonacularId": "1697761",
+      "createdAt": "2025-07-16T16:58:55.890Z",
+      "updatedAt": "2025-07-16T16:58:55.890Z"
     },
     {
       "id": "spoonacular-1646941",
@@ -3629,7 +5129,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:54.868Z",
-      "spoonacularId": "1646941"
+      "spoonacularId": "1646941",
+      "createdAt": "2025-07-16T16:58:55.900Z",
+      "updatedAt": "2025-07-16T16:58:55.900Z"
     },
     {
       "id": "spoonacular-651958",
@@ -3927,7 +5429,140 @@
         ]
       },
       "importedAt": "2025-07-11T16:02:36.691Z",
-      "spoonacularId": "652078"
+      "spoonacularId": "652078",
+      "createdAt": "2025-07-16T16:58:55.887Z",
+      "updatedAt": "2025-07-16T16:58:55.887Z"
+    },
+    {
+      "id": "spoonacular-652543",
+      "title": "Muhammara",
+      "description": "Need a dairy free, lacto ovo vegetarian, and vegan hor d'oeuvre.  Muhammara could be a super recipe to try.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 16,
+      "ingredients": [
+        {
+          "name": "Chilies",
+          "amount": 2,
+          "unit": "small",
+          "original": "2 smalls Hot chilies"
+        },
+        {
+          "name": "Cumin",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon Cumin"
+        },
+        {
+          "name": "Lemon Juice",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon Lemon juice"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": 2,
+          "unit": "tsps",
+          "original": "2 teaspoons Olive oil"
+        },
+        {
+          "name": "Pitas",
+          "amount": 2,
+          "unit": "large",
+          "original": "2 large Pitas cut into 8 wedges, and toasted"
+        },
+        {
+          "name": "Pomegranate Molasses",
+          "amount": 3,
+          "unit": "Tbsps",
+          "original": "3 tablespoons Pomegranate Molasses or more to taste"
+        },
+        {
+          "name": "Bell Peppers",
+          "amount": 1.134,
+          "unit": "kgs",
+          "original": "2 1/2 pounds Red bell peppers"
+        },
+        {
+          "name": "Salt",
+          "amount": 16,
+          "unit": "servings",
+          "original": "Salt to taste"
+        },
+        {
+          "name": "Sugar",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon Sugar"
+        },
+        {
+          "name": "Walnuts - Coarsely Ground",
+          "amount": 175.5,
+          "unit": "g",
+          "original": "1 1/2 cups Walnuts - (abt 6 oz) coarsely ground"
+        },
+        {
+          "name": "Wheat Crackers",
+          "amount": 118.294,
+          "unit": "g",
+          "original": "1/2 cup Wheat crackers crumbled"
+        }
+      ],
+      "instructions": [
+        "1. Preheat the grill. Roast the peppers and chiles over the grill or open flame until they are blistered, about 8 minutes.",
+        "2. Place in a bowl, cover with plastic wrap and let steam for 10 minutes to loosen the skin. Peel off the skin and remove the seeds. Pat the peppers dry with a paper towel.In the work bowl of your food processor, combine and process the crackers, walnuts, lemon juice, pomegranate molasses, cumin, and sugar, until smooth.",
+        "3. Add the red peppers and process until creamy. With the machine running, add the olive oil in a thin stream.",
+        "4. Add the chile pepper and salt to taste. If it is too thick, thin with a few tablespoons of water.Refrigerate overnight to allow the flavors to mellow.",
+        "5. Serve with the toasted pita wedges.This recipe yields about 3 cups and provides for 16 appetizer servings."
+      ],
+      "nutrition": {
+        "calories": 159,
+        "carbohydrates": 18,
+        "fiber": 3,
+        "sugar": 6,
+        "protein": 4,
+        "fat": 9,
+        "saturatedFat": 1,
+        "sodium": 292
+      },
+      "carbChoices": 1,
+      "tags": [
+        "vegetarian",
+        "vegan",
+        "dairy-free",
+        "low-carb",
+        "snack",
+        "appetizer"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/652543-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/2NK66V23/muhammara",
+      "gdValidation": {
+        "isValid": false,
+        "score": 75,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": false,
+          "adequateFiber": true,
+          "warnings": [
+            "Protein too low: 3.64g (min: 5g)",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add lean meat, eggs, Greek yogurt, or legumes"
+          ]
+        },
+        "warnings": [
+          "Add lean meat, eggs, Greek yogurt, or legumes"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:36.604Z",
+      "spoonacularId": "652543",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
     },
     {
       "id": "spoonacular-652610",
@@ -4053,7 +5688,9 @@
         ]
       },
       "importedAt": "2025-07-11T16:00:44.215Z",
-      "spoonacularId": "652610"
+      "spoonacularId": "652610",
+      "createdAt": "2025-07-16T16:58:55.886Z",
+      "updatedAt": "2025-07-16T16:58:55.886Z"
     },
     {
       "id": "spoonacular-655316",
@@ -4605,7 +6242,333 @@
         ]
       },
       "importedAt": "2025-07-11T15:57:33.296Z",
-      "spoonacularId": "658573"
+      "spoonacularId": "658573",
+      "createdAt": "2025-07-16T16:58:55.904Z",
+      "updatedAt": "2025-07-16T16:58:55.904Z"
+    },
+    {
+      "id": "spoonacular-659581",
+      "title": "Scotch Eggs",
+      "description": "The recipe Scotch Eggs can be made in approximately 45 minutes.  This recipe serves 8.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "Bulk Sausage",
+          "amount": 453.592,
+          "unit": "g",
+          "original": "1 pound bulk sausage"
+        },
+        {
+          "name": "Corn Meal",
+          "amount": 108,
+          "unit": "ml",
+          "original": "1 cup bread crumbs or corn meal"
+        },
+        {
+          "name": "Eggs",
+          "amount": 9,
+          "unit": "",
+          "original": "9 eggs"
+        }
+      ],
+      "instructions": [
+        "1. Divide sausage into 8 portions. On a lightly crumb sprinkled surface, pat out each portion to about 1/8 inch thickness. Wrap 1 sausage portion completely around 1 hard boiled egg, pressing edges together to seal. Repeat with remaining sausage and hard boiled eggs.Dip sausage-covered eggs in 1 beaten egg and then roll in breadcrumbs.Deep fry or place on baking sheet and bake in a 375 degree oven for 20 minutes until lightly browned."
+      ],
+      "nutrition": {
+        "calories": 296,
+        "carbohydrates": 10,
+        "fiber": 1,
+        "sugar": 1,
+        "protein": 17,
+        "fat": 20,
+        "saturatedFat": 7,
+        "sodium": 530
+      },
+      "carbChoices": 1,
+      "tags": [
+        "dairy-free",
+        "low-carb",
+        "snack",
+        "appetizer"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/659581-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/SD57XNHR/scotch-eggs",
+      "gdValidation": {
+        "isValid": false,
+        "score": 85,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Fiber too low: 0.61g (min: 2g)"
+          ],
+          "adjustmentSuggestions": [
+            "Add vegetables, whole grains, or beans"
+          ]
+        },
+        "warnings": [
+          "Add vegetables, whole grains, or beans"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:39.268Z",
+      "spoonacularId": "659581",
+      "createdAt": "2025-07-16T16:58:55.903Z",
+      "updatedAt": "2025-07-16T16:58:55.903Z"
+    },
+    {
+      "id": "spoonacular-660054",
+      "title": "Siew Mai",
+      "description": "Siew Mai is a dairy free recipe with 40 servings.  This hor d'oeuvre has 129 calories, 7g of protein, and 6g of fat per serving.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 40,
+      "ingredients": [
+        {
+          "name": "Wonton Wrappers",
+          "amount": 40,
+          "unit": "",
+          "original": "40 to 50 large wonton wrappers"
+        },
+        {
+          "name": "Fatty Pork",
+          "amount": 700,
+          "unit": "g",
+          "original": "700g minced fatty pork (I used pork neck steaks)"
+        },
+        {
+          "name": "Corn Starch",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons corn starch"
+        },
+        {
+          "name": "Salt",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon salt"
+        },
+        {
+          "name": "Ground Pepper",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon ground white pepper"
+        },
+        {
+          "name": "Sugar",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon sugar"
+        },
+        {
+          "name": "Shaoxing Huatiao Wine",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons Shaoxing Huatiao wine"
+        },
+        {
+          "name": "Worcestershire Sauce",
+          "amount": 1,
+          "unit": "tsp",
+          "original": "1 teaspoon Maggi Seasoning Sauce or Worcestershire sauce"
+        },
+        {
+          "name": "Sesame Oil",
+          "amount": 2,
+          "unit": "Tbsps",
+          "original": "2 tablespoons sesame oil"
+        },
+        {
+          "name": "Water Chestnuts",
+          "amount": 80,
+          "unit": "g",
+          "original": "80g peeled water chestnuts (canned)"
+        },
+        {
+          "name": "Mushrooms",
+          "amount": 4,
+          "unit": "large",
+          "original": "4 large Chinese mushrooms (soaked for 2 hours)"
+        },
+        {
+          "name": "Shrimp",
+          "amount": 400,
+          "unit": "g",
+          "original": "400g whole shrimp (cooked, peeled and de-veined)"
+        },
+        {
+          "name": "Carrot",
+          "amount": 1,
+          "unit": "small",
+          "original": "1 small carrot or 3 tablespoons of salmon roe or 3 tablespoons of salted egg yolk"
+        },
+        {
+          "name": "Glutinous Rice",
+          "amount": 200,
+          "unit": "g",
+          "original": "200g raw glutinous rice"
+        },
+        {
+          "name": "Shallots",
+          "amount": 40,
+          "unit": "g",
+          "original": "40g shallots (sliced)"
+        },
+        {
+          "name": "Ginger",
+          "amount": 1,
+          "unit": "small piece",
+          "original": "1 small piece of ginger (minced)"
+        },
+        {
+          "name": "Cooking Oil",
+          "amount": 4,
+          "unit": "Tbsps",
+          "original": "4 tablespoons cooking oil"
+        },
+        {
+          "name": "Shrimps",
+          "amount": 30,
+          "unit": "g",
+          "original": "30g dried shrimps (soaked overnight in boiling water, chopped)"
+        },
+        {
+          "name": "Scallops",
+          "amount": 20,
+          "unit": "g",
+          "original": "20g dried scallops (steamed for 20 mins, remove intestine if any, sliced)"
+        },
+        {
+          "name": "Mushrooms",
+          "amount": 5,
+          "unit": "",
+          "original": "5 pieces Chinese mushrooms (soaked and sliced)"
+        },
+        {
+          "name": "Water",
+          "amount": 3,
+          "unit": "Tbsps",
+          "original": "3 tablespoons water (use the water used to soak the scallops)"
+        },
+        {
+          "name": "Soy Sauce",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon light soy sauce"
+        },
+        {
+          "name": "Salt",
+          "amount": 0.5,
+          "unit": "tsps",
+          "original": "1/2 teaspoon salt"
+        },
+        {
+          "name": "Oyster Sauce",
+          "amount": 1,
+          "unit": "tbsp",
+          "original": "1 tablespoon oyster sauce"
+        },
+        {
+          "name": "Ground Pepper",
+          "amount": 40,
+          "unit": "servings",
+          "original": "ground white pepper to taste"
+        },
+        {
+          "name": "Lap Cheong",
+          "amount": 2,
+          "unit": "sticks",
+          "original": "2 sticks of lap cheong (Chinese sausage)"
+        },
+        {
+          "name": "Lap Cheong",
+          "amount": 2,
+          "unit": "sticks",
+          "original": "2 sticks of lap cheong (Chinese sausage)"
+        }
+      ],
+      "instructions": [
+        "1. To prepare the pork filling -",
+        "2. Mince 700g of pork and place them in a large mixing bowl.",
+        "3. Add 2 tablespoons of corn starch, 1 teaspoon of salt, 1 teaspoon of ground white pepper,  1/2 teaspoon of sugar, 1 teaspoon of Maggie Seasoning Sauce or Worcestershire sauce, 2 tablespoons of Shaoxing Huatiao wine and 2 tablespoons of sesame oil.",
+        "4. Roughly chop 80g of water chestnuts into fine pieces. I used canned ones.",
+        "5. Chop 4 large Chinese mushrooms into fine pieces too.",
+        "6. Add the water chestnuts and mushrooms to the pork mixture.",
+        "7. Mix all the ingredients well to combine.",
+        "8. Finely dice a small carrot. These will be placed on top each pork siew mai to garnish. Use salmon roe or salted egg yolk if preferred.",
+        "9. Set aside the pork mixture and the diced carrots till ready to wrap dumplings.",
+        "10. To make the glutinous rice filling -",
+        "11. Soak 2 lap cheongs (Chinese sausages) in boiling water until the skin is separated from the meat.",
+        "12. Remove the skin from the lap cheong and cut them into small dices.",
+        "13. In a large sauce pan over medium-high heat, pan fry the lap cheong dices until they are golden but not brown. They should be a lovely red.",
+        "14. Follow the instructions at Glutinous Rice in Lotus Leaf (http://cooking.storyofbing.com/2010/07/glutinous-rice-in-lotus-leaf-2/) and prepare the glutinous rice. Once the rice and other ingredients are stir fried till fragrant, add the pieces of fried lap cheong and set aside to cool.",
+        "15. Prepare the ingredients necessary for the wrapping of the dumplings.",
+        "16. Start by placing a sheet of wonton wrapper on a flat surface.",
+        "17. Place a small teaspoon of filling in the centre of the wonton wrapper.",
+        "18. Dap finger in some water and gently wet the sides of the wonton wrapper.",
+        "19. Gather the wonton wrapper with the filling in the palm of hand and squeeze gently while folding the wrapper skin upwards and against the filling so that the wonton wrapper wraps the filling tightly.",
+        "20. Make sure the dumplings are tight. Otherwise they may fall apart while being steamed. Use more water to seal them if necessary.",
+        "21. Place a large shrimp on the top of each pork siew mai.",
+        "22. Add a few pieces of chopped carrot or salmon roe or salted egg yolk to add a fresh colour to the dumpling.",
+        "23. Do the same for the glutinous rice siew mai, adding more lap cheong pieces on the top if preferred.",
+        "24. Place the dumplings in a steamer lined with baking paper.",
+        "25. Cut some holes through the baking paper to let the steam through.",
+        "26. Place the steamer over boiling water for 14-15 minutes or until the filling is cooked.",
+        "27. Serve hot.",
+        "28. Uncooked dumplings may be frozen and steamed at a later date. Dust some flour in a container so that the dumplings wont stick to it."
+      ],
+      "nutrition": {
+        "calories": 129,
+        "carbohydrates": 11,
+        "fiber": 1,
+        "sugar": 0,
+        "protein": 7,
+        "fat": 6,
+        "saturatedFat": 2,
+        "sodium": 200
+      },
+      "carbChoices": 1,
+      "tags": [
+        "dairy-free",
+        "low-carb",
+        "snack",
+        "appetizer"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/660054-556x370.",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/3NFMV3BW/siew-mai",
+      "gdValidation": {
+        "isValid": false,
+        "score": 80,
+        "details": {
+          "isValid": false,
+          "carbsInRange": true,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Fiber too low: 1.04g (min: 2g)",
+            "No lean protein source detected"
+          ],
+          "adjustmentSuggestions": [
+            "Add vegetables, whole grains, or beans"
+          ]
+        },
+        "warnings": [
+          "Add vegetables, whole grains, or beans"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:36.612Z",
+      "spoonacularId": "660054",
+      "createdAt": "2025-07-16T16:58:55.927Z",
+      "updatedAt": "2025-07-16T16:58:55.927Z"
     },
     {
       "id": "spoonacular-798400",
@@ -4770,7 +6733,9 @@
         ]
       },
       "importedAt": "2025-07-09T02:10:46.475Z",
-      "spoonacularId": "798400"
+      "spoonacularId": "798400",
+      "createdAt": "2025-07-16T16:58:55.884Z",
+      "updatedAt": "2025-07-16T16:58:55.884Z"
     },
     {
       "id": "spoonacular-716195",
@@ -4962,6 +6927,113 @@
         "_seconds": 1751903312,
         "_nanoseconds": 429000000
       }
+    },
+    {
+      "id": "spoonacular-663933",
+      "title": "Tuna mousse dip",
+      "description": "If you have about 45 minutes to spend in the kitchen, Tuna mousse dip might be a great gluten free, dairy free, paleolithic, and primal recipe to try.  One portion of this dish contains roughly 79g of protein, 9g of fat, and a total of 427 calories.",
+      "category": "snack",
+      "prepTime": 10,
+      "cookTime": 35,
+      "totalTime": 45,
+      "servings": 1,
+      "ingredients": [
+        {
+          "name": "Chives",
+          "amount": 1,
+          "unit": "small bunch",
+          "original": "A small bunch of chives, chopped"
+        },
+        {
+          "name": "Egg Yolk",
+          "amount": 1,
+          "unit": "",
+          "original": "1 egg yolk"
+        },
+        {
+          "name": "Juice Of Lime",
+          "amount": 1,
+          "unit": "",
+          "original": "The juice of half a lime"
+        },
+        {
+          "name": "Salt & Pepper",
+          "amount": 1,
+          "unit": "serving",
+          "original": "Salt & pepper"
+        },
+        {
+          "name": "Can Tuna",
+          "amount": 400,
+          "unit": "g",
+          "original": "1 400g 14 oz. can tuna in brine"
+        },
+        {
+          "name": "Oz. Fromage Frais",
+          "amount": 118.294,
+          "unit": "ml",
+          "original": "200g 7 oz. fromage frais (about ½ cup)"
+        },
+        {
+          "name": "Oz. Fromage Frais",
+          "amount": 118.294,
+          "unit": "ml",
+          "original": "200g 7 oz. fromage frais (about ½ cup)"
+        }
+      ],
+      "instructions": [
+        "1. Line a fine sieve with one square kitchen paper and place over a bowl.Empty the tuna can and fromage frais into the sieve and allow to drain for an hour or two, but no more than that because you want to keep some moisture.",
+        "2. Transfer the tuna and fromage frais into a bowl and mix using a fork, until there are no more tuna lumps.",
+        "3. Add the lime juice, chives and egg yolk. Season to taste and mix again until well combined.Cover with food wrap and refrigerate until needed.Take out of the fridge about 20 minutes before serving the dip to come at room temperature.Find more recipes on my blog http://alalemon.com"
+      ],
+      "nutrition": {
+        "calories": 427,
+        "carbohydrates": 4,
+        "fiber": 0,
+        "sugar": 1,
+        "protein": 79,
+        "fat": 9,
+        "saturatedFat": 3,
+        "sodium": 1079
+      },
+      "carbChoices": 0,
+      "tags": [
+        "gluten-free",
+        "dairy-free",
+        "high-protein",
+        "low-carb",
+        "snack",
+        "appetizer"
+      ],
+      "imageUrl": "https://img.spoonacular.com/recipes/663933-556x370.jpg",
+      "source": "spoonacular",
+      "sourceUrl": "https://www.foodista.com/recipe/2HPHXSH2/tuna-mousse-dip",
+      "gdValidation": {
+        "isValid": false,
+        "score": 50,
+        "details": {
+          "isValid": false,
+          "carbsInRange": false,
+          "adequateProtein": true,
+          "adequateFiber": false,
+          "warnings": [
+            "Carbs too low: 3.67g (min: 10g)",
+            "Fiber too low: 0g (min: 2g)"
+          ],
+          "adjustmentSuggestions": [
+            "Add whole grain bread, fruit, or starchy vegetables",
+            "Add vegetables, whole grains, or beans"
+          ]
+        },
+        "warnings": [
+          "Add whole grain bread, fruit, or starchy vegetables",
+          "Add vegetables, whole grains, or beans"
+        ]
+      },
+      "importedAt": "2025-07-16T14:15:41.851Z",
+      "spoonacularId": "663933",
+      "createdAt": "2025-07-16T16:58:55.890Z",
+      "updatedAt": "2025-07-16T16:58:55.890Z"
     }
   ]
 }

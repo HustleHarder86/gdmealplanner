@@ -9,6 +9,8 @@ import {
   DayNutrition
 } from '@/src/types/meal-plan';
 import { LocalRecipeService } from '@/src/services/local-recipe-service';
+import { DietaryFilterService } from '@/src/services/dietary-filter-service';
+import { DietaryPreferences } from '@/src/types/dietary';
 
 /**
  * GD Meal Planning Algorithm
@@ -191,80 +193,53 @@ export class MealPlanAlgorithm {
     recipes: Recipe[], 
     preferences: MealPlanPreferences
   ) {
-    const suitable: Recipe[] = [];
-    const excluded: Array<{recipe: Recipe, reason: string}> = [];
+    // Convert string restrictions to DietaryPreferences format
+    const dietaryPrefs: DietaryPreferences = {
+      restrictions: preferences.dietaryRestrictions as any[], // Will be converted to proper format
+      dislikes: preferences.dislikedIngredients,
+      allergies: preferences.allergies
+    };
     
-    for (const recipe of recipes) {
-      const exclusionReason = this.getExclusionReason(recipe, preferences);
-      
-      if (exclusionReason) {
-        excluded.push({ recipe, reason: exclusionReason });
-      } else {
-        suitable.push(recipe);
+    // Use DietaryFilterService for filtering
+    const filterResult = DietaryFilterService.filterRecipes(recipes, dietaryPrefs);
+    
+    // Add additional filtering for allergies and cook time
+    const suitable: Recipe[] = [];
+    const excluded: Array<{recipe: Recipe, reason: string}> = [...filterResult.excluded];
+    
+    for (const recipe of filterResult.suitable) {
+      // Check allergies
+      let allergyFound = false;
+      for (const allergy of preferences.allergies) {
+        const hasAllergen = recipe.ingredients.some(ing => 
+          ing.name.toLowerCase().includes(allergy.toLowerCase())
+        );
+        if (hasAllergen) {
+          excluded.push({ recipe, reason: `Contains ${allergy} (allergy)` });
+          allergyFound = true;
+          break;
+        }
       }
+      
+      if (allergyFound) continue;
+      
+      // Check cook time preference
+      if (preferences.preferredCookTime === 'quick' && recipe.totalTime > 15) {
+        excluded.push({ recipe, reason: 'Takes too long (quick meals preference)' });
+        continue;
+      }
+      if (preferences.preferredCookTime === 'medium' && recipe.totalTime > 30) {
+        excluded.push({ recipe, reason: 'Takes too long (medium time preference)' });
+        continue;
+      }
+      
+      suitable.push(recipe);
     }
     
     return { suitable, excluded };
   }
   
-  /**
-   * Check if recipe should be excluded based on preferences
-   */
-  private static getExclusionReason(recipe: Recipe, preferences: MealPlanPreferences): string | null {
-    // Check dietary restrictions
-    if (preferences.dietaryRestrictions.includes('vegetarian')) {
-      const meatKeywords = ['chicken', 'beef', 'pork', 'turkey', 'fish', 'salmon', 'tuna', 'meat'];
-      const hasMeat = meatKeywords.some(keyword => 
-        recipe.title.toLowerCase().includes(keyword) ||
-        recipe.ingredients.some(ing => ing.name.toLowerCase().includes(keyword))
-      );
-      if (hasMeat) return 'Contains meat (vegetarian restriction)';
-    }
-    
-    if (preferences.dietaryRestrictions.includes('vegan')) {
-      const animalKeywords = ['cheese', 'milk', 'egg', 'butter', 'yogurt', 'cream', 'chicken', 'beef'];
-      const hasAnimalProducts = animalKeywords.some(keyword =>
-        recipe.title.toLowerCase().includes(keyword) ||
-        recipe.ingredients.some(ing => ing.name.toLowerCase().includes(keyword))
-      );
-      if (hasAnimalProducts) return 'Contains animal products (vegan restriction)';
-    }
-    
-    if (preferences.dietaryRestrictions.includes('gluten-free')) {
-      const glutenKeywords = ['wheat', 'flour', 'bread', 'pasta', 'noodle'];
-      const hasGluten = glutenKeywords.some(keyword =>
-        recipe.title.toLowerCase().includes(keyword) ||
-        recipe.ingredients.some(ing => ing.name.toLowerCase().includes(keyword))
-      );
-      if (hasGluten) return 'Contains gluten (gluten-free restriction)';
-    }
-    
-    // Check allergies
-    for (const allergy of preferences.allergies) {
-      const hasAllergen = recipe.ingredients.some(ing => 
-        ing.name.toLowerCase().includes(allergy.toLowerCase())
-      );
-      if (hasAllergen) return `Contains ${allergy} (allergy)`;
-    }
-    
-    // Check disliked ingredients
-    for (const disliked of preferences.dislikedIngredients) {
-      const hasDisliked = recipe.ingredients.some(ing =>
-        ing.name.toLowerCase().includes(disliked.toLowerCase())
-      );
-      if (hasDisliked) return `Contains ${disliked} (disliked ingredient)`;
-    }
-    
-    // Check cook time preference
-    if (preferences.preferredCookTime === 'quick' && recipe.totalTime > 15) {
-      return 'Takes too long (quick meals preference)';
-    }
-    if (preferences.preferredCookTime === 'medium' && recipe.totalTime > 30) {
-      return 'Takes too long (medium time preference)';
-    }
-    
-    return null; // Recipe is suitable
-  }
+  // Note: getExclusionReason method removed - now using DietaryFilterService
   
   /**
    * Generate a single day's meal plan

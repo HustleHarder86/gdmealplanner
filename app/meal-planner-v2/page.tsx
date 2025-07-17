@@ -13,7 +13,9 @@ import LoadingSpinner from "@/components/ui/LoadingSpinner";
 import MealPlanDisplay from "./components/MealPlanDisplay";
 import ShoppingListView from "./components/ShoppingListView";
 import TabNavigation from "./components/TabNavigation";
+import DietaryPreferences from "./components/DietaryPreferences";
 import { useMealPlan } from "./hooks/useMealPlan";
+import { useDietaryPreferences } from "@/src/hooks/useDietaryPreferences";
 
 export default function MealPlannerV2Page() {
   const { user } = useAuth();
@@ -21,6 +23,8 @@ export default function MealPlannerV2Page() {
   // Use custom hooks
   const { 
     mealPlan, 
+    preferences: mealPlanPreferences,
+    setPreferences,
     generating, 
     error, 
     generateMealPlan, 
@@ -28,12 +32,14 @@ export default function MealPlannerV2Page() {
     swapMeal 
   } = useMealPlan(user?.uid);
   
+  const { preferences: dietaryPreferences } = useDietaryPreferences();
+  
   // Local state
   const [loading, setLoading] = useState(true);
   const [shoppingList, setShoppingList] = useState<ShoppingList | null>(null);
   const [activeTab, setActiveTab] = useState<'meal-plan' | 'shopping-list'>('meal-plan');
 
-  // Initialize
+  // Initialize and sync dietary preferences
   useEffect(() => {
     const initializePage = async () => {
       try {
@@ -49,6 +55,17 @@ export default function MealPlannerV2Page() {
     
     initializePage();
   }, []);
+  
+  // Sync dietary preferences with meal plan preferences
+  useEffect(() => {
+    if (dietaryPreferences) {
+      setPreferences(prev => ({
+        ...prev,
+        dietaryRestrictions: dietaryPreferences.restrictions,
+        dislikedIngredients: dietaryPreferences.dislikes
+      }));
+    }
+  }, [dietaryPreferences, setPreferences]);
 
   // Generate shopping list when meal plan changes
   useEffect(() => {
@@ -133,6 +150,9 @@ export default function MealPlannerV2Page() {
           {error}
         </div>
       )}
+
+      {/* Dietary Preferences */}
+      <DietaryPreferences />
 
       {/* Recipe Stats */}
       <Card className="mb-6 p-6">

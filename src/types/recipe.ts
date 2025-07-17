@@ -1,3 +1,5 @@
+import { DietaryInfo, AllergenInfo } from './dietary';
+
 export interface Recipe {
   id: string;
   title: string;
@@ -31,6 +33,10 @@ export interface Recipe {
     details: any;
     warnings: string[];
   };
+
+  // Dietary information
+  dietaryInfo?: DietaryInfo;
+  allergenInfo?: AllergenInfo;
 
   // Metadata
   source: string;

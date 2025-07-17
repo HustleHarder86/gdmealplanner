@@ -1,11 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { DIETARY_LABELS, DietaryRestriction } from "@/src/types/dietary";
 import { useDietaryPreferences } from "@/src/hooks/useDietaryPreferences";
-import { ChevronDown, ChevronUp, Info } from "lucide-react";
+import { ChevronDown, ChevronUp, Info, Leaf, Wheat, Milk, TreePine, Fish, Egg, Plus } from "lucide-react";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
+import { LocalRecipeService } from "@/src/services/local-recipe-service";
+import { DietaryFilterService } from "@/src/services/dietary-filter-service";
 
 export default function DietaryPreferences() {
   const {
@@ -19,6 +21,22 @@ export default function DietaryPreferences() {
 
   const [isExpanded, setIsExpanded] = useState(false);
   const [newDislike, setNewDislike] = useState("");
+  const [availableRecipes, setAvailableRecipes] = useState<number>(0);
+
+  // Calculate available recipes when preferences change
+  useEffect(() => {
+    const calculateAvailable = () => {
+      const allRecipes = LocalRecipeService.getAllRecipes();
+      if (preferences.restrictions.length === 0 && preferences.dislikes.length === 0) {
+        setAvailableRecipes(allRecipes.length);
+      } else {
+        const filtered = DietaryFilterService.filterRecipes(allRecipes, preferences);
+        setAvailableRecipes(filtered.suitable.length);
+      }
+    };
+    
+    calculateAvailable();
+  }, [preferences]);
 
   const handleAddDislike = () => {
     if (newDislike.trim()) {
@@ -27,14 +45,14 @@ export default function DietaryPreferences() {
     }
   };
 
-  const restrictionOptions: DietaryRestriction[] = [
-    'vegetarian',
-    'vegan',
-    'glutenFree',
-    'dairyFree',
-    'nutFree',
-    'pescatarian',
-    'eggFree',
+  const restrictionOptions: { key: DietaryRestriction; icon: any }[] = [
+    { key: 'vegetarian', icon: Leaf },
+    { key: 'vegan', icon: Plus },
+    { key: 'glutenFree', icon: Wheat },
+    { key: 'dairyFree', icon: Milk },
+    { key: 'nutFree', icon: TreePine },
+    { key: 'pescatarian', icon: Fish },
+    { key: 'eggFree', icon: Egg },
   ];
 
   if (loading) {
@@ -60,9 +78,19 @@ export default function DietaryPreferences() {
               Dietary Preferences
             </h3>
             <p className="text-sm text-gray-600 mt-1">
-              {preferences.restrictions.length > 0
-                ? `Active: ${preferences.restrictions.map(r => DIETARY_LABELS[r]).join(", ")}`
-                : "No dietary restrictions set"}
+              {preferences.restrictions.length > 0 || preferences.dislikes.length > 0 ? (
+                <>
+                  <span>
+                    Active: {preferences.restrictions.map(r => DIETARY_LABELS[r]).join(", ")}
+                    {preferences.dislikes.length > 0 && ` • Avoiding: ${preferences.dislikes.join(", ")}`}
+                  </span>
+                  <span className="ml-2 text-green-600 font-medium">
+                    ({availableRecipes} recipes available)
+                  </span>
+                </>
+              ) : (
+                "No dietary restrictions set"
+              )}
             </p>
           </div>
           {isExpanded ? (
@@ -78,24 +106,30 @@ export default function DietaryPreferences() {
           {/* Dietary Restrictions */}
           <div className="mt-4">
             <h4 className="font-medium text-gray-900 mb-3">Dietary Restrictions</h4>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-              {restrictionOptions.map((restriction) => (
-                <label
-                  key={restriction}
-                  className="flex items-center space-x-2 cursor-pointer"
-                >
-                  <input
-                    type="checkbox"
-                    checked={preferences.restrictions.includes(restriction)}
-                    onChange={() => toggleRestriction(restriction)}
-                    disabled={saving}
-                    className="h-4 w-4 text-green-600 rounded border-gray-300 focus:ring-green-500"
-                  />
-                  <span className="text-sm text-gray-700">
-                    {DIETARY_LABELS[restriction]}
-                  </span>
-                </label>
-              ))}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+              {restrictionOptions.map(({ key, icon: Icon }) => {
+                const isChecked = preferences.restrictions.includes(key);
+                return (
+                  <label
+                    key={key}
+                    className={`flex items-center space-x-2 cursor-pointer p-2 rounded-lg transition-colors ${
+                      isChecked ? 'bg-green-50 border-green-300' : 'hover:bg-gray-50'
+                    } border ${isChecked ? 'border-green-300' : 'border-transparent'}`}
+                  >
+                    <input
+                      type="checkbox"
+                      checked={isChecked}
+                      onChange={() => toggleRestriction(key)}
+                      disabled={saving}
+                      className="h-4 w-4 text-green-600 rounded border-gray-300 focus:ring-green-500"
+                    />
+                    <Icon className={`h-4 w-4 ${isChecked ? 'text-green-600' : 'text-gray-400'}`} />
+                    <span className={`text-sm ${isChecked ? 'text-green-900 font-medium' : 'text-gray-700'}`}>
+                      {DIETARY_LABELS[key]}
+                    </span>
+                  </label>
+                );
+              })}
             </div>
           </div>
 
@@ -144,11 +178,18 @@ export default function DietaryPreferences() {
           </div>
 
           {/* Info Box */}
-          <div className="mt-4 p-3 bg-blue-50 rounded-lg">
-            <p className="text-sm text-blue-800">
-              <strong>Note:</strong> Dietary restrictions will filter available recipes. 
-              Ensure you have enough variety with your selected restrictions before generating a meal plan.
-            </p>
+          <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+            <div className="flex items-start gap-3">
+              <Info className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <div className="text-sm text-green-900">
+                <p className="font-medium mb-1">How dietary preferences work:</p>
+                <ul className="space-y-1 text-green-800">
+                  <li>• Recipes are automatically filtered based on your selections</li>
+                  <li>• {availableRecipes} recipes match your current preferences</li>
+                  <li>• All generated meal plans will respect these restrictions</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       )}

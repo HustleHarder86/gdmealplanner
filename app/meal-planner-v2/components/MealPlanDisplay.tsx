@@ -22,6 +22,7 @@ export default function MealPlanDisplay({
   isGenerating = false
 }: MealPlanDisplayProps) {
   const [expandedDays, setExpandedDays] = useState<number[]>([0]); // First day expanded by default
+  const [swappingMeal, setSwappingMeal] = useState<string | null>(null);
 
   const handleViewRecipe = (recipeId: string) => {
     window.open(`/recipes/${recipeId}`, '_blank');
@@ -31,7 +32,7 @@ export default function MealPlanDisplay({
     <div>
       {/* Plan Header */}
       <Card className="mb-4 p-4">
-        <div className="flex flex-wrap justify-between items-center gap-4">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
           <div>
             <h2 className="text-xl font-semibold">{mealPlan.name}</h2>
             <p className="text-gray-600">
@@ -114,17 +115,24 @@ export default function MealPlanDisplay({
               {/* Day Content - Collapsible */}
               {isExpanded && (
                 <div className="p-4">
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
-                    {Object.entries(day.meals).map(([mealType, meal]) => (
-                      <MealCard
-                        key={mealType}
-                        mealType={mealType}
-                        meal={meal}
-                        onSwap={() => onSwapMeal(index, mealType)}
-                        onViewRecipe={handleViewRecipe}
-                        isSwapping={isGenerating}
-                      />
-                    ))}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    {Object.entries(day.meals).map(([mealType, meal]) => {
+                      const swapKey = `${index}-${mealType}`;
+                      return (
+                        <MealCard
+                          key={mealType}
+                          mealType={mealType}
+                          meal={meal}
+                          onSwap={async () => {
+                            setSwappingMeal(swapKey);
+                            await onSwapMeal(index, mealType);
+                            setSwappingMeal(null);
+                          }}
+                          onViewRecipe={handleViewRecipe}
+                          isSwapping={swappingMeal === swapKey}
+                        />
+                      );
+                    })}
                   </div>
                 </div>
               )}

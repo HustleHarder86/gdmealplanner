@@ -37,3 +37,117 @@
     @apply bg-white rounded-lg shadow-sm border border-neutral-200 p-6;
   }
 }
+
+/* Loading animations */
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out;
+  }
+
+  .skeleton-loading {
+    @apply bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200;
+    background-size: 200% 100%;
+    animation: loading 1.5s ease-in-out infinite;
+  }
+
+  /* Meal card image loading state */
+  .meal-card-image-loading {
+    @apply bg-gray-200;
+    background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s ease-in-out infinite;
+  }
+
+  /* Better focus states */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2;
+  }
+
+  /* Improved button hierarchy */
+  .btn-view {
+    @apply bg-transparent border border-gray-300 text-gray-600 hover:bg-gray-50 text-sm px-3 py-1;
+  }
+
+  /* Recipe count loading */
+  .recipe-count-loading::after {
+    content: "loading...";
+    @apply text-gray-500 animate-pulse;
+  }
+}
+
+/* Improve dietary checkbox touch targets for mobile */
+@media (max-width: 768px) {
+  .dietary-checkbox {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 640px) {
+  /* Better spacing on mobile */
+  .container {
+    @apply px-3;
+  }
+  
+  /* Smaller cards on mobile */
+  .card {
+    @apply p-4;
+  }
+  
+  /* Stack elements on mobile */
+  .mobile-stack {
+    @apply flex flex-col space-y-2;
+  }
+  
+  /* Improve touch targets */
+  button {
+    @apply min-h-[44px];
+  }
+  
+  /* Responsive text sizes */
+  h1 {
+    @apply text-2xl;
+  }
+  
+  h2 {
+    @apply text-xl;
+  }
+  
+  h3 {
+    @apply text-lg;
+  }
+}
+
+/* Recipe placeholder image loading state */
+.meal-card-image-loading {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% auto;
+  animation: loading 1.5s linear infinite;
+}

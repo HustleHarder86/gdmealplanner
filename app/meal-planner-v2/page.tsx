@@ -36,18 +36,29 @@ export default function MealPlannerV2Page() {
   
   // Local state
   const [loading, setLoading] = useState(true);
+  const [recipeCount, setRecipeCount] = useState<number>(0);
+  const [recipesLoading, setRecipesLoading] = useState(true);
   const [shoppingList, setShoppingList] = useState<ShoppingList | null>(null);
   const [activeTab, setActiveTab] = useState<'meal-plan' | 'shopping-list'>('meal-plan');
+  const [showSuccess, setShowSuccess] = useState(false);
 
   // Initialize and sync dietary preferences
   useEffect(() => {
     const initializePage = async () => {
       try {
         setLoading(true);
+        setRecipesLoading(true);
+        
+        // Wait a bit for RecipeProvider to initialize
+        await new Promise(resolve => setTimeout(resolve, 500));
+        
         const allRecipes = LocalRecipeService.getAllRecipes();
+        setRecipeCount(allRecipes.length);
         console.log(`[MEAL_PLANNER] Found ${allRecipes.length} recipes available`);
+        setRecipesLoading(false);
       } catch (err) {
         console.error('[MEAL_PLANNER] Initialization error:', err);
+        setRecipesLoading(false);
       } finally {
         setLoading(false);
       }
@@ -77,10 +88,13 @@ export default function MealPlannerV2Page() {
 
   // Handle meal plan generation
   const handleGenerateMealPlan = async () => {
+    setShowSuccess(false);
     const plan = await generateMealPlan();
     if (plan) {
       const shopping = ShoppingListGenerator.generateFromMealPlan(plan);
       setShoppingList(shopping);
+      setShowSuccess(true);
+      setTimeout(() => setShowSuccess(false), 5000);
     }
   };
 
@@ -141,7 +155,14 @@ export default function MealPlannerV2Page() {
           GD Meal Planner
         </h1>
         <p className="text-gray-600">
-          AI-powered meal planning with {LocalRecipeService.getAllRecipes().length} GD-friendly recipes
+          AI-powered meal planning with{" "}
+          <span className="font-semibold">
+            {recipesLoading ? (
+              <span className="inline-block animate-pulse">loading...</span>
+            ) : (
+              `${recipeCount} GD-friendly recipes`
+            )}
+          </span>
         </p>
       </div>
 
@@ -151,20 +172,37 @@ export default function MealPlannerV2Page() {
         </div>
       )}
 
+      {showSuccess && (
+        <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg mb-6 animate-fade-in">
+          ✅ Meal plan generated successfully! Your personalized 7-day plan is ready.
+        </div>
+      )}
+
       {/* Dietary Preferences */}
       <DietaryPreferences />
 
       {/* Recipe Stats */}
       <Card className="mb-6 p-6">
         <h3 className="text-lg font-semibold mb-4">Recipe Library Status</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {Object.entries(LocalRecipeService.getStats().byCategory).map(([category, count]) => (
-            <div key={category} className="text-center">
-              <div className="text-2xl font-bold text-green-600">{count}</div>
-              <div className="text-sm text-gray-600 capitalize">{category}</div>
-            </div>
-          ))}
-        </div>
+        {recipesLoading ? (
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {['breakfast', 'lunch', 'dinner', 'snack'].map((category) => (
+              <div key={category} className="text-center">
+                <div className="h-8 w-16 mx-auto mb-2 bg-gray-200 rounded animate-pulse"></div>
+                <div className="h-4 w-20 mx-auto bg-gray-200 rounded animate-pulse"></div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {Object.entries(LocalRecipeService.getStats().byCategory).map(([category, count]) => (
+              <div key={category} className="text-center">
+                <div className="text-2xl font-bold text-green-600">{count}</div>
+                <div className="text-sm text-gray-600 capitalize">{category}</div>
+              </div>
+            ))}
+          </div>
+        )}
       </Card>
 
       {/* Generate Section or Meal Plan Display */}
@@ -174,14 +212,23 @@ export default function MealPlannerV2Page() {
           <p className="text-gray-600 mb-6">
             Create a personalized 7-day meal plan using our GD-friendly recipe library
           </p>
-          <Button
-            onClick={handleGenerateMealPlan}
-            disabled={generating}
-            variant="primary"
-            size="lg"
-          >
-            {generating ? 'Generating...' : 'Generate Meal Plan'}
-          </Button>
+          {generating ? (
+            <div className="space-y-4">
+              <LoadingSpinner size="lg" />
+              <p className="text-gray-600">Creating your personalized meal plan...</p>
+              <p className="text-sm text-gray-500">This may take a few seconds</p>
+            </div>
+          ) : (
+            <Button
+              onClick={handleGenerateMealPlan}
+              disabled={generating || recipesLoading}
+              variant="primary"
+              size="lg"
+              className="min-w-[200px]"
+            >
+              Generate Meal Plan
+            </Button>
+          )}
         </Card>
       ) : (
         <>

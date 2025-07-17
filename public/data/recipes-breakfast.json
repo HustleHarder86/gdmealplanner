@@ -1,8 +1,8 @@
 {
-  "exportDate": "2025-07-16T16:58:55.941Z",
+  "exportDate": "2025-07-17T00:48:32.944Z",
   "source": "Firebase Production Database",
   "category": "breakfast",
-  "recipeCount": 103,
+  "recipeCount": 99,
   "recipes": [
     {
       "id": "spoonacular-157089",
@@ -256,8 +256,8 @@
       },
       "importedAt": "2025-07-16T14:15:20.938Z",
       "spoonacularId": "632577",
-      "createdAt": "2025-07-16T16:58:55.926Z",
-      "updatedAt": "2025-07-16T16:58:55.926Z"
+      "createdAt": "2025-07-17T00:48:32.930Z",
+      "updatedAt": "2025-07-17T00:48:32.930Z"
     },
     {
       "id": "spoonacular-632575",
@@ -963,8 +963,8 @@
       },
       "importedAt": "2025-07-11T15:59:21.447Z",
       "spoonacularId": "633594",
-      "createdAt": "2025-07-16T16:58:55.886Z",
-      "updatedAt": "2025-07-16T16:58:55.886Z"
+      "createdAt": "2025-07-17T00:48:32.907Z",
+      "updatedAt": "2025-07-17T00:48:32.907Z"
     },
     {
       "id": "spoonacular-633595",
@@ -1087,8 +1087,8 @@
       },
       "importedAt": "2025-07-16T14:15:18.162Z",
       "spoonacularId": "633595",
-      "createdAt": "2025-07-16T16:58:55.900Z",
-      "updatedAt": "2025-07-16T16:58:55.900Z"
+      "createdAt": "2025-07-17T00:48:32.910Z",
+      "updatedAt": "2025-07-17T00:48:32.910Z"
     },
     {
       "id": "spoonacular-633692",
@@ -1976,8 +1976,8 @@
       },
       "importedAt": "2025-07-16T14:15:18.085Z",
       "spoonacularId": "636458",
-      "createdAt": "2025-07-16T16:58:55.905Z",
-      "updatedAt": "2025-07-16T16:58:55.905Z"
+      "createdAt": "2025-07-17T00:48:32.917Z",
+      "updatedAt": "2025-07-17T00:48:32.917Z"
     },
     {
       "id": "spoonacular-636589",
@@ -2077,8 +2077,8 @@
       },
       "importedAt": "2025-07-09T20:54:19.214Z",
       "spoonacularId": "636589",
-      "createdAt": "2025-07-16T16:58:55.889Z",
-      "updatedAt": "2025-07-16T16:58:55.889Z"
+      "createdAt": "2025-07-17T00:48:32.909Z",
+      "updatedAt": "2025-07-17T00:48:32.909Z"
     },
     {
       "id": "spoonacular-637042",
@@ -3658,142 +3658,8 @@
       },
       "importedAt": "2025-07-11T15:57:23.377Z",
       "spoonacularId": "639303",
-      "createdAt": "2025-07-16T16:58:55.889Z",
-      "updatedAt": "2025-07-16T16:58:55.889Z"
-    },
-    {
-      "id": "spoonacular-639303",
-      "title": "Chocolatey Overnight Oats with Strawberries",
-      "description": "Chocolatey Overnight Oats with Strawberries requires approximately 45 minutes from start to finish.  This breakfast has 217 calories, 15g of protein, and 5g of fat per serving.",
-      "category": "breakfast",
-      "prepTime": 10,
-      "cookTime": 35,
-      "totalTime": 45,
-      "servings": 1,
-      "ingredients": [
-        {
-          "name": "Agave Nectar",
-          "amount": 1,
-          "unit": "tsp",
-          "original": "1 tsp agave nectar (or honey)"
-        },
-        {
-          "name": "Almond Milk",
-          "amount": 83.333,
-          "unit": "ml",
-          "original": "1/3 cup almond milk"
-        },
-        {
-          "name": "Chia Seeds",
-          "amount": 0.5,
-          "unit": "Tbs",
-          "original": "1/2 Tbs chia seeds"
-        },
-        {
-          "name": "Cocoa Powder",
-          "amount": 1,
-          "unit": "Tbs",
-          "original": "1 Tbs cocoa powder"
-        },
-        {
-          "name": "Non-fat Greek Yogurt",
-          "amount": 100,
-          "unit": "ml",
-          "original": "1/2 cup non-fat Greek yogurt"
-        },
-        {
-          "name": "Oatmeal",
-          "amount": 77.778,
-          "unit": "g",
-          "original": "1/3 cup oatmeal"
-        },
-        {
-          "name": "Strawberries",
-          "amount": 3,
-          "unit": "large",
-          "original": "3 large strawberries, sliced"
-        }
-      ],
-      "instructions": [
-        "1. Mix all the ingredients, except for the strawberries.",
-        "2. Place a bit of the oatmeal batter into a jar or other airtight container.",
-        "3. Add slices of strawberries on top.",
-        "4. Add another layer of oatmeal batter and strawberries. Top with the remaining oatmeal batter.Put it in the refrigerator overnight.Enjoy!"
-      ],
-      "nutrition": {
-        "calories": 217,
-        "carbohydrates": 30,
-        "fiber": 7,
-        "sugar": 12,
-        "protein": 15,
-        "fat": 5,
-        "saturatedFat": 1,
-        "sodium": 151
-      },
-      "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "gluten-free"
-      ],
-      "imageUrl": "https://img.spoonacular.com/recipes/639303-556x370.jpg",
-      "source": "foodista.com",
-      "sourceUrl": "https://www.foodista.com/recipe/YTFKY5YF/chocolatey-overnight-oats-with-strawberries",
-      "gdValidation": {
-        "isValid": true,
-        "score": 75,
-        "details": {
-          "totalScore": 75,
-          "gdComplianceScore": 35,
-          "practicalityScore": 28,
-          "popularityScore": 12,
-          "breakdown": {
-            "gdCompliance": {
-              "score": 35,
-              "maxScore": 40,
-              "details": {
-                "carbRange": 15,
-                "proteinAdequacy": 10,
-                "fiberContent": 10
-              }
-            },
-            "practicality": {
-              "score": 28,
-              "maxScore": 30,
-              "details": {
-                "cookingTime": 8,
-                "ingredientAvailability": 10,
-                "difficultyLevel": 10
-              }
-            },
-            "popularity": {
-              "score": 12,
-              "maxScore": 30,
-              "details": {
-                "spoonacularRating": 9,
-                "numberOfReviews": 3
-              }
-            }
-          },
-          "warnings": [],
-          "recommendations": []
-        },
-        "warnings": []
-      },
-      "importedFrom": "spoonacular",
-      "importedAt": "2025-07-07T17:58:56.253Z",
-      "verified": false,
-      "popularity": 0,
-      "userRatings": [],
-      "timesViewed": 0,
-      "timesAddedToPlan": 0,
-      "createdAt": {
-        "_seconds": 1751911152,
-        "_nanoseconds": 307000000
-      },
-      "updatedAt": {
-        "_seconds": 1751911152,
-        "_nanoseconds": 307000000
-      }
+      "createdAt": "2025-07-17T00:48:32.909Z",
+      "updatedAt": "2025-07-17T00:48:32.909Z"
     },
     {
       "id": "spoonacular-639594",
@@ -5227,8 +5093,8 @@
       },
       "importedAt": "2025-07-16T14:15:18.119Z",
       "spoonacularId": "641700",
-      "createdAt": "2025-07-16T16:58:55.890Z",
-      "updatedAt": "2025-07-16T16:58:55.890Z"
+      "createdAt": "2025-07-17T00:48:32.909Z",
+      "updatedAt": "2025-07-17T00:48:32.909Z"
     },
     {
       "id": "spoonacular-868800",
@@ -5642,8 +5508,8 @@
       },
       "importedAt": "2025-07-16T14:15:23.485Z",
       "spoonacularId": "1459207",
-      "createdAt": "2025-07-16T16:58:55.885Z",
-      "updatedAt": "2025-07-16T16:58:55.885Z"
+      "createdAt": "2025-07-17T00:48:32.905Z",
+      "updatedAt": "2025-07-17T00:48:32.905Z"
     },
     {
       "id": "spoonacular-642178",
@@ -6074,149 +5940,8 @@
       },
       "importedAt": "2025-07-09T02:10:46.466Z",
       "spoonacularId": "716432",
-      "createdAt": "2025-07-16T16:58:55.904Z",
-      "updatedAt": "2025-07-16T16:58:55.904Z"
-    },
-    {
-      "id": "spoonacular-716432",
-      "title": "Finger Foods: Frittata Muffins",
-      "description": "Finger Foods: Frittata Muffins might be a good recipe to expand your breakfast repertoire.  This recipe makes 1 servings with 655 calories, 50g of protein, and 45g of fat each.",
-      "category": "breakfast",
-      "prepTime": 10,
-      "cookTime": 35,
-      "totalTime": 45,
-      "servings": 1,
-      "ingredients": [
-        {
-          "name": "Broccoli",
-          "amount": 66,
-          "unit": "g",
-          "original": "3/4 cup chopped, cooked broccoli"
-        },
-        {
-          "name": "Chives",
-          "amount": 2,
-          "unit": "Tbsps",
-          "original": "2 T chopped chives"
-        },
-        {
-          "name": "T Cream",
-          "amount": 1,
-          "unit": "",
-          "original": "1 + 2 T cream or whole milk"
-        },
-        {
-          "name": "Eggs",
-          "amount": 6,
-          "unit": "",
-          "original": "6 eggs"
-        },
-        {
-          "name": "Orange Pepper",
-          "amount": 49.667,
-          "unit": "g",
-          "original": "1/3 cup minced orange pepper"
-        },
-        {
-          "name": "Salt And Pepper",
-          "amount": 1,
-          "unit": "serving",
-          "original": "salt and pepper"
-        },
-        {
-          "name": "Cheddar Cheese",
-          "amount": 56.5,
-          "unit": "g",
-          "original": "1/2 cup shredded cheddar cheese"
-        },
-        {
-          "name": "Tomato",
-          "amount": 49.667,
-          "unit": "g",
-          "original": "1/3 cup seeded, chopped tomato"
-        }
-      ],
-      "instructions": [
-        "Detailed instructions available at the source."
-      ],
-      "nutrition": {
-        "calories": 655,
-        "carbohydrates": 13,
-        "fiber": 4,
-        "sugar": 6,
-        "protein": 49,
-        "fat": 45,
-        "saturatedFat": 19,
-        "sodium": 965
-      },
-      "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "vegetarian",
-        "gluten-free",
-        "eggs"
-      ],
-      "imageUrl": "https://img.spoonacular.com/recipes/716432-556x370.jpg",
-      "source": "blogspot.com",
-      "sourceUrl": "https://fullbellysisters.blogspot.com/2014/05/finger-foods-frittata-muffins.html",
-      "gdValidation": {
-        "isValid": false,
-        "score": 87,
-        "details": {
-          "totalScore": 87,
-          "gdComplianceScore": 35,
-          "practicalityScore": 25,
-          "popularityScore": 27,
-          "breakdown": {
-            "gdCompliance": {
-              "score": 35,
-              "maxScore": 40,
-              "details": {
-                "carbRange": 15,
-                "proteinAdequacy": 10,
-                "fiberContent": 10
-              }
-            },
-            "practicality": {
-              "score": 25,
-              "maxScore": 30,
-              "details": {
-                "cookingTime": 8,
-                "ingredientAvailability": 10,
-                "difficultyLevel": 7
-              }
-            },
-            "popularity": {
-              "score": 27,
-              "maxScore": 30,
-              "details": {
-                "spoonacularRating": 15,
-                "numberOfReviews": 12
-              }
-            }
-          },
-          "warnings": [],
-          "recommendations": []
-        },
-        "warnings": [
-          "Missing cooking instructions"
-        ]
-      },
-      "importedFrom": "spoonacular",
-      "importedAt": "2025-07-07T17:58:59.014Z",
-      "verified": false,
-      "popularity": 0,
-      "userRatings": [],
-      "timesViewed": 0,
-      "timesAddedToPlan": 0,
-      "createdAt": {
-        "_seconds": 1751911159,
-        "_nanoseconds": 911000000
-      },
-      "updatedAt": {
-        "_seconds": 1751911159,
-        "_nanoseconds": 911000000
-      }
+      "createdAt": "2025-07-17T00:48:32.914Z",
+      "updatedAt": "2025-07-17T00:48:32.914Z"
     },
     {
       "id": "spoonacular-643143",
@@ -6496,8 +6221,8 @@
       },
       "importedAt": "2025-07-16T14:15:20.888Z",
       "spoonacularId": "643153",
-      "createdAt": "2025-07-16T16:58:55.901Z",
-      "updatedAt": "2025-07-16T16:58:55.901Z"
+      "createdAt": "2025-07-17T00:48:32.911Z",
+      "updatedAt": "2025-07-17T00:48:32.911Z"
     },
     {
       "id": "spoonacular-643241",
@@ -7923,8 +7648,8 @@
       },
       "importedAt": "2025-07-11T16:02:34.131Z",
       "spoonacularId": "644914",
-      "createdAt": "2025-07-16T16:58:55.887Z",
-      "updatedAt": "2025-07-16T16:58:55.887Z"
+      "createdAt": "2025-07-17T00:48:32.907Z",
+      "updatedAt": "2025-07-17T00:48:32.907Z"
     },
     {
       "id": "spoonacular-645315",
@@ -8781,8 +8506,8 @@
       },
       "importedAt": "2025-07-11T16:02:23.300Z",
       "spoonacularId": "676630",
-      "createdAt": "2025-07-16T16:58:55.904Z",
-      "updatedAt": "2025-07-16T16:58:55.904Z"
+      "createdAt": "2025-07-17T00:48:32.914Z",
+      "updatedAt": "2025-07-17T00:48:32.914Z"
     },
     {
       "id": "spoonacular-647261",
@@ -9425,8 +9150,8 @@
       },
       "importedAt": "2025-07-16T14:15:20.802Z",
       "spoonacularId": "650239",
-      "createdAt": "2025-07-16T16:58:55.901Z",
-      "updatedAt": "2025-07-16T16:58:55.901Z"
+      "createdAt": "2025-07-17T00:48:32.911Z",
+      "updatedAt": "2025-07-17T00:48:32.911Z"
     },
     {
       "id": "spoonacular-1957598",
@@ -9546,8 +9271,8 @@
       },
       "importedAt": "2025-07-16T14:15:17.520Z",
       "spoonacularId": "1957598",
-      "createdAt": "2025-07-16T16:58:55.904Z",
-      "updatedAt": "2025-07-16T16:58:55.904Z"
+      "createdAt": "2025-07-17T00:48:32.916Z",
+      "updatedAt": "2025-07-17T00:48:32.916Z"
     },
     {
       "id": "spoonacular-650485",
@@ -11363,8 +11088,8 @@
       },
       "importedAt": "2025-07-11T17:39:44.075Z",
       "spoonacularId": "656481",
-      "createdAt": "2025-07-16T16:58:55.905Z",
-      "updatedAt": "2025-07-16T16:58:55.905Z"
+      "createdAt": "2025-07-17T00:48:32.917Z",
+      "updatedAt": "2025-07-17T00:48:32.917Z"
     },
     {
       "id": "spoonacular-656486",
@@ -11519,8 +11244,8 @@
       },
       "importedAt": "2025-07-16T14:15:20.916Z",
       "spoonacularId": "656486",
-      "createdAt": "2025-07-16T16:58:55.888Z",
-      "updatedAt": "2025-07-16T16:58:55.888Z"
+      "createdAt": "2025-07-17T00:48:32.908Z",
+      "updatedAt": "2025-07-17T00:48:32.908Z"
     },
     {
       "id": "spoonacular-756814",
@@ -11644,154 +11369,8 @@
       },
       "importedAt": "2025-07-09T02:10:41.671Z",
       "spoonacularId": "756814",
-      "createdAt": "2025-07-16T16:58:55.888Z",
-      "updatedAt": "2025-07-16T16:58:55.888Z"
-    },
-    {
-      "id": "spoonacular-756814",
-      "title": "Powerhouse Almond Matcha Superfood Smoothie",
-      "description": "Powerhouse Almond Matcha Superfood Smoothie is a breakfast that serves 2.  One serving contains 289 calories, 11g of protein, and 13g of fat.",
-      "category": "breakfast",
-      "prepTime": 10,
-      "cookTime": 0,
-      "totalTime": 10,
-      "servings": 2,
-      "ingredients": [
-        {
-          "name": "Natural Almond Butter",
-          "amount": 2,
-          "unit": "Tbsps",
-          "original": "2 tablespoons unsalted natural almond butter"
-        },
-        {
-          "name": "Almond Milk",
-          "amount": 375,
-          "unit": "ml",
-          "original": "1 1/2 cups unsweetened almond milk"
-        },
-        {
-          "name": "Banana",
-          "amount": 1,
-          "unit": "medium",
-          "original": "1 medium frozen banana"
-        },
-        {
-          "name": "Chia Seeds",
-          "amount": 2,
-          "unit": "tsps",
-          "original": "2 teaspoons chia seeds"
-        },
-        {
-          "name": "Baby Kale",
-          "amount": 21,
-          "unit": "g",
-          "original": "1 cup baby kale, packed"
-        },
-        {
-          "name": "Mango Pieces",
-          "amount": 82.5,
-          "unit": "g",
-          "original": "1/2 cup frozen mango pieces"
-        },
-        {
-          "name": "Matcha Tea Powder",
-          "amount": 1,
-          "unit": "tbsp",
-          "original": "1 tablespoon matcha green tea powder"
-        },
-        {
-          "name": "Pineapple",
-          "amount": 123.75,
-          "unit": "g",
-          "original": "3/4 cup frozen pineapple"
-        },
-        {
-          "name": "Vanilla Extract",
-          "amount": 0.5,
-          "unit": "tsps",
-          "original": "1/2 teaspoon vanilla extract"
-        }
-      ],
-      "instructions": [
-        "1. Combine all of the ingredients in a blender. Blend on high until smooth.",
-        "2. Serve immediately."
-      ],
-      "nutrition": {
-        "calories": 281,
-        "carbohydrates": 34,
-        "fiber": 7,
-        "sugar": 20,
-        "protein": 10,
-        "fat": 13,
-        "saturatedFat": 1,
-        "sodium": 253
-      },
-      "carbChoices": 2,
-      "tags": [
-        "breakfast",
-        "gluten-free",
-        "dairy-free",
-        "quick"
-      ],
-      "imageUrl": "https://img.spoonacular.com/recipes/756814-556x370.jpg",
-      "source": "Foodista",
-      "sourceUrl": "https://www.foodista.com/blog/2015/05/17/powehouse-almond-matcha-superfood-smoothie",
-      "gdValidation": {
-        "isValid": true,
-        "score": 83,
-        "details": {
-          "totalScore": 83,
-          "gdComplianceScore": 35,
-          "practicalityScore": 27,
-          "popularityScore": 21,
-          "breakdown": {
-            "gdCompliance": {
-              "score": 35,
-              "maxScore": 40,
-              "details": {
-                "carbRange": 15,
-                "proteinAdequacy": 10,
-                "fiberContent": 10
-              }
-            },
-            "practicality": {
-              "score": 27,
-              "maxScore": 30,
-              "details": {
-                "cookingTime": 10,
-                "ingredientAvailability": 10,
-                "difficultyLevel": 7
-              }
-            },
-            "popularity": {
-              "score": 21,
-              "maxScore": 30,
-              "details": {
-                "spoonacularRating": 15,
-                "numberOfReviews": 6
-              }
-            }
-          },
-          "warnings": [],
-          "recommendations": []
-        },
-        "warnings": []
-      },
-      "importedFrom": "spoonacular",
-      "importedAt": "2025-07-07T17:59:23.322Z",
-      "verified": false,
-      "popularity": 0,
-      "userRatings": [],
-      "timesViewed": 0,
-      "timesAddedToPlan": 0,
-      "createdAt": {
-        "_seconds": 1751911184,
-        "_nanoseconds": 759000000
-      },
-      "updatedAt": {
-        "_seconds": 1751911184,
-        "_nanoseconds": 759000000
-      }
+      "createdAt": "2025-07-17T00:48:32.908Z",
+      "updatedAt": "2025-07-17T00:48:32.908Z"
     },
     {
       "id": "spoonacular-657359",
@@ -12326,8 +11905,8 @@
       },
       "importedAt": "2025-07-16T14:15:20.854Z",
       "spoonacularId": "658134",
-      "createdAt": "2025-07-16T16:58:55.903Z",
-      "updatedAt": "2025-07-16T16:58:55.903Z"
+      "createdAt": "2025-07-17T00:48:32.913Z",
+      "updatedAt": "2025-07-17T00:48:32.913Z"
     },
     {
       "id": "spoonacular-658624",
@@ -12916,8 +12495,8 @@
       },
       "importedAt": "2025-07-16T14:15:18.099Z",
       "spoonacularId": "1697715",
-      "createdAt": "2025-07-16T16:58:55.901Z",
-      "updatedAt": "2025-07-16T16:58:55.901Z"
+      "createdAt": "2025-07-17T00:48:32.911Z",
+      "updatedAt": "2025-07-17T00:48:32.911Z"
     },
     {
       "id": "spoonacular-1021260",
@@ -13605,174 +13184,8 @@
       },
       "importedAt": "2025-07-11T15:59:30.684Z",
       "spoonacularId": "660368",
-      "createdAt": "2025-07-16T16:58:55.904Z",
-      "updatedAt": "2025-07-16T16:58:55.904Z"
-    },
-    {
-      "id": "spoonacular-660368",
-      "title": "Smoked Salmon Eggs Benedict With Lemon Dill Hollandaise",
-      "description": "Smoked Salmon Eggs Benedict With Lemon Dill Hollandaise could be just the pescatarian recipe you've been looking for.  One serving contains 540 calories, 41g of protein, and 33g of fat.",
-      "category": "breakfast",
-      "prepTime": 10,
-      "cookTime": 35,
-      "totalTime": 45,
-      "servings": 2,
-      "ingredients": [
-        {
-          "name": "Baby Arugula",
-          "amount": 20,
-          "unit": "g",
-          "original": "1 cup baby arugula"
-        },
-        {
-          "name": "Baby Spinach",
-          "amount": 30,
-          "unit": "g",
-          "original": "1 cup baby spinach"
-        },
-        {
-          "name": "Butter",
-          "amount": 2,
-          "unit": "Tbsps",
-          "original": "2 tablespoons butter"
-        },
-        {
-          "name": "Egg Yolks",
-          "amount": 3,
-          "unit": "large",
-          "original": "3 large egg yolks"
-        },
-        {
-          "name": "Eggs",
-          "amount": 4,
-          "unit": "",
-          "original": "4 eggs, poached"
-        },
-        {
-          "name": "Dill",
-          "amount": 1,
-          "unit": "tbsp",
-          "original": "1 tablespoon fresh dill or 1 tsp. dried"
-        },
-        {
-          "name": "Lemon",
-          "amount": 1,
-          "unit": "",
-          "original": "1 lemon"
-        },
-        {
-          "name": "Multigrain Bread",
-          "amount": 2,
-          "unit": "slice",
-          "original": "2 slices thick multigrain bread"
-        },
-        {
-          "name": "Salt And Pepper",
-          "amount": 2,
-          "unit": "servings",
-          "original": "Salt and pepper to taste"
-        },
-        {
-          "name": "Salmon",
-          "amount": 226.796,
-          "unit": "g",
-          "original": "8 ounces smoked salmon"
-        },
-        {
-          "name": "Water",
-          "amount": 2,
-          "unit": "Tbsps",
-          "original": "2 tablespoons water"
-        },
-        {
-          "name": "Worcestershire Sauce",
-          "amount": 1,
-          "unit": "tsp",
-          "original": "1 tsp. Worcestershire sauce"
-        }
-      ],
-      "instructions": [
-        "1. Make Lemon Dill Hollandaise:Fill a medium saucepan about halfway with water, and bring to a gentle simmer over medium heat.",
-        "2. Put the egg yolks and water in a heatproof bowl, season with a pinch of dill (if using dried), salt, and pepper.",
-        "3. Whisk the ingredients together and then place the bowl on top of the saucepan. Keep stirring the egg mixture for about 5 minutes or until it begins to thicken. Make sure you dont scramble your eggs! Once the eggs are thickened, take the bowl off the water and set aside.Poach the eggs:Fill a medium saucepan with water, add a splash of white vinegar (optional, but this helps hold the whites together which results in nicely shaped eggs) and bring to a gentle simmer. You want tiny bubbles only, not a rolling boil. Gently add eggs to water and poach until deisred doneness.Meanwhile, toast bread.",
-        "4. Place toast on plates and top with arugula, spinach and salmon.",
-        "5. Place eggs on top of salmon and spoon hollandaise over the top.",
-        "6. Garnish with dill, salt and freshly cracked black pepper and serve."
-      ],
-      "nutrition": {
-        "calories": 540,
-        "carbohydrates": 21,
-        "fiber": 4,
-        "sugar": 4,
-        "protein": 41,
-        "fat": 33,
-        "saturatedFat": 14,
-        "sodium": 1495
-      },
-      "carbChoices": 1,
-      "tags": [
-        "breakfast",
-        "eggs"
-      ],
-      "imageUrl": "https://img.spoonacular.com/recipes/660368-556x370.jpg",
-      "source": "foodista.com",
-      "sourceUrl": "https://www.foodista.com/recipe/MZTVJFS5/smoked-salmon-eggs-benedict-with-lemon-dill-hollandaise",
-      "gdValidation": {
-        "isValid": true,
-        "score": 89,
-        "details": {
-          "totalScore": 89,
-          "gdComplianceScore": 40,
-          "practicalityScore": 28,
-          "popularityScore": 21,
-          "breakdown": {
-            "gdCompliance": {
-              "score": 40,
-              "maxScore": 40,
-              "details": {
-                "carbRange": 20,
-                "proteinAdequacy": 10,
-                "fiberContent": 10
-              }
-            },
-            "practicality": {
-              "score": 28,
-              "maxScore": 30,
-              "details": {
-                "cookingTime": 8,
-                "ingredientAvailability": 10,
-                "difficultyLevel": 10
-              }
-            },
-            "popularity": {
-              "score": 21,
-              "maxScore": 30,
-              "details": {
-                "spoonacularRating": 15,
-                "numberOfReviews": 6
-              }
-            }
-          },
-          "warnings": [],
-          "recommendations": []
-        },
-        "warnings": []
-      },
-      "importedFrom": "spoonacular",
-      "importedAt": "2025-07-07T17:59:04.801Z",
-      "verified": false,
-      "popularity": 0,
-      "userRatings": [],
-      "timesViewed": 0,
-      "timesAddedToPlan": 0,
-      "createdAt": {
-        "_seconds": 1751911159,
-        "_nanoseconds": 911000000
-      },
-      "updatedAt": {
-        "_seconds": 1751911159,
-        "_nanoseconds": 911000000
-      }
+      "createdAt": "2025-07-17T00:48:32.914Z",
+      "updatedAt": "2025-07-17T00:48:32.914Z"
     },
     {
       "id": "spoonacular-660985",
@@ -14086,8 +13499,8 @@
       },
       "importedAt": "2025-07-11T17:39:53.310Z",
       "spoonacularId": "661249",
-      "createdAt": "2025-07-16T16:58:55.886Z",
-      "updatedAt": "2025-07-16T16:58:55.886Z"
+      "createdAt": "2025-07-17T00:48:32.906Z",
+      "updatedAt": "2025-07-17T00:48:32.906Z"
     },
     {
       "id": "spoonacular-661602",
@@ -14935,8 +14348,8 @@
       },
       "importedAt": "2025-07-11T15:59:21.464Z",
       "spoonacularId": "665776",
-      "createdAt": "2025-07-16T16:58:55.901Z",
-      "updatedAt": "2025-07-16T16:58:55.901Z"
+      "createdAt": "2025-07-17T00:48:32.911Z",
+      "updatedAt": "2025-07-17T00:48:32.911Z"
     }
   ]
 }

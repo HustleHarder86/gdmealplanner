@@ -1,8 +1,8 @@
 {
-  "exportDate": "2025-07-16T16:58:55.941Z",
+  "exportDate": "2025-07-17T00:48:32.944Z",
   "source": "Firebase Production Database",
   "category": "snack",
-  "recipeCount": 51,
+  "recipeCount": 50,
   "recipes": [
     {
       "id": "spoonacular-631843",
@@ -333,8 +333,8 @@
       },
       "importedAt": "2025-07-09T02:10:38.809Z",
       "spoonacularId": "716406",
-      "createdAt": "2025-07-16T16:58:55.887Z",
-      "updatedAt": "2025-07-16T16:58:55.887Z"
+      "createdAt": "2025-07-17T00:48:32.907Z",
+      "updatedAt": "2025-07-17T00:48:32.907Z"
     },
     {
       "id": "spoonacular-651840",
@@ -445,8 +445,8 @@
       },
       "importedAt": "2025-07-11T17:39:44.123Z",
       "spoonacularId": "651840",
-      "createdAt": "2025-07-16T16:58:55.884Z",
-      "updatedAt": "2025-07-16T16:58:55.884Z"
+      "createdAt": "2025-07-17T00:48:32.905Z",
+      "updatedAt": "2025-07-17T00:48:32.905Z"
     },
     {
       "id": "spoonacular-633330",
@@ -553,8 +553,8 @@
       },
       "importedAt": "2025-07-11T16:02:57.324Z",
       "spoonacularId": "633330",
-      "createdAt": "2025-07-16T16:58:55.903Z",
-      "updatedAt": "2025-07-16T16:58:55.903Z"
+      "createdAt": "2025-07-17T00:48:32.913Z",
+      "updatedAt": "2025-07-17T00:48:32.913Z"
     },
     {
       "id": "spoonacular-634431",
@@ -828,8 +828,8 @@
       },
       "importedAt": "2025-07-16T14:15:36.600Z",
       "spoonacularId": "634816",
-      "createdAt": "2025-07-16T16:58:55.905Z",
-      "updatedAt": "2025-07-16T16:58:55.905Z"
+      "createdAt": "2025-07-17T00:48:32.917Z",
+      "updatedAt": "2025-07-17T00:48:32.917Z"
     },
     {
       "id": "spoonacular-635684",
@@ -956,8 +956,8 @@
       },
       "importedAt": "2025-07-16T14:15:33.965Z",
       "spoonacularId": "635684",
-      "createdAt": "2025-07-16T16:58:55.887Z",
-      "updatedAt": "2025-07-16T16:58:55.887Z"
+      "createdAt": "2025-07-17T00:48:32.907Z",
+      "updatedAt": "2025-07-17T00:48:32.907Z"
     },
     {
       "id": "spoonacular-1697759",
@@ -1073,8 +1073,8 @@
       },
       "importedAt": "2025-07-16T14:15:41.857Z",
       "spoonacularId": "1697759",
-      "createdAt": "2025-07-16T16:58:55.905Z",
-      "updatedAt": "2025-07-16T16:58:55.905Z"
+      "createdAt": "2025-07-17T00:48:32.917Z",
+      "updatedAt": "2025-07-17T00:48:32.917Z"
     },
     {
       "id": "spoonacular-715432",
@@ -1184,8 +1184,8 @@
       },
       "importedAt": "2025-07-11T16:02:56.891Z",
       "spoonacularId": "715432",
-      "createdAt": "2025-07-16T16:58:55.905Z",
-      "updatedAt": "2025-07-16T16:58:55.905Z"
+      "createdAt": "2025-07-17T00:48:32.917Z",
+      "updatedAt": "2025-07-17T00:48:32.917Z"
     },
     {
       "id": "spoonacular-636422",
@@ -1425,8 +1425,8 @@
       },
       "importedAt": "2025-07-16T14:15:41.865Z",
       "spoonacularId": "636898",
-      "createdAt": "2025-07-16T16:58:55.888Z",
-      "updatedAt": "2025-07-16T16:58:55.888Z"
+      "createdAt": "2025-07-17T00:48:32.908Z",
+      "updatedAt": "2025-07-17T00:48:32.908Z"
     },
     {
       "id": "spoonacular-636962",
@@ -1742,8 +1742,8 @@
       },
       "importedAt": "2025-07-09T02:10:39.168Z",
       "spoonacularId": "716426",
-      "createdAt": "2025-07-16T16:58:55.904Z",
-      "updatedAt": "2025-07-16T16:58:55.904Z"
+      "createdAt": "2025-07-17T00:48:32.914Z",
+      "updatedAt": "2025-07-17T00:48:32.914Z"
     },
     {
       "id": "spoonacular-637476",
@@ -1865,93 +1865,6 @@
       }
     },
     {
-      "id": "spoonacular-637476",
-      "title": "Chavrie Hummus",
-      "description": "Chavrie Hummus could be just the gluten free and lacto ovo vegetarian recipe you've been looking for.  This hor d'oeuvre has 195 calories, 11g of protein, and 13g of fat per serving.",
-      "category": "snack",
-      "prepTime": 10,
-      "cookTime": 35,
-      "totalTime": 45,
-      "servings": 4,
-      "ingredients": [
-        {
-          "name": "Cilantro",
-          "amount": 1,
-          "unit": "tbsp",
-          "original": "1 tablespoon Chopped Cilantro"
-        },
-        {
-          "name": "Chavrie Goat Cheese",
-          "amount": 150.252,
-          "unit": "g",
-          "original": "5.3 oz Chavrie fresh goat cheese"
-        },
-        {
-          "name": "Hummus",
-          "amount": 226.796,
-          "unit": "g",
-          "original": "1 8 oz package Hummus"
-        },
-        {
-          "name": "Lemon Juice",
-          "amount": 28.35,
-          "unit": "g",
-          "original": "1 ounce lemon juice"
-        }
-      ],
-      "instructions": [
-        "1. Combine all ingredients and mix well",
-        "2. Transfer mixture to a serving dish and refrigerate",
-        "3. Serve with your favorite chips"
-      ],
-      "nutrition": {
-        "calories": 195,
-        "carbohydrates": 9,
-        "fiber": 3,
-        "sugar": 1,
-        "protein": 11,
-        "fat": 13,
-        "saturatedFat": 6,
-        "sodium": 353
-      },
-      "carbChoices": 1,
-      "tags": [
-        "vegetarian",
-        "gluten-free",
-        "low-carb",
-        "snack",
-        "appetizer",
-        "middle eastern"
-      ],
-      "imageUrl": "https://img.spoonacular.com/recipes/637476-556x370.jpg",
-      "source": "spoonacular",
-      "sourceUrl": "https://www.foodista.com/recipe/ZK7CTVNS/chavrie-hummus",
-      "gdValidation": {
-        "isValid": false,
-        "score": 70,
-        "details": {
-          "isValid": false,
-          "carbsInRange": false,
-          "adequateProtein": true,
-          "adequateFiber": true,
-          "warnings": [
-            "Carbs too low: 8.6g (min: 10g)",
-            "No lean protein source detected"
-          ],
-          "adjustmentSuggestions": [
-            "Add whole grain bread, fruit, or starchy vegetables"
-          ]
-        },
-        "warnings": [
-          "Add whole grain bread, fruit, or starchy vegetables"
-        ]
-      },
-      "importedAt": "2025-07-11T15:57:42.273Z",
-      "spoonacularId": "637476",
-      "createdAt": "2025-07-16T16:58:55.926Z",
-      "updatedAt": "2025-07-16T16:58:55.926Z"
-    },
-    {
       "id": "spoonacular-637876",
       "title": "Chicken 65",
       "description": "Chicken 65 could be just the gluten free recipe you've been looking for.  This hor d'oeuvre has 121 calories, 19g of protein, and 3g of fat per serving.",
@@ -2047,8 +1960,8 @@
       },
       "importedAt": "2025-07-16T14:15:39.259Z",
       "spoonacularId": "637876",
-      "createdAt": "2025-07-16T16:58:55.901Z",
-      "updatedAt": "2025-07-16T16:58:55.901Z"
+      "createdAt": "2025-07-17T00:48:32.911Z",
+      "updatedAt": "2025-07-17T00:48:32.911Z"
     },
     {
       "id": "spoonacular-639410",
@@ -2341,8 +2254,8 @@
       },
       "importedAt": "2025-07-11T16:02:36.684Z",
       "spoonacularId": "639825",
-      "createdAt": "2025-07-16T16:58:55.902Z",
-      "updatedAt": "2025-07-16T16:58:55.902Z"
+      "createdAt": "2025-07-17T00:48:32.912Z",
+      "updatedAt": "2025-07-17T00:48:32.912Z"
     },
     {
       "id": "spoonacular-640062",
@@ -2449,8 +2362,8 @@
       },
       "importedAt": "2025-07-09T02:10:44.077Z",
       "spoonacularId": "640062",
-      "createdAt": "2025-07-16T16:58:55.888Z",
-      "updatedAt": "2025-07-16T16:58:55.888Z"
+      "createdAt": "2025-07-17T00:48:32.908Z",
+      "updatedAt": "2025-07-17T00:48:32.908Z"
     },
     {
       "id": "spoonacular-640077",
@@ -2587,8 +2500,8 @@
       },
       "importedAt": "2025-07-11T16:00:33.922Z",
       "spoonacularId": "640077",
-      "createdAt": "2025-07-16T16:58:55.904Z",
-      "updatedAt": "2025-07-16T16:58:55.904Z"
+      "createdAt": "2025-07-17T00:48:32.914Z",
+      "updatedAt": "2025-07-17T00:48:32.914Z"
     },
     {
       "id": "spoonacular-640834",
@@ -2865,8 +2778,8 @@
       },
       "importedAt": "2025-07-11T17:37:55.362Z",
       "spoonacularId": "641128",
-      "createdAt": "2025-07-16T16:58:55.887Z",
-      "updatedAt": "2025-07-16T16:58:55.887Z"
+      "createdAt": "2025-07-17T00:48:32.907Z",
+      "updatedAt": "2025-07-17T00:48:32.907Z"
     },
     {
       "id": "spoonacular-641653",
@@ -2983,8 +2896,8 @@
       },
       "importedAt": "2025-07-11T16:00:44.181Z",
       "spoonacularId": "641653",
-      "createdAt": "2025-07-16T16:58:55.926Z",
-      "updatedAt": "2025-07-16T16:58:55.926Z"
+      "createdAt": "2025-07-17T00:48:32.930Z",
+      "updatedAt": "2025-07-17T00:48:32.930Z"
     },
     {
       "id": "spoonacular-642129",
@@ -3143,8 +3056,8 @@
       },
       "importedAt": "2025-07-09T02:10:44.048Z",
       "spoonacularId": "642129",
-      "createdAt": "2025-07-16T16:58:55.903Z",
-      "updatedAt": "2025-07-16T16:58:55.903Z"
+      "createdAt": "2025-07-17T00:48:32.913Z",
+      "updatedAt": "2025-07-17T00:48:32.913Z"
     },
     {
       "id": "spoonacular-642169",
@@ -3462,8 +3375,8 @@
       },
       "importedAt": "2025-07-11T16:02:15.732Z",
       "spoonacularId": "644205",
-      "createdAt": "2025-07-16T16:58:55.890Z",
-      "updatedAt": "2025-07-16T16:58:55.890Z"
+      "createdAt": "2025-07-17T00:48:32.910Z",
+      "updatedAt": "2025-07-17T00:48:32.910Z"
     },
     {
       "id": "spoonacular-644674",
@@ -3615,8 +3528,8 @@
       },
       "importedAt": "2025-07-16T14:15:39.318Z",
       "spoonacularId": "644674",
-      "createdAt": "2025-07-16T16:58:55.889Z",
-      "updatedAt": "2025-07-16T16:58:55.889Z"
+      "createdAt": "2025-07-17T00:48:32.909Z",
+      "updatedAt": "2025-07-17T00:48:32.909Z"
     },
     {
       "id": "spoonacular-645988",
@@ -3737,8 +3650,8 @@
       },
       "importedAt": "2025-07-16T14:15:36.595Z",
       "spoonacularId": "645988",
-      "createdAt": "2025-07-16T16:58:55.889Z",
-      "updatedAt": "2025-07-16T16:58:55.889Z"
+      "createdAt": "2025-07-17T00:48:32.909Z",
+      "updatedAt": "2025-07-17T00:48:32.909Z"
     },
     {
       "id": "spoonacular-703177",
@@ -3891,8 +3804,8 @@
       },
       "importedAt": "2025-07-16T14:15:41.872Z",
       "spoonacularId": "703177",
-      "createdAt": "2025-07-16T16:58:55.904Z",
-      "updatedAt": "2025-07-16T16:58:55.904Z"
+      "createdAt": "2025-07-17T00:48:32.916Z",
+      "updatedAt": "2025-07-17T00:48:32.916Z"
     },
     {
       "id": "spoonacular-1697547",
@@ -4062,8 +3975,8 @@
       },
       "importedAt": "2025-07-11T16:02:15.782Z",
       "spoonacularId": "1697547",
-      "createdAt": "2025-07-16T16:58:55.927Z",
-      "updatedAt": "2025-07-16T16:58:55.927Z"
+      "createdAt": "2025-07-17T00:48:32.930Z",
+      "updatedAt": "2025-07-17T00:48:32.930Z"
     },
     {
       "id": "spoonacular-631751",
@@ -4177,8 +4090,8 @@
       },
       "importedAt": "2025-07-16T14:15:39.279Z",
       "spoonacularId": "631751",
-      "createdAt": "2025-07-16T16:58:55.903Z",
-      "updatedAt": "2025-07-16T16:58:55.903Z"
+      "createdAt": "2025-07-17T00:48:32.914Z",
+      "updatedAt": "2025-07-17T00:48:32.914Z"
     },
     {
       "id": "spoonacular-647636",
@@ -4458,8 +4371,8 @@
       },
       "importedAt": "2025-07-11T16:02:43.953Z",
       "spoonacularId": "1454187",
-      "createdAt": "2025-07-16T16:58:55.927Z",
-      "updatedAt": "2025-07-16T16:58:55.927Z"
+      "createdAt": "2025-07-17T00:48:32.930Z",
+      "updatedAt": "2025-07-17T00:48:32.930Z"
     },
     {
       "id": "spoonacular-648339",
@@ -4744,8 +4657,8 @@
       },
       "importedAt": "2025-07-16T14:15:34.047Z",
       "spoonacularId": "648677",
-      "createdAt": "2025-07-16T16:58:55.905Z",
-      "updatedAt": "2025-07-16T16:58:55.905Z"
+      "createdAt": "2025-07-17T00:48:32.917Z",
+      "updatedAt": "2025-07-17T00:48:32.917Z"
     },
     {
       "id": "spoonacular-649012",
@@ -4876,8 +4789,8 @@
       },
       "importedAt": "2025-07-16T14:15:36.904Z",
       "spoonacularId": "649012",
-      "createdAt": "2025-07-16T16:58:55.888Z",
-      "updatedAt": "2025-07-16T16:58:55.888Z"
+      "createdAt": "2025-07-17T00:48:32.908Z",
+      "updatedAt": "2025-07-17T00:48:32.908Z"
     },
     {
       "id": "spoonacular-1697761",
@@ -4969,8 +4882,8 @@
       },
       "importedAt": "2025-07-16T14:15:41.819Z",
       "spoonacularId": "1697761",
-      "createdAt": "2025-07-16T16:58:55.890Z",
-      "updatedAt": "2025-07-16T16:58:55.890Z"
+      "createdAt": "2025-07-17T00:48:32.910Z",
+      "updatedAt": "2025-07-17T00:48:32.910Z"
     },
     {
       "id": "spoonacular-1646941",
@@ -5130,8 +5043,8 @@
       },
       "importedAt": "2025-07-11T16:02:54.868Z",
       "spoonacularId": "1646941",
-      "createdAt": "2025-07-16T16:58:55.900Z",
-      "updatedAt": "2025-07-16T16:58:55.900Z"
+      "createdAt": "2025-07-17T00:48:32.910Z",
+      "updatedAt": "2025-07-17T00:48:32.910Z"
     },
     {
       "id": "spoonacular-651958",
@@ -5430,8 +5343,8 @@
       },
       "importedAt": "2025-07-11T16:02:36.691Z",
       "spoonacularId": "652078",
-      "createdAt": "2025-07-16T16:58:55.887Z",
-      "updatedAt": "2025-07-16T16:58:55.887Z"
+      "createdAt": "2025-07-17T00:48:32.907Z",
+      "updatedAt": "2025-07-17T00:48:32.907Z"
     },
     {
       "id": "spoonacular-652543",
@@ -5561,8 +5474,8 @@
       },
       "importedAt": "2025-07-16T14:15:36.604Z",
       "spoonacularId": "652543",
-      "createdAt": "2025-07-16T16:58:55.903Z",
-      "updatedAt": "2025-07-16T16:58:55.903Z"
+      "createdAt": "2025-07-17T00:48:32.912Z",
+      "updatedAt": "2025-07-17T00:48:32.912Z"
     },
     {
       "id": "spoonacular-652610",
@@ -5689,8 +5602,8 @@
       },
       "importedAt": "2025-07-11T16:00:44.215Z",
       "spoonacularId": "652610",
-      "createdAt": "2025-07-16T16:58:55.886Z",
-      "updatedAt": "2025-07-16T16:58:55.886Z"
+      "createdAt": "2025-07-17T00:48:32.906Z",
+      "updatedAt": "2025-07-17T00:48:32.906Z"
     },
     {
       "id": "spoonacular-655316",
@@ -6243,8 +6156,8 @@
       },
       "importedAt": "2025-07-11T15:57:33.296Z",
       "spoonacularId": "658573",
-      "createdAt": "2025-07-16T16:58:55.904Z",
-      "updatedAt": "2025-07-16T16:58:55.904Z"
+      "createdAt": "2025-07-17T00:48:32.916Z",
+      "updatedAt": "2025-07-17T00:48:32.916Z"
     },
     {
       "id": "spoonacular-659581",
@@ -6319,8 +6232,8 @@
       },
       "importedAt": "2025-07-16T14:15:39.268Z",
       "spoonacularId": "659581",
-      "createdAt": "2025-07-16T16:58:55.903Z",
-      "updatedAt": "2025-07-16T16:58:55.903Z"
+      "createdAt": "2025-07-17T00:48:32.912Z",
+      "updatedAt": "2025-07-17T00:48:32.912Z"
     },
     {
       "id": "spoonacular-660054",
@@ -6567,8 +6480,8 @@
       },
       "importedAt": "2025-07-16T14:15:36.612Z",
       "spoonacularId": "660054",
-      "createdAt": "2025-07-16T16:58:55.927Z",
-      "updatedAt": "2025-07-16T16:58:55.927Z"
+      "createdAt": "2025-07-17T00:48:32.930Z",
+      "updatedAt": "2025-07-17T00:48:32.930Z"
     },
     {
       "id": "spoonacular-798400",
@@ -6734,8 +6647,8 @@
       },
       "importedAt": "2025-07-09T02:10:46.475Z",
       "spoonacularId": "798400",
-      "createdAt": "2025-07-16T16:58:55.884Z",
-      "updatedAt": "2025-07-16T16:58:55.884Z"
+      "createdAt": "2025-07-17T00:48:32.905Z",
+      "updatedAt": "2025-07-17T00:48:32.905Z"
     },
     {
       "id": "spoonacular-716195",
@@ -7032,8 +6945,8 @@
       },
       "importedAt": "2025-07-16T14:15:41.851Z",
       "spoonacularId": "663933",
-      "createdAt": "2025-07-16T16:58:55.890Z",
-      "updatedAt": "2025-07-16T16:58:55.890Z"
+      "createdAt": "2025-07-17T00:48:32.910Z",
+      "updatedAt": "2025-07-17T00:48:32.910Z"
     }
   ]
 }

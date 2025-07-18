@@ -11,9 +11,10 @@
  */
 
 import { WeeklyPlanGenerator } from '@/src/services/weekly-plan-generator';
-import { WeeklyRotationService } from '@/src/services/weekly-rotation-service';
 import { LocalRecipeService } from '@/src/services/local-recipe-service';
 import { ROTATION_TRACKS } from '@/src/types/weekly-rotation';
+import * as fs from 'fs';
+import * as path from 'path';
 
 async function main() {
   console.log('🚀 Starting rotation library generation...');
@@ -58,25 +59,33 @@ async function main() {
       console.log(`  └─ Max gap between repeats: ${analysis.maxGapBetweenRepeats} weeks`);
     });
     
-    // Store in Firebase
-    console.log('\n💾 Storing libraries in Firebase...');
-    await WeeklyRotationService.storeAllRotationLibraries(libraries);
-    console.log('✅ All libraries stored successfully');
+    // Save to local files for inspection
+    console.log('\n💾 Saving libraries to local files...');
+    const outputDir = './rotation-libraries-output';
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
     
-    // Verify storage
-    console.log('\n🔍 Verifying storage...');
-    const status = await WeeklyRotationService.checkLibraryStatus();
-    
-    console.log('\n📋 Final Status:');
-    console.log('================');
-    Object.entries(status).forEach(([track, info]) => {
-      const trackConfig = ROTATION_TRACKS.find(t => t.track === track);
-      const statusIcon = info.exists ? '✅' : '❌';
-      console.log(`${statusIcon} ${trackConfig?.icon} ${trackConfig?.name}: ${info.weekCount} weeks`);
-      if (info.lastGenerated) {
-        console.log(`  └─ Generated: ${new Date(info.lastGenerated).toLocaleDateString()}`);
-      }
+    libraries.forEach((library) => {
+      const filename = path.join(outputDir, `${library.track}-rotation.json`);
+      fs.writeFileSync(filename, JSON.stringify(library, null, 2));
+      console.log(`✅ Saved ${library.track} track to ${filename}`);
     });
+    
+    // Create summary file
+    const summary = {
+      generated: new Date().toISOString(),
+      totalLibraries: libraries.length,
+      libraries: libraries.map(lib => ({
+        track: lib.track,
+        totalWeeks: lib.totalWeeks,
+        planCount: lib.plans.length,
+        variety: WeeklyPlanGenerator.analyzeRotationVariety(lib)
+      }))
+    };
+    
+    fs.writeFileSync(path.join(outputDir, 'summary.json'), JSON.stringify(summary, null, 2));
+    console.log(`✅ Saved generation summary to ${outputDir}/summary.json`);
     
     console.log('\n🎉 Rotation library generation complete!');
     console.log('Users can now access weekly meal plans with infinite variety.');

@@ -212,7 +212,7 @@ export default function MealPlannerV2Page() {
               <div>✅ 52+ weeks of variety</div>
             </div>
             <p className="text-blue-600 text-xs mt-3">
-              Currently using the original meal plan generator. Smart Rotation will eliminate the "generate" button with instant weekly plans.
+              Currently using the original meal plan generator. Smart Rotation will eliminate the &quot;generate&quot; button with instant weekly plans.
             </p>
           </Card>
         </>

@@ -40,7 +40,14 @@ export function useWeeklyRotation(userId: string | undefined): UseWeeklyRotation
       console.log(`[USE_WEEKLY_ROTATION] Loaded ${weekInfo.rotationTrack} track, week ${weekInfo.weekProgress.current}`);
     } catch (err) {
       console.error('[USE_WEEKLY_ROTATION] Error loading current week:', err);
-      setError(err instanceof Error ? err.message : 'Failed to load weekly meal plan');
+      
+      // Handle the case where rotation system is not yet initialized
+      if (err instanceof Error && err.message === 'ROTATION_NOT_INITIALIZED') {
+        setError(null); // Don't show error, just no rotation available
+        setCurrentWeekInfo(null);
+      } else {
+        setError(err instanceof Error ? err.message : 'Failed to load weekly meal plan');
+      }
     } finally {
       setLoading(false);
     }

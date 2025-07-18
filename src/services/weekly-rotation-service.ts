@@ -47,7 +47,8 @@ export class WeeklyRotationService {
       const library = await this.getRotationLibrary(track);
       
       if (!library || library.plans.length === 0) {
-        throw new Error(`No rotation library found for track: ${track}`);
+        console.log(`[WEEKLY_ROTATION] No rotation library found for track: ${track}, system not yet initialized`);
+        throw new Error('ROTATION_NOT_INITIALIZED');
       }
       
       // Calculate current week in rotation (cycles through available weeks)

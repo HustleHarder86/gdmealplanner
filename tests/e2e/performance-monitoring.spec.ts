@@ -214,7 +214,7 @@ test.describe('Performance Monitoring', () => {
     // Perform multiple operations
     for (let i = 0; i < 5; i++) {
       // Generate meal plan
-      await page.locator('button:has-text("Generate").or(page.locator("button:has-text("Generate New"))).click();
+      await page.locator('button:has-text("Generate")').or(page.locator('button:has-text("Generate New")')).click();
       await page.waitForSelector('text=GD Meal Plan - Week of', { timeout: 30000 });
       
       // Switch to shopping list and back

@@ -1,11 +1,14 @@
 import { Recipe } from "@/src/types/recipe";
+import { UserRecipeService } from "./user-recipe-service";
 
 /**
  * Local Recipe Service - Works without API connection
  * This service can be used when the Spoonacular API is removed
+ * Now includes user-created recipes
  */
 export class LocalRecipeService {
   private static recipes: Map<string, Recipe> = new Map();
+  private static userRecipes: Map<string, Recipe> = new Map();
   private static initialized = false;
 
   /**
@@ -42,17 +45,50 @@ export class LocalRecipeService {
   }
 
   /**
-   * Get all recipes
+   * Load user recipes for a specific user
+   */
+  static async loadUserRecipes(userId: string): Promise<void> {
+    try {
+      const userRecipes = await UserRecipeService.getUserRecipes(userId);
+      this.userRecipes.clear();
+      userRecipes.forEach(recipe => {
+        this.userRecipes.set(recipe.id, recipe);
+      });
+      console.log(`Loaded ${userRecipes.length} user recipes`);
+    } catch (error) {
+      console.error('Error loading user recipes:', error);
+    }
+  }
+
+  /**
+   * Get all recipes (including user recipes)
    */
   static getAllRecipes(): Recipe[] {
+    return [
+      ...Array.from(this.recipes.values()),
+      ...Array.from(this.userRecipes.values())
+    ];
+  }
+
+  /**
+   * Get only system recipes (original recipe database)
+   */
+  static getSystemRecipes(): Recipe[] {
     return Array.from(this.recipes.values());
   }
 
   /**
-   * Get recipe by ID
+   * Get only user recipes
+   */
+  static getUserRecipes(): Recipe[] {
+    return Array.from(this.userRecipes.values());
+  }
+
+  /**
+   * Get recipe by ID (checks both system and user recipes)
    */
   static getRecipeById(id: string): Recipe | null {
-    return this.recipes.get(id) || null;
+    return this.recipes.get(id) || this.userRecipes.get(id) || null;
   }
 
   /**

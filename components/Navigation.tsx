@@ -9,6 +9,7 @@ export default function Navigation() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/recipes", label: "Recipes" },
+    { href: "/my-recipes", label: "My Recipes" },
     { href: "/meal-planner-v2", label: "Meal Planner" },
     { href: "/tracking/glucose", label: "Glucose" },
     { href: "/tracking/nutrition", label: "Nutrition" },

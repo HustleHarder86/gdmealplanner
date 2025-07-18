@@ -50,6 +50,12 @@ export interface Recipe {
   verified?: boolean;
   spoonacularId?: string;
 
+  // User-created recipe fields
+  isUserCreated?: boolean;
+  userId?: string; // ID of the user who created this recipe
+  isPrivate?: boolean; // If true, only visible to the creator
+  originalRecipeId?: string; // If this is a modified version of an existing recipe
+
   // User engagement
   popularity?: number;
   userRatings?: any[];
@@ -59,6 +65,24 @@ export interface Recipe {
   // Timestamps
   createdAt?: any;
   updatedAt?: any;
+}
+
+// Interface for creating new user recipes
+export interface UserRecipeInput {
+  title: string;
+  description?: string;
+  category: "breakfast" | "lunch" | "dinner" | "snack";
+  tags: string[];
+  prepTime: number;
+  cookTime: number;
+  servings: number;
+  ingredients: Ingredient[];
+  instructions: string[];
+  nutrition: Partial<Nutrition>; // Allow partial nutrition data - will be calculated
+  dietaryInfo?: DietaryInfo;
+  allergenInfo?: AllergenInfo;
+  imageUrl?: string;
+  isPrivate?: boolean;
 }
 
 export interface Ingredient {

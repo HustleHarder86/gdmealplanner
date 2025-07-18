@@ -9,6 +9,7 @@ import React, {
 } from "react";
 import { Recipe } from "@/src/types/recipe";
 import { LocalRecipeService } from "@/src/services/local-recipe-service";
+import { useAuth } from "@/src/contexts/AuthContext";
 
 interface RecipeContextType {
   recipes: Recipe[];
@@ -26,6 +27,7 @@ interface RecipeContextType {
   getBedtimeSnacks: () => Recipe[];
   getQuickRecipes: (maxMinutes?: number) => Recipe[];
   getRandomRecipes: (count: number) => Recipe[];
+  refreshUserRecipes: () => Promise<void>;
   stats: {
     total: number;
     byCategory: Record<string, number>;
@@ -38,6 +40,7 @@ interface RecipeContextType {
 const RecipeContext = createContext<RecipeContextType | undefined>(undefined);
 
 export function RecipeProvider({ children }: { children: React.ReactNode }) {
+  const { user } = useAuth();
   const [recipes, setRecipes] = useState<Recipe[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -170,6 +173,38 @@ export function RecipeProvider({ children }: { children: React.ReactNode }) {
     loadRecipes();
   }, []);
 
+  // Load user recipes when user authenticates
+  useEffect(() => {
+    async function loadUserRecipes() {
+      if (user && initialized) {
+        try {
+          await LocalRecipeService.loadUserRecipes(user.uid);
+          // Update the recipes state to include user recipes
+          const allRecipes = LocalRecipeService.getAllRecipes();
+          setRecipes(allRecipes);
+          console.log(`[RECIPE_PROVIDER] Loaded user recipes for ${user.uid}`);
+        } catch (error) {
+          console.error('[RECIPE_PROVIDER] Error loading user recipes:', error);
+        }
+      }
+    }
+
+    loadUserRecipes();
+  }, [user, initialized]);
+
+  // Function to refresh user recipes
+  const refreshUserRecipes = async () => {
+    if (user) {
+      try {
+        await LocalRecipeService.loadUserRecipes(user.uid);
+        const allRecipes = LocalRecipeService.getAllRecipes();
+        setRecipes(allRecipes);
+      } catch (error) {
+        console.error('[RECIPE_PROVIDER] Error refreshing user recipes:', error);
+      }
+    }
+  };
+
   // Memoized context value to prevent unnecessary re-renders
   const contextValue = useMemo<RecipeContextType>(
     () => ({
@@ -188,9 +223,10 @@ export function RecipeProvider({ children }: { children: React.ReactNode }) {
         LocalRecipeService.getQuickRecipes(maxMinutes),
       getRandomRecipes: (count: number) =>
         LocalRecipeService.getRandomRecipes(count),
+      refreshUserRecipes,
       stats: LocalRecipeService.getStats(),
     }),
-    [recipes, loading, error, initialized],
+    [recipes, loading, error, initialized, refreshUserRecipes],
   );
 
   return (
@@ -212,6 +248,7 @@ export function useRecipes() {
     error: context.error,
     initialized: context.initialized,
     stats: context.stats,
+    refreshUserRecipes: context.refreshUserRecipes,
   };
 }
 

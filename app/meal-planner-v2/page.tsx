@@ -5,6 +5,7 @@ import { useAuth } from "@/src/contexts/AuthContext";
 import { ShoppingListGenerator } from "@/src/services/meal-plan/shopping-list-generator";
 import { LocalRecipeService } from "@/src/services/local-recipe-service";
 import { ShoppingList } from "@/src/types/meal-plan";
+import { RotationTrack } from "@/src/types/weekly-rotation";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
@@ -14,25 +15,42 @@ import MealPlanDisplay from "./components/MealPlanDisplay";
 import ShoppingListView from "./components/ShoppingListView";
 import TabNavigation from "./components/TabNavigation";
 import DietaryPreferences from "./components/DietaryPreferences";
+import WeeklyRotationHeader from "./components/WeeklyRotationHeader";
 import { useMealPlan } from "./hooks/useMealPlan";
+import { useWeeklyRotation } from "./hooks/useWeeklyRotation";
 import { useDietaryPreferences } from "@/src/hooks/useDietaryPreferences";
 
 export default function MealPlannerV2Page() {
   const { user } = useAuth();
   
-  // Use custom hooks
+  // Use weekly rotation hook for the new system
+  const {
+    currentWeekInfo,
+    loading: rotationLoading,
+    error: rotationError,
+    showingNextWeek,
+    switchTrack,
+    previewNextWeek,
+    returnToCurrentWeek,
+    getCurrentMealPlan,
+  } = useWeeklyRotation(user?.uid);
+  
+  // Keep existing meal plan hook for fallback/swapping functionality
   const { 
-    mealPlan, 
+    mealPlan: customMealPlan, 
     preferences: mealPlanPreferences,
     setPreferences,
     generating, 
-    error, 
+    error: mealPlanError, 
     generateMealPlan, 
     updateWithNewRecipes, 
     swapMeal 
   } = useMealPlan(user?.uid);
   
   const { preferences: dietaryPreferences } = useDietaryPreferences();
+  
+  // Determine which meal plan to show: weekly rotation or custom generated
+  const displayMealPlan = getCurrentMealPlan() || customMealPlan;
   
   // Local state
   const [loading, setLoading] = useState(true);
@@ -67,6 +85,15 @@ export default function MealPlannerV2Page() {
     initializePage();
   }, []);
   
+  // Generate shopping list when rotation meal plan changes
+  useEffect(() => {
+    const rotationMealPlan = getCurrentMealPlan();
+    if (rotationMealPlan) {
+      const shopping = ShoppingListGenerator.generateFromMealPlan(rotationMealPlan);
+      setShoppingList(shopping);
+    }
+  }, [getCurrentMealPlan]);
+  
   // Sync dietary preferences with meal plan preferences
   useEffect(() => {
     if (dietaryPreferences) {
@@ -78,15 +105,15 @@ export default function MealPlannerV2Page() {
     }
   }, [dietaryPreferences, setPreferences]);
 
-  // Generate shopping list when meal plan changes
+  // Generate shopping list when custom meal plan changes
   useEffect(() => {
-    if (mealPlan) {
-      const shopping = ShoppingListGenerator.generateFromMealPlan(mealPlan);
+    if (customMealPlan) {
+      const shopping = ShoppingListGenerator.generateFromMealPlan(customMealPlan);
       setShoppingList(shopping);
     }
-  }, [mealPlan]);
+  }, [customMealPlan]);
 
-  // Handle meal plan generation
+  // Handle meal plan generation (fallback for custom generation)
   const handleGenerateMealPlan = async () => {
     setShowSuccess(false);
     const plan = await generateMealPlan();
@@ -95,6 +122,32 @@ export default function MealPlannerV2Page() {
       setShoppingList(shopping);
       setShowSuccess(true);
       setTimeout(() => setShowSuccess(false), 5000);
+    }
+  };
+
+  // Handle track switching
+  const handleTrackSwitch = async (track: RotationTrack) => {
+    await switchTrack(track);
+    // Update shopping list for new meal plan
+    const newMealPlan = getCurrentMealPlan();
+    if (newMealPlan) {
+      const shopping = ShoppingListGenerator.generateFromMealPlan(newMealPlan);
+      setShoppingList(shopping);
+    }
+  };
+
+  // Handle next week preview
+  const handlePreviewNext = async () => {
+    if (showingNextWeek) {
+      returnToCurrentWeek();
+    } else {
+      await previewNextWeek();
+    }
+    // Update shopping list for previewed week
+    const previewMealPlan = getCurrentMealPlan();
+    if (previewMealPlan) {
+      const shopping = ShoppingListGenerator.generateFromMealPlan(previewMealPlan);
+      setShoppingList(shopping);
     }
   };
 
@@ -147,28 +200,42 @@ export default function MealPlannerV2Page() {
     );
   }
 
+  // Determine the primary error to show
+  const primaryError = rotationError || mealPlanError;
+
   return (
     <div className="container mx-auto px-4 py-8">
-      {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">
-          GD Meal Planner
-        </h1>
-        <p className="text-gray-600">
-          AI-powered meal planning with{" "}
-          <span className="font-semibold">
-            {recipesLoading ? (
-              <span className="inline-block animate-pulse">loading...</span>
-            ) : (
-              `${recipeCount} GD-friendly recipes`
-            )}
-          </span>
-        </p>
-      </div>
+      {/* Main Header - only show if no weekly rotation */}
+      {!currentWeekInfo && (
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">
+            GD Meal Planner
+          </h1>
+          <p className="text-gray-600">
+            AI-powered meal planning with{" "}
+            <span className="font-semibold">
+              {recipesLoading ? (
+                <span className="inline-block animate-pulse">loading...</span>
+              ) : (
+                `${recipeCount} GD-friendly recipes`
+              )}
+            </span>
+          </p>
+        </div>
+      )}
 
-      {error && (
+      {/* Weekly Rotation Header */}
+      <WeeklyRotationHeader
+        currentWeekInfo={currentWeekInfo}
+        loading={rotationLoading}
+        onTrackSwitch={handleTrackSwitch}
+        onPreviewNext={handlePreviewNext}
+        showingNextWeek={showingNextWeek}
+      />
+
+      {primaryError && (
         <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-6">
-          {error}
+          {primaryError}
         </div>
       )}
 
@@ -205,8 +272,34 @@ export default function MealPlannerV2Page() {
         )}
       </Card>
 
-      {/* Generate Section or Meal Plan Display */}
-      {!mealPlan ? (
+      {/* Meal Plan Display - Always show if we have any plan */}
+      {displayMealPlan ? (
+        <>
+          {/* Tab Navigation */}
+          <TabNavigation 
+            activeTab={activeTab}
+            onTabChange={setActiveTab}
+            shoppingItemCount={shoppingList?.totalItems}
+          />
+
+          {/* Tab Content */}
+          {activeTab === 'meal-plan' ? (
+            <MealPlanDisplay
+              mealPlan={displayMealPlan}
+              onSwapMeal={handleSwapMeal}
+              onUpdateRecipes={handleUpdateRecipes}
+              onGenerateNew={handleGenerateMealPlan}
+              isGenerating={generating}
+            />
+          ) : (
+            <ShoppingListView
+              shoppingList={shoppingList}
+              onExportText={exportShoppingListText}
+            />
+          )}
+        </>
+      ) : (
+        /* Fallback: Generate Section - only show if no meal plan at all */
         <Card className="p-8 text-center">
           <h2 className="text-xl font-semibold mb-4">Generate Your Meal Plan</h2>
           <p className="text-gray-600 mb-6">
@@ -226,39 +319,14 @@ export default function MealPlannerV2Page() {
               size="lg"
               className="min-w-[200px]"
             >
-              Generate Meal Plan
+              Generate Custom Plan
             </Button>
           )}
         </Card>
-      ) : (
-        <>
-          {/* Tab Navigation */}
-          <TabNavigation 
-            activeTab={activeTab}
-            onTabChange={setActiveTab}
-            shoppingItemCount={shoppingList?.totalItems}
-          />
-
-          {/* Tab Content */}
-          {activeTab === 'meal-plan' ? (
-            <MealPlanDisplay
-              mealPlan={mealPlan}
-              onSwapMeal={handleSwapMeal}
-              onUpdateRecipes={handleUpdateRecipes}
-              onGenerateNew={handleGenerateMealPlan}
-              isGenerating={generating}
-            />
-          ) : (
-            <ShoppingListView
-              shoppingList={shoppingList}
-              onExportText={exportShoppingListText}
-            />
-          )}
-        </>
       )}
       
       {/* Medical Guidelines - Always visible when meal plan exists */}
-      {mealPlan && (
+      {displayMealPlan && (
         <div className="mt-6 p-4 bg-blue-50 rounded-lg">
           <p className="text-sm text-blue-800">
             <strong>Medical Note:</strong> This meal plan follows gestational diabetes guidelines with target daily intake of 175-200g carbohydrates distributed across 3 meals and 3 snacks. Evening snacks include protein for blood sugar stability. Always consult with your healthcare provider.

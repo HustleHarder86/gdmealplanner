@@ -17,6 +17,7 @@
     "import": "tsx scripts/import-recipes-cli.ts",
     "test:import": "tsx scripts/test-import-status.ts",
     "sync-recipes": "tsx scripts/sync-offline-recipes.ts",
+    "generate-rotations": "tsx scripts/generate-rotation-libraries.ts",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:dietary": "playwright test dietary-restrictions.spec.ts",

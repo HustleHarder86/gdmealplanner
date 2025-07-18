@@ -1,6 +1,20 @@
 {
   "indexes": [
     {
+      "collectionGroup": "weekly_rotations",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "rotationTrack",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "weekNumber",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
       "collectionGroup": "user_recipes",
       "queryScope": "COLLECTION",
       "fields": [

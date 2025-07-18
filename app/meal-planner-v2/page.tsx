@@ -13,12 +13,26 @@ import MealPlanDisplay from "./components/MealPlanDisplay";
 import ShoppingListView from "./components/ShoppingListView";
 import TabNavigation from "./components/TabNavigation";
 import DietaryPreferences from "./components/DietaryPreferences";
+import WeeklyRotationHeader from "./components/WeeklyRotationHeader";
 import { useMealPlan } from "./hooks/useMealPlan";
+import { useLocalWeeklyRotation } from "./hooks/useLocalWeeklyRotation";
 
 export default function MealPlannerV2Page() {
-  // Working meal plan generation (original system)
+  // Smart Rotation system (working locally)
+  const {
+    currentWeekInfo,
+    loading: rotationLoading,
+    error: rotationError,
+    showingNextWeek,
+    switchTrack,
+    previewNextWeek,
+    returnToCurrentWeek,
+    getCurrentMealPlan: getRotationMealPlan,
+  } = useLocalWeeklyRotation('demo-user');
+
+  // Fallback meal plan generation (original system)
   const { 
-    mealPlan, 
+    mealPlan: fallbackMealPlan, 
     preferences,
     setPreferences,
     generating, 
@@ -57,13 +71,16 @@ export default function MealPlannerV2Page() {
     initializePage();
   }, []);
   
+  // Determine which meal plan to show (prioritize rotation)
+  const displayMealPlan = getRotationMealPlan() || fallbackMealPlan;
+
   // Generate shopping list when meal plan changes
   useEffect(() => {
-    if (mealPlan) {
-      const shopping = ShoppingListGenerator.generateFromMealPlan(mealPlan);
+    if (displayMealPlan) {
+      const shopping = ShoppingListGenerator.generateFromMealPlan(displayMealPlan);
       setShoppingList(shopping);
     }
-  }, [mealPlan]);
+  }, [displayMealPlan]);
 
   // Handle meal plan generation
   const handleGenerateMealPlan = async () => {
@@ -93,6 +110,22 @@ export default function MealPlannerV2Page() {
       const shopping = ShoppingListGenerator.generateFromMealPlan(updatedPlan);
       setShoppingList(shopping);
     }
+  };
+
+  // Handle track switching
+  const handleTrackSwitch = async (track: any) => {
+    await switchTrack(track);
+    // Shopping list will update automatically via useEffect
+  };
+
+  // Handle next week preview
+  const handlePreviewNext = async () => {
+    if (showingNextWeek) {
+      returnToCurrentWeek();
+    } else {
+      await previewNextWeek();
+    }
+    // Shopping list will update automatically via useEffect
   };
 
   // Export shopping list
@@ -126,22 +159,33 @@ export default function MealPlannerV2Page() {
     );
   }
 
-  const primaryError = error || mealPlanError;
+  const primaryError = error || rotationError || mealPlanError;
 
   return (
     <div className="container mx-auto px-4 py-8">
-      {/* Main Header */}
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">
-          GD Meal Planner
-        </h1>
-        <p className="text-gray-600">
-          AI-powered meal planning with{" "}
-          <span className="font-semibold">
-            {recipeCount} GD-friendly recipes
-          </span>
-        </p>
-      </div>
+      {/* Main Header - only show if no weekly rotation */}
+      {!currentWeekInfo && (
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">
+            GD Meal Planner
+          </h1>
+          <p className="text-gray-600">
+            AI-powered meal planning with{" "}
+            <span className="font-semibold">
+              {recipeCount} GD-friendly recipes
+            </span>
+          </p>
+        </div>
+      )}
+
+      {/* Weekly Rotation Header */}
+      <WeeklyRotationHeader
+        currentWeekInfo={currentWeekInfo}
+        loading={rotationLoading}
+        onTrackSwitch={handleTrackSwitch}
+        onPreviewNext={handlePreviewNext}
+        showingNextWeek={showingNextWeek}
+      />
 
       {primaryError && (
         <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-6">
@@ -171,8 +215,8 @@ export default function MealPlannerV2Page() {
         </div>
       </Card>
 
-      {/* Meal Plan Display - Show if we have a generated plan */}
-      {mealPlan ? (
+      {/* Meal Plan Display - Show if we have any plan (rotation or generated) */}
+      {displayMealPlan ? (
         <>
           {/* Tab Navigation */}
           <TabNavigation 
@@ -184,7 +228,7 @@ export default function MealPlannerV2Page() {
           {/* Tab Content */}
           {activeTab === 'meal-plan' ? (
             <MealPlanDisplay
-              mealPlan={mealPlan}
+              mealPlan={displayMealPlan}
               onSwapMeal={handleSwapMeal}
               onUpdateRecipes={handleUpdateRecipes}
               onGenerateNew={handleGenerateMealPlan}
@@ -197,56 +241,72 @@ export default function MealPlannerV2Page() {
             />
           )}
           
-          {/* Smart Rotation Status - Show below meal plan */}
-          <Card className="mt-6 p-6 bg-blue-50">
-            <h3 className="text-lg font-semibold text-blue-900 mb-2">
-              🔄 Smart Rotation System (Coming Soon)
-            </h3>
-            <p className="text-blue-800 text-sm mb-3">
-              The next-generation meal planning system has been built and validated:
-            </p>
-            <div className="grid grid-cols-2 gap-4 text-xs text-blue-700">
-              <div>✅ Pre-curated weekly rotations</div>
-              <div>✅ Recipe spacing algorithm</div>
-              <div>✅ Multiple dietary tracks</div>
-              <div>✅ 52+ weeks of variety</div>
-            </div>
-            <p className="text-blue-600 text-xs mt-3">
-              Currently using the original meal plan generator. Smart Rotation will eliminate the &quot;generate&quot; button with instant weekly plans.
-            </p>
-          </Card>
+          {/* Show rotation status if using rotation plan */}
+          {getRotationMealPlan() && (
+            <Card className="mt-6 p-6 bg-green-50">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                ✨ Smart Rotation System Active
+              </h3>
+              <p className="text-green-800 text-sm mb-3">
+                You&apos;re viewing a pre-curated weekly meal plan from our Smart Rotation system:
+              </p>
+              <div className="grid grid-cols-2 gap-4 text-xs text-green-700">
+                <div>✅ Instant weekly plans</div>
+                <div>✅ Maximum recipe variety</div>
+                <div>✅ Track switching available</div>
+                <div>✅ Next week preview</div>
+              </div>
+              <p className="text-green-600 text-xs mt-3">
+                No more clicking &quot;generate&quot; - your meal plan is ready instantly with smart variety!
+              </p>
+            </Card>
+          )}
+          
+          {/* Show fallback status if using generated plan */}
+          {!getRotationMealPlan() && fallbackMealPlan && (
+            <Card className="mt-6 p-6 bg-blue-50">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                🔄 Generated Meal Plan
+              </h3>
+              <p className="text-blue-800 text-sm">
+                This meal plan was generated using the original system. The Smart Rotation system will load automatically on next visit.
+              </p>
+            </Card>
+          )}
         </>
       ) : (
-        /* Generate Section - Show when no meal plan exists */
+        /* Fallback Section - Show when rotation is loading or failed */
         <Card className="p-8 text-center">
-          <h2 className="text-xl font-semibold mb-4">Generate Your Meal Plan</h2>
-          <p className="text-gray-600 mb-6">
-            Create a personalized 7-day meal plan using our GD-friendly recipe library of {recipeCount} recipes
-          </p>
-          {generating ? (
+          {rotationLoading ? (
             <div className="space-y-4">
               <LoadingSpinner size="lg" />
-              <p className="text-gray-600">Creating your personalized meal plan...</p>
-              <p className="text-sm text-gray-500">This may take a few seconds</p>
+              <h2 className="text-xl font-semibold">Loading Smart Rotation System...</h2>
+              <p className="text-gray-600">Preparing your instant weekly meal plan with maximum variety</p>
+              <p className="text-sm text-gray-500">This creates 8 weeks of pre-curated meal plans</p>
             </div>
           ) : (
             <div className="space-y-4">
-              <Button
-                onClick={handleGenerateMealPlan}
-                disabled={generating}
-                variant="primary"
-                size="lg"
-                className="min-w-[200px]"
-              >
-                Generate Meal Plan
-              </Button>
-              
-              {/* Smart Rotation teaser */}
-              <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-                <p className="text-sm text-blue-800">
-                  <strong>Coming Soon:</strong> Smart Rotation system will show you an instant meal plan with pre-curated variety and track switching options!
-                </p>
-              </div>
+              <h2 className="text-xl font-semibold mb-4">Fallback: Generate Meal Plan</h2>
+              <p className="text-gray-600 mb-6">
+                Smart Rotation is temporarily unavailable. Generate a meal plan using our GD-friendly recipe library of {recipeCount} recipes
+              </p>
+              {generating ? (
+                <div className="space-y-4">
+                  <LoadingSpinner size="lg" />
+                  <p className="text-gray-600">Creating your personalized meal plan...</p>
+                  <p className="text-sm text-gray-500">This may take a few seconds</p>
+                </div>
+              ) : (
+                <Button
+                  onClick={handleGenerateMealPlan}
+                  disabled={generating}
+                  variant="primary"
+                  size="lg"
+                  className="min-w-[200px]"
+                >
+                  Generate Meal Plan
+                </Button>
+              )}
             </div>
           )}
         </Card>

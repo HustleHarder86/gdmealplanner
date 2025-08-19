@@ -3,14 +3,16 @@
 import { useState } from 'react';
 import { MealSlot } from '@/src/types/meal-plan';
 import { LocalRecipeService } from '@/src/services/local-recipe-service';
-import { Clock, Utensils, RefreshCw, Eye } from 'lucide-react';
+import { Clock, Utensils, RefreshCw, Eye, BookmarkPlus } from 'lucide-react';
 
 interface MealCardProps {
   mealType: string;
   meal: MealSlot;
   onSwap: () => void;
   onViewRecipe: (recipeId: string) => void;
+  onSaveToMyRecipes?: (recipeId: string) => void;
   isSwapping?: boolean;
+  isSaving?: boolean;
 }
 
 export default function MealCard({ 
@@ -18,7 +20,9 @@ export default function MealCard({
   meal, 
   onSwap, 
   onViewRecipe,
-  isSwapping = false 
+  onSaveToMyRecipes,
+  isSwapping = false,
+  isSaving = false 
 }: MealCardProps) {
   const recipe = meal.recipeId ? LocalRecipeService.getRecipeById(meal.recipeId) : null;
   
@@ -45,6 +49,7 @@ export default function MealCard({
           alt={recipe.title}
           isVegetarian={recipe.dietaryInfo?.isVegetarian}
           isGlutenFree={recipe.dietaryInfo?.isGlutenFree}
+          isUserCreated={recipe.isUserCreated}
         />
         
         {/* Recipe Info */}
@@ -62,7 +67,7 @@ export default function MealCard({
           </div>
           
           {/* Action Buttons */}
-          <div className="flex gap-2">
+          <div className="flex gap-1">
             <button
               onClick={() => onViewRecipe(recipe.id)}
               className="flex-1 btn-view rounded flex items-center justify-center gap-1 text-xs py-1.5"
@@ -70,10 +75,24 @@ export default function MealCard({
               <Eye className="h-3 w-3" />
               <span className="hidden sm:inline">View</span>
             </button>
+            
+            {/* Save to My Recipes - only show for system recipes */}
+            {!recipe.isUserCreated && onSaveToMyRecipes && (
+              <button
+                onClick={() => onSaveToMyRecipes(recipe.id)}
+                disabled={isSaving}
+                className="btn-view rounded flex items-center justify-center gap-1 text-xs py-1.5 px-2 disabled:opacity-50"
+                title="Save to My Recipes"
+              >
+                <BookmarkPlus className={`h-3 w-3 ${isSaving ? 'animate-pulse' : ''}`} />
+                <span className="hidden sm:inline">{isSaving ? 'Saving' : 'Save'}</span>
+              </button>
+            )}
+            
             <button
               onClick={onSwap}
               disabled={isSwapping}
-              className="btn-view rounded flex items-center justify-center gap-1 text-xs py-1.5 px-3 disabled:opacity-50"
+              className="btn-view rounded flex items-center justify-center gap-1 text-xs py-1.5 px-2 disabled:opacity-50"
               title="Swap meal"
             >
               <RefreshCw className={`h-3 w-3 ${isSwapping ? 'animate-spin' : ''}`} />
@@ -91,12 +110,14 @@ function MealCardImage({
   imageUrl, 
   alt, 
   isVegetarian, 
-  isGlutenFree 
+  isGlutenFree,
+  isUserCreated 
 }: { 
   imageUrl: string; 
   alt: string; 
   isVegetarian?: boolean;
   isGlutenFree?: boolean;
+  isUserCreated?: boolean;
 }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -117,8 +138,13 @@ function MealCardImage({
         }}
       />
       {/* Dietary badges */}
-      {(isVegetarian || isGlutenFree) && (
+      {(isVegetarian || isGlutenFree || isUserCreated) && (
         <div className="absolute top-1 right-1 flex gap-1">
+          {isUserCreated && (
+            <span className="bg-purple-600 text-white text-xs px-1.5 py-0.5 rounded-full font-medium">
+              Mine
+            </span>
+          )}
           {isVegetarian && (
             <span className="bg-green-600 text-white text-xs px-1.5 py-0.5 rounded-full font-medium">
               V

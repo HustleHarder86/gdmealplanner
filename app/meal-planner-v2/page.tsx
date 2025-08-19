@@ -7,6 +7,12 @@ import { ShoppingList } from "@/src/types/meal-plan";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
+import { useRecipes } from "@/src/hooks/useRecipes";
+import { useAuth } from "@/src/contexts/AuthContext";
+import { Plus } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { UserRecipeService } from "@/src/services/user-recipe-service";
+import { UserRecipeInput } from "@/src/types/recipe";
 
 // Import working components
 import MealPlanDisplay from "./components/MealPlanDisplay";
@@ -18,7 +24,20 @@ import { useMealPlan } from "./hooks/useMealPlan";
 import { useLocalWeeklyRotation } from "./hooks/useLocalWeeklyRotation";
 
 export default function MealPlannerV2Page() {
-  // Smart Rotation system (working locally)
+  const router = useRouter();
+  const { user } = useAuth();
+  
+  // Recipe data from provider
+  const { 
+    recipes, 
+    loading: recipesLoading, 
+    error: recipesError, 
+    initialized: recipesInitialized,
+    stats,
+    refreshUserRecipes
+  } = useRecipes();
+
+  // Smart Rotation system (working locally) - only start after recipes are loaded
   const {
     currentWeekInfo,
     loading: rotationLoading,
@@ -28,9 +47,9 @@ export default function MealPlannerV2Page() {
     previewNextWeek,
     returnToCurrentWeek,
     getCurrentMealPlan: getRotationMealPlan,
-  } = useLocalWeeklyRotation('demo-user');
+  } = useLocalWeeklyRotation(recipesInitialized ? 'demo-user' : undefined);
 
-  // Fallback meal plan generation (original system)
+  // Fallback meal plan generation (original system) - only start after recipes are loaded
   const { 
     mealPlan: fallbackMealPlan, 
     preferences,
@@ -40,36 +59,18 @@ export default function MealPlannerV2Page() {
     generateMealPlan, 
     updateWithNewRecipes, 
     swapMeal 
-  } = useMealPlan('demo-user');
+  } = useMealPlan(recipesInitialized ? 'demo-user' : undefined);
   
-  const [loading, setLoading] = useState(true);
-  const [recipeCount, setRecipeCount] = useState<number>(0);
-  const [error, setError] = useState<string | null>(null);
   const [shoppingList, setShoppingList] = useState<ShoppingList | null>(null);
   const [activeTab, setActiveTab] = useState<'meal-plan' | 'shopping-list'>('meal-plan');
   const [showSuccess, setShowSuccess] = useState(false);
 
+  // Log recipe count when recipes are loaded
   useEffect(() => {
-    const initializePage = async () => {
-      try {
-        setLoading(true);
-        
-        // Wait a bit for RecipeProvider to initialize
-        await new Promise(resolve => setTimeout(resolve, 500));
-        
-        const allRecipes = LocalRecipeService.getAllRecipes();
-        setRecipeCount(allRecipes.length);
-        console.log(`[MEAL_PLANNER] Found ${allRecipes.length} recipes available`);
-      } catch (err) {
-        console.error('[MEAL_PLANNER] Initialization error:', err);
-        setError('Failed to load recipe library');
-      } finally {
-        setLoading(false);
-      }
-    };
-    
-    initializePage();
-  }, []);
+    if (recipesInitialized && recipes.length > 0) {
+      console.log(`[MEAL_PLANNER] Found ${recipes.length} recipes available`);
+    }
+  }, [recipesInitialized, recipes.length]);
   
   // Determine which meal plan to show (prioritize rotation)
   const displayMealPlan = getRotationMealPlan() || fallbackMealPlan;
@@ -85,7 +86,17 @@ export default function MealPlannerV2Page() {
   // Handle meal plan generation
   const handleGenerateMealPlan = async () => {
     setShowSuccess(false);
+    
+    // Ensure loading state is visible for at least 1 second for better UX
+    const startTime = Date.now();
     const plan = await generateMealPlan();
+    const elapsedTime = Date.now() - startTime;
+    const minimumDelay = 1000; // 1 second minimum
+    
+    if (elapsedTime < minimumDelay) {
+      await new Promise(resolve => setTimeout(resolve, minimumDelay - elapsedTime));
+    }
+    
     if (plan) {
       const shopping = ShoppingListGenerator.generateFromMealPlan(plan);
       setShoppingList(shopping);
@@ -146,35 +157,104 @@ export default function MealPlannerV2Page() {
     URL.revokeObjectURL(url);
   };
 
-  if (loading) {
+  // Navigate to add recipe page
+  const handleAddRecipe = () => {
+    if (user) {
+      router.push('/my-recipes');
+    } else {
+      router.push('/auth/login');
+    }
+  };
+
+  // Save system recipe to user's collection
+  const handleSaveToMyRecipes = async (recipeId: string) => {
+    if (!user) {
+      router.push('/auth/login');
+      return;
+    }
+
+    try {
+      // Get the original recipe
+      const originalRecipe = LocalRecipeService.getRecipeById(recipeId);
+      if (!originalRecipe) {
+        throw new Error('Recipe not found');
+      }
+
+      // Convert to user recipe input
+      const userRecipeInput: UserRecipeInput = {
+        title: `${originalRecipe.title} (My Copy)`,
+        description: originalRecipe.description,
+        category: originalRecipe.category,
+        tags: [...originalRecipe.tags, 'copied-recipe'],
+        prepTime: originalRecipe.prepTime,
+        cookTime: originalRecipe.cookTime,
+        servings: originalRecipe.servings,
+        ingredients: originalRecipe.ingredients,
+        instructions: originalRecipe.instructions,
+        nutrition: originalRecipe.nutrition,
+        dietaryInfo: originalRecipe.dietaryInfo,
+        allergenInfo: originalRecipe.allergenInfo,
+        imageUrl: originalRecipe.imageUrl,
+        isPrivate: false,
+      };
+
+      // Create the user recipe
+      await UserRecipeService.createRecipe(user.uid, userRecipeInput);
+      
+      // Refresh user recipes in the provider
+      await refreshUserRecipes();
+      
+      // Show success message (you could add a toast here)
+      console.log('Recipe saved to My Recipes successfully!');
+    } catch (error) {
+      console.error('Error saving recipe:', error);
+      // You could add error handling/toast here
+    }
+  };
+
+  // Show loading state while recipes are loading
+  if (recipesLoading) {
     return (
       <div className="container mx-auto px-4 py-8">
         <div className="flex items-center justify-center min-h-[400px]">
           <div className="text-center">
             <LoadingSpinner size="lg" />
-            <p className="text-gray-600 mt-4">Initializing meal planner...</p>
+            <p className="text-gray-600 mt-4">Loading recipe library...</p>
+            <p className="text-gray-500 text-sm mt-2">Loading 450+ GD-friendly recipes</p>
           </div>
         </div>
       </div>
     );
   }
 
-  const primaryError = error || rotationError || mealPlanError;
+  const primaryError = recipesError || rotationError || mealPlanError;
 
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Main Header - only show if no weekly rotation */}
       {!currentWeekInfo && (
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            GD Meal Planner
-          </h1>
-          <p className="text-gray-600">
-            AI-powered meal planning with{" "}
-            <span className="font-semibold">
-              {recipeCount} GD-friendly recipes
-            </span>
-          </p>
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900 mb-2">
+                GD Meal Planner
+              </h1>
+              <p className="text-gray-600">
+                AI-powered meal planning with{" "}
+                <span className="font-semibold">
+                  {recipes.length} GD-friendly recipes
+                </span>
+              </p>
+            </div>
+            <Button
+              onClick={handleAddRecipe}
+              variant="secondary"
+              className="flex items-center gap-2 whitespace-nowrap"
+            >
+              <Plus className="h-4 w-4" />
+              Add Recipe
+            </Button>
+          </div>
         </div>
       )}
 
@@ -185,6 +265,7 @@ export default function MealPlannerV2Page() {
         onTrackSwitch={handleTrackSwitch}
         onPreviewNext={handlePreviewNext}
         showingNextWeek={showingNextWeek}
+        onAddRecipe={handleAddRecipe}
       />
 
       {primaryError && (
@@ -206,7 +287,7 @@ export default function MealPlannerV2Page() {
       <Card className="mb-6 p-6">
         <h3 className="text-lg font-semibold mb-4">Recipe Library Status</h3>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {Object.entries(LocalRecipeService.getStats().byCategory).map(([category, count]) => (
+          {Object.entries(stats.byCategory).map(([category, count]) => (
             <div key={category} className="text-center">
               <div className="text-2xl font-bold text-green-600">{count}</div>
               <div className="text-sm text-gray-600 capitalize">{category}</div>
@@ -232,6 +313,7 @@ export default function MealPlannerV2Page() {
               onSwapMeal={handleSwapMeal}
               onUpdateRecipes={handleUpdateRecipes}
               onGenerateNew={handleGenerateMealPlan}
+              onSaveToMyRecipes={handleSaveToMyRecipes}
               isGenerating={generating}
             />
           ) : (
@@ -288,7 +370,7 @@ export default function MealPlannerV2Page() {
             <div className="space-y-4">
               <h2 className="text-xl font-semibold mb-4">Fallback: Generate Meal Plan</h2>
               <p className="text-gray-600 mb-6">
-                Smart Rotation is temporarily unavailable. Generate a meal plan using our GD-friendly recipe library of {recipeCount} recipes
+                Smart Rotation is temporarily unavailable. Generate a meal plan using our GD-friendly recipe library of {recipes.length} recipes
               </p>
               {generating ? (
                 <div className="space-y-4">

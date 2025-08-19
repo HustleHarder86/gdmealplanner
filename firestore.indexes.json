@@ -71,6 +71,20 @@
       ]
     },
     {
+      "collectionGroup": "glucoseReadings",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "userId",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "timestamp",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
       "collectionGroup": "meal_plans",
       "queryScope": "COLLECTION",
       "fields": [

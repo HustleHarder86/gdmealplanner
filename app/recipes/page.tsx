@@ -4,12 +4,15 @@ import { useState, useMemo } from "react";
 import { Input } from "@/components/ui";
 import RecipeCard from "@/components/RecipeCardWithFallback";
 import { useRecipes } from "@/src/hooks/useRecipes";
+import Button from "@/components/ui/Button";
 
 export default function RecipesPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedTime, setSelectedTime] = useState("all");
   const [selectedCarbs, setSelectedCarbs] = useState("all");
+  const [currentPage, setCurrentPage] = useState(1);
+  const recipesPerPage = 24; // 3 columns x 8 rows for good UX
 
   // Get recipes from the provider
   const { recipes, loading, error } = useRecipes();
@@ -79,6 +82,17 @@ export default function RecipesPage() {
     return filteredList;
   }, [recipes, searchTerm, selectedCategory, selectedTime, selectedCarbs]);
 
+  // Calculate pagination
+  const totalPages = Math.ceil(filteredRecipes.length / recipesPerPage);
+  const startIndex = (currentPage - 1) * recipesPerPage;
+  const endIndex = startIndex + recipesPerPage;
+  const paginatedRecipes = filteredRecipes.slice(startIndex, endIndex);
+
+  // Reset to page 1 when filters change
+  const handleFiltersChange = () => {
+    setCurrentPage(1);
+  };
+
   if (loading) {
     return (
       <div className="container py-8">
@@ -146,7 +160,10 @@ export default function RecipesPage() {
             type="search"
             placeholder="Search recipes..."
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={(e) => {
+              setSearchTerm(e.target.value);
+              handleFiltersChange();
+            }}
             className="max-w-md"
           />
         </div>
@@ -155,7 +172,10 @@ export default function RecipesPage() {
           <select
             className="px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
             value={selectedCategory}
-            onChange={(e) => setSelectedCategory(e.target.value)}
+            onChange={(e) => {
+              setSelectedCategory(e.target.value);
+              handleFiltersChange();
+            }}
           >
             <option value="all">All Meals</option>
             <option value="breakfast">Breakfast</option>
@@ -167,7 +187,10 @@ export default function RecipesPage() {
           <select
             className="px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
             value={selectedCarbs}
-            onChange={(e) => setSelectedCarbs(e.target.value)}
+            onChange={(e) => {
+              setSelectedCarbs(e.target.value);
+              handleFiltersChange();
+            }}
           >
             <option value="all">All Carb Ranges</option>
             <option value="breakfast">Breakfast (25-35g)</option>
@@ -179,7 +202,10 @@ export default function RecipesPage() {
           <select
             className="px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
             value={selectedTime}
-            onChange={(e) => setSelectedTime(e.target.value)}
+            onChange={(e) => {
+              setSelectedTime(e.target.value);
+              handleFiltersChange();
+            }}
           >
             <option value="all">Any Cook Time</option>
             <option value="quick">Under 15 min</option>
@@ -189,11 +215,16 @@ export default function RecipesPage() {
         </div>
       </div>
 
-      {/* Results count */}
-      <div className="mb-4">
+      {/* Results count and pagination info */}
+      <div className="mb-4 flex justify-between items-center">
         <p className="text-neutral-600">
-          Showing {filteredRecipes.length} of {recipes.length} recipes
+          Showing {startIndex + 1}-{Math.min(endIndex, filteredRecipes.length)} of {filteredRecipes.length} recipes
         </p>
+        {totalPages > 1 && (
+          <p className="text-neutral-500 text-sm">
+            Page {currentPage} of {totalPages}
+          </p>
+        )}
       </div>
 
       {/* No results message */}
@@ -208,6 +239,7 @@ export default function RecipesPage() {
               setSelectedCategory("all");
               setSelectedTime("all");
               setSelectedCarbs("all");
+              handleFiltersChange();
             }}
             className="mt-4 px-4 py-2 text-primary-600 hover:text-primary-700"
           >
@@ -216,11 +248,69 @@ export default function RecipesPage() {
         </div>
       )}
 
-      {/* Recipe Grid */}
+      {/* Recipe Grid - Now Paginated! */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredRecipes.map((recipe) => (
+        {paginatedRecipes.map((recipe) => (
           <RecipeCard key={recipe.id} recipe={recipe} />
         ))}
+      </div>
+
+      {/* Pagination Controls */}
+      {totalPages > 1 && (
+        <div className="flex justify-center items-center space-x-4 mt-8 py-8">
+          <Button
+            onClick={() => setCurrentPage(currentPage - 1)}
+            disabled={currentPage === 1}
+            variant="outline"
+            size="sm"
+          >
+            Previous
+          </Button>
+          
+          <div className="flex space-x-2">
+            {/* Show page numbers */}
+            {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
+              let pageNumber;
+              if (totalPages <= 5) {
+                pageNumber = i + 1;
+              } else if (currentPage <= 3) {
+                pageNumber = i + 1;
+              } else if (currentPage >= totalPages - 2) {
+                pageNumber = totalPages - 4 + i;
+              } else {
+                pageNumber = currentPage - 2 + i;
+              }
+              
+              return (
+                <button
+                  key={pageNumber}
+                  onClick={() => setCurrentPage(pageNumber)}
+                  className={`px-3 py-2 rounded-md text-sm font-medium ${
+                    currentPage === pageNumber
+                      ? 'bg-primary-600 text-white'
+                      : 'text-neutral-700 hover:bg-neutral-100'
+                  }`}
+                >
+                  {pageNumber}
+                </button>
+              );
+            })}
+          </div>
+          
+          <Button
+            onClick={() => setCurrentPage(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            variant="outline" 
+            size="sm"
+          >
+            Next
+          </Button>
+        </div>
+      )}
+
+      {/* Performance info for debugging */}
+      <div className="mt-4 text-center text-xs text-neutral-400">
+        Rendering {paginatedRecipes.length} recipes (Page {currentPage} of {totalPages})
       </div>
     </div>
   );

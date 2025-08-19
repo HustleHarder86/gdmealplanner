@@ -463,6 +463,137 @@ export default function CustomRecipeForm({ onSave, onCancel, initialData }: Cust
           </div>
         </div>
 
+        {/* Nutrition Information (Optional) */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Nutrition Information (per serving) - Optional
+          </label>
+          <p className="text-xs text-gray-500 mb-4">
+            Leave blank to auto-calculate based on ingredients (estimates only)
+          </p>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div>
+              <label className="block text-xs text-gray-600 mb-1">Calories</label>
+              <input
+                type="number"
+                value={formData.nutrition?.calories || ''}
+                onChange={(e) => handleInputChange('nutrition', {
+                  ...formData.nutrition,
+                  calories: parseFloat(e.target.value) || 0
+                })}
+                placeholder="300"
+                className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-green-500 focus:border-green-500 text-sm"
+                min="0"
+                step="1"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-xs text-gray-600 mb-1">Carbs (g) *</label>
+              <input
+                type="number"
+                value={formData.nutrition?.carbohydrates || ''}
+                onChange={(e) => handleInputChange('nutrition', {
+                  ...formData.nutrition,
+                  carbohydrates: parseFloat(e.target.value) || 0
+                })}
+                placeholder="30"
+                className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-green-500 focus:border-green-500 text-sm"
+                min="0"
+                step="0.1"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-xs text-gray-600 mb-1">Protein (g)</label>
+              <input
+                type="number"
+                value={formData.nutrition?.protein || ''}
+                onChange={(e) => handleInputChange('nutrition', {
+                  ...formData.nutrition,
+                  protein: parseFloat(e.target.value) || 0
+                })}
+                placeholder="15"
+                className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-green-500 focus:border-green-500 text-sm"
+                min="0"
+                step="0.1"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-xs text-gray-600 mb-1">Fat (g)</label>
+              <input
+                type="number"
+                value={formData.nutrition?.fat || ''}
+                onChange={(e) => handleInputChange('nutrition', {
+                  ...formData.nutrition,
+                  fat: parseFloat(e.target.value) || 0
+                })}
+                placeholder="10"
+                className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-green-500 focus:border-green-500 text-sm"
+                min="0"
+                step="0.1"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-xs text-gray-600 mb-1">Fiber (g)</label>
+              <input
+                type="number"
+                value={formData.nutrition?.fiber || ''}
+                onChange={(e) => handleInputChange('nutrition', {
+                  ...formData.nutrition,
+                  fiber: parseFloat(e.target.value) || 0
+                })}
+                placeholder="5"
+                className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-green-500 focus:border-green-500 text-sm"
+                min="0"
+                step="0.1"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-xs text-gray-600 mb-1">Sugar (g)</label>
+              <input
+                type="number"
+                value={formData.nutrition?.sugar || ''}
+                onChange={(e) => handleInputChange('nutrition', {
+                  ...formData.nutrition,
+                  sugar: parseFloat(e.target.value) || 0
+                })}
+                placeholder="8"
+                className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-green-500 focus:border-green-500 text-sm"
+                min="0"
+                step="0.1"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-xs text-gray-600 mb-1">Sodium (mg)</label>
+              <input
+                type="number"
+                value={formData.nutrition?.sodium || ''}
+                onChange={(e) => handleInputChange('nutrition', {
+                  ...formData.nutrition,
+                  sodium: parseFloat(e.target.value) || 0
+                })}
+                placeholder="400"
+                className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-green-500 focus:border-green-500 text-sm"
+                min="0"
+                step="1"
+              />
+            </div>
+          </div>
+          
+          <div className="mt-4 p-3 bg-blue-50 rounded-lg">
+            <p className="text-xs text-blue-800">
+              <strong>GD Guidelines:</strong> Breakfast should have 15-45g carbs, main meals 30-60g carbs, snacks 10-30g carbs. 
+              Include 3g+ fiber and adequate protein to help stabilize blood sugar.
+            </p>
+          </div>
+        </div>
+
         {/* Privacy */}
         <div className="flex items-center gap-3">
           <input

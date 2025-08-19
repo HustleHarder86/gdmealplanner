@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { CurrentWeekInfo, ROTATION_TRACKS, RotationTrack } from '@/src/types/weekly-rotation';
-import { ChevronDown, Calendar, RotateCcw, Eye, Sparkles } from 'lucide-react';
+import { ChevronDown, Calendar, RotateCcw, Eye, Sparkles, Plus } from 'lucide-react';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
 
@@ -12,6 +12,7 @@ interface WeeklyRotationHeaderProps {
   onTrackSwitch: (track: RotationTrack) => void;
   onPreviewNext: () => void;
   showingNextWeek?: boolean;
+  onAddRecipe?: () => void;
 }
 
 export default function WeeklyRotationHeader({
@@ -20,6 +21,7 @@ export default function WeeklyRotationHeader({
   onTrackSwitch,
   onPreviewNext,
   showingNextWeek = false,
+  onAddRecipe,
 }: WeeklyRotationHeaderProps) {
   const [showTrackSelector, setShowTrackSelector] = useState(false);
 
@@ -38,13 +40,26 @@ export default function WeeklyRotationHeader({
   if (!currentWeekInfo) {
     return (
       <Card className="mb-6 p-6">
-        <div className="text-center">
-          <h2 className="text-xl font-semibold text-gray-900 mb-2">
-            No Meal Plan Available
-          </h2>
-          <p className="text-gray-600">
-            We&apos;re preparing your weekly rotation. Please check back soon!
-          </p>
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+          <div className="text-center md:text-left mb-4 md:mb-0">
+            <h2 className="text-xl font-semibold text-gray-900 mb-2">
+              No Meal Plan Available
+            </h2>
+            <p className="text-gray-600">
+              We&apos;re preparing your weekly rotation. Please check back soon!
+            </p>
+          </div>
+          
+          {onAddRecipe && (
+            <Button
+              onClick={onAddRecipe}
+              variant="secondary"
+              className="flex items-center gap-2"
+            >
+              <Plus className="h-4 w-4" />
+              Add Recipe
+            </Button>
+          )}
         </div>
       </Card>
     );
@@ -74,6 +89,17 @@ export default function WeeklyRotationHeader({
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-3">
+          {onAddRecipe && (
+            <Button
+              onClick={onAddRecipe}
+              variant="secondary"
+              className="flex items-center gap-2"
+            >
+              <Plus className="h-4 w-4" />
+              Add Recipe
+            </Button>
+          )}
+          
           {!showingNextWeek && currentWeekInfo.nextWeek && (
             <Button
               onClick={onPreviewNext}

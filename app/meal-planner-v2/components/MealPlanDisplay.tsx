@@ -11,6 +11,7 @@ interface MealPlanDisplayProps {
   onSwapMeal: (dayIndex: number, mealType: string) => void;
   onUpdateRecipes: () => void;
   onGenerateNew: () => void;
+  onSaveToMyRecipes?: (recipeId: string) => void;
   isGenerating?: boolean;
 }
 
@@ -19,13 +20,26 @@ export default function MealPlanDisplay({
   onSwapMeal,
   onUpdateRecipes,
   onGenerateNew,
+  onSaveToMyRecipes,
   isGenerating = false
 }: MealPlanDisplayProps) {
   const [expandedDays, setExpandedDays] = useState<number[]>([0]); // First day expanded by default
   const [swappingMeal, setSwappingMeal] = useState<string | null>(null);
+  const [savingRecipe, setSavingRecipe] = useState<string | null>(null);
 
   const handleViewRecipe = (recipeId: string) => {
     window.open(`/recipes/${recipeId}`, '_blank');
+  };
+
+  const handleSaveToMyRecipes = async (recipeId: string) => {
+    if (!onSaveToMyRecipes) return;
+    
+    setSavingRecipe(recipeId);
+    try {
+      await onSaveToMyRecipes(recipeId);
+    } finally {
+      setSavingRecipe(null);
+    }
   };
 
   return (
@@ -129,7 +143,9 @@ export default function MealPlanDisplay({
                             setSwappingMeal(null);
                           }}
                           onViewRecipe={handleViewRecipe}
+                          onSaveToMyRecipes={handleSaveToMyRecipes}
                           isSwapping={swappingMeal === swapKey}
+                          isSaving={savingRecipe === meal.recipeId}
                         />
                       );
                     })}

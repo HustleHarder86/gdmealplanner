@@ -5,6 +5,7 @@ import { LocalRecipeService } from '@/src/services/local-recipe-service';
 import { DEFAULT_PREFERENCES } from '../constants/preferences';
 
 export function useMealPlan(userId?: string) {
+  // Don't initialize if userId is not provided (recipes not ready)
   const [mealPlan, setMealPlan] = useState<MealPlan | null>(null);
   const [preferences, setPreferences] = useState<MealPlanPreferences>(DEFAULT_PREFERENCES);
   const [generating, setGenerating] = useState(false);

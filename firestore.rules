@@ -12,7 +12,8 @@ service cloud.firestore {
     
     // User profiles - only authenticated users can access their own profile
     match /users/{userId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
+      allow read, write: if request.auth != null && request.auth.uid == userId
+        || userId == 'demo-user-123'; // Allow demo user access
     }
     
     // User preferences - only authenticated users can access their own preferences
@@ -39,9 +40,11 @@ service cloud.firestore {
     }
     
     // Glucose readings - only authenticated users can access their own readings
-    match /glucose_readings/{readingId} {
-      allow read, write: if request.auth != null && request.auth.uid == resource.data.userId;
-      allow create: if request.auth != null && request.auth.uid == request.resource.data.userId;
+    match /glucoseReadings/{readingId} {
+      allow read, write: if request.auth != null && request.auth.uid == resource.data.userId
+        || resource.data.userId == 'demo-user-123'; // Allow demo user access
+      allow create: if request.auth != null && request.auth.uid == request.resource.data.userId
+        || request.resource.data.userId == 'demo-user-123'; // Allow demo user creation
     }
     
     // Nutrition logs - only authenticated users can access their own logs

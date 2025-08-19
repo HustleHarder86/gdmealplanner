@@ -178,11 +178,14 @@ export function RecipeProvider({ children }: { children: React.ReactNode }) {
     async function loadUserRecipes() {
       if (user && initialized) {
         try {
+          console.log(`[RECIPE_PROVIDER] Loading user recipes for ${user.uid}...`);
           await LocalRecipeService.loadUserRecipes(user.uid);
           // Update the recipes state to include user recipes
           const allRecipes = LocalRecipeService.getAllRecipes();
+          const userRecipes = LocalRecipeService.getUserRecipes();
           setRecipes(allRecipes);
-          console.log(`[RECIPE_PROVIDER] Loaded user recipes for ${user.uid}`);
+          console.log(`[RECIPE_PROVIDER] Loaded ${userRecipes.length} user recipes for ${user.uid}`);
+          console.log(`[RECIPE_PROVIDER] Total recipes available: ${allRecipes.length}`);
         } catch (error) {
           console.error('[RECIPE_PROVIDER] Error loading user recipes:', error);
         }
@@ -196,9 +199,13 @@ export function RecipeProvider({ children }: { children: React.ReactNode }) {
   const refreshUserRecipes = async () => {
     if (user) {
       try {
+        console.log(`[RECIPE_PROVIDER] Refreshing user recipes for ${user.uid}...`);
         await LocalRecipeService.loadUserRecipes(user.uid);
         const allRecipes = LocalRecipeService.getAllRecipes();
+        const userRecipes = LocalRecipeService.getUserRecipes();
         setRecipes(allRecipes);
+        console.log(`[RECIPE_PROVIDER] Refreshed ${userRecipes.length} user recipes`);
+        console.log(`[RECIPE_PROVIDER] Total recipes after refresh: ${allRecipes.length}`);
       } catch (error) {
         console.error('[RECIPE_PROVIDER] Error refreshing user recipes:', error);
       }

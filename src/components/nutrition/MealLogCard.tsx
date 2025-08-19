@@ -1,4 +1,5 @@
 import { NutritionEntry, MealType } from "@/src/types/nutrition";
+import AnimatedCounter from "../ui/AnimatedCounter";
 
 interface MealLogCardProps {
   mealType: MealType;
@@ -39,25 +40,69 @@ export default function MealLogCard({
 
   const carbStatus = getCarbStatus();
 
+  const getMealIcon = (mealType: string) => {
+    switch (mealType.toLowerCase()) {
+      case 'breakfast': return '🌅';
+      case 'lunch': return '☀️';
+      case 'dinner': return '🌙';
+      case 'morning-snack': return '🍎';
+      case 'afternoon-snack': return '🥨';
+      case 'bedtime-snack': return '🌛';
+      default: return '🍽️';
+    }
+  };
+
+  const getCardBorderStyle = () => {
+    if (totalCarbs === 0) return 'border-neutral-200';
+    if (totalCarbs < carbTarget.min) return 'nutrition-warning border-2';
+    if (totalCarbs > carbTarget.max) return 'nutrition-danger border-2';
+    return 'nutrition-success border-2';
+  };
+
+  const getMealTimeStyle = () => {
+    switch (mealType.toLowerCase()) {
+      case 'breakfast': return 'meal-breakfast';
+      case 'lunch': return 'meal-lunch'; 
+      case 'dinner': return 'meal-dinner';
+      default: return 'meal-snack';
+    }
+  };
+
   return (
-    <div className="bg-white rounded-lg p-4 shadow-sm border border-neutral-200">
-      <div className="flex items-center justify-between mb-3">
-        <div>
-          <h3 className="font-semibold">{label}</h3>
-          <p className="text-sm text-neutral-600">
-            {totalCarbs}g carbs • {totalCalories} cal
-          </p>
+    <div className={`bg-white rounded-xl p-5 shadow-md border-2 transition-all duration-300 hover:shadow-lg hover:scale-[1.02] ${getCardBorderStyle()}`}>
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center gap-3">
+          <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-xl border ${getMealTimeStyle()}`}>
+            {getMealIcon(mealType)}
+          </div>
+          <div>
+            <h3 className="text-lg font-bold text-neutral-800">{label}</h3>
+            <div className="flex items-center gap-4 text-sm text-neutral-600">
+              <span className="flex items-center gap-1">
+                🌾 <AnimatedCounter value={totalCarbs} suffix="g" /> carbs
+              </span>
+              <span className="flex items-center gap-1">
+                🔥 <AnimatedCounter value={totalCalories} /> cal
+              </span>
+            </div>
+          </div>
         </div>
         <div className="text-right">
-          <p className={`text-sm font-medium ${carbStatus.color}`}>
+          <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold border ${
+            totalCarbs === 0 ? 'nutrition-info' :
+            totalCarbs < carbTarget.min ? 'nutrition-warning' :
+            totalCarbs > carbTarget.max ? 'nutrition-danger' :
+            'nutrition-success achievement-glow'
+          }`}>
+            {totalCarbs === 0 ? '⚪' : totalCarbs < carbTarget.min ? '🟡' : totalCarbs > carbTarget.max ? '🔴' : '🟢'}
             {carbStatus.message}
-          </p>
+          </div>
           {plannedRecipe && entries.length === 0 && (
             <button
               onClick={onQuickAddFromPlan}
-              className="text-xs text-primary-600 hover:text-primary-700 mt-1"
+              className="text-xs text-primary-600 hover:text-primary-700 mt-2 bg-primary-50 px-2 py-1 rounded-full hover:bg-primary-100 transition-colors duration-200"
             >
-              Log from meal plan
+              ✨ Log from meal plan
             </button>
           )}
         </div>
@@ -94,9 +139,14 @@ export default function MealLogCard({
 
       <button
         onClick={onAddFood}
-        className="w-full py-2 border border-neutral-300 rounded-lg text-sm font-medium hover:bg-neutral-50 transition-colors"
+        className="w-full py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-semibold rounded-xl hover:from-primary-600 hover:to-primary-700 transition-all duration-200 transform hover:scale-[0.98] active:scale-[0.96] shadow-md hover:shadow-lg button-ripple"
       >
-        + Add Food
+        <span className="flex items-center justify-center gap-2">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+          </svg>
+          Add Food
+        </span>
       </button>
     </div>
   );

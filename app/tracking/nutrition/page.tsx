@@ -17,6 +17,7 @@ import NutritionEntryForm from "@/src/components/nutrition/NutritionEntryForm";
 import DailyNutritionSummaryCard from "@/src/components/nutrition/DailyNutritionSummaryCard";
 import MacroProgressRings from "@/src/components/nutrition/MacroProgressRings";
 import MealLogCard from "@/src/components/nutrition/MealLogCard";
+import NutritionLoadingSkeleton from "@/src/components/nutrition/NutritionLoadingSkeleton";
 
 export default function NutritionTrackingPage() {
   const router = useRouter();
@@ -160,15 +161,7 @@ export default function NutritionTrackingPage() {
   };
 
   if (authLoading || loading) {
-    return (
-      <div className="container py-8">
-        <div className="flex justify-center items-center h-64">
-          <div className="text-lg text-neutral-600">
-            {authLoading ? "Checking authentication..." : "Loading nutrition data..."}
-          </div>
-        </div>
-      </div>
-    );
+    return <NutritionLoadingSkeleton />;
   }
 
   return (

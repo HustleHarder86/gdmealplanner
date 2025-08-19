@@ -15,7 +15,7 @@ interface UseLocalWeeklyRotationReturn {
   getCurrentMealPlan: () => MealPlan | null;
 }
 
-export function useLocalWeeklyRotation(userId: string = 'demo-user'): UseLocalWeeklyRotationReturn {
+export function useLocalWeeklyRotation(userId?: string): UseLocalWeeklyRotationReturn {
   const [currentWeekInfo, setCurrentWeekInfo] = useState<CurrentWeekInfo | null>(null);
   const [nextWeekPlan, setNextWeekPlan] = useState<WeeklyRotationPlan | null>(null);
   const [loading, setLoading] = useState(true);
@@ -44,13 +44,21 @@ export function useLocalWeeklyRotation(userId: string = 'demo-user'): UseLocalWe
     }
   }, [userId, currentTrack]);
 
-  // Initialize on mount
+  // Initialize on mount - only if userId is provided
   useEffect(() => {
-    loadCurrentWeek();
-  }, [loadCurrentWeek]);
+    if (userId) {
+      loadCurrentWeek();
+    } else {
+      setLoading(false);
+      setCurrentWeekInfo(null);
+      setError(null);
+    }
+  }, [loadCurrentWeek, userId]);
 
   // Switch track
   const switchTrack = useCallback(async (track: RotationTrack) => {
+    if (!userId) return;
+    
     try {
       setLoading(true);
       setError(null);

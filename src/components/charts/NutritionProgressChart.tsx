@@ -127,7 +127,7 @@ export default function NutritionProgressChart({
         <div className="flex items-center justify-between mb-6">
           <div>
             <h3 className="text-lg font-bold text-neutral-800">Macro Distribution</h3>
-            <p className="text-sm text-neutral-600">Today's macronutrient breakdown</p>
+            <p className="text-sm text-neutral-600">Today&apos;s macronutrient breakdown</p>
           </div>
           <div className="text-right">
             <div className="text-2xl font-bold text-neutral-800">{latestData.calories}</div>

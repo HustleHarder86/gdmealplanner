@@ -1,0 +1,68 @@
+{
+  "visual": {
+    "similarity": {
+      "critical": 0.98,
+      "high": 0.95,
+      "medium": 0.90,
+      "low": 0.85
+    },
+    "colorTolerance": 5,
+    "fontTolerance": 2,
+    "spacingTolerance": 3
+  },
+  "performance": {
+    "loadTime": {
+      "excellent": 1000,
+      "good": 2000,
+      "acceptable": 3000,
+      "poor": 5000
+    },
+    "bundleSize": {
+      "increaseLimit": 0.05,
+      "warningSize": "1MB",
+      "maxSize": "2MB"
+    },
+    "lighthouse": {
+      "performance": 90,
+      "accessibility": 95,
+      "bestPractices": 90,
+      "seo": 90
+    }
+  },
+  "code": {
+    "complexity": {
+      "cyclomatic": 10,
+      "cognitive": 15,
+      "maintainability": 80
+    },
+    "coverage": {
+      "minimum": 70,
+      "target": 85,
+      "excellent": 95
+    }
+  },
+  "data": {
+    "nutrition": {
+      "carbAccuracy": 0.95,
+      "proteinAccuracy": 0.90,
+      "fiberAccuracy": 0.85
+    },
+    "recipes": {
+      "duplicateThreshold": 0.80,
+      "titleSimilarity": 0.85,
+      "ingredientOverlap": 0.70
+    }
+  },
+  "testing": {
+    "retries": {
+      "unit": 2,
+      "integration": 3,
+      "e2e": 5
+    },
+    "timeouts": {
+      "unit": 5000,
+      "integration": 10000,
+      "e2e": 30000
+    }
+  }
+}

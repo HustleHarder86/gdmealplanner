@@ -1,0 +1,12 @@
+2025-08-28T15:25:32.490Z [INFO] Starting E2E self-healing process
+2025-08-28T15:25:32.495Z [INFO] Processing 1 test files
+2025-08-28T15:25:32.495Z [INFO] Processing test file: --help
+2025-08-28T15:25:32.496Z [DEBUG] Running test file --help - Attempt 1
+2025-08-28T15:25:35.006Z [INFO] Test --help passed on attempt 1
+2025-08-28T15:25:35.007Z [INFO] E2E healing complete: 0/1 tests healed, 0 still failing
+2025-08-29T15:15:06.077Z [INFO] Starting E2E self-healing process
+2025-08-29T15:15:06.090Z [INFO] Processing 0 test files
+2025-08-29T15:15:06.090Z [INFO] E2E healing complete: 0/0 tests healed, 0 still failing
+2025-08-29T20:41:49.821Z [INFO] Starting E2E self-healing process
+2025-08-29T20:41:49.850Z [INFO] Processing 0 test files
+2025-08-29T20:41:49.850Z [INFO] E2E healing complete: 0/0 tests healed, 0 still failing

@@ -59,15 +59,14 @@ export class LocalWeeklyRotationService {
     const nextWeek = plans[nextWeekIndex];
 
     return {
-      userId,
       rotationTrack: track,
       currentWeek,
       nextWeek,
+      weekOfYear: Math.floor(Date.now() / (7 * 24 * 60 * 60 * 1000)),
       weekProgress: {
         current: currentWeekIndex + 1,
         total: plans.length
-      },
-      lastUpdated: new Date().toISOString()
+      }
     };
   }
 

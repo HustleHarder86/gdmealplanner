@@ -1,0 +1,120 @@
+{
+  "hooks": {
+    "visual-regression-autofix": {
+      "enabled": true,
+      "triggers": ["post-edit", "pre-commit"],
+      "targets": ["**/*.tsx", "**/*.jsx", "**/page.tsx", "**/layout.tsx"],
+      "config": {
+        "wordpressBaseUrl": "https://pregnancyplateplanner.com",
+        "localBaseUrl": "http://localhost:3002",
+        "similarityThreshold": 0.95,
+        "maxIterations": 5,
+        "screenshotTimeout": 10000,
+        "excludeSelectors": [".dev-warning", "[data-testid]"]
+      }
+    },
+    "build-error-remediation": {
+      "enabled": true,
+      "triggers": ["pre-commit", "pre-push"],
+      "targets": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
+      "config": {
+        "maxIterations": 3,
+        "fixPatterns": {
+          "apostrophe": true,
+          "quotes": true,
+          "typescript": true,
+          "imports": true
+        },
+        "buildCommands": ["npm run build", "npm run typecheck", "npm run lint"]
+      }
+    },
+    "e2e-self-healing": {
+      "enabled": true,
+      "triggers": ["pre-push", "on-test-failure"],
+      "targets": ["tests/e2e/**/*.spec.ts"],
+      "config": {
+        "maxRetries": 5,
+        "retryDelay": 2000,
+        "healingStrategies": ["selector-update", "timing-adjustment", "viewport-change"],
+        "screenshotOnFailure": true,
+        "generateReport": true
+      }
+    },
+    "recipe-data-guardian": {
+      "enabled": true,
+      "triggers": ["pre-commit", "post-edit"],
+      "targets": ["data/**/*.json", "scripts/**/*recipe*", "src/**/*recipe*"],
+      "config": {
+        "validateNutrition": true,
+        "checkDuplicates": true,
+        "enforceGdGuidelines": true,
+        "syncFirebaseToJson": true,
+        "carbRanges": {
+          "breakfast": [25, 35],
+          "lunch": [40, 50],
+          "dinner": [40, 50],
+          "snack": [15, 30],
+          "bedtime": [14, 16]
+        }
+      }
+    },
+    "vercel-env-sync": {
+      "enabled": true,
+      "triggers": ["pre-push", "pre-deploy"],
+      "targets": [".env*", "app/api/**/*.ts"],
+      "config": {
+        "vercelConfigFile": ".vercel/.env.production.local",
+        "requiredVars": [
+          "apiKey", "authDomain", "projectId", "storageBucket", 
+          "messagingSenderId", "appId", "FIREBASE_ADMIN_KEY", "SPOONACULAR_API_KEY"
+        ],
+        "validateApiRoutes": true,
+        "mockTest": true
+      }
+    },
+    "api-route-tester": {
+      "enabled": true,
+      "triggers": ["post-edit", "pre-commit"],
+      "targets": ["app/api/**/*.ts"],
+      "config": {
+        "validateExports": true,
+        "checkNextResponse": true,
+        "testEndpoints": true,
+        "fixCommonIssues": true,
+        "mockData": true,
+        "timeout": 5000
+      }
+    },
+    "smart-conflict-resolver": {
+      "enabled": true,
+      "triggers": ["post-edit", "pre-commit"],
+      "targets": ["app/**/layout.tsx", "app/**/page.tsx", "app/layout.tsx"],
+      "config": {
+        "checkRouteConflicts": true,
+        "validateLayoutHierarchy": true,
+        "suggestRouteGroups": true,
+        "testAllRoutes": true,
+        "fragmentWrapper": true
+      }
+    },
+    "test-driven-docs": {
+      "enabled": true,
+      "triggers": ["post-fix", "post-commit"],
+      "targets": ["docs/DEBUGGING_GUIDE.md", "docs/CHANGELOG.md"],
+      "config": {
+        "autoUpdateDocs": true,
+        "linkCommitsToIssues": true,
+        "generateTestCases": true,
+        "maintainKnowledgeBase": true,
+        "createRegressionTests": false
+      }
+    }
+  },
+  "global": {
+    "logLevel": "info",
+    "logFile": ".claude/logs/hooks.log",
+    "timeout": 30000,
+    "parallel": false,
+    "notifications": true
+  }
+}

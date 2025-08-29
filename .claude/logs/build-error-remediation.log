@@ -1,0 +1,265 @@
+2025-08-28T15:25:31.738Z [INFO] Starting build error remediation
+2025-08-28T15:25:31.742Z [INFO] No relevant files to check
+2025-08-29T15:13:57.085Z [INFO] Starting build error remediation
+2025-08-29T15:13:57.091Z [INFO] Build remediation iteration 1
+2025-08-29T15:14:24.055Z [ERROR] npm run build failed: Command failed: npm run build
+
+Failed to compile.
+
+./app/homepage-v2/page.tsx
+79:13  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+229:17  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+322:17  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+388:15  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+524:15  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+867:17  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+
+./app/meal-planner-v2/components/MealCard.tsx
+130:7  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./app/my-recipes/page.tsx
+40:6  Warning: React Hook useEffect has a missing dependency: 'loadRecipes'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+261:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./app/recipes/[id]/page.tsx
+113:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./app/recipes/offline-version/page.tsx
+112:6  Warning: React Hook useMemo has an unnecessary dependency: 'recipes.length'. Either exclude it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./components/RecipeCard.tsx
+14:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./components/RecipeCardWithFallback.tsx
+26:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/nutrition/MacroProgressRings.tsx
+86:6  Warning: React Hook useEffect has a missing dependency: 'macros'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/providers/recipe-provider.tsx
+199:9  Warning: The 'refreshUserRecipes' function makes the dependencies of useMemo Hook (at line 236) change on every render. Move it inside the useMemo callback. Alternatively, wrap the definition of 'refreshUserRecipes' in its own useCallback() Hook.  react-hooks/exhaustive-deps
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+
+2025-08-29T15:14:24.056Z [WARN] Build failed, attempting to fix errors
+2025-08-29T15:13:57.092Z [DEBUG] Running: npm run build
+2025-08-29T15:14:24.062Z [DEBUG] Applied Fix interface spacing in src/components/charts/NutritionProgressChart.tsx
+2025-08-29T15:14:24.062Z [DEBUG] Applied Fix default export function syntax in src/components/charts/NutritionProgressChart.tsx
+2025-08-29T15:14:24.063Z [INFO] Applied 2 fixes, retrying build...
+2025-08-29T15:14:24.063Z [INFO] Build remediation iteration 2
+2025-08-29T15:14:24.064Z [DEBUG] Running: npm run build
+2025-08-29T15:14:43.248Z [ERROR] npm run build failed: Command failed: npm run build
+
+Failed to compile.
+
+./app/homepage-v2/page.tsx
+79:13  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+229:17  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+322:17  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+388:15  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+524:15  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+867:17  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+
+./app/meal-planner-v2/components/MealCard.tsx
+130:7  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./app/my-recipes/page.tsx
+40:6  Warning: React Hook useEffect has a missing dependency: 'loadRecipes'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+261:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./app/recipes/[id]/page.tsx
+113:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./app/recipes/offline-version/page.tsx
+112:6  Warning: React Hook useMemo has an unnecessary dependency: 'recipes.length'. Either exclude it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./components/RecipeCard.tsx
+14:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./components/RecipeCardWithFallback.tsx
+26:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/nutrition/MacroProgressRings.tsx
+86:6  Warning: React Hook useEffect has a missing dependency: 'macros'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/providers/recipe-provider.tsx
+199:9  Warning: The 'refreshUserRecipes' function makes the dependencies of useMemo Hook (at line 236) change on every render. Move it inside the useMemo callback. Alternatively, wrap the definition of 'refreshUserRecipes' in its own useCallback() Hook.  react-hooks/exhaustive-deps
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+
+2025-08-29T15:14:43.249Z [WARN] Build failed, attempting to fix errors
+2025-08-29T15:14:43.253Z [DEBUG] Applied Fix interface spacing in src/components/charts/NutritionProgressChart.tsx
+2025-08-29T15:14:43.254Z [DEBUG] Applied Fix default export function syntax in src/components/charts/NutritionProgressChart.tsx
+2025-08-29T15:14:43.254Z [INFO] Applied 2 fixes, retrying build...
+2025-08-29T15:14:43.254Z [INFO] Build remediation iteration 3
+2025-08-29T15:14:43.255Z [DEBUG] Running: npm run build
+2025-08-29T15:15:03.404Z [ERROR] npm run build failed: Command failed: npm run build
+
+Failed to compile.
+
+./app/homepage-v2/page.tsx
+79:13  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+229:17  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+322:17  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+388:15  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+524:15  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+867:17  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+
+./app/meal-planner-v2/components/MealCard.tsx
+130:7  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./app/my-recipes/page.tsx
+40:6  Warning: React Hook useEffect has a missing dependency: 'loadRecipes'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+261:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./app/recipes/[id]/page.tsx
+113:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./app/recipes/offline-version/page.tsx
+112:6  Warning: React Hook useMemo has an unnecessary dependency: 'recipes.length'. Either exclude it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./components/RecipeCard.tsx
+14:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./components/RecipeCardWithFallback.tsx
+26:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/nutrition/MacroProgressRings.tsx
+86:6  Warning: React Hook useEffect has a missing dependency: 'macros'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/providers/recipe-provider.tsx
+199:9  Warning: The 'refreshUserRecipes' function makes the dependencies of useMemo Hook (at line 236) change on every render. Move it inside the useMemo callback. Alternatively, wrap the definition of 'refreshUserRecipes' in its own useCallback() Hook.  react-hooks/exhaustive-deps
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+
+2025-08-29T15:15:03.404Z [WARN] Build failed, attempting to fix errors
+2025-08-29T20:40:33.475Z [INFO] Starting build error remediation
+2025-08-29T20:40:33.479Z [INFO] Build remediation iteration 1
+2025-08-29T20:40:59.316Z [WARN] Build failed, attempting to fix errors
+2025-08-29T20:40:33.480Z [DEBUG] Running: npm run build
+2025-08-29T20:40:59.314Z [ERROR] npm run build failed: Command failed: npm run build
+
+Failed to compile.
+
+./app/homepage-v2/page.tsx
+221:17  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+314:17  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+380:15  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+516:15  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+859:17  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+
+./app/meal-planner-v2/components/MealCard.tsx
+130:7  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./app/my-recipes/page.tsx
+40:6  Warning: React Hook useEffect has a missing dependency: 'loadRecipes'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+261:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./app/recipes/[id]/page.tsx
+113:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./app/recipes/offline-version/page.tsx
+112:6  Warning: React Hook useMemo has an unnecessary dependency: 'recipes.length'. Either exclude it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./components/RecipeCard.tsx
+14:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./components/RecipeCardWithFallback.tsx
+26:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/nutrition/MacroProgressRings.tsx
+86:6  Warning: React Hook useEffect has a missing dependency: 'macros'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/providers/recipe-provider.tsx
+199:9  Warning: The 'refreshUserRecipes' function makes the dependencies of useMemo Hook (at line 236) change on every render. Move it inside the useMemo callback. Alternatively, wrap the definition of 'refreshUserRecipes' in its own useCallback() Hook.  react-hooks/exhaustive-deps
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+
+2025-08-29T20:40:59.327Z [DEBUG] Applied Fix default export function syntax in src/components/charts/NutritionProgressChart.tsx
+2025-08-29T20:40:59.326Z [DEBUG] Applied Fix interface spacing in src/components/charts/NutritionProgressChart.tsx
+2025-08-29T20:40:59.327Z [INFO] Applied 2 fixes, retrying build...
+2025-08-29T20:40:59.327Z [INFO] Build remediation iteration 2
+2025-08-29T20:40:59.328Z [DEBUG] Running: npm run build
+2025-08-29T20:41:23.181Z [ERROR] npm run build failed: Command failed: npm run build
+
+Failed to compile.
+
+./app/homepage-v2/page.tsx
+221:17  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+314:17  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+380:15  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+516:15  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+859:17  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+
+./app/meal-planner-v2/components/MealCard.tsx
+130:7  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./app/my-recipes/page.tsx
+40:6  Warning: React Hook useEffect has a missing dependency: 'loadRecipes'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+261:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./app/recipes/[id]/page.tsx
+113:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./app/recipes/offline-version/page.tsx
+112:6  Warning: React Hook useMemo has an unnecessary dependency: 'recipes.length'. Either exclude it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./components/RecipeCard.tsx
+14:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./components/RecipeCardWithFallback.tsx
+26:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/nutrition/MacroProgressRings.tsx
+86:6  Warning: React Hook useEffect has a missing dependency: 'macros'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/providers/recipe-provider.tsx
+199:9  Warning: The 'refreshUserRecipes' function makes the dependencies of useMemo Hook (at line 236) change on every render. Move it inside the useMemo callback. Alternatively, wrap the definition of 'refreshUserRecipes' in its own useCallback() Hook.  react-hooks/exhaustive-deps
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+
+2025-08-29T20:41:23.181Z [WARN] Build failed, attempting to fix errors
+2025-08-29T20:41:23.188Z [DEBUG] Applied Fix interface spacing in src/components/charts/NutritionProgressChart.tsx
+2025-08-29T20:41:23.192Z [DEBUG] Applied Fix default export function syntax in src/components/charts/NutritionProgressChart.tsx
+2025-08-29T20:41:23.193Z [INFO] Applied 2 fixes, retrying build...
+2025-08-29T20:41:23.193Z [INFO] Build remediation iteration 3
+2025-08-29T20:41:23.193Z [DEBUG] Running: npm run build
+2025-08-29T20:41:47.267Z [ERROR] npm run build failed: Command failed: npm run build
+
+Failed to compile.
+
+./app/homepage-v2/page.tsx
+221:17  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+314:17  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+380:15  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+516:15  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+859:17  Error: No duplicate props allowed  react/jsx-no-duplicate-props
+
+./app/meal-planner-v2/components/MealCard.tsx
+130:7  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./app/my-recipes/page.tsx
+40:6  Warning: React Hook useEffect has a missing dependency: 'loadRecipes'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+261:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./app/recipes/[id]/page.tsx
+113:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./app/recipes/offline-version/page.tsx
+112:6  Warning: React Hook useMemo has an unnecessary dependency: 'recipes.length'. Either exclude it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./components/RecipeCard.tsx
+14:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./components/RecipeCardWithFallback.tsx
+26:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./src/components/nutrition/MacroProgressRings.tsx
+86:6  Warning: React Hook useEffect has a missing dependency: 'macros'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./src/providers/recipe-provider.tsx
+199:9  Warning: The 'refreshUserRecipes' function makes the dependencies of useMemo Hook (at line 236) change on every render. Move it inside the useMemo callback. Alternatively, wrap the definition of 'refreshUserRecipes' in its own useCallback() Hook.  react-hooks/exhaustive-deps
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+
+2025-08-29T20:41:47.268Z [WARN] Build failed, attempting to fix errors

@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       { 
         success: false, 
-        error: error.message,
+        error: error instanceof Error ? error.message : 'Unknown error',
         message: 'Failed to generate demo custom token'
       },
       { status: 500 }

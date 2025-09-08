@@ -134,14 +134,19 @@ export default function RecipeDetailPage({
           <div className="mb-8">
             <h2 className="text-2xl font-semibold mb-4">Instructions</h2>
             <ol className="space-y-3">
-              {recipe.instructions.map((instruction: string, index: number) => (
-                <li key={index} className="flex gap-3">
-                  <span className="flex-shrink-0 w-8 h-8 bg-primary-100 text-primary-700 rounded-full flex items-center justify-center font-medium">
-                    {index + 1}
-                  </span>
-                  <span className="pt-1">{instruction}</span>
-                </li>
-              ))}
+              {recipe.instructions.map((instruction: string, index: number) => {
+                // Remove leading number pattern (e.g., "1. ", "2. ", etc.) from instruction text
+                const cleanInstruction = instruction.replace(/^\d+\.\s*/, '');
+                
+                return (
+                  <li key={index} className="flex gap-3">
+                    <span className="flex-shrink-0 w-8 h-8 bg-primary-100 text-primary-700 rounded-full flex items-center justify-center font-medium">
+                      {index + 1}
+                    </span>
+                    <span className="pt-1">{cleanInstruction}</span>
+                  </li>
+                );
+              })}
             </ol>
           </div>
         </div>

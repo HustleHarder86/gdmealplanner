@@ -2,21 +2,39 @@ import { NextRequest, NextResponse } from 'next/server';
 import { initializeApp, cert, getApps } from 'firebase-admin/app';
 import { getAuth } from 'firebase-admin/auth';
 
-// Initialize Firebase Admin if not already initialized
-if (!getApps().length) {
-  const firebaseAdminKey = JSON.parse(process.env.FIREBASE_ADMIN_KEY!);
-  initializeApp({
-    credential: cert(firebaseAdminKey),
-    projectId: firebaseAdminKey.project_id,
-  });
-}
+// Lazy initialization of Firebase Admin
+let adminAuth: ReturnType<typeof getAuth> | null = null;
 
-const adminAuth = getAuth();
+function getAdminAuth() {
+  if (!adminAuth) {
+    // Initialize Firebase Admin if not already initialized
+    if (!getApps().length) {
+      // Check if credentials are available
+      if (!process.env.FIREBASE_ADMIN_KEY) {
+        throw new Error('Firebase Admin credentials not configured');
+      }
+      
+      try {
+        const firebaseAdminKey = JSON.parse(process.env.FIREBASE_ADMIN_KEY);
+        initializeApp({
+          credential: cert(firebaseAdminKey),
+          projectId: firebaseAdminKey.project_id,
+        });
+      } catch (error) {
+        console.error('Failed to parse Firebase Admin key:', error);
+        throw new Error('Invalid Firebase Admin credentials');
+      }
+    }
+    adminAuth = getAuth();
+  }
+  return adminAuth;
+}
 
 export async function POST(request: NextRequest) {
   try {
     // Create custom token for demo user
-    const customToken = await adminAuth.createCustomToken('demo-user-123', {
+    const auth = getAdminAuth();
+    const customToken = await auth.createCustomToken('demo-user-123', {
       email: 'sarah.demo@pregnancyplateplanner.com',
       displayName: 'Sarah Demo',
       isDemoUser: true,

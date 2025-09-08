@@ -8,6 +8,12 @@ const nextConfig = {
         port: "",
         pathname: "/recipes/**",
       },
+      {
+        protocol: "https",
+        hostname: "pregnancyplateplanner.com",
+        port: "",
+        pathname: "/wp-content/**",
+      },
     ],
   },
 };

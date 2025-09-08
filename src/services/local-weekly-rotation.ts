@@ -234,8 +234,8 @@ export class LocalWeeklyRotationService {
     const avgCookTime = recipes.reduce((sum, r) => sum + (r.totalTime || 30), 0) / recipes.length;
     
     if (avgCookTime <= 25) tags.push('quick');
-    if (recipes.some(r => r.dietaryInfo?.isVegetarian)) tags.push('vegetarian-friendly');
-    if (recipes.some(r => r.dietaryInfo?.isGlutenFree)) tags.push('gluten-free-options');
+    if (recipes.some(r => r.dietaryInfo?.isVegetarian)) tags.push('vegetarian');
+    if (recipes.some(r => r.dietaryInfo?.isGlutenFree)) tags.push('family');
     
     return tags;
   }

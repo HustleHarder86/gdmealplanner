@@ -4,3 +4,10 @@
 2025-08-29T15:15:03.625Z [INFO] No recipe-related files changed
 2025-08-29T20:41:47.521Z [INFO] Starting recipe data integrity validation
 2025-08-29T20:41:47.527Z [INFO] No recipe-related files changed
+2025-08-30T12:57:49.680Z [INFO] Starting recipe data integrity validation
+2025-08-30T12:57:49.699Z [INFO] Validating 8 recipe-related files
+2025-08-30T12:57:49.703Z [DEBUG] Validated docs/architecture/recipe-system.md: 0/0 issues fixed
+2025-08-30T12:57:49.710Z [INFO] Performing cross-file duplicate detection
+2025-08-30T12:57:49.712Z [INFO] Validating Firebase to JSON sync
+2025-08-30T12:57:49.726Z [WARN] Missing expected sync file: data/recipes-offline.json
+2025-08-30T12:57:49.727Z [INFO] Would trigger sync for data/recipes-offline.json

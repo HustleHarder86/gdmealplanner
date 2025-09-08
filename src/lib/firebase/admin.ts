@@ -6,6 +6,12 @@ import type { ServiceAccount } from "firebase-admin/app";
 
 // Initialize Firebase Admin SDK
 const initializeAdmin = () => {
+  // Skip initialization during build time if no credentials
+  if (typeof window === 'undefined' && !process.env.FIREBASE_ADMIN_KEY && !process.env.private_key) {
+    console.log("Skipping Firebase Admin initialization during build (no credentials)");
+    return null;
+  }
+
   if (getApps().length === 0) {
     // Check for service account credentials
     const serviceAccountKey = process.env.FIREBASE_ADMIN_KEY;
@@ -143,7 +149,10 @@ let _adminStorage: ReturnType<typeof getStorage> | null = null;
 
 export const adminDb = () => {
   if (!_adminDb) {
-    initializeAdmin();
+    const result = initializeAdmin();
+    if (result === null) {
+      throw new Error("Firebase Admin not initialized - missing credentials");
+    }
     _adminDb = getFirestore();
   }
   return _adminDb;
@@ -151,7 +160,10 @@ export const adminDb = () => {
 
 export const adminAuth = () => {
   if (!_adminAuth) {
-    initializeAdmin();
+    const result = initializeAdmin();
+    if (result === null) {
+      throw new Error("Firebase Admin not initialized - missing credentials");
+    }
     _adminAuth = getAuth();
   }
   return _adminAuth;
@@ -159,7 +171,10 @@ export const adminAuth = () => {
 
 export const adminStorage = () => {
   if (!_adminStorage) {
-    initializeAdmin();
+    const result = initializeAdmin();
+    if (result === null) {
+      throw new Error("Firebase Admin not initialized - missing credentials");
+    }
     _adminStorage = getStorage();
   }
   return _adminStorage;

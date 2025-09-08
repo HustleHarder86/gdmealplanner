@@ -5,6 +5,12 @@ import RecipeList from "./RecipeList";
 
 async function getRecipes(): Promise<Recipe[]> {
   try {
+    // Skip during build if no credentials
+    if (typeof window === 'undefined' && !process.env.FIREBASE_ADMIN_KEY && !process.env.private_key) {
+      console.log("Skipping recipe fetch during build - no Firebase credentials");
+      return [];
+    }
+
     await initializeFirebaseAdmin();
     const db = adminDb();
 

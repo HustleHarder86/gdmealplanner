@@ -5,10 +5,12 @@ import { MealPlan, DayMealPlan } from '@/src/types/meal-plan';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
 import MealCard from './MealCard';
+import UserRecipeSelector from './UserRecipeSelector';
 
 interface MealPlanDisplayProps {
   mealPlan: MealPlan;
   onSwapMeal: (dayIndex: number, mealType: string) => void;
+  onSwapWithSpecificRecipe?: (dayIndex: number, mealType: string, recipeId: string) => void;
   onDeleteMeal?: (dayIndex: number, mealType: string) => void;
   onUpdateRecipes: () => void;
   onGenerateNew: () => void;
@@ -19,6 +21,7 @@ interface MealPlanDisplayProps {
 export default function MealPlanDisplay({
   mealPlan,
   onSwapMeal,
+  onSwapWithSpecificRecipe,
   onDeleteMeal,
   onUpdateRecipes,
   onGenerateNew,
@@ -29,6 +32,8 @@ export default function MealPlanDisplay({
   const [swappingMeal, setSwappingMeal] = useState<string | null>(null);
   const [deletingMeal, setDeletingMeal] = useState<string | null>(null);
   const [savingRecipe, setSavingRecipe] = useState<string | null>(null);
+  const [recipeSelectorOpen, setRecipeSelectorOpen] = useState(false);
+  const [selectedMealSlot, setSelectedMealSlot] = useState<{dayIndex: number, mealType: string, meal: any} | null>(null);
 
   const handleViewRecipe = (recipeId: string) => {
     window.open(`/recipes/${recipeId}`, '_blank');
@@ -43,6 +48,20 @@ export default function MealPlanDisplay({
     } finally {
       setSavingRecipe(null);
     }
+  };
+
+  const handleOpenRecipeSelector = (dayIndex: number, mealType: string, meal: any) => {
+    setSelectedMealSlot({ dayIndex, mealType, meal });
+    setRecipeSelectorOpen(true);
+  };
+
+  const handleSelectRecipe = async (recipeId: string) => {
+    if (!selectedMealSlot || !onSwapWithSpecificRecipe) return;
+    
+    const { dayIndex, mealType } = selectedMealSlot;
+    await onSwapWithSpecificRecipe(dayIndex, mealType, recipeId);
+    setRecipeSelectorOpen(false);
+    setSelectedMealSlot(null);
   };
 
   return (
@@ -146,6 +165,9 @@ export default function MealPlanDisplay({
                             await onSwapMeal(index, mealType);
                             setSwappingMeal(null);
                           }}
+                          onSwapWithUserRecipe={onSwapWithSpecificRecipe ? () => {
+                            handleOpenRecipeSelector(index, mealType, meal);
+                          } : undefined}
                           onDelete={onDeleteMeal ? async () => {
                             setDeletingMeal(deleteKey);
                             await onDeleteMeal(index, mealType);
@@ -166,6 +188,21 @@ export default function MealPlanDisplay({
           );
         })}
       </div>
+
+      {/* Recipe Selector Modal */}
+      {selectedMealSlot && (
+        <UserRecipeSelector
+          isOpen={recipeSelectorOpen}
+          onClose={() => {
+            setRecipeSelectorOpen(false);
+            setSelectedMealSlot(null);
+          }}
+          onSelectRecipe={handleSelectRecipe}
+          mealType={selectedMealSlot.meal.category}
+          targetCarbs={selectedMealSlot.meal.nutrition?.carbohydrates || 30}
+          currentRecipeId={selectedMealSlot.meal.recipeId}
+        />
+      )}
     </div>
   );
 }

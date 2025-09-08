@@ -156,12 +156,141 @@ export function useMealPlan(userId?: string) {
     }
   };
 
+  const deleteMeal = async (dayIndex: number, mealType: string) => {
+    if (!mealPlan) return null;
+    
+    try {
+      setGenerating(true);
+      setError(null);
+      
+      console.log(`[MEAL_PLANNER] Deleting meal: Day ${dayIndex}, ${mealType}`);
+      
+      // Create a copy of the meal plan
+      const updatedPlan = JSON.parse(JSON.stringify(mealPlan));
+      
+      // Clear the meal slot
+      const mealSlot = (updatedPlan.days[dayIndex].meals as any)[mealType];
+      if (mealSlot) {
+        // Create an empty meal slot
+        (updatedPlan.days[dayIndex].meals as any)[mealType] = {
+          recipeId: '',
+          recipeName: '',
+          servings: 0,
+          nutrition: {
+            calories: 0,
+            carbohydrates: 0,
+            protein: 0,
+            fat: 0,
+            fiber: 0
+          },
+          cookTime: 0,
+          category: mealSlot.category // Keep the category
+        };
+      }
+      
+      // Recalculate day nutrition
+      const dayMeals = Object.values(updatedPlan.days[dayIndex].meals);
+      updatedPlan.days[dayIndex].totalNutrition = {
+        calories: dayMeals.reduce((sum: number, meal: any) => sum + (meal.nutrition?.calories || 0), 0),
+        carbohydrates: dayMeals.reduce((sum: number, meal: any) => sum + (meal.nutrition?.carbohydrates || 0), 0),
+        protein: dayMeals.reduce((sum: number, meal: any) => sum + (meal.nutrition?.protein || 0), 0),
+        fat: dayMeals.reduce((sum: number, meal: any) => sum + (meal.nutrition?.fat || 0), 0),
+        fiber: dayMeals.reduce((sum: number, meal: any) => sum + (meal.nutrition?.fiber || 0), 0),
+        mealsCount: dayMeals.filter((meal: any) => meal.recipeId && !['morningSnack', 'afternoonSnack', 'eveningSnack'].includes(meal.category)).length,
+        snacksCount: dayMeals.filter((meal: any) => meal.recipeId && ['morningSnack', 'afternoonSnack', 'eveningSnack'].includes(meal.category)).length
+      };
+      
+      updatedPlan.version += 1;
+      updatedPlan.updatedAt = new Date().toISOString();
+      
+      setMealPlan(updatedPlan);
+      console.log(`[MEAL_PLANNER] Meal deleted successfully`);
+      
+      return updatedPlan;
+    } catch (err) {
+      console.error('[MEAL_PLANNER] Delete error:', err);
+      setError('Failed to delete meal. Please try again.');
+      throw err;
+    } finally {
+      setGenerating(false);
+    }
+  };
+
   const getMealCategoryFilter = (mealType: string): 'breakfast' | 'lunch' | 'dinner' | 'snack' | null => {
     if (mealType === 'breakfast') return 'breakfast';
     if (mealType === 'lunch') return 'lunch';
     if (mealType === 'dinner') return 'dinner';
     if (mealType.includes('snack') || mealType.includes('Snack')) return 'snack';
     return null;
+  };
+
+  const swapWithSpecificRecipe = async (dayIndex: number, mealType: string, recipeId: string) => {
+    if (!mealPlan) return null;
+    
+    try {
+      setGenerating(true);
+      setError(null);
+      
+      // Get the recipe
+      const recipe = LocalRecipeService.getRecipeById(recipeId);
+      if (!recipe) {
+        throw new Error('Recipe not found');
+      }
+      
+      console.log(`[MEAL_PLANNER] Swapping ${mealType} on day ${dayIndex} with ${recipe.title}`);
+      
+      // Create a copy of the meal plan
+      const updatedPlan = JSON.parse(JSON.stringify(mealPlan));
+      
+      // Get the category for this meal type
+      const categoryFilter = getMealCategoryFilter(mealType);
+      
+      // Create new meal slot
+      const newMeal = {
+        recipeId: recipe.id,
+        recipeName: recipe.title,
+        servings: 1,
+        nutrition: {
+          calories: recipe.nutrition.calories,
+          carbohydrates: recipe.nutrition.carbohydrates,
+          protein: recipe.nutrition.protein,
+          fat: recipe.nutrition.fat,
+          fiber: recipe.nutrition.fiber,
+          sugar: recipe.nutrition.sugar,
+          sodium: recipe.nutrition.sodium
+        },
+        cookTime: recipe.totalTime,
+        category: categoryFilter || 'snack'
+      };
+      
+      // Update the meal
+      (updatedPlan.days[dayIndex].meals as any)[mealType] = newMeal;
+      
+      // Recalculate day nutrition
+      const dayMeals = Object.values(updatedPlan.days[dayIndex].meals);
+      updatedPlan.days[dayIndex].totalNutrition = {
+        calories: dayMeals.reduce((sum: number, meal: any) => sum + meal.nutrition.calories, 0),
+        carbohydrates: dayMeals.reduce((sum: number, meal: any) => sum + meal.nutrition.carbohydrates, 0),
+        protein: dayMeals.reduce((sum: number, meal: any) => sum + meal.nutrition.protein, 0),
+        fat: dayMeals.reduce((sum: number, meal: any) => sum + meal.nutrition.fat, 0),
+        fiber: dayMeals.reduce((sum: number, meal: any) => sum + meal.nutrition.fiber, 0),
+        mealsCount: dayMeals.filter((meal: any) => !['morningSnack', 'afternoonSnack', 'eveningSnack'].includes(meal.category)).length,
+        snacksCount: dayMeals.filter((meal: any) => ['morningSnack', 'afternoonSnack', 'eveningSnack'].includes(meal.category)).length
+      };
+      
+      updatedPlan.version += 1;
+      updatedPlan.updatedAt = new Date().toISOString();
+      
+      setMealPlan(updatedPlan);
+      
+      return updatedPlan;
+    } catch (err) {
+      console.error('[MEAL_PLANNER] Swap with specific recipe error:', err);
+      setError('Failed to swap meal. Please try again.');
+      throw err;
+    } finally {
+      setGenerating(false);
+    }
   };
 
   return {
@@ -172,6 +301,8 @@ export function useMealPlan(userId?: string) {
     setPreferences,
     generateMealPlan,
     updateWithNewRecipes,
-    swapMeal
+    swapMeal,
+    swapWithSpecificRecipe,
+    deleteMeal
   };
 }

@@ -9,6 +9,7 @@ import MealCard from './MealCard';
 interface MealPlanDisplayProps {
   mealPlan: MealPlan;
   onSwapMeal: (dayIndex: number, mealType: string) => void;
+  onDeleteMeal?: (dayIndex: number, mealType: string) => void;
   onUpdateRecipes: () => void;
   onGenerateNew: () => void;
   onSaveToMyRecipes?: (recipeId: string) => void;
@@ -18,6 +19,7 @@ interface MealPlanDisplayProps {
 export default function MealPlanDisplay({
   mealPlan,
   onSwapMeal,
+  onDeleteMeal,
   onUpdateRecipes,
   onGenerateNew,
   onSaveToMyRecipes,
@@ -25,6 +27,7 @@ export default function MealPlanDisplay({
 }: MealPlanDisplayProps) {
   const [expandedDays, setExpandedDays] = useState<number[]>([0]); // First day expanded by default
   const [swappingMeal, setSwappingMeal] = useState<string | null>(null);
+  const [deletingMeal, setDeletingMeal] = useState<string | null>(null);
   const [savingRecipe, setSavingRecipe] = useState<string | null>(null);
 
   const handleViewRecipe = (recipeId: string) => {
@@ -132,6 +135,7 @@ export default function MealPlanDisplay({
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                     {Object.entries(day.meals).map(([mealType, meal]) => {
                       const swapKey = `${index}-${mealType}`;
+                      const deleteKey = `${index}-${mealType}`;
                       return (
                         <MealCard
                           key={mealType}
@@ -142,9 +146,15 @@ export default function MealPlanDisplay({
                             await onSwapMeal(index, mealType);
                             setSwappingMeal(null);
                           }}
+                          onDelete={onDeleteMeal ? async () => {
+                            setDeletingMeal(deleteKey);
+                            await onDeleteMeal(index, mealType);
+                            setDeletingMeal(null);
+                          } : undefined}
                           onViewRecipe={handleViewRecipe}
                           onSaveToMyRecipes={handleSaveToMyRecipes}
                           isSwapping={swappingMeal === swapKey}
+                          isDeleting={deletingMeal === deleteKey}
                           isSaving={savingRecipe === meal.recipeId}
                         />
                       );

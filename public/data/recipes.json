@@ -1941,25 +1941,25 @@
           "name": "Baking Soda",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ teaspoons Baking Soda"
+          "original": "\u00bd teaspoons Baking Soda"
         },
         {
           "name": "Egg Whites",
           "amount": 121.5,
           "unit": "ml",
-          "original": "½ cups Egg Whites"
+          "original": "\u00bd cups Egg Whites"
         },
         {
           "name": "Pillsbury Funfetti Cake Mixx",
           "amount": 30,
           "unit": "g",
-          "original": "¼ cups Pillsbury Funfetti Cake Mixx (Or Any Cake Mix You Like)"
+          "original": "\u00bc cups Pillsbury Funfetti Cake Mixx (Or Any Cake Mix You Like)"
         },
         {
           "name": "Greek Yogurt",
           "amount": 150,
           "unit": "ml",
-          "original": "¾ cups Greek Yogurt"
+          "original": "\u00be cups Greek Yogurt"
         },
         {
           "name": "Powdered Sugar",
@@ -1983,13 +1983,13 @@
           "name": "Sugar",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ teaspoons Sugar"
+          "original": "\u00bd teaspoons Sugar"
         },
         {
           "name": "Vanilla Extract",
           "amount": 0.25,
           "unit": "tsps",
-          "original": "¼ teaspoons Vanilla Extract"
+          "original": "\u00bc teaspoons Vanilla Extract"
         },
         {
           "name": "Water",
@@ -2001,7 +2001,7 @@
           "name": "Pastry Flour",
           "amount": 30,
           "unit": "g",
-          "original": "¼ cups Whole Wheat Pastry Flour"
+          "original": "\u00bc cups Whole Wheat Pastry Flour"
         }
       ],
       "instructions": [
@@ -3513,25 +3513,25 @@
           "name": "Baking Soda",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp baking soda"
+          "original": "\u00bd tsp baking soda"
         },
         {
           "name": "Cayenne Pepper",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp cayenne pepper"
+          "original": "\u00bd tsp cayenne pepper"
         },
         {
           "name": "Chives And Dill",
           "amount": 10,
           "unit": "g",
-          "original": "¼ cup fresh chives and dill, chopped"
+          "original": "\u00bc cup fresh chives and dill, chopped"
         },
         {
           "name": "Yogurt",
           "amount": 367.5,
           "unit": "ml",
-          "original": "1 ½ cups plain yogurt"
+          "original": "1 \u00bd cups plain yogurt"
         },
         {
           "name": "Eggs",
@@ -4928,7 +4928,7 @@
           "name": "Wheat Germ",
           "amount": 57.5,
           "unit": "ml",
-          "original": "½ cup toasted wheat germ"
+          "original": "\u00bd cup toasted wheat germ"
         },
         {
           "name": "Coconut Oil",
@@ -4940,43 +4940,43 @@
           "name": "Honey",
           "amount": 226,
           "unit": "ml",
-          "original": "⅔ cup honey (some vegans will eat honey, others won't, so keep that in mind!)"
+          "original": "\u2154 cup honey (some vegans will eat honey, others won't, so keep that in mind!)"
         },
         {
           "name": "Brown Sugar",
           "amount": 55,
           "unit": "g",
-          "original": "¼ cup dark brown sugar, packed"
+          "original": "\u00bc cup dark brown sugar, packed"
         },
         {
           "name": "Vanilla Extract",
           "amount": 1.5,
           "unit": "tsps",
-          "original": "1½ teaspoons pure vanilla extract"
+          "original": "1\u00bd teaspoons pure vanilla extract"
         },
         {
           "name": "Salt",
           "amount": 0.25,
           "unit": "tsps",
-          "original": "¼ teaspoon salt"
+          "original": "\u00bc teaspoon salt"
         },
         {
           "name": "Dates",
           "amount": 73.5,
           "unit": "g",
-          "original": "½ cup chopped pitted dates (I like smaller fruit chunks, so I chopped these pretty finely)"
+          "original": "\u00bd cup chopped pitted dates (I like smaller fruit chunks, so I chopped these pretty finely)"
         },
         {
           "name": "Cherry Craisins",
           "amount": 34.5,
           "unit": "g",
-          "original": "¼ cup dried cherry craisins"
+          "original": "\u00bc cup dried cherry craisins"
         },
         {
           "name": "Chocolate Chips",
           "amount": 90,
           "unit": "ml",
-          "original": "½ cup dark chocolate chips (if vegan, make sure you're purchasing vegan chocolate chips)"
+          "original": "\u00bd cup dark chocolate chips (if vegan, make sure you're purchasing vegan chocolate chips)"
         }
       ],
       "instructions": [
@@ -5138,7 +5138,7 @@
       ],
       "instructions": [
         "1. Add all of the ingredients to the pitcher of your blender. Pulse 3-4 times to break up the ingredients and then turn the blender on full speed. Blend for about a minute or until completely smooth. This amount of time will depend on how powerful your blender is. It may take longer (or shorter!).",
-        "2. Add more liquid as needed. This will also depend on how much water your fruit releases. If it’s too thick, add more almond milk or limeade until the smoothie reaches your desired consistency.",
+        "2. Add more liquid as needed. This will also depend on how much water your fruit releases. If it\u2019s too thick, add more almond milk or limeade until the smoothie reaches your desired consistency.",
         "3. Serve the smoothies immediately or pour into an airtight, freezer-safe container and freeze for up to 2 months. Defrost in the refrigerator for 24 hours before serving."
       ],
       "nutrition": {
@@ -5454,16 +5454,16 @@
           "original": "2 tablespoons of flax oil (omega 3 s)"
         },
         {
-          "name": "Spirulina …so Much More",
+          "name": "Spirulina \u2026so Much More",
           "amount": 1,
           "unit": "tsp",
-          "original": "1 teaspoon spirulina (b 12 and other b vitamins, vitamins a-d and even k) …so much more."
+          "original": "1 teaspoon spirulina (b 12 and other b vitamins, vitamins a-d and even k) \u2026so much more."
         },
         {
           "name": "Ice",
           "amount": 10,
           "unit": "servings",
-          "original": "ice (start with 1/4 cup….then, add more if you prefer)"
+          "original": "ice (start with 1/4 cup\u2026.then, add more if you prefer)"
         }
       ],
       "instructions": [
@@ -5579,10 +5579,10 @@
       "servings": 2,
       "ingredients": [
         {
-          "name": "Arënkha Msc",
+          "name": "Ar\u00ebnkha Msc",
           "amount": 0.75,
           "unit": "g",
-          "original": "3/4 gram jar Arënkha MSC (see About section above)"
+          "original": "3/4 gram jar Ar\u00ebnkha MSC (see About section above)"
         },
         {
           "name": "Butter",
@@ -5740,7 +5740,7 @@
           "name": "Lime Juice",
           "amount": 1,
           "unit": "serving",
-          "original": " fresh lime juice, to taste"
+          "original": "\u00a0fresh lime juice, to taste"
         }
       ],
       "instructions": [
@@ -6086,10 +6086,10 @@
       "instructions": [
         "1. Heat oven to 42",
         "2. Add all ingredients for the pancake mix and stir well. Allow sitting for about 5 minutes.",
-        "3. Spread onto a prepared cookie sheet. Make sure to spread the pancake mixture evenly. ",
-        "4. Add toppings such as blueberries, chocolate chips, strawberries, or your favorite pancake toppings. ",
+        "3. Spread onto a prepared cookie sheet. Make sure to spread the pancake\u00a0mixture evenly.\u00a0",
+        "4. Add toppings such as blueberries, chocolate chips, strawberries, or your favorite pancake toppings.\u00a0",
         "5. Bake in the oven for 15 minutes.",
-        "6. Remove, allow to slightly cool, then cut into squares and serve. "
+        "6. Remove, allow to slightly cool, then cut into squares and serve.\u00a0"
       ],
       "nutrition": {
         "calories": 218,
@@ -6418,8 +6418,8 @@
         "7. Add flour mixture and cooked quinoa to the milk mixture and mix until just combine. Do not overmix the batter.",
         "8. Fill each muffin cup 3/4 full with batter and top with some almond slices.",
         "9. Immediately place them in the preheated oven and bake for 35 - 45 minutes or until toothpick inserted into the center of a muffin comes out clean.",
-        "10. Cool muffins in pan for few minutes and  transfer to a wire rack. let them cool completely.",
-        "11. Serve as breakfast, snack or dessert. "
+        "10. Cool muffins in pan for few minutes and \u00a0transfer to a wire rack. let them cool completely.",
+        "11. Serve as breakfast, snack or dessert.\u00a0"
       ],
       "nutrition": {
         "calories": 207,
@@ -6671,7 +6671,7 @@
           "name": "Coconut Flour",
           "amount": 60,
           "unit": "g",
-          "original": "½ cup coconut flour"
+          "original": "\u00bd cup coconut flour"
         },
         {
           "name": "Coconut Oil",
@@ -6689,7 +6689,7 @@
           "name": "Honey",
           "amount": 55,
           "unit": "ml",
-          "original": "¼ cup agave nectar or honey (plus more for drizzling on top, if desired)"
+          "original": "\u00bc cup agave nectar or honey (plus more for drizzling on top, if desired)"
         },
         {
           "name": "Milk",
@@ -6701,7 +6701,7 @@
           "name": "Salt",
           "amount": 0.25,
           "unit": "tsps",
-          "original": "¼ teaspoon salt"
+          "original": "\u00bc teaspoon salt"
         },
         {
           "name": "Tangerine",
@@ -7322,13 +7322,13 @@
           "name": "Blueberries",
           "amount": 222,
           "unit": "g",
-          "original": "1½ cup frozen blueberries"
+          "original": "1\u00bd cup frozen blueberries"
         },
         {
           "name": "Canola Oil",
           "amount": 56,
           "unit": "ml",
-          "original": "¼ cup canola oil"
+          "original": "\u00bc cup canola oil"
         },
         {
           "name": "Egg",
@@ -7346,13 +7346,13 @@
           "name": "Granulated Sugar",
           "amount": 100,
           "unit": "g",
-          "original": "½ cup granulated sugar"
+          "original": "\u00bd cup granulated sugar"
         },
         {
           "name": "Sea Salt",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ teaspoon fine sea salt"
+          "original": "\u00bd teaspoon fine sea salt"
         },
         {
           "name": "Turbinado Sugar",
@@ -7364,13 +7364,13 @@
           "name": "Vanilla Yogurt",
           "amount": 122.5,
           "unit": "ml",
-          "original": "½ cup vanilla yogurt"
+          "original": "\u00bd cup vanilla yogurt"
         },
         {
           "name": "Milk",
           "amount": 122,
           "unit": "ml",
-          "original": "½ cup whole milk"
+          "original": "\u00bd cup whole milk"
         },
         {
           "name": "Xanthan Gum",
@@ -8074,7 +8074,7 @@
           "name": "Baking Soda",
           "amount": 0.25,
           "unit": "tsps",
-          "original": "¼ tsp baking soda"
+          "original": "\u00bc tsp baking soda"
         },
         {
           "name": "Baking Powder",
@@ -8086,7 +8086,7 @@
           "name": "Salt",
           "amount": 0.25,
           "unit": "tsps",
-          "original": "¼ tsp salt"
+          "original": "\u00bc tsp salt"
         },
         {
           "name": "Bacon",
@@ -8266,7 +8266,7 @@
           "name": "Ginger",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ teaspoon fresh ginger, grated"
+          "original": "\u00bd teaspoon fresh ginger, grated"
         },
         {
           "name": "Honey",
@@ -8302,7 +8302,7 @@
           "name": "Flour )",
           "amount": 1,
           "unit": "tsp",
-          "original": "1 teaspoon whole wheat flour for thickening (optional – leave this out to make the whole recipe gluten-free)"
+          "original": "1 teaspoon whole wheat flour for thickening (optional \u2013 leave this out to make the whole recipe gluten-free)"
         }
       ],
       "instructions": [
@@ -8729,7 +8729,7 @@
           "name": "Tea Bags",
           "amount": 3,
           "unit": "",
-          "original": "3 Bigelow® Green Tea Bags*"
+          "original": "3 Bigelow\u00ae Green Tea Bags*"
         },
         {
           "name": "Berries",
@@ -8741,19 +8741,19 @@
           "name": "Pineapple Juice",
           "amount": 59,
           "unit": "ml",
-          "original": "¼ cup pineapple juice"
+          "original": "\u00bc cup pineapple juice"
         },
         {
           "name": "Vanilla Yogurt",
           "amount": 122.5,
           "unit": "ml",
-          "original": "½ cup vanilla yogurt"
+          "original": "\u00bd cup vanilla yogurt"
         },
         {
           "name": "Ice Cubes",
           "amount": 118.294,
           "unit": "ml",
-          "original": "½ cup ice cubes"
+          "original": "\u00bd cup ice cubes"
         }
       ],
       "instructions": [
@@ -8878,31 +8878,31 @@
           "name": "Applesauce",
           "amount": 122,
           "unit": "ml",
-          "original": "½ cup applesauce"
+          "original": "\u00bd cup applesauce"
         },
         {
           "name": "Milk",
           "amount": 118,
           "unit": "ml",
-          "original": "½ cup fat free milk (or dairy free milk, to make vegan)"
+          "original": "\u00bd cup fat free milk (or dairy free milk, to make vegan)"
         },
         {
           "name": "Cherries",
           "amount": 103.5,
           "unit": "g",
-          "original": "¾ cup pitted cherries (fresh or frozen)"
+          "original": "\u00be cup pitted cherries (fresh or frozen)"
         },
         {
           "name": "Vanilla Extract",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ Tsp. vanilla extract"
+          "original": "\u00bd Tsp. vanilla extract"
         },
         {
           "name": "Chocolate Chips",
           "amount": 45,
           "unit": "ml",
-          "original": "¼ cup chocolate chips"
+          "original": "\u00bc cup chocolate chips"
         },
         {
           "name": "Chia Seeds",
@@ -9382,13 +9382,13 @@
           "name": "Stella Asiago Cheese",
           "amount": 75,
           "unit": "g",
-          "original": "¾ cup Stella Asiago cheese"
+          "original": "\u00be cup Stella Asiago cheese"
         },
         {
           "name": "Bread Crumbs",
           "amount": 54,
           "unit": "ml",
-          "original": "½ cup bread crumbs"
+          "original": "\u00bd cup bread crumbs"
         },
         {
           "name": "Butter",
@@ -9400,7 +9400,7 @@
           "name": "Cheddar Cheese",
           "amount": 56.5,
           "unit": "g",
-          "original": "½ cup cheddar cheese"
+          "original": "\u00bd cup cheddar cheese"
         },
         {
           "name": "Egg",
@@ -9424,7 +9424,7 @@
           "name": "Stella Parmesan Cheese",
           "amount": 75,
           "unit": "g",
-          "original": "¾ cup Stella Parmesan cheese"
+          "original": "\u00be cup Stella Parmesan cheese"
         },
         {
           "name": "Pepper",
@@ -9436,7 +9436,7 @@
           "name": "Salt",
           "amount": 1,
           "unit": "tsp",
-          "original": "1 tsp salt (separate into ½ tsp)"
+          "original": "1 tsp salt (separate into \u00bd tsp)"
         }
       ],
       "instructions": [
@@ -9537,31 +9537,31 @@
           "name": "Applesauce",
           "amount": 122,
           "unit": "ml",
-          "original": "½ cup applesauce"
+          "original": "\u00bd cup applesauce"
         },
         {
           "name": "Milk",
           "amount": 118,
           "unit": "ml",
-          "original": "½ cup fat free milk (or dairy free milk, to make vegan)"
+          "original": "\u00bd cup fat free milk (or dairy free milk, to make vegan)"
         },
         {
           "name": "Raspberries",
           "amount": 60,
           "unit": "g",
-          "original": "½ cup fresh raspberries"
+          "original": "\u00bd cup fresh raspberries"
         },
         {
           "name": "Vanilla Extract",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ Tsp. vanilla extract"
+          "original": "\u00bd Tsp. vanilla extract"
         },
         {
           "name": "Pistachios",
           "amount": 30.75,
           "unit": "g",
-          "original": "¼ cup pistachios"
+          "original": "\u00bc cup pistachios"
         }
       ],
       "instructions": [
@@ -10254,7 +10254,7 @@
           "name": "Almond Flour",
           "amount": 74.667,
           "unit": "g",
-          "original": "⅔ cup almond flour"
+          "original": "\u2154 cup almond flour"
         },
         {
           "name": "Baking Powder",
@@ -10272,13 +10272,13 @@
           "name": "Cinnamon",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ teaspoon cinnamon"
+          "original": "\u00bd teaspoon cinnamon"
         },
         {
           "name": "Stevia",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ teaspoon Stevia"
+          "original": "\u00bd teaspoon Stevia"
         },
         {
           "name": "Syrup",
@@ -10974,7 +10974,7 @@
           "name": "Corn",
           "amount": 75,
           "unit": "g",
-          "original": "½ cup canned corn"
+          "original": "\u00bd cup canned corn"
         },
         {
           "name": "Chives",
@@ -11022,7 +11022,7 @@
           "name": "Cream",
           "amount": 115,
           "unit": "ml",
-          "original": "½ cup low fat sour cream"
+          "original": "\u00bd cup low fat sour cream"
         },
         {
           "name": "Mushrooms",
@@ -11034,7 +11034,7 @@
           "name": "Oil",
           "amount": 8,
           "unit": "servings",
-          "original": "Oil – for frying"
+          "original": "Oil \u2013 for frying"
         },
         {
           "name": "Big Onion",
@@ -11090,13 +11090,13 @@
         "1. Whisk the eggs.",
         "2. Add the water and mix well (you can also use a hand-held mixer).",
         "3. Sprinkle the flour while continuously whisking/mixing until it has the right consistency.",
-        "4. Heat some oil in a frying pan over medium-high heat. Grease the whole surface of the pan and then pour the oil in a cup. You’ll be reusing it.",
-        "**Pour the batter in the pan, using approximately ¼ cup for each crepe. Tilt the pan with a circular motion so that the batter coats the surface evenly.Cook the crepe for about 2 minutes until the bottom is light brown. Loosen with a spatula, turn and cook on the other side. Repeat the process until you use up all the batter. Makes about 8 crepes.For the filling**",
+        "4. Heat some oil in a frying pan over medium-high heat. Grease the whole surface of the pan and then pour the oil in a cup. You\u2019ll be reusing it.",
+        "**Pour the batter in the pan, using approximately \u00bc cup for each crepe. Tilt the pan with a circular motion so that the batter coats the surface evenly.Cook the crepe for about 2 minutes until the bottom is light brown. Loosen with a spatula, turn and cook on the other side. Repeat the process until you use up all the batter. Makes about 8 crepes.For the filling**",
         "1. Add the mushrooms and wine in your food processor. Blend until you get a thick paste.",
         "2. Heat some 1 tbsp oil in a large saucepan.",
-        "3. Add the chopped onion. Sauté until golden, then add the mushroom paste and corn.",
+        "3. Add the chopped onion. Saut\u00e9 until golden, then add the mushroom paste and corn.",
         "4. Add spices.Cook for 15 minutes ten add the chopped dill and parsley and cook for another 5 minutes.",
-        "**Let it cool for at least 10 minutes before assembling the crepes.Fill the crepes using about 1 ½ tbsp of filling / crepe.Sauce**",
+        "**Let it cool for at least 10 minutes before assembling the crepes.Fill the crepes using about 1 \u00bd tbsp of filling / crepe.Sauce**",
         "1. Mix last four ingredients and pour sauce over the vegetarian mushroom crepes."
       ],
       "nutrition": {
@@ -11493,7 +11493,7 @@
           "name": "Flour",
           "amount": 250,
           "unit": "g",
-          "original": "2 cups all-purpose flour – sifted"
+          "original": "2 cups all-purpose flour \u2013 sifted"
         },
         {
           "name": "Margarine",
@@ -11642,7 +11642,7 @@
           "name": "Almonds",
           "amount": 23,
           "unit": "g",
-          "original": "¼ cup sliced almonds"
+          "original": "\u00bc cup sliced almonds"
         },
         {
           "name": "Chia Seeds",
@@ -11654,7 +11654,7 @@
           "name": "Creamy Peanut Butter",
           "amount": 64.5,
           "unit": "g",
-          "original": "¼ cup creamy peanut butter"
+          "original": "\u00bc cup creamy peanut butter"
         },
         {
           "name": "Grape Preserves",
@@ -11672,13 +11672,13 @@
           "name": "Quick-cooking Oats",
           "amount": 54.054,
           "unit": "g",
-          "original": "⅔ cup quick-cooking oats"
+          "original": "\u2154 cup quick-cooking oats"
         },
         {
           "name": "Grapes",
           "amount": 75.5,
           "unit": "g",
-          "original": "½ cup red seedless grapes"
+          "original": "\u00bd cup red seedless grapes"
         }
       ],
       "instructions": [
@@ -13344,7 +13344,7 @@
           "name": "Olive Oil",
           "amount": 108,
           "unit": "ml",
-          "original": "½ cup olive oil"
+          "original": "\u00bd cup olive oil"
         },
         {
           "name": "Plums",
@@ -13368,7 +13368,7 @@
           "name": "Water",
           "amount": 354.882,
           "unit": "ml",
-          "original": "1½ cups water"
+          "original": "1\u00bd cups water"
         }
       ],
       "instructions": [
@@ -13707,7 +13707,7 @@
           "name": "Chives",
           "amount": 10,
           "unit": "g",
-          "original": "¼ cup fresh chives, chopped"
+          "original": "\u00bc cup fresh chives, chopped"
         },
         {
           "name": "Cottage Cheese",
@@ -13731,13 +13731,13 @@
           "name": "Milk",
           "amount": 122,
           "unit": "ml",
-          "original": "½ cup milk"
+          "original": "\u00bd cup milk"
         },
         {
           "name": "Sparkling Mineral Water",
           "amount": 118.5,
           "unit": "ml",
-          "original": "½ cup sparkling mineral water"
+          "original": "\u00bd cup sparkling mineral water"
         }
       ],
       "instructions": [
@@ -13892,8 +13892,8 @@
         }
       ],
       "instructions": [
-        "1. Preheat toaster oven to 350℉.",
-        "2. Butter the dish and add the heavy cream. Crack an egg into it and make sure the yolk doesn’t touch the sides.",
+        "1. Preheat toaster oven to 350\u2109.",
+        "2. Butter the dish and add the heavy cream. Crack an egg into it and make sure the yolk doesn\u2019t touch the sides.",
         "3. Sprinkle cheese and chives on top, add salt and pepper and put into toaster oven.",
         "4. When the white just barely sets, about 15 minutes, remove from oven (warning: ramekins will be hot).",
         "5. Serve &amp; enjoy!"
@@ -14179,7 +14179,7 @@
       ],
       "instructions": [
         "1. Place all ingredients in a blender and mix until smooth. The batter should be thin.",
-        "2. Let it sit at least 30 minutes—or even overnight.When it comes time to cook your crêpes you can do it the traditional way, in a crêpe pan, or you can use an electric crêpe maker."
+        "2. Let it sit at least 30 minutes\u2014or even overnight.When it comes time to cook your cr\u00eapes you can do it the traditional way, in a cr\u00eape pan, or you can use an electric cr\u00eape maker."
       ],
       "nutrition": {
         "calories": 272,
@@ -15144,7 +15144,7 @@
           "name": "Milk",
           "amount": 183,
           "unit": "ml",
-          "original": "¾ cup milk"
+          "original": "\u00be cup milk"
         },
         {
           "name": "Cream",
@@ -15297,7 +15297,7 @@
           "name": "Salt",
           "amount": 0.25,
           "unit": "tsps",
-          "original": "¼ tsp salt"
+          "original": "\u00bc tsp salt"
         },
         {
           "name": "Skim Milk",
@@ -15327,7 +15327,7 @@
           "name": "Flour",
           "amount": 150,
           "unit": "g",
-          "original": "1¼ cups white whole wheat flour"
+          "original": "1\u00bc cups white whole wheat flour"
         }
       ],
       "instructions": [
@@ -15968,7 +15968,7 @@
           "name": "Zucchini",
           "amount": 1,
           "unit": "small",
-          "original": "1 small zucchini (gently run a vegetable peeler the length of the zucchini to make thin “ribbons”)"
+          "original": "1 small zucchini (gently run a vegetable peeler the length of the zucchini to make thin \u201cribbons\u201d)"
         }
       ],
       "instructions": [
@@ -16068,7 +16068,7 @@
           "name": "Chicken Stock",
           "amount": 0.25,
           "unit": "cup",
-          "original": "¼ Cup chicken stock"
+          "original": "\u00bc Cup chicken stock"
         },
         {
           "name": "Cooking Oil",
@@ -16956,7 +16956,7 @@
           "name": "Flavor Concentrated Seafood Broth",
           "amount": 1,
           "unit": "pkt",
-          "original": "1 packet Swanson® Flavor Concentrated Seafood Broth"
+          "original": "1 packet Swanson\u00ae Flavor Concentrated Seafood Broth"
         },
         {
           "name": "Soy Sauce",
@@ -18381,19 +18381,19 @@
           "name": "Egg Whites",
           "amount": 1.5,
           "unit": "cup",
-          "original": "1 ½ Cups Egg Whites (I used the whites from 10 Eggs)"
+          "original": "1 \u00bd Cups Egg Whites (I used the whites from 10 Eggs)"
         },
         {
           "name": "Roma Tomato",
           "amount": 0.5,
           "unit": "",
-          "original": "½ Roma tomato- Diced"
+          "original": "\u00bd Roma tomato- Diced"
         },
         {
           "name": "Avocado",
           "amount": 0.5,
           "unit": "",
-          "original": "½ Avocado- Diced"
+          "original": "\u00bd Avocado- Diced"
         },
         {
           "name": "Goat Cheese",
@@ -20116,7 +20116,7 @@
           "name": "Extra Virgin Olive Oil",
           "amount": 216,
           "unit": "ml",
-          "original": "cup extra virgin olive oil, about ½"
+          "original": "cup extra virgin olive oil, about \u00bd"
         },
         {
           "name": "Salt",
@@ -20234,8 +20234,8 @@
     },
     {
       "id": "spoonacular-634511",
-      "title": "BBQ” Style Chicken Thighs",
-      "description": "BBQ” Style Chicken Thighs requires roughly 45 minutes from start to finish.  This recipe serves 6 and costs 58 cents per serving.",
+      "title": "BBQ\u201d Style Chicken Thighs",
+      "description": "BBQ\u201d Style Chicken Thighs requires roughly 45 minutes from start to finish.  This recipe serves 6 and costs 58 cents per serving.",
       "category": "dinner",
       "prepTime": 10,
       "cookTime": 35,
@@ -20252,7 +20252,7 @@
           "name": "Ketchup",
           "amount": 60,
           "unit": "ml",
-          "original": "¼ cup ketchup"
+          "original": "\u00bc cup ketchup"
         },
         {
           "name": "Soy Sauce",
@@ -20282,19 +20282,19 @@
           "name": "Garlic Powder",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp. garlic powder"
+          "original": "\u00bd tsp. garlic powder"
         },
         {
           "name": "Salt",
           "amount": 0.25,
           "unit": "tsps",
-          "original": "¼ tsp. salt"
+          "original": "\u00bc tsp. salt"
         },
         {
           "name": "Pepper",
           "amount": 0.25,
           "unit": "tsps",
-          "original": "¼ tsp. black pepper"
+          "original": "\u00bc tsp. black pepper"
         }
       ],
       "instructions": [
@@ -20417,7 +20417,7 @@
           "name": "Flank Steak",
           "amount": 226.796,
           "unit": "g",
-          "original": "1/2 pound beef sirloin or flank steak, cut into ½\" strips"
+          "original": "1/2 pound beef sirloin or flank steak, cut into \u00bd\" strips"
         },
         {
           "name": "Garlic",
@@ -21649,8 +21649,8 @@
     },
     {
       "id": "spoonacular-636118",
-      "title": "Brined Chicken Breast with Sautéed Onion Dipping Sauce",
-      "description": "The recipe Brined Chicken Breast with Sautéed Onion Dipping Sauce can be made in approximately 45 minutes.  For $1.",
+      "title": "Brined Chicken Breast with Saut\u00e9ed Onion Dipping Sauce",
+      "description": "The recipe Brined Chicken Breast with Saut\u00e9ed Onion Dipping Sauce can be made in approximately 45 minutes.  For $1.",
       "category": "dinner",
       "prepTime": 10,
       "cookTime": 35,
@@ -21709,7 +21709,7 @@
           "name": "Onion",
           "amount": 1,
           "unit": "",
-          "original": "1 sweet onion – sliced"
+          "original": "1 sweet onion \u2013 sliced"
         },
         {
           "name": "Vinegar",
@@ -21999,13 +21999,13 @@
           "name": "Parmesan Cheese",
           "amount": 50,
           "unit": "g",
-          "original": "½ cup Parmesan cheese"
+          "original": "\u00bd cup Parmesan cheese"
         },
         {
           "name": "Nutmeg",
           "amount": 0.75,
           "unit": "tsps",
-          "original": "¾ tsp. nutmeg, cinnamon, or ginger"
+          "original": "\u00be tsp. nutmeg, cinnamon, or ginger"
         },
         {
           "name": "Salt",
@@ -22498,13 +22498,13 @@
           "name": "Basil",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ teaspoon Dry Basil"
+          "original": "\u00bd teaspoon Dry Basil"
         },
         {
           "name": "Broccoli Cheese Soup",
           "amount": 304.757,
           "unit": "g",
-          "original": "2 Cans ( 10 ¾ oz) - Broccoli Cheese Soup"
+          "original": "2 Cans ( 10 \u00be oz) - Broccoli Cheese Soup"
         },
         {
           "name": "Pasta",
@@ -22516,7 +22516,7 @@
           "name": "Garlic",
           "amount": 1.5,
           "unit": "Tbs",
-          "original": "1½ Tbs. Chopped Garlic"
+          "original": "1\u00bd Tbs. Chopped Garlic"
         },
         {
           "name": "Heavy Cream",
@@ -22534,7 +22534,7 @@
           "name": "Onion",
           "amount": 80,
           "unit": "g",
-          "original": "½ cup Diced Onion"
+          "original": "\u00bd cup Diced Onion"
         },
         {
           "name": "Salt & Pepper",
@@ -22684,7 +22684,7 @@
           "name": "Ricotta Salata",
           "amount": 113.398,
           "unit": "g",
-          "original": "4 ounces Ricotta Salata, finely grated (about 1 + ½ cups)"
+          "original": "4 ounces Ricotta Salata, finely grated (about 1 + \u00bd cups)"
         },
         {
           "name": "Parmesan Cheese",
@@ -22814,13 +22814,13 @@
           "name": "Pepper",
           "amount": 0.25,
           "unit": "tsps",
-          "original": "¼ tsp black pepper"
+          "original": "\u00bc tsp black pepper"
         },
         {
           "name": "Bread Crumbs",
           "amount": 54,
           "unit": "ml",
-          "original": "½ cup bread crumbs"
+          "original": "\u00bd cup bread crumbs"
         },
         {
           "name": "Canned Tomatoes",
@@ -22832,13 +22832,13 @@
           "name": "Parmesean Cheese",
           "amount": 0.5,
           "unit": "cup",
-          "original": "½ Cup freshly grated Parmesean Cheese"
+          "original": "\u00bd Cup freshly grated Parmesean Cheese"
         },
         {
           "name": "Cumin",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp cumin"
+          "original": "\u00bd tsp cumin"
         },
         {
           "name": "Thyme",
@@ -22856,7 +22856,7 @@
           "name": "Basil",
           "amount": 0.667,
           "unit": "Tbs",
-          "original": "⅔ Tbs minced fresh basil for garnish"
+          "original": "\u2154 Tbs minced fresh basil for garnish"
         },
         {
           "name": "Rosemary",
@@ -22868,19 +22868,19 @@
           "name": "Garlic",
           "amount": 2,
           "unit": "cloves",
-          "original": "2 cloves Garlic – minced"
+          "original": "2 cloves Garlic \u2013 minced"
         },
         {
           "name": "Garlic",
           "amount": 3,
           "unit": "cloves",
-          "original": "3 cloves garlic – minced"
+          "original": "3 cloves garlic \u2013 minced"
         },
         {
           "name": "Bell Peppers",
           "amount": 0.25,
           "unit": "cup",
-          "original": "¼ Cup Green Bell Peppers"
+          "original": "\u00bc Cup Green Bell Peppers"
         },
         {
           "name": "Ground Beef",
@@ -22892,25 +22892,25 @@
           "name": "Ground Sausage",
           "amount": 226.796,
           "unit": "g",
-          "original": "½ lb ground hot sausage"
+          "original": "\u00bd lb ground hot sausage"
         },
         {
           "name": "Heavy Cream",
           "amount": 0.5,
           "unit": "cup",
-          "original": "½ Cup heavy cream"
+          "original": "\u00bd Cup heavy cream"
         },
         {
           "name": "Kosher Salt",
           "amount": 0.75,
           "unit": "tsps",
-          "original": "¾ tsp kosher salt"
+          "original": "\u00be tsp kosher salt"
         },
         {
           "name": "Mushrooms",
           "amount": 226.796,
           "unit": "g",
-          "original": "8 oz mushrooms – sliced"
+          "original": "8 oz mushrooms \u2013 sliced"
         },
         {
           "name": "Olive Oil",
@@ -22928,7 +22928,7 @@
           "name": "Onion",
           "amount": 1,
           "unit": "small",
-          "original": "1 small onion – finely chopped"
+          "original": "1 small onion \u2013 finely chopped"
         },
         {
           "name": "Sugar",
@@ -22940,7 +22940,7 @@
           "name": "Pepper Flakes",
           "amount": 0.25,
           "unit": "tsps",
-          "original": "¼ teaspoon red pepper flakes"
+          "original": "\u00bc teaspoon red pepper flakes"
         },
         {
           "name": "Salt And Pepper",
@@ -22970,7 +22970,7 @@
           "name": "Chardonnay Wine",
           "amount": 0.5,
           "unit": "cup",
-          "original": "½ Cup chardonnay wine"
+          "original": "\u00bd Cup chardonnay wine"
         },
         {
           "name": "Mozerella",
@@ -23427,7 +23427,7 @@
           "name": "Chicken",
           "amount": 870.897,
           "unit": "g",
-          "original": "4 pounds whole chicken cut into quarters or approximately 1 ½ pounds (750g) boneless chicken"
+          "original": "4 pounds whole chicken cut into quarters or approximately 1 \u00bd pounds (750g) boneless chicken"
         },
         {
           "name": "Water",
@@ -23475,7 +23475,7 @@
           "name": ".5 Can Cannellini Beans",
           "amount": 439,
           "unit": "g",
-          "original": "1 ounce – 15.5 (439g) tin cannellini beans (or any other white bean), drained and rinsed"
+          "original": "1 ounce \u2013 15.5 (439g) tin cannellini beans (or any other white bean), drained and rinsed"
         },
         {
           "name": "Mild Chili Powder",
@@ -24171,10 +24171,10 @@
           "original": "1 - 4oz. - Can Green Chiles (chopped)"
         },
         {
-          "name": "Jalapeño",
+          "name": "Jalape\u00f1o",
           "amount": 6,
           "unit": "servings",
-          "original": "1 - Small Jalapeño (chopped)"
+          "original": "1 - Small Jalape\u00f1o (chopped)"
         },
         {
           "name": "Chicken Breast",
@@ -24522,7 +24522,7 @@
           "name": "Onion",
           "amount": 0.75,
           "unit": "",
-          "original": "¾ red onion"
+          "original": "\u00be red onion"
         },
         {
           "name": "Navel Orange",
@@ -24582,7 +24582,7 @@
           "name": "Juice Of Orange",
           "amount": 0.5,
           "unit": "",
-          "original": "½ navel orange, juiced"
+          "original": "\u00bd navel orange, juiced"
         },
         {
           "name": "Orange Zest",
@@ -27081,7 +27081,7 @@
           "name": "Stew Beef",
           "amount": 907.185,
           "unit": "g",
-          "original": "2 lbs Stew Beef – cut into 1” cubes"
+          "original": "2 lbs Stew Beef \u2013 cut into 1\u201d cubes"
         },
         {
           "name": "Olive Oil",
@@ -27117,7 +27117,7 @@
           "name": "Onion",
           "amount": 1,
           "unit": "medium",
-          "original": "1 medium onion – chopped"
+          "original": "1 medium onion \u2013 chopped"
         },
         {
           "name": "Salt",
@@ -27135,43 +27135,43 @@
           "name": "Ground Pepper",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp ground black pepper"
+          "original": "\u00bd tsp ground black pepper"
         },
         {
           "name": "Paprika",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp smoked paprika"
+          "original": "\u00bd tsp smoked paprika"
         },
         {
           "name": "Tumeric",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp tumeric"
+          "original": "\u00bd tsp tumeric"
         },
         {
           "name": "Onion Powder",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp onion powder"
+          "original": "\u00bd tsp onion powder"
         },
         {
           "name": "Ground Cloves",
           "amount": 0.125,
           "unit": "tsps",
-          "original": "⅛ tsp ground cloves"
+          "original": "\u215b tsp ground cloves"
         },
         {
           "name": "Carrots",
           "amount": 4,
           "unit": "large",
-          "original": "4 large carrots – quartered and cut into small pie shaped pieces"
+          "original": "4 large carrots \u2013 quartered and cut into small pie shaped pieces"
         },
         {
           "name": "Celery Stalks",
           "amount": 3,
           "unit": "",
-          "original": "3 celery stalks – halved and cut into small pieces"
+          "original": "3 celery stalks \u2013 halved and cut into small pieces"
         },
         {
           "name": "Corn Starch",
@@ -27183,7 +27183,7 @@
           "name": "Water",
           "amount": 59.147,
           "unit": "ml",
-          "original": "¼ cup water"
+          "original": "\u00bc cup water"
         },
         {
           "name": "Hidden Valley Ranch Dressing Mix",
@@ -27865,7 +27865,7 @@
           "name": "Olives",
           "amount": 101.25,
           "unit": "ml",
-          "original": "¾ cup pitted black olives"
+          "original": "\u00be cup pitted black olives"
         },
         {
           "name": "Cod Fillets",
@@ -27877,7 +27877,7 @@
           "name": "Corn Polenta",
           "amount": 77,
           "unit": "g",
-          "original": "½ cup instant corn polenta"
+          "original": "\u00bd cup instant corn polenta"
         },
         {
           "name": "Corn Flour",
@@ -27889,7 +27889,7 @@
           "name": "Wine",
           "amount": 60,
           "unit": "ml",
-          "original": "¼ cup dry white wine"
+          "original": "\u00bc cup dry white wine"
         },
         {
           "name": "Parsley",
@@ -27901,7 +27901,7 @@
           "name": "Olive Oil",
           "amount": 54,
           "unit": "ml",
-          "original": "¼ cup olive oil"
+          "original": "\u00bc cup olive oil"
         },
         {
           "name": "Oregano",
@@ -27943,13 +27943,13 @@
           "name": "Pepper",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp white pepper"
+          "original": "\u00bd tsp white pepper"
         },
         {
           "name": "White Wine",
           "amount": 60,
           "unit": "ml",
-          "original": "¼ cup white wine"
+          "original": "\u00bc cup white wine"
         }
       ],
       "instructions": [
@@ -28480,7 +28480,7 @@
           "name": "Flour",
           "amount": 31.25,
           "unit": "g",
-          "original": "¼ cup flour"
+          "original": "\u00bc cup flour"
         },
         {
           "name": "Garlic",
@@ -28504,7 +28504,7 @@
           "name": "Onion",
           "amount": 80,
           "unit": "g",
-          "original": "½ cup onion"
+          "original": "\u00bd cup onion"
         },
         {
           "name": "Paprika",
@@ -29156,7 +29156,7 @@
           "name": "Broccoli Stems",
           "amount": 44,
           "unit": "g",
-          "original": "½ cup peeled, julienned broccoli stems (1 inch long)"
+          "original": "\u00bd cup peeled, julienned broccoli stems (1 inch long)"
         },
         {
           "name": "Celery",
@@ -29507,7 +29507,7 @@
           "name": "You Can Use Stew Meat In A Pinch",
           "amount": 907.185,
           "unit": "g",
-          "original": "2 pounds chili meat – or you can use stew meat in a pinch."
+          "original": "2 pounds chili meat \u2013 or you can use stew meat in a pinch."
         },
         {
           "name": "Beef Broth",
@@ -29895,7 +29895,7 @@
           "name": "Celery Ribs",
           "amount": 4,
           "unit": "inches",
-          "original": "4 inches celery ribs, sliced diagonally ¼ thick, leaves chopped and reserved separately"
+          "original": "4 inches celery ribs, sliced diagonally \u00bc thick, leaves chopped and reserved separately"
         },
         {
           "name": "Carrots",
@@ -30532,7 +30532,7 @@
           "name": "Parsley",
           "amount": 6,
           "unit": "servings",
-          "original": " Fresh parsley for garnish "
+          "original": "\u00a0Fresh parsley for garnish\u00a0"
         }
       ],
       "instructions": [
@@ -30541,7 +30541,7 @@
         "3. Drain the fat from the meat and place it back into the skillet.",
         "4. Add tomato sauce, oregano, and pepper.",
         "5. Mix well.",
-        "6. Add 1⁄2 spaghetti noodles to a prepared 9 x 13 baking dish. Top with sliced butter, about half.",
+        "6. Add 1\u20442 spaghetti noodles to a prepared 9 x 13 baking dish. Top with sliced butter, about half.",
         "7. Mix ricotta, cream cheese, and sour cream until combined.",
         "8. Spread over the spaghetti and butter slices.",
         "9. Top the cheese mixture with the remaining spaghetti and butter slices.",
@@ -30865,7 +30865,7 @@
           "name": "Lasagna Noodles - According To Package Instructions",
           "amount": 9,
           "unit": "",
-          "original": "9 Lasagna noodles – cooked according to package instructions"
+          "original": "9 Lasagna noodles \u2013 cooked according to package instructions"
         },
         {
           "name": "Olive Oil",
@@ -30892,10 +30892,10 @@
           "original": "4 cups shredded Mozzarella Cheese"
         },
         {
-          "name": "Batch Of “best Ever Spaghetti Sauce",
+          "name": "Batch Of \u201cbest Ever Spaghetti Sauce",
           "amount": 1,
           "unit": "",
-          "original": "1 batch of “Best Ever Spaghetti Sauce”"
+          "original": "1 batch of \u201cBest Ever Spaghetti Sauce\u201d"
         }
       ],
       "instructions": [
@@ -31475,7 +31475,7 @@
           "name": "Sirloin Steak - Cut Across The Grain",
           "amount": 566.99,
           "unit": "g",
-          "original": "1.25 lbs beef flank or sirloin steak – cut across the grain, thin sliced"
+          "original": "1.25 lbs beef flank or sirloin steak \u2013 cut across the grain, thin sliced"
         },
         {
           "name": "Onion",
@@ -31487,13 +31487,13 @@
           "name": "Mushrooms",
           "amount": 113.398,
           "unit": "g",
-          "original": "4 oz fresh mushrooms – sliced"
+          "original": "4 oz fresh mushrooms \u2013 sliced"
         },
         {
           "name": "Water",
           "amount": 354.882,
           "unit": "ml",
-          "original": "1 ½ cup water"
+          "original": "1 \u00bd cup water"
         },
         {
           "name": "Egg Noodles",
@@ -31523,19 +31523,19 @@
           "name": "Milk",
           "amount": 122,
           "unit": "ml",
-          "original": "½ cup milk"
+          "original": "\u00bd cup milk"
         },
         {
           "name": "Salt",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp salt"
+          "original": "\u00bd tsp salt"
         },
         {
           "name": "Pepper",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp pepper"
+          "original": "\u00bd tsp pepper"
         }
       ],
       "instructions": [
@@ -32335,7 +32335,7 @@
           "name": "Parmesan-reggiano",
           "amount": 25,
           "unit": "g",
-          "original": "¼ cup Parmesan-Reggiano, grated"
+          "original": "\u00bc cup Parmesan-Reggiano, grated"
         },
         {
           "name": "Juice Of Lemon",
@@ -32347,25 +32347,25 @@
           "name": "Sea Salt",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ teaspoon Sea salt"
+          "original": "\u00bd teaspoon Sea salt"
         },
         {
           "name": "Ground Pepper",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ teaspoon Fresh ground black pepper"
+          "original": "\u00bd teaspoon Fresh ground black pepper"
         },
         {
           "name": "Bell Pepper",
           "amount": 0.25,
           "unit": "tsps",
-          "original": "¼ teaspoon Crushed red pepper"
+          "original": "\u00bc teaspoon Crushed red pepper"
         },
         {
           "name": "Extra Virgin Olive Oil",
           "amount": 54,
           "unit": "ml",
-          "original": "¼ cup Extra virgin olive oil"
+          "original": "\u00bc cup Extra virgin olive oil"
         },
         {
           "name": "Water",
@@ -32449,8 +32449,8 @@
     },
     {
       "id": "spoonacular-642998",
-      "title": "Fisherman’s Catch Pasta",
-      "description": "If you want to add more pescatarian recipes to your repertoire, Fisherman’s Catch Pasta might be a recipe you should try.  For $7.",
+      "title": "Fisherman\u2019s Catch Pasta",
+      "description": "If you want to add more pescatarian recipes to your repertoire, Fisherman\u2019s Catch Pasta might be a recipe you should try.  For $7.",
       "category": "dinner",
       "prepTime": 10,
       "cookTime": 35,
@@ -32692,7 +32692,7 @@
           "name": "Jalapeno",
           "amount": 0.5,
           "unit": "large",
-          "original": "½ large jalapeno, seeded and minced ( whole 1 if brave)"
+          "original": "\u00bd large jalapeno, seeded and minced ( whole 1 if brave)"
         },
         {
           "name": "Juice Of Lemon",
@@ -32704,7 +32704,7 @@
           "name": "Juice Of Lime",
           "amount": 0.5,
           "unit": "",
-          "original": "Juice of large ½ lime"
+          "original": "Juice of large \u00bd lime"
         },
         {
           "name": "Salt And Pepper",
@@ -32854,7 +32854,7 @@
         "4. Add chicken breasts and sear 2 minutes per side.",
         "5. Turn down heat to medium-low (you still want to hear a sizzle) and cook chicken breast an additional 6 minutes per side with the lid on.",
         "6. Turn off heat and let chicken breast rest in the hot pan for 10 minutes - do not lift the lid and let moisture escape",
-        "7. Slice on a cutting board and experience the juiciest chicken breast you’ve ever had. Pair with your favorite side dish and enjoy!"
+        "7. Slice on a cutting board and experience the juiciest chicken breast you\u2019ve ever had. Pair with your favorite side dish and enjoy!"
       ],
       "nutrition": {
         "calories": 448,
@@ -34576,13 +34576,13 @@
           "name": "Lemon Juice",
           "amount": 183,
           "unit": "ml",
-          "original": "¾ cup freshly squeezed lemon juice (4-5 lemons)"
+          "original": "\u00be cup freshly squeezed lemon juice (4-5 lemons)"
         },
         {
           "name": "Olive Oil",
           "amount": 162,
           "unit": "ml",
-          "original": "¾ cup good olive oil"
+          "original": "\u00be cup good olive oil"
         },
         {
           "name": "Salt",
@@ -34624,19 +34624,19 @@
           "name": "Garlic",
           "amount": 1.5,
           "unit": "tsps",
-          "original": "1 ½ teaspoons minced garlic"
+          "original": "1 \u00bd teaspoons minced garlic"
         },
         {
           "name": "Ginger Root",
           "amount": 1.5,
           "unit": "",
-          "original": "1 ½ minced fresh ginger root"
+          "original": "1 \u00bd minced fresh ginger root"
         },
         {
           "name": "Red Wine Pepper Flakes",
           "amount": 0.25,
           "unit": "tsps",
-          "original": "¼ teaspoon crushed red wine pepper flakes"
+          "original": "\u00bc teaspoon crushed red wine pepper flakes"
         },
         {
           "name": "Red Wine Vinegar",
@@ -34648,7 +34648,7 @@
           "name": "Brown Sugar",
           "amount": 55,
           "unit": "g",
-          "original": "¼ cup light brown sugar packed"
+          "original": "\u00bc cup light brown sugar packed"
         },
         {
           "name": "Soy Sauce",
@@ -34660,13 +34660,13 @@
           "name": "Smooth Peanut Butter",
           "amount": 129,
           "unit": "g",
-          "original": "½ cup smooth peanut butter"
+          "original": "\u00bd cup smooth peanut butter"
         },
         {
           "name": "Ketchup",
           "amount": 0.25,
           "unit": "",
-          "original": "¼ ketchup"
+          "original": "\u00bc ketchup"
         },
         {
           "name": "Sherry",
@@ -34678,7 +34678,7 @@
           "name": "Lime Juice",
           "amount": 1,
           "unit": "tsp",
-          "original": "1-½ teaspoons freshly squeezed lime juice (I used 2 limes)"
+          "original": "1-\u00bd teaspoons freshly squeezed lime juice (I used 2 limes)"
         }
       ],
       "instructions": [
@@ -35135,7 +35135,7 @@
           "name": "Cilantro",
           "amount": 4,
           "unit": "g",
-          "original": "¼ cup chopped cilantro"
+          "original": "\u00bc cup chopped cilantro"
         },
         {
           "name": "Cilantro Sprigs",
@@ -35688,10 +35688,10 @@
           "original": "1 tablespoon flour"
         },
         {
-          "name": "Gruyère Cheese",
+          "name": "Gruy\u00e8re Cheese",
           "amount": 28.35,
           "unit": "g",
-          "original": "30 grams (1 oz) Gruyère cheese, grated"
+          "original": "30 grams (1 oz) Gruy\u00e8re cheese, grated"
         },
         {
           "name": "Milk",
@@ -35820,61 +35820,61 @@
           "name": "Jamaican Allspice",
           "amount": 8,
           "unit": "servings",
-          "original": "• Jamaican AllSpice"
+          "original": "\u2022 Jamaican AllSpice"
         },
         {
           "name": "Coconut Milk",
           "amount": 1,
           "unit": "can",
-          "original": "• 1 can Coconut Milk"
+          "original": "\u2022 1 can Coconut Milk"
         },
         {
           "name": "Carrots",
           "amount": 2,
           "unit": "",
-          "original": "• 2 Organic Carrots"
+          "original": "\u2022 2 Organic Carrots"
         },
         {
           "name": "Chicken Breasts",
           "amount": 3,
           "unit": "",
-          "original": "• 3 Organic Chicken Breasts"
+          "original": "\u2022 3 Organic Chicken Breasts"
         },
         {
           "name": "Chicken Broth",
           "amount": 907.185,
           "unit": "g",
-          "original": "• 32 oz. Organic Chicken Broth"
+          "original": "\u2022 32 oz. Organic Chicken Broth"
         },
         {
           "name": "Cilantro",
           "amount": 8,
           "unit": "servings",
-          "original": "• Organic Cilantro"
+          "original": "\u2022 Organic Cilantro"
         },
         {
           "name": "Coconut Flakes",
           "amount": 8,
           "unit": "servings",
-          "original": "• Coconut Flakes"
+          "original": "\u2022 Coconut Flakes"
         },
         {
           "name": "Cumin",
           "amount": 8,
           "unit": "servings",
-          "original": "• Cumin"
+          "original": "\u2022 Cumin"
         },
         {
           "name": "Garlic Cloves",
           "amount": 4,
           "unit": "",
-          "original": "• 4 Garlic Cloves"
+          "original": "\u2022 4 Garlic Cloves"
         },
         {
           "name": "Great Northern Beans",
           "amount": 2,
           "unit": "Cans",
-          "original": "• 2 Cans Great Northern Beans"
+          "original": "\u2022 2 Cans Great Northern Beans"
         },
         {
           "name": "Brown Rice",
@@ -35886,13 +35886,13 @@
           "name": "Pineapple",
           "amount": 1,
           "unit": "",
-          "original": "• 1 Pineapple"
+          "original": "\u2022 1 Pineapple"
         },
         {
           "name": "Sea Salt",
           "amount": 8,
           "unit": "servings",
-          "original": "• Sea Salt"
+          "original": "\u2022 Sea Salt"
         },
         {
           "name": "Cream",
@@ -35904,19 +35904,19 @@
           "name": "Thyme",
           "amount": 8,
           "unit": "servings",
-          "original": "• Organic Thyme"
+          "original": "\u2022 Organic Thyme"
         },
         {
           "name": "Onion",
           "amount": 1,
           "unit": "",
-          "original": "• 1 white onion"
+          "original": "\u2022 1 white onion"
         },
         {
           "name": "Pepper",
           "amount": 8,
           "unit": "servings",
-          "original": "• white pepper"
+          "original": "\u2022 white pepper"
         }
       ],
       "instructions": [
@@ -36594,7 +36594,7 @@
           "name": "Mexican Cheese Blend",
           "amount": 0.5,
           "unit": "cup",
-          "original": "½ C shredded Mexican cheese blend"
+          "original": "\u00bd C shredded Mexican cheese blend"
         },
         {
           "name": "Extra Virgin Olive Oil",
@@ -36606,13 +36606,13 @@
           "name": "Granulated Garlic",
           "amount": 0.188,
           "unit": "tsps",
-          "original": "½ t granulated garlic"
+          "original": "\u00bd t granulated garlic"
         },
         {
           "name": "Ground Pepper",
           "amount": 0.167,
           "unit": "tsps",
-          "original": "½ t fresh ground pepper"
+          "original": "\u00bd t fresh ground pepper"
         },
         {
           "name": "Pepper Flakes",
@@ -36642,7 +36642,7 @@
           "name": "Green Onions",
           "amount": 2,
           "unit": "",
-          "original": "2 green onions, chopped into ¼ inch pieces"
+          "original": "2 green onions, chopped into \u00bc inch pieces"
         }
       ],
       "instructions": [
@@ -37284,112 +37284,112 @@
       "servings": 8,
       "ingredients": [
         {
-          "name": "▢ Butter",
+          "name": "\u25a2 Butter",
           "amount": 2,
           "unit": "Tbsps",
-          "original": "▢ 2 tbsp unsalted butter"
+          "original": "\u25a2 2 tbsp unsalted butter"
         },
         {
-          "name": "▢ Sausage",
+          "name": "\u25a2 Sausage",
           "amount": 453.592,
           "unit": "g",
-          "original": "▢ 1 lb sliced sausage"
+          "original": "\u25a2 1 lb sliced sausage"
         },
         {
-          "name": "▢ Chicken Breasts",
+          "name": "\u25a2 Chicken Breasts",
           "amount": 453.592,
           "unit": "g",
-          "original": "▢ 1 lb boneless skinless chicken breasts cut into bite sized pieces"
+          "original": "\u25a2 1 lb boneless skinless chicken breasts cut into bite sized pieces"
         },
         {
-          "name": "▢ Onion",
+          "name": "\u25a2 Onion",
           "amount": 160,
           "unit": "g",
-          "original": "▢ 1 cup yellow onion chopped"
+          "original": "\u25a2 1 cup yellow onion chopped"
         },
         {
-          "name": "▢ Celery",
+          "name": "\u25a2 Celery",
           "amount": 101,
           "unit": "g",
-          "original": "▢ 1 cup celery chopped"
+          "original": "\u25a2 1 cup celery chopped"
         },
         {
-          "name": "▢ Bell Pepper",
+          "name": "\u25a2 Bell Pepper",
           "amount": 74.5,
           "unit": "g",
-          "original": "▢ 1/2 cup bell pepper chopped"
+          "original": "\u25a2 1/2 cup bell pepper chopped"
         },
         {
-          "name": "▢ Garlic",
+          "name": "\u25a2 Garlic",
           "amount": 1,
           "unit": "tbsp",
-          "original": "▢ 1 tbsp minced garlic"
+          "original": "\u25a2 1 tbsp minced garlic"
         },
         {
-          "name": "▢ Tomato Sauce",
+          "name": "\u25a2 Tomato Sauce",
           "amount": 245,
           "unit": "ml",
-          "original": "▢ 1 cup tomato sauce"
+          "original": "\u25a2 1 cup tomato sauce"
         },
         {
-          "name": "▢ Tomatoes",
+          "name": "\u25a2 Tomatoes",
           "amount": 411.068,
           "unit": "g",
-          "original": "▢ 14.5 oz diced tomatoes"
+          "original": "\u25a2 14.5 oz diced tomatoes"
         },
         {
-          "name": "▢ Chicken Stock",
+          "name": "\u25a2 Chicken Stock",
           "amount": 600,
           "unit": "ml",
-          "original": "▢ 2 1/2 cups chicken stock"
+          "original": "\u25a2 2 1/2 cups chicken stock"
         },
         {
-          "name": "▢ Rice",
+          "name": "\u25a2 Rice",
           "amount": 277.5,
           "unit": "g",
-          "original": "▢ 1 1/2 cups rice uncooked and rinsed"
+          "original": "\u25a2 1 1/2 cups rice uncooked and rinsed"
         },
         {
-          "name": "▢ 2 Bay",
+          "name": "\u25a2 2 Bay",
           "amount": 1,
           "unit": "leaf",
-          "original": "▢ 2 bay leaves whole"
+          "original": "\u25a2 2 bay leaves whole"
         },
         {
-          "name": "▢ Ground Pepper",
+          "name": "\u25a2 Ground Pepper",
           "amount": 2,
           "unit": "tsps",
-          "original": "▢ 2 tsp ground black pepper"
+          "original": "\u25a2 2 tsp ground black pepper"
         },
         {
-          "name": "▢ Salt",
+          "name": "\u25a2 Salt",
           "amount": 1,
           "unit": "tsp",
-          "original": "▢ 1 tsp salt"
+          "original": "\u25a2 1 tsp salt"
         },
         {
-          "name": "▢ Pepper",
+          "name": "\u25a2 Pepper",
           "amount": 1,
           "unit": "tsp",
-          "original": "▢ 1 tsp white pepper"
+          "original": "\u25a2 1 tsp white pepper"
         },
         {
-          "name": "▢ Thyme",
+          "name": "\u25a2 Thyme",
           "amount": 1,
           "unit": "tsp",
-          "original": "▢ 1 tsp thyme dried"
+          "original": "\u25a2 1 tsp thyme dried"
         },
         {
-          "name": "▢ Pepper Flakes",
+          "name": "\u25a2 Pepper Flakes",
           "amount": 1,
           "unit": "tsp",
-          "original": "▢ 1 tsp red pepper flakes"
+          "original": "\u25a2 1 tsp red pepper flakes"
         },
         {
-          "name": "▢ Sage",
+          "name": "\u25a2 Sage",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "▢ 1/2 tsp sage"
+          "original": "\u25a2 1/2 tsp sage"
         }
       ],
       "instructions": [
@@ -37686,13 +37686,13 @@
           "name": "Orange Bell Peppers",
           "amount": 149,
           "unit": "g",
-          "original": "1 cup orange bell peppers – roughly chopped"
+          "original": "1 cup orange bell peppers \u2013 roughly chopped"
         },
         {
           "name": "Cooking Oil / Olive Oil",
           "amount": 2,
           "unit": "tsps",
-          "original": "2 tsp cooking oil / olive oil – for tempering bell peppers"
+          "original": "2 tsp cooking oil / olive oil \u2013 for tempering bell peppers"
         },
         {
           "name": "Olive Oil",
@@ -37716,7 +37716,7 @@
           "name": "Garlic",
           "amount": 2,
           "unit": "cloves",
-          "original": "2 cloves garlic (optional) – roughly chopped"
+          "original": "2 cloves garlic (optional) \u2013 roughly chopped"
         },
         {
           "name": "Roasted Sesame Seeds",
@@ -37891,7 +37891,7 @@
           "name": "Garlic Cloves",
           "amount": 2,
           "unit": "",
-          "original": "2 – 3 organic Garlic Cloves"
+          "original": "2 \u2013 3 organic Garlic Cloves"
         },
         {
           "name": "Ginger",
@@ -37903,7 +37903,7 @@
           "name": "Serrano Chilis",
           "amount": 2,
           "unit": "",
-          "original": "2 – 4 Serrano Chilis"
+          "original": "2 \u2013 4 Serrano Chilis"
         },
         {
           "name": "Tomatoes",
@@ -38304,7 +38304,7 @@
           "name": "Sea Salt",
           "amount": 2.5,
           "unit": "tsps",
-          "original": "2½ teaspoons sea salt"
+          "original": "2\u00bd teaspoons sea salt"
         },
         {
           "name": "Bread",
@@ -38577,7 +38577,7 @@
           "name": "Garlic Powder",
           "amount": 0.125,
           "unit": "tsps",
-          "original": "⅛ tsp garlic powder"
+          "original": "\u215b tsp garlic powder"
         },
         {
           "name": "Onions",
@@ -38999,7 +38999,7 @@
           "name": "Chicken Broth",
           "amount": 85.049,
           "unit": "g",
-          "original": "3 ounces can chicken broth - (14 ½ ea)"
+          "original": "3 ounces can chicken broth - (14 \u00bd ea)"
         },
         {
           "name": "Chicken Drumsticks Skinned",
@@ -39035,7 +39035,7 @@
           "name": "Okra Cut",
           "amount": 226.796,
           "unit": "g",
-          "original": "1/2 pound fresh okra cut ½\" slices"
+          "original": "1/2 pound fresh okra cut \u00bd\" slices"
         },
         {
           "name": "Onion",
@@ -39148,7 +39148,7 @@
           "name": "Chicken Sausage Links",
           "amount": 170.097,
           "unit": "g",
-          "original": "2 fully cooked chicken sausage Links (about 6 oz) sliced into coins – I used Trader Joe's Sweet Italian Chicken Sausage"
+          "original": "2 fully cooked chicken sausage Links (about 6 oz) sliced into coins \u2013 I used Trader Joe's Sweet Italian Chicken Sausage"
         },
         {
           "name": "Canned Tomatoes",
@@ -39166,7 +39166,7 @@
           "name": "Bell Pepper",
           "amount": 1,
           "unit": "large",
-          "original": "1 large green bell pepper, seeded, chopped – I used yellow"
+          "original": "1 large green bell pepper, seeded, chopped \u2013 I used yellow"
         },
         {
           "name": "Celery",
@@ -40212,7 +40212,7 @@
       "instructions": [
         "1. Wash your lamb and season with seasoning cubes, the blended onions, pepper, ginger and garlic and allow to marinate for at least an hour.In a pot on low heat, pour in your coconut milk, water, blended tomato, curry powder and bring to boil.",
         "2. Pour in the lamb and marinade juice into the pot and leave on low heat to continue to stew till the lamb is cooked.If you want your lamb falling off the bones, you can choose to cook longer and pour more water if needed.Taste to make sure it has enough seasoning and serve with Rice.",
-        "3.  Fun Health fact: A lamb curry can provide up to 50% of the iron a woman needs in a day."
+        "3. \u00a0Fun Health fact: A lamb curry can provide up to 50% of the iron a woman needs in a day."
       ],
       "nutrition": {
         "calories": 674,
@@ -40883,7 +40883,7 @@
           "name": "Spinach",
           "amount": 60,
           "unit": "g",
-          "original": "2 cups trimmed spinach cut in ½-inch strips (about 8 oz.)"
+          "original": "2 cups trimmed spinach cut in \u00bd-inch strips (about 8 oz.)"
         },
         {
           "name": "Water",
@@ -41031,7 +41031,7 @@
           "name": "Garlic - &",
           "amount": 3,
           "unit": "cloves",
-          "original": "3 cloves garlic – crushed & chopped"
+          "original": "3 cloves garlic \u2013 crushed & chopped"
         },
         {
           "name": "Juice Of Lemon",
@@ -41357,7 +41357,7 @@
           "name": "Flour",
           "amount": 62.5,
           "unit": "g",
-          "original": "½ cup flour"
+          "original": "\u00bd cup flour"
         },
         {
           "name": "Garlic Powder",
@@ -41393,7 +41393,7 @@
           "name": "Parsley",
           "amount": 30,
           "unit": "g",
-          "original": "½ cup parsley, chopped"
+          "original": "\u00bd cup parsley, chopped"
         },
         {
           "name": "Pepper",
@@ -41708,10 +41708,10 @@
           "original": "1 tbsp of sunflower oil"
         },
         {
-          "name": "Tomato Purée",
+          "name": "Tomato Pur\u00e9e",
           "amount": 2,
           "unit": "tsps",
-          "original": "2 tsp of tomato purée"
+          "original": "2 tsp of tomato pur\u00e9e"
         }
       ],
       "instructions": [
@@ -43132,8 +43132,8 @@
     },
     {
       "id": "spoonacular-650654",
-      "title": "Make Olive Garden’s Delicious Pasta Fagioli At Home",
-      "description": "If you want to add more Mediterranean recipes to your recipe box, Make Olive Garden’s Delicious Pasta Fagioli At Home might be a recipe you should try.  This recipe serves 20.",
+      "title": "Make Olive Garden\u2019s Delicious Pasta Fagioli At Home",
+      "description": "If you want to add more Mediterranean recipes to your recipe box, Make Olive Garden\u2019s Delicious Pasta Fagioli At Home might be a recipe you should try.  This recipe serves 20.",
       "category": "dinner",
       "prepTime": 10,
       "cookTime": 35,
@@ -43361,13 +43361,13 @@
           "name": "Carrots",
           "amount": 64,
           "unit": "g",
-          "original": "½ cup carrots, steamed and chopped"
+          "original": "\u00bd cup carrots, steamed and chopped"
         },
         {
           "name": "Celery",
           "amount": 25.25,
           "unit": "g",
-          "original": "¼ cup celery, chopped"
+          "original": "\u00bc cup celery, chopped"
         },
         {
           "name": "Northern Beans",
@@ -43583,7 +43583,7 @@
       ],
       "instructions": [
         "1. Wash your rice and bring to boil on medium heat with very little water as you are still going to cook it in chicken stock.Once the rice is slightly soft and the initial water has dried up, reduce the heat and pour in the chicken stock and cook till the chicken stock is all absorbed and has dried up. The chicken stock if freshly made will have some oil from the chicken so your rice does not need oil.Increase the heat and stir in the chopped vegetables and pepper.",
-        "2. Add your seasoning cube.Finally stir in your cubed mango and serve warm with any protein of your choice. I’d say chicken but it’s up to you."
+        "2. Add your seasoning cube.Finally stir in your cubed mango and serve warm with any protein of your choice. I\u2019d say chicken but it\u2019s up to you."
       ],
       "nutrition": {
         "calories": 486,
@@ -43658,8 +43658,8 @@
     },
     {
       "id": "spoonacular-1098393",
-      "title": "Mardi Gras Shrimp Étouffée",
-      "description": "Mardi Gras Shrimp Étouffée takes around 1 hour and 30 minutes from beginning to end.  One portion of this dish contains about 40g of protein, 20g of fat, and a total of 420 calories.",
+      "title": "Mardi Gras Shrimp \u00c9touff\u00e9e",
+      "description": "Mardi Gras Shrimp \u00c9touff\u00e9e takes around 1 hour and 30 minutes from beginning to end.  One portion of this dish contains about 40g of protein, 20g of fat, and a total of 420 calories.",
       "category": "dinner",
       "prepTime": 10,
       "cookTime": 80,
@@ -45197,7 +45197,7 @@
           "name": "A Dressing Of Tbsp Brown Miso Paste",
           "amount": 1,
           "unit": "tsp",
-          "original": "1 teaspoon a dressing of tbsp brown miso paste, ½ brown sugar, 1 tsp mi"
+          "original": "1 teaspoon a dressing of tbsp brown miso paste, \u00bd brown sugar, 1 tsp mi"
         },
         {
           "name": "Chilli",
@@ -45419,13 +45419,13 @@
       ],
       "instructions": [
         "1. In a bowl, combine a couple cloves of minced garlic with extra virgin olive oil, hot pepper flakes, kosher sea salt, and some freshly cracked pepper.",
-        "2. Add broccoli and toss. ",
+        "2. Add broccoli and toss.\u00a0",
         "3. Line a baking sheet with heavy-duty aluminum foil and place the vegetables around the perimeter of the sheet pan, leaving room for the fish in the middle.",
-        "4. In a second small mixing bowl, combine mayonnaise with a little soy sauce, lemon juice, and salt. ",
-        "5. Place the fish in the middle of the sheet pan and coat it with the sauce, making sure to get the sides as well. ",
+        "4. In a second small mixing bowl, combine mayonnaise with a little soy sauce, lemon juice, and salt.\u00a0",
+        "5. Place the fish in the middle of the sheet pan and coat it with the sauce, making sure to get the sides as well.\u00a0",
         "6. In a third small mixing bowl, combine breadcrumbs, Parmesan, and lemon zest.",
-        "7. Generously apply breadcrumb mixture on top of the salmon steaks. ",
-        "8. Bake for 15 minutes @ 400°F. To check for doneness, insert a fork in the center of the salmon steak…it should flake easily. And the vegetables should have a nice “al dente” bite. ",
+        "7. Generously apply breadcrumb mixture on top of the salmon steaks.\u00a0",
+        "8. Bake for 15 minutes @ 400\u00b0F. To check for doneness, insert a fork in the center of the salmon steak\u2026it should flake easily. And the vegetables should have a nice \u201cal dente\u201d bite.\u00a0",
         "9. Serve with a glass of Chardonnay."
       ],
       "nutrition": {
@@ -46011,7 +46011,7 @@
           "name": "Tomatoes",
           "amount": 2,
           "unit": "",
-          "original": "2 tomatoes (for purée)"
+          "original": "2 tomatoes (for pur\u00e9e)"
         },
         {
           "name": "Onion",
@@ -46221,7 +46221,7 @@
           "name": "Breadcrumbs",
           "amount": 54,
           "unit": "ml",
-          "original": "½ cup homemade breadcrumbs"
+          "original": "\u00bd cup homemade breadcrumbs"
         },
         {
           "name": "Butter",
@@ -46251,7 +46251,7 @@
           "name": "Grana Padano Cheese",
           "amount": 25,
           "unit": "g",
-          "original": "¼ cup Parmesan or Grana Padano cheese, grated"
+          "original": "\u00bc cup Parmesan or Grana Padano cheese, grated"
         },
         {
           "name": "Mayonnaise",
@@ -46565,7 +46565,7 @@
           "name": "Warm Water",
           "amount": 118.294,
           "unit": "ml",
-          "original": "½ cup warm water"
+          "original": "\u00bd cup warm water"
         },
         {
           "name": "White Wine Vinegar",
@@ -47150,7 +47150,7 @@
           "name": "Inches Worth Of Ginger",
           "amount": 2,
           "unit": "small",
-          "original": "2 smalls inches worth of fresh ginger (cut into slices, leave ½ inch unchopped)"
+          "original": "2 smalls inches worth of fresh ginger (cut into slices, leave \u00bd inch unchopped)"
         },
         {
           "name": "Green Onions",
@@ -48417,7 +48417,7 @@
           "name": "Flat Leaf Parsley",
           "amount": 30,
           "unit": "g",
-          "original": "½ cup flat leaf Italian parsley, chopped (plus extra for garnish)"
+          "original": "\u00bd cup flat leaf Italian parsley, chopped (plus extra for garnish)"
         },
         {
           "name": "Garlic",
@@ -48741,43 +48741,43 @@
           "name": "Persian Cucumber",
           "amount": 0.5,
           "unit": "",
-          "original": "•1/2 Persian Cucumber sliced into thin strips."
+          "original": "\u20221/2 Persian Cucumber sliced into thin strips."
         },
         {
           "name": "Pickled Ginger",
           "amount": 6,
           "unit": "servings",
-          "original": "•pickled ginger for garnish"
+          "original": "\u2022pickled ginger for garnish"
         },
         {
           "name": "Reduced Fat Mayonnaise",
           "amount": 1,
           "unit": "tbsp",
-          "original": "•1-2 tablespoon reduced fat Mayonnaise"
+          "original": "\u20221-2 tablespoon reduced fat Mayonnaise"
         },
         {
           "name": "Reduced Sodium Soy Sauce",
           "amount": 6,
           "unit": "servings",
-          "original": "•reduced sodium soy sauce for dipping"
+          "original": "\u2022reduced sodium soy sauce for dipping"
         },
         {
           "name": "Scallion Into Pieces",
           "amount": 1,
           "unit": "small",
-          "original": "•1 scallion chopped into small pieces"
+          "original": "\u20221 scallion chopped into small pieces"
         },
         {
           "name": "Sriracha Chili Sauce",
           "amount": 1,
           "unit": "tsp",
-          "original": "•1-2 teaspoon Sriracha chili sauce (depending upon how spicy you like)"
+          "original": "\u20221-2 teaspoon Sriracha chili sauce (depending upon how spicy you like)"
         },
         {
           "name": "Sushi Nori",
           "amount": 3,
           "unit": "sheets",
-          "original": "•3 sheets sushi nori; (seaweed) cut in half (Find in Whole Foods, Fairway or any local specialty market)"
+          "original": "\u20223 sheets sushi nori; (seaweed) cut in half (Find in Whole Foods, Fairway or any local specialty market)"
         },
         {
           "name": "Sashimi Grade Tuna",
@@ -49046,7 +49046,7 @@
           "name": "Cherries",
           "amount": 414,
           "unit": "g",
-          "original": "¾ pound (about 3 cups) cherries, pitted and halved"
+          "original": "\u00be pound (about 3 cups) cherries, pitted and halved"
         },
         {
           "name": "Thyme",
@@ -49058,7 +49058,7 @@
           "name": "Honey",
           "amount": 1.5,
           "unit": "Tbsps",
-          "original": "1 ½ tablespoons honey"
+          "original": "1 \u00bd tablespoons honey"
         },
         {
           "name": "Lemon Juice",
@@ -49726,7 +49726,7 @@
           "name": "Lemon Juice",
           "amount": 1,
           "unit": "tbsp",
-          "original": "1 tablespoon – ½ freshly squeezed lemon juice"
+          "original": "1 tablespoon \u2013 \u00bd freshly squeezed lemon juice"
         },
         {
           "name": "Lemon Zest",
@@ -49756,7 +49756,7 @@
           "name": "Prawns",
           "amount": 250,
           "unit": "g",
-          "original": "1/2 pound (250g) prawns, chopped into bite size pieces (An additional 1 – 14.75 ounce tin of s"
+          "original": "1/2 pound (250g) prawns, chopped into bite size pieces (An additional 1 \u2013 14.75 ounce tin of s"
         },
         {
           "name": "Rubbed Sage",
@@ -49768,7 +49768,7 @@
           "name": "Salmon",
           "amount": 2090,
           "unit": "g",
-          "original": "1 ounce – 14.75 (418g) tin pink or red salmon, that has been picked through or 1 pound (500g) poached or 1 spring onion, thinly sliced across1 cup (75g) fresh bread crumbs1 teaspoon dried dill1 teaspoon rubbed sage1/4 teaspoon dried thyme1 teaspoon salt1/"
+          "original": "1 ounce \u2013 14.75 (418g) tin pink or red salmon, that has been picked through or 1 pound (500g) poached or 1 spring onion, thinly sliced across1 cup (75g) fresh bread crumbs1 teaspoon dried dill1 teaspoon rubbed sage1/4 teaspoon dried thyme1 teaspoon salt1/"
         },
         {
           "name": "Salt",
@@ -51001,8 +51001,8 @@
     },
     {
       "id": "spoonacular-659909",
-      "title": "Shrimp & Sausage Étouffée",
-      "description": "Shrimp & Sausage Étouffée might be a good recipe to expand your main course recipe box.  One serving contains 366 calories, 30g of protein, and 21g of fat.",
+      "title": "Shrimp & Sausage \u00c9touff\u00e9e",
+      "description": "Shrimp & Sausage \u00c9touff\u00e9e might be a good recipe to expand your main course recipe box.  One serving contains 366 calories, 30g of protein, and 21g of fat.",
       "category": "dinner",
       "prepTime": 10,
       "cookTime": 35,
@@ -51560,7 +51560,7 @@
           "name": "Pepper Flakes",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp red pepper flakes"
+          "original": "\u00bd tsp red pepper flakes"
         },
         {
           "name": "Ricotta Cheese",
@@ -52218,7 +52218,7 @@
           "name": "Dale's Seasoning",
           "amount": 118.294,
           "unit": "ml",
-          "original": "½ cup Dale's Seasoning"
+          "original": "\u00bd cup Dale's Seasoning"
         },
         {
           "name": "Stew Meat",
@@ -52236,7 +52236,7 @@
       "instructions": [
         "1. To get started, heat your slow cooker to low.",
         "2. Pour in the cream of mushroom soup, Dale's seasoning, water, and beef broth and stir until mixed well.",
-        "3. Add in your stew meat, potatoes, onions, carrots, celery, and green onions. Stir well until covered and cook on low for 8 hours. You can add salt and pepper as desired, but the flavors and the Dale's marry together so well that you probably won’t need them."
+        "3. Add in your stew meat, potatoes, onions, carrots, celery, and green onions. Stir well until covered and cook on low for 8 hours. You can add salt and pepper as desired, but the flavors and the Dale's marry together so well that you probably won\u2019t need them."
       ],
       "nutrition": {
         "calories": 434,
@@ -52689,7 +52689,7 @@
           "name": "Chicken Broth",
           "amount": 940,
           "unit": "ml",
-          "original": "4 cups Swanson® Chicken Broth (Regular, Natural Goodness® or Certified Organic)"
+          "original": "4 cups Swanson\u00ae Chicken Broth (Regular, Natural Goodness\u00ae or Certified Organic)"
         },
         {
           "name": "Chicken Breasts And/or Thighs",
@@ -52880,7 +52880,7 @@
           "name": "Pork Should Roast",
           "amount": 1.361,
           "unit": "kgs",
-          "original": "3lb Pork Should Roast – bone-in"
+          "original": "3lb Pork Should Roast \u2013 bone-in"
         },
         {
           "name": "Salt",
@@ -52892,7 +52892,7 @@
           "name": "Water *2",
           "amount": 946.352,
           "unit": "ml",
-          "original": "4 cups of water (also see “Notes” at bottom of recipe) *2"
+          "original": "4 cups of water (also see \u201cNotes\u201d at bottom of recipe) *2"
         }
       ],
       "instructions": [
@@ -53156,49 +53156,49 @@
           "name": "Sockeye Salmon Fillets",
           "amount": 907.185,
           "unit": "g",
-          "original": "•4 (about 8 oz. each) sockeye salmon fillets"
+          "original": "\u20224 (about 8 oz. each) sockeye salmon fillets"
         },
         {
           "name": "Kiwis",
           "amount": 2,
           "unit": "",
-          "original": "•2 kiwis, peeled"
+          "original": "\u20222 kiwis, peeled"
         },
         {
           "name": "Lemonade",
           "amount": 118,
           "unit": "ml",
-          "original": "•1/2 cup lemonade"
+          "original": "\u20221/2 cup lemonade"
         },
         {
           "name": "Lemon And Pepper Seasoning",
           "amount": 1,
           "unit": "tsp",
-          "original": "•1 tsp lemon and pepper seasoning (or fish seasoning)"
+          "original": "\u20221 tsp lemon and pepper seasoning (or fish seasoning)"
         },
         {
           "name": "Olive Oil",
           "amount": 2,
           "unit": "Tbsps",
-          "original": "•2 tbsp olive oil"
+          "original": "\u20222 tbsp olive oil"
         },
         {
           "name": "Lemon Wedges",
           "amount": 4,
           "unit": "",
-          "original": "•4 lemon wedges"
+          "original": "\u20224 lemon wedges"
         },
         {
           "name": "Lemon Zest",
           "amount": 4,
           "unit": "servings",
-          "original": "•lemon zest (garnish; optional)"
+          "original": "\u2022lemon zest (garnish; optional)"
         },
         {
           "name": "Scallion",
           "amount": 1,
           "unit": "",
-          "original": "•1 scallion, thin strips curled (garnish; optional)"
+          "original": "\u20221 scallion, thin strips curled (garnish; optional)"
         }
       ],
       "instructions": [
@@ -53582,13 +53582,13 @@
           "name": "Carrot",
           "amount": 64,
           "unit": "g",
-          "original": "½ cup carrot chopped"
+          "original": "\u00bd cup carrot chopped"
         },
         {
           "name": "Chili Pepper Powder",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp chili pepper powder"
+          "original": "\u00bd tsp chili pepper powder"
         },
         {
           "name": "Coriander",
@@ -53612,13 +53612,13 @@
           "name": "Garlic Powder",
           "amount": 0.5,
           "unit": "Tbsps",
-          "original": "½ tbsp garlic powder"
+          "original": "\u00bd tbsp garlic powder"
         },
         {
           "name": "Breadcrumbs",
           "amount": 67.5,
           "unit": "ml",
-          "original": "¾ cup gluten-free breadcrumbs"
+          "original": "\u00be cup gluten-free breadcrumbs"
         },
         {
           "name": "Extra-lean Ground Turkey",
@@ -53642,7 +53642,7 @@
           "name": "Parsley",
           "amount": 30,
           "unit": "g",
-          "original": "½ cup parsley chopped"
+          "original": "\u00bd cup parsley chopped"
         },
         {
           "name": "Salt And Pepper",
@@ -53773,7 +53773,7 @@
           "name": "Flank Steak",
           "amount": 680.389,
           "unit": "g",
-          "original": "1 1 ½ to 2 pounds flank steak trimmed"
+          "original": "1 1 \u00bd to 2 pounds flank steak trimmed"
         },
         {
           "name": "Olive Oil",
@@ -53791,19 +53791,19 @@
           "name": "Spinach",
           "amount": 226.796,
           "unit": "g",
-          "original": "½ pound spinach, washed, stemmed and chopped"
+          "original": "\u00bd pound spinach, washed, stemmed and chopped"
         },
         {
           "name": "Bread Crumbs",
           "amount": 81,
           "unit": "ml",
-          "original": "¾ cup fresh bread crumbs"
+          "original": "\u00be cup fresh bread crumbs"
         },
         {
           "name": "Gorgonzola",
           "amount": 113.398,
           "unit": "g",
-          "original": "¼ pound Gorgonzola or other blue cheese, crumbled"
+          "original": "\u00bc pound Gorgonzola or other blue cheese, crumbled"
         },
         {
           "name": "Salt And Pepper",
@@ -53921,13 +53921,13 @@
           "name": "Balsamic Vinegar",
           "amount": 63.75,
           "unit": "ml",
-          "original": "1/4 cup – balsamic vinegar"
+          "original": "1/4 cup \u2013 balsamic vinegar"
         },
         {
           "name": "Chicken",
           "amount": 56.699,
           "unit": "g",
-          "original": "2 oz of chicken – cooked"
+          "original": "2 oz of chicken \u2013 cooked"
         },
         {
           "name": "Dijon Mustard",
@@ -53957,7 +53957,7 @@
           "name": "Shallot",
           "amount": 0.5,
           "unit": "",
-          "original": "1/2 shallot – chopped"
+          "original": "1/2 shallot \u2013 chopped"
         },
         {
           "name": "Spinach Leaves",
@@ -54127,7 +54127,7 @@
           "name": "Ham",
           "amount": 169.5,
           "unit": "g",
-          "original": "1 1/2 cups cooked ham, diced into ½″ chunks (save the ham hock and bone)"
+          "original": "1 1/2 cups cooked ham, diced into \u00bd\u2033 chunks (save the ham hock and bone)"
         },
         {
           "name": "Monterey Jack Cheese",
@@ -54688,8 +54688,8 @@
       ],
       "instructions": [
         "1. In a bowl, season the chicken breast with the seasoning cubes and suya spice and allow to marinate for 2 hours or if you are really hungry, you can use immediately.In a pot of boiling water (1 cup), pour in your quinoa mix and the teaspoon of oil and allow to boil till soft which should take about 5-7 minutes.",
-        "2. Pour into a bowl and set aside.In a pan, heat up the melted butter and pan fry on medium heat the chicken breast, constantly flipping it over so it browns on both sides, reduce the heat, cover the pan and allow the chicken cook properly. If the pan becomes to dry, add 2 tablespoons of water.Stir in the chopped vegetables into the pan of frying chicken and finally add the quinoa/brown rice mix.",
-        "3. Serve hot!     "
+        "2. Pour into a bowl and set aside.In a pan, heat up the melted butter and pan fry on medium heat the chicken breast, constantly flipping it over so it browns\u00a0on both sides, reduce the heat, cover the pan and allow the chicken cook properly. If the pan becomes to dry, add 2 tablespoons of water.Stir in the chopped vegetables into the pan of frying chicken and finally add the quinoa/brown rice mix.",
+        "3. Serve hot!    \u00a0"
       ],
       "nutrition": {
         "calories": 750,
@@ -55882,7 +55882,7 @@
           "name": "Brown Sugar",
           "amount": 55,
           "unit": "g",
-          "original": "¼ cup brown sugar"
+          "original": "\u00bc cup brown sugar"
         },
         {
           "name": "Chicken Breast",
@@ -56256,19 +56256,19 @@
           "name": "Thyme",
           "amount": 0.25,
           "unit": "tsps",
-          "original": "¼ teaspoon dried thyme"
+          "original": "\u00bc teaspoon dried thyme"
         },
         {
           "name": "Basil",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ teaspoon dried basil"
+          "original": "\u00bd teaspoon dried basil"
         },
         {
           "name": "Pepper Falkes",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ teaspoon dried red pepper falkes"
+          "original": "\u00bd teaspoon dried red pepper falkes"
         },
         {
           "name": "Canned Tomatoes",
@@ -56316,7 +56316,7 @@
           "name": "Pinot Grigio",
           "amount": 118,
           "unit": "ml",
-          "original": "½ cup pinot grigio (or similar wine)"
+          "original": "\u00bd cup pinot grigio (or similar wine)"
         },
         {
           "name": "Pesto",
@@ -56481,7 +56481,7 @@
           "name": "Onion",
           "amount": 80,
           "unit": "g",
-          "original": "1/2 cup sweet onion – diced"
+          "original": "1/2 cup sweet onion \u2013 diced"
         },
         {
           "name": "Garlic",
@@ -57010,7 +57010,7 @@
           "name": "Green Onions",
           "amount": 4,
           "unit": "inches",
-          "original": "4 inches green onions- cut in about ½ long (green parts only)"
+          "original": "4 inches green onions- cut in about \u00bd long (green parts only)"
         },
         {
           "name": "Chili Pepper",
@@ -57238,7 +57238,7 @@
           "name": "Beer - Optional",
           "amount": 118,
           "unit": "ml",
-          "original": "1/2 cup gluten-free beer (such as Bard's Tale) – optional, but it adds a wonderful flavor"
+          "original": "1/2 cup gluten-free beer (such as Bard's Tale) \u2013 optional, but it adds a wonderful flavor"
         },
         {
           "name": "Tomato Puree",
@@ -57410,7 +57410,7 @@
           "name": "Salt",
           "amount": 0.25,
           "unit": "tsps",
-          "original": "¼ tsp salt"
+          "original": "\u00bc tsp salt"
         },
         {
           "name": "Parsley",
@@ -57689,7 +57689,7 @@
           "name": "Black Beans",
           "amount": 198.447,
           "unit": "g",
-          "original": "7 oz canned black beans ( about ½ a can)"
+          "original": "7 oz canned black beans ( about \u00bd a can)"
         },
         {
           "name": "Chili Powder",
@@ -57701,7 +57701,7 @@
           "name": "Chipotles In Adobo",
           "amount": 85.049,
           "unit": "g",
-          "original": "3 oz chipotles in adobo ( about ½ a can)"
+          "original": "3 oz chipotles in adobo ( about \u00bd a can)"
         },
         {
           "name": "Cilantro",
@@ -57719,7 +57719,7 @@
           "name": "Canned Tomatoes",
           "amount": 198.447,
           "unit": "g",
-          "original": "7 oz canned fire roasted tomatoes ( about ½ a can)"
+          "original": "7 oz canned fire roasted tomatoes ( about \u00bd a can)"
         },
         {
           "name": "Garlic",
@@ -57761,7 +57761,7 @@
           "name": "A Onion",
           "amount": 0.5,
           "unit": "",
-          "original": "½ a red onion, thinly sliced"
+          "original": "\u00bd a red onion, thinly sliced"
         },
         {
           "name": "Paprika",
@@ -57797,7 +57797,7 @@
           "name": "Onion",
           "amount": 0.5,
           "unit": "",
-          "original": "½ yellow onion"
+          "original": "\u00bd yellow onion"
         }
       ],
       "instructions": [
@@ -58073,7 +58073,7 @@
           "name": "Jalapeno Peppers",
           "amount": 2,
           "unit": "large",
-          "original": "2 – 2 large Jalapeno peppers"
+          "original": "2 \u2013 2 large Jalapeno peppers"
         },
         {
           "name": "Juice Of Lemon",
@@ -58818,8 +58818,8 @@
     },
     {
       "id": "spoonacular-715957",
-      "title": "Zesty Green Pea and Jalapeño Pesto Pasta",
-      "description": "Zesty Green Pean and Jalapeño Pesto Pasta requires approximately 45 minutes from start to finish.  One serving contains 318 calories, 9g of protein, and 12g of fat.",
+      "title": "Zesty Green Pea and Jalape\u00f1o Pesto Pasta",
+      "description": "Zesty Green Pean and Jalape\u00f1o Pesto Pasta requires approximately 45 minutes from start to finish.  One serving contains 318 calories, 9g of protein, and 12g of fat.",
       "category": "dinner",
       "prepTime": 10,
       "cookTime": 35,
@@ -58848,7 +58848,7 @@
           "name": "Jalapeno",
           "amount": 1,
           "unit": "",
-          "original": "1 jalapeño, seeded and chopped"
+          "original": "1 jalape\u00f1o, seeded and chopped"
         },
         {
           "name": "Juice Of Lemon",
@@ -59000,7 +59000,7 @@
           "name": "Onion",
           "amount": 0.75,
           "unit": "",
-          "original": "¾ red onion, chopped"
+          "original": "\u00be red onion, chopped"
         },
         {
           "name": "Olive Oil",
@@ -59018,7 +59018,7 @@
           "name": "Chicken Broth",
           "amount": 590,
           "unit": "ml",
-          "original": "2½ cup low sodium chicken broth"
+          "original": "2\u00bd cup low sodium chicken broth"
         },
         {
           "name": "Tsp Paprika",
@@ -60335,7 +60335,7 @@
           "name": "Smart Balance Butter",
           "amount": 0.5,
           "unit": "Tbsps",
-          "original": "½ Tbsp Smart Balance butter"
+          "original": "\u00bd Tbsp Smart Balance butter"
         },
         {
           "name": "Corn Tortillas",
@@ -60689,7 +60689,7 @@
           "name": "Onion",
           "amount": 80,
           "unit": "g",
-          "original": "½ cup onion"
+          "original": "\u00bd cup onion"
         },
         {
           "name": "Quinoa",
@@ -61003,7 +61003,7 @@
           "name": "Pepper",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp black pepper"
+          "original": "\u00bd tsp black pepper"
         },
         {
           "name": "Black Beans",
@@ -61021,7 +61021,7 @@
           "name": "Chili Powder",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp chili powder"
+          "original": "\u00bd tsp chili powder"
         },
         {
           "name": "Quinoa",
@@ -61033,7 +61033,7 @@
           "name": "Cumin",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp cumin"
+          "original": "\u00bd tsp cumin"
         },
         {
           "name": "Verde Enchilada Sauce",
@@ -61087,7 +61087,7 @@
           "name": "Pepper",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp white pepper"
+          "original": "\u00bd tsp white pepper"
         }
       ],
       "instructions": [
@@ -62172,7 +62172,7 @@
         }
       ],
       "instructions": [
-        "1. Combine the chicken, relish, celery, mayonnaise, eggs, and salt and pepper until mixed well. ",
+        "1. Combine the chicken, relish, celery, mayonnaise, eggs, and salt and pepper until mixed well.\u00a0",
         "2. Add lettuce leaves to sliced bread",
         "3. Top the bread with chicken salad and serve."
       ],
@@ -62573,7 +62573,7 @@
           "name": "Pepper",
           "amount": 0.25,
           "unit": "tsps",
-          "original": "¼ tsp black pepper"
+          "original": "\u00bc tsp black pepper"
         },
         {
           "name": "Brussels Sprouts",
@@ -62591,7 +62591,7 @@
           "name": "Honey",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp of honey"
+          "original": "\u00bd tsp of honey"
         },
         {
           "name": "Olive Oil",
@@ -62609,7 +62609,7 @@
           "name": "Walnuts",
           "amount": 29.25,
           "unit": "g",
-          "original": "¼ cup walnuts, toasted, coarsely chopped"
+          "original": "\u00bc cup walnuts, toasted, coarsely chopped"
         }
       ],
       "instructions": [
@@ -63053,7 +63053,7 @@
           "name": "Golden Beets",
           "amount": 272,
           "unit": "g",
-          "original": "2 medium golden beets, peeled and chopped in 3/4” cubes (about 2 c)"
+          "original": "2 medium golden beets, peeled and chopped in 3/4\u201d cubes (about 2 c)"
         },
         {
           "name": "Olive Oil",
@@ -63099,7 +63099,7 @@
         }
       ],
       "instructions": [
-        "1. Peel and cut beets into 4” cubes",
+        "1. Peel and cut beets into 4\u201d cubes",
         "2. Bring water to a boil and steam beets in a steamer basket for 15 minutes (or until fork tender)",
         "3. Whisk together extra-virgin olive oil, balsamic vinegar, orange juice, sugar, and salt",
         "4. Place lettuce on a plate.",
@@ -63206,25 +63206,25 @@
           "name": "Onion",
           "amount": 0.5,
           "unit": "",
-          "original": "½ red onion – chopped"
+          "original": "\u00bd red onion \u2013 chopped"
         },
         {
           "name": "Parsley",
           "amount": 1,
           "unit": "Handful",
-          "original": "Handful of fresh Italian parsley – chopped"
+          "original": "Handful of fresh Italian parsley \u2013 chopped"
         },
         {
           "name": "Dill",
           "amount": 1,
           "unit": "Handful",
-          "original": "Handful of fresh dill – chopped"
+          "original": "Handful of fresh dill \u2013 chopped"
         },
         {
           "name": "Capers - Plus Tsp. Of Caper Juice",
           "amount": 1,
           "unit": "tbsp",
-          "original": "1 tablespoon of capers – chopped plus tsp. of caper juice"
+          "original": "1 tablespoon of capers \u2013 chopped plus tsp. of caper juice"
         },
         {
           "name": "Mustard",
@@ -63254,19 +63254,19 @@
           "name": "Salt",
           "amount": 0.25,
           "unit": "tsps",
-          "original": "¼ tsp salt"
+          "original": "\u00bc tsp salt"
         },
         {
           "name": "Pepper",
           "amount": 0.25,
           "unit": "tsps",
-          "original": "¼ tsp black pepper"
+          "original": "\u00bc tsp black pepper"
         },
         {
           "name": "Chili Powder",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp. Chili powder"
+          "original": "\u00bd tsp. Chili powder"
         },
         {
           "name": "Lettuce",
@@ -63390,8 +63390,8 @@
     },
     {
       "id": "spoonacular-642893",
-      "title": "Fire-Roasted Jalapeño Hummus with Turnip and Beet Chips",
-      "description": "Fire-Roasted Jalapeño Hummus with Turnip and Beet Chips might be just the middl eastern recipe you are searching for.  One portion of this dish contains around 10g of protein, 38g of fat, and a total of 485 calories.",
+      "title": "Fire-Roasted Jalape\u00f1o Hummus with Turnip and Beet Chips",
+      "description": "Fire-Roasted Jalape\u00f1o Hummus with Turnip and Beet Chips might be just the middl eastern recipe you are searching for.  One portion of this dish contains around 10g of protein, 38g of fat, and a total of 485 calories.",
       "category": "lunch",
       "prepTime": 10,
       "cookTime": 35,
@@ -63423,10 +63423,10 @@
           "original": "1 large golden beet"
         },
         {
-          "name": "Jalapeño",
+          "name": "Jalape\u00f1o",
           "amount": 1,
           "unit": "",
-          "original": "1 jalapeño, roasted"
+          "original": "1 jalape\u00f1o, roasted"
         },
         {
           "name": "Lemon Juice",
@@ -63438,7 +63438,7 @@
           "name": "Olive Oil",
           "amount": 54,
           "unit": "ml",
-          "original": "¼ cup olive oil"
+          "original": "\u00bc cup olive oil"
         },
         {
           "name": "Salt",
@@ -63450,7 +63450,7 @@
           "name": "Tahini",
           "amount": 60,
           "unit": "ml",
-          "original": "¼ cup tahini (sesame paste)"
+          "original": "\u00bc cup tahini (sesame paste)"
         },
         {
           "name": "Turmeric",
@@ -64860,7 +64860,7 @@
           "name": "Cashews",
           "amount": 64.5,
           "unit": "g",
-          "original": "½ cup cashews, roughly chopped"
+          "original": "\u00bd cup cashews, roughly chopped"
         },
         {
           "name": "Chicken Breasts",
@@ -64890,7 +64890,7 @@
           "name": "Greek Yogurt",
           "amount": 100,
           "unit": "ml",
-          "original": "½ cup plain Greek yogurt"
+          "original": "\u00bd cup plain Greek yogurt"
         },
         {
           "name": "Salt",
@@ -65017,7 +65017,7 @@
           "name": "Feta Cheese",
           "amount": 56.699,
           "unit": "g",
-          "original": "2 – 3 oz. of crumbled feta cheese per pound of fish"
+          "original": "2 \u2013 3 oz. of crumbled feta cheese per pound of fish"
         },
         {
           "name": "Fish Fillets",
@@ -65065,14 +65065,14 @@
           "name": "White Wine",
           "amount": 60,
           "unit": "ml",
-          "original": "¼ cup white wine"
+          "original": "\u00bc cup white wine"
         }
       ],
       "instructions": [
         "1. Preheat the oven to 450 degrees F. Choose an oven-proof baking dish that your fish will fit in without overlapping and spray it with cooking spray.",
         "2. Lay the fish fillets in the baking pan in a single layer, season with salt and pepper, then top the fish with red onion and bell pepper.",
         "3. Sprinkle with dried basil and oregano, the tomato, and the feta cheese, then drizzle the white wine and olive oil over top. Grind some fresh pepper over the top.",
-        "4. Bake uncovered for about 12 – 15 minutes or until the fish flakes easily with a fork. Squeeze the lemon wedges over the cooked fish, garnish with the fresh basil and/or oregano and serve with hot cooked rice."
+        "4. Bake uncovered for about 12 \u2013 15 minutes or until the fish flakes easily with a fork. Squeeze the lemon wedges over the cooked fish, garnish with the fresh basil and/or oregano and serve with hot cooked rice."
       ],
       "nutrition": {
         "calories": 344,
@@ -65359,12 +65359,12 @@
         }
       ],
       "instructions": [
-        "1. Mix chicken, celery, and apples. ",
-        "2. In a separate bowl mix mayo, yogurt, and lemon juice.",
+        "1. Mix chicken, celery, and apples.\u00a0",
+        "2. In a separate\u00a0bowl mix mayo, yogurt, and lemon juice.",
         "3. Mix well.",
         "4. Combine chicken mixture with mayo mixture and stir well.",
         "5. Add salt and pepper to taste.",
-        "6. OPTIONAL: Slice an avocado, remove the pit, and serve the chicken salad with avocado. It's so good! "
+        "6. OPTIONAL: Slice an avocado, remove the pit, and serve the chicken salad with avocado. It's so good!\u00a0"
       ],
       "nutrition": {
         "calories": 593,
@@ -65916,10 +65916,10 @@
           "original": "1/3 of a savoy cabbage, shredded"
         },
         {
-          "name": "Tomato Purée",
+          "name": "Tomato Pur\u00e9e",
           "amount": 2,
           "unit": "Tbsps",
-          "original": "2 tbsp tomato purée"
+          "original": "2 tbsp tomato pur\u00e9e"
         },
         {
           "name": "Tomatoes Into 8ths",
@@ -66073,7 +66073,7 @@
           "name": "Lentils",
           "amount": 99,
           "unit": "g",
-          "original": "½ cup cooked lentils"
+          "original": "\u00bd cup cooked lentils"
         },
         {
           "name": "Couscous",
@@ -66091,7 +66091,7 @@
           "name": "Ground Cinnamon",
           "amount": 0.125,
           "unit": "tsps",
-          "original": "⅛ tsp ground cinnamon"
+          "original": "\u215b tsp ground cinnamon"
         },
         {
           "name": "Ground Cumin",
@@ -66103,7 +66103,7 @@
           "name": "Ground Turmeric",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp ground turmeric"
+          "original": "\u00bd tsp ground turmeric"
         },
         {
           "name": "Lemon Juice",
@@ -66139,7 +66139,7 @@
           "name": "Water",
           "amount": 354.882,
           "unit": "ml",
-          "original": "1 ½ cups water"
+          "original": "1 \u00bd cups water"
         }
       ],
       "instructions": [
@@ -66459,7 +66459,7 @@
           "name": "Cilantro",
           "amount": 8,
           "unit": "g",
-          "original": "½ cup cilantro, chopped plus more to garnish"
+          "original": "\u00bd cup cilantro, chopped plus more to garnish"
         },
         {
           "name": "Monterey Jack Cheese",
@@ -66471,7 +66471,7 @@
           "name": "Feta Cheese",
           "amount": 37.5,
           "unit": "g",
-          "original": "¼ cup crumbled feta cheese"
+          "original": "\u00bc cup crumbled feta cheese"
         },
         {
           "name": "Corn Tortillas",
@@ -66495,7 +66495,7 @@
           "name": "Lime Zest",
           "amount": 121,
           "unit": "ml",
-          "original": "Lime crema: ½ cup sour cream, zest of ½ lime, tablespoon lime juice"
+          "original": "Lime crema: \u00bd cup sour cream, zest of \u00bd lime, tablespoon lime juice"
         }
       ],
       "instructions": [
@@ -67142,7 +67142,7 @@
           "name": "Blood Oranges",
           "amount": 3,
           "unit": "inches",
-          "original": "3 inches small blood oranges, cut ⅛s"
+          "original": "3 inches small blood oranges, cut \u215bs"
         },
         {
           "name": "Pomegranate Seeds",
@@ -67350,10 +67350,10 @@
           "original": "1 small shallot, chopped"
         },
         {
-          "name": "Jalapeño",
+          "name": "Jalape\u00f1o",
           "amount": 0.5,
           "unit": "",
-          "original": "1/2 jalapeño, deseeded &amp; chopped"
+          "original": "1/2 jalape\u00f1o, deseeded &amp; chopped"
         },
         {
           "name": "Capers",
@@ -67370,7 +67370,7 @@
       ],
       "instructions": [
         "1. Drain the water or oil from the tuna can, and add the tuna to a bowl.  If you like the chunky kind, break it apart with a fork.",
-        "2. Add the chopped shallot, jalapeño, and capers.",
+        "2. Add the chopped shallot, jalape\u00f1o, and capers.",
         "3. Mix in the mayonnaise and olive oil, and season with salt &amp; pepper (add hot sauce or green salsa if you like).  Give it a good stir.&nbsp;",
         "4. If you happen to have a fresh lemon handy, squirt some lemon juice on the mixture to brighten it up a bit!",
         "5. Toast your favorite bread to your favorite level of brownness and put everything together to make your Ridiculously Easy Gourmet Tuna Sandwich."
@@ -68052,7 +68052,7 @@
         "1. Using a fork, flake the drained tuna into a bowl.",
         "2. Add celery, hard boiled egg, and red onion. Stir all together.",
         "3. Add relish, mayonnaise, Dijon mustard, and freshly cracked black pepper, and mix until all ingredients are well combined.",
-        "4. Serve immediately as a sandwich, with lettuce and tomato…or on a bed of lettuce, with tomato, onion, and slices of hard boiled egg. Enjoy!"
+        "4. Serve immediately as a sandwich, with lettuce and tomato\u2026or on a bed of lettuce, with tomato, onion, and slices of hard boiled egg. Enjoy!"
       ],
       "nutrition": {
         "calories": 324,
@@ -68333,7 +68333,7 @@
           "name": "Cilantro",
           "amount": 12,
           "unit": "g",
-          "original": "¾ cup cilantro, chopped"
+          "original": "\u00be cup cilantro, chopped"
         },
         {
           "name": "Cumin",
@@ -68610,7 +68610,7 @@
       "id": "spoonacular-631843",
       "title": "17 Bean White Chicken Chili",
       "description": "17 Bean White Chicken Chili is an American main course.  This recipe serves 8.",
-      "category": "snack",
+      "category": "dinner",
       "prepTime": 10,
       "cookTime": 35,
       "totalTime": 45,
@@ -68852,7 +68852,7 @@
       "id": "spoonacular-716406",
       "title": "Asparagus and Pea Soup: Real Convenience Food",
       "description": "Asparagus and Pea Soup: Real Convenience Food requires approximately 20 minutes from start to finish.  Watching your figure.",
-      "category": "snack",
+      "category": "lunch",
       "prepTime": 10,
       "cookTime": 10,
       "totalTime": 20,
@@ -68971,7 +68971,7 @@
       "id": "spoonacular-651840",
       "title": "Bacon And Bleu Table-For-Two Salad",
       "description": "Bacon And Bleu Table-For-Two Salad could be just the gluten free and primal recipe you've been looking for.  One portion of this dish contains around 10g of protein, 32g of fat, and a total of 386 calories.",
-      "category": "snack",
+      "category": "lunch",
       "prepTime": 10,
       "cookTime": 35,
       "totalTime": 45,
@@ -69101,7 +69101,7 @@
       "id": "spoonacular-633330",
       "title": "Bacon Wrapped Breadsticks",
       "description": "Bacon Wrapped Breadsticks might be just the hor d'oeuvre you are searching for.  This recipe makes 4 servings with 264 calories, 14g of protein, and 20g of fat each.",
-      "category": "snack",
+      "category": "lunch",
       "prepTime": 10,
       "cookTime": 35,
       "totalTime": 45,
@@ -69734,7 +69734,7 @@
       "instructions": [
         "1. Trim fat off chicken thighs and cut&nbsp; into small pieces...no need to shred.&nbsp; Season with salt &amp; pepper.",
         "2. In a pan, melt butter over medium heat.&nbsp;",
-        "3. Add the chicken when the butter starts to sizzle but doesn’t turn brown yet.",
+        "3. Add the chicken when the butter starts to sizzle but doesn\u2019t turn brown yet.",
         "4. Add your favorite hot sauce and cook until the chicken is cooked through.&nbsp;",
         "5. Reduce heat and add cream cheese, cheddar cheese, and ranch dressing.",
         "6. Let the low heat work its magic until everything is melted into the perfect, spicy, tangy deliciousness.",
@@ -69839,7 +69839,7 @@
           "name": "Green Onions",
           "amount": 50,
           "unit": "g",
-          "original": "½ cup chopped green onions"
+          "original": "\u00bd cup chopped green onions"
         },
         {
           "name": "Louisiana Hot Sauce",
@@ -69962,13 +69962,13 @@
           "name": "Chickpeas",
           "amount": 246,
           "unit": "g",
-          "original": "1 ½ cup Canned Chickpeas"
+          "original": "1 \u00bd cup Canned Chickpeas"
         },
         {
           "name": "Celery Salt",
           "amount": 0.25,
           "unit": "tsps",
-          "original": "¼ teaspoons Celery Salt"
+          "original": "\u00bc teaspoons Celery Salt"
         },
         {
           "name": "Garlic",
@@ -69992,13 +69992,13 @@
           "name": "Paprika",
           "amount": 0.75,
           "unit": "tsps",
-          "original": "¾ teaspoons Paprika"
+          "original": "\u00be teaspoons Paprika"
         },
         {
           "name": "Distilled Vinegar",
           "amount": 0.5,
           "unit": "Tbsps",
-          "original": "½ Tablespoons Distilled White Vinegar"
+          "original": "\u00bd Tablespoons Distilled White Vinegar"
         }
       ],
       "instructions": [
@@ -70226,13 +70226,13 @@
           "name": "Flour",
           "amount": 93.75,
           "unit": "g",
-          "original": "¾ cups All-purpose Flour"
+          "original": "\u00be cups All-purpose Flour"
         },
         {
           "name": "Flour",
           "amount": 90,
           "unit": "g",
-          "original": "¾ cups White Whole Wheat Flour"
+          "original": "\u00be cups White Whole Wheat Flour"
         },
         {
           "name": "Baking Powder",
@@ -70244,7 +70244,7 @@
           "name": "Salt",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ teaspoons Salt"
+          "original": "\u00bd teaspoons Salt"
         },
         {
           "name": "Basil",
@@ -70280,13 +70280,13 @@
           "name": "Sundried Tomatoes",
           "amount": 27.5,
           "unit": "g",
-          "original": "¼ cups Sundried Tomatoes, Diced, Not Oil Packed"
+          "original": "\u00bc cups Sundried Tomatoes, Diced, Not Oil Packed"
         },
         {
           "name": "Butter",
           "amount": 0.75,
           "unit": "Tbsps",
-          "original": "¾ Tablespoons Butter, Melted"
+          "original": "\u00be Tablespoons Butter, Melted"
         }
       ],
       "instructions": [
@@ -70398,7 +70398,7 @@
       "id": "spoonacular-716426",
       "title": "Cauliflower, Brown Rice, and Vegetable Fried Rice",
       "description": "The recipe Cauliflower, Brown Rice, and Vegetable Fried Rice is ready in around 30 minutes and is definitely a great gluten free, dairy free, lacto ovo vegetarian, and vegan option for lovers of Chinese food.  This recipe makes 8 servings with 248 calories, 7g of protein, and 13g of fat each.",
-      "category": "snack",
+      "category": "dinner",
       "prepTime": 15,
       "cookTime": 15,
       "totalTime": 30,
@@ -70486,10 +70486,10 @@
       "instructions": [
         "1. Remove the cauliflower's tough stem and reserve for another use. Using a food processor, pulse cauliflower florets until they resemble rice or couscous. You should end up with around four cups of \"cauliflower rice.\"",
         "2. Heat 1T butter and 1T oil in a large skillet over medium heat.",
-        "3. Add garlic and the white and light green pieces of scallion. Sauté about a minute.",
+        "3. Add garlic and the white and light green pieces of scallion. Saut\u00e9 about a minute.",
         "4. Add the cauliflower to the pan. Stir to coat with oil, then spread out in pan and let sit; you want it cook a bit and to caramelize (get a bit brown), which will bring out the sweetness. After a couple of minutes, stir and spread out again.",
         "5. Add cold rice (it separates easily, so it won't clump up during cooking), plus the additional grapeseed and coconut oil or butter. Raise heat to medium-high. Toss everything together and, again, spread the mixture out over the whole pan and press a bit into the bottom.",
-        "6. Let it sit for about two minutes—so the rice can get toasted and a little crispy.",
+        "6. Let it sit for about two minutes\u2014so the rice can get toasted and a little crispy.",
         "7. Add the peas and broccoli and stir again.",
         "8. Drizzle soy sauce and toasted sesame oil over rice.Cook for another minute or so and turn off heat.",
         "9. Add chopped scallion tops and toss.I like to toast some sesame seeds in a dry pan; I sprinkle these and some more raw, chopped scallion over the top of the rice for added flavor and crunch.Season to taste with salt and, if you'd like, more soy sauce. Keep in mind that if you're serving this with something salty and saucy (ie. teriyaki chicken) you may want to hold off on adding too much salt to the fried rice."
@@ -70731,7 +70731,7 @@
           "name": "Salt",
           "amount": 0.5,
           "unit": "Tbsps",
-          "original": "½ tbsp. salt"
+          "original": "\u00bd tbsp. salt"
         },
         {
           "name": "Turmeric Powder",
@@ -70990,7 +70990,7 @@
       "id": "spoonacular-639825",
       "title": "Coconut Thai Risotto With Seared Scallops",
       "description": "If you want to add more gluten free and dairy free recipes to your collection, Coconut Thai Risotto With Seared Scallops might be a recipe you should try.  This recipe serves 6 and costs $2.",
-      "category": "snack",
+      "category": "dinner",
       "prepTime": 10,
       "cookTime": 35,
       "totalTime": 45,
@@ -71305,7 +71305,7 @@
           "name": "Gouda Cheese",
           "amount": 59.147,
           "unit": "g",
-          "original": "¼ cup grated smoked cheddar or Gouda cheese"
+          "original": "\u00bc cup grated smoked cheddar or Gouda cheese"
         },
         {
           "name": "Half-and-half",
@@ -71590,7 +71590,7 @@
       "id": "spoonacular-641128",
       "title": "Curry Mussels",
       "description": "Curry Mussels is a gluten free, primal, and pescatarian hor d'oeuvre.  One portion of this dish contains around 64g of protein, 33g of fat, and a total of 743 calories.",
-      "category": "snack",
+      "category": "dinner",
       "prepTime": 10,
       "cookTime": 35,
       "totalTime": 45,
@@ -71615,10 +71615,10 @@
           "original": "Dry white wine, 150ml"
         },
         {
-          "name": "Crème Fraiche",
+          "name": "Cr\u00e8me Fraiche",
           "amount": 150,
           "unit": "ml",
-          "original": "Crème fraiche, 150ml"
+          "original": "Cr\u00e8me fraiche, 150ml"
         },
         {
           "name": "Curry Powder",
@@ -71739,7 +71739,7 @@
       "id": "spoonacular-641653",
       "title": "Dried Prawns Yee Mee Soup",
       "description": "Dried Prawns Yee Mee Soup might be a good recipe to expand your hor d'oeuvre recipe box.  This dairy free and pescatarian recipe serves 2 and costs $1.",
-      "category": "snack",
+      "category": "lunch",
       "prepTime": 10,
       "cookTime": 35,
       "totalTime": 45,
@@ -72067,7 +72067,7 @@
           "name": "Chili Flakes",
           "amount": 0.25,
           "unit": "tsps",
-          "original": "¼ teaspoon chili flakes (if you like it spicy)"
+          "original": "\u00bc teaspoon chili flakes (if you like it spicy)"
         },
         {
           "name": "Edamame",
@@ -72091,19 +72091,19 @@
           "name": "Ground Coriander",
           "amount": 0.25,
           "unit": "tsps",
-          "original": "¼ teaspoon ground coriander"
+          "original": "\u00bc teaspoon ground coriander"
         },
         {
           "name": "Ground Cumin",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ teaspoon ground cumin"
+          "original": "\u00bd teaspoon ground cumin"
         },
         {
           "name": "Kosher Salt",
           "amount": 0.75,
           "unit": "tsps",
-          "original": "¾ teaspoon Kosher salt"
+          "original": "\u00be teaspoon Kosher salt"
         },
         {
           "name": "Lemon",
@@ -72115,7 +72115,7 @@
           "name": "Lemon Zest",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ teaspoon freshly grated lemon zest"
+          "original": "\u00bd teaspoon freshly grated lemon zest"
         },
         {
           "name": "Olive Oil",
@@ -72127,7 +72127,7 @@
           "name": "Tahini",
           "amount": 60,
           "unit": "ml",
-          "original": "¼ cup Tahini (sesame-seed paste)"
+          "original": "\u00bc cup Tahini (sesame-seed paste)"
         },
         {
           "name": "Water",
@@ -72730,43 +72730,43 @@
           "name": "Basil",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp. basil"
+          "original": "\u00bd tsp. basil"
         },
         {
           "name": "Deli Ham",
           "amount": 226.796,
           "unit": "g",
-          "original": "½ lb deli sliced ham"
+          "original": "\u00bd lb deli sliced ham"
         },
         {
           "name": "Deli Provolone",
           "amount": 226.796,
           "unit": "g",
-          "original": "½ lb deli sliced provolone"
+          "original": "\u00bd lb deli sliced provolone"
         },
         {
           "name": "Deli Turkey",
           "amount": 226.796,
           "unit": "g",
-          "original": "½ lb deli sliced turkey"
+          "original": "\u00bd lb deli sliced turkey"
         },
         {
           "name": "A Head Of Lettuce",
           "amount": 0.5,
           "unit": "",
-          "original": "½ a head of lettuce, diced"
+          "original": "\u00bd a head of lettuce, diced"
         },
         {
           "name": "Mayonnaise",
           "amount": 168,
           "unit": "ml",
-          "original": "¾ cup mayonnaise"
+          "original": "\u00be cup mayonnaise"
         },
         {
           "name": "Olive Oil",
           "amount": 54,
           "unit": "ml",
-          "original": "¼ cup olive oil"
+          "original": "\u00bc cup olive oil"
         },
         {
           "name": "Onion",
@@ -72778,7 +72778,7 @@
           "name": "Oregano",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp. oregano"
+          "original": "\u00bd tsp. oregano"
         },
         {
           "name": "Peppers",
@@ -72790,13 +72790,13 @@
           "name": "Pepper Flakes",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp. red pepper flakes"
+          "original": "\u00bd tsp. red pepper flakes"
         },
         {
           "name": "Deli Genoa Salami",
           "amount": 226.796,
           "unit": "g",
-          "original": "½ lb deli sliced genoa salami"
+          "original": "\u00bd lb deli sliced genoa salami"
         },
         {
           "name": "I Of Hoagie Buns",
@@ -72973,36 +72973,36 @@
       ],
       "instructions": [
         "1. Pasta",
-        "2. Start by sifting the flour onto the surface. ",
-        "3. Create a well on top of the flour and crack an egg into it. ",
-        "4. Also, lightly whisk two egg yolks in a small bowl and have them ready. ",
-        "5. Add the salt into the well and start mixing carefully with a fork, trying to keep the egg from running out of the well. ",
-        "6. Once the first egg is mostly incorporated into the flour, add the olive oil and the two egg yolks. ",
-        "7. At this point, I like to use a food scraper to help work the flour toward the center to mix the dough until the egg yolks are mostly absorbed. ",
+        "2. Start by sifting the flour onto the surface.\u00a0",
+        "3. Create a well on top of the flour and crack an egg into it.\u00a0",
+        "4. Also, lightly whisk two egg yolks in a small bowl and have them ready.\u00a0",
+        "5. Add the salt into the well and start mixing carefully with a fork, trying to keep the egg from running out of the well.\u00a0",
+        "6. Once the first egg is mostly incorporated into the flour, add the olive oil and the two egg yolks.\u00a0",
+        "7. At this point, I like to use a food scraper to help work the flour toward the center to mix the dough until the egg yolks are mostly absorbed.\u00a0",
         "8. Next, sprinkle some flour into your hands and knead for about 3 minutes.",
         "9. Wrap in cling wrap and let rest at room temperature for about 30 minutes.",
-        "10. Next, cut the dough into quarters. ",
-        "11. Flatten each piece of dough slightly by pressing down with the palm of your hand and form it into a rectangular shape that will fit the width of the machine. ",
-        "12. Set the rollers to the widest setting and roll the dough through. Keep rolling the dough through the pasta maker, passing it through each setting twice. Keep decreasing the setting until reaching your desired thickness. In the case of ravioli, you want to make sure to get to the smallest, thinnest setting, as the dough will be doubled when you fold it over. ",
+        "10. Next, cut the dough into quarters.\u00a0",
+        "11. Flatten each piece of dough slightly by pressing down with the palm of your hand and form it into a rectangular shape that will fit the width of the machine.\u00a0",
+        "12. Set the rollers to the widest setting and roll the dough through.\u00a0Keep rolling the dough through the pasta maker, passing it through each setting twice. Keep decreasing the setting until reaching your desired thickness. In the case of ravioli, you want to make sure to get to the smallest, thinnest setting, as the dough will be doubled when you fold it over.\u00a0",
         "13. Spinach Ricotta (and Parmesan cheese) Filling",
-        "14. Use a pan that’s large enough to fit the fresh spinach.",
+        "14. Use a pan that\u2019s large enough to fit the fresh spinach.",
         "15. Heat olive oil over medium heat and add the spinach.",
-        "16. Within a couple minutes – while stirring occasionally – your fresh spinach will shrink from a couple handfuls to less than a cup. ",
+        "16. Within a couple minutes \u2013 while stirring occasionally \u2013 your fresh spinach will shrink from a couple handfuls to less than a cup.\u00a0",
         "17. When the spinach is cooked down, place in a colander and squeeze out as much water as you can. In addition to that, I place the spinach onto some paper towels to remove some more moisture.",
-        "18. Finely chop the spinach. ",
+        "18. Finely chop the spinach.\u00a0",
         "19. Place the spinach in a bowl, together with the ricotta, Parmesan, salt, and pepper, and mix it all together.",
-        "20. Taste and add more salt and/or pepper if necessary. The way your filling tastes right now is pretty much how your ravioli (without sauce) will taste. ",
+        "20. Taste and add more salt and/or pepper if necessary. The way your filling tastes right now is pretty much how your ravioli (without sauce) will taste.\u00a0",
         "21. How to Make Homemade Ravioli",
-        "22. Place about 2 teaspoon of filling on the bottom half of the dough sheet. Leave about 1-½” of space between each scoop of filling. ",
-        "23. Lightly spritz the long edge of the dough with water. This will help the dough to stick to itself when you fold it. ",
-        "24. Fold the dough in half. ",
-        "25. Gently press down around each scoop of filling, trying to remove as much air as possible. This will help the ravioli cook more evenly. ",
+        "22. Place about 2 teaspoon of filling on the bottom half of the dough sheet. Leave about 1-\u00bd\u201d of space between each scoop of filling.\u00a0",
+        "23. Lightly spritz the long edge of the dough with water. This will help the dough to stick to itself when you fold it.\u00a0",
+        "24. Fold the dough in half.\u00a0",
+        "25. Gently press down around each scoop of filling, trying to remove as much air as possible. This will help the ravioli cook more evenly.\u00a0",
         "26. Next, use a knife or one of those cool ravioli wheels to cut the raviolis.",
         "27. Sage Butter Sauce",
-        "28. Melt the butter in a medium saucepan over low-medium heat. The butter will begin to bubble after a minute or so. ",
-        "29. Add salt, pepper, and sage and continue stirring and cooking for another 1 to 2 minutes until the butter turns a light brown. Taste it (careful, it will be very hot). It should have a rich, nutty flavor. ",
+        "28. Melt the butter in a medium saucepan over low-medium heat. The butter will begin to bubble after a minute or so.\u00a0",
+        "29. Add salt, pepper, and sage and continue stirring and cooking for another 1 to 2 minutes until the butter turns a light brown. Taste it (careful, it will be very hot). It should have a rich, nutty flavor.\u00a0",
         "30. Putting it all together",
-        "31. Cook ravioli in regular salted pasta water, brought to a boil, making sure not to crowd them too much or they’ll cook unevenly. As they only take a few minutes to cook, make them in batches if needed. ",
+        "31. Cook ravioli in regular salted pasta water, brought to a boil, making sure not to crowd them too much or they\u2019ll cook unevenly. As they only take a few minutes to cook, make them in batches if needed.\u00a0",
         "32. Because these homemade ravioli are pretty delicate when cooked, I recommend using a handy food spider to remove them from the pasta pot instead of draining them in a colander.",
         "33. Drizzle sage butter sauce over the ravioli.",
         "34. Serve and enjoy!"
@@ -73383,10 +73383,10 @@
           "original": "Black beans from the instant pot"
         },
         {
-          "name": "Jalapeño",
+          "name": "Jalape\u00f1o",
           "amount": 1,
           "unit": "",
-          "original": "1 chopped jalapeño"
+          "original": "1 chopped jalape\u00f1o"
         },
         {
           "name": "Tomato",
@@ -74044,7 +74044,7 @@
         }
       ],
       "instructions": [
-        "1. Put everything in a bowl and mix.   Done. "
+        "1. Put everything in a bowl and mix.\u00a0 \u00a0Done.\u00a0"
       ],
       "nutrition": {
         "calories": 1055,
@@ -74129,7 +74129,7 @@
           "name": "Quinoa",
           "amount": 85,
           "unit": "g",
-          "original": "½ cup quinoa"
+          "original": "\u00bd cup quinoa"
         },
         {
           "name": "Olive Oil",
@@ -74147,7 +74147,7 @@
           "name": "Onion",
           "amount": 40,
           "unit": "g",
-          "original": "¼ cup white onion, diced"
+          "original": "\u00bc cup white onion, diced"
         },
         {
           "name": "Reduced Sodium Chicken Broth",
@@ -74159,19 +74159,19 @@
           "name": "Ground Cumin",
           "amount": 0.5,
           "unit": "tsps",
-          "original": "½ tsp ground cumin"
+          "original": "\u00bd tsp ground cumin"
         },
         {
           "name": "Kosher Salt",
           "amount": 0.25,
           "unit": "tsps",
-          "original": "¼ tsp kosher salt"
+          "original": "\u00bc tsp kosher salt"
         },
         {
           "name": "Ground Pepper",
           "amount": 0.25,
           "unit": "tsps",
-          "original": "¼ tsp ground black pepper"
+          "original": "\u00bc tsp ground black pepper"
         },
         {
           "name": "Tomato Sauce",
@@ -74195,30 +74195,30 @@
           "name": "Tomatoes",
           "amount": 74.5,
           "unit": "g",
-          "original": "½ cup tomatoes, diced"
+          "original": "\u00bd cup tomatoes, diced"
         },
         {
-          "name": "Jalapeño",
+          "name": "Jalape\u00f1o",
           "amount": 1,
           "unit": "small",
-          "original": "1 small jalapeño, finely diced"
+          "original": "1 small jalape\u00f1o, finely diced"
         },
         {
           "name": "Cilantro",
           "amount": 8,
           "unit": "g",
-          "original": "½ cup fresh cilantro, chopped"
+          "original": "\u00bd cup fresh cilantro, chopped"
         },
         {
           "name": "Juice Of Lime",
           "amount": 0.5,
           "unit": "",
-          "original": "½ small lime, juiced"
+          "original": "\u00bd small lime, juiced"
         }
       ],
       "instructions": [
         "1. In a large sauce pan heat 1 teaspoon of olive oil over medium heat.",
-        "2. Sauté quinoa, onion, and garlic until garlic is fragrant.",
+        "2. Saut\u00e9 quinoa, onion, and garlic until garlic is fragrant.",
         "3. Slowly add broth and stir.",
         "4. Add cumin, salt, and pepper. Stir in 2 tablespoons of tomato sauce.",
         "5. Bring to a low boil, cover and reduce heat to low.",
@@ -74296,7 +74296,7 @@
       "id": "spoonacular-651958",
       "title": "Mini frittatas with quinoa",
       "description": "Need a gluten free hor d'oeuvre.  Mini frittatas with quinoa could be a great recipe to try.",
-      "category": "snack",
+      "category": "breakfast",
       "prepTime": 10,
       "cookTime": 35,
       "totalTime": 45,
@@ -74306,7 +74306,7 @@
           "name": "Quinoa",
           "amount": 138.75,
           "unit": "g",
-          "original": "2 cups cooked quinoa (about ¾ cup uncooked)*"
+          "original": "2 cups cooked quinoa (about \u00be cup uncooked)*"
         },
         {
           "name": "Eggs",
@@ -74336,13 +74336,13 @@
           "name": "Ham",
           "amount": 57,
           "unit": "g",
-          "original": "½ cup ham, diced"
+          "original": "\u00bd cup ham, diced"
         },
         {
           "name": "Parsley",
           "amount": 15,
           "unit": "g",
-          "original": "¼ cup parsley, chopped"
+          "original": "\u00bc cup parsley, chopped"
         },
         {
           "name": "Parmesan Cheese",
@@ -74354,7 +74354,7 @@
           "name": "Ground Pepper",
           "amount": 0.25,
           "unit": "tsps",
-          "original": "¼ tsp white ground pepper"
+          "original": "\u00bc tsp white ground pepper"
         }
       ],
       "instructions": [
@@ -74468,7 +74468,7 @@
       "id": "spoonacular-652078",
       "title": "Miso Soup With Thin Noodles",
       "description": "Miso Soup With Thin Noodles could be just the dairy free, lacto ovo vegetarian, and vegan recipe you've been looking for.  One portion of this dish contains around 5g of protein, 2g of fat, and a total of 114 calories.",
-      "category": "snack",
+      "category": "lunch",
       "prepTime": 10,
       "cookTime": 35,
       "totalTime": 45,
@@ -74781,7 +74781,7 @@
       "id": "spoonacular-652610",
       "title": "Mushroom & Sundried Tomato Pasta",
       "description": "The recipe Mushroom & Sundried Tomato Pasta can be made in around 45 minutes.  This hor d'oeuvre has 260 calories, 12g of protein, and 20g of fat per serving.",
-      "category": "snack",
+      "category": "dinner",
       "prepTime": 10,
       "cookTime": 35,
       "totalTime": 45,
@@ -74809,7 +74809,7 @@
           "name": "Mushrooms",
           "amount": 10,
           "unit": "large",
-          "original": "10 large white mushrooms, chopped (use other ‘shrooms if you like)"
+          "original": "10 large white mushrooms, chopped (use other \u2018shrooms if you like)"
         },
         {
           "name": "Sundried Tomatoes Olive Oil",
@@ -74944,13 +74944,13 @@
           "name": "Ground Cumin",
           "amount": 2,
           "unit": "ml",
-          "original": "½ tsp (2 mL) ground cumin"
+          "original": "\u00bd tsp (2 mL) ground cumin"
         },
         {
           "name": "Lemon Juice",
           "amount": 60,
           "unit": "ml",
-          "original": "¼ cup (60 mL) lemon juice"
+          "original": "\u00bc cup (60 mL) lemon juice"
         },
         {
           "name": "Peanut Butter",
@@ -74968,7 +74968,7 @@
           "name": "Water",
           "amount": 60,
           "unit": "ml",
-          "original": "¼ cup (60 mL) hot water"
+          "original": "\u00bc cup (60 mL) hot water"
         }
       ],
       "instructions": [
@@ -75076,7 +75076,7 @@
       "id": "spoonacular-657686",
       "title": "Quinoa Tabbouleh Salad",
       "description": "Quinoa Tabbouleh Salad requires about 45 minutes from start to finish.  For 52 cents per serving, this recipe covers 8% of your daily requirements of vitamins and minerals.",
-      "category": "snack",
+      "category": "lunch",
       "prepTime": 10,
       "cookTime": 35,
       "totalTime": 45,
@@ -75253,7 +75253,7 @@
       "id": "spoonacular-658503",
       "title": "Roasted Beet Hummus",
       "description": "Roasted Beet Hummus requires roughly 45 minutes from start to finish.  This recipe serves 10.",
-      "category": "snack",
+      "category": "dinner",
       "prepTime": 10,
       "cookTime": 35,
       "totalTime": 45,
@@ -75412,7 +75412,7 @@
       "id": "spoonacular-658573",
       "title": "Roasted Eggplant Hummus",
       "description": "You can never have too many middl eastern recipes, so give Roasted Eggplant Hummus a try.  For $1.",
-      "category": "snack",
+      "category": "dinner",
       "prepTime": 10,
       "cookTime": 35,
       "totalTime": 45,
@@ -75434,7 +75434,7 @@
           "name": "Extra Virgin Olive Oil",
           "amount": 54,
           "unit": "ml",
-          "original": "¼ cup extra virgin olive oil, divided"
+          "original": "\u00bc cup extra virgin olive oil, divided"
         },
         {
           "name": "Garlic Clove",
@@ -75908,7 +75908,7 @@
       "id": "spoonacular-798400",
       "title": "Spicy Black-Eyed Pea Curry with Swiss Chard and Roasted Eggplant",
       "description": "The recipe Spicy Black-Eyed Pea Curry with Swiss Chard and Roasted Eggplant could satisfy your Indian craving in around 45 minutes.  This recipe serves 6 and costs 94 cents per serving.",
-      "category": "snack",
+      "category": "dinner",
       "prepTime": 10,
       "cookTime": 35,
       "totalTime": 45,
@@ -76297,7 +76297,7 @@
       "id": "spoonacular-663933",
       "title": "Tuna mousse dip",
       "description": "If you have about 45 minutes to spend in the kitchen, Tuna mousse dip might be a great gluten free, dairy free, paleolithic, and primal recipe to try.  One portion of this dish contains roughly 79g of protein, 9g of fat, and a total of 427 calories.",
-      "category": "snack",
+      "category": "lunch",
       "prepTime": 10,
       "cookTime": 35,
       "totalTime": 45,
@@ -76337,13 +76337,13 @@
           "name": "Oz. Fromage Frais",
           "amount": 118.294,
           "unit": "ml",
-          "original": "200g 7 oz. fromage frais (about ½ cup)"
+          "original": "200g 7 oz. fromage frais (about \u00bd cup)"
         },
         {
           "name": "Oz. Fromage Frais",
           "amount": 118.294,
           "unit": "ml",
-          "original": "200g 7 oz. fromage frais (about ½ cup)"
+          "original": "200g 7 oz. fromage frais (about \u00bd cup)"
         }
       ],
       "instructions": [

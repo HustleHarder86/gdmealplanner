@@ -3,36 +3,51 @@
 import { useState } from 'react';
 import { MealSlot } from '@/src/types/meal-plan';
 import { LocalRecipeService } from '@/src/services/local-recipe-service';
-import { Clock, Utensils, RefreshCw, Eye, BookmarkPlus } from 'lucide-react';
+import { Clock, Utensils, RefreshCw, Eye, BookmarkPlus, Trash2, ChefHat } from 'lucide-react';
 
 interface MealCardProps {
   mealType: string;
   meal: MealSlot;
   onSwap: () => void;
+  onSwapWithUserRecipe?: () => void;
+  onDelete?: () => void;
   onViewRecipe: (recipeId: string) => void;
   onSaveToMyRecipes?: (recipeId: string) => void;
   isSwapping?: boolean;
   isSaving?: boolean;
+  isDeleting?: boolean;
 }
 
 export default function MealCard({ 
   mealType, 
   meal, 
   onSwap, 
+  onSwapWithUserRecipe,
+  onDelete,
   onViewRecipe,
   onSaveToMyRecipes,
   isSwapping = false,
-  isSaving = false 
+  isSaving = false,
+  isDeleting = false 
 }: MealCardProps) {
   const recipe = meal.recipeId ? LocalRecipeService.getRecipeById(meal.recipeId) : null;
   
   if (!meal.recipeId || !recipe) {
     return (
-      <div className="border rounded-lg p-3 hover:shadow-md transition-shadow">
+      <div className="border rounded-lg p-3 hover:shadow-md transition-shadow bg-gray-50">
         <div className="font-medium text-sm text-gray-600 mb-2 capitalize">
           {mealType.replace(/([A-Z])/g, ' $1').trim()}
         </div>
-        <div className="text-gray-400 italic text-center py-6 text-sm">No meal</div>
+        <div className="text-gray-400 italic text-center py-4 text-sm">No meal selected</div>
+        <div className="flex justify-center">
+          <button
+            onClick={onSwap}
+            className="btn-view rounded flex items-center justify-center gap-1 text-xs py-1.5 px-3"
+          >
+            <RefreshCw className="h-3 w-3" />
+            Add Meal
+          </button>
+        </div>
       </div>
     );
   }
@@ -93,11 +108,36 @@ export default function MealCard({
               onClick={onSwap}
               disabled={isSwapping}
               className="btn-view rounded flex items-center justify-center gap-1 text-xs py-1.5 px-2 disabled:opacity-50"
-              title="Swap meal"
+              title="Random swap"
             >
               <RefreshCw className={`h-3 w-3 ${isSwapping ? 'animate-spin' : ''}`} />
-              <span className="hidden sm:inline">{isSwapping ? '' : 'Swap'}</span>
+              <span className="hidden lg:inline">{isSwapping ? '' : 'Random'}</span>
             </button>
+            
+            {/* Choose from recipes button */}
+            {onSwapWithUserRecipe && (
+              <button
+                onClick={onSwapWithUserRecipe}
+                className="btn-view rounded flex items-center justify-center gap-1 text-xs py-1.5 px-2"
+                title="Choose recipe"
+              >
+                <ChefHat className="h-3 w-3" />
+                <span className="hidden lg:inline">Choose</span>
+              </button>
+            )}
+            
+            {/* Delete button */}
+            {onDelete && (
+              <button
+                onClick={onDelete}
+                disabled={isDeleting}
+                className="btn-view rounded flex items-center justify-center gap-1 text-xs py-1.5 px-2 disabled:opacity-50 hover:bg-red-50 hover:text-red-600"
+                title="Remove meal"
+              >
+                <Trash2 className={`h-3 w-3 ${isDeleting ? 'animate-pulse' : ''}`} />
+                <span className="hidden sm:inline">{isDeleting ? '' : 'Remove'}</span>
+              </button>
+            )}
           </div>
         </div>
       </div>

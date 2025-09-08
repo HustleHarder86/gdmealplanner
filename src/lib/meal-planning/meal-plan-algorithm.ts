@@ -328,6 +328,14 @@ export class MealPlanAlgorithm {
     let candidates = availableRecipes.filter(recipe => {
       if (categoryFilter && recipe.category !== categoryFilter) return false;
       
+      // Enhanced snack filtering
+      if (categoryFilter === 'snack') {
+        // Ensure it's actually a snack-appropriate food
+        if (!this.isValidSnack(recipe)) {
+          return false;
+        }
+      }
+      
       // Check carb range (allow some flexibility)
       const carbTolerance = targetCarbs * 0.3; // 30% tolerance
       const recipeCarbs = recipe.nutrition.carbohydrates;
@@ -495,6 +503,51 @@ export class MealPlanAlgorithm {
     });
   }
   
+  /**
+   * Validate if a recipe is appropriate for a snack
+   */
+  private static isValidSnack(recipe: Recipe): boolean {
+    const title = recipe.title.toLowerCase();
+    const calories = recipe.nutrition.calories;
+    const carbs = recipe.nutrition.carbohydrates;
+    
+    // Calorie limits for snacks (typically 100-300 calories)
+    if (calories > 350) {
+      return false;
+    }
+    
+    // Check for main dish keywords that shouldn't be snacks
+    const mainDishKeywords = [
+      'chili', 'soup', 'stew', 'pasta', 'noodle', 'rice', 'risotto',
+      'casserole', 'curry', 'stir fry', 'pizza', 'burger', 'sandwich',
+      'wrap', 'burrito', 'taco', 'salad', 'bowl'
+    ];
+    
+    for (const keyword of mainDishKeywords) {
+      if (title.includes(keyword)) {
+        return false;
+      }
+    }
+    
+    // Positive snack indicators
+    const snackKeywords = [
+      'bar', 'bite', 'ball', 'chip', 'cracker', 'nut', 'seed', 'trail',
+      'popcorn', 'pretzel', 'yogurt', 'smoothie', 'shake', 'muffin',
+      'cookie', 'brownie', 'hummus', 'dip', 'spread', 'toast', 'fruit',
+      'veggie', 'cheese', 'jerky', 'granola'
+    ];
+    
+    // If it contains a snack keyword, it's likely valid
+    for (const keyword of snackKeywords) {
+      if (title.includes(keyword)) {
+        return true;
+      }
+    }
+    
+    // If calories are in snack range and no red flags, allow it
+    return calories <= 250;
+  }
+
   /**
    * Get the recipe category filter for a meal slot
    */

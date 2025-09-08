@@ -58,7 +58,8 @@ export default function MealPlannerV2Page() {
     error: mealPlanError, 
     generateMealPlan, 
     updateWithNewRecipes, 
-    swapMeal 
+    swapMeal,
+    deleteMeal 
   } = useMealPlan(recipesInitialized ? 'demo-user' : undefined);
   
   const [shoppingList, setShoppingList] = useState<ShoppingList | null>(null);
@@ -108,6 +109,15 @@ export default function MealPlannerV2Page() {
   // Handle meal swap
   const handleSwapMeal = async (dayIndex: number, mealType: string) => {
     const updatedPlan = await swapMeal(dayIndex, mealType);
+    if (updatedPlan) {
+      const shopping = ShoppingListGenerator.generateFromMealPlan(updatedPlan);
+      setShoppingList(shopping);
+    }
+  };
+
+  // Handle meal delete
+  const handleDeleteMeal = async (dayIndex: number, mealType: string) => {
+    const updatedPlan = await deleteMeal(dayIndex, mealType);
     if (updatedPlan) {
       const shopping = ShoppingListGenerator.generateFromMealPlan(updatedPlan);
       setShoppingList(shopping);
@@ -311,6 +321,7 @@ export default function MealPlannerV2Page() {
             <MealPlanDisplay
               mealPlan={displayMealPlan}
               onSwapMeal={handleSwapMeal}
+              onDeleteMeal={handleDeleteMeal}
               onUpdateRecipes={handleUpdateRecipes}
               onGenerateNew={handleGenerateMealPlan}
               onSaveToMyRecipes={handleSaveToMyRecipes}

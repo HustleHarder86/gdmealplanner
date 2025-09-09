@@ -58,12 +58,24 @@ export class GlucoseService {
         throw new Error("timestamp is required to create a glucose reading");
       }
       
-      const docData = {
-        ...reading,
+      // Build document data, excluding undefined fields
+      const docData: any = {
+        userId: reading.userId,
+        value: reading.value,
+        unit: reading.unit,
         timestamp: Timestamp.fromDate(reading.timestamp),
         createdAt: Timestamp.now(),
         updatedAt: Timestamp.now(),
       };
+      
+      // Only add optional fields if they have values
+      if (reading.mealAssociation !== undefined) {
+        docData.mealAssociation = reading.mealAssociation;
+      }
+      
+      if (reading.notes !== undefined && reading.notes !== '') {
+        docData.notes = reading.notes;
+      }
       
       console.log("[GlucoseService] Sending to Firebase:", docData);
       
@@ -87,12 +99,24 @@ export class GlucoseService {
     try {
       const docRef = doc(db, COLLECTION_NAME, id);
       const updateData: any = {
-        ...updates,
         updatedAt: Timestamp.now(),
       };
 
+      // Only add defined fields to update
+      if (updates.value !== undefined) updateData.value = updates.value;
+      if (updates.unit !== undefined) updateData.unit = updates.unit;
+      if (updates.userId !== undefined) updateData.userId = updates.userId;
+      
       if (updates.timestamp) {
         updateData.timestamp = Timestamp.fromDate(updates.timestamp);
+      }
+      
+      if (updates.mealAssociation !== undefined) {
+        updateData.mealAssociation = updates.mealAssociation;
+      }
+      
+      if (updates.notes !== undefined && updates.notes !== '') {
+        updateData.notes = updates.notes;
       }
 
       await updateDoc(docRef, updateData);

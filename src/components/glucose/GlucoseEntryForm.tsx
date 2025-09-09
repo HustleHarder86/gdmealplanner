@@ -105,14 +105,23 @@ export default function GlucoseEntryForm({
 
     const timestamp = new Date(`${date}T${time}`);
 
-    onSubmit({
+    const readingData: Omit<GlucoseReading, "id" | "createdAt" | "updatedAt"> = {
       userId,
       value: parseFloat(value),
       unit,
       timestamp,
-      mealAssociation: mealAssociation || undefined,
-      notes: notes.trim() || undefined,
-    });
+    };
+    
+    // Only add optional fields if they have values
+    if (mealAssociation) {
+      readingData.mealAssociation = mealAssociation;
+    }
+    
+    if (notes.trim()) {
+      readingData.notes = notes.trim();
+    }
+    
+    onSubmit(readingData);
   };
 
   // Get target range for current meal association

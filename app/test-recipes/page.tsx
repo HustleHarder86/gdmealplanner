@@ -117,7 +117,7 @@ export default function TestRecipes() {
 
       {userRecipes.length === 0 && user && (
         <div className="bg-yellow-50 p-4 rounded">
-          <p>No user recipes found. You can create recipes using the "Add Recipe" feature or run the test script:</p>
+          <p>No user recipes found. You can create recipes using the &quot;Add Recipe&quot; feature or run the test script:</p>
           <code className="block mt-2 p-2 bg-gray-100 rounded text-sm">
             npx tsx scripts/add-test-recipes.ts {user.uid}
           </code>

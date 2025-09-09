@@ -50,47 +50,26 @@ export default function UserRecipeSelector({
       const suitable = allRecipes.filter(recipe => {
         if (recipe.id === currentRecipeId) return false;
         
-        // For system recipes, strict category matching
-        if (!recipe.isUserCreated && recipe.category !== mealType) return false;
-        
-        // For user recipes, be more lenient - allow based on nutritional profile
+        // USER RECIPES: No filtering - users can add any of their recipes anywhere
         if (recipe.isUserCreated) {
-          const calories = recipe.nutrition.calories;
-          const carbs = recipe.nutrition.carbohydrates;
-          
-          // Basic nutritional bounds for each meal type
-          if (mealType === 'breakfast') {
-            // Allow wider range for user recipes
-            if (calories < 150 || calories > 700) return false;
-            if (carbs < 10 || carbs > 60) return false;
-          } else if (mealType === 'lunch' || mealType === 'dinner') {
-            // Allow wider range for user recipes
-            if (calories < 250 || calories > 900) return false;
-            if (carbs < 15 || carbs > 75) return false;
-          } else if (mealType === 'snack') {
-            // Stricter for snacks
-            if (calories > 350) return false;
-            if (carbs > 40) return false;
-            
-            // Check for inappropriate titles
-            const title = recipe.title.toLowerCase();
-            const mainDishWords = ['chili', 'soup', 'pasta', 'rice', 'casserole', 'roast', 'steak'];
-            if (mainDishWords.some(word => title.includes(word))) return false;
-          }
-        } else {
-          // For system recipes, also check snack filtering
-          if (mealType === 'snack') {
-            const calories = recipe.nutrition.calories;
-            if (calories > 300) return false;
-            
-            const title = recipe.title.toLowerCase();
-            const mainDishWords = ['chili', 'soup', 'pasta', 'rice', 'salad', 'bowl'];
-            if (mainDishWords.some(word => title.includes(word))) return false;
-          }
+          return true; // Show ALL user recipes - let users make informed choices
         }
         
-        // Check carb range (with 50% tolerance for user recipes, 40% for system)
-        const carbTolerance = targetCarbs * (recipe.isUserCreated ? 0.5 : 0.4);
+        // SYSTEM RECIPES: Keep some basic filtering for guidance
+        if (recipe.category !== mealType) return false;
+        
+        // For system recipe snacks, prevent obvious main dishes
+        if (mealType === 'snack') {
+          const calories = recipe.nutrition.calories;
+          if (calories > 300) return false;
+          
+          const title = recipe.title.toLowerCase();
+          const mainDishWords = ['chili', 'soup', 'pasta', 'rice', 'salad', 'bowl'];
+          if (mainDishWords.some(word => title.includes(word))) return false;
+        }
+        
+        // Check carb range for system recipes (40% tolerance)
+        const carbTolerance = targetCarbs * 0.4;
         const recipeCarbs = recipe.nutrition.carbohydrates;
         if (recipeCarbs < targetCarbs - carbTolerance || 
             recipeCarbs > targetCarbs + carbTolerance) {
@@ -102,31 +81,7 @@ export default function UserRecipeSelector({
       
       console.log(`[UserRecipeSelector] ${suitable.length} recipes suitable for ${mealType} (target ${targetCarbs}g carbs)`);
       const suitableUserRecipes = suitable.filter(r => r.isUserCreated);
-      console.log(`[UserRecipeSelector] Including ${suitableUserRecipes.length} user recipes`);
-      
-      // Debug: Show why user recipes might be filtered out
-      if (userRecipes.length > 0 && suitableUserRecipes.length === 0) {
-        console.log('[UserRecipeSelector] User recipes were filtered out. Checking reasons...');
-        userRecipes.slice(0, 3).forEach(recipe => {
-          const carbTolerance = targetCarbs * 0.5; // Updated tolerance
-          const recipeCarbs = recipe.nutrition.carbohydrates;
-          const carbReason = (recipeCarbs < targetCarbs - carbTolerance || recipeCarbs > targetCarbs + carbTolerance) 
-            ? `Carbs out of range (${recipeCarbs}g vs target ${targetCarbs}±${carbTolerance}g)` 
-            : 'Carbs OK';
-          
-          let calorieReason = 'Calories OK';
-          const calories = recipe.nutrition.calories;
-          if (mealType === 'breakfast' && (calories < 150 || calories > 700)) {
-            calorieReason = `Breakfast calories out of range (${calories})`;
-          } else if ((mealType === 'lunch' || mealType === 'dinner') && (calories < 250 || calories > 900)) {
-            calorieReason = `Main meal calories out of range (${calories})`;
-          } else if (mealType === 'snack' && calories > 350) {
-            calorieReason = `Snack calories too high (${calories})`;
-          }
-          
-          console.log(`[UserRecipeSelector] ${recipe.title}: ${carbReason}, ${calorieReason}`);
-        });
-      }
+      console.log(`[UserRecipeSelector] Including ALL ${suitableUserRecipes.length} user recipes (no filtering)`)
       
       setAvailableRecipes(suitable);
       setFilteredRecipes(suitable);
@@ -172,6 +127,9 @@ export default function UserRecipeSelector({
             </h2>
             <p className="text-sm text-gray-600">
               Target: {targetCarbs}g carbs • {filteredRecipes.length} options available
+              {filteredRecipes.some(r => r.isUserCreated) && (
+                <span className="ml-2 text-purple-600">• Your recipes shown for all meals</span>
+              )}
             </p>
           </div>
           <button

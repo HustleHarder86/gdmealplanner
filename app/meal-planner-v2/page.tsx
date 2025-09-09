@@ -66,6 +66,9 @@ export default function MealPlannerV2Page() {
   const [shoppingList, setShoppingList] = useState<ShoppingList | null>(null);
   const [activeTab, setActiveTab] = useState<'meal-plan' | 'shopping-list'>('meal-plan');
   const [showSuccess, setShowSuccess] = useState(false);
+  
+  // Determine which meal plan to show (prioritize rotation)
+  const displayMealPlan = getRotationMealPlan() || fallbackMealPlan;
 
   // Log recipe count when recipes are loaded
   useEffect(() => {
@@ -74,8 +77,18 @@ export default function MealPlannerV2Page() {
     }
   }, [recipesInitialized, recipes.length]);
   
-  // Determine which meal plan to show (prioritize rotation)
-  const displayMealPlan = getRotationMealPlan() || fallbackMealPlan;
+  // Auto-generate meal plan on initial load if none exists
+  useEffect(() => {
+    // Check if we have recipes and no meal plan yet
+    if (recipesInitialized && recipes.length > 0 && !displayMealPlan && !generating && !rotationLoading) {
+      console.log('[MEAL_PLANNER] Auto-generating initial meal plan...');
+      // Use rotation system if available, otherwise use fallback
+      if (!currentWeekInfo) {
+        // Only generate fallback if rotation system isn't working
+        handleGenerateMealPlan();
+      }
+    }
+  }, [recipesInitialized, recipes.length, displayMealPlan, generating, rotationLoading, currentWeekInfo]);
 
   // Generate shopping list when meal plan changes
   useEffect(() => {

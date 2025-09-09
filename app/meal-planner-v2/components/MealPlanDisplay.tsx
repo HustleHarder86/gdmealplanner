@@ -8,7 +8,7 @@ import MealCard from './MealCard';
 import UserRecipeSelector from './UserRecipeSelector';
 
 interface MealPlanDisplayProps {
-  mealPlan: MealPlan;
+  mealPlan: MealPlan | null;
   onSwapMeal: (dayIndex: number, mealType: string) => void;
   onSwapWithSpecificRecipe?: (dayIndex: number, mealType: string, recipeId: string) => void;
   onDeleteMeal?: (dayIndex: number, mealType: string) => void;
@@ -28,6 +28,34 @@ export default function MealPlanDisplay({
   onSaveToMyRecipes,
   isGenerating = false
 }: MealPlanDisplayProps) {
+  // Show loading state if generating initial meal plan
+  if (!mealPlan && isGenerating) {
+    return (
+      <Card className="p-8 text-center">
+        <div className="space-y-4">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto"></div>
+          <h2 className="text-xl font-semibold">Generating Your Meal Plan...</h2>
+          <p className="text-gray-600">Creating a personalized 7-day meal plan</p>
+          <p className="text-sm text-gray-500">This only takes a moment</p>
+        </div>
+      </Card>
+    );
+  }
+  
+  // Show empty state if no meal plan
+  if (!mealPlan) {
+    return (
+      <Card className="p-8 text-center">
+        <div className="space-y-4">
+          <h2 className="text-xl font-semibold">No Meal Plan Yet</h2>
+          <p className="text-gray-600">Click below to generate your personalized meal plan</p>
+          <Button onClick={onGenerateNew} size="lg">
+            Generate Meal Plan
+          </Button>
+        </div>
+      </Card>
+    );
+  }
   const [expandedDays, setExpandedDays] = useState<number[]>([0]); // First day expanded by default
   const [swappingMeal, setSwappingMeal] = useState<string | null>(null);
   const [deletingMeal, setDeletingMeal] = useState<string | null>(null);

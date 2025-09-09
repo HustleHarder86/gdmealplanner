@@ -1,15 +1,66 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { MealPlan, MealPlanPreferences, MealPlanGenerationOptions } from '@/src/types/meal-plan';
 import { MealPlanAlgorithm } from '@/src/lib/meal-planning/meal-plan-algorithm';
 import { LocalRecipeService } from '@/src/services/local-recipe-service';
 import { DEFAULT_PREFERENCES } from '../constants/preferences';
 
+const MEAL_PLAN_STORAGE_KEY = 'gdmealplanner_saved_meal_plan';
+const MEAL_PLAN_EXPIRY_DAYS = 7; // Regenerate after a week
+
 export function useMealPlan(userId?: string) {
-  // Don't initialize if userId is not provided (recipes not ready)
-  const [mealPlan, setMealPlan] = useState<MealPlan | null>(null);
+  // Load saved meal plan from localStorage on init
+  const loadSavedMealPlan = (): MealPlan | null => {
+    if (typeof window === 'undefined') return null;
+    
+    try {
+      const saved = localStorage.getItem(MEAL_PLAN_STORAGE_KEY);
+      if (!saved) return null;
+      
+      const { plan, savedAt } = JSON.parse(saved);
+      
+      // Check if plan is expired (older than 7 days)
+      const savedDate = new Date(savedAt);
+      const now = new Date();
+      const daysDiff = (now.getTime() - savedDate.getTime()) / (1000 * 60 * 60 * 24);
+      
+      if (daysDiff > MEAL_PLAN_EXPIRY_DAYS) {
+        console.log('[MEAL_PLANNER] Saved meal plan expired, will generate new one');
+        localStorage.removeItem(MEAL_PLAN_STORAGE_KEY);
+        return null;
+      }
+      
+      console.log('[MEAL_PLANNER] Loaded saved meal plan from localStorage');
+      return plan;
+    } catch (error) {
+      console.error('[MEAL_PLANNER] Error loading saved meal plan:', error);
+      return null;
+    }
+  };
+
+  // Initialize with saved plan if available
+  const [mealPlan, setMealPlanState] = useState<MealPlan | null>(loadSavedMealPlan);
   const [preferences, setPreferences] = useState<MealPlanPreferences>(DEFAULT_PREFERENCES);
   const [generating, setGenerating] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  
+  // Custom setter that also saves to localStorage
+  const setMealPlan = (plan: MealPlan | null) => {
+    setMealPlanState(plan);
+    
+    // Save to localStorage
+    if (plan && typeof window !== 'undefined') {
+      try {
+        const toSave = {
+          plan,
+          savedAt: new Date().toISOString()
+        };
+        localStorage.setItem(MEAL_PLAN_STORAGE_KEY, JSON.stringify(toSave));
+        console.log('[MEAL_PLANNER] Saved meal plan to localStorage');
+      } catch (error) {
+        console.error('[MEAL_PLANNER] Error saving meal plan:', error);
+      }
+    }
+  };
 
   const getNextMondayISOString = (): string => {
     const today = new Date();

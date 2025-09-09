@@ -35,41 +35,66 @@ export default function UserRecipeSelector({
       const userRecipes = allRecipes.filter(r => r.isUserCreated);
       console.log(`[UserRecipeSelector] Found ${allRecipes.length} total recipes, ${userRecipes.length} user recipes`);
       
+      // Debug: Log first few user recipes
+      if (userRecipes.length > 0) {
+        console.log('[UserRecipeSelector] Sample user recipes:', userRecipes.slice(0, 3).map(r => ({
+          id: r.id,
+          title: r.title,
+          category: r.category,
+          carbs: r.nutrition.carbohydrates,
+          calories: r.nutrition.calories
+        })));
+      }
+      
       // Filter by meal type and exclude current recipe
       const suitable = allRecipes.filter(recipe => {
         if (recipe.id === currentRecipeId) return false;
         
-        // For user recipes without category, allow them if they meet nutritional criteria
+        // For system recipes, strict category matching
         if (!recipe.isUserCreated && recipe.category !== mealType) return false;
         
-        // For snacks, apply stricter filtering
-        if (mealType === 'snack') {
+        // For user recipes, be more lenient - allow based on nutritional profile
+        if (recipe.isUserCreated) {
           const calories = recipe.nutrition.calories;
-          if (calories > 300) return false;
+          const carbs = recipe.nutrition.carbohydrates;
           
-          // Check for inappropriate titles
-          const title = recipe.title.toLowerCase();
-          const mainDishWords = ['chili', 'soup', 'pasta', 'rice', 'salad', 'bowl'];
-          if (mainDishWords.some(word => title.includes(word))) return false;
+          // Basic nutritional bounds for each meal type
+          if (mealType === 'breakfast') {
+            // Allow wider range for user recipes
+            if (calories < 150 || calories > 700) return false;
+            if (carbs < 10 || carbs > 60) return false;
+          } else if (mealType === 'lunch' || mealType === 'dinner') {
+            // Allow wider range for user recipes
+            if (calories < 250 || calories > 900) return false;
+            if (carbs < 15 || carbs > 75) return false;
+          } else if (mealType === 'snack') {
+            // Stricter for snacks
+            if (calories > 350) return false;
+            if (carbs > 40) return false;
+            
+            // Check for inappropriate titles
+            const title = recipe.title.toLowerCase();
+            const mainDishWords = ['chili', 'soup', 'pasta', 'rice', 'casserole', 'roast', 'steak'];
+            if (mainDishWords.some(word => title.includes(word))) return false;
+          }
+        } else {
+          // For system recipes, also check snack filtering
+          if (mealType === 'snack') {
+            const calories = recipe.nutrition.calories;
+            if (calories > 300) return false;
+            
+            const title = recipe.title.toLowerCase();
+            const mainDishWords = ['chili', 'soup', 'pasta', 'rice', 'salad', 'bowl'];
+            if (mainDishWords.some(word => title.includes(word))) return false;
+          }
         }
         
-        // Check carb range (with 40% tolerance)
-        const carbTolerance = targetCarbs * 0.4;
+        // Check carb range (with 50% tolerance for user recipes, 40% for system)
+        const carbTolerance = targetCarbs * (recipe.isUserCreated ? 0.5 : 0.4);
         const recipeCarbs = recipe.nutrition.carbohydrates;
         if (recipeCarbs < targetCarbs - carbTolerance || 
             recipeCarbs > targetCarbs + carbTolerance) {
           return false;
-        }
-        
-        // Additional filtering for user recipes based on nutritional profile
-        if (recipe.isUserCreated) {
-          const calories = recipe.nutrition.calories;
-          
-          // Try to categorize based on calories and carbs
-          if (mealType === 'breakfast' && (calories < 200 || calories > 600)) return false;
-          if (mealType === 'lunch' && (calories < 300 || calories > 700)) return false;
-          if (mealType === 'dinner' && (calories < 350 || calories > 800)) return false;
-          if (mealType === 'snack' && calories > 300) return false;
         }
         
         return true;
@@ -78,6 +103,30 @@ export default function UserRecipeSelector({
       console.log(`[UserRecipeSelector] ${suitable.length} recipes suitable for ${mealType} (target ${targetCarbs}g carbs)`);
       const suitableUserRecipes = suitable.filter(r => r.isUserCreated);
       console.log(`[UserRecipeSelector] Including ${suitableUserRecipes.length} user recipes`);
+      
+      // Debug: Show why user recipes might be filtered out
+      if (userRecipes.length > 0 && suitableUserRecipes.length === 0) {
+        console.log('[UserRecipeSelector] User recipes were filtered out. Checking reasons...');
+        userRecipes.slice(0, 3).forEach(recipe => {
+          const carbTolerance = targetCarbs * 0.5; // Updated tolerance
+          const recipeCarbs = recipe.nutrition.carbohydrates;
+          const carbReason = (recipeCarbs < targetCarbs - carbTolerance || recipeCarbs > targetCarbs + carbTolerance) 
+            ? `Carbs out of range (${recipeCarbs}g vs target ${targetCarbs}±${carbTolerance}g)` 
+            : 'Carbs OK';
+          
+          let calorieReason = 'Calories OK';
+          const calories = recipe.nutrition.calories;
+          if (mealType === 'breakfast' && (calories < 150 || calories > 700)) {
+            calorieReason = `Breakfast calories out of range (${calories})`;
+          } else if ((mealType === 'lunch' || mealType === 'dinner') && (calories < 250 || calories > 900)) {
+            calorieReason = `Main meal calories out of range (${calories})`;
+          } else if (mealType === 'snack' && calories > 350) {
+            calorieReason = `Snack calories too high (${calories})`;
+          }
+          
+          console.log(`[UserRecipeSelector] ${recipe.title}: ${carbReason}, ${calorieReason}`);
+        });
+      }
       
       setAvailableRecipes(suitable);
       setFilteredRecipes(suitable);

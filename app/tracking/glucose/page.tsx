@@ -70,19 +70,37 @@ export default function GlucoseTrackingPage() {
     reading: Omit<GlucoseReading, "id" | "createdAt" | "updatedAt">,
   ) => {
     try {
+      console.log("[GLUCOSE] Attempting to save reading:", reading);
+      
+      // Ensure userId is present
+      if (!reading.userId) {
+        console.error("[GLUCOSE] No userId provided in reading");
+        alert("Error: User not authenticated. Please log in again.");
+        return;
+      }
+      
       if (editingReading?.id) {
         // Update existing reading
+        console.log("[GLUCOSE] Updating reading:", editingReading.id);
         await GlucoseService.updateReading(editingReading.id, reading);
+        console.log("[GLUCOSE] Reading updated successfully");
       } else {
         // Create new reading
-        await GlucoseService.createReading(reading);
+        console.log("[GLUCOSE] Creating new reading for user:", reading.userId);
+        const newId = await GlucoseService.createReading(reading);
+        console.log("[GLUCOSE] Reading created successfully with ID:", newId);
       }
+      
       setShowEntryForm(false);
       setEditingReading(null);
       setQuickEntryValue(null);
-      loadData(); // Reload data
+      await loadData(); // Reload data - made async
+      
+      // Show success feedback
+      console.log("[GLUCOSE] Reading saved and data reloaded successfully");
     } catch (error) {
-      console.error("Error saving reading:", error);
+      console.error("[GLUCOSE] Error saving glucose reading:", error);
+      alert(`Failed to save glucose reading: ${error instanceof Error ? error.message : 'Unknown error'}`);
     }
   };
 

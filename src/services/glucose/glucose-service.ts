@@ -47,15 +47,32 @@ export class GlucoseService {
     reading: Omit<GlucoseReading, "id" | "createdAt" | "updatedAt">,
   ): Promise<string> {
     try {
-      const docRef = await addDoc(collection(db, COLLECTION_NAME), {
+      console.log("[GlucoseService] Creating reading with data:", reading);
+      
+      // Validate required fields
+      if (!reading.userId) {
+        throw new Error("userId is required to create a glucose reading");
+      }
+      
+      if (!reading.timestamp) {
+        throw new Error("timestamp is required to create a glucose reading");
+      }
+      
+      const docData = {
         ...reading,
         timestamp: Timestamp.fromDate(reading.timestamp),
         createdAt: Timestamp.now(),
         updatedAt: Timestamp.now(),
-      });
+      };
+      
+      console.log("[GlucoseService] Sending to Firebase:", docData);
+      
+      const docRef = await addDoc(collection(db, COLLECTION_NAME), docData);
+      
+      console.log("[GlucoseService] Successfully created reading with ID:", docRef.id);
       return docRef.id;
     } catch (error) {
-      console.error("Error creating glucose reading:", error);
+      console.error("[GlucoseService] Error creating glucose reading:", error);
       throw error;
     }
   }

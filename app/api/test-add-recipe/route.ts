@@ -42,8 +42,12 @@ export async function POST(request: Request) {
       },
       dietaryInfo: {
         isVegetarian: true,
+        isVegan: false,
         isGlutenFree: false,
-        isDairyFree: false
+        isDairyFree: false,
+        isNutFree: true,
+        isPescatarian: false,
+        isEggFree: false
       }
     };
 

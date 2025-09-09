@@ -37,8 +37,12 @@ const testRecipes: UserRecipeInput[] = [
     },
     dietaryInfo: {
       isVegetarian: true,
+      isVegan: false,
       isGlutenFree: true,
-      isDairyFree: false
+      isDairyFree: false,
+      isNutFree: true,
+      isPescatarian: false,
+      isEggFree: false
     }
   },
   {
@@ -74,8 +78,12 @@ const testRecipes: UserRecipeInput[] = [
     },
     dietaryInfo: {
       isVegetarian: true,
+      isVegan: false,
       isGlutenFree: false,
-      isDairyFree: false
+      isDairyFree: false,
+      isNutFree: true,
+      isPescatarian: false,
+      isEggFree: false
     }
   },
   {
@@ -114,8 +122,12 @@ const testRecipes: UserRecipeInput[] = [
     },
     dietaryInfo: {
       isVegetarian: false,
+      isVegan: false,
       isGlutenFree: false,
-      isDairyFree: true
+      isDairyFree: true,
+      isNutFree: true,
+      isPescatarian: false,
+      isEggFree: false
     }
   },
   {
@@ -154,8 +166,12 @@ const testRecipes: UserRecipeInput[] = [
     },
     dietaryInfo: {
       isVegetarian: true,
+      isVegan: true,
       isGlutenFree: true,
-      isDairyFree: true
+      isDairyFree: true,
+      isNutFree: true,
+      isPescatarian: false,
+      isEggFree: true
     }
   },
   {
@@ -195,8 +211,12 @@ const testRecipes: UserRecipeInput[] = [
     },
     dietaryInfo: {
       isVegetarian: false,
+      isVegan: false,
       isGlutenFree: true,
-      isDairyFree: true
+      isDairyFree: true,
+      isNutFree: true,
+      isPescatarian: true,
+      isEggFree: false
     }
   },
   {
@@ -236,8 +256,12 @@ const testRecipes: UserRecipeInput[] = [
     },
     dietaryInfo: {
       isVegetarian: false,
+      isVegan: false,
       isGlutenFree: true,
-      isDairyFree: true
+      isDairyFree: true,
+      isNutFree: true,
+      isPescatarian: true,
+      isEggFree: false
     }
   },
   {
@@ -270,8 +294,12 @@ const testRecipes: UserRecipeInput[] = [
     },
     dietaryInfo: {
       isVegetarian: true,
+      isVegan: true,
       isGlutenFree: true,
-      isDairyFree: true
+      isDairyFree: true,
+      isNutFree: true,
+      isPescatarian: false,
+      isEggFree: true
     }
   },
   {
@@ -305,8 +333,12 @@ const testRecipes: UserRecipeInput[] = [
     },
     dietaryInfo: {
       isVegetarian: true,
+      isVegan: true,
       isGlutenFree: true,
-      isDairyFree: true
+      isDairyFree: true,
+      isNutFree: true,
+      isPescatarian: false,
+      isEggFree: true
     }
   }
 ];

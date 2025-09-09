@@ -32,11 +32,15 @@ export default function UserRecipeSelector({
     if (isOpen) {
       // Get all recipes
       const allRecipes = LocalRecipeService.getAllRecipes();
+      const userRecipes = allRecipes.filter(r => r.isUserCreated);
+      console.log(`[UserRecipeSelector] Found ${allRecipes.length} total recipes, ${userRecipes.length} user recipes`);
       
       // Filter by meal type and exclude current recipe
       const suitable = allRecipes.filter(recipe => {
         if (recipe.id === currentRecipeId) return false;
-        if (recipe.category !== mealType) return false;
+        
+        // For user recipes without category, allow them if they meet nutritional criteria
+        if (!recipe.isUserCreated && recipe.category !== mealType) return false;
         
         // For snacks, apply stricter filtering
         if (mealType === 'snack') {
@@ -57,8 +61,23 @@ export default function UserRecipeSelector({
           return false;
         }
         
+        // Additional filtering for user recipes based on nutritional profile
+        if (recipe.isUserCreated) {
+          const calories = recipe.nutrition.calories;
+          
+          // Try to categorize based on calories and carbs
+          if (mealType === 'breakfast' && (calories < 200 || calories > 600)) return false;
+          if (mealType === 'lunch' && (calories < 300 || calories > 700)) return false;
+          if (mealType === 'dinner' && (calories < 350 || calories > 800)) return false;
+          if (mealType === 'snack' && calories > 300) return false;
+        }
+        
         return true;
       });
+      
+      console.log(`[UserRecipeSelector] ${suitable.length} recipes suitable for ${mealType} (target ${targetCarbs}g carbs)`);
+      const suitableUserRecipes = suitable.filter(r => r.isUserCreated);
+      console.log(`[UserRecipeSelector] Including ${suitableUserRecipes.length} user recipes`);
       
       setAvailableRecipes(suitable);
       setFilteredRecipes(suitable);

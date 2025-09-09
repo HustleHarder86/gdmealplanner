@@ -34,10 +34,21 @@ export class UserRecipeService {
       
       const recipe: Recipe = {
         id: recipeId,
-        ...recipeInput,
+        title: recipeInput.title,
+        description: recipeInput.description,
+        category: recipeInput.category, // Explicitly include category
+        tags: recipeInput.tags,
+        prepTime: recipeInput.prepTime,
+        cookTime: recipeInput.cookTime,
+        servings: recipeInput.servings,
+        ingredients: recipeInput.ingredients,
+        instructions: recipeInput.instructions,
         totalTime: recipeInput.prepTime + recipeInput.cookTime,
         nutrition,
         carbChoices,
+        dietaryInfo: recipeInput.dietaryInfo,
+        allergenInfo: recipeInput.allergenInfo,
+        imageUrl: recipeInput.imageUrl,
         source: 'user',
         isUserCreated: true,
         userId,

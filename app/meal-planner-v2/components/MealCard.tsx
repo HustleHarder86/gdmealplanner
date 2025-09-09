@@ -81,62 +81,71 @@ export default function MealCard({
             </span>
           </div>
           
-          {/* Action Buttons */}
-          <div className="flex gap-1">
-            <button
-              onClick={() => onViewRecipe(recipe.id)}
-              className="flex-1 btn-view rounded flex items-center justify-center gap-1 text-xs py-1.5"
-            >
-              <Eye className="h-3 w-3" />
-              <span className="hidden sm:inline">View</span>
-            </button>
-            
-            {/* Save to My Recipes - only show for system recipes */}
-            {!recipe.isUserCreated && onSaveToMyRecipes && (
+          {/* Action Buttons - Two rows for better fit */}
+          <div className="space-y-1">
+            {/* First row: View, Save, Random */}
+            <div className="flex gap-1">
               <button
-                onClick={() => onSaveToMyRecipes(recipe.id)}
-                disabled={isSaving}
-                className="btn-view rounded flex items-center justify-center gap-1 text-xs py-1.5 px-2 disabled:opacity-50"
-                title="Save to My Recipes"
+                onClick={() => onViewRecipe(recipe.id)}
+                className="flex-1 btn-view rounded flex items-center justify-center gap-0.5 text-xs py-1 px-1"
+                title="View recipe"
               >
-                <BookmarkPlus className={`h-3 w-3 ${isSaving ? 'animate-pulse' : ''}`} />
-                <span className="hidden sm:inline">{isSaving ? 'Saving' : 'Save'}</span>
+                <Eye className="h-3 w-3" />
+                <span className="hidden sm:inline ml-0.5">View</span>
               </button>
-            )}
-            
-            <button
-              onClick={onSwap}
-              disabled={isSwapping}
-              className="btn-view rounded flex items-center justify-center gap-1 text-xs py-1.5 px-2 disabled:opacity-50"
-              title="Random swap"
-            >
-              <RefreshCw className={`h-3 w-3 ${isSwapping ? 'animate-spin' : ''}`} />
-              <span className="hidden lg:inline">{isSwapping ? '' : 'Random'}</span>
-            </button>
-            
-            {/* Choose from recipes button */}
-            {onSwapWithUserRecipe && (
+              
+              {/* Save to My Recipes - only show for system recipes */}
+              {!recipe.isUserCreated && onSaveToMyRecipes && (
+                <button
+                  onClick={() => onSaveToMyRecipes(recipe.id)}
+                  disabled={isSaving}
+                  className="flex-1 btn-view rounded flex items-center justify-center gap-0.5 text-xs py-1 px-1 disabled:opacity-50"
+                  title="Save to My Recipes"
+                >
+                  <BookmarkPlus className={`h-3 w-3 ${isSaving ? 'animate-pulse' : ''}`} />
+                  <span className="hidden sm:inline ml-0.5">{isSaving ? '...' : 'Save'}</span>
+                </button>
+              )}
+              
               <button
-                onClick={onSwapWithUserRecipe}
-                className="btn-view rounded flex items-center justify-center gap-1 text-xs py-1.5 px-2"
-                title="Choose recipe"
+                onClick={onSwap}
+                disabled={isSwapping}
+                className="flex-1 btn-view rounded flex items-center justify-center gap-0.5 text-xs py-1 px-1 disabled:opacity-50"
+                title="Random swap"
               >
-                <ChefHat className="h-3 w-3" />
-                <span className="hidden lg:inline">Choose</span>
+                <RefreshCw className={`h-3 w-3 ${isSwapping ? 'animate-spin' : ''}`} />
+                <span className="hidden sm:inline ml-0.5">Swap</span>
               </button>
-            )}
+            </div>
             
-            {/* Delete button */}
-            {onDelete && (
-              <button
-                onClick={onDelete}
-                disabled={isDeleting}
-                className="btn-view rounded flex items-center justify-center gap-1 text-xs py-1.5 px-2 disabled:opacity-50 hover:bg-red-50 hover:text-red-600"
-                title="Remove meal"
-              >
-                <Trash2 className={`h-3 w-3 ${isDeleting ? 'animate-pulse' : ''}`} />
-                <span className="hidden sm:inline">{isDeleting ? '' : 'Remove'}</span>
-              </button>
+            {/* Second row: Choose and Delete */}
+            {(onSwapWithUserRecipe || onDelete) && (
+              <div className="flex gap-1">
+                {/* Choose from recipes button */}
+                {onSwapWithUserRecipe && (
+                  <button
+                    onClick={onSwapWithUserRecipe}
+                    className="flex-1 btn-view rounded flex items-center justify-center gap-0.5 text-xs py-1 px-1"
+                    title="Choose specific recipe"
+                  >
+                    <ChefHat className="h-3 w-3" />
+                    <span className="ml-0.5">Choose</span>
+                  </button>
+                )}
+                
+                {/* Delete button */}
+                {onDelete && (
+                  <button
+                    onClick={onDelete}
+                    disabled={isDeleting}
+                    className="flex-1 btn-view rounded flex items-center justify-center gap-0.5 text-xs py-1 px-1 disabled:opacity-50 hover:bg-red-50 hover:text-red-600"
+                    title="Remove meal"
+                  >
+                    <Trash2 className={`h-3 w-3 ${isDeleting ? 'animate-pulse' : ''}`} />
+                    <span className="ml-0.5">{isDeleting ? '...' : 'Delete'}</span>
+                  </button>
+                )}
+              </div>
             )}
           </div>
         </div>

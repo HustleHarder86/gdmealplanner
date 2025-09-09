@@ -9,6 +9,9 @@
     "lint": "next lint",
     "format": "prettier --write .",
     "typecheck": "tsc --noEmit",
+    "prepare": "husky || true",
+    "pre-push": "npm run typecheck && npm run lint && npm run build",
+    "quick-check": "npm run typecheck && npm run lint",
     "test-import": "tsx src/services/spoonacular/automated-import/test-import.ts",
     "import:daily": "tsx scripts/run-daily-import.ts",
     "recipes:check": "tsx scripts/check-recipe-library.ts",
@@ -25,7 +28,8 @@
     "test:e2e:performance": "playwright test performance-monitoring.spec.ts",
     "test:e2e:update-snapshots": "playwright test visual-regression.spec.ts --update-snapshots",
     "test:e2e:report": "playwright show-report",
-    "test:e2e:full": "./tests/e2e/run-tests.sh"
+    "test:e2e:full": "./tests/e2e/run-tests.sh",
+    "prepare": "husky"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.4",
@@ -51,6 +55,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.21",
     "firebase-tools": "^14.12.1",
+    "husky": "^9.1.7",
     "playwright": "^1.54.1",
     "postcss": "^8",
     "prettier": "^3.3.3",

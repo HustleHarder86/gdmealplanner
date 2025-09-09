@@ -28,6 +28,14 @@ export default function MealPlanDisplay({
   onSaveToMyRecipes,
   isGenerating = false
 }: MealPlanDisplayProps) {
+  // All hooks must be declared before any returns
+  const [expandedDays, setExpandedDays] = useState<number[]>([0]); // First day expanded by default
+  const [swappingMeal, setSwappingMeal] = useState<string | null>(null);
+  const [deletingMeal, setDeletingMeal] = useState<string | null>(null);
+  const [savingRecipe, setSavingRecipe] = useState<string | null>(null);
+  const [recipeSelectorOpen, setRecipeSelectorOpen] = useState(false);
+  const [selectedMealSlot, setSelectedMealSlot] = useState<{dayIndex: number, mealType: string, meal: any} | null>(null);
+  
   // Show loading state if generating initial meal plan
   if (!mealPlan && isGenerating) {
     return (
@@ -56,12 +64,6 @@ export default function MealPlanDisplay({
       </Card>
     );
   }
-  const [expandedDays, setExpandedDays] = useState<number[]>([0]); // First day expanded by default
-  const [swappingMeal, setSwappingMeal] = useState<string | null>(null);
-  const [deletingMeal, setDeletingMeal] = useState<string | null>(null);
-  const [savingRecipe, setSavingRecipe] = useState<string | null>(null);
-  const [recipeSelectorOpen, setRecipeSelectorOpen] = useState(false);
-  const [selectedMealSlot, setSelectedMealSlot] = useState<{dayIndex: number, mealType: string, meal: any} | null>(null);
 
   const handleViewRecipe = (recipeId: string) => {
     window.open(`/recipes/${recipeId}`, '_blank');

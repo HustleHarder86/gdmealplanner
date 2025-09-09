@@ -88,6 +88,7 @@ export default function MealPlannerV2Page() {
         handleGenerateMealPlan();
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [recipesInitialized, recipes.length, displayMealPlan, generating, rotationLoading, currentWeekInfo]);
 
   // Generate shopping list when meal plan changes

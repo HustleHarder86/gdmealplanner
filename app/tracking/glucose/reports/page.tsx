@@ -58,7 +58,7 @@ export default function GlucoseReportsPage() {
       // Get personalized targets (if available)
       let personalizedTargets: PersonalizedGlucoseTargets | null = null;
       try {
-        personalizedTargets = await GlucoseTargetsService.getUserTargets(userId);
+        personalizedTargets = await GlucoseTargetsService.getPersonalizedTargets(userId);
       } catch (error) {
         console.log("No personalized targets found, using defaults");
       }
@@ -69,7 +69,7 @@ export default function GlucoseReportsPage() {
         startDate,
         endDate,
         "mg/dL",
-        personalizedTargets,
+        !!personalizedTargets, // Convert to boolean
       );
 
       // Get patterns with personalized targets
@@ -78,7 +78,6 @@ export default function GlucoseReportsPage() {
         Math.ceil(
           (endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24),
         ),
-        personalizedTargets,
       );
 
       if (format === "csv") {

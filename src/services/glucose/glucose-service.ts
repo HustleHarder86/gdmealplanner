@@ -34,7 +34,14 @@ import {
   DEFAULT_GLUCOSE_TARGETS_MGDL,
   DEFAULT_GLUCOSE_TARGETS_MMOL,
   GlucosePattern,
+  convertGlucoseUnit,
+  PersonalizedGlucoseTargets,
+  getPersonalizedTargetRange,
+  convertToStandardTargets,
+  MealCategory,
+  GlucoseTargetRange,
 } from "@/src/types/glucose";
+import { GlucoseTargetsService } from "./glucose-targets-service";
 import { startOfDay, endOfDay, subDays, format } from "date-fns";
 
 const COLLECTION_NAME = "glucoseReadings";
@@ -268,13 +275,14 @@ export class GlucoseService {
   }
 
   /**
-   * Calculate statistics for a date range
+   * Calculate statistics for a date range with optional personalized targets
    */
   static async calculateStatistics(
     userId: string,
     startDate: Date,
     endDate: Date,
     unit: GlucoseUnit = "mg/dL",
+    usePersonalizedTargets: boolean = true,
   ): Promise<GlucoseStatistics> {
     try {
       const readings = await this.getReadingsByDateRange(
@@ -295,13 +303,37 @@ export class GlucoseService {
         };
       }
 
-      const targets =
-        unit === "mg/dL"
-          ? DEFAULT_GLUCOSE_TARGETS_MGDL
-          : DEFAULT_GLUCOSE_TARGETS_MMOL;
+      // Get personalized targets if requested, otherwise use defaults
+      let targets;
+      let personalizedTargets: PersonalizedGlucoseTargets | null = null;
+      
+      if (usePersonalizedTargets) {
+        personalizedTargets = await GlucoseTargetsService.getPersonalizedTargets(userId);
+        
+        if (personalizedTargets) {
+          // Convert personalized targets to target unit if needed
+          if (personalizedTargets.unit !== unit) {
+            personalizedTargets = GlucoseTargetsService.convertTargetsUnit(personalizedTargets, unit);
+          }
+          targets = convertToStandardTargets(personalizedTargets);
+        } else {
+          targets = unit === "mg/dL" ? DEFAULT_GLUCOSE_TARGETS_MGDL : DEFAULT_GLUCOSE_TARGETS_MMOL;
+        }
+      } else {
+        targets = unit === "mg/dL" ? DEFAULT_GLUCOSE_TARGETS_MGDL : DEFAULT_GLUCOSE_TARGETS_MMOL;
+      }
 
-      // Calculate overall statistics
-      const values = readings.map((r) => r.value);
+      // FIXED: Normalize all readings to the target unit before calculations
+      const normalizedReadings = readings.map(reading => ({
+        ...reading,
+        value: reading.unit === unit 
+          ? reading.value 
+          : convertGlucoseUnit(reading.value, reading.unit, unit),
+        unit: unit
+      }));
+
+      // Calculate overall statistics using normalized values
+      const values = normalizedReadings.map((r) => r.value);
       const average = values.reduce((sum, val) => sum + val, 0) / values.length;
 
       // Standard deviation
@@ -310,20 +342,36 @@ export class GlucoseService {
         squaredDiffs.reduce((sum, val) => sum + val, 0) / values.length;
       const standardDeviation = Math.sqrt(avgSquaredDiff);
 
-      // Time in range
-      const inRangeCount = readings.filter((r) => isInRange(r, targets)).length;
-      const timeInRange = (inRangeCount / readings.length) * 100;
+      // Time in range using normalized readings with personalized targets
+      const inRangeCount = normalizedReadings.filter((r) => {
+        if (personalizedTargets) {
+          // Use specific personalized target for this meal association
+          const specificTarget = getPersonalizedTargetRange(r.mealAssociation!, personalizedTargets, unit);
+          if (specificTarget) {
+            const value = r.unit === specificTarget.unit 
+              ? r.value 
+              : convertGlucoseUnit(r.value, r.unit, specificTarget.unit);
+            return value >= specificTarget.min && value <= specificTarget.max;
+          }
+        }
+        // Fall back to standard isInRange logic
+        return isInRange(r, targets);
+      }).length;
+      const timeInRange = (inRangeCount / normalizedReadings.length) * 100;
 
-      // High/low counts
-      const highReadings = readings.filter(
-        (r) => !isInRange(r, targets) && r.value > 140,
-      ).length; // Using general high threshold
-      const lowReadings = readings.filter((r) => r.value < 70).length; // Using general low threshold
+      // FIXED: High/low counts using unit-appropriate thresholds
+      const highThreshold = unit === "mg/dL" ? 140 : 7.8; // 140 mg/dL = ~7.8 mmol/L
+      const lowThreshold = unit === "mg/dL" ? 70 : 3.9;   // 70 mg/dL = ~3.9 mmol/L
+      
+      const highReadings = normalizedReadings.filter(
+        (r) => !isInRange(r, targets) && r.value > highThreshold,
+      ).length;
+      const lowReadings = normalizedReadings.filter((r) => r.value < lowThreshold).length;
 
-      // By meal type statistics
+      // FIXED: By meal type statistics using normalized readings
       const byMealType: GlucoseStatistics["byMealType"] = {};
 
-      const mealGroups = readings.reduce(
+      const mealGroups = normalizedReadings.reduce(
         (acc, reading) => {
           if (reading.mealAssociation) {
             if (!acc[reading.mealAssociation]) {
@@ -340,9 +388,18 @@ export class GlucoseService {
         const mealValues = mealReadings.map((r) => r.value);
         const mealAverage =
           mealValues.reduce((sum, val) => sum + val, 0) / mealValues.length;
-        const mealInRange = mealReadings.filter((r) =>
-          isInRange(r, targets),
-        ).length;
+        const mealInRange = mealReadings.filter((r) => {
+          if (personalizedTargets) {
+            const specificTarget = getPersonalizedTargetRange(r.mealAssociation!, personalizedTargets, unit);
+            if (specificTarget) {
+              const value = r.unit === specificTarget.unit 
+                ? r.value 
+                : convertGlucoseUnit(r.value, r.unit, specificTarget.unit);
+              return value >= specificTarget.min && value <= specificTarget.max;
+            }
+          }
+          return isInRange(r, targets);
+        }).length;
 
         byMealType[meal as MealAssociation] = {
           average: mealAverage,
@@ -398,15 +455,25 @@ export class GlucoseService {
         {} as Record<MealAssociation, GlucoseReading[]>,
       );
 
-      // Analyze each meal group for patterns
+      // FIXED: Analyze each meal group for patterns with unit normalization
       Object.entries(mealGroups).forEach(([meal, mealReadings]) => {
         if (mealReadings.length < 3) return; // Need at least 3 readings to identify a pattern
 
         const targets = DEFAULT_GLUCOSE_TARGETS_MGDL; // Using mg/dL for analysis
-        const highReadings = mealReadings.filter(
+        
+        // Normalize readings to mg/dL for pattern analysis
+        const normalizedMealReadings = mealReadings.map(reading => ({
+          ...reading,
+          value: reading.unit === "mg/dL" 
+            ? reading.value 
+            : convertGlucoseUnit(reading.value, reading.unit, "mg/dL"),
+          unit: "mg/dL" as GlucoseUnit
+        }));
+        
+        const highReadings = normalizedMealReadings.filter(
           (r) => !isInRange(r, targets) && r.value > 140,
         );
-        const lowReadings = mealReadings.filter((r) => r.value < 70);
+        const lowReadings = normalizedMealReadings.filter((r) => r.value < 70);
 
         // High pattern
         if (highReadings.length >= mealReadings.length * 0.5) {
@@ -435,8 +502,8 @@ export class GlucoseService {
           });
         }
 
-        // Variable pattern (high standard deviation)
-        const values = mealReadings.map((r) => r.value);
+        // FIXED: Variable pattern using normalized values
+        const values = normalizedMealReadings.map((r) => r.value);
         const avg = values.reduce((sum, val) => sum + val, 0) / values.length;
         const stdDev = Math.sqrt(
           values.reduce((sum, val) => sum + Math.pow(val - avg, 2), 0) /
@@ -460,6 +527,35 @@ export class GlucoseService {
       console.error("Error identifying patterns:", error);
       throw error;
     }
+  }
+
+  /**
+   * Get personalized glucose targets for a user
+   */
+  static async getPersonalizedTargets(
+    userId: string
+  ): Promise<PersonalizedGlucoseTargets | null> {
+    return GlucoseTargetsService.getPersonalizedTargets(userId);
+  }
+
+  /**
+   * Save personalized glucose targets for a user
+   */
+  static async savePersonalizedTargets(
+    targets: Omit<PersonalizedGlucoseTargets, "id" | "createdAt" | "updatedAt">
+  ): Promise<string> {
+    return GlucoseTargetsService.savePersonalizedTargets(targets);
+  }
+
+  /**
+   * Apply bulk category target (e.g., set all lunch targets to same value)
+   */
+  static async applyBulkCategoryTarget(
+    userId: string,
+    category: MealCategory,
+    target: GlucoseTargetRange
+  ): Promise<void> {
+    return GlucoseTargetsService.applyBulkCategoryTarget(userId, category, target);
   }
 
   /**

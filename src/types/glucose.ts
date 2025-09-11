@@ -61,6 +61,60 @@ export const DEFAULT_GLUCOSE_TARGETS_MGDL: GlucoseTargets = {
   postMeal2hr: { min: 0, max: 120, unit: "mg/dL" },
 };
 
+// Personalized glucose targets for individual users
+export interface PersonalizedGlucoseTargets {
+  id?: string;
+  userId: string;
+  unit: GlucoseUnit; // User's preferred unit
+  targets: {
+    // Specific targets for each meal association
+    fasting?: GlucoseTargetRange;
+    preBreakfast?: GlucoseTargetRange;
+    postBreakfast1hr?: GlucoseTargetRange;
+    postBreakfast2hr?: GlucoseTargetRange;
+    preLunch?: GlucoseTargetRange;
+    postLunch1hr?: GlucoseTargetRange;
+    postLunch2hr?: GlucoseTargetRange;
+    preDinner?: GlucoseTargetRange;
+    postDinner1hr?: GlucoseTargetRange;
+    postDinner2hr?: GlucoseTargetRange;
+    preSnack?: GlucoseTargetRange;
+    postSnack?: GlucoseTargetRange;
+    bedtime?: GlucoseTargetRange;
+    night?: GlucoseTargetRange;
+  };
+  notes?: string; // Doctor's notes or instructions
+  setBy?: string; // Healthcare provider who set these targets
+  createdAt?: Date;
+  updatedAt?: Date;
+}
+
+// Meal category groupings for bulk target setting
+export type MealCategory = 
+  | "fasting" 
+  | "pre-meal" 
+  | "post-meal-1hr" 
+  | "post-meal-2hr" 
+  | "snacks" 
+  | "bedtime";
+
+export interface MealCategoryTargets {
+  category: MealCategory;
+  target: GlucoseTargetRange;
+  description: string;
+  affectedMealTypes: MealAssociation[];
+}
+
+// Mapping of meal associations to categories for bulk updates
+export const MEAL_CATEGORY_MAPPING: Record<MealCategory, MealAssociation[]> = {
+  fasting: ["fasting"],
+  "pre-meal": ["pre-breakfast", "pre-lunch", "pre-dinner"],
+  "post-meal-1hr": ["post-breakfast-1hr", "post-lunch-1hr", "post-dinner-1hr"],
+  "post-meal-2hr": ["post-breakfast-2hr", "post-lunch-2hr", "post-dinner-2hr"],
+  snacks: ["pre-snack", "post-snack"],
+  bedtime: ["bedtime", "night"]
+};
+
 // Statistics types
 export interface GlucoseStatistics {
   average: number;
@@ -168,9 +222,224 @@ export const getTargetRange = (
     return currentTargets.postMeal1hr;
   } else if (mealAssociation.includes("2hr")) {
     return currentTargets.postMeal2hr;
+  } else if (mealAssociation.includes("pre-") || mealAssociation.includes("post-") || mealAssociation === "bedtime" || mealAssociation === "night") {
+    // For snacks, bedtime, night, and other meal associations, default to 2hr post-meal target
+    return currentTargets.postMeal2hr;
   }
 
   return null;
+};
+
+// Helper to get personalized target range for specific meal association
+export const getPersonalizedTargetRange = (
+  mealAssociation: MealAssociation,
+  personalizedTargets?: PersonalizedGlucoseTargets,
+  fallbackUnit: GlucoseUnit = "mg/dL"
+): GlucoseTargetRange | null => {
+  if (!personalizedTargets) {
+    // Fall back to default targets
+    const defaultTargets = fallbackUnit === "mmol/L" 
+      ? DEFAULT_GLUCOSE_TARGETS_MMOL 
+      : DEFAULT_GLUCOSE_TARGETS_MGDL;
+    return getTargetRange(mealAssociation, defaultTargets, fallbackUnit);
+  }
+
+  // Map meal association to personalized target field
+  const targetFieldMap: Record<MealAssociation, keyof PersonalizedGlucoseTargets['targets']> = {
+    'fasting': 'fasting',
+    'pre-breakfast': 'preBreakfast',
+    'post-breakfast-1hr': 'postBreakfast1hr',
+    'post-breakfast-2hr': 'postBreakfast2hr',
+    'pre-lunch': 'preLunch',
+    'post-lunch-1hr': 'postLunch1hr',
+    'post-lunch-2hr': 'postLunch2hr',
+    'pre-dinner': 'preDinner',
+    'post-dinner-1hr': 'postDinner1hr',
+    'post-dinner-2hr': 'postDinner2hr',
+    'pre-snack': 'preSnack',
+    'post-snack': 'postSnack',
+    'bedtime': 'bedtime',
+    'night': 'night'
+  };
+
+  const targetField = targetFieldMap[mealAssociation];
+  const personalizedTarget = personalizedTargets.targets[targetField];
+
+  if (personalizedTarget) {
+    return personalizedTarget;
+  }
+
+  // Fall back to default if no personalized target set
+  const defaultTargets = personalizedTargets.unit === "mmol/L" 
+    ? DEFAULT_GLUCOSE_TARGETS_MMOL 
+    : DEFAULT_GLUCOSE_TARGETS_MGDL;
+  return getTargetRange(mealAssociation, defaultTargets, personalizedTargets.unit);
+};
+
+// Helper to convert personalized targets to standard GlucoseTargets format
+// Validation for glucose target ranges
+export interface TargetValidationResult {
+  isValid: boolean;
+  warnings: string[];
+  errors: string[];
+}
+
+export const validateGlucoseTarget = (
+  value: number,
+  unit: GlucoseUnit,
+  mealAssociation: MealAssociation
+): TargetValidationResult => {
+  const result: TargetValidationResult = {
+    isValid: true,
+    warnings: [],
+    errors: []
+  };
+
+  // Convert to mg/dL for standardized validation
+  const mgdlValue = unit === "mmol/L" ? value * 18.018 : value;
+
+  // Define safe ranges (mg/dL)
+  const SAFE_RANGES = {
+    fasting: { min: 60, max: 110, warning: { min: 70, max: 100 } },
+    postMeal1hr: { min: 80, max: 180, warning: { min: 100, max: 160 } },
+    postMeal2hr: { min: 70, max: 150, warning: { min: 90, max: 130 } },
+    general: { min: 60, max: 200, warning: { min: 70, max: 180 } }
+  };
+
+  let range;
+  if (mealAssociation === "fasting") {
+    range = SAFE_RANGES.fasting;
+  } else if (mealAssociation.includes("1hr")) {
+    range = SAFE_RANGES.postMeal1hr;
+  } else if (mealAssociation.includes("2hr")) {
+    range = SAFE_RANGES.postMeal2hr;
+  } else {
+    range = SAFE_RANGES.general;
+  }
+
+  // Check for dangerous values
+  if (mgdlValue < range.min) {
+    result.isValid = false;
+    result.errors.push(`Target too low (${value} ${unit}). Minimum safe value is ${unit === "mmol/L" ? (range.min / 18.018).toFixed(1) : range.min} ${unit}.`);
+  } else if (mgdlValue > range.max) {
+    result.isValid = false;
+    result.errors.push(`Target too high (${value} ${unit}). Maximum safe value is ${unit === "mmol/L" ? (range.max / 18.018).toFixed(1) : range.max} ${unit}.`);
+  }
+
+  // Check for values outside recommended ranges but still safe
+  if (result.isValid) {
+    if (mgdlValue < range.warning.min) {
+      result.warnings.push(`Target is stricter than typical medical guidelines (${value} ${unit}). Ensure this is recommended by your healthcare provider.`);
+    } else if (mgdlValue > range.warning.max) {
+      result.warnings.push(`Target is more lenient than typical guidelines (${value} ${unit}). Consider consulting your healthcare provider.`);
+    }
+  }
+
+  return result;
+};
+
+export const validateAllPersonalizedTargets = (
+  targets: PersonalizedGlucoseTargets
+): TargetValidationResult => {
+  const result: TargetValidationResult = {
+    isValid: true,
+    warnings: [],
+    errors: []
+  };
+
+  // Validate each set target
+  Object.entries(targets.targets).forEach(([key, targetRange]) => {
+    if (targetRange) {
+      const mealAssociation = key as keyof PersonalizedGlucoseTargets['targets'];
+      
+      // Map back to MealAssociation string
+      const mealAssociationMap: Record<string, MealAssociation> = {
+        'fasting': 'fasting',
+        'preBreakfast': 'pre-breakfast',
+        'postBreakfast1hr': 'post-breakfast-1hr',
+        'postBreakfast2hr': 'post-breakfast-2hr',
+        'preLunch': 'pre-lunch',
+        'postLunch1hr': 'post-lunch-1hr',
+        'postLunch2hr': 'post-lunch-2hr',
+        'preDinner': 'pre-dinner',
+        'postDinner1hr': 'post-dinner-1hr',
+        'postDinner2hr': 'post-dinner-2hr',
+        'preSnack': 'pre-snack',
+        'postSnack': 'post-snack',
+        'bedtime': 'bedtime',
+        'night': 'night'
+      };
+
+      const mealType = mealAssociationMap[mealAssociation] || 'fasting';
+      const validation = validateGlucoseTarget(targetRange.max, targets.unit, mealType);
+      
+      if (!validation.isValid) {
+        result.isValid = false;
+        result.errors.push(...validation.errors.map(err => `${key}: ${err}`));
+      }
+      result.warnings.push(...validation.warnings.map(warn => `${key}: ${warn}`));
+    }
+  });
+
+  return result;
+};
+
+export const convertToStandardTargets = (
+  personalizedTargets: PersonalizedGlucoseTargets
+): GlucoseTargets => {
+  const unit = personalizedTargets.unit;
+  const defaultTargets = unit === "mmol/L" 
+    ? DEFAULT_GLUCOSE_TARGETS_MMOL 
+    : DEFAULT_GLUCOSE_TARGETS_MGDL;
+
+  return {
+    fasting: personalizedTargets.targets.fasting || defaultTargets.fasting,
+    postMeal1hr: personalizedTargets.targets.postBreakfast1hr || 
+                 personalizedTargets.targets.postLunch1hr || 
+                 personalizedTargets.targets.postDinner1hr || 
+                 defaultTargets.postMeal1hr,
+    postMeal2hr: personalizedTargets.targets.postBreakfast2hr || 
+                 personalizedTargets.targets.postLunch2hr || 
+                 personalizedTargets.targets.postDinner2hr || 
+                 defaultTargets.postMeal2hr,
+  };
+};
+
+// Helper to apply bulk category target to multiple meal types
+export const applyBulkCategoryTarget = (
+  currentTargets: PersonalizedGlucoseTargets,
+  category: MealCategory,
+  target: GlucoseTargetRange
+): PersonalizedGlucoseTargets => {
+  const updatedTargets = { ...currentTargets };
+  const affectedMealTypes = MEAL_CATEGORY_MAPPING[category];
+
+  // Map meal associations to target fields
+  const fieldMapping: Record<MealAssociation, keyof PersonalizedGlucoseTargets['targets']> = {
+    'fasting': 'fasting',
+    'pre-breakfast': 'preBreakfast',
+    'post-breakfast-1hr': 'postBreakfast1hr',
+    'post-breakfast-2hr': 'postBreakfast2hr',
+    'pre-lunch': 'preLunch',
+    'post-lunch-1hr': 'postLunch1hr',
+    'post-lunch-2hr': 'postLunch2hr',
+    'pre-dinner': 'preDinner',
+    'post-dinner-1hr': 'postDinner1hr',
+    'post-dinner-2hr': 'postDinner2hr',
+    'pre-snack': 'preSnack',
+    'post-snack': 'postSnack',
+    'bedtime': 'bedtime',
+    'night': 'night'
+  };
+
+  affectedMealTypes.forEach(mealType => {
+    const field = fieldMapping[mealType];
+    if (field) {
+      updatedTargets.targets[field] = { ...target };
+    }
+  });
+
+  return updatedTargets;
 };
 
 // Meal association display labels

@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useAuth } from "@/src/contexts/AuthContext";
 import { format, subDays } from "date-fns";
 import { GlucoseService } from "@/src/services/glucose/glucose-service";
+import { GlucoseTargetsService } from "@/src/services/glucose/glucose-targets-service";
 import ReportGenerator from "@/src/components/glucose/ReportGenerator";
 import {
   GlucoseReading,
@@ -13,6 +14,7 @@ import {
   DEFAULT_GLUCOSE_TARGETS_MGDL,
   DEFAULT_GLUCOSE_TARGETS_MMOL,
   MEAL_ASSOCIATION_LABELS,
+  PersonalizedGlucoseTargets,
 } from "@/src/types/glucose";
 
 export default function GlucoseReportsPage() {
@@ -53,20 +55,30 @@ export default function GlucoseReportsPage() {
         endDate,
       );
 
-      // Get statistics
+      // Get personalized targets (if available)
+      let personalizedTargets: PersonalizedGlucoseTargets | null = null;
+      try {
+        personalizedTargets = await GlucoseTargetsService.getUserTargets(userId);
+      } catch (error) {
+        console.log("No personalized targets found, using defaults");
+      }
+
+      // Get statistics with personalized targets
       const stats = await GlucoseService.calculateStatistics(
         userId,
         startDate,
         endDate,
         "mg/dL",
+        personalizedTargets,
       );
 
-      // Get patterns
+      // Get patterns with personalized targets
       const patterns = await GlucoseService.identifyPatterns(
         userId,
         Math.ceil(
           (endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24),
         ),
+        personalizedTargets,
       );
 
       if (format === "csv") {
@@ -83,6 +95,7 @@ export default function GlucoseReportsPage() {
           includeCharts,
           includeStats,
           includeNotes,
+          personalizedTargets,
         );
       }
     } catch (error) {
@@ -146,6 +159,7 @@ export default function GlucoseReportsPage() {
     includeCharts: boolean,
     includeStats: boolean,
     includeNotes: boolean,
+    personalizedTargets?: PersonalizedGlucoseTargets | null,
   ) => {
     // For now, generate a simple HTML report that can be printed as PDF
     const html = `
@@ -258,8 +272,19 @@ export default function GlucoseReportsPage() {
         </table>
 
         <div class="footer">
-          <p><strong>Target Ranges (Gestational Diabetes):</strong></p>
+          <p><strong>Target Ranges ${personalizedTargets ? '(Personalized)' : '(Standard Gestational Diabetes)'}:</strong></p>
+          ${personalizedTargets ? `
+          <p><strong>Personalized Targets:</strong> Set by ${personalizedTargets.setBy || 'healthcare provider'}</p>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 10px 0; font-size: 12px;">
+            ${personalizedTargets.targets.fasting ? `<div>Fasting: <${personalizedTargets.targets.fasting.max} ${personalizedTargets.unit}</div>` : ''}
+            ${personalizedTargets.targets.postBreakfast2hr ? `<div>Post-Breakfast (2hr): <${personalizedTargets.targets.postBreakfast2hr.max} ${personalizedTargets.unit}</div>` : ''}
+            ${personalizedTargets.targets.postLunch2hr ? `<div>Post-Lunch (2hr): <${personalizedTargets.targets.postLunch2hr.max} ${personalizedTargets.unit}</div>` : ''}
+            ${personalizedTargets.targets.postDinner2hr ? `<div>Post-Dinner (2hr): <${personalizedTargets.targets.postDinner2hr.max} ${personalizedTargets.unit}</div>` : ''}
+          </div>
+          ${personalizedTargets.notes ? `<p><em>Notes: ${personalizedTargets.notes}</em></p>` : ''}
+          ` : `
           <p>Fasting: <95 mg/dL (<5.3 mmol/L) | 1hr post-meal: <140 mg/dL (<7.8 mmol/L) | 2hr post-meal: <120 mg/dL (<6.7 mmol/L)</p>
+          `}
           <p><em>This report is for informational purposes only. Please consult with your healthcare provider for medical advice.</em></p>
         </div>
       </body>
@@ -319,10 +344,10 @@ export default function GlucoseReportsPage() {
         </h3>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <button
-            onClick={() => {
+            onClick={async () => {
               const endDate = new Date();
               const startDate = subDays(endDate, 7);
-              handleGenerateReport(startDate, endDate, "pdf", true, true, true);
+              await handleGenerateReport(startDate, endDate, "pdf", true, true, true);
             }}
             className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow text-left"
             disabled={generating}
@@ -334,10 +359,10 @@ export default function GlucoseReportsPage() {
           </button>
 
           <button
-            onClick={() => {
+            onClick={async () => {
               const endDate = new Date();
               const startDate = subDays(endDate, 14);
-              handleGenerateReport(
+              await handleGenerateReport(
                 startDate,
                 endDate,
                 "pdf",
@@ -356,10 +381,10 @@ export default function GlucoseReportsPage() {
           </button>
 
           <button
-            onClick={() => {
+            onClick={async () => {
               const endDate = new Date();
               const startDate = subDays(endDate, 30);
-              handleGenerateReport(
+              await handleGenerateReport(
                 startDate,
                 endDate,
                 "csv",

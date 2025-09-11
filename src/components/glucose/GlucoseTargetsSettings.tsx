@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useAuth } from "@/src/contexts/AuthContext";
 import {
   PersonalizedGlucoseTargets,
@@ -31,13 +31,7 @@ export default function GlucoseTargetsSettings({
   const [bulkTarget, setBulkTarget] = useState<number>(120);
 
   // Load existing targets
-  useEffect(() => {
-    if (user) {
-      loadTargets();
-    }
-  }, [user]);
-
-  const loadTargets = async () => {
+  const loadTargets = useCallback(async () => {
     if (!user) return;
 
     try {
@@ -58,7 +52,13 @@ export default function GlucoseTargetsSettings({
     } finally {
       setLoading(false);
     }
-  };
+  }, [user, unit]);
+
+  useEffect(() => {
+    if (user) {
+      loadTargets();
+    }
+  }, [user, loadTargets]);
 
   const handleUnitChange = (newUnit: GlucoseUnit) => {
     if (!targets) return;
@@ -204,7 +204,7 @@ export default function GlucoseTargetsSettings({
         <div>
           <h2 className="text-xl font-semibold">Glucose Target Settings</h2>
           <p className="text-sm text-neutral-600 mt-1">
-            Customize your glucose targets based on your doctor's recommendations
+            Customize your glucose targets based on your doctor&apos;s recommendations
           </p>
         </div>
         
@@ -411,7 +411,7 @@ export default function GlucoseTargetsSettings({
         {/* Notes Section */}
         <div className="mt-6">
           <label className="block text-sm font-medium text-neutral-700 mb-2">
-            Doctor's Notes / Instructions
+            Doctor&apos;s Notes / Instructions
           </label>
           <textarea
             value={targets.notes || ""}
@@ -466,7 +466,7 @@ export default function GlucoseTargetsSettings({
           <div>
             <h3 className="text-sm font-semibold text-amber-800 mb-1">Important</h3>
             <p className="text-sm text-amber-700">
-              Only change these targets based on your healthcare provider's specific recommendations. 
+              Only change these targets based on your healthcare provider&apos;s specific recommendations. 
               The default values follow standard gestational diabetes guidelines and are appropriate for most patients.
             </p>
           </div>

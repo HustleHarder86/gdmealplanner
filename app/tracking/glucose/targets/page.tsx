@@ -54,7 +54,7 @@ export default function GlucoseTargetsPage() {
         
         <h1 className="text-2xl sm:text-3xl font-bold">Glucose Target Settings</h1>
         <p className="text-neutral-600 mt-1">
-          Customize your glucose targets based on your doctor's recommendations
+          Customize your glucose targets based on your doctor&apos;s recommendations
         </p>
       </div>
 
@@ -129,7 +129,7 @@ export default function GlucoseTargetsPage() {
           <div className="space-y-2 text-amber-800">
             <p className="flex items-start gap-2">
               <span className="text-amber-600 mt-1">⚠️</span>
-              <span>Only modify targets based on your healthcare provider's explicit recommendations</span>
+              <span>Only modify targets based on your healthcare provider&apos;s explicit recommendations</span>
             </p>
             <p className="flex items-start gap-2">
               <span className="text-amber-600 mt-1">⚠️</span>
